@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Документация по Microsoft Edge Enterprise
+summary: Microsoft Edge расширяет и улучшает возможности браузера. Браузер на устройствах с Windows, macOS, iOS и Android.
+metadata:
+  title: Microsoft Edge
+  description: Microsoft Edge расширяет и улучшает возможности браузера. Браузер на устройствах с Windows, macOS, iOS и Android.
+  services: service
+  ms.service: service
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: collection
+  author: dan-wesley
+  ms.author: kvice
+  ms.date: 08/21/2020
+  ms.openlocfilehash: 0a725b99799d7a2476994f1cbddf12fcd688f1e4
+  ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "10980969"
+landingContent:
+- title: Дополнительные сведения о Microsoft Edge на предприятии
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор каналов Microsoft Edge
+      url: microsoft-edge-channels.md
+    - text: Скачивание канала Microsoft Edge
+      url: https://aka.ms/EdgeEnterprise
+    - text: Использование корпоративных возможностей
+      url: edge-ie-mode.md
+    - text: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
+      url: microsoft-edge-video-search.md
+- title: Развертывание и обновление Microsoft Edge
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Планирование развертывания Microsoft Edge
+      url: deploy-edge-plan-deployment.md
+    - text: Видео — развертывание Microsoft Edge
+      url: microsoft-edge-video-deploy.md
+    - text: Развертывание в Windows
+      url: https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+    - text: Развертывание в macOS
+      url: https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json
+- title: Настройка Microsoft Edge
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Настройка Microsoft EDGE в Windows
+      url: configure-microsoft-edge.md
+    - text: Настройка Microsoft EDGE на macOS
+      url: configure-microsoft-edge-on-mac.md
+    - text: Установка Microsoft Edge в качестве браузера по умолчанию
+      url: edge-default-browser.md
+- title: Управление безопасностью и конфиденциальностью
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 'Видео: безопасность, совместимость и управляемость'
+      url: microsoft-edge-video-security-compatibility-manageability.md
+    - text: Безопасность
+      url: security-overview.md
+    - text: Конфиденциальность
+      url: microsoft-edge-enterprise-privacy-settings.md
+- title: Справочник по политикам
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по политикам браузера
+      url: microsoft-edge-policies.md
+    - text: Справочник по политикам обновления
+      url: microsoft-edge-update-policies.md
+    - text: Обзор сопоставления политик
+      url: microsoft-edge-policy-map-overview.md
+    - text: Блог базовых параметров безопасности Майкрософт
+      url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
+- title: Общение с корпоративным сообществом или получение справки
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Техническое сообщество Enterprise
+      url: https://techcommunity.microsoft.com/t5/Enterprise/bd-p/EdgeInsiderEnterprise
+    - text: Обращение в службу поддержки Microsoft Edge
+      url: https://microsoftedgesupport.microsoft.com/hc/

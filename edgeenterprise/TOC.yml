@@ -1,0 +1,165 @@
+# last revised 08/21/2020
+- name: Документация по Microsoft Edge Enterprise
+  href: index.yml
+- name: Документация по Microsoft Edge
+  href: 'https://docs.microsoft.com/microsoft-edge/'
+- name: Обновление содержимого Microsoft Edge
+  href: microsoft-edge-content-updates.md
+- name: Начало работы с Microsoft Edge
+  items:
+    - name: Сведения о каналах Microsoft Edge
+      href: microsoft-edge-channels.md
+    - name: 'Узнайте, что нового'
+      href: 'https://www.microsoftedgeinsider.com/whats-new'
+    - name: Материалы по адаптации пользователей
+      href: microsoft-edge-customer-adoption-kit.md
+    - name: Обзор ресурсов документации
+      href: 'https://docs.microsoft.com/microsoft-edge/'
+    - name: Практическая лабораторная работа по развертыванию Microsoft Edge
+      href: deploy-edge-hands-on-lab.md
+    - name: Блоги Windows — разработчик в Microsoft Edge
+      href: 'https://blogs.windows.com/msedgedev/'
+- name: Планирование Microsoft Edge
+  items:
+    - name: Стратегия развития Microsoft Edge Enterprise
+      href: microsoft-edge-roadmap.md
+    - name: Планирование развертывания Microsoft Edge
+      href: deploy-edge-plan-deployment.md
+    - name: Сведения о выпуске
+      items:
+        - name: Расписание выпусков
+          href: microsoft-edge-release-schedule.md
+        - name: Заметки о выпуске канала Beta
+          href: microsoft-edge-relnote-beta-channel.md
+        - name: Заметки о выпуске стабильного канала
+          href: microsoft-edge-relnote-stable-channel.md
+        - name: Обновления для системы безопасности
+          href: microsoft-edge-relnotes-security.md
+    - name: Сопоставление политик Microsoft Edge
+      items:
+        - name: Обзор сопоставления политик
+          href: microsoft-edge-policy-map-overview.md
+        - name: Сопоставление политик устаревшей версии Microsoft Edge и Microsoft Edge
+          href: microsoft-edge-policy-map-legacy-to-newedge.md
+        - name: Сопоставление политик Google Chrome и Microsoft Edge
+          href: microsoft-edge-policy-map-chrome-to-newedge.md
+    - name: Поддерживаемые операционные системы
+      href: microsoft-edge-supported-operating-systems.md
+    - name: Политика жизненного цикла
+      href: microsoft-edge-support-lifecycle.md
+    - name: Поддерживаемые языки
+      href: microsoft-edge-supported-languages.md
+    - name: Системные обновления для Microsoft Edge
+      items:
+        - name: Blocker Toolkit для обновлений Microsoft Edge
+          href: microsoft-edge-blocker-toolkit.md
+        - name: Как получить доступ к старой версии Microsoft Edge
+          href: microsoft-edge-sysupdate-access-old-edge.md
+        - name: Обновления Windows для поддержки Microsoft Edge
+          href: microsoft-edge-sysupdate-windows-updates.md
+- name: Развертывание Microsoft Edge
+  items:
+    - name: Видео — развертывание Microsoft Edge
+      href: microsoft-edge-video-deploy.md
+    - name: Развертывание в Windows с помощью диспетчера конфигураций
+      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Развертывание в Windows с помощью Intune
+      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Развертывание в macOS с помощью Jamf
+      href: deploy-edge-mac-jamf.md
+    - name: Развертывание в macOS с помощью Intune
+      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+- name: Настройка Microsoft Edge
+  items:
+    - name: Настройка для Windows.
+      href: configure-microsoft-edge.md
+    - name: Настройка для Windows с помощью Intune
+      href: configure-edge-with-intune.md
+    - name: Настройка для Windows с помощью системы управления мобильными устройствами
+      href: configure-edge-with-mdm.md
+    - name: Настройка для macOS с помощью файла PLIST
+      href: configure-microsoft-edge-on-mac.md
+    - name: Настройка для macOS с помощью Jamf
+      href: configure-microsoft-edge-on-mac-jamf.md
+- name: Использование корпоративных функций Microsoft Edge
+  items:
+    - name: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
+      href: microsoft-edge-video-search.md
+    - name: Конфигурации и эксперименты
+      href: edge-configuration-and-experiments.md
+    - name: Поддержка и настройка удостоверений
+      href: microsoft-edge-security-identity.md
+    - name: Microsoft Edge и службы переноса параметров в рамках предприятия Enterprise State Roaming
+      href: microsoft-edge-enterprise-state-roaming.md
+    - name: Режим терминала в Microsoft Edge
+      href: microsoft-edge-kiosk-mode.md
+    - name: Функция синхронизации Microsoft Edge
+      href: microsoft-edge-enterprise-sync.md
+    - name: Локальная синхронизация для пользователей Active Directory
+      href: microsoft-edge-on-premises-sync.md
+    - name: Средство чтения PDF в Microsoft Edge
+      href: microsoft-edge-pdf.md
+    - name: Установка Microsoft Edge в качестве браузера по умолчанию
+      href: edge-default-browser.md
+    - name: Использование Microsoft Edge в режиме IE
+      items:
+        - name: Сведения о режиме IE
+          href: edge-ie-mode.md
+        - name: Настройка сайтов в списке сайтов в режиме предприятия
+          href: edge-ie-mode-sitelist.md
+        - name: Настройка политик для режима IE
+          href: edge-ie-mode-policies.md
+        - name: Пошаговое руководство по Enterprise Site Discovery
+          href: edge-ie-mode-site-discovery.md
+        - name: Вопросы и ответы о режиме IE
+          href: edge-ie-mode-faq.md
+- name: Безопасность Microsoft Edge
+  items:
+    - name: 'Видео: безопасность, совместимость и управляемость'
+      href: microsoft-edge-video-security-compatibility-manageability.md
+    - name: Обзор системы безопасности
+      href: security-overview.md
+    - name: Список разрешений для конечных точек Microsoft Edge
+      href: microsoft-edge-security-endpoints.md
+    - name: Защита от потенциально нежелательных приложений
+      href: microsoft-edge-potentially-unwanted-apps.md
+    - name: Поддержка Application Guard
+      href: microsoft-edge-security-windows-defender-application-guard.md
+    - name: Поддержка фильтра SmartScreen в Microsoft Defender
+      href: microsoft-edge-security-smartscreen.md
+    - name: Поддержка Windows Information Protection
+      href: microsoft-edge-security-windows-information-protection.md
+- name: Конфиденциальность в Microsoft Edge
+  items:
+    - name: Настройка параметров конфиденциальности
+      href: microsoft-edge-enterprise-privacy-settings.md
+    - name: Техническая документация по конфиденциальности Microsoft Edge
+      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+- name: Справочник по Microsoft Edge
+  items:
+    - name: Справочник по политикам браузера
+      href: microsoft-edge-policies.md
+    - name: Справочник по политикам обновления
+      href: microsoft-edge-update-policies.md
+    - name: Справочник по дополнительным сведениям
+      items:
+        - name: ClickOnce и DirectInvoke
+          href: edge-learn-more-co-di.md
+        - name: Параметры командной строки для настройки параметров прокси-сервера
+          href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: Настраиваемые сайты в режиме IE
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: Формат фильтрации для политик на основе списка URL-адресов
+          href: edge-learnmmore-url-list-filter format.md
+        - name: Сохранение навигации в пределах страницы в режиме IE
+          href: edge-learnmore-inpage-nav.md
+        - name: Скачивание смешанного содержимого
+          href: edge-learnmore-mixed-content-downloads.md
+        - name: Постепенное развертывание обновлений стабильного канала
+          href: microsoft-edge-update-progressive-rollout.md
+        - name: Синтаксис регулярного выражения 2 (re2.h)
+          href: edge-learnmore-regex.md
+        - name: Переменные каталога данных пользователя
+          href: edge-learnmore-create-user-directory-vars.md
+- name: Вопросы и ответы
+  href: faqs-edge-in-the-enterprise.md
