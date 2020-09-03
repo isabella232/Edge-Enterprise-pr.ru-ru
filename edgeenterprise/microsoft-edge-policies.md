@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 8b514b1c1cbcaf64e8c44497522c368f71e7a0a0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9320d7e7b161e6d92421b05262391642b0fe1c2d
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980995"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993729"
 ---
 # Microsoft Edge - Политики
 Последняя версия Microsoft Edge включает в себя следующие политики. Эти политики можно использовать для настройки работы Microsoft Edge в вашей организации.
@@ -82,6 +82,8 @@ ms.locfileid: "10980995"
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Разрешить всплывающие окна на определенных сайтах|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Блокировать всплывающие окна на определенных сайтах|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Регистрация обработчиков протокола|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления
+и советы для служб Майкрософт|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Предоставить доступ к определенным сайтам для подключения к определенным USB-устройствам|
 |[WebUsbAskForUrls](#webusbaskforurls)|Разрешить WebUSB на определенных сайтах|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Блокировка WebUSB на определенных сайтах|
@@ -224,6 +226,8 @@ ms.locfileid: "10980995"
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Проверка перехвата DNS включена|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Установите Microsoft Edge в качестве браузера по умолчанию|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|Разрешить доступ к службе поиска по умолчанию в контекстном меню|
+|[DefaultSensorsSetting](#defaultsensorssetting)|Стандартный параметр для датчиков|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|Управлять использованием API Serial|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|Требование наличия списка сайтов для режима предприятия перед переходом между вкладками|
 |[DeleteDataOnMigration](#deletedataonmigration)|Удалить старые данные браузера при миграции|
 |[DeveloperToolsAvailability](#developertoolsavailability)|Контроль, где инструменты разработчика могут использоваться|
@@ -256,6 +260,7 @@ ms.locfileid: "10980995"
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Принудительный поиск Google SafeSearch|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Использование политики ссылки по умолчанию no-referrer-when-downgrade (не рекомендуется)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Принудительный запуск сетевого кода в процессе браузера (устарело)|
+|[ForceSync](#forcesync)|Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Принудительный минимальный ограниченный режим YouTube|
 |[FullscreenAllowed](#fullscreenallowed)|Разрешить полноэкранный режим|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Включить глобальный кэш проверки подлинности HTTP|
@@ -276,11 +281,13 @@ ms.locfileid: "10980995"
 |[ImportSearchEngine](#importsearchengine)|Разрешить импорт настроек поисковой системы|
 |[ImportShortcuts](#importshortcuts)|Разрешить импорт ярлыков|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Настройка доступности режима InPrivate|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Включить предупреждения для небезопасных форм|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Управление параметром IntensiveWakeUpThrottling|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Настройка улучшенной функции обнаружения зависаний в режиме Internet Explorer|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Настройка интеграции с Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Настройка списка сайтов для режима Enterprise|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Укажите, как ведут себя внутренние переходы на ненастроенные сайты при запуске со страниц режима Internet Explorer.|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer|
 |[IsolateOrigins](#isolateorigins)|Включить изоляцию сайта для определенных источников|
 |[LocalProvidersEnabled](#localprovidersenabled)|Разрешить предложения от местных поставщиков|
 |[ManagedFavorites](#managedfavorites)|Настроить избранное|
@@ -319,6 +326,10 @@ ms.locfileid: "10980995"
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Веб-сайты или домены, которым не требуется разрешение на прямую аттестацию ключа безопасности|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Отправлять все сайты интрасети в Internet Explorer|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Отправка сведений о сайтах для улучшения служб Майкрософт (устарело)|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|Разрешить доступ к датчиками на определенных сайтах|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчиками на определенных сайтах|
+|[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
+|[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели избранного|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписанного HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию сайта для каждого сайта|
@@ -340,6 +351,7 @@ ms.locfileid: "10980995"
 |[URLBlocklist](#urlblocklist)|Блокировать доступ к списку URL-адресов|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|Включение функции клиентских подсказок User-Agent (устарело)|
 |[UserDataDir](#userdatadir)|Установить каталог пользовательских данных|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|Ограничение количества снимков пользовательских данных, сохраняемых для применения в случае аварийного отката|
 |[UserFeedbackAllowed](#userfeedbackallowed)|Разрешить обратную связь с пользователем|
 |[VideoCaptureAllowed](#videocaptureallowed)|Разрешить или заблокировать захват видео|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Сайты, которые могут получить доступ к устройствам захвата видео без запроса разрешения|
@@ -519,7 +531,7 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
 
   #### Информация о Mac и настройки
-  - Имя ключа настройки: ShowCastIconInToolbar
+  - Имя ключа предпочтения: ShowCastIconInToolbar
   - Пример значения:
 ``` xml
 <false/>
@@ -568,13 +580,13 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}
+SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: AutoSelectCertificateForUrls
+  - Имя ключа предпочтения: AutoSelectCertificateForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -631,14 +643,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"ht
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: CookiesAllowedForUrls
+  - Имя ключа предпочтения: CookiesAllowedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -694,14 +706,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: CookiesBlockedForUrls
+  - Имя ключа предпочтения: CookiesBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -761,8 +773,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1134,13 +1146,13 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
   - На Windows и macOS начиная с 77 или позже
 
   #### Описание
-  Определяет, могут ли веб-сайты, на которые не распространяется [PluginsAllowedForUrls](#pluginsallowedforurls) или [PluginsBlockedForUrls](#pluginsblockedforurls), автоматически запускать плагин Adobe Flash. Вы можете выбрать «BlockPlugins», чтобы заблокировать Adobe Flash на всех сайтах, или вы можете выбрать «ClickToPlay», чтобы запустить Adobe Flash, но при этом пользователь должен щелкнуть заполнитель, чтобы запустить его. В любом случае политики [PluginsAllowedForUrls](#pluginsallowedforurls) и [PluginsBlockedForUrls](#pluginsblockedforurls) имеют приоритет над «DefaultPluginsSetting».
+  Сначала проверяются [PluginsAllowedForUrls](#pluginsallowedforurls) и [PluginsBlockedForUrls](#pluginsblockedforurls), а затем эта политика. Варианты: "ClickToPlay" и "BlockPlugins". Если этой политике присвоено значение "BlockPlugins", этот подключаемый модуль запрещается на всех веб-сайтах. "ClickToPlay" позволяет запустить подключаемый модуль Flash, но пользователям нужно щелкнуть заполнитель, чтобы запустить его.
 
-Автоматическое воспроизведение разрешено только для доменов, явно указанных в политике [PluginsAllowedForUrls](#pluginsallowedforurls). Если вы хотите включить автоматическое воспроизведение для всех сайтов, попробуйте добавить в этот список http://* и https://*.
+                                                                                                                                                                                                                                            
 
-Если вы не настроите эту политику, пользователь может изменить этот параметр вручную.
+Если не настроить эту политику, она использует параметр BlockPlugins и пользователи смогут изменить его.
 
-Прежний вариант '1' устанавливал «allow-all», но теперь эта функция обрабатывается только политикой [PluginsAllowedForUrls](#pluginsallowedforurls).  Существующие политики, использующие «1», будут работать в режиме Click-to-play.
+Примечание. Автоматическое воспроизведение предназначено только для доменов, явно указанных в политике [PluginsAllowedForUrls](#pluginsallowedforurls). Чтобы включить автоматическое воспроизведение для всех сайтов, добавьте http://* и https://* в список разрешенных URL-адресов.
 
 Сопоставление параметров политики:
 
@@ -1347,7 +1359,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: DefaultWebUsbGuardSetting
+  - Имя ключа предпочтения: DefaultWebUsbGuardSetting
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -1390,8 +1402,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1443,8 +1455,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1496,8 +1508,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1549,8 +1561,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.e
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1602,8 +1614,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.e
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1655,14 +1667,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: JavaScriptBlockedForUrls
+  - Имя ключа предпочтения: JavaScriptBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -1770,14 +1782,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = www.example.com
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: LegacySameSiteCookieBehaviorEnabledForDomainList
+  - Имя ключа предпочтения: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Пример значения:
 ``` xml
 <array>
@@ -1823,8 +1835,8 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1876,8 +1888,8 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1931,8 +1943,8 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -1986,8 +1998,8 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:80
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -2039,8 +2051,8 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:80
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2092,14 +2104,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: PopupsBlockedForUrls
+  - Имя ключа предпочтения: PopupsBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -2180,6 +2192,51 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   [В начало](#microsoft-edge---policies)
 
+  ### SpotlightExperiencesAndRecommendationsEnabled
+  #### Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления
+и советы для служб Майкрософт
+  
+  
+  #### Поддерживаемые версии:
+  - В Windows — версия 86 или более поздние
+
+  #### Описание
+  Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления и советы для служб Майкрософт.
+
+Если включить или не настроить этот параметр, функции выделения важного и рекомендации будут включены.
+
+Если этот параметр отключен, функции выделения важного и рекомендации будут отключены.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: SpotlightExperiencesAndRecommendationsEnabled
+  - Имя групповой политики: Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления и советы для служб Майкрософт.
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: SpotlightExperiencesAndRecommendationsEnabled
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000001
+```
+
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### WebUsbAllowDevicesForUrls
   #### Предоставить доступ к определенным сайтам для подключения к определенным USB-устройствам
   
@@ -2236,7 +2293,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: WebUsbAllowDevicesForUrls
+  - Имя ключа предпочтения: WebUsbAllowDevicesForUrls
   - Пример значения:
 ``` xml
 <key>WebUsbAllowDevicesForUrls</key>
@@ -2299,14 +2356,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: WebUsbAskForUrls
+  - Имя ключа предпочтения: WebUsbAskForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -2354,14 +2411,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: WebUsbBlockedForUrls
+  - Имя ключа предпочтения: WebUsbBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -2475,10 +2532,10 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = UTF-8
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = UTF-16
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = GB2312
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
@@ -2542,7 +2599,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://search.contoso.com/searchbyimage/upload
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
@@ -2596,7 +2653,7 @@ https://search.contoso.com/searchbyimage/upload
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
@@ -2648,7 +2705,7 @@ content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-mis
+"mis"
 ```
 
 
@@ -2702,7 +2759,7 @@ mis
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-My Intranet Search
+"My Intranet Search"
 ```
 
 
@@ -2758,7 +2815,7 @@ My Intranet Search
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://search.contoso.com/search?q={searchTerms}
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
@@ -2816,7 +2873,7 @@ https://search.contoso.com/search?q={searchTerms}
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://search.contoso.com/suggest?q={searchTerms}
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
@@ -2852,7 +2909,7 @@ https://search.contoso.com/suggest?q={searchTerms}
 - "Адресная строка" ('redirect'), то на новой вкладке будет использоваться для поиска адресная строка.
 
 Сопоставление параметров политики:
-        
+  
 
 * bing (bing) = поле поиска (рекомендуется)
 
@@ -2882,7 +2939,7 @@ https://search.contoso.com/suggest?q={searchTerms}
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-bing
+"bing"
 ```
 
 
@@ -2940,13 +2997,13 @@ bing
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
+SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ExtensionAllowedTypes
+  - Имя ключа предпочтения: ExtensionAllowedTypes
   - Пример значения:
 ``` xml
 <array>
@@ -2989,8 +3046,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
@@ -3044,14 +3101,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ExtensionInstallBlocklist
+  - Имя ключа предпочтения: ExtensionInstallBlocklist
   - Пример значения:
 ``` xml
 <array>
@@ -3075,7 +3132,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
 
 Эта политика имеет приоритет над потенциально конфликтующей политикой [ExtensionInstallBlocklist](#extensioninstallblocklist). Когда вы удаляете расширение из списка принудительной установки, оно автоматически удаляется Microsoft Edge.
 
-Для устройств Windows, которые не присоединены к домену Microsoft Active Directory, принудительная установка ограничена расширениями, доступными в Microsoft Store.
+Принудительная установка ограничена только приложениями и расширениями, перечисленными на веб-сайте надстроек Microsoft Edge, для экземпляров, не являющихся следующими: экземпляры Windows, присоединенные к домену Microsoft Active Directory, либо экземпляры Windows 10 Pro и Windows Корпоративная, зарегистрированные для управления устройствами, а также экземпляры macOS, управляемые посредством MDM или присоединенные к домену через MCX.
 
 Обратите внимание, что пользователи могут изменять исходный код любого расширения с помощью Инструментов разработчика, что потенциально делает его неработоспособным. Если это проблема, установите политику [DeveloperToolsAvailability](#developertoolsavailability).
 
@@ -3115,14 +3172,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopabcdefghijklmnop
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ExtensionInstallForcelist
+  - Имя ключа предпочтения: ExtensionInstallForcelist
   - Пример значения:
 ``` xml
 <array>
@@ -3172,7 +3229,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopa
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = https://corp.contoso.com/*
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
@@ -3292,7 +3349,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ExtensionSettings
+  - Имя ключа предпочтения: ExtensionSettings
   - Пример значения:
 ``` xml
 <key>ExtensionSettings</key>
@@ -3483,7 +3540,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-contoso.com
+"contoso.com"
 ```
 
 
@@ -3533,7 +3590,7 @@ contoso.com
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-basic,digest,ntlm,negotiate
+"basic,digest,ntlm,negotiate"
 ```
 
 
@@ -3583,7 +3640,7 @@ basic,digest,ntlm,negotiate
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-*contoso.com,contoso.com
+"*contoso.com,contoso.com"
 ```
 
 
@@ -3769,8 +3826,8 @@ basic,digest,ntlm,negotiate
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -3824,8 +3881,8 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messagi
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -4055,7 +4112,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messagi
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://contoso.com/change_password.html
+"https://contoso.com/change_password.html"
 ```
 
 
@@ -4107,8 +4164,8 @@ https://contoso.com/change_password.html
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = https://contoso.com/login.html
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
 
@@ -4234,7 +4291,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-{ "idPattern": ".*public", "namePattern": ".*Color" }
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
@@ -4291,7 +4348,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: PrintHeaderFooter
+  - Имя ключа предпочтения: PrintHeaderFooter
   - Пример значения:
 ``` xml
 <false/>
@@ -4341,7 +4398,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: PrintPreviewUseSystemDefaultPrinter
+  - Имя ключа предпочтения: PrintPreviewUseSystemDefaultPrinter
   - Пример значения:
 ``` xml
 <false/>
@@ -4494,7 +4551,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://www.contoso.com, https://www.fabrikam.com
+"https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
@@ -4570,7 +4627,7 @@ https://www.contoso.com, https://www.fabrikam.com
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-direct
+"direct"
 ```
 
 
@@ -4624,7 +4681,7 @@ direct
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://internal.contoso.com/example.pac
+"https://internal.contoso.com/example.pac"
 ```
 
 
@@ -4678,12 +4735,12 @@ https://internal.contoso.com/example.pac
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-123.123.123.123:8080
+"123.123.123.123:8080"
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ProxyServer
+  - Имя ключа предпочтения: ProxyServer
   - Пример значения:
 ``` xml
 <string>123.123.123.123:8080</string>
@@ -4930,14 +4987,14 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.edu
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SmartScreenAllowListDomains
+  - Имя ключа предпочтения: SmartScreenAllowListDomains
   - Пример значения:
 ``` xml
 <array>
@@ -4994,7 +5051,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.ed
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SmartScreenEnabled
+  - Имя ключа предпочтения: SmartScreenEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -5094,7 +5151,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.ed
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SmartScreenPuaEnabled
+  - Имя ключа предпочтения: SmartScreenPuaEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -5203,7 +5260,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.ed
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://www.contoso.com
+"https://www.contoso.com"
 ```
 
 
@@ -5222,18 +5279,18 @@ https://www.contoso.com
   
   
   #### Поддерживаемые версии:
-  - В Windows и macOS — версия 85 или более поздние
+  - На Windows и macOS — версия 86 или более поздние
 
   #### Описание
   Вы можете настроить типы фоновых изображений, разрешенных для макета страницы новой вкладки в Microsoft Edge.
 
 Если эта политика не настроена, на странице новой вкладки будут включены все типы фоновых изображений.
 
-                                           
+             
 
-                                            
+           
 
-                                          
+            
 
 Сопоставление параметров политики:
 
@@ -5272,7 +5329,7 @@ https://www.contoso.com
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: NewTabPageAllowedBackgroundTypes
+  - Имя ключа предпочтения: NewTabPageAllowedBackgroundTypes
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -5460,7 +5517,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://www.fabrikam.com
+"https://www.fabrikam.com"
 ```
 
 
@@ -5772,8 +5829,8 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = https://contoso.com
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.com
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
 
@@ -5938,7 +5995,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.c
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: AdsSettingForIntrusiveAdsSites
+  - Имя ключа предпочтения: AdsSettingForIntrusiveAdsSites
   - Пример значения:
 ``` xml
 <integer>1</integer>
@@ -6245,9 +6302,9 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.c
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = [*.]mydomain2.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.com"
 
 ```
 
@@ -6292,14 +6349,14 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: AllowTrackingForUrls
+  - Имя ключа предпочтения: AllowTrackingForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -6570,7 +6627,7 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-en
+"en"
 ```
 
 
@@ -6662,8 +6719,8 @@ en
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -6748,17 +6805,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso
 
  
 
-                                                
+            
 
-                       
+        
 
-                        
+      
 
-                       
+        
 
-                   
+       
 
-                         
+       
 
 Данные браузера из устаревшей версии Microsoft Edge всегда будут автоматически перенесены при первом запуске, независимо от значения этой политики.
 
@@ -6843,7 +6900,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: AutoImportAtFirstRun
+  - Имя ключа предпочтения: AutoImportAtFirstRun
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -6999,11 +7056,11 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = example.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com"
 
 ```
 
@@ -7042,7 +7099,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
 
 Если эта политика не настроена, автоматически открываться будут только файлы тех типов, которые указал пользователь.
 
-                                                                                                                                                                                                           
+                                                     
 
 Эта политика доступна только для экземпляров Windows, присоединенных к домену Microsoft Active Directory, экземпляров Windows 10 Pro или Корпоративная, зарегистрированных для управления устройством, или экземпляров macOS, управляемых с помощью MDM или присоединенных к домену посредством MCX.
 
@@ -7068,8 +7125,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = exe
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
@@ -7443,7 +7500,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: BlockThirdPartyCookies
+  - Имя ключа предпочтения: BlockThirdPartyCookies
   - Пример значения:
 ``` xml
 <false/>
@@ -7542,7 +7599,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: BrowserGuestModeEnabled
+  - Имя ключа предпочтения: BrowserGuestModeEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -7592,7 +7649,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: BrowserNetworkTimeQueriesEnabled
+  - Имя ключа предпочтения: BrowserNetworkTimeQueriesEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -7656,7 +7713,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: BrowserSignin
+  - Имя ключа предпочтения: BrowserSignin
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -7799,8 +7856,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7858,8 +7915,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7915,8 +7972,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = .contoso.com
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
 
@@ -8106,7 +8163,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 Если вы не настроите эту политику, ограничения на допустимые службы и целевые объекты экспорта не применяются.
 
-                                                     
+              
 
 Сопоставление параметров политики:
 
@@ -8136,13 +8193,13 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pinterest_suggestions
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: CollectionsServicesAndExportsBlockList
+  - Имя ключа предпочтения: CollectionsServicesAndExportsBlockList
   - Пример значения:
 ``` xml
 <array>
@@ -8298,7 +8355,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pint
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ConfigureDoNotTrack
+  - Имя ключа предпочтения: ConfigureDoNotTrack
   - Пример значения:
 ``` xml
 <false/>
@@ -8501,7 +8558,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pint
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://go.microsoft.com/fwlink/?linkid=2080734
+"https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
@@ -8575,7 +8632,7 @@ https://go.microsoft.com/fwlink/?linkid=2080734
   - В Windows 7 и macOS с 77 и более поздних версий
 
   #### Описание
-      
+   
 
   Если для этой политики задано значение "истина", Microsoft Edge всегда будет проверять при запуске, является ли он браузером по умолчанию, и, если это возможно, автоматически регистрироваться.
 
@@ -8664,10 +8721,131 @@ https://go.microsoft.com/fwlink/?linkid=2080734
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: DefaultSearchProviderContextMenuAccessAllowed
+  - Имя ключа предпочтения: DefaultSearchProviderContextMenuAccessAllowed
   - Пример значения:
 ``` xml
 <true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### DefaultSensorsSetting
+  #### Стандартный параметр для датчиков
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  Укажите, могут ли веб-сайты получать доступ к датчикам, например к датчикам движения и света. Вы можете полностью заблокировать или разрешить веб-сайтам доступ к датчикам.
+
+Присвоение политике значения "1" разрешает веб-сайтам доступ и использование датчиков. Присвоение политике значения "2" запрещает доступ к датчикам.
+
+Вы можете переопределить эту политику для определенных шаблонов URL-адресов с помощью политик [SensorsAllowedForUrls](#sensorsallowedforurls) и [SensorsBlockedForUrls](#sensorsblockedforurls).
+
+Если эта политика не настроена, веб-сайты смогут получать доступ к датчикам и использовать их, а пользователи смогут изменять этот параметр. Это глобальное значение по умолчанию для [SensorsAllowedForUrls](#sensorsallowedforurls) и [SensorsBlockedForUrls](#sensorsblockedforurls).
+
+Сопоставление параметров политики:
+
+* AllowSensors (1) = разрешить сайтам доступ к датчикам
+
+* BlockSensors (2) = запретить доступ к датчикам для всех сайтов
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - целое число
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: DefaultSensorsSetting
+  - Имя групповой политики: Параметр датчиков по умолчанию
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: DefaultSensorsSetting
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000002
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: DefaultSensorsSetting
+  - Пример значения:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### DefaultSerialGuardSetting
+  #### Управлять использованием API Serial
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  
+Укажите, могут ли сайты получать доступ к последовательным портам. Вы можете либо полностью заблокировать доступ, либо каждый раз запрашивать у пользователя разрешение, когда веб-сайт пытается получить доступ к последовательному порту.
+
+Присвоение этой политике значения "3" позволяет веб-сайтам запрашивать доступ к последовательным портам. Присвоение этой политике значения "2" запрещает доступ к последовательным портам.
+
+Вы можете переопределить эту политику для конкретных шаблонов URL-адресов с помощью политик [SerialAskForUrls](#serialaskforurls) и [SerialBlockedForUrls](#serialblockedforurls).
+
+Если эта политика не настроена, по умолчанию сайты могут запрашивать у пользователя доступ к последовательному порту, при этом пользователи могут изменить эту настройку.
+
+Сопоставление параметров политики:
+
+* BlockSerial (2) = запретить всем сайтам запрашивать доступ к последовательным портам через API Serial
+
+* AskSerial (3) = разрешить сайтам запрашивать разрешение пользователя на доступ к последовательному порту
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - целое число
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: DefaultSerialGuardSetting
+  - Имя групповой политики: Управлять использованием API Serial
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: DefaultSerialGuardSetting
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000002
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: DefaultSerialGuardSetting
+  - Пример значения:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -9097,12 +9275,12 @@ https://go.microsoft.com/fwlink/?linkid=2080734
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-${user_home}/Edge_cache
+"${user_home}/Edge_cache"
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: DiskCacheDir
+  - Имя ключа предпочтения: DiskCacheDir
   - Пример значения:
 ``` xml
 <string>${user_home}/Edge_cache</string>
@@ -9154,7 +9332,7 @@ ${user_home}/Edge_cache
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: DiskCacheSize
+  - Имя ключа предпочтения: DiskCacheSize
   - Пример значения:
 ``` xml
 <integer>104857600</integer>
@@ -9213,12 +9391,12 @@ ${user_home}/Edge_cache
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-off
+"off"
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: DnsOverHttpsMode
+  - Имя ключа предпочтения: DnsOverHttpsMode
   - Пример значения:
 ``` xml
 <string>off</string>
@@ -9267,7 +9445,7 @@ off
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://dns.example.net/dns-query{?dns}
+"https://dns.example.net/dns-query{?dns}"
 ```
 
 
@@ -9322,13 +9500,13 @@ https://dns.example.net/dns-query{?dns}
   ##### Пример значения:
 ```
 
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+                                              
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: DownloadDirectory
+  - Имя ключа предпочтения: DownloadDirectory
   - Пример значения:
 ``` xml
 <string>
@@ -9553,7 +9731,7 @@ https://dns.example.net/dns-query{?dns}
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = ExampleDeprecatedFeature_EffectiveUntil20080902
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
@@ -9572,8 +9750,8 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = Example
 
   ### EnableDomainActionsDownload
   #### Разрешение загрузки действий, связанных с доменом, из Microsoft (устарело)
-                       
         
+  
   
   
   >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge версии 84 и более поздних.
@@ -9622,7 +9800,7 @@ Microsoft ведет список действий, предпринимаемы
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: EnableDomainActionsDownload
+  - Имя ключа предпочтения: EnableDomainActionsDownload
   - Пример значения:
 ``` xml
 <true/>
@@ -9724,7 +9902,7 @@ Microsoft ведет список действий, предпринимаемы
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: EnableSha1ForLocalAnchors
+  - Имя ключа предпочтения: EnableSha1ForLocalAnchors
   - Пример значения:
 ``` xml
 <false/>
@@ -9874,8 +10052,8 @@ Microsoft ведет список действий, предпринимаемы
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {'domains': ['*'], 'file_extension': 'swf'}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -10062,7 +10240,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: FamilySafetySettingsEnabled
+  - Имя ключа предпочтения: FamilySafetySettingsEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -10178,7 +10356,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ForceBingSafeSearch
+  - Имя ключа предпочтения: ForceBingSafeSearch
   - Пример значения:
 ``` xml
 <integer>0</integer>
@@ -10330,7 +10508,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ForceGoogleSafeSearch
+  - Имя ключа предпочтения: ForceGoogleSafeSearch
   - Пример значения:
 ``` xml
 <false/>
@@ -10393,8 +10571,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   ### ForceNetworkInProcess
   #### Принудительный запуск сетевого кода в процессе браузера (устарело)
-                       
         
+  
   
   
   
@@ -10439,6 +10617,60 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 
 
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### ForceSync
+  #### Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  Принудительно синхронизирует данные в Microsoft Edge. Эта политика также запрещает пользователям отключать синхронизацию.
+
+Если эта политика не настроена, пользователи смогут включать и отключать синхронизацию. Если включить эту политику, пользователи не смогут отключить синхронизацию.
+
+Для правильной работы этой политики, политика [BrowserSignin](#browsersignin) не должна быть настроена или должна быть включена. Если политика [ForceSync](#forcesync) отключена, то политика [BrowserSignin](#browsersignin) не будет применяться.
+
+Политика [SyncDisabled](#syncdisabled) не должна быть настроена или ей должно быть присвоено значение False. Если ей присвоено значение True, то политика [ForceSync](#forcesync) не будет применяться.
+
+0 = не запускать синхронизацию автоматически и отображать запрос разрешения на синхронизацию (по умолчанию) 1 = принудительная синхронизация будет включена для профиля пользователя Azure AD/устаревшей службы Azure AD и не будет отображаться запрос на разрешение синхронизации
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: ForceSync
+  - Имя групповой политики: Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: ForceSync
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000001
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: ForceSync
+  - Пример значения:
+``` xml
+<true/>
+```
   
 
   [В начало](#microsoft-edge---policies)
@@ -10693,13 +10925,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
+SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: HSTSPolicyBypassList
+  - Имя ключа предпочтения: HSTSPolicyBypassList
   - Пример значения:
 ``` xml
 <array>
@@ -11558,6 +11790,54 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
 
   [В начало](#microsoft-edge---policies)
 
+  ### InsecureFormsWarningsEnabled
+  #### Включить предупреждения для небезопасных форм
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  Эта политика управляет обработкой небезопасных форм (форм, отправляемых по протоколу HTTP), внедренных в безопасные (HTTPS) сайты в браузере.
+Если включить или не настроить эту политику, при отправке небезопасной формы будет отображаться предупреждение на всю страницу. Кроме того, будет отображаться пузырек предупреждения рядом с полями формы при наведении на них фокуса, и для этих форм будет отключено автозаполнение.
+Если отключить эту политику, предупреждения не будут отображаться для небезопасных форм, а автозаполнение будет работать нормально.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: InsecureFormsWarningsEnabled
+  - Имя групповой политики: Включить предупреждения для небезопасных форм
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: InsecureFormsWarningsEnabled
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000001
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: InsecureFormsWarningsEnabled
+  - Пример значения:
+``` xml
+<true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### IntensiveWakeUpThrottlingEnabled
   #### Управление параметром IntensiveWakeUpThrottling
   
@@ -11753,7 +12033,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://internal.contoso.com/sitelist.xml
+"https://internal.contoso.com/sitelist.xml"
 ```
 
 
@@ -11826,6 +12106,54 @@ https://internal.contoso.com/sitelist.xml
 
   [В начало](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Разрешить тестирование режима Internet Explorer
+  
+  
+  #### Поддерживаемые версии:
+  - В Windows — версия 86 или более поздние
+
+  #### Описание
+  Эта политика заменяет политику флага ie-mode-test. Она позволяет пользователям открыть вкладку режима IE из параметра меню пользовательского интерфейса.
+
+       Этот параметр работает совместно с политикой [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) с установленным значением "IEMode" и политикой [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), список которой содержит минимум одну запись.
+
+       Если эта политика включена, пользователи могут открыть вкладку режима IE из параметра пользовательского интерфейса и перевести текущий сайт в режим IE.
+
+       Если эта политика отключена, пользователи не увидят параметр пользовательского интерфейса непосредственно в меню.
+
+       Если не настроить эту политику, вы сможете настроить флаг ie-mode-test вручную.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: InternetExplorerIntegrationTestingAllowed
+  - Имя групповой политики: Разрешить тестирование режима Internet Explorer
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: InternetExplorerIntegrationTestingAllowed
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000000
+```
+
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### IsolateOrigins
   #### Включить изоляцию сайта для определенных источников
   
@@ -11862,7 +12190,7 @@ https://internal.contoso.com/sitelist.xml
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-https://contoso.com/,https://fabrikam.com/
+"https://contoso.com/,https://fabrikam.com/"
 ```
 
 
@@ -12124,7 +12452,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: ManagedSearchEngines
+  - Имя ключа предпочтения: ManagedSearchEngines
   - Пример значения:
 ``` xml
 <key>ManagedSearchEngines</key>
@@ -12314,7 +12642,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 В Windows 7, Windows 8 и macOS эта политика управляет отправкой данных об использовании и сбоях. Если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать настройки пользователя.
 
 Чтобы включить эту политику, параметру [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) требуется присвоить значение "Включено". Если параметру [MetricsReportingEnabled](#metricsreportingenabled) или [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) присвоено значение "Не настроено" или "Отключено", эти данные не отправляются в корпорацию Майкрософт.
-                                                                                                                                                                                
+                                            
 
 Эта политика доступна только для экземпляров Windows, присоединенных к домену Microsoft Active Directory, экземпляров Windows 10 Pro или Корпоративная, зарегистрированных для управления устройством, или экземпляров macOS, управляемых с помощью MDM или присоединенных к домену посредством MCX.
 
@@ -12500,7 +12828,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: NetworkPredictionOptions
+  - Имя ключа предпочтения: NetworkPredictionOptions
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -12642,8 +12970,8 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = http://testserver.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = *.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
 
@@ -13300,7 +13628,7 @@ QUIC - это сетевой протокол транспортного уро�
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-.*@contoso.com
+".*@contoso.com"
 ```
 
 
@@ -13352,15 +13680,15 @@ QUIC - это сетевой протокол транспортного уро�
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-${roaming_app_data}\edge-profile
+"${roaming_app_data}\\edge-profile"
 ```
 
 
-           
-              
-      
+     
+     
+   
+ 
     
-             
    
   
 
@@ -13408,11 +13736,11 @@ ${roaming_app_data}\edge-profile
 ```
 
 
-           
-              
-      
-    
-    
+     
+     
+   
+ 
+ 
    
   
 
@@ -13562,7 +13890,7 @@ ${roaming_app_data}\edge-profile
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-tls1
+"tls1"
 ```
 
 
@@ -13619,8 +13947,8 @@ tls1
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
@@ -13871,13 +14199,13 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contoso.com
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SecurityKeyPermitAttestation
+  - Имя ключа предпочтения: SecurityKeyPermitAttestation
   - Пример значения:
 ``` xml
 <array>
@@ -13950,7 +14278,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contos
 В Windows 7, Windows 8 и Mac эта политика управляет отправкой информации о посещенных веб-сайтах. Если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать настройки пользователя.
 
 Чтобы включить эту политику, параметру [MetricsReportingEnabled](#metricsreportingenabled) требуется присвоить значение "Включено". Если параметру [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) или [MetricsReportingEnabled](#metricsreportingenabled) присвоено значение "Не настроено" или "Отключено", эти данные не отправляются в корпорацию Майкрософт.
-                                                                                                                                                                            
+                                           
 
   #### Поддерживаемые функции:
   - Может быть обязательным: Да
@@ -13979,10 +14307,246 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contos
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SendSiteInfoToImproveServices
+  - Имя ключа предпочтения: SendSiteInfoToImproveServices
   - Пример значения:
 ``` xml
 <false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### SensorsAllowedForUrls
+  #### Разрешить доступ к датчиками на определенных сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  На основании шаблонов URL-адресов определите список сайтов, которые могут получать доступ к датчикам и использовать их, например датчики движения и света.
+
+Если не настроить эту политику, для всех сайтов будет использоваться стандартное глобальное значение из политики [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личная конфигурация пользователя.
+
+Для шаблонов URL-адресов, не соответствующих этой политике, используется следующий порядок приоритета: политика [SensorsBlockedForUrls](#sensorsblockedforurls) (если существует совпадение), политика [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личные параметры пользователя.
+
+Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SensorsBlockedForUrls](#sensorsblockedforurls). Вы не можете разрешить и заблокировать URL-адрес.
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: SensorsAllowedForUrls
+  - Имя групповой политики: Разрешить доступ к датчиками на определенных сайтах
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ\Политики\Microsoft\Edge\SensorsAllowedForUrls
+  - Путь (рекомендуется): N/A
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: SensorsAllowedForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### SensorsBlockedForUrls
+  #### Блокировать доступ к датчиками на определенных сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  На основании шаблонов URL-адресов определите список сайтов, которые не могут получать доступ к датчикам, например к датчикам движения и света.
+
+Если не настроить эту политику, для всех сайтов будет использоваться стандартное глобальное значение из политики [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личная конфигурация пользователя.
+
+Для шаблонов URL-адресов, не соответствующих этой политике, используется следующий порядок приоритета: политика [SensorsAllowedForUrls](#sensorsallowedforurls) (если существует совпадение), политика [DefaultSensorsSetting](#defaultsensorssetting) (если настроена) или личные параметры пользователя.
+
+Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SensorsAllowedForUrls](#sensorsallowedforurls). Вы не можете разрешить и заблокировать URL-адрес.
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: SensorsBlockedForUrls
+  - Имя групповой политики: Блокировать доступ к датчиками на определенных сайтах
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ\Политики\Microsoft\Edge\SensorsBlockedForUrls
+  - Путь (рекомендуется): N/A
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: SensorsBlockedForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### SerialAskForUrls
+  #### Разрешить API Serial на определенных сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  На основании шаблонов URL-адресов определите список сайтов, которые могут запрашивать у пользователя доступ к последовательному порту.
+
+Если не настроить эту политику, для всех сайтов будет использоваться стандартное глобальное значение из политики [DefaultSerialGuardSetting](#defaultserialguardsetting) (если настроена) или личная конфигурация пользователя.  
+
+Для шаблонов URL-адресов, не соответствующих этой политике, используется следующий порядок приоритета: политика [SerialBlockedForUrls](#serialblockedforurls) (если существует совпадение), политика [DefaultSerialGuardSetting](#defaultserialguardsetting) (если настроена) или личные параметры пользователя.
+
+Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SerialBlockedForUrls](#serialblockedforurls). Вы не можете разрешить и заблокировать URL-адрес.
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: SerialAskForUrls
+  - Имя групповой политики: Разрешить API Serial на определенных сайтах
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ\Политики\Microsoft\Edge\SerialAskForUrls
+  - Путь (рекомендуется): N/A
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: SerialAskForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### SerialBlockedForUrls
+  #### Блокировать API Serial на определенных сайтах
+  
+  
+  #### Поддерживаемые версии:
+  - На Windows и macOS — версия 86 или более поздние
+
+  #### Описание
+  На основании шаблонов URL-адресов определите список сайтов, которые не могут запрашивать у пользователя предоставление доступа к последовательному порту.
+
+Если не настроить эту политику, для всех сайтов будет использоваться стандартное глобальное значение из политики [DefaultSerialGuardSetting](#defaultserialguardsetting) (если настроена) или личная конфигурация пользователя.  
+
+Для шаблонов URL-адресов, не соответствующих этой политике, используется следующий порядок приоритета: политика [SerialAskForUrls](#serialaskforurls) (если существует совпадение), политика [DefaultSerialGuardSetting](#defaultserialguardsetting) (если настроена) или личные параметры пользователя.
+
+Шаблоны URL-адресов в этой политике не могут конфликтовать с настроенными в политике [SerialAskForUrls](#serialaskforurls). Вы не можете разрешить и заблокировать URL-адрес.
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Список строк
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: SerialBlockedForUrls
+  - Имя групповой политики: Блокировать API Serial на определенных сайтах
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ\Политики\Microsoft\Edge\SerialBlockedForUrls
+  - Путь (рекомендуется): N/A
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: список REG_SZ
+  ##### Пример значения:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Информация о Mac и настройки
+  - Имя ключа предпочтения: SerialBlockedForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -14129,7 +14693,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contos
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SitePerProcess
+  - Имя ключа предпочтения: SitePerProcess
   - Пример значения:
 ``` xml
 <true/>
@@ -14228,8 +14792,8 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contos
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
@@ -14280,8 +14844,8 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
@@ -14385,7 +14949,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SuppressUnsupportedOSWarning
+  - Имя ключа предпочтения: SuppressUnsupportedOSWarning
   - Пример значения:
 ``` xml
 <true/>
@@ -14435,7 +14999,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SyncDisabled
+  - Имя ключа предпочтения: SyncDisabled
   - Пример значения:
 ``` xml
 <true/>
@@ -14480,13 +15044,13 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
+SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: SyncTypesListDisabled
+  - Имя ключа предпочтения: SyncTypesListDisabled
   - Пример значения:
 ``` xml
 <array>
@@ -14514,9 +15078,9 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
 
 Если вы отключите эту политику, Microsoft Edge отключит эти средства защиты для соединений, аутентифицированных с помощью локально установленных сертификатов CA. Эти средства защиты всегда включены для соединений, аутентифицированных с помощью общедоступных сертификатов CA.
 
-                                                                                                                                                                                                                                                      
+                                                               
 
-                                                                                                                                                                                                             
+                                                    
 
 Эту политику можно использовать для тестирования всех затронутых прокси-серверов и их обновления. Ожидается, что затронутые прокси-серверы потерпят неудачу в соединениях с кодом ошибки ERR_TLS13_DOWNGRADE_DETECTED.
 
@@ -14598,9 +15162,9 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = 0x1303
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = 0xcca8
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
@@ -14820,7 +15384,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: TrackingPrevention
+  - Имя ключа предпочтения: TrackingPrevention
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -14925,11 +15489,11 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
@@ -14992,14 +15556,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = hosting.com/bad_path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = .exact.hostname.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = file://*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = custom_scheme:*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
@@ -15066,7 +15630,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: UserAgentClientHintsEnabled
+  - Имя ключа предпочтения: UserAgentClientHintsEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -15115,7 +15679,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-${users}/${user_name}/Edge
+"${users}/${user_name}/Edge"
 ```
 
 
@@ -15125,6 +15689,50 @@ ${users}/${user_name}/Edge
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### UserDataSnapshotRetentionLimit
+  #### Ограничение количества снимков пользовательских данных, сохраняемых для применения в случае аварийного отката
+  
+  
+  #### Поддерживаемые версии:
+  - В Windows — версия 86 или более поздние
+
+  #### Описание
+  После каждого обновления основного номера версии Microsoft Edge создает снимок компонентов данных браузера пользователя для использования в дальнейшем в случае экстренного реагирования, которое требует временного отката версии. При выполнении временного отката к версии, для которой у пользователя есть соответствующий снимок, восстанавливаются данные из снимка. Это позволяет пользователям сохранять такие параметры, как закладки и данные автозаполнения.
+
+Если не настроить эту политику, будет использоваться значение по умолчанию (3 снимка).
+
+Если настроить эту политику, старые снимки будут удалены в соответствии с заданным вами ограничением. Если этой политике присвоено значение 0, снимки не делаются.
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+  - целое число
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - Уникальное имя групповой политики: UserDataSnapshotRetentionLimit
+  - Имя групповой политики: Ограничение количества снимков пользовательских данных, сохраняемых для применения в случае аварийного отката
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: UserDataSnapshotRetentionLimit
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000003
+```
+
+
   
 
   [В начало](#microsoft-edge---policies)
@@ -15263,14 +15871,14 @@ ${users}/${user_name}/Edge
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: VideoCaptureAllowedUrls
+  - Имя ключа предпочтения: VideoCaptureAllowedUrls
   - Пример значения:
 ``` xml
 <array>
@@ -15390,7 +15998,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: WebAppInstallForceList
+  - Имя ключа предпочтения: WebAppInstallForceList
   - Пример значения:
 ``` xml
 <key>WebAppInstallForceList</key>
@@ -15417,8 +16025,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### Повторно включить API веб-компонентов v0 до M84 (устарело).
-                       
         
+  
   
   
   >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge версии 84 и более поздних.
@@ -15470,8 +16078,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebDriverOverridesIncompatiblePolicies
   #### Разрешить интерфейсу WebDriver переопределять несовместимые политики (устарело)
-                       
         
+  
   
   
   >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge версии 84 и более поздних.
@@ -15566,8 +16174,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - Тип значения: список REG_SZ
   ##### Пример значения:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
@@ -15635,12 +16243,12 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-default
+"default"
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: WebRtcLocalhostIpHandling
+  - Имя ключа предпочтения: WebRtcLocalhostIpHandling
   - Пример значения:
 ``` xml
 <string>default</string>
@@ -15685,12 +16293,12 @@ default
   - Тип значения: REG_SZ
   ##### Пример значения:
 ```
-10000-11999
+"10000-11999"
 ```
 
 
   #### Информация о Mac и настройки
-  - Имя предпочтительного ключа: WebRtcUdpPortRange
+  - Имя ключа предпочтения: WebRtcUdpPortRange
   - Пример значения:
 ``` xml
 <string>10000-11999</string>
@@ -15707,7 +16315,7 @@ default
   - В Windows с 84 и более поздних версий
 
   #### Описание
-  Использование этой политики не рекомендуется, так как она будет заменена аналогичной функцией в будущем выпуске, см. https://crbug.com/1032820. Она не будет работать в Microsoft Edge версии 87.
+  Использование этой политики не рекомендуется, так как она будет заменена аналогичной функцией в будущем выпуске, см. https://crbug.com/1032820.
 
 Для сопоставления прокси-серверов при всех сетевых подключениях браузера используйте средства Windows, а не встроенный в Microsoft Edge сопоставитель прокси-серверов. В сопоставителе прокси-серверов Windows используются такие функции прокси-серверов Windows, как DirectAccess/NRPT.
 
