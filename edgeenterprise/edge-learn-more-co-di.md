@@ -3,19 +3,19 @@ title: Функции ClickOnce и DirectInvoke в Microsoft Edge
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge.
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980915"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012799"
 ---
 # Общие сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge
 
@@ -55,13 +55,12 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
 
 Поддержка ClickOnce и DirectInvoke:
 
-- Функция DirectInvoke по умолчанию доступна всем пользователям Windows, однако функция ClickOnce отключена для всех пользователей Windows.
+- ClickOnce и DirectInvoke по умолчанию доступны всем пользователям Windows.
 
   > [!NOTE]
-  > Пользователи, которым требуется поддержка ClickOnce, могут перейти на страницу edge://flags/#edge-click-once и выбрать **Включить** в раскрывающемся списке. После этого будет необходимо **Перезапустить**браузер.
+  > Пользователи, которые хотят отключить поддержку ClickOnce, могут перейти на страницу *edge://flags/#edge-click-once* и выбрать **Отключено** в раскрывающемся списке. После этого будет необходимо **Перезапустить**браузер.
 
 - Функции ClickOnce и DirectInvoke не поддерживаются на платформах, отличных от Windows.
-- Так как функция ClickOnce является ориентированной на предприятие функцией, которую использует определенная группа опытных пользователей, и не предназначена для общего использования, она по умолчанию отключена.
 
 ## Безопасность обработки файлов в ClickOnce и DirectInvoke
 
