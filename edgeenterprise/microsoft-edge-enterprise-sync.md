@@ -3,19 +3,19 @@ title: Синхронизация Microsoft Edge Enterprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/03/2020
+ms.date: 09/15/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Синхронизация Microsoft Edge Enterprise
-ms.openlocfilehash: a6d01356db478871a7c6b386bbb731b32dc4739a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
+ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980967"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "11016348"
 ---
 # Синхронизация Microsoft Edge Enterprise
 
@@ -33,6 +33,8 @@ ms.locfileid: "10980967"
 - Адреса и прочее (заполнения форм)
 - Коллекции
 - Параметры
+- История просмотров
+- Открытые вкладки
 
 Функция синхронизации включается путем предоставления пользователем согласия с этим действием. Пользователи могут включать или отключать синхронизацию для всех перечисленных выше типов данных.
 
@@ -41,38 +43,22 @@ ms.locfileid: "10980967"
 
 ## Предварительные условия
 
-Функция синхронизации Microsoft Edge для учетных записей Azure Active Directory (Azure AD) сейчас доступна в рамках следующих подписок:
+Функция синхронизации Microsoft Edge для учетных записей Azure Active Directory (Azure AD) доступна в рамках любой из этих подписок:
 
 - Azure AD Premium (P1 или P2)
 - M365 бизнес премиум
 - Office 365 E3 и более поздние версии
 - Azure Information Protection (AIP) (P1 и P2)
-- Все подписки EDU для образовательной сферы (O365 A1 или выше, M365 A1 или выше, либо Azure Information Protection P1 или P2 для учащихся и преподавателей)
+- Все подписки EDU (приложения Майкрософт для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или выше, M365 A1 или выше, Azure Information Protection P1 или P2 для учащихся или преподавателей)
 
-> [!NOTE]
-> Синхронизация зависит от службы защиты, предлагаемой Azure Information Protection (AIP) для защиты данных синхронизации. В настоящее время эта служба доступна для указанных выше подписок. Полный список номеров SKU с AIP см. в разделе [Ценообразование на службы защиты информации](https://azure.microsoft.com/pricing/details/information-protection/).
+## Настройка синхронизации Microsoft Edge
 
-## Параметры конфигурации для функции синхронизации Microsoft Edge
+Параметры конфигурации для функции синхронизации Microsoft Edge доступны в службе Azure Information Protection (AIP). Если служба AIP включена для клиента, все пользователи могут синхронизировать данные в Microsoft Edge независимо от типа лицензии. Инструкции по включению службы AIP см. [здесь](https://docs.microsoft.com/azure/information-protection/activate-office365).
 
-Для включения функции синхронизации Microsoft Edge доступны следующие параметры конфигурации:
-
-- Azure Information Protection (AIP)
-- Azure AD Enterprise State Roaming (ESR)
-
-Если обе службы AIP и ESR отключены, то пользователи увидят сообщение об ошибке, указывающее на то, что синхронизация для их учетной записи недоступна.
-
-### Azure Information Protection (AIP)
-
-Если служба Azure Information Protection (AIP) для клиента включена, все пользователи могут синхронизировать данные Microsoft Edge независимо от типа лицензии. Инструкции по включению службы AIP см. [здесь](https://docs.microsoft.com/azure/information-protection/activate-office365).
-
-Чтобы ограничить синхронизацию для определенных пользователей, вы можете включить для них [Политику управления регистрацией в AADRM](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps). Если после регистрации всех необходимых пользователей синхронизация все еще недоступна, убедитесь в том, что служба IPCv3Service включена, используя командлет PowerShell [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/Get-AipServiceIPCv3?view=azureipps).
+Чтобы ограничить синхронизацию для определенной группы пользователей, вы можете включить для них [политику управления регистрацией в AIP](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) . Если после регистрации всех необходимых пользователей синхронизация все еще недоступна, убедитесь в том, что служба IPCv3Service включена, используя командлет PowerShell [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps).
 
 > [!CAUTION]
-> Включение службы Azure Information Protection также ограничит доступ с помощью AIP для других приложений, таких как Microsoft Word или Microsoft Outlook.
-
-### Azure AD Enterprise State Roaming (ESR)
-
-Если функция [Enterprise State Roaming](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview) (ESR) в Azure Active Directory включена для любого пользователя или клиента, они смогут использовать функцию синхронизации Microsoft Edge независимо от значения параметра политики управления регистрацией.
+> При включении службы Azure Information Protection другие приложения, такие как Microsoft Word и Microsoft Outlook, также смогут защищать контент с помощью AIP. Кроме того, любая политика управления регистрацией, используемая для ограничения синхронизации Microsoft Edge, также ограничит защиту контента с помощью AIP в других приложениях.
 
 ## Microsoft Edge и службы переноса параметров в рамках предприятия Enterprise State Roaming
 
@@ -85,6 +71,8 @@ ms.locfileid: "10980967"
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): полное отключение синхронизации.
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): отключает сохранение журнала браузера и синхронизацию. Эта политика также отключает синхронизацию открытых вкладок.
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): Настройка списка типов, которые исключены из синхронизации.
+- [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): разрешает профилям Active Directory (AD) использовать локальное хранилище. Дополнительные сведения см. в статье [Локальная синхронизация для пользователей Active Directory (AD)](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync).
+- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): включает синхронизацию по умолчанию и не требует согласия пользователя для синхронизации.  
 
 ## Вопросы и ответы
 
@@ -92,7 +80,7 @@ ms.locfileid: "10980967"
 
 #### Шифруются ли синхронизированные данные? 
 
-Данные шифруются при передаче с использованием протокола TLS 1.2 или более поздней версии, а также дополнительно в других службах Майкрософт с использованием AES256.
+Данные шифруются в процессе транспортировки с использованием TLS 1.2 или более поздней версии. Большинство типов данных дополнительно шифруются в неактивном состоянии в службе Microsoft с использованием AES256, за исключением журнала браузера и открытых вкладок. Чтобы запретить синхронизацию этих типов данных, можно применить политику [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled).
 
 #### Где хранятся данные синхронизации Microsoft Edge?
 
