@@ -1,4 +1,4 @@
-# last revised 09/02/2020
+# last revised 09/20/2020
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -59,8 +59,6 @@
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Развертывание Microsoft Edge
   items:
-    - name: Видео — развертывание Microsoft Edge
-      href: microsoft-edge-video-deploy.md
     - name: Развертывание в Windows с помощью диспетчера конфигураций
       href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Развертывание в Windows с помощью Intune
@@ -83,8 +81,6 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Использование корпоративных функций Microsoft Edge
   items:
-    - name: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
-      href: microsoft-edge-video-search.md
     - name: Конфигурации и эксперименты
       href: edge-configuration-and-experiments.md
     - name: Поддержка и настройка удостоверений
@@ -115,8 +111,6 @@
           href: edge-ie-mode-faq.md
 - name: Безопасность Microsoft Edge
   items:
-    - name: 'Видео: безопасность, совместимость и управляемость'
-      href: microsoft-edge-video-security-compatibility-manageability.md
     - name: Обзор системы безопасности
       href: security-overview.md
     - name: Список разрешений для конечных точек Microsoft Edge
@@ -163,5 +157,15 @@
           href: edge-learnmore-create-user-directory-vars.md
         - name: Использование отката Microsoft Edge для предприятий
           href: edge-learnmore-rollback.md
+- name: Видео Microsoft Edge
+  items:
+    - name: Коллекция видеороликов Microsoft Edge
+      href: microsoft-edge-videos.md
+    - name: Видео — развертывание Microsoft Edge
+      href: microsoft-edge-video-deploy.md
+    - name: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
+      href: microsoft-edge-video-search.md
+    - name: 'Видео: безопасность, совместимость и управляемость'
+      href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Вопросы и ответы
   href: faqs-edge-in-the-enterprise.md
