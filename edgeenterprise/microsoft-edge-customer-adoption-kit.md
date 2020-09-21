@@ -3,23 +3,23 @@ title: Материалы по адаптации пользователей к 
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/20/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Материалы по адаптации пользователей к Microsoft Edge
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 219316b6c89d73b25a7d34eac3bee88b16857f2b
+ms.sourcegitcommit: 8e350aa719ccdb0a8c76c1c145875efff28a8f23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980981"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "11030644"
 ---
 # Материалы по адаптации пользователей к Microsoft Edge
 
-Для поддержки развертывания и принятия новой версии Microsoft Edge ознакомьтесь со следующими материалами и ресурсами.
+Для поддержки развертывания и принятия новой версии Microsoft Edge ознакомьтесь со следующими материалами и ресурсами. Полученный ZIP-файл можно скачать.
 
 Проверяйте появление дополнительных материалов.
 
@@ -29,31 +29,43 @@ ms.locfileid: "10980981"
 
 - Руководство по развертыванию для ИТ-отдела
 - Руководство пользователя по началу работы
+- Электронное письмо об объявлении
+- Электронное письмо с советами и рекомендациями
 - Цифровые вывески
 
-## Руководство по развертыванию для ИТ-отдела
+> [!NOTE]
+> Материалы по набору адаптации будут доступны к скачиванию по завершении обновления.
+<!--
+[Download customer adoption kit](https://download.microsoft.com/download/0/4/2/0426ffdf-e33c-4177-b0f8-a13a43719c63/Commercial%Adoption%Kit%-%Microsoft%Edge.zip)-->
+
+### Руководство по развертыванию для ИТ-отдела
 
 Используйте это руководство, чтобы приступить к планированию развертывания и узнать, как начать развертывание Microsoft Edge в вашей среде.
 
-[Получить руководство по развертыванию для ИТ-отдела](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Серия видеороликов о Microsoft Mechanics":::
 
-## Руководство пользователя по началу работы
+### Руководство пользователя по началу работы
 
 Используйте это руководство, чтобы познакомить пользователей с новой версией Microsoft Edge. Это руководство содержит обзоры пользовательского интерфейса, меню и функций. Мы также добавили советы, которые помогут пользователям начать работу.
 
-[Получить руководство пользователя по началу работы](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Руководство пользователя по началу работы...":::
 
-## Цифровые вывески
+### Шаблоны электронных сообщений
 
-Используйте следующие цифровые вывески, чтобы проинформировать пользователей о новой версии Microsoft Edge.
+Используйте шаблоны электронных сообщений, чтобы объявить пользователям о доступности нового Microsoft Edge и предоставить советы и рекомендации для его максимально эффективного использования.
 
-[Microsoft Edge — корпоративная страница "Новая вкладка"](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Шаблон электронного сообщения с советами и рекомендациями":::
 
-[Microsoft Edge — несколько профилей и разные платформы](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+### Цифровые вывески
 
-[Microsoft Edge — Поиск (Майкрософт) в Bing](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+Используйте цифровые вывески ниже, чтобы проинформировать пользователей о новой версии Microsoft Edge:
 
-[Microsoft Edge — безопасность](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+- Страница новой вкладки Enterprise
+- Несколько профилей и разные платформы
+- Поиск (Майкрософт) в Bing
+- Безопасность
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Страница "Новая вкладка"":::
 
 ## Другие ресурсы для обучения
 
