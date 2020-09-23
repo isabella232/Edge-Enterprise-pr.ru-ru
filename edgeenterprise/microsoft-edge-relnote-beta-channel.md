@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/14/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
-ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
+ms.openlocfilehash: eca1e0e3caf79bcd797497cd20786957cc09a20a
+ms.sourcegitcommit: bf217e285b5a5fd7da8ca3916e53c3a8b05f0a5a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "11026899"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "11076347"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -67,6 +67,8 @@ ms.locfileid: "11026899"
 
 * **Замена политик [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) и [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) для более ранних версий Windows и macOS.** Эти политики не рекомендуются в Microsoft Edge версии 86 и станут устаревшими в Microsoft Edge версии 89.<br>
 Эти политики заменяются политикой [Разрешить телеметрию](https://go.microsoft.com/fwlink/?linkid=2099569) в Windows 10 и новой политикой [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) для всех остальных платформ. Это позволит пользователям управлять диагностическими данными, отправляемыми в корпорацию Майкрософт, для Windows 7, 8, 8.1 и macOS.
+
+* **Параметр файлов cookie, используемый по умолчанию: SameSite=Lax**. Чтобы повысить безопасность и конфиденциальность в Интернете, по умолчанию файлы cookie будут обрабатываться с использованием параметра [SameSite=Lax](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite). Это означает, что файлы cookie будут отправляться только в основном контексте и будут пропущены в запросах, отправляемых третьим сторонам. Это изменение может повлиять на совместимость для веб-сайтов, которым требуются файлы cookie для правильной работы сторонних ресурсов. Чтобы разрешить такие файлы cookie, веб-разработчики могут помечать файлы cookie, которые должны настраиваться и отправляться в сторонних контекстах, добавив явные атрибуты `SameSite=none` и `Secure` при настройке файлов cookie. Организации, которые хотят исключить определенные сайты из этого изменения, могут сделать это с помощью политики [LegacySameSiteCookieBehaviorEnabledForDomainList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabledfordomainlist) или отказаться от изменения на всех сайтах с помощью политики [LegacySameSiteCookieBehaviorEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled).
 
 ### Обновления политик
 
