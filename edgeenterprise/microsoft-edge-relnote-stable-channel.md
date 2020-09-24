@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/09/2020
+ms.date: 09/23/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 01f42cee3ea32999119fbee9c850a518f3b5a796
-ms.sourcegitcommit: d1e7d83b2e4acaaf0cde995eb0f644036a1f976b
+ms.openlocfilehash: 91bb0ee198b22a25e61470962d4f192a5adf737d
+ms.sourcegitcommit: 4d250c0c48634ecb1ea7ca03307809c80bb21db8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11005795"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "11077636"
 ---
 # Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -23,6 +23,10 @@ ms.locfileid: "11005795"
 
 > [!NOTE]
 > Для стабильного канала обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## Версия 85.0.564.63: 23 сентября
+
+Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)
 
 ## Версия 85.0.564.51: 9 сентября
 
@@ -484,4 +488,4 @@ ms.locfileid: "11005795"
 
 ## См. также
 
-- [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Использование целевой страницы Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
