@@ -3,19 +3,19 @@ title: Настройка режима терминала в Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка режима терминала в Microsoft Edge
-ms.openlocfilehash: d7c9df82079f8343d43ccfd312623e6e01358fa9
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
+ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072718"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "11078669"
 ---
 # Настройка режима терминала в Microsoft Edge
 
@@ -77,7 +77,7 @@ ms.locfileid: "11072718"
 
 ## Настройка режима терминала с ограниченным доступом
 
-Режим терминала Microsoft Edge с ограниченным доступом в настоящее время доступен для тестирования в последней [сборке Windows 10 Insider Preview](https://insider.windows.com/) версии 20215 или выше, а также в [канале Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download) версии 87.0.644 или выше.
+Режим терминала Microsoft Edge с ограниченным доступом в настоящее время доступен для тестирования в последней [сборке Windows 10 Insider Preview](https://insider.windows.com/) версии 20215 или выше, а также в [канале Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download) версии 87.0.644.4 или выше.
 
 **Откуда загрузить Windows Insider Preview?**
 
@@ -88,7 +88,7 @@ ms.locfileid: "11072718"
 Параметры Windows — это самый простой способ настроить одно или два устройства с одним приложением в режиме терминала. Для настройки компьютера с одним приложением в режиме терминала выполните указанные ниже действия.
 
 1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям, указанным в разделе [Начало работы со сборками Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
-2. Установите последнюю версию [канала разработки Microsoft Edge](https://www.microsoftedgeinsider.com/download), 87.0.644 или более поздней версии.
+2. Установите последнюю версию [канала Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download), 87.0.644.4 или более поздней версии.
 
    > [!IMPORTANT]
    > Поскольку требуется установка на уровне устройства, поддерживается только канал, не связанный с Canary.
@@ -99,39 +99,39 @@ ms.locfileid: "11072718"
 
 4. На странице **Настройка киоска** нажмите **Начать**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Страница терминала — начать":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 5. Введите имя для создания новой учетной записи в терминале или выберите существующую учетную запись из раскрывающегося списка и нажмите  **Далее**.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Режим терминала — создание учетной записи":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 6. На странице **Выбор приложения терминала**  выберите **Microsoft Edge** и нажмите кнопку  **Далее**.
 
    > [!NOTE]
    > Это относится только к каналам Microsoft Edge Dev, бета-версиям канала и стабильным каналам.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Режим терминала — выбор приложения":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 7. Выберите один из следующих вариантов отображения Microsoft Edge при работе в режиме терминала:
 
    - Цифровые или интерактивные вывески — Отображают конкретный сайт в полноэкранном режиме в Microsoft Edge.
    - Общедоступный браузер — Запускает ограниченную версию Microsoft Edge с несколькими вкладками.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Экран режима терминала — цифровой указатель полного экрана":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 8. Нажмите  **Далее**.
 9. Введите URL-адрес для загрузки при запуске киоска.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Режим терминала — введите URL-адрес":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 10. Примите значение по умолчанию (5 минут) для времени простоя или укажите свое значение.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Режим терминала — введите время простоя":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 11. Нажмите  **Далее**.
 12. Закройте окно  **Параметры** , чтобы сохранить и применить свой выбор.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Режим терминала — завершение настройки":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="Настройка терминала с ограниченным доступом":::
 
 13. Выйдите из устройства терминала и войдите в систему с локальной учетной записью терминала, чтобы проверить настройку.
 
@@ -176,6 +176,6 @@ ms.locfileid: "11072718"
 ## См. также
 
 - [Настройка терминалов и цифровых вывесок в выпусках Windows для настольных компьютеров](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Развертывание режима терминала в Microsoft Edge Legacy](https://aka.ms/edgekioskmode) 
+- [Развертывание режима терминала в Microsoft Edge Legacy](https://aka.ms/edgekioskmode)
 - [Планирование развертывания Microsoft Edge](deploy-edge-plan-deployment.md)
 - [Использование целевой страницы Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

@@ -1,14 +1,27 @@
 ---
-ms.openlocfilehash: f18a657bacd371fe7b07e18401bb5f47faa9806d
-ms.sourcegitcommit: 0fb49e30f8f9682549f5c6f2df9053329800ad53
+ms.openlocfilehash: 7f24099b63dba253aaee8edc3be58783d97178c9
+ms.sourcegitcommit: 2f17cb271cb42b944435a99670375bb645abc9bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "11015371"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "11088353"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
 
+
+
+## Неделя с 21 сентября 2020 г.
+
+
+| Дата публикации |Название раздела | Изменение |
+|------|------------|--------|
+| 22.09.2020 | [Материалы по адаптации пользователей к Microsoft Edge](/DeployEdge/microsoft-edge-customer-adoption-kit)<br>Обновленный объединенный материал в пакете для скачивания. | Изменено |
+| 22.09.2020 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Дополнительные обновления (86.0.622.15) для исправления ошибок и проблем с производительностью. | Изменено |
+| 23.09.2020 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Обновление системы безопасности для стабильного канала (версия 85.0.564.63) | Изменено |
+| 23.09.2020 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Дополнительные обновления (85.0.564.63) для отражения обновления для системы безопасности. | Изменено |
+| 24.09.2020 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление групповых политик. | Изменено |
+| 25.09.2020 | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Настройка параметров режима терминала Microsoft Edge для пилотного развертывания. Включает в себя описание режима терминала. | Создать |
 
 
 ## Неделя с 7 сентября 2020 г.
@@ -16,13 +29,13 @@ ms.locfileid: "11015371"
 
 | Дата публикации |Название раздела | Изменение |
 |------|------------|--------|
-| 09.09.2020 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Заметки о выпуске для обновления до основной версии 86.0.622.11 канала Beta | Изменено |
-| 09.09.2020 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Расписание обновлений для выпуска с основным обновлением канала Beta. | Изменено |
-| 09.09.2020 | [Корпоративные параметры конфиденциальности Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-privacy-settings)<br>Изменение для отражения нерекомендуемых (2) и новых параметров политик для настроек конфиденциальности. | Изменено |
-| 09.09.2020 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Обновление системы безопасности для стабильного канала (версия 85.0.564.51) | Изменено |
-| 09.09.2020 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление для системы безопасности (версия 85.0.564.51). | Изменено |
-| 10.09.2020 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление с добавлением новых, нерекомендуемых и устаревших политик. | Изменено |
-| 10.09.2020 | [Функции ClickOnce и DirectInvoke в Microsoft Edge](/DeployEdge/edge-learn-more-co-di)<br>Обновление с добавлением сведений о поддержке по умолчанию. | Изменено |
+| 09.09.2020 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
+| 09.09.2020 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | Изменено |
+| 09.09.2020 | [Корпоративные параметры конфиденциальности Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-privacy-settings) | Изменено |
+| 09.09.2020 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | Изменено |
+| 09.09.2020 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
+| 10.09.2020 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies) | Изменено |
+| 10.09.2020 | [Функции ClickOnce и DirectInvoke в Microsoft Edge](/DeployEdge/edge-learn-more-co-di) | Изменено |
 
 
 ## Неделя с 31 августа 2020 г.
