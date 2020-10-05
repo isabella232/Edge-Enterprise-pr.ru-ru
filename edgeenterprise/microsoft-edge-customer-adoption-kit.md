@@ -62,7 +62,7 @@ ms.locfileid: "11072636"
 - Поиск (Майкрософт) в Bing
 - Безопасность
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Страница "Новая вкладка"":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Страница Новая вкладка":::
 
 ## Другие ресурсы для обучения
 
