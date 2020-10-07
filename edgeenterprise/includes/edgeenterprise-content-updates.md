@@ -1,14 +1,26 @@
 ---
-ms.openlocfilehash: 7f24099b63dba253aaee8edc3be58783d97178c9
-ms.sourcegitcommit: 2f17cb271cb42b944435a99670375bb645abc9bf
+ms.openlocfilehash: bd70db3a942a526267de982018c25710e436af58
+ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "11088353"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "11099811"
 ---
-<!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## Неделя с 28 сентября 2020 г.
 
 
+| Дата публикации |Название раздела | Изменение |
+|------|------------|--------|
+| 09.29.2020 г. | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Исправления для вспомогательной версии 86.0.622.28 канала Beta. | Изменено |
+| 09.30.2020 г. | [Безопасность Microsoft Edge для вашего бизнеса](/DeployEdge/ms-edge-security-for-business)<br>Незначительно изменен текст и исправлены проблемы со ссылками. | Изменено |
+| 09.30.2020 г. | [Синхронизация Microsoft Edge Enterprise](/DeployEdge/microsoft-edge-enterprise-sync)<br>Исправлена область синхронизированных данных и вопросы и ответы: "Шифруются ли синхронизированные данные?"  | Изменено |
+| 10.01.2020 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Исправления для вспомогательной версии 85.0.564.68 канала Stable. | Изменено |
+| 10.02.2020 г. | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Исправления для вспомогательной версии 86.0.622.31 канала Beta. | Изменено |
+| 10.02.2020 г. | [Документация по Microsoft Edge Enterprise](/DeployEdge/index)<br>Добавлена ссылка на документацию по безопасности: "Безопасность Microsoft Edge для вашего бизнеса". | Изменено |
+| 10.02.2020 г. | [Microsoft Edge и Application Guard в Microsoft Defender](/DeployEdge/microsoft-edge-security-windows-defender-application-guard)<br>Исправлена неработающая ссылка в **См. также** | Изменено |
+| 10.02.2020 г. | [Безопасность Microsoft Edge для вашего бизнеса](/DeployEdge/ms-edge-security-for-business)<br>Исправлена опечатка. | Изменено |
+| 10.02.2020 г. | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновлены групповые политики Microsoft Edge. | Изменено |
 
 
 ## Неделя с 21 сентября 2020 г.
@@ -16,12 +28,12 @@ ms.locfileid: "11088353"
 
 | Дата публикации |Название раздела | Изменение |
 |------|------------|--------|
-| 22.09.2020 | [Материалы по адаптации пользователей к Microsoft Edge](/DeployEdge/microsoft-edge-customer-adoption-kit)<br>Обновленный объединенный материал в пакете для скачивания. | Изменено |
-| 22.09.2020 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Дополнительные обновления (86.0.622.15) для исправления ошибок и проблем с производительностью. | Изменено |
-| 23.09.2020 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Обновление системы безопасности для стабильного канала (версия 85.0.564.63) | Изменено |
-| 23.09.2020 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Дополнительные обновления (85.0.564.63) для отражения обновления для системы безопасности. | Изменено |
-| 24.09.2020 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление групповых политик. | Изменено |
-| 25.09.2020 | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Настройка параметров режима терминала Microsoft Edge для пилотного развертывания. Включает в себя описание режима терминала. | Создать |
+| 22.09.2020 | [Материалы по адаптации пользователей к Microsoft Edge](/DeployEdge/microsoft-edge-customer-adoption-kit) | Изменено |
+| 22.09.2020 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
+| 23.09.2020 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | Изменено |
+| 23.09.2020 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
+| 24.09.2020 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies) | Изменено |
+| 25.09.2020 | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode) | Изменено |
 
 
 ## Неделя с 7 сентября 2020 г.
@@ -45,3 +57,4 @@ ms.locfileid: "11088353"
 |------|------------|--------|
 | 2.09.2020 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies) | Изменено |
 | 2.09.2020 | [Откат Microsoft Edge для предприятий](/DeployEdge/edge-learnmore-rollback) | Изменено |
+
