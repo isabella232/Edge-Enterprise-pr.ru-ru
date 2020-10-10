@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/02/2020
+ms.date: 10/07/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: ddb41087b457d84677143b9889d5dcbab8b2d39c
-ms.sourcegitcommit: ba1e705f4456bc315ce75d84d4ea006913f3bd93
+ms.openlocfilehash: 3108af527697a15875bc615deb6c3efe19a120d3
+ms.sourcegitcommit: 5dceccd6f882ce46ed53b8aa9247e115ce5adc7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "11094007"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "11104584"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,10 @@ ms.locfileid: "11094007"
 
 > [!IMPORTANT]
 > Смотрите эти [обновления в каналах Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Версия 86.0.622.36: 7 октября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## Версия 86.0.622.31: 1 октября
 
