@@ -139,6 +139,8 @@
       href: microsoft-edge-policies.md
     - name: Справочник по политикам обновления
       href: microsoft-edge-update-policies.md
+    - name: Справочник по политике WebView2
+      href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
         - name: ClickOnce и DirectInvoke
@@ -167,9 +169,11 @@
   items:
     - name: Коллекция видеороликов Microsoft Edge
       href: microsoft-edge-videos.md
+    - name: Изоляция видео-браузеров с помощью Application Guard
+      href: microsoft-edge-video-security-application-guard.md
     - name: Видео — развертывание Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: 'Видео: Microsoft EDGE и защита от потери данных (DLP)'
+    - name: 'Видео: защита от потери данных (DLP)'
       href: microsoft-edge-video-security-dlp.md
     - name: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
       href: microsoft-edge-video-search.md
