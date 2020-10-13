@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 906a8cdd73e07efc5662e9b3ea51d8b7a2f03079
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094753"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105733"
 ---
 # Microsoft Edge - Политики
 Последняя версия Microsoft Edge включает в себя следующие политики. Эти политики можно использовать для настройки работы Microsoft Edge в вашей организации.
@@ -255,7 +255,7 @@ ms.locfileid: "11094753"
 |[DownloadRestrictions](#downloadrestrictions)|Разрешить ограничения загрузки|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Включить функцию коллекций|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Позволяет пользователям редактировать избранное|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Повторно включить устаревшие функции веб-платформы на ограниченное время|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Разрешение загрузки действий, связанных с доменом, из Microsoft (устарело)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Включить онлайн проверки OCSP/CRL|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Разрешение сертификатов, подписанных с помощью SHA-1 при выдаче локальными якорями доверия (не рекомендуется)|
@@ -345,6 +345,7 @@ ms.locfileid: "11094753"
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели избранного (не рекомендуется)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписанного HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию сайта для каждого сайта|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Включить проверку орфографии|
 |[SpellcheckLanguage](#spellchecklanguage)|Включить определенные языки проверки орфографии|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Принудительное отключение языков проверки орфографии|
@@ -10120,14 +10121,16 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   [В начало](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Повторно включить устаревшие функции веб-платформы на ограниченное время
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Поддерживаемые версии:
-  - На Windows и macOS начиная с 77 или позже
+  - On Windows and macOS since 77, until 86
 
   #### Описание
-  Укажите список устаревших функций веб-платформы для временного повторного включения.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+Укажите список устаревших функций веб-платформы для временного повторного включения.
 
 Эта политика позволяет повторно активировать устаревшие функции веб-платформы в течение ограниченного времени. Особенности идентифицируются строковым тегом.
 
@@ -10154,7 +10157,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   #### Сведения и параметры Windows
   ##### Сведения о групповой политике (ADMX)
   - Уникальное имя GP: EnableDeprecatedWebPlatformFeatures
-  - Имя GP: Повторно включить устаревшие функции веб-платформы на ограниченное время
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -15055,6 +15058,58 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   - Имя ключа предпочтения: SitePerProcess
+  - Пример значения:
+``` xml
+<true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Поддерживаемые версии:
+  - On Windows and macOS since 87 or later
+
+  #### Описание
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Поддерживаемые функции:
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+  ##### Сведения о групповой политике (ADMX)
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+  ##### Параметры реестра Windows
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Value Name: SpeechRecognitionEnabled
+  - Тип значения: REG_DWORD
+  ##### Пример значения:
+```
+0x00000001
+```
+
+
+  #### Информация о Mac и настройки
+  - Preference Key Name: SpeechRecognitionEnabled
   - Пример значения:
 ``` xml
 <true/>
