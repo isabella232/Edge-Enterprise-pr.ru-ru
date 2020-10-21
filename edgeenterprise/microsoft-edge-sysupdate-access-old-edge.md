@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как получить доступ к устаревшей версии Microsoft Edge.
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980943"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125521"
 ---
 # Получение доступа к устаревшей версии Microsoft Edge после установки новой версии Microsoft Edge
 
@@ -35,6 +35,8 @@ ms.locfileid: "10980943"
 > Поддержка классического приложения устаревшей версии Microsoft Edge будет прекращена 9 марта 2021 г. Вместо него будет использоваться новая версия Microsoft Edge. Это означает, что устаревшая версия Microsoft Edge не будет получать обновления для системы безопасности после этой даты. Это изменение применяется ко всем интерфейсам, работающим в классическом приложении устаревшей версии Microsoft Edge. [Подробнее](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## Перед началом работы
+> [!NOTE]
+> С Windows 10 версии 20H2 устаревшая версия Microsoft Edge отсутствует. Начиная с этой версии Windows 10 параллельная работа не поддерживаются.
 
 Процедуры, приведенные в этой статье, относятся к системам, на которых установлены последние обновления системы безопасности. После установки новой версии Microsoft Edge старая версия (устаревшая версия Microsoft Edge) будет скрыта. По умолчанию при попытке запуска старой версии Microsoft Edge будет открываться новая версия Microsoft Edge. В этой статье описано, как продолжить использование устаревшей версии Microsoft Edge после установки Microsoft Edge.
 

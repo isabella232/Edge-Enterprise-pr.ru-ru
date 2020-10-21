@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/16/2020
+ms.date: 10/20/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 28028e477afd15fa2a523e33624e2e75b713d9b1
-ms.sourcegitcommit: cc67ce52b5c8640100a5d662d39aee466d4c37d8
+ms.openlocfilehash: 864c8e9946f5114f2cdf6908ad88fbbe5ca9dd7a
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "11120172"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125541"
 ---
 # Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -23,6 +23,10 @@ ms.locfileid: "11120172"
 
 > [!NOTE]
 > Для стабильного канала обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## Версия 86.0.622.48: 20 октября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## Версия 86.0.622.43: 15 октября
 
