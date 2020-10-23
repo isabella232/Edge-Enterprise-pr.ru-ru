@@ -3,19 +3,19 @@ title: Синхронизация Microsoft Edge Enterprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/30/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Синхронизация Microsoft Edge Enterprise
-ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
-ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
+ms.openlocfilehash: e51346d9bab83228c42a84a7a14ee45dc9b463a7
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091951"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133134"
 ---
 # Синхронизация Microsoft Edge Enterprise
 
@@ -45,7 +45,7 @@ ms.locfileid: "11091951"
 
 - Azure AD Premium (P1 или P2)
 - M365 бизнес премиум
-- Office 365 E3 и более поздние версии
+- Office 365 E1 и более поздние версии
 - Azure Information Protection (AIP) (P1 и P2)
 - Все подписки EDU (приложения Майкрософт для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или выше, M365 A1 или выше, Azure Information Protection P1 или P2 для учащихся или преподавателей)
 
