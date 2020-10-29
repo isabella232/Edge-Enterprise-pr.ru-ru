@@ -3,7 +3,7 @@ title: Документация по политикам Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134448"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136218"
 ---
 # Политики Microsoft Edge WebView2
 
@@ -40,8 +40,8 @@ ms.locfileid: "11134448"
 
 |Имя политики|Заголовок|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|Настройка расположения папки исполняемого файла браузера|
-|[releaseChannelPreference](#releasechannelpreference)|Настройка предпочитаемого порядка поиска каналов выпуска|
+|[BrowserExecutableFolder](#browserexecutablefolder)|Настройка расположения папки исполняемого файла браузера|
+|[ReleaseChannelPreference](#releasechannelpreference)|Настройка предпочитаемого порядка поиска каналов выпуска|
 
 
 
@@ -50,7 +50,7 @@ ms.locfileid: "11134448"
 
   [В начало](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### Настройка расположения папки исполняемого файла браузера
 
@@ -80,7 +80,7 @@ ms.locfileid: "11134448"
 
   ##### Сведения о групповой политике (ADMX)
 
-  - Уникальное имя групповой политики: browserExecutableFolder
+  - Уникальное имя групповой политики: BrowserExecutableFolder
   - Имя групповой политики: Настройка расположения папки исполняемого файла браузера
   - Путь к групповой политике (обязательно): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
   - Путь GP (рекомендуется): N/A
@@ -88,7 +88,7 @@ ms.locfileid: "11134448"
 
   ##### Параметры реестра Windows
 
-  - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder
+  - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Путь (рекомендуется): N/A
   - Имя значения: список REG_SZ
   - Тип значения: список REG_SZ
@@ -96,7 +96,7 @@ ms.locfileid: "11134448"
   ##### Пример значения:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -104,7 +104,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [В начало](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### Настройка предпочитаемого порядка поиска каналов выпуска
 
@@ -136,7 +136,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   ##### Сведения о групповой политике (ADMX)
 
-  - Уникальное имя групповой политики: releaseChannelPreference
+  - Уникальное имя групповой политики: ReleaseChannelPreference
   - Имя групповой политики: Настройка предпочитаемого порядка поиска каналов выпуска
   - Путь к групповой политике (обязательно): Administrative Templates/Microsoft Edge WebView2/Loader Override Settings
   - Путь GP (рекомендуется): N/A
@@ -144,7 +144,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   ##### Параметры реестра Windows
 
-  - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference
+  - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Путь (рекомендуется): N/A
   - Имя значения: список REG_SZ
   - Тип значения: список REG_SZ
@@ -152,7 +152,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
   ##### Пример значения:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 

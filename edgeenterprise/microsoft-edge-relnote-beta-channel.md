@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133297"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136122"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,10 @@ ms.locfileid: "11133297"
 
 > [!IMPORTANT]
 > Смотрите эти [обновления в каналах Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Версия 87.0.664.18: 26 октября
+
+Исправлены ошибки и проблемы с производительностью.
 
 <!-- begin major 87 -->
 ## Версия 87.0.664.12: 20 октября
@@ -68,8 +72,6 @@ ms.locfileid: "11133297"
 #### Устаревшая политика
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) — Повторное включение устаревших функций веб-платформы на ограниченное время (устарело).
-
-
 
 <!-- end major 87 -->
 

@@ -3,19 +3,19 @@ title: Жизненный цикл Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/13/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Жизненный цикл Microsoft Edge
-ms.openlocfilehash: 6f29155362a4f942f850116ca09162d49f1dfc52
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 311041e314a5c21d1110275cafbc23aadd6b737b
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980944"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136208"
 ---
 # Политика жизненного цикла Microsoft Edge
 
@@ -30,7 +30,14 @@ ms.locfileid: "10980944"
 
 В рамках этой политики поддерживаемые выпуски Microsoft Edge будут включать последний доступный выпуск из каналов Beta и Stable.
 
-## Статьи по теме
+## Доступность технической поддержки для Microsoft Edge
+Обновления для системы безопасности и обновления для обслуживания доступны только в последней версии канала Stable и последней бета-версии канала. Использование более поздних выпусков Microsoft Edge, скорее всего, означает, что у вас отсутствуют последние исправления и обновления для системы безопасности, и их не рекомендуется использовать. Если вашей организации необходимо использовать более поздние версии, тогда техническая поддержка доступна для трех последних версий канала Stable и последнего выпуска бета-версии.  Срок действия службы технической поддержки для версии канала Stable составляет примерно 18 недель. Срок действия службы поддержки для бета-версии канала составляет примерно 6 недель, а предыдущие бета-версии не поддерживаются.
+
+Майкрософт настоятельно рекомендует использовать последнюю версию канала Stable или бета-версии.
+
+
+
+## См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Документация по Microsoft Edge](https://docs.microsoft.com/DeployEdge/)

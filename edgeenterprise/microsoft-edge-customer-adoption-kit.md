@@ -3,19 +3,19 @@ title: Материалы по адаптации пользователей к 
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/22/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Материалы по адаптации пользователей к Microsoft Edge
-ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: dd75deb8be985a421adc158069e5562f4428415b
+ms.sourcegitcommit: 76a48f5818c90f3edf5780cfcca5def5aeb863bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072636"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136094"
 ---
 # Материалы по адаптации пользователей к Microsoft Edge
 
@@ -29,9 +29,12 @@ ms.locfileid: "11072636"
 
 - Руководство по развертыванию для ИТ-отдела
 - Руководство пользователя по началу работы
-- Электронное письмо об объявлении
-- Электронное письмо с советами и рекомендациями
+- Ознакомительное письмо
+- Баннеры
 - Цифровые вывески
+- Одностраничные документы
+- Демонстрации и GIF
+- Ссылки на веб-ресурсы
 
 [Скачать набор адаптации пользователей](https://www.microsoft.com/download/details.aspx?id=102119)
 
@@ -45,13 +48,13 @@ ms.locfileid: "11072636"
 
 Используйте это руководство, чтобы познакомить пользователей с новой версией Microsoft Edge. Это руководство содержит обзоры пользовательского интерфейса, меню и функций. Мы также добавили советы, которые помогут пользователям начать работу.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Руководство пользователя по началу работы...":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="Серия видеороликов о Microsoft Mechanics":::
 
 ### Шаблоны электронных сообщений
 
 Используйте шаблоны электронных сообщений, чтобы объявить пользователям о доступности нового Microsoft Edge и предоставить советы и рекомендации для его максимально эффективного использования.
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Шаблон электронного сообщения с советами и рекомендациями":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="Серия видеороликов о Microsoft Mechanics":::
 
 ### Цифровые вывески
 
@@ -62,7 +65,19 @@ ms.locfileid: "11072636"
 - Поиск (Майкрософт) в Bing
 - Безопасность
 
-:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Страница Новая вкладка":::
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="Серия видеороликов о Microsoft Mechanics":::
+
+### Баннеры
+
+Используйте эти баннеры на своих внутренних сайтах, чтобы прорекламировать новый Microsoft Edge для своих сотрудников.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-banner-ads.png" alt-text="Серия видеороликов о Microsoft Mechanics":::
+
+### Одностраничные документы
+
+Отправьте или опубликуйте эти одностраничные документы, чтобы ваши сотрудники ознакомились с Microsoft Edge и настроили браузер для использования на работе.
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-one-pager.png" alt-text="Серия видеороликов о Microsoft Mechanics":::
 
 ## Другие ресурсы для обучения
 
