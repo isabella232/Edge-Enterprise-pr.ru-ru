@@ -143,6 +143,8 @@
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
+        - name: Обратная совместимость на новой странице вкладки "Корпоративная"
+          href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
         - name: Параметры командной строки для настройки параметров прокси-сервера
