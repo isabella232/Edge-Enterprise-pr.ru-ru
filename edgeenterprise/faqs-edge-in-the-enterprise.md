@@ -3,19 +3,19 @@ title: Вопросы и ответы о браузере Edge в организ
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Вопросы и ответы о развертывании браузера Microsoft Edge в организации
-ms.openlocfilehash: 0f6891f4f7187b23f6e3d4e7880fdafa49def351
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e689967cbad950e2969535bad0dd63d5d7081798
+ms.sourcegitcommit: 12827458f6217f443128e826c1d18d36d401d03b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980895"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154324"
 ---
 # Вопросы и ответы о браузере Microsoft Edge в организации
 
@@ -56,7 +56,9 @@ Microsoft Edge поддерживает расширения с [ портала
 
 ## Поддерживают ли службы WSUS начальное развертывание нового браузера Microsoft Edge?
 
-Нет. Службы WSUS поддерживает обновление существующих экземпляров Microsoft Edge, установленных с помощью MSI, но их невозможно использовать для начального развертывания. Если целью является полное управление обновлениями через службы WSUS, начальное развертывание можно выполнить с помощью средства управления, такого как [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+Да. В [каталоге Центра обновления Майкрософт](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) есть пакеты, которые можно использовать для первоначального развертывания нового браузера Microsoft Edge через WSUS. После первоначального развертывания по умолчанию настраиваются автоматические обновления. Подробнее см. [Обновление в WSUS для нового браузера Microsoft Edge для Windows 10 версий 1809, 1903, 1909 и 2004: 29октября 2020г](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
+
+Обновления можно устанавливать вручную с помощью диспетчера конфигурации, например [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
 
 ## См. также
 
