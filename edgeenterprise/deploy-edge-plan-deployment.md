@@ -3,19 +3,19 @@ title: Планирование развертывания Microsoft Edge
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Планирование развертывания Microsoft Edge
-ms.openlocfilehash: 3ac3d050578ca4f230ed7e775aefb73f11abb3c0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980882"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155256"
 ---
 # Планирование развертывания Microsoft Edge
 
@@ -23,6 +23,19 @@ ms.locfileid: "10980882"
 
 >[!NOTE]
 >Эта статья относится к Microsoft Edge версии 77 или более поздней.
+
+В следующих разделах приведены конкретные указания по планированию развертывания Microsoft Edge.
+
+- [Оценка среды и требований браузера](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Проверка готовности устройств с Windows 10](#make-sure-your-windows-10-devices-are-ready)
+- [Выбор методологии развертывания](#determine-your-deployment-methodology)
+- [Обнаружение сайтов](#do-site-discovery)
+- [Выбор стратегии канала](#determine-your-channel-strategy)
+- [Определение и настройка политик](#define-and-configure-policies)
+- [Проверка совместимости приложений](#do-app-compatibility-testing)
+- [Пилотный проект MicrosoftEdge](#deploy-microsoft-edge-to-a-pilot-group)
+- [Оценка пилотного проекта](#validate-your-deployment)
+- [Развертывание Microsoft Edge на предприятии](#broad-deployment-of-microsoft-edge)
 
 ## Оценка существующей среды браузера и потребностей браузера
 
@@ -157,9 +170,11 @@ Microsoft Edge выпускается в [нескольких каналах](h
 2. если приложение работает в Internet Explorer, оно будет работать в Microsoft Edge в режиме Internet Explorer;
 3. если приложение работает в Google Chrome, оно будет работать в Microsoft Edge.
 
-Если у вас есть приложение, которое не соответствует этим утверждениям, мы исправим его с помощью [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
+Если у вас есть приложение, в отношении которого нарушается наше обещание о совместимости, мы исправим его с помощью [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-Несмотря на это обещание, мы знаем, что многие организации должны проверять некоторые приложения на предмет их соответствия требованиям или для управления рисками. Хотя мы ожидаем, что это будет очень просто, крайне важно тщательно организовать и протестировать приложения.
+### Внутреннее тестирование бизнес-приложений
+
+Несмотря на наше обещание о совместимости, мы знаем, что многие организации обязаны проверять определенные приложения на предмет их соответствия требованиям или для управления рисками. Хотя мы ожидаем, что это будет очень просто, крайне важно тщательно организовать и протестировать приложения.
 
 Существует два способа тестирования совместимости приложений.
 
@@ -167,6 +182,10 @@ Microsoft Edge выпускается в [нескольких каналах](h
 2. Пилотное тестирование. Приложения проверяются на ограниченном числе пользователей в повседневной рабочей среде на их собственных устройствах.
 
 Выберите наиболее подходящий для каждого приложения метод, чтобы управлять рисками без лишних затрат на тестирование совместимости.
+
+### Поддержка сторонних приложений
+
+Кроме собственных бизнес-приложений многие организации используют приложения, предоставляемые внешними источниками. В статье [Готовность к Microsoft Edge](deploy-edge-ready-for-edge.md) содержится список веб-приложений, которые могут использоваться в вашей организации. Этот список включает ссылки на сведения о поддержке, предоставляемые поставщиками для своих продуктов при их использовании в Microsoft Edge.
 
 ## Развертывание Microsoft Edge в пилотной группе
 

@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134468"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155316"
 ---
 # Microsoft Edge - Политики
 
@@ -29,6 +29,18 @@ ms.locfileid: "11134468"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
+## Новые и устаревшие политики
+
+В таблице ниже перечислены новые и устаревшие политики для этого обновления.
+
+| Название | Status |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | Создать |
+| [ProxyBypassList](#proxybypasslist) | Не рекомендуется |
+| [ProxyMode](#proxymode) | Не рекомендуется |
+| [ProxyPacUrl](#proxypacurl) | Не рекомендуется |
+| [ProxyServer](#proxyserver) | Не рекомендуется |
+
 ## Доступные политики
 
 В этих таблицах перечислены все связанные с браузером групповые политики, доступные в этом выпуске Microsoft Edge. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
@@ -39,10 +51,10 @@ ms.locfileid: "11134468"
 |[Настройки контента](#content-settings)|[Поставщик поиска по умолчанию](#default-search-provider)|
 |[Расширения](#extensions)|[Проверка подлинности HTTP](#http-authentication)|
 |[Параметры режима полного экрана](#kiosk-mode-settings)|[Встроенные сообщения](#native-messaging)|
-|[Менеджер паролей и защита](#password-manager-and-protection)|[Вывод на печать](#printing)|
-|[Прокси-сервер](#proxy-server)|[Параметры SmartScreen](#smartscreen-settings)|
-|[Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)|[Дополнительно](#additional)|
-
+|[Менеджер паролей и защита](#password-manager-and-protection)|[Производительность](#performance)|
+|[Вывод на печать](#printing)|[Прокси-сервер](#proxy-server)|
+|[Параметры SmartScreen](#smartscreen-settings)|[Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)|
+|[Дополнительно](#additional)|
 
 ### [*Параметры Application Guard*](#application-guard-settings-policies)
 
@@ -156,6 +168,11 @@ ms.locfileid: "11134468"
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|Настройка списка корпоративных URL-адресов входа, где служба защиты пароля должна фиксировать соленые хэши пароля|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|Настройте триггер предупреждения о защите паролем|
 |[PasswordRevealEnabled](#passwordrevealenabled)|Включить кнопку отображения пароля|
+### [*Производительность*](#performance-policies)
+
+|Имя политики|Заголовок|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|Включить усиление начальной загрузки|
 ### [*Вывод на печать*](#printing-policies)
 
 |Имя политики|Заголовок|
@@ -170,10 +187,10 @@ ms.locfileid: "11134468"
 
 |Имя политики|Заголовок|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|Настроить правила обхода прокси|
-|[ProxyMode](#proxymode)|Настройте параметры прокси-сервера|
-|[ProxyPacUrl](#proxypacurl)|Задайте URL-адрес прокси-файла .pac|
-|[ProxyServer](#proxyserver)|Настройте адрес или URL прокси-сервера|
+|[ProxyBypassList](#proxybypasslist)|Настроить правила обхода прокси-сервера (устарело)|
+|[ProxyMode](#proxymode)|Настроить параметры прокси-сервера (устарело)|
+|[ProxyPacUrl](#proxypacurl)|Установить URL-адрес файла .pac прокси-сервера (устарело)|
+|[ProxyServer](#proxyserver)|Настроить адрес или URL прокси-сервера (устарело)|
 |[ProxySettings](#proxysettings)|Параметры прокси-сервера|
 ### [*Параметры SmartScreen*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ ms.locfileid: "11134468"
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Управление выставлением локальных IP-адресов с помощью WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Ограничить доступность локального IP-адреса в WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Ограничить диапазон локальных портов UDP, используемых WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Включить мини веб-приложение|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Разрешить запускать мини веб-приложение при начальной загрузке Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Использовать сопоставитель прокси-серверов Windows (не рекомендуется)|
 
 
@@ -546,7 +565,6 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: EnableMediaRouter
@@ -608,7 +626,6 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -1205,7 +1215,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -1345,7 +1353,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -1485,7 +1491,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -1765,7 +1767,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -2510,7 +2501,6 @@ If you don't set this policy, the default SameSite behavior for cookies will dep
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -3133,7 +3116,6 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -3442,7 +3422,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -3587,7 +3565,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultSearchProviderImageURL
@@ -3654,7 +3631,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultSearchProviderImageURLPostParams
@@ -3718,7 +3694,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 ```
 "mis"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -3785,7 +3760,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 ```
 "My Intranet Search"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -3854,7 +3828,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -3925,7 +3898,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -4004,7 +3976,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 "bing"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: NewTabPageSearchBox
@@ -4076,7 +4047,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ExtensionAllowedTypes
@@ -4102,7 +4072,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Описание
 
-  По умолчанию все расширения разрешены. Однако если вы заблокируете все расширения, установив для политики 'ExtensionInstallBlockList' значение "*", пользователи смогут устанавливать только расширения, определенные в этой политике.
+  По умолчанию все расширения разрешены. Тем не менее, если заблокировать все расширения, задав для политики "ExtensionInstallBlockList" значение "*", пользователи смогут устанавливать только расширения, определенные этой политикой.
 
   #### Поддерживаемые функции:
 
@@ -4138,7 +4108,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -4206,7 +4175,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -4291,7 +4259,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ExtensionInstallForcelist
@@ -4320,9 +4287,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   Определите URL-адреса, которые могут устанавливать расширения и темы.
 
-По умолчанию пользователи должны загрузить файл *.crx для каждого расширения или сценария, который они хотят установить, а затем перетащить его на страницу настроек Microsoft Edge. Эта политика позволяет определенным URL-адресам использовать расширение или скрипт для пользователя.
+Определите URL-адреса, которые могут устанавливать расширения и темы непосредственно без перетаскивания пакетов на страницу edge://extensions.
 
-Каждый элемент в этом списке является шаблоном соответствия стилю расширения (см. [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Пользователи могут легко устанавливать элементы с любого URL-адреса, соответствующего элементу в этом списке. Этим шаблонам должно быть разрешено как местоположение файла *.crx, так и страница, с которой начинается загрузка (другими словами, реферер).
+Каждый элемент в этом списке является шаблоном соответствия стилю расширения (см. [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Пользователи могут легко устанавливать элементы с любого URL-адреса, соответствующего элементу в этом списке. Этим шаблонам должно быть разрешено как местоположение файла *.crx, так и страница, с которой начинается загрузка (другими словами, реферер). Не размещайте файлы в расположениях, требующих проверки подлинности.
 
 Политика [ExtensionInstallBlocklist](#extensioninstallblocklist) имеет приоритет над этой политикой. Любые расширения, которые есть в списке заблокированных, не будут установлены, даже если они получены с сайта в этом списке.
 
@@ -4359,7 +4326,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -4652,7 +4618,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AllowCrossOriginAuthPrompt
@@ -4714,7 +4679,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 "contoso.com"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -4778,7 +4742,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AuthSchemes
@@ -4840,7 +4803,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -4904,7 +4866,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DisableAuthNegotiateCnameLookup
@@ -4966,7 +4927,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5099,7 +5059,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - В Windows 87 и более поздних версий
 
   #### Описание
-                                                                                              
 
   Эта политика применяется только к Microsoft Edge в режиме полного экрана.
 
@@ -5141,7 +5100,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 0x00000001
 ```
-
 
   
 
@@ -5201,7 +5159,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5270,7 +5227,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: NativeMessagingBlocklist
@@ -5335,7 +5291,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5404,7 +5359,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5484,7 +5438,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -5543,7 +5496,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5610,7 +5562,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5691,7 +5642,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PasswordProtectionWarningTrigger
@@ -5769,6 +5719,71 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [В начало](#microsoft-edge---policies)
 
+  ## Политики производительности
+
+  [В начало](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### Включить усиление начальной загрузки
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows 88 и более поздних версий
+
+  #### Описание
+
+  Позволяет запускать процессы Microsoft Edge при входе в ОС и выполнять перезапуск в фоновом режиме после закрытия последнего окна браузера.
+
+Если Microsoft Edge работает в фоновом режиме, браузер может не закрываться и не выполнять перезапуск в фоновом режиме после закрытия последнего окна. См. политику [BackgroundModeEnabled](#backgroundmodeenabled) для получения информации о том, что произойдет после настройки поведения Microsoft Edge в фоновом режиме.
+
+Если эта политика включена, включается усиление начальной загрузки.
+
+Если эта политика отключена, усиление начальной загрузки выключается.
+
+Если не настроить эту политику, усиление начальной загрузки может быть изначально выключено или включено.. Пользователь может настроить ее поведение на странице edge://settings/system.
+
+Дополнительные сведения об усилении начальной загрузки: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: StartupBoostEnabled
+  - Имя GP: Включение усиления начальной загрузки
+  - Путь GP (обязательно): Административные шаблоны/Microsoft Edge/Производительность
+  - Путь GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Производительность
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ\Policies\Microsoft\Edge\Recommended
+  - Имя значения: StartupBoostEnabled
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000001
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ## Политика печати
 
   [В начало](#microsoft-edge---policies)
@@ -5827,7 +5842,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -5893,7 +5907,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PrintHeaderFooter
@@ -5956,7 +5969,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PrintPreviewUseSystemDefaultPrinter
@@ -6018,7 +6030,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -6168,7 +6179,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: UseSystemPrintDialog
@@ -6186,9 +6196,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyBypassList
 
-  #### Настроить правила обхода прокси
+  #### Настроить правила обхода прокси-сервера (устарело)
 
-  
+  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### Поддерживаемые версии:
 
@@ -6196,9 +6206,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### Описание
 
-  Определяет список хостов, для которых Microsoft Edge обходит любой прокси.
+  Эта политика устарела, используйте [ProxySettings](#proxysettings). Она не будет работать в Microsoft Edge версии 91.
 
-Эта политика применяется, только если вы выбрали «Использовать фиксированные прокси-серверы» в политике [ProxyMode](#proxymode). Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
+Определяет список хостов, для которых Microsoft Edge обходит любой прокси.
+
+Эта политика применяется, если политика [ProxySettings](#proxysettings) не указана, и в политике [ProxyMode](#proxymode) выбрано fixed_servers. Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
 
 Если вы включите эту политику, вы сможете создать список хостов, для которых Microsoft Edge не использует прокси.
 
@@ -6221,7 +6233,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: ProxyBypassList
-  - Имя GP: Настройка правил обхода прокси
+  - Имя GP: Настройка правил обхода прокси-сервера (устарело)
   - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Прокси-сервер
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -6239,7 +6251,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ProxyBypassList
@@ -6253,9 +6264,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyMode
 
-  #### Настройте параметры прокси-сервера
+  #### Настроить параметры прокси-сервера (устарело)
 
-  
+  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### Поддерживаемые версии:
 
@@ -6263,21 +6274,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### Описание
 
-  Укажите настройки прокси-сервера, используемые Microsoft Edge. Если вы включите эту политику, пользователи не смогут изменять параметры прокси.
+  Эта политика устарела, используйте [ProxySettings](#proxysettings). Она не будет работать в Microsoft Edge версии 91.
 
-Если вы решите никогда не использовать прокси-сервер и всегда подключаться напрямую, все остальные параметры игнорируются.
+Если включить эту политику, можно указать прокси-сервер, который использует Microsoft Edge, и запрещает пользователям менять параметры прокси. Microsoft Edge игнорирует все параметры, связанные с прокси-сервером, которые указаны в командной строке. Политика применяется только в том случае, если не указана политика [ProxySettings](#proxysettings).
 
-Если вы решите использовать настройки прокси-сервера системы, все остальные параметры будут игнорироваться.
+Другие параметры игнорируются, если выбрать один из следующих вариантов:
+  * direct = никогда не использовать прокси-сервер и всегда подключаться напрямую
+  * system = использовать системные настройки прокси
+  * auto_detect = автоматически определять прокси-сервер
 
-Если вы выбираете автоопределение прокси-сервера, все остальные параметры игнорируются.
-
-Если вы выбираете фиксированный режим прокси-сервера, вы можете указать дополнительные параметры в [ProxyServer](#proxyserver) и «Список разделенных запятыми правил обхода прокси».
-
-Если вы решите использовать прокси-скрипт .pac, вы должны указать URL-адрес скрипта в «URL-адресе файла .pac прокси».
+При использовании:
+  * fixed_servers = использовать фиксированные прокси-серверы. Дополнительные параметры можно задать с помощью [ProxyServer](#proxyserver) и[ProxyBypassList](#proxybypasslist).
+  * pac_script = использовать прокси-скрипт .pac. Чтобы задать URL-адрес для .pac файла прокс-сервера, используйте [ProxyPacUrl](#proxypacurl) .
 
 Для подробных примеров, перейдите к [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
-
-Если вы включите эту политику, Microsoft Edge будет игнорировать все параметры, связанные с прокси, указанные в командной строке.
 
 Если вы не настроите эту политику, пользователи могут выбрать свои собственные настройки прокси.
 
@@ -6310,7 +6320,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: ProxyMode
-  - Имя GP: Настройка параметров прокси-сервера
+  - Имя GP: Настройка параметров прокси-сервера (устарело)
   - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Прокси-сервер
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -6328,7 +6338,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "direct"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ProxyMode
@@ -6342,9 +6351,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyPacUrl
 
-  #### Задайте URL-адрес прокси-файла .pac
+  #### Установить URL-адрес файла .pac прокси-сервера (устарело)
 
-  
+  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### Поддерживаемые версии:
 
@@ -6352,9 +6361,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### Описание
 
-  Указывает URL-адрес для файла автоматической настройки прокси (PAC).
+  Эта политика устарела, используйте [ProxySettings](#proxysettings). Она не будет работать в Microsoft Edge версии 91.
 
-Эта политика применяется, только если вы выбрали «Использовать сценарий прокси .pac» в политике [ProxyMode](#proxymode). Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
+Указывает URL-адрес для файла автоматической настройки прокси (PAC).
+
+Эта политика применяется, если политика [ProxySettings](#proxysettings) не указана, и в политике [ProxyMode](#proxymode) выбрано pac_script. Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
 
 Если вы включите эту политику, вы можете указать URL-адрес для PAC файла, который определяет, как браузер автоматически выбирает соответствующий прокси-сервер для загрузки определенного веб-сайта.
 
@@ -6377,7 +6388,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: ProxyPacUrl
-  - Имя GP: установите URL-адрес прокси-файла .pac
+  - Имя GP: Установка URL-адреса файла .pac прокси-сервера (устарело)
   - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Прокси-сервер
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -6395,7 +6406,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ProxyPacUrl
@@ -6409,9 +6419,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyServer
 
-  #### Настройте адрес или URL прокси-сервера
+  #### Настроить адрес или URL прокси-сервера (устарело)
 
-  
+  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### Поддерживаемые версии:
 
@@ -6419,9 +6429,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### Описание
 
-  Определяет URL прокси-сервера.
+  Эта политика устарела, используйте [ProxySettings](#proxysettings). Она не будет работать в Microsoft Edge версии 91.
 
-Эта политика применяется, только если вы выбрали «Использовать фиксированные прокси-серверы» в политике [ProxyMode](#proxymode). Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
+Определяет URL прокси-сервера.
+
+Эта политика применяется, если политика [ProxySettings](#proxysettings) не указана, и в политике [ProxyMode](#proxymode) выбрано fixed_servers. Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
 
 Если вы включите эту политику, прокси-сервер, настроенный этой политикой, будет использоваться для всех URL-адресов.
 
@@ -6444,7 +6456,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: ProxyServer
-  - Имя GP: настроить адрес или URL прокси-сервера
+  - Имя GP: Настройка адреса или URL прокси-сервера (устарело)
   - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Прокси-сервер
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -6461,7 +6473,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -6499,23 +6510,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-Поле ProxyMode позволяет указать прокси-сервер, используемый Microsoft Edge, и запрещает пользователям изменять настройки прокси.
+Настройка политики [ProxySettings](#proxysettings) допускает указанные ниже поля.
+  * ProxyMode, который позволяет указать прокси-сервер, используемый Microsoft Edge, и запрещает пользователям менять параметры прокси
+  * ProxyPacUrl – URL-адрес файла .pac прокси-сервера
+  * ProxyServer – URL-адрес прокси-сервера
+  * ProxyBypassList – список прокси-хостов, которые обходит Microsoft Edge
 
-Поле ProxyPacUrl - это URL-адрес прокси-файла .pac.
+Для ProxyMode, выбрано значение:
+  * direct – прокси-сервер никогда не используется, а все остальные поля игнорируются.
+  * system – используется системный прокси-сервер, а все остальные поля игнорируются.
+  * auto_detect – все остальные поля игнорируются.
+  * fixed_server – используются поля ProxyServer и ProxyBypassList.
+  * pac_script – используются поля ProxyPacUrl и ProxyBypassList.
 
-Поле ProxyServer является URL-адресом прокси-сервера.
-
-Поле ProxyBypassList представляет собой список прокси-хостов, которые Microsoft Edge обходит.
-
-Если вы выберете значение 'direct' как 'ProxyMode', прокси никогда не будет использоваться, а все остальные поля будут игнорироваться.
-
-Если в качестве значения «system» выбрано «ProxyMode», используется системный прокси-сервер, а все остальные поля игнорируются.
-
-Если вы выберете значение «auto_detect» как «ProxyMode», все остальные поля будут игнорироваться.
-
-Если вы выбрали значение «fixed_server» в качестве «ProxyMode», используются поля «ProxyServer» и «ProxyBypassList».
-
-Если вы выбираете значение «pac_script» как «ProxyMode», то используются поля «ProxyPacUrl» и «ProxyBypassList».
+Для более подробных примеров перейдите по ссылке [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
   #### Поддерживаемые функции:
 
@@ -6640,7 +6648,6 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PreventSmartScreenPromptOverride
@@ -6705,7 +6712,6 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -6773,7 +6779,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -6844,7 +6849,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SmartScreenEnabled
@@ -6909,7 +6913,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -6968,7 +6971,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -7040,7 +7042,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: HomepageIsNewTabPage
@@ -7108,7 +7109,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -7179,7 +7179,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -7347,7 +7346,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: NewTabPageHideDefaultTopSites
@@ -7417,7 +7415,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -7578,7 +7575,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: NewTabPagePrerenderEnabled
@@ -7661,7 +7657,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: NewTabPageSetFeedType
@@ -7740,7 +7735,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000004
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: RestoreOnStartup
@@ -7804,7 +7798,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -7871,7 +7864,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ShowHomeButton
@@ -7935,7 +7927,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8003,7 +7994,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AdsSettingForIntrusiveAdsSites
@@ -8033,7 +8023,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 Если вы включите эту политику или не настроите ее, пользователи смогут удалить историю просмотров и загрузок.
 
-Если вы отключите эту политику, пользователи не смогут удалить историю просмотров и загрузок.
+Если отключить эту политику, пользователи не смогут удалять журнал просмотра и загрузок, а синхронизация журнала будет отключена.
 
 Если вы включите эту политику, не включайте политику ClearBrowsingDataOnExit, потому что они оба имеют дело с удалением данных[ClearBrowsingDataOnExit](#clearbrowsingdataonexit) Если вы включите оба, политика [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) имеет приоритет и удаляет все данные при закрытии Microsoft Edge независимо от того, как настроена эта политика.
 
@@ -8069,7 +8059,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8132,7 +8121,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8198,7 +8186,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AllowPopupsDuringPageUnload
@@ -8258,7 +8245,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8323,7 +8309,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8394,7 +8379,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -8451,7 +8435,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8521,7 +8504,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AlternateErrorPagesEnabled
@@ -8583,7 +8565,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8669,7 +8650,6 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AmbientAuthenticationInPrivateModesEnabled
@@ -8729,7 +8709,6 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8793,7 +8772,6 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 "en"
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -8850,7 +8828,6 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8911,7 +8888,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -8982,7 +8958,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -9096,7 +9071,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -9295,7 +9269,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AutoOpenAllowedForURLs
@@ -9372,7 +9345,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AutoOpenFileTypes
@@ -9440,7 +9412,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AutofillAddressEnabled
@@ -9502,7 +9473,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -9571,7 +9541,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: AutoplayAllowed
@@ -9636,7 +9605,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -9691,7 +9659,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -9765,7 +9732,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: BingAdsSuppression
@@ -9830,7 +9796,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: BlockThirdPartyCookies
@@ -9891,7 +9856,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -9955,7 +9919,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: BrowserGuestModeEnabled
@@ -10017,7 +9980,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10095,7 +10057,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: BrowserSignin
@@ -10161,7 +10122,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10274,7 +10234,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: CertificateTransparencyEnforcementDisabledForCas
@@ -10346,7 +10305,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10415,7 +10373,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10486,7 +10443,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ClearBrowsingDataOnExit
@@ -10552,7 +10508,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10622,7 +10577,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -10648,6 +10602,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 Сопоставление параметров политики:
 
 * pinterest_suggestions (pinterest_suggestions) = предложения Pinterest
+
+* collections_share (collections_share) = предоставление общего доступа к коллекциям
 
 Используйте изложенные выше сведения при настройке этой политики.
 
@@ -10682,9 +10638,9 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10693,6 +10649,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10751,7 +10708,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10814,7 +10770,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -10880,7 +10835,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ConfigureDoNotTrack
@@ -10901,6 +10855,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   #### Поддерживаемые версии:
 
   - В Windows 87 и более поздних версий
+  - MacOS с 88 и более поздних версий
 
   #### Описание
 
@@ -10963,6 +10918,13 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000003
 ```
 
+  #### Информация о Mac и настройки
+  
+  - Имя ключа настройки: ConfigureFriendlyURLFormat
+  - Пример значения:
+``` xml
+<integer>3</integer>
+```
   
 
   [В начало](#microsoft-edge---policies)
@@ -11028,7 +10990,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -11085,7 +11046,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -11155,7 +11115,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -11212,7 +11171,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -11278,7 +11236,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DNSInterceptionChecksEnabled
@@ -11343,7 +11300,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultBrowserSettingEnabled
@@ -11407,7 +11363,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -11481,7 +11436,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DefaultSensorsSetting
@@ -11553,7 +11507,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -11629,7 +11582,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -11684,7 +11636,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000000
 ```
-
 
   
 
@@ -11752,7 +11703,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -11840,7 +11790,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DiagnosticData
@@ -11907,7 +11856,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -11962,7 +11910,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -12028,7 +11975,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DisableScreenshots
@@ -12093,7 +12039,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 "${user_home}/Edge_cache"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DiskCacheDir
@@ -12157,7 +12102,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x06400000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -12235,7 +12179,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 "off"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DnsOverHttpsMode
@@ -12302,7 +12245,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DnsOverHttpsTemplates
@@ -12368,7 +12310,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -12454,7 +12395,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: DownloadRestrictions
@@ -12516,7 +12456,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -12640,7 +12579,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: EditFavoritesEnabled
@@ -12659,7 +12597,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### Поддерживаемые версии:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12716,7 +12653,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -12790,7 +12726,6 @@ Microsoft ведет список действий, предпринимаемы
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: EnableDomainActionsDownload
@@ -12852,7 +12787,6 @@ Microsoft ведет список действий, предпринимаемы
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -12918,7 +12852,6 @@ Microsoft ведет список действий, предпринимаемы
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: EnableSha1ForLocalAnchors
@@ -12978,7 +12911,6 @@ Microsoft ведет список действий, предпринимаемы
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13041,7 +12973,6 @@ Microsoft ведет список действий, предпринимаемы
 ```
 0x00000000
 ```
-
 
   
 
@@ -13112,7 +13043,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13201,7 +13131,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ExperimentationAndConfigurationServiceControl
@@ -13270,7 +13199,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13332,7 +13260,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13397,7 +13324,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13475,7 +13401,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ForceBingSafeSearch
@@ -13537,7 +13462,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13603,7 +13527,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ForceEphemeralProfiles
@@ -13665,7 +13588,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13731,7 +13653,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ForceLegacyDefaultReferrerPolicy
@@ -13794,7 +13715,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -13853,7 +13773,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -13929,7 +13848,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ForceYouTubeRestrict
@@ -13994,7 +13912,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -14053,7 +13970,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14123,7 +14039,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14182,7 +14097,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14245,7 +14159,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14330,7 +14243,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14457,7 +14369,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportAutofillFormData
@@ -14526,7 +14437,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportBrowserSettings
@@ -14592,7 +14502,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14662,7 +14571,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportExtensions
@@ -14730,7 +14638,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14800,7 +14707,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportHistory
@@ -14868,7 +14774,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -14938,7 +14843,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportOpenTabs
@@ -15006,7 +14910,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -15076,7 +14979,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportSavedPasswords
@@ -15145,7 +15047,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ImportSearchEngine
@@ -15211,7 +15112,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -15287,7 +15187,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: InPrivateModeAvailability
@@ -15347,7 +15246,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -15415,7 +15313,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -15493,7 +15390,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -15555,7 +15451,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -15606,7 +15501,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15683,7 +15577,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -15700,15 +15593,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Описание
 
-  Эта политика заменяет политику флага ie-mode-test. Она позволяет пользователям открыть вкладку режима IE из параметра меню пользовательского интерфейса.
+  Эта политика позволяет пользователям проверять приложения в режиме Internet Explorer, открыв вкладку режима Internet Explorer в Microsoft Edge.
+
+Это можно сделать с помощью меню "Другие инструменты", выбрав пункт "Открыть сайты в режиме Internet Explorer".
+
+Кроме того, пользователи могут проверить приложения в современном браузере, не удаляя их из списка сайтов с помощью команды "Открыть сайты в режиме Microsoft Edge".
 
 Этот параметр работает в сочетании с [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) со значением «IEMode» и политикой [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist), где список содержит хотя бы одну запись.
 
-Если эта политика включена, пользователи могут открыть вкладку режима IE из параметра пользовательского интерфейса и перевести текущий сайт в режим IE.
+Если эта политика включена, команда "Открыть сайты в режиме Internet Explorer" будет отображаться в разделе "Другие инструменты". На этой вкладке пользователи могут просматривать свои сайты в режиме Internet Explorer. Другой вариант функции "Открыть сайты в режиме Microsoft Edge" также будет отображаться в разделе "Другие инструменты", чтобы проверить сайты в современном браузере, не удаляя их из списка сайтов.
 
-Если эта политика отключена, пользователи не увидят параметр пользовательского интерфейса непосредственно в меню.
-
-Если не настроить эту политику, вы сможете настроить флаг ie-mode-test вручную.
+Если отключить или не настроить эту политику, пользователи не смогут увидеть параметры "Открыть в режиме Internet Explorer" и "Открыть в режиме Microsoft Edge" в меню "Другие инструменты". Тем не менее, пользователи могут настраивать эти параметры с помощью флага --ie-mode-test.
 
   #### Поддерживаемые функции:
 
@@ -15742,7 +15637,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000000
 ```
-
 
   
 
@@ -15802,7 +15696,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -15871,7 +15764,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -16232,7 +16124,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 0x00000020
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: MaxConnectionsPerProxy
@@ -16296,7 +16187,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -16368,7 +16258,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: MetricsReportingEnabled
@@ -16433,7 +16322,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -16492,7 +16380,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16558,7 +16445,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
 0x00000002
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -16626,7 +16512,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -16685,7 +16570,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -16752,7 +16636,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PaymentMethodQueryEnabled
@@ -16814,7 +16697,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -16880,7 +16762,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -16937,7 +16818,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -17001,7 +16881,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: PromotionalTabsEnabled
@@ -17063,7 +16942,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -17128,7 +17006,6 @@ QUIC - это сетевой протокол транспортного уро�
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -17215,8 +17092,6 @@ QUIC - это сетевой протокол транспортного уро�
   Этот параметр позволяет указать, будет ли Internet Explorer перенаправлять навигацию на сайты, требующие современный браузер в Microsoft Edge.
 
 Если не настроить эту политику или присвоить ей значение "Sitelist" (Список сайтов), начиная с M87, Internet Explorer будет перенаправлять сайты, требующие современный браузер в Microsoft Edge.
-
-Корпорация Майкрософт предоставляет список общедоступных сайтов, требующих такого перенаправления, например https://mail.yahoo.com.
 
 При перенаправлении сайта из Internet Explorer в Microsoft Edge вкладка Internet Explorer, на которой началась загрузка сайта, закрывается, если для нее не предоставлено предварительное согласие. В противном случае выполняется переход на страницу справки от Майкрософт, объясняющую причину перенаправления сайта в Microsoft Edge.
 
@@ -17334,7 +17209,6 @@ QUIC - это сетевой протокол транспортного уро�
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: RelaunchNotification
@@ -17397,7 +17271,6 @@ QUIC - это сетевой протокол транспортного уро�
 0x240c8400
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: RelaunchNotificationPeriod
@@ -17458,7 +17331,6 @@ QUIC - это сетевой протокол транспортного уро�
 0x00000000
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -17513,7 +17385,6 @@ QUIC - это сетевой протокол транспортного уро�
 ```
 0x00000000
 ```
-
 
   
 
@@ -17574,7 +17445,6 @@ QUIC - это сетевой протокол транспортного уро�
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -17637,7 +17507,6 @@ QUIC - это сетевой протокол транспортного уро�
 ```
 ".*@contoso.com"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -17703,7 +17572,6 @@ QUIC - это сетевой протокол транспортного уро�
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -17761,7 +17629,6 @@ QUIC - это сетевой протокол транспортного уро�
 0x00000001
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -17816,7 +17683,6 @@ QUIC - это сетевой протокол транспортного уро�
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -17880,7 +17746,6 @@ QUIC - это сетевой протокол транспортного уро�
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SSLErrorOverrideAllowed
@@ -17904,7 +17769,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   #### Описание
 
-  Sets the minimum supported version of TLS. Если вы не настроите эту политику, Microsoft Edge использует минимальную версию по умолчанию, TLS 1.0.
+  Sets the minimum supported version of TLS. Если не настроить эту политику, в Microsoft Edge будет отображаться сообщение об ошибке TLS 1.0 и TLS 1.1, но пользователь сможет пропустить его.
 
 If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. Любое нераспознанное значение игнорируется.
 
@@ -17950,7 +17815,6 @@ If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower
 ```
 "tls1"
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18023,7 +17887,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SaveCookiesOnExit
@@ -18089,7 +17952,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SavingBrowserHistoryDisabled
@@ -18148,7 +18010,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18211,7 +18072,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18277,7 +18137,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SearchSuggestEnabled
@@ -18339,7 +18198,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SecurityKeyPermitAttestation
@@ -18399,7 +18257,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18461,7 +18318,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000000
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18530,7 +18386,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18603,7 +18458,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SensorsBlockedForUrls
@@ -18674,7 +18528,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18747,7 +18600,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SerialBlockedForUrls
@@ -18812,7 +18664,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: ShowOfficeShortcutInFavoritesBar
@@ -18874,7 +18725,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -18938,7 +18788,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19064,7 +18913,6 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SpellcheckEnabled
@@ -19135,7 +18983,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -19199,7 +19046,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -19258,7 +19104,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19320,7 +19165,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: SuppressUnsupportedOSWarning
@@ -19380,7 +19224,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19444,7 +19287,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19513,7 +19355,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19586,7 +19427,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: TLSCipherSuiteDenyList
@@ -19655,7 +19495,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: TabFreezingEnabled
@@ -19713,7 +19552,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19776,7 +19614,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 0x00000800
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -19850,7 +19687,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000002
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: TrackingPrevention
@@ -19915,7 +19751,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: TranslateEnabled
@@ -19938,7 +19773,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - На Windows и macOS начиная с 77 или позже
 
   #### Описание
-                    
 
   Настройка политики предоставляет доступ к указанным URL-адресам, как исключения к [URLBlocklist](#urlblocklist).
 
@@ -19991,7 +19825,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -20075,7 +19908,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: URLBlocklist
@@ -20149,7 +19981,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: UserAgentClientHintsEnabled
@@ -20216,7 +20047,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: UserDataDir
@@ -20279,7 +20109,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000003
 ```
 
-
   
 
   [В начало](#microsoft-edge---policies)
@@ -20334,7 +20163,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -20400,7 +20228,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000000
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: VideoCaptureAllowed
@@ -20460,7 +20287,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -20528,7 +20354,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -20745,7 +20570,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 0x00000001
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: WebComponentsV0Enabled
@@ -20763,7 +20587,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
-                     
   #### Поддерживаемые версии:
 
   - На Windows и macOS с 77, до 84 версии
@@ -20811,7 +20634,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ```
 0x00000001
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -20880,7 +20702,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Информация о Mac и настройки
   
@@ -20961,7 +20782,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 "default"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: WebRtcLocalhostIpHandling
@@ -21024,7 +20844,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 "10000-11999"
 ```
 
-
   #### Информация о Mac и настройки
   
   - Имя ключа предпочтения: WebRtcUdpPortRange
@@ -21032,6 +20851,130 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Включить мини веб-приложение
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows 88 и более поздних версий
+
+  #### Описание
+
+  Включает мини веб-приложение. Если включено, пользователи могут использовать это мини-приложение для поиска в Интернете на рабочем столе или в приложении. Мини-приложение содержит поле поиска, которое отображает предложения и открывает все поисковые запросы в Microsoft Edge. Поле поиска предоставляет поиск (на платформе Bing) и предложения URL-адреса. Мини-приложение также включает в себя плитки веб-канала, на которые пользователи могут щелкнуть, чтобы получить дополнительные сведения о msn.com в новой вкладке или окне браузера Microsoft Edge. Плитки веб-каналов могут содержать рекламные материалы. Мини-приложение можно запустить в параметрах Microsoft Edge или в меню "Другие инструменты".
+
+Если включить или не настроить эту политику: мини веб-приложение будет автоматически включено для всех профилей.
+В параметрах Microsoft Edge пользователи увидят возможность запуска мини-приложения.
+В параметрах Microsoft Edge пользователи увидят элемент меню для запуска мини-приложение при начальной загрузке Windows (автозапуске).
+Параметр включения мини-приложения при запуске будет включен, если включена политика [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup).
+Если [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) отключена или не настроена, параметр включения мини-приложения при запуске будет отключен.
+Пользователь увидит элемент для запуска мини-приложения из меню "Другие инструменты" в Microsoft Edge. Пользователи могут запустить мини-приложение из меню "Другие инструменты".
+Мини-приложение можно отключить с помощью параметра "Выход" в области уведомлений или закрыв мини-приложение на панели задач. Мини-приложение перезапускается при перезагрузке системы, если включен автозапуск.
+
+Если эта политика отключена, мини веб-приложение будет отключено для всех профилей.
+Параметр запуска мини-приложения из параметров Microsoft Edge будет отключен.
+Параметр запуска мини-приложения при начальной загрузке Windows (автозапуск) будет отключен.
+Параметр запуска мини-приложения из меню "Другие инструменты" в Microsoft Edge будет отключен.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: WebWidgetAllowed
+  - Имя GP: Включение мини-приложения
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: WebWidgetAllowed
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000001
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Разрешить запускать мини веб-приложение при начальной загрузке Windows
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows 88 и более поздних версий
+
+  #### Описание
+
+  Позволяет запустить мини веб-приложения при начальной загрузке Windows.
+
+Если включено: мини веб-приложение запускается при начальной загрузке Windows по умолчанию.
+Если мини-приложение отключено с помощью политики [WebWidgetAllowed](#webwidgetallowed), эта политика не запустит мини-приложение при начальной загрузке Windows.
+
+Если эта политика отключена: мини веб-приложение не будет запущено при начальной загрузке Windows для всех профилей.
+Параметр запуска мини-приложения при начальной загрузке Windows будет отключен в параметрах Microsoft Edge.
+
+Если эта политика не настроена: мини веб-приложение не будет запущено при начальной загрузке Windows для всех профилей.
+Параметр запуска мини-приложения при начальной загрузке Windows будет выключен в параметрах Microsoft Edge.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: WebWidgetIsEnabledOnStartup
+  - Имя GP: Разрешение запуска мини веб-приложения при начальной загрузке Windows
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: WebWidgetIsEnabledOnStartup
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000001
+```
+
   
 
   [В начало](#microsoft-edge---policies)
@@ -21090,7 +21033,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ```
 0x00000001
 ```
-
 
   
 
