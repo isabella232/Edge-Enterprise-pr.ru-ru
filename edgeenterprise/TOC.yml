@@ -25,7 +25,7 @@
       href: microsoft-edge-roadmap.md
     - name: Планирование развертывания Microsoft Edge
       href: deploy-edge-plan-deployment.md
-    - name: Готово для Microsoft Edge
+    - name: Готовность к Microsoft Edge
       href: deploy-edge-ready-for-edge.md
     - name: Сведения о выпуске
       items:
@@ -111,6 +111,10 @@
           href: edge-ie-mode-site-discovery.md
         - name: Вопросы и ответы о режиме IE
           href: edge-ie-mode-faq.md
+        - name: Дополнительные рекомендации
+          items:
+            - name: Общий доступ к файлам cookie из Microsoft EDGE в Internet Explorer
+              href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Безопасность Microsoft Edge
   items:
     - name: Безопасность для бизнеса
