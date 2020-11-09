@@ -3,19 +3,19 @@ title: Готовность к Microsoft Edge
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Готовность к Microsoft Edge
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155370"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157692"
 ---
 # Готовность к Microsoft Edge
 
@@ -24,6 +24,17 @@ ms.locfileid: "11155370"
 ## Совместимость и поддержка веб-приложений
 
 Чтобы помочь вам спланировать развертывание Microsoft Edge, мы собрали список веб-приложений, которые можно использовать в организации. Этот список позволит вам определить, готово ли веб-приложение к использованию Microsoft Edge согласно сведениям из общедоступного заявления о поддержке от поставщика веб-приложения.
+
+### Добавление в список приложений
+
+Список регулярно обновляется по мере определения заявлений о поддержке на основе отзывов клиентов.
+
+Если вы являетесь поставщиком веб-приложения и хотите включить свое заявление о поддержке в качестве справки для клиентов, отправьте следующие сведения по адресу [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com).
+
+- Название продукта
+- Поддерживаемая версия (если применимо)
+- Имя поставщика
+- Общедоступный URL-адрес заявления о поддержке
 
 ### Список приложений
 
