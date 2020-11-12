@@ -3,23 +3,27 @@ title: Заметки о выпуске обновлений для систем
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/04/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: ec288ba2f358f2657d79c6aad29bbc57310189b2
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
+ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155276"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11166028"
 ---
 # Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## 11 ноября 2020 г.
+
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 86.0.622.68)**, содержащий последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## 4 ноября 2020г.
 
