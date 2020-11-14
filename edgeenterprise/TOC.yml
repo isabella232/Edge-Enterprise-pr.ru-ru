@@ -1,4 +1,4 @@
-# last revised 11/03/2020
+# last revised 11/06/2020
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -113,7 +113,9 @@
           href: edge-ie-mode-faq.md
         - name: Дополнительные рекомендации
           items:
-            - name: Общий доступ к файлам cookie из Microsoft EDGE в Internet Explorer
+            - name: Добавление режима IE в контекстное меню "Открыть с помощью"
+              href: edge-ie-mode-add-guidance-filetype-associations.md
+            - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Безопасность Microsoft Edge
   items:
