@@ -1,23 +1,23 @@
 ---
-title: Добавление режима Internet Explorer в контекстное меню "Открыть с помощью"
+title: Сопоставление расширений файлов с режимом Internet Explorer
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Добавление режима Internet Explorer в контекстное меню "Открыть с помощью"
-ms.openlocfilehash: 6453cd2587e3bec10404d2491914debb999fcf3f
-ms.sourcegitcommit: e3c80274a9b8ef15761c968214b3cba593476132
+description: Сопоставление расширений файлов с режимом Internet Explorer
+ms.openlocfilehash: c80732239b911f7cd3d615e9ce1e480db2749f17
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168493"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175182"
 ---
-# Добавление режима Internet Explorer в контекстное меню "Открыть с помощью"
+# Сопоставление расширений файлов с режимом Internet Explorer
 
 В этой статье объясняется, как сопоставить Microsoft Edge в режиме Internet Explorer с расширениями файлов для классических приложений.
 
