@@ -3,19 +3,19 @@ title: Перенаправление из Internet Explorer в Microsoft Edge �
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/03/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
-ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
-ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
+ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11151099"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175202"
 ---
 # Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
 
@@ -31,7 +31,7 @@ ms.locfileid: "11151099"
 Когда пользователь переходит на сайт, несовместимый с Internet Explorer, он автоматически перенаправляется в Microsoft Edge. В этой статье описан пользовательский интерфейс перенаправления и групповые политики, которые используются для настройки или отключения автоматического перенаправления.
 
 > [!NOTE]
-> Корпорация Майкрософт поддерживает список всех сайтов, о которых известно, что они несовместимы с Internet Explorer.
+> Корпорация Майкрософт поддерживает список всех сайтов, о которых известно, что они несовместимы с Internet Explorer. Дополнительные сведения см. в статье [Запрос на обновление списка несовместимых сайтов](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
 ## Интерфейс перенаправления
 
@@ -113,5 +113,6 @@ ms.locfileid: "11151099"
 
 ## См. также
 
+- [Запрос на обновление списка несовместимых сайтов](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Политики Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
