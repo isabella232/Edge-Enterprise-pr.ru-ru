@@ -3,7 +3,7 @@ title: Документация по политикам Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: a1204b4e334e2545a2570110ab5eaf498ef7c8f7
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: b924e40e34c86c3636c18394b561f4b0c35c0437
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181970"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195120"
 ---
 # Политики Microsoft Edge WebView2
 
