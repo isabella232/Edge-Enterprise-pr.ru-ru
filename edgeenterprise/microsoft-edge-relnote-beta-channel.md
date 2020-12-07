@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192540"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195265"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,12 @@ ms.locfileid: "11192540"
 
 > [!IMPORTANT]
 > Смотрите эти [обновления в каналах Microsoft Edge](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/).
+
+## Версия 87.0.664.55: 3 декабря
+
+Исправлены ошибки и проблемы с производительностью. В этом выпуске поддерживается следующая новая функция.
+
+- **Оповещения создаются в случае, если пароль пользователя найден среди Интернет-утечек**. Пароли пользователей сверяются с репозиторием известных нарушений учетных данных, а пользователю отправляется оповещение при обнаружении совпадения. (Эта функция будет доступна в Microsoft Edge Stable 88.)
 
 ## Версия 87.0.664.52: 30 ноября
 
