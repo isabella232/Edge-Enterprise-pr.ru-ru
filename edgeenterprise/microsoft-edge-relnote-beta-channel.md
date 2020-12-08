@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
-ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
+ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
+ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195265"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "11196540"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -28,7 +28,7 @@ ms.locfileid: "11195265"
 
 Исправлены ошибки и проблемы с производительностью. В этом выпуске поддерживается следующая новая функция.
 
-- **Оповещения создаются в случае, если пароль пользователя найден среди Интернет-утечек**. Пароли пользователей сверяются с репозиторием известных нарушений учетных данных, а пользователю отправляется оповещение при обнаружении совпадения. (Эта функция будет доступна в Microsoft Edge Stable 88.)
+- **Оповещения создаются в том случае, если пароль пользователя обнаружен среди украденных данных в Интернете**. Пароли пользователей сверяются с репозиторием известных украденных учетных данных, а пользователю отправляется оповещение при обнаружении совпадения. Для обеспечения безопасности и конфиденциальности пароли пользователей хэшируются и шифруются, когда они сверяются с базой данных украденных учетных данных.
 
 ## Версия 87.0.664.52: 30 ноября
 
