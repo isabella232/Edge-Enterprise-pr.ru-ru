@@ -3,19 +3,19 @@ title: Поддержка удостоверений и настройка Micro
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 07/15/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Поддержка удостоверений и настройка Microsoft Edge
-ms.openlocfilehash: 357f3928d870f83aa087f86cbe30db3ec4f360a2
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
+ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981002"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11201296"
 ---
 # Поддержка удостоверений и настройка Microsoft Edge
 
@@ -79,15 +79,15 @@ Microsoft Edge имеет встроенную поддержку единого
 
 ### Встроенная проверка подлинности Windows (WIA)
 
-Microsoft Edge также поддерживает встроенную аутентификацию Windows для запросов аутентификации во внутренней сети организации для любого приложения, которое использует браузер для своей аутентификации. Это поддерживается во всех версиях Windows 10 и Windows более низкого уровня. По умолчанию Microsoft Edge использует зону интрасети в качестве списка разрешений для WIA. Чтобы настроить, какие серверы включены для интегрированной аутентификации, см. Политику [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist).
+Microsoft Edge также поддерживает встроенную проверку подлинности Windows для запросов проверки подлинности во внутренней сети организации для любого приложения, которое использует браузер для своей проверки подлинности. Это поддерживается во всех версиях Windows 10 и Windows более низкого уровня. По умолчанию Microsoft Edge использует зону интрасети в качестве списка разрешений для WIA. Кроме того, вы можете настроить список серверов, поддерживающих интегрированную проверку подлинности, с помощью политики [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist). В macOS эта политика требуется для включения интегрированной проверки подлинности.
 
 Для поддержки единого входа на основе WIA в Microsoft Edge (версия 77 и выше) вам также может потребоваться выполнить настройку на стороне сервера. Возможно, вам придется настроить свойство служб федерации Active Directory (ADFS) **WiaSupportedUserAgents**, чтобы добавить поддержку новой строки агента пользователя Microsoft Edge. Инструкции о том, как это сделать, см. в параметры[Просмотр WIASupportedUserAgents](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) и Изменение [Change WIASupportedUserAgent](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings). Пример строки пользовательского агента Microsoft Edge в Windows 10 показан ниже, и вы можете узнать больше о [строке Microsoft Edge UA здесь](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string). 
 
-Следующий пример строки агента пользователя относится к последней сборке канала Dev, когда эта статья была опубликована:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
+Следующий пример строки агента пользователя относится к последней сборке канала Dev на момент публикации этой статьи:<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
-В MacOS вы также можете использовать политики [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) и [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) для включения единого входа Kerberos с Microsoft Edge.
+Для служб, требующих делегирования учетных данных для согласования, Microsoft Edge поддерживает ограниченные делегирования с помощью политики [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist).
 
-## Дополнительные концепции аутентификации
+## Дополнительные концепции проверки подлинности
 
 ### Упреждающий способ проверки подлинности
 
