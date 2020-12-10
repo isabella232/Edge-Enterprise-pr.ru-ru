@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/07/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 27cce29832e6a4a4b6ee1dbd9e077bd61fd8733a
-ms.sourcegitcommit: 27eea895892d7125cd4147323681beaeef98d1af
+ms.openlocfilehash: e998437308a9fc95ba6cb683561c109797a3e9c9
+ms.sourcegitcommit: 1be5f3584b2a9400ca18c3d5483c3c8929ac9dce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11196855"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "11203601"
 ---
 # Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -26,7 +26,7 @@ ms.locfileid: "11196855"
 
 ## Версия 87.0.664.57:7 декабря
 
-Исправлены ошибки и проблемы с производительностью.
+Исправлены ошибки и проблемы с производительностью. Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
 
 ## Версия 87.0.664.55: 3 декабря
 
