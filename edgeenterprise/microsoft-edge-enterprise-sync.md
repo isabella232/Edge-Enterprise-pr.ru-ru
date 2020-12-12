@@ -3,26 +3,26 @@ title: Синхронизация Microsoft Edge Enterprise
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 10/21/2020
+ms.date: 12/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Синхронизация Microsoft Edge Enterprise
-ms.openlocfilehash: e51346d9bab83228c42a84a7a14ee45dc9b463a7
-ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
+ms.openlocfilehash: 791188b5d28c867d6409a4d5373ea6c1ec7e49c7
+ms.sourcegitcommit: 482b2e440a62cbf974dc45ac817f9d9d187ba1b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133134"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "11205468"
 ---
 # Синхронизация Microsoft Edge Enterprise
 
 В этой статье объясняется, как использовать Microsoft Edge для синхронизации избранного, паролей и других данных браузера на всех устройствах, на которых выполнен вход пользователя в систему.
 
 > [!NOTE]
-> Эта статья относится к Microsoft Edge версии 77 или более поздней.
+> Эта статья относится к Microsoft Edge версии 77 или более поздней, если не указано иное.
 
 ## Обзор
 
@@ -33,6 +33,9 @@ ms.locfileid: "11133134"
 - Адреса и прочее (заполнения форм)
 - Коллекции
 - Параметры
+- Расширение
+- Открытые вкладки (доступно в Microsoft Edge версии 88)
+- Журнал (доступно в Microsoft Edge версии 88)
 
 Функция синхронизации включается путем предоставления пользователем согласия с этим действием. Пользователи могут включать или отключать синхронизацию для всех перечисленных выше типов данных.
 
@@ -46,14 +49,14 @@ ms.locfileid: "11133134"
 - Azure AD Premium (P1 или P2)
 - M365 бизнес премиум
 - Office 365 E1 и более поздние версии
-- Azure Information Protection (AIP) (P1 и P2)
+- Azure Information Protection (AIP) (P1 или P2)
 - Все подписки EDU (приложения Майкрософт для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или выше, M365 A1 или выше, Azure Information Protection P1 или P2 для учащихся или преподавателей)
 
 ## Настройка синхронизации Microsoft Edge
 
 Параметры конфигурации для функции синхронизации Microsoft Edge доступны в службе Azure Information Protection (AIP). Если служба AIP включена для клиента, все пользователи могут синхронизировать данные в Microsoft Edge независимо от типа лицензии. Инструкции по включению службы AIP см. [здесь](https://docs.microsoft.com/azure/information-protection/activate-office365).
 
-Чтобы ограничить синхронизацию для определенной группы пользователей, вы можете включить для них [политику управления регистрацией в AIP](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) . Если после регистрации всех необходимых пользователей синхронизация все еще недоступна, убедитесь в том, что служба IPCv3Service включена, используя командлет PowerShell [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps).
+Чтобы ограничить синхронизацию для определенной группы пользователей, вы можете включить для них [политику управления регистрацией в AIP](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps&preserve-view=true) . Если после регистрации всех необходимых пользователей синхронизация все еще недоступна, убедитесь в том, что служба IPCv3Service включена, используя командлет PowerShell [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps&preserve-view=true).
 
 > [!CAUTION]
 > При включении службы Azure Information Protection другие приложения, такие как Microsoft Word и Microsoft Outlook, также смогут защищать контент с помощью AIP. Кроме того, любая политика управления регистрацией, используемая для ограничения синхронизации Microsoft Edge, также ограничит защиту контента с помощью AIP в других приложениях.
@@ -68,7 +71,8 @@ ms.locfileid: "11133134"
 
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): полное отключение синхронизации.
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): отключает сохранение журнала браузера и синхронизацию. Эта политика также отключает синхронизацию открытых вкладок.
-- [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): Настройка списка типов, которые исключены из синхронизации.
+- [AllowDeletingBrowserHistory](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowdeletingbrowserhistory): если эта политика отключена, синхронизация журнала также будет отключена.
+- [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): настройка списка типов, исключенных из синхронизации.
 - [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): разрешает профилям Active Directory (AD) использовать локальное хранилище. Дополнительные сведения см. в статье [Локальная синхронизация для пользователей Active Directory (AD)](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync).
 - [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): включает синхронизацию по умолчанию и не требует согласия пользователя для синхронизации.  
 
@@ -76,9 +80,17 @@ ms.locfileid: "11133134"
 
 ### БЕЗОПАСНОСТЬ И СООТВЕТСТВИЕ СЕРВЕРА/ДАННЫХ
 
-#### Шифруются ли синхронизированные данные? 
+#### Шифруются ли синхронизированные данные?
 
-Данные шифруются в процессе транспортировки с использованием TLS 1.2 или более поздней версии. Большинство типов данных дополнительно шифруются в службе Майкрософт с помощью AES256. 
+Данные шифруются в процессе транспортировки с использованием протокола TLS 1.2 или более поздней версии. Все типы данных дополнительно шифруются в службе Майкрософт с помощью AES128. Все типы данных, кроме используемых для синхронизации открытой вкладки и журнала, дополнительно шифруются перед покиданием устройства пользователя с использованием ключей, управляемых с помощью [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/).
+
+#### Почему данные открытой вкладки и журнала не используют дополнительное шифрование на стороне клиента?  
+
+Чтобы сократить использование ресурсов на устройствах конечных пользователей, данные журнала создаются на стороне сервера на основе перемещаемых данных открытой вкладки. Этот процесс невозможен при шифровании этих данных на стороне клиента. Чтобы отключить синхронизацию открытой вкладки и журнала, примените политику [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) или [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled).
+
+#### Могут ли администраторы клиента использовать свой ключ?
+
+Да, с помощью  [Azure Information Protection](https://azure.microsoft.com/services/information-protection/).
 
 #### Где хранятся данные синхронизации Microsoft Edge?
 
@@ -88,27 +100,19 @@ ms.locfileid: "11133134"
 
 Нет.
 
-#### Могут ли администраторы клиента использовать свой ключ?
-
-Да, с помощью[ Azure Information Protection](https://azure.microsoft.com/services/information-protection/).
-
 #### Каковы условия использования синхронизации в корпоративной среде?
 
-Условия предоставления услуг те же, что и для вашей подписки на Azure AD. Все условия предоставления услуг в Azure AD регулируются [условиями использования веб-служб](https://www.microsoft.com/licensing/product-licensing/products) Майкрософт.
+Условия использования функции синхронизации Microsoft Edge регулируются лицензией на программное обеспечение корпорации Майкрософт, с которой можно ознакомиться в Microsoft Edge по адресу  *edge://terms*. Ваша подписка на Azure AD и условия обслуживания в конечном итоге регулируются [условиями использования веб-служб](https://www.microsoft.com/licensing/product-licensing/products) Майкрософт.
 
 #### Поддерживает ли Microsoft Edge стандарты соответствия требованиям облака сообщества для государственных организаций (GCC High)?
 
-Еще нет. GCC High использует уровень D, тогда как Microsoft Edge поддерживает стандарты соответствия требованиям до уровня C.
+Еще нет. Для клиентов в облаке GCC High синхронизация Microsoft Edge отключена.
 
 ### ПРИМЕНЕНИЕ СИНХРОНИЗАЦИИ
 
-#### Что произойдет с корпоративными клиентами и клиентами из сферы образования, которые решат продолжить использовать устаревшую версию Microsoft Edge?
+#### Почему синхронизация Microsoft Edge не поддерживается во всех подписках M365?
 
-Текущая версия браузера Microsoft Edge продолжит входить в состав предложения ESR.
-
-#### Почему для синхронизации нужна подписка Azure AD Premium?
-
-Синхронизация в корпоративной среде зависит от службы Azure Information Protection, которая доступна не для всех уровней Azure AD.
+Синхронизация в корпоративной среде зависит от службы Azure Information Protection, которая доступна не во всех подписках M365.
 
 #### Основана ли функция синхронизации Microsoft Edge на Enterprise State Roaming?
 
@@ -118,9 +122,9 @@ ms.locfileid: "11133134"
 
 Поддержка такой синхронизации не планируется. Если для поддержки устаревших приложений вам нужен IE, подумайте об использовании [нового режима IE](https://docs.microsoft.com/deployedge/edge-ie-mode).
 
-#### Будет ли синхронизироваться новый браузер Microsoft Edge с устаревшей версией Microsoft Edge?
+#### Будет ли Microsoft Edge синхронизироваться с устаревшей версией Microsoft Edge?
 
-Нет, не будет. Мы считаем, что объединение этих двух экосистем может привести к нарушению надежности синхронизации в новой версии Microsoft Edge. Мы обеспечим перенос имеющихся данных в новую версию Microsoft Edge. Кроме того, пользователи смогут импортировать данные из браузера, которым они пользуются. Это также означает, что синхронизация между новым браузером Microsoft Edge и браузером Internet Explorer выполняться не будет.
+Нет, не будет. Мы считаем, что объединение этих двух экосистем может привести к нарушению надежности синхронизации в Microsoft Edge. Мы обеспечим перенос имеющихся данных в Microsoft Edge. Кроме того, пользователи смогут импортировать данные из браузера, которым они пользуются. Это также означает, что синхронизация между новым браузером Microsoft Edge и браузером Internet Explorer выполняться не будет.
 
 ### УПРАВЛЕНИЕ СИНХРОНИЗАЦИЕЙ
 
