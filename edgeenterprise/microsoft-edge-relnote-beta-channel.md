@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 258a8f06bf726d1260536de5216911918bdfd2c4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 45389aec9eb8f174abe32d0e4ac86509a109e2fa
+ms.sourcegitcommit: c7c326c97926764d2d614520c1c8dc2546254c98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218698"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "11218945"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -88,8 +88,6 @@ ms.locfileid: "11218698"
 - [UpdatePolicyOverride](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#updatepolicyoverride) — определяет, как Центр обновления Microsoft Edge обрабатывает доступные обновления из Microsoft Edge.
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) — настраивает доступность вертикального макета для вкладок в боковой части окна браузера.
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) — разрешает переход на устаревшую версию TLS/DTLS в WebRTC.
-- [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed)— включает мини веб-приложение.
-- [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup) — разрешает запускать мини веб-приложение при начальной загрузке Windows.
 
 #### Нерекомендуемые политики
 
