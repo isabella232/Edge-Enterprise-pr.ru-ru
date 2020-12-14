@@ -3,19 +3,19 @@ title: Операционные системы, поддерживаемые Mic
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 11/16/2020
+ms.date: 12/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Операционные системы, поддерживаемые Microsoft Edge
-ms.openlocfilehash: 62b8df0ed23ed72d5e29008ddea8aa7116317616
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: 3d3b9c341230aff4ab8fb7dbc1beb40bd2025beb
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218728"
 ---
 # Операционные системы, поддерживаемые Microsoft Edge
 
@@ -35,7 +35,7 @@ Microsoft Edge регулируется современной политико�
 
 - Windows 7 **
 - Windows 8.1
-- Windows 10 SAC RS3 и более поздние версии **_
+- Windows 10 SAC 1709 и более поздние версии **_
 - Windows 10 Корпоративная 2015 LTSC
 - Windows 10 Корпоративная 2016 LTSC
 - Windows 10 Корпоративная 2019 LTSC
