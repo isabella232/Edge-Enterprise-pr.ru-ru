@@ -1,4 +1,4 @@
-# last revised 11/16/2020
+# last revised 12/14/2020
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -74,7 +74,7 @@
     - name: Настройка для Windows.
       href: configure-microsoft-edge.md
     - name: Настройка для Windows с помощью Intune
-      href: configure-edge-with-intune.md
+      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Настройка для Windows с помощью системы управления мобильными устройствами
       href: configure-edge-with-mdm.md
     - name: Настройка для macOS с помощью файла PLIST
@@ -113,7 +113,7 @@
           href: edge-ie-mode-faq.md
         - name: Дополнительные рекомендации
           items:
-            - name: Сопоставление расширений файлов в режиме Internet Explorer
+            - name: Сопоставление расширений файлов с режимом Internet Explorer
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
@@ -123,7 +123,7 @@
       href: ms-edge-security-for-business.md
     - name: Список разрешений для конечных точек Microsoft Edge
       href: microsoft-edge-security-endpoints.md
-    - name: Защита от потери данных (DLP)
+    - name: Предотвращение потери данных (DLP)
       href: microsoft-edge-security-dlp.md
     - name: Защита от потенциально нежелательных приложений
       href: microsoft-edge-potentially-unwanted-apps.md
@@ -151,7 +151,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
-        - name: Обратная совместимость на новой странице вкладки "Корпоративная"
+        - name: Обратная совместимость для новой корпоративной вкладки
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
@@ -175,17 +175,17 @@
           href: edge-learnmore-regex.md
         - name: Переменные каталога данных пользователя
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Использование отката Microsoft Edge для предприятий
+        - name: Откат Microsoft Edge для предприятий
           href: edge-learnmore-rollback.md
-- name: Видео Microsoft Edge
+- name: Видео о Microsoft Edge
   items:
-    - name: Коллекция видеороликов Microsoft Edge
+    - name: Коллекция видео Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: Изоляция видео-браузеров с помощью Application Guard
+    - name: Видео - изоляция браузера с помощью Application Guard
       href: microsoft-edge-video-security-application-guard.md
     - name: Видео — развертывание Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: 'Видео: защита от потери данных (DLP)'
+    - name: 'Видео : предотвращение потери данных (DLP)'
       href: microsoft-edge-video-security-dlp.md
     - name: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
       href: microsoft-edge-video-search.md
