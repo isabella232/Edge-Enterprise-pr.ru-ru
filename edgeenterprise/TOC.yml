@@ -192,4 +192,4 @@
     - name: 'Видео: безопасность, совместимость и управляемость'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Вопросы и ответы
-  href: faqs-edge-in-the-enterprise.md
+  href: faqs-edge-in-the-enterprise.yml
