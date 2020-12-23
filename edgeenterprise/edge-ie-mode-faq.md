@@ -1,21 +1,21 @@
 ---
 title: Вопросы и ответы о режиме IE
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Вопросы и ответы и устранение неполадок с Microsoft Edge в режиме IE
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980867"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238176"
 ---
 # Вопросы и ответы о режиме IE
 
@@ -82,7 +82,21 @@ ms.locfileid: "10980867"
 
 Если ни один из вариантов выше не подходит для вашего сценария, свяжитесь с нами с помощью любого канала отзыва: служба поддержки Майкрософт, [форум TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) или сайт [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise).
 
-## См. также
+### Можно ли сохранять ссылки как веб-страницы в режиме Internet Explorer?
+ 
+Да, вы можете включить параметр "Сохранить объект как" в контекстном меню для режима Internet Explorer в Microsoft Edge. Для этого настройте групповую политику *"Разрешить использование параметра "Сохранить объект как" в режиме Internet Explorer"* в разделе *Конфигурация компьютера > Административные шаблоны > Компоненты Windows > Internet Explorer*.
+Механизм сохранения работает так же, как и в Internet Explorer. Если объект сохранен как HTML-файл, при повторном открытии файла страница отобразится в Microsoft Edge.
+ 
+Обратите внимание, что для этой функции требуются следующие минимальные обновления операционной системы:
+- Windows 10, версия 2004, Windows Server, версия 2004, Windows 10, версия 20H2: [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows 10, версия 1903, Windows 10, версия 1909, Windows Server, версия 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+- Windows 10, версия 1809, Windows Server, версия 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+- Windows 10, версия 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows 10, версия 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows 10, версия 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
+
+## Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
