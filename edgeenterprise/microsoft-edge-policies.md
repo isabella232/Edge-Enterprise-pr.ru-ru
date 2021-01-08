@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218738"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254977"
 ---
 # Microsoft Edge - Политики
 
@@ -29,14 +29,18 @@ ms.locfileid: "11218738"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
+
 ## Новые политики
 
 В следующей таблице перечислены новые политики для этого обновления.
 
 | Имя | Заголовок |
-|--|--|
-|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| Ограничение режима печати фона|
-|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| Режим печати фона по умолчанию|
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Разрешить базовую проверку подлинности для HTTP|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Не устанавливать window.opener для ссылок, нацеленных на \_blank|
+|[WebWidgetAllowed](#webwidgetallowed)|Разрешить мини-приложение|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Запускать мини-приложение при начальной загрузке Windows|
+
 
 ## Доступные политики
 
@@ -50,7 +54,7 @@ ms.locfileid: "11218738"
 |[Параметры режима полного экрана](#kiosk-mode-settings)|[Встроенные сообщения](#native-messaging)|
 |[Менеджер паролей и защита](#password-manager-and-protection)|[Производительность](#performance)|
 |[Вывод на печать](#printing)|[Прокси-сервер](#proxy-server)|
-|[Параметры вкладок спящего режима](#sleeping-tabs-settings)|[Параметры SmartScreen](#smartscreen-settings)|
+|[Параметры вкладки для сна](#sleeping-tabs-settings)|[Параметры SmartScreen](#smartscreen-settings)|
 |[Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)|[Дополнительно](#additional)|
 
 
@@ -141,6 +145,7 @@ ms.locfileid: "11218738"
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Указывает список серверов, которым Microsoft Edge может делегировать учетные данные пользователя|
 |[AuthSchemes](#authschemes)|Поддерживаемые схемы аутентификации|
 |[AuthServerAllowlist](#authserverallowlist)|Настроить список разрешенных серверов аутентификации|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|Разрешить базовую проверку подлинности для HTTP|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Отключить поиск CNAME при согласовании проверки подлинности Kerberos|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Включить нестандартный порт в Kerberos SPN|
 |[NtlmV2Enabled](#ntlmv2enabled)|Проверьте, включена ли аутентификация NTLMv2|
@@ -194,13 +199,13 @@ ms.locfileid: "11218738"
 |[ProxyPacUrl](#proxypacurl)|Установить URL-адрес файла .pac прокси-сервера (устарело)|
 |[ProxyServer](#proxyserver)|Настроить адрес или URL прокси-сервера (устарело)|
 |[ProxySettings](#proxysettings)|Параметры прокси-сервера|
-### [*Параметры вкладок спящего режима*](#sleeping-tabs-settings-policies)
+### [*Параметры вкладки для сна*](#sleeping-tabs-settings-policies)
 
 |Имя политики|Заголовок|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Блокировка спящих вкладок на определенных сайтах|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|Настройка спящих вкладок|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|Настройка время ожидания активности для фоновых вкладок на спящих вкладках|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|Блокировка вкладок для сна на определенных сайтах|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|Настройка вкладок для сна|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|Настройка времени бездействия фоновой вкладки для вкладки в режиме сна|
 ### [*Параметры SmartScreen*](#smartscreen-settings-policies)
 
 |Имя политики|Заголовок|
@@ -235,7 +240,7 @@ ms.locfileid: "11218738"
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Настройка рекламы для сайтов с навязчивой рекламой|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Включить удаление браузера и историю загрузок|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|Разрешить диалог выбора файла|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Позволяет странице показывать всплывающие окна во время ее выгрузки|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|Позволяет странице показывать всплывающие окна во время ее выгрузки (устаревший)|
 |[AllowSurfGame](#allowsurfgame)|Разрешить серфинг|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|Разрешить страницам отправлять синхронные запросы XHR при удалении страницы (не рекомендуется)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Настроить список сайтов, для которых Microsoft Edge будет пытаться установить привязку токена.|
@@ -316,7 +321,7 @@ ms.locfileid: "11218738"
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Настройте, должен ли Microsoft Edge автоматически выбирать сертификат при наличии нескольких совпадений сертификатов для сайта, настроенного с помощью «AutoSelectCertificateForUrls»|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Включить использование эфемерных профилей|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Принудительный поиск Google SafeSearch|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Использование политики ссылки по умолчанию no-referrer-when-downgrade (не рекомендуется)|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|Использование политики ссылок по умолчанию no-referrer-when-downgrade (устаревшее)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|Принудительный запуск сетевого кода в процессе браузера (устарело)|
 |[ForceSync](#forcesync)|Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|Принудительный минимальный ограниченный режим YouTube|
@@ -357,7 +362,7 @@ ms.locfileid: "11218738"
 |[ManagedSearchEngines](#managedsearchengines)|Управление поисковыми движками|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Максимальное количество одновременных подключений к прокси-серверу|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Разрешить Google Cast подключаться к устройствам Cast на всех IP-адресах|
-|[MetricsReportingEnabled](#metricsreportingenabled)|Включение отчетов с данными об использовании и сбоях (устарело)|
+|[MetricsReportingEnabled](#metricsreportingenabled)|Включить отчеты с данными об использовании и сбоях данных (устаревшие)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|Включение загораживание собственного окна|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|Установка времени ожидания перехода между вкладками списка сайтов для режима предприятия|
 |[NetworkPredictionOptions](#networkpredictionoptions)|Включить прогнозирование сети|
@@ -390,7 +395,7 @@ ms.locfileid: "11218738"
 |[SearchSuggestEnabled](#searchsuggestenabled)|Включить варианты поиска|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|Веб-сайты или домены, которым не требуется разрешение на прямую аттестацию ключа безопасности|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Отправлять все сайты интрасети в Internet Explorer|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Отправка сведений о сайтах для улучшения служб Майкрософт (устарело)|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Отправка сведений о сайте для улучшения служб Майкрософт (устаревший)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|Разрешить доступ к датчиками на определенных сайтах|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчиками на определенных сайтах|
 |[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
@@ -410,6 +415,7 @@ ms.locfileid: "11218738"
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Включение функции безопасности TLS 1.3 для локальных якорей доверия (устарело)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Выбор наборов шифров TLS для отключения|
 |[TabFreezingEnabled](#tabfreezingenabled)|Разрешить замораживание фоновых вкладок|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Не устанавливать window.opener для ссылок, нацеленных на _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Включить завершающие процессы в диспетчере задач браузера|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Установка ограничения на размер памяти (в мегабайтах), который может использовать один экземпляр Microsoft Edge.|
 |[TrackingPrevention](#trackingprevention)|Блокировка отслеживания активности пользователей в Интернете|
@@ -433,6 +439,8 @@ ms.locfileid: "11218738"
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Управление выставлением локальных IP-адресов с помощью WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Ограничить доступность локального IP-адреса в WebRTC|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|Ограничить диапазон локальных портов UDP, используемых WebRTC|
+|[WebWidgetAllowed](#webwidgetallowed)|Разрешить мини-приложение|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Запускать мини-приложение при начальной загрузке Windows|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Использовать сопоставитель прокси-серверов Windows (не рекомендуется)|
 
 
@@ -644,7 +652,7 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ShowCastIconInToolbar
+  - Имя ключа настройки: ShowCastIconInToolbar
   - Пример значения:
 ``` xml
 <false/>
@@ -721,7 +729,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: AutoSelectCertificateForUrls
+  - Имя предпочтительного ключа: AutoSelectCertificateForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -757,6 +765,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 - CookiesAllowedForUrls
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
 
 Чтобы исключить удаление файлов cookie при выходе, настройте политику [SaveCookiesOnExit](#savecookiesonexit).
 
@@ -797,7 +807,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: CookiesAllowedForUrls
+  - Имя предпочтительного ключа: CookiesAllowedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -834,6 +844,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
+
+Подробные сведения о допустимом шаблоне URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
 
   #### Поддерживаемые функции:
 
@@ -872,7 +884,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: CookiesBlockedForUrls
+  - Имя предпочтительного ключа: CookiesBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -911,6 +923,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+Подробные сведения о допустимом шаблоне URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
 
 Если вы устанавливаете политику [RestoreOnStartup](#restoreonstartup) для восстановления URL-адресов из предыдущих сеансов, эта политика игнорируется, и файлы cookie постоянно сохраняются для этих сайтов.
 
@@ -1786,7 +1800,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: DefaultWebUsbGuardSetting
+  - Имя предпочтительного ключа: DefaultWebUsbGuardSetting
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -2449,7 +2463,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: JavaScriptBlockedForUrls
+  - Имя предпочтительного ключа: JavaScriptBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -2588,7 +2602,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: LegacySameSiteCookieBehaviorEnabledForDomainList
+  - Имя предпочтительного ключа: LegacySameSiteCookieBehaviorEnabledForDomainList
   - Пример значения:
 ``` xml
 <array>
@@ -2748,7 +2762,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultPluginsSetting](#defaultpluginssetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. в[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Начиная с M85, шаблоны с подстановочными знаками "*" и "[*.]" в URL-адресах узла больше не поддерживаются для этой политики.
+Подробные сведения о допустимых шаблонах URL-адресов см. в статье [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Тем не менее, начиная с M85, шаблоны с подстановочными знаками "\*" и "[\*.]" в узле больше не поддерживаются для этой политики.
 
   #### Поддерживаемые функции:
 
@@ -2817,7 +2831,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultPluginsSetting](#defaultpluginssetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. в[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Начиная с M85, шаблоны с подстановочными знаками "*" и "[*.]" в URL-адресах узла больше не поддерживаются для этой политики.
+Подробные сведения о допустимых шаблонах URL-адресов см. в статье [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Тем не менее, начиная с M85, шаблоны с подстановочными знаками "\*" и "[\*.]" в узле больше не поддерживаются для этой политики.
 
   #### Поддерживаемые функции:
 
@@ -2986,7 +3000,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: PopupsBlockedForUrls
+  - Имя предпочтительного ключа: PopupsBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -3217,7 +3231,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: WebUsbAllowDevicesForUrls
+  - Имя предпочтительного ключа: WebUsbAllowDevicesForUrls
   - Пример значения:
 ``` xml
 <key>WebUsbAllowDevicesForUrls</key>
@@ -3299,7 +3313,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: WebUsbAskForUrls
+  - Имя предпочтительного ключа: WebUsbAskForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -3366,7 +3380,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: WebUsbBlockedForUrls
+  - Имя предпочтительного ключа: WebUsbBlockedForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -4143,7 +4157,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ExtensionAllowedTypes
+  - Имя предпочтительного ключа: ExtensionAllowedTypes
   - Пример значения:
 ``` xml
 <array>
@@ -4235,7 +4249,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   Позволяет указать, какие расширения пользователи НЕ МОГУТ установить. Установленные расширения будут отключены, если они заблокированы, без возможности их включить. После удаления отключенного расширения из списка блокировки оно автоматически будет включено повторно.
 
-Значение "*" в списке блокировки означает, что все расширения блокируются, если они не указаны явным образом в списке разрешений.
+Значение списка заблокированных расширений "\*" означает, что все расширения блокируются, если они явно не указаны в списке.
 
 Если эта политика не настроена, пользователь может установить любое расширение в Microsoft Edge.
 
@@ -4276,7 +4290,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ExtensionInstallBlocklist
+  - Имя предпочтительного ключа: ExtensionInstallBlocklist
   - Пример значения:
 ``` xml
 <array>
@@ -4353,7 +4367,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ExtensionInstallForcelist
+  - Имя предпочтительного ключа: ExtensionInstallForcelist
   - Пример значения:
 ``` xml
 <array>
@@ -4447,6 +4461,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   Путем настройки этой политики контролируются параметры управления расширениями для Microsoft Edge, включая любые расширения, управляемые существующими соответствующими политиками. Эта политика заменяет все устаревшие политики, которые могли быть настроены.
 
 Эта политика сопоставляет идентификатор расширения или URL-адрес обновления только с определенным параметром. Для специального ИД "*" можно настроить конфигурацию по умолчанию, применяемую ко всем расширениям без настраиваемой конфигурации в этой политике. С помощью URL-адреса обновления конфигурация применяется к расширениям с точным URL-адресом обновления, указанным в манифесте расширения ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+
+Чтобы заблокировать расширения из определенного магазина стороннего производителя, необходимо заблокировать только update_url для этого магазина. Например, если вы хотите заблокировать расширения из веб-магазина Chrome, можно использовать следующий JSON.
+
+{"update_url: https://clients2.google.com/service/update2/crx ":{"installation_mode":"blocked"}}
+
+Обратите внимание, что вы по-прежнему можете использовать [ExtensionInstallForcelist](#extensioninstallforcelist) и [ExtensionInstallAllowlist,](#extensioninstallallowlist) чтобы разрешить или принудительно установить определенные расширения, даже если хранилище заблокировано с помощью JSON в предыдущем примере.
 
 Примечание. Для экземпляров Windows, не присоединенных к домену Microsoft Active Directory, принудительная установка ограничена приложениями и расширениями, перечисленными на веб-сайте надстроек Microsoft Edge.
 
@@ -4555,7 +4575,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ExtensionSettings
+  - Имя предпочтительного ключа: ExtensionSettings
   - Пример значения:
 ``` xml
 <key>ExtensionSettings</key>
@@ -4903,6 +4923,66 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - Пример значения:
 ``` xml
 <string>*contoso.com,contoso.com</string>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### BasicAuthOverHttpEnabled
+
+  #### Разрешить базовую проверку подлинности для HTTP
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - На Windows и macOS начиная с 88 или позже
+
+  #### Описание
+
+  Если включить эту политику или оставить ее неустановленной, будут разрешены основные задачи проверки подлинности, полученные посредством небезопасной проверке подлинности HTTP.
+
+Если вы отключили эту политику, небезопасные HTTP-запросы из схемы базовой проверки подлинности будут блокироваться, и будет разрешен только безопасный протокол HTTPS.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: BasicAuthOverHttpEnabled
+  - Имя GP: Разрешить базовую проверку подлинности для HTTP
+  - Путь к GP (обязательно): административные шаблоны / Microsoft Edge / HTTP-аутентификация
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: BasicAuthOverHttpEnabled
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000000
+```
+
+  #### Информация о Mac и настройки
+  
+  - Имя ключа предпочтения: BasicAuthOverHttpEnabled
+  - Пример значения:
+``` xml
+<false/>
 ```
   
 
@@ -5998,7 +6078,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: PrintHeaderFooter
+  - Имя предпочтительного ключа: PrintHeaderFooter
   - Пример значения:
 ``` xml
 <false/>
@@ -6060,7 +6140,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: PrintPreviewUseSystemDefaultPrinter
+  - Имя предпочтительного ключа: PrintPreviewUseSystemDefaultPrinter
   - Пример значения:
 ``` xml
 <false/>
@@ -6781,7 +6861,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ProxyServer
+  - Имя предпочтительного ключа: ProxyServer
   - Пример значения:
 ``` xml
 <string>123.123.123.123:8080</string>
@@ -6896,13 +6976,13 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [В начало](#microsoft-edge---policies)
 
-  ## Политики параметров спящих вкладок
+  ## Политики параметров настройки вкладок для сна
 
   [В начало](#microsoft-edge---policies)
 
   ### SleepingTabsBlockedForUrls
 
-  #### Блокировка спящих вкладок на определенных сайтах
+  #### Блокировка вкладок для сна на определенных сайтах
 
   
   
@@ -6969,7 +7049,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### Настройка спящих вкладок
+  #### Настройка вкладок для сна
 
   
   
@@ -7035,7 +7115,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsTimeout
 
-  #### Настройка время ожидания активности для фоновых вкладок на спящих вкладках
+  #### Настройка времени бездействия фоновой вкладки для вкладки в режиме сна
 
   
   
@@ -7306,7 +7386,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SmartScreenAllowListDomains
+  - Имя предпочтительного ключа: SmartScreenAllowListDomains
   - Пример значения:
 ``` xml
 <array>
@@ -7375,7 +7455,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SmartScreenEnabled
+  - Имя предпочтительного ключа: SmartScreenEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -7498,7 +7578,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SmartScreenPuaEnabled
+  - Имя предпочтительного ключа: SmartScreenPuaEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -7706,7 +7786,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: NewTabPageAllowedBackgroundTypes
+  - Имя предпочтительного ключа: NewTabPageAllowedBackgroundTypes
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -8522,7 +8602,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: AdsSettingForIntrusiveAdsSites
+  - Имя предпочтительного ключа: AdsSettingForIntrusiveAdsSites
   - Пример значения:
 ``` xml
 <integer>1</integer>
@@ -8661,13 +8741,13 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   ### AllowPopupsDuringPageUnload
 
-  #### Позволяет странице показывать всплывающие окна во время ее выгрузки
+  #### Позволяет странице показывать всплывающие окна во время ее выгрузки (устаревший)
 
   
-  
+  >УСТАРЕЛО: эта политика устарела и не работает в версиях Microsoft Edge после 87.
   #### Поддерживаемые версии:
 
-  - На Windows и macOS с 78 и более поздних версий
+  - В Windows и macOS — версии c 78 по 87
 
   #### Описание
 
@@ -8677,7 +8757,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 Когда для политики установлено значение «отключено» или «не установлено», на страницах не разрешается показывать всплывающие окна во время их выгрузки. Это согласно спецификации: (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name).
 
-Эта политика будет удалена в будущем.
+Эта политика была удалена в Microsoft Edge 88 и игнорируется, если она установлена.
 
   #### Поддерживаемые функции:
 
@@ -8694,8 +8774,8 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: AllowPopupsDuringPageUnload
-  - Имя GP: Позволяет странице показывать всплывающие окна во время ее выгрузки
-  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Имя GP: позволяет странице показывать всплывающие окна во время ее выгрузки (устаревший)
+  - Путь к GP (обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8964,7 +9044,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: AllowTrackingForUrls
+  - Имя предпочтительного ключа: AllowTrackingForUrls
   - Пример значения:
 ``` xml
 <array>
@@ -9600,7 +9680,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: AutoImportAtFirstRun
+  - Имя предпочтительного ключа: AutoImportAtFirstRun
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -10324,7 +10404,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: BlockThirdPartyCookies
+  - Имя предпочтительного ключа: BlockThirdPartyCookies
   - Пример значения:
 ``` xml
 <false/>
@@ -10447,7 +10527,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: BrowserGuestModeEnabled
+  - Имя предпочтительного ключа: BrowserGuestModeEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -10509,7 +10589,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: BrowserNetworkTimeQueriesEnabled
+  - Имя предпочтительного ключа: BrowserNetworkTimeQueriesEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -10585,7 +10665,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: BrowserSignin
+  - Имя предпочтительного ключа: BrowserSignin
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -11170,7 +11250,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: CollectionsServicesAndExportsBlockList
+  - Имя предпочтительного ключа: CollectionsServicesAndExportsBlockList
   - Пример значения:
 ``` xml
 <array>
@@ -11363,7 +11443,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ConfigureDoNotTrack
+  - Имя предпочтительного ключа: ConfigureDoNotTrack
   - Пример значения:
 ``` xml
 <false/>
@@ -11469,11 +11549,15 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   Включите использование учетных записей Active Directory для автоматического входа, если компьютеры ваших пользователей подключены к домену, а ваша среда не является гибридной. Если вы хотите, чтобы пользователи автоматически входили в свои учетные записи Azure Active Directory, присоединитесь к Azure AD (Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197)) или гибридному (Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365).) свою среду.
 
+При каждом запуске Microsoft Edge будет пытаться выполнить вход, используя эту политику, если первый профиль не вошел в систему или не вошел в систему автоматически ранее.
+
 Если вы отключили политику [BrowserSignin](#browsersignin), эта политика не будет действовать.
 
 Если вы включите эту политику и зададите для нее значение «SignInAndMakeDomainAccountNonRemovable», Microsoft Edge автоматически выполнит вход в систему пользователей, которые находятся на компьютерах, подключенных к домену, с использованием их учетных записей Active Directory.
 
 Если для этой политики установлено значение «Disabled» или она не настроена, Microsoft Edge не будет автоматически входить в систему пользователей, которые находятся на компьютерах, подключенных к домену с помощью учетных записей Active Directory.
+
+Начиная с Microsoft Edge 89 и далее, если существует  локальный профиль пользователя с отключенной синхронизацией, а компьютер гибриден, то у него есть учетная запись Azure AD; она автоматически обновит локальный профиль до профиля Azure AD, чтобы получить полный набор функций синхронизации Azure AD.
 
 Сопоставление параметров политики:
 
@@ -11892,7 +11976,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: DefaultSearchProviderContextMenuAccessAllowed
+  - Имя предпочтительного ключа: DefaultSearchProviderContextMenuAccessAllowed
   - Пример значения:
 ``` xml
 <true/>
@@ -12567,7 +12651,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: DiskCacheDir
+  - Имя предпочтительного ключа: DiskCacheDir
   - Пример значения:
 ``` xml
 <string>${user_home}/Edge_cache</string>
@@ -12631,7 +12715,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: DiskCacheSize
+  - Имя предпочтительного ключа: DiskCacheSize
   - Пример значения:
 ``` xml
 <integer>104857600</integer>
@@ -12707,7 +12791,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: DnsOverHttpsMode
+  - Имя предпочтительного ключа: DnsOverHttpsMode
   - Пример значения:
 ``` xml
 <string>off</string>
@@ -12839,7 +12923,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: DownloadDirectory
+  - Имя предпочтительного ключа: DownloadDirectory
   - Пример значения:
 ``` xml
 <string>
@@ -13254,7 +13338,7 @@ Microsoft ведет список действий, предпринимаемы
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: EnableDomainActionsDownload
+  - Имя предпочтительного ключа: EnableDomainActionsDownload
   - Пример значения:
 ``` xml
 <true/>
@@ -13380,7 +13464,7 @@ Microsoft ведет список действий, предпринимаемы
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: EnableSha1ForLocalAnchors
+  - Имя предпочтительного ключа: EnableSha1ForLocalAnchors
   - Пример значения:
 ``` xml
 <false/>
@@ -13789,7 +13873,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: FamilySafetySettingsEnabled
+  - Имя предпочтительного ключа: FamilySafetySettingsEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -13929,7 +14013,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ForceBingSafeSearch
+  - Имя предпочтительного ключа: ForceBingSafeSearch
   - Пример значения:
 ``` xml
 <integer>0</integer>
@@ -14117,7 +14201,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ForceGoogleSafeSearch
+  - Имя предпочтительного ключа: ForceGoogleSafeSearch
   - Пример значения:
 ``` xml
 <false/>
@@ -14128,21 +14212,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### Использование политики ссылки по умолчанию no-referrer-when-downgrade (не рекомендуется)
+  #### Использование политики ссылок по умолчанию no-referrer-when-downgrade (устаревшее)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО: эта политика устарела и не работает в версиях Microsoft Edge после 88.
   #### Поддерживаемые версии:
 
-  - В Windows и macOS с 81 и более поздних версий
+  - В Windows и macOS — версии c 81 по 88
 
   #### Описание
 
-  Эта политика не рекомендуется, так как она предусмотрена только в качестве краткосрочного механизма, предоставляющего организациям больше времени на обновление веб-содержимого, если и при условии, что оно не совместимо с текущей политикой источника ссылки по умолчанию Она не будет работать в Microsoft Edge версии 88.
+  Эта политика не работает, так как она была предназначена только для краткосрочного механизма, чтобы дать предприятиям больше времени на обновление веб-содержимого, если оно оказалось несовместимо с новой политикой ссылок по умолчанию.
 
-По умолчанию в Microsoft Edge политика источника ссылки по умолчанию укрепляется с текущего значения no-referrer-when-downgrade на более безопасное strict-origin-when-cross-origin через постепенный выпуск.
+Политика ссылок по умолчанию в Microsoft Edge была усилена со значения no-referrer-when-downgrade до более безопасного strict-origin-when-cross-origin.
 
-До развертывания эта корпоративная политика не будет иметь никакого эффекта. После выпуска, когда эта корпоративная политика включена, для политики источника ссылки Microsoft Edge по умолчанию будет установлено прежнее значение no-referrer-when-downgrade.
+Если эта корпоративная политика включена, для политики ссылок Microsoft Edge по умолчанию будет установлено старое значение no-referrer-when-downgrade.
 
 Эта корпоративная политика по умолчанию отключена.
 
@@ -14161,8 +14245,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: ForceLegacyDefaultReferrerPolicy
-  - Имя GP: Использование политики ссылки по умолчанию no-referrer-when-downgrade (не рекомендуется)
-  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Имя GP: Использование политики ссылок по умолчанию no-referrer-when-downgrade (устаревшее)
+  - Путь к GP (обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14626,7 +14710,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: HSTSPolicyBypassList
+  - Имя предпочтительного ключа: HSTSPolicyBypassList
   - Пример значения:
 ``` xml
 <array>
@@ -16788,7 +16872,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: ManagedSearchEngines
+  - Имя предпочтительного ключа: ManagedSearchEngines
   - Пример значения:
 ``` xml
 <key>ManagedSearchEngines</key>
@@ -16983,17 +17067,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   ### MetricsReportingEnabled
 
-  #### Включение отчетов с данными об использовании и сбоях (устарело)
+  #### Включить отчеты с данными об использовании и сбоях данных (устаревшие)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО: эта политика устарела и не работает в версиях Microsoft Edge после 88.
   #### Поддерживаемые версии:
 
-  - На Windows и macOS начиная с 77 или позже
+  - В Windows и macOS — версии c 77 по 88
 
   #### Описание
 
-  Этот параметр политики является устаревшим. В настоящее время она поддерживается, но устареет в Microsoft Edge 89. Эта политика заменяется новой политикой: [DiagnosticData](#diagnosticdata) для Windows 7, Windows 8 и macOS. Эта политика заменяется политикой "Разрешить телеметрию" в Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Эта политика больше не поддерживается. Она заменяется на [DiagnosticData](#diagnosticdata) (для Windows 7, Windows 8 и macOS) и Allow Telemetry on Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
 
 Эта политика позволяет отправлять отчеты с данными об использовании и сбоях Microsoft Edge в корпорацию Майкрософт.
 
@@ -17022,8 +17106,8 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: MetricsReportingEnabled
-  - Имя групповой политики: Включение отчетов с данными об использовании и сбоях (устарело)
-  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Имя GP: Включить отчеты с данными об использовании и сбоях данных (устаревший)
+  - Путь к GP (обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17230,7 +17314,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: NetworkPredictionOptions
+  - Имя предпочтительного ключа: NetworkPredictionOptions
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -17253,13 +17337,15 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   Эта политика определяет, может ли пользователь удалить профиль Microsoft Edge, автоматически вошедший в учетную запись пользователя для работы или школы.
 
-Если вы включите эту политику, в Windows будет создан несъемный профиль с учетной записью пользователя или учебой. Этот профиль нельзя выписать или удалить.
+Если вы включите эту политику, в Windows будет создан несъемный профиль с учетной записью пользователя или учебой. Этот профиль нельзя выписать или удалить. Профиль будет недоступен для удаления только в том случае, если профиль подключился к локальной учетной записи или учетной записи Azure AD, которая соответствует учетной записи ОС.
 
 Если вы отключите или не настроите эту политику, профиль, автоматически входящий в учетную запись пользователя для работы или учебы в Windows, может быть подписан или удален пользователем.
 
 Если вы хотите настроить вход в браузер, используйте политику [BrowserSignin](#browsersignin).
 
 Эта политика доступна только для экземпляров Windows, присоединенных к домену Microsoft Active Directory, а также экземпляров Windows 10 Pro или Корпоративная, зарегистрированных для управления устройством.
+
+Если в Microsoft Edge 89 и далее существует локальный профиль с отключенной синхронизацией и компьютер гибриден, он автоматически обновит его до профиля Azure AD и сделает его недоступным для удаления вместо создания нового недоступного для удаления профиля Azure AD.
 
   #### Поддерживаемые функции:
 
@@ -18985,7 +19071,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SecurityKeyPermitAttestation
+  - Имя предпочтительного ключа: SecurityKeyPermitAttestation
   - Пример значения:
 ``` xml
 <array>
@@ -19049,17 +19135,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Отправка сведений о сайтах для улучшения служб Майкрософт (устарело)
+  #### Отправка сведений о сайте для улучшения служб Майкрософт (устаревший)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО: эта политика устарела и не работает в версиях Microsoft Edge после 88.
   #### Поддерживаемые версии:
 
-  - На Windows и macOS начиная с 77 или позже
+  - В Windows и macOS — версии c 77 по 88
 
   #### Описание
 
-  Этот параметр политики является устаревшим. В настоящее время она поддерживается, но устареет в Microsoft Edge 89. Эта политика заменяется новой политикой: [DiagnosticData](#diagnosticdata) для Windows 7, Windows 8 и macOS. Эта политика заменяется политикой "Разрешить телеметрию" в Windows 10 ([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)).
+  Эта политика больше не поддерживается. Она заменяется на [DiagnosticData](#diagnosticdata) (для Windows 7, Windows 8 и macOS) и Allow Telemetry on Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
 
 Эта политика позволяет отправлять информацию о веб-сайтах, посещенных в Microsoft Edge, в Microsoft для улучшения таких услуг, как поиск.
 
@@ -19086,8 +19172,8 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   ##### Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: SendSiteInfoToImproveServices
-  - Имя групповой политики: Отправка сведений о сайтах для улучшения служб Майкрософт (устарело)
-  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Имя GP: Отправка сведений о сайте для улучшения служб Майкрософт (устаревший)
+  - Путь к GP (обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19106,7 +19192,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SendSiteInfoToImproveServices
+  - Имя предпочтительного ключа: SendSiteInfoToImproveServices
   - Пример значения:
 ``` xml
 <false/>
@@ -19415,7 +19501,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 Если эта политика включена:
    - Пользователи учетной записи Майкрософт (исключая учетные записи Azure AD) в службах поиска и получения будут видеть возможности Microsoft Rewards в пользовательском профиле Microsoft Edge.
    - Параметр для включения и выключения Microsoft Rewards в параметрах Microsoft Edge будет включен.
-   - Параметр включения режима предоставления будет включен и будет учитывать параметр пользователя.
 
 Если этот параметр отключен:
    - Пользователи учетной записи Майкрософт (исключая учетные записи Azure AD) в службах поиска и получения не будут видеть возможности Microsoft Rewards в пользовательском профиле Microsoft Edge.
@@ -19424,7 +19509,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 Если политика не будет настроена:
    - Пользователи учетной записи Майкрософт (исключая учетные записи Azure AD) в службах поиска и получения будут видеть возможности Microsoft Rewards в пользовательском профиле Microsoft Edge.
    - Параметр для включения и выключения Microsoft Rewards в параметрах Microsoft Edge будет включен.
-   - Параметр включения режима предоставления будет включен и будет учитывать параметр пользователя.
 
   #### Поддерживаемые функции:
 
@@ -19647,7 +19731,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SitePerProcess
+  - Имя предпочтительного ключа: SitePerProcess
   - Пример значения:
 ``` xml
 <true/>
@@ -20023,7 +20107,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SuppressUnsupportedOSWarning
+  - Имя предпочтительного ключа: SuppressUnsupportedOSWarning
   - Пример значения:
 ``` xml
 <true/>
@@ -20083,7 +20167,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SyncDisabled
+  - Имя предпочтительного ключа: SyncDisabled
   - Пример значения:
 ``` xml
 <true/>
@@ -20146,7 +20230,7 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: SyncTypesListDisabled
+  - Имя предпочтительного ключа: SyncTypesListDisabled
   - Пример значения:
 ``` xml
 <array>
@@ -20362,6 +20446,68 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [В начало](#microsoft-edge---policies)
 
+  ### TargetBlankImpliesNoOpener
+
+  #### Не устанавливать window.opener для ссылок, нацеленных на _blank
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - На Windows и macOS начиная с 88 или позже
+
+  #### Описание
+
+  Если включить эту политику или оставить ее неопределенной, window.opener будет задано значение null, если только в привязке не указано rel="opener".
+
+Если вы отключили эту политику, всплывающие окна, для которых разрешено _blank, будут иметь доступ (через JavaScript) к странице, которая запросила открытие всплывающего окна.
+
+Эта политика будет устаревшей в Microsoft Edge версии 95.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: TargetBlankImpliesNoOpener
+  - Имя GP: Не устанавливать window.opener для ссылок, нацеленных на _blank
+  - Путь к GP (обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: TargetBlankImpliesNoOpener
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000000
+```
+
+  #### Информация о Mac и настройки
+  
+  - Имя ключа предпочтения: TargetBlankImpliesNoOpener
+  - Пример значения:
+``` xml
+<false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### TaskManagerEndProcessEnabled
 
   #### Включить завершающие процессы в диспетчере задач браузера
@@ -20545,7 +20691,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: TrackingPrevention
+  - Имя предпочтительного ключа: TrackingPrevention
   - Пример значения:
 ``` xml
 <integer>2</integer>
@@ -20634,7 +20780,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 Отформатируйте шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
 
-Вы можете использовать эту политику, чтобы открывать исключения в ограничительных списках блокировки. Например, вы можете включить '*' в список блокировки, чтобы заблокировать все запросы, а затем использовать эту политику, чтобы разрешить доступ к ограниченному списку URL-адресов. Вы можете использовать эту политику, чтобы открывать исключения для определенных схем, поддоменов других доменов, портов или определенных путей.
+Вы можете использовать эту политику, чтобы открывать исключения в ограничительных списках блокировки. Например, можно включить "\*" в список блокировки, чтобы заблокировать все запросы, а затем использовать эту политику, чтобы разрешить доступ к ограниченному списку URL-адресов. Вы можете использовать эту политику, чтобы открывать исключения для определенных схем, поддоменов других доменов, портов или определенных путей.
 
 Самый специфический фильтр определяет, заблокирован или разрешен URL. Разрешенный список имеет приоритет над черным списком.
 
@@ -20893,7 +21039,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: UserAgentClientHintsEnabled
+  - Имя предпочтительного ключа: UserAgentClientHintsEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -21264,7 +21410,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: VideoCaptureAllowedUrls
+  - Имя предпочтительного ключа: VideoCaptureAllowedUrls
   - Пример значения:
 ``` xml
 <array>
@@ -21354,7 +21500,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   При настройке этой политики укажите список веб-приложений, которые устанавливаются без вмешательства пользователя и которые пользователи не могут удалять или отключать.
 
-Каждый элемент списка политики представляет собой объект с обязательным членом: url (URL-адрес устанавливаемого веб-приложения) и 2 необязательными членами: default_launch_container (указывает режим окна, в котором открывается веб-приложение — по умолчанию на новой вкладке) и create_desktop_shortcut (true, если надо создать ярлыки для рабочего стола Linux и Windows).
+Каждый элемент списка политики является объектом с обязательным элементом: URL-адрес (URL-адрес веб-приложения для установки)
+
+и 3 необязательных элемента:
+- default_launch_container (по умолчанию указывается режим окна, в котором открывается веб-приложение. Новая вкладка используется по умолчанию.)
+
+- create_desktop_shortcut (значение true, если вы хотите создать сочетания клавиш для Linux и Windows для настольных ПК.)
+
+- override_app_name (Начиная с версии Microsoft Edge 89, вы можете переопределять имя приложения, если оно не является веб-приложением (PWA) или именем приложения, которое временно установлено в PWA, но для завершения установки требуется проверка подлинности.)
 
   #### Поддерживаемые функции:
 
@@ -21395,6 +21548,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21402,13 +21560,13 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Компактный пример значения:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: WebAppInstallForceList
+  - Имя предпочтительного ключа: WebAppInstallForceList
   - Пример значения:
 ``` xml
 <key>WebAppInstallForceList</key>
@@ -21426,6 +21584,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -21819,7 +21985,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: WebRtcLocalhostIpHandling
+  - Имя предпочтительного ключа: WebRtcLocalhostIpHandling
   - Пример значения:
 ``` xml
 <string>default</string>
@@ -21881,12 +22047,136 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   #### Информация о Mac и настройки
   
-  - Имя ключа предпочтения: WebRtcUdpPortRange
+  - Имя предпочтительного ключа: WebRtcUdpPortRange
   - Пример значения:
 ``` xml
 <string>10000-11999</string>
 ```
- 
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### Разрешить мини-приложение
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows 88 и более поздних версий
+
+  #### Описание
+
+  Включает мини веб-приложение. Если включено, пользователи могут использовать это мини-приложение для поиска в Интернете на рабочем столе или в приложении. Мини-приложение содержит поле поиска, которое отображает предложения и открывает все поисковые запросы в Microsoft Edge. Поле поиска предоставляет поиск (на платформе Bing) и предложения URL-адреса. Мини-приложение также включает в себя плитки веб-канала, на которые пользователи могут щелкнуть, чтобы получить дополнительные сведения о msn.com в новой вкладке или окне браузера Microsoft Edge. Плитки веб-каналов могут содержать рекламные материалы. Мини-приложение можно запустить в параметрах Microsoft Edge или в меню "Другие инструменты".
+
+Если включить или не настроить эту политику: мини веб-приложение будет автоматически включено для всех профилей.
+В параметрах Microsoft Edge пользователи увидят возможность запуска мини-приложения.
+В параметрах Microsoft Edge пользователи увидят элемент меню для запуска мини-приложение при начальной загрузке Windows (автозапуске).
+Параметр включения мини-приложения при запуске будет включен, если включена политика [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup).
+Если [WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) отключена или не настроена, параметр включения мини-приложения при запуске будет отключен.
+Пользователь увидит элемент для запуска мини-приложения из меню "Другие инструменты" в Microsoft Edge. Пользователи могут запустить мини-приложение из меню "Другие инструменты".
+Мини-приложение можно отключить с помощью параметра "Выход" в области уведомлений или закрыв мини-приложение на панели задач. Мини-приложение перезапускается при перезагрузке системы, если включен автозапуск.
+
+Если эта политика отключена, мини веб-приложение будет отключено для всех профилей.
+Параметр запуска мини-приложения из параметров Microsoft Edge будет отключен.
+Параметр запуска мини-приложения при начальной загрузке Windows (автозапуск) будет отключен.
+Параметр запуска мини-приложения из меню "Другие инструменты" в Microsoft Edge будет отключен.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: WebWidgetAllowed
+  - Имя GP: Включение мини-приложения
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: WebWidgetAllowed
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000001
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Запускать мини-приложение при начальной загрузке Windows
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows 88 и более поздних версий
+
+  #### Описание
+
+  Позволяет запустить мини веб-приложения при начальной загрузке Windows.
+
+Если включено: мини веб-приложение запускается при начальной загрузке Windows по умолчанию.
+Если мини-приложение отключено с помощью политики [WebWidgetAllowed](#webwidgetallowed), эта политика не запустит мини-приложение при начальной загрузке Windows.
+
+Если эта политика отключена: мини веб-приложение не будет запущено при начальной загрузке Windows для всех профилей.
+Параметр запуска мини-приложения при начальной загрузке Windows будет отключен в параметрах Microsoft Edge.
+
+Если эта политика не настроена: мини веб-приложение не будет запущено при начальной загрузке Windows для всех профилей.
+Параметр запуска мини-приложения при начальной загрузке Windows будет выключен в параметрах Microsoft Edge.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: WebWidgetIsEnabledOnStartup
+  - Имя GP: Разрешение запуска мини веб-приложения при начальной загрузке Windows
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): N/A
+  - Имя значения: WebWidgetIsEnabledOnStartup
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000001
+```
+
+  
 
   [В начало](#microsoft-edge---policies)
 
