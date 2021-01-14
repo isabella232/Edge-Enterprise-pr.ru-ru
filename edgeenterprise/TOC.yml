@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/13/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -27,16 +27,18 @@
       href: deploy-edge-plan-deployment.md
     - name: Готовность к Microsoft Edge
       href: deploy-edge-ready-for-edge.md
-    - name: Сведения о выпуске
-      items:
-        - name: Расписание выпусков
-          href: microsoft-edge-release-schedule.md
-        - name: Заметки о выпуске канала Beta
-          href: microsoft-edge-relnote-beta-channel.md
-        - name: Заметки о выпуске стабильного канала
-          href: microsoft-edge-relnote-stable-channel.md
-        - name: Обновления для системы безопасности
-          href: microsoft-edge-relnotes-security.md
+    - name: Заметки о выпуске стабильного канала
+      href: microsoft-edge-relnote-stable-channel.md
+    - name: Заметки о выпуске из архива канала Stable
+      href: microsoft-edge-relnote-archive-stable-channel.md
+    - name: Заметки о выпуске канала Beta
+      href: microsoft-edge-relnote-beta-channel.md
+    - name: Заметки о выпуске с архиваной версией канала Beta
+      href: microsoft-edge-relnote-archive-beta-channel.md
+    - name: Расписание выпусков
+      href: microsoft-edge-release-schedule.md
+    - name: Обновления для системы безопасности
+      href: microsoft-edge-relnotes-security.md
     - name: Сопоставление политик Microsoft Edge
       items:
         - name: Обзор сопоставления политик
@@ -151,7 +153,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
-        - name: Обратная совместимость для новой корпоративной вкладки
+        - name: Обратная совместимость для страницы вкладок "Новый корпоративный"
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
