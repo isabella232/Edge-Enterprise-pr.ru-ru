@@ -1,4 +1,4 @@
-# last revised 01/13/2021
+# last revised 01/14/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -153,7 +153,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
-        - name: Обратная совместимость для страницы вкладок "Новый корпоративный"
+        - name: Обратная совместимость для новой корпоративной вкладки
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
@@ -185,14 +185,22 @@
   items:
     - name: Коллекция видео Microsoft Edge
       href: microsoft-edge-videos.md
+    - name: Видео - Microsoft Edge — состояние браузера 2020
+      href: microsoft-edge-video-state-of-browser.md
     - name: Видео - изоляция браузера с помощью Application Guard
       href: microsoft-edge-video-security-application-guard.md
     - name: Видео — развертывание Microsoft Edge
       href: microsoft-edge-video-deploy.md
     - name: 'Видео : предотвращение потери данных (DLP)'
       href: microsoft-edge-video-security-dlp.md
-    - name: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
-      href: microsoft-edge-video-search.md
+    - name: Видео — удостоверение в Microsoft Edge
+      href: microsoft-edge-video-identity.md
+    - name: Видео откат версии Microsoft Edge
+      href: microsoft-edge-video-version-rollback.md
+    - name: Видео — pdf-читатель в Microsoft Edge
+      href: microsoft-edge-video-pdf-reader.md
+    - name: 'Видео : безопасный просмотр в Microsoft Edge'
+      href: microsoft-edge-video-security-smartscreen.md
     - name: 'Видео: безопасность, совместимость и управляемость'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Вопросы и ответы

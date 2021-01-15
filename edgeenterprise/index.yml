@@ -11,28 +11,30 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 10/15/2020
-  ms.openlocfilehash: 09eb7c214e048ddd281817f8050ef4f1ff4cb985
-  ms.sourcegitcommit: 49a37e9c584eeb44683c83f098a15464054a26f9
+  ms.date: 12/01/2020
+  ms.openlocfilehash: 2a0466121bb773be20a01ec0b9f72e16bb8ac644
+  ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/15/2020
-  ms.locfileid: "11119414"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "11269280"
 landingContent:
 - title: Дополнительные сведения о Microsoft Edge на предприятии
   linkLists:
   - linkListType: overview
     links:
-    - text: Видео Microsoft Edge
-      url: microsoft-edge-videos.md
     - text: Обзор каналов Microsoft Edge
       url: microsoft-edge-channels.md
     - text: Скачивание канала Microsoft Edge
       url: https://aka.ms/EdgeEnterprise
     - text: Использование корпоративных возможностей
       url: edge-ie-mode.md
-    - text: 'Видео: Microsoft Edge и Поиск (Майкрософт)'
-      url: microsoft-edge-video-search.md
+  - linkListType: video
+    links:
+    - text: Видео о Microsoft Edge
+      url: microsoft-edge-videos.md
+    - text: Канал YouTube Microsoft Edge
+      url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Развертывание и обновление Microsoft Edge
   linkLists:
   - linkListType: deploy
@@ -49,9 +51,9 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Настройка Microsoft EDGE в Windows
+    - text: Настройка Microsoft Edge в Windows
       url: configure-microsoft-edge.md
-    - text: Настройка Microsoft EDGE на macOS
+    - text: Настройка Microsoft Edge в macOS
       url: configure-microsoft-edge-on-mac.md
     - text: Установка Microsoft Edge в качестве браузера по умолчанию
       url: edge-default-browser.md
