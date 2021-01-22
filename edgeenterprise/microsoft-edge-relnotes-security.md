@@ -3,24 +3,28 @@ title: Заметки о выпуске обновлений для систем
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/08/2021
+ms.date: 01/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: 9644f981f8a94d0c6bd7a4c9070fb53668e7d4ab
-ms.sourcegitcommit: f3b422cba2810c973682437ff46a652fc5429f7c
+ms.openlocfilehash: 2ea1a9e79fba3cba83fead9fe05d691ad54ddc1e
+ms.sourcegitcommit: e5980a7a36c252e8a04315b3d4c64a161027324e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "11255245"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297032"
 ---
 # Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
 
+## 21 января 2021 г.
+
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 88.0.705.50)**, содержащий последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+<!--- https://msrc.microsoft.com/update-guide/ -->
 ## 7 января 2021 г.
 
 Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 87.0.664.75)**, содержащий последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
