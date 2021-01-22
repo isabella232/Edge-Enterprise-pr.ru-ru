@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270845"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281028"
 ---
 # Microsoft Edge - Политики
 
@@ -35,8 +35,10 @@ ms.locfileid: "11270845"
 
 | Имя | Заголовок |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|Параметры времени существования данных браузера|
-|[DefinePreferredLanguages](#definepreferredlanguages)|Определение упорядоченного списка предпочитаемых языков, на которых должны отображаться веб-сайты, если сайт поддерживает этот язык|
+|[MAMEnabled](#mamenabled)|Управление мобильными приложениями включено|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Разрешить рекомендации и рекламные уведомления от Microsoft Edge|
+
+
 
 
 ## Доступные политики
@@ -48,12 +50,12 @@ ms.locfileid: "11270845"
 |[Параметры Application Guard](#application-guard-settings)|[Передавать](#cast)|
 |[Настройки контента](#content-settings)|[Поставщик поиска по умолчанию](#default-search-provider)|
 |[Расширения](#extensions)|[Проверка подлинности HTTP](#http-authentication)|
-|[Параметры режима полного экрана](#kiosk-mode-settings)|[Встроенные сообщения](#native-messaging)|
-|[Менеджер паролей и защита](#password-manager-and-protection)|[Производительность](#performance)|
-|[Вывод на печать](#printing)|[Прокси-сервер](#proxy-server)|
-|[Параметры вкладки для сна](#sleeping-tabs-settings)|[Параметры SmartScreen](#smartscreen-settings)|
-|[Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)|[Дополнительно](#additional)|
-
+|[Параметры режима полного экрана](#kiosk-mode-settings)|[Управляемость](#manageability)|
+|[Встроенные сообщения](#native-messaging)|[Менеджер паролей и защита](#password-manager-and-protection)|
+|[Производительность](#performance)|[Вывод на печать](#printing)|
+|[Прокси-сервер](#proxy-server)|[Параметры вкладки для сна](#sleeping-tabs-settings)|
+|[Параметры SmartScreen](#smartscreen-settings)|[Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)|
+|[Дополнительно](#additional)|
 
 ### [*Параметры Application Guard*](#application-guard-settings-policies)
 
@@ -151,7 +153,12 @@ ms.locfileid: "11270845"
 |Имя политики|Заголовок|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|Настройка редактирования в адресной строке для общедоступного просмотра в режиме терминала|
-|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Удалять файлы, загруженные в сеансе полного экрана, при закрытии Microsoft Edge|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Удалять файлы, загруженные в сеансе терминала, при закрытии Microsoft Edge|
+### [*Управляемость*](#manageability-policies)
+
+|Имя политики|Заголовок|
+|-|-|
+|[MAMEnabled](#mamenabled)|Управление мобильными приложениями включено|
 ### [*Встроенные сообщения*](#native-messaging-policies)
 
 |Имя политики|Заголовок|
@@ -401,6 +408,7 @@ ms.locfileid: "11270845"
 |[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Показать возможности Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели избранного (не рекомендуется)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Разрешить рекомендации и рекламные уведомления от Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписанного HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию сайта для каждого сайта|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5277,6 +5285,72 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [В начало](#microsoft-edge---policies)
 
+  ## Политики управляемости
+
+  [В начало](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### Управление мобильными приложениями включено
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows и macOS с версии 89 или более поздней
+
+  #### Описание
+
+  Позволяет браузеру Microsoft Edge получать политики из служб управления приложениями Intune и применять их к профилям пользователей.
+
+Если включить эту политику или не настроить ее, можно применять политики управления мобильными приложениями (MAM).
+
+Если отключить эту политику, Microsoft Edge не будет связываться с Intune для запроса политик MAM.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: MAMEnabled
+  - Имя групповой политики: управление мобильными приложениями включено
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Управляемость
+  - Путь к групповой политике (рекомендуется): Н/Д
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: MAMEnabled
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000000
+```
+
+  #### Сведения о Mac и параметры
+  
+  - Имя ключа предпочтения: MAMEnabled
+  - Пример значения:
+``` xml
+<false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ## Собственные политики обмена сообщениями
 
   [В начало](#microsoft-edge---policies)
@@ -9136,9 +9210,11 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   Отключает внутреннее средство просмотра PDF-файлов в Microsoft Edge.
 
-Если вы включите эту политику, Microsoft Edge будет обрабатывать файлы PDF как загружаемые файлы и разрешать пользователям открывать их с помощью приложения по умолчанию.
+Если вы включите эту политику, Microsoft Edge будет обрабатывать файлы PDF как загружаемые файлы и разрешит пользователям открывать их с помощью приложения по умолчанию.
 
-Если вы не настроите эту политику или не отключите ее, Microsoft Edge откроет файлы PDF (если пользователь не отключит ее).
+Если Microsoft Edge является средством чтения PDF по умолчанию, PDF-файлы не загружаются и продолжат открываться в Microsoft Edge.
+
+Если эта политика не настроена или отключена, PDF-файлы будут открываться в Microsoft Edge (если пользователь не отключит эту функцию).
 
   #### Поддерживаемые функции:
 
@@ -16517,7 +16593,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   - Уникальное имя GP: InternetExplorerIntegrationSiteRedirect
   - Имя GP: укажите, как ведут себя переходы «внутри страницы» к ненастроенным сайтам при запуске со страниц режима Internet Explorer.
-  - Путь к GP (обязательный): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19548,7 +19624,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя групповой политики: SerialAskForUrls
   - Имя групповой политики: Разрешить API Serial на определенных сайтах
-  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19777,6 +19853,68 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - Пример значения:
 ``` xml
 <false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Разрешить рекомендации и рекламные уведомления от Microsoft Edge
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows и macOS с версии 89 или более поздней
+
+  #### Описание
+
+  С помощью этого параметра политики вы можете решить, следует ли сотрудникам получать рекомендации и уведомления о помощи в продуктах от Microsoft Edge.
+
+Если этот параметр включен или не настроен, сотрудники будут получать рекомендации или уведомления от Microsoft Edge.
+
+Если этот параметр отключен, сотрудники не будут получать никаких рекомендаций или уведомлений от Microsoft Edge.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+
+  - Boolean (Логическое)
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: ShowRecommendationsEnabled
+  - Имя групповой политики: разрешить рекомендации и рекламные уведомления от Microsoft Edge
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: ShowRecommendationsEnabled
+  - Тип значения: REG_DWORD
+
+  ##### Пример значения:
+
+```
+0x00000001
+```
+
+  #### Сведения о Mac и параметры
+  
+  - Имя ключа предпочтения: ShowRecommendationsEnabled
+  - Пример значения:
+``` xml
+<true/>
 ```
   
 
