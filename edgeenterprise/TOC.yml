@@ -1,4 +1,4 @@
-# last revised 01/14/2021
+# last revised 01/20/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -119,6 +119,8 @@
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
               href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Enterprise Site List Manager в Microsoft Edge
+              href: edge-ie-mode-site-list-manager.md
 - name: Безопасность Microsoft Edge
   items:
     - name: Безопасность для бизнеса
@@ -153,7 +155,7 @@
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
-        - name: Обратная совместимость для новой корпоративной вкладки
+        - name: Обратная совместимость для страницы вкладок "Новый корпоративный"
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
