@@ -1,4 +1,4 @@
-# last revised 01/20/2021
+# last revised 01/21/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -129,6 +129,8 @@
       href: microsoft-edge-security-endpoints.md
     - name: Предотвращение потери данных (DLP)
       href: microsoft-edge-security-dlp.md
+    - name: Мониторинг паролей автоматически включен для пользователей
+      href: microsoft-edge-security-password-monitor.md
     - name: Защита от потенциально нежелательных приложений
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Поддержка условного доступа Azure AD
