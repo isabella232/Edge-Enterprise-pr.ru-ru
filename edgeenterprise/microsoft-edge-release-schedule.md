@@ -3,19 +3,19 @@ title: Расписание выпусков Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/13/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: ff32a4292d7f9dc26a7d89cb35f26477f22a91f4
-ms.sourcegitcommit: 498a62144b099a1198c06f98ad010cf95aa33727
+ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
+ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "11268250"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "11297704"
 ---
 # Расписание выпусков Microsoft Edge
 
@@ -36,15 +36,15 @@ ms.locfileid: "11268250"
 
 | Версия | Состояние выпуска | Канал Beta<br>Неделя выпуска | Канал Stable<br>Неделя выпуска |
 |---------|-----|------|--------|
-| 83 | Выпущена<br>Версия | 22.04.2020<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-83047813-april-22) | 21.05.2020<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-83047837-may-21) |
-| 84 | Выпущена<br>Версия | 02.06.2020<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-84052211-june-2) | 16.07.2020<br> [84.0.522.40.](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-84052240-july-16) |
-| 85 | Выпущена<br>Версия | 28.07.2020<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-85056418-july-28)  | 27.08.2020<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
-| 86 | Выпущена<br>Версия | 09.09.2020<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | 09.10.2020<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
-| **87** | Выпущена<br>Версия | 20.10.2020<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20) | **19.11.2020**<br>**[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19)** |
-| **88** | Выпущена<br>Версия | **09.12.2020**<br>**[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9)** | Неделя с 21.01.2021 |
-| 89 | Целевой выпуск | Неделя с 02.02.2021 | Неделя с 04.03.2021 |
-| 90 | Целевой выпуск | Неделя с 16.03.2021 | Неделя с 15.04.2021 |
-| 91 | Целевой выпуск | Неделя с 27.04.2021 | Неделя с 27.05.2021 |
+| 83 | Выпущена<br>Версия | 22 апреля 2020 г.<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-83047813-april-22) | 21 мая 2020 г.<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-83047837-may-21) |
+| 84 | Выпущена<br>Версия | 2 июня 2020 г.<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-84052211-june-2) | 16 июля 2020 г.<br> [84.0.522.40.](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-84052240-july-16) |
+| 85 | Выпущена<br>Версия | 28 июля 2020 г.<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-85056418-july-28)  | 27 августа 2020 г.<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
+| 86 | Выпущена<br>Версия | 09 сентября 2020 г.<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | 09 октября 2020 г.<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
+| 87 | Выпущена<br>Версия | 20 октября 2020 г.<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20) | 19 ноября 2020 г.<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
+| **88** | Выпущена<br>Версия | **09 декабря 2020 г.**<br>**[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9)** | **21 января 2021 г.**<br>**[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)**|
+| 89 | Целевой выпуск | Неделя со 2 февраля 2021 г. | Неделя с 4 марта 2021 г. |
+| 90 | Целевой выпуск | Неделя с 16 марта 2021 г. | Неделя с 15 апреля 2021 г. |
+| 91 | Целевой выпуск | Неделя с 27 апреля 2021 г. | Неделя с 27 мая 2021 г. |
 
 ## Процесс выпуска
 
