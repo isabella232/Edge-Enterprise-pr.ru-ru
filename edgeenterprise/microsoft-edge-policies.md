@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281028"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304732"
 ---
 # Microsoft Edge - Политики
 
@@ -35,11 +35,7 @@ ms.locfileid: "11281028"
 
 | Имя | Заголовок |
 |--|--|
-|[MAMEnabled](#mamenabled)|Управление мобильными приложениями включено|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Разрешить рекомендации и рекламные уведомления от Microsoft Edge|
-
-
-
+|[SmartActionsBlockList](#smartactionsblocklist)|Блокировка интеллектуальных действий для списка служб|
 
 ## Доступные политики
 
@@ -411,6 +407,7 @@ ms.locfileid: "11281028"
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Разрешить рекомендации и рекламные уведомления от Microsoft Edge|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Включить поддержку подписанного HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Включить изоляцию сайта для каждого сайта|
+|[SmartActionsBlockList](#smartactionsblocklist)|Блокировка интеллектуальных действий для списка служб|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Включить проверку орфографии|
 |[SpellcheckLanguage](#spellchecklanguage)|Включить определенные языки проверки орфографии|
@@ -2901,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### Описание
 
-  Определите список сайтов на основе шаблонов URL, которые могут открывать всплывающие окна.
+  Определите список сайтов на основе шаблонов URL, которые могут открывать всплывающие окна. * не является принятым значением для этой политики.
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultPopupsSetting](#defaultpopupssetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
@@ -2966,7 +2963,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### Описание
 
-  Определите список сайтов, основанный на шаблонах URL, которым запрещено открывать всплывающие окна.
+  Определите список сайтов, основанный на шаблонах URL, которым запрещено открывать всплывающие окна. * не является принятым значением для этой политики.
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultPopupsSetting](#defaultpopupssetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
@@ -6979,9 +6976,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 Для ProxyMode, выбрано значение:
   * direct – прокси-сервер никогда не используется, а все остальные поля игнорируются.
   * system – используется системный прокси-сервер, а все остальные поля игнорируются.
-  * auto_detect – все остальные поля игнорируются.
-  * fixed_server – используются поля ProxyServer и ProxyBypassList.
-  * pac_script – используются поля ProxyPacUrl и ProxyBypassList.
+  * auto_detect — все остальные поля игнорируются.
+  * fixed_servers — используются поля ProxyServer и ProxyBypassList.
+  * pac_script — используются поля ProxyPacUrl и ProxyBypassList.
 
 Для более подробных примеров перейдите по ссылке [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
 
@@ -7017,7 +7014,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7026,7 +7023,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### Компактный пример значения:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7040,7 +7037,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -8287,7 +8284,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
 Если для этой политики задано значение «Office», после входа в браузер Azure Active Directory пользователи увидят работу ленты Office 365 на новой вкладке.
 
-Если вы отключите или не настроите эту политику:
+Если отключить или не настроить эту политику:
 
 - Пользователям, имеющим вход в браузер Azure Active Directory, предлагается новый веб-канал Office 365 для просмотра вкладок, а также стандартная новая страница-вкладка.
 
@@ -20045,6 +20042,83 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [В начало](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### Блокировка интеллектуальных действий для списка служб
+
+  
+  
+  #### Поддерживаемые версии:
+
+  - В Windows и macOS с версии 89 или более поздней
+
+  #### Описание
+
+  Перечисление определенных служб, например PDF, не отображающих интеллектуальные действия. (К интеллектуальным действиям относятся такие действия, как "определить", доступные в полных и уменьшенных контекстных меню Microsoft Edge.)
+
+Если политика включена:
+   - Интеллектуальное действие в уменьшенном и полном контекстном меню будет отключено во всех профилях для служб, соответствующих указанному списку.
+   - При выборе текста для служб, соответствующих указанному списку, пользователи не увидят интеллектуальное действие в уменьшенном и полном контекстном меню.
+   - В параметрах Microsoft Edge интеллектуальное действие в уменьшенном и полном контекстном меню будет отключено для служб, соответствующих указанному списку.
+
+Если отключить или не настроить эту политику:
+   - Интеллектуальное действие в уменьшенном и полном контекстном меню будет включено для всех профилей.
+   - При выборе текста пользователи увидят интеллектуальное действие в уменьшенном и полном контекстном меню.
+   - В параметрах Microsoft Edge интеллектуальное действие в уменьшенном и полном контекстном меню будет включено.
+
+Сопоставление параметров политики:
+
+* smart_actions_pdf (smart_actions_pdf) = интеллектуальные действия в PDF
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Да
+
+  #### Тип данных:
+
+  - Список строк
+
+  #### Сведения и параметры Windows
+
+  ##### Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: SmartActionsBlockList
+  - Имя групповой политики: блокировка интеллектуальных действий для списка служб
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - Имя значения: 1, 2, 3,...
+  - Тип значения: список REG_SZ
+
+  ##### Пример значения:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Сведения о Mac и параметры
+  
+  - Имя ключа предпочтения: SmartActionsBlockList
+  - Пример значения:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21807,14 +21881,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   При настройке этой политики укажите список веб-приложений, которые устанавливаются без вмешательства пользователя и которые пользователи не могут удалять или отключать.
 
-Каждый элемент списка политики является объектом с обязательным элементом: URL-адрес (URL-адрес веб-приложения для установки)
-
-и 3 необязательных элемента:
-- default_launch_container (по умолчанию указывается режим окна, в котором открывается веб-приложение. Новая вкладка используется по умолчанию.)
-
-- create_desktop_shortcut (значение true, если вы хотите создать сочетания клавиш для Linux и Windows для настольных ПК.)
-
-- override_app_name (Начиная с версии Microsoft Edge 89, вы можете переопределять имя приложения, если оно не является веб-приложением (PWA) или именем приложения, которое временно установлено в PWA, но для завершения установки требуется проверка подлинности.)
+Каждый элемент списка политики представляет собой объект с обязательным членом: url (URL-адрес устанавливаемого веб-приложения) и 2 необязательными членами: default_launch_container (указывает режим окна, в котором открывается веб-приложение — по умолчанию на новой вкладке) и create_desktop_shortcut (true, если надо создать ярлыки для рабочего стола Linux и Windows).
 
   #### Поддерживаемые функции:
 
@@ -21855,11 +21922,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21867,7 +21929,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### Компактный пример значения:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21891,14 +21953,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
