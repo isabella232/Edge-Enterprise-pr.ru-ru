@@ -1,30 +1,45 @@
 ---
-ms.openlocfilehash: fee3153f7884bd3c36328d88e433d3ca1b13d0e4
-ms.sourcegitcommit: 23277e25061c75da033ed042e25c33acff3ac0bd
+ms.openlocfilehash: 841bb970fba4da5c861343d3032155e99b2e7a4d
+ms.sourcegitcommit: 21509bb4ca9b2f62c657fbdb43267dec0de1c458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "11297860"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "11306595"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## Неделя с 25 января 2021 г.
+
+
+| Дата публикации |Название раздела | Изменение |
+|------|------------|--------|
+| 25.01.2021 г. | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Примечания к содержимому, опубликованному в течение недели после 25 января. | Изменено |
+| 26.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление с приложением для основной версии 88.0.705.50. Вызов доступности единого входа.| Изменено |
+| 26.01.2021 г. | [Автоматическое включение мониторинга паролей для пользователей](/DeployEdge/microsoft-edge-security-password-monitor)<br>Правильная доступность и ссылка на статью Microsoft Research по защите паролей. | Изменено |
+| 27.01.2021 г. | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление, добавлена новая политика.| Изменено |
+| 27.01.2021 г. | [Документация по политикам Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies)<br>Обновление без изменений. | Изменено |
+| 27.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление для незначительных исправлений версии 88.0.705.53. | Изменено |
+| 28.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление для незначительных исправлений версии 88.0.705.56. | Изменено |
+| 29.01.2021 г. | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Обновление для незначительных исправлений версии 88.0.705.56. | Изменено |
+
 
 ## Неделя с 18 января 2021 г.
 
 
 | Дата публикации |Название раздела | Изменение |
 |------|------------|--------|
-| 22.01.2021 г. | [Средство чтения PDF в Microsoft Edge](/DeployEdge/microsoft-edge-pdf)<br>Обновление с добавлением поддерживаемых функций. | Изменено |
-| 22.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновлен список функций для основной версии 88.0.705.50. | Изменено |
-| 21.01.2021 г. | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel),<br>Исправления для дополнительного номера версии 88.0.705.49.| Изменено |
-| 21.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление для основной версии 88.0.705.50, вызов новых функций и новых или устаревших групповых политик.| Изменено |
-| 21.01.2021 г. | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Обновление для системы безопасности версии 88.0.705.50 стабильного канала.  | Изменено |
-| 21.01.2021 г. | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление и вызов новых политик.| Изменено |
-| 21.01.2021 г. | [Документация по политикам Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies)<br>Автоматическое обновление без изменений. | Изменено |
-| 22.01.2021 г. | [Автоматическое включение мониторинга паролей для пользователей](/DeployEdge/microsoft-edge-security-password-monitor)<br>Новая статья с описанием мониторинга паролей и его автоматическом включении для пользователей. | Добавлено |
-| 21.01.2021 г. | [Enterprise Site List Manager в Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager)<br>Новая статья с описанием Site List Manager, встроенного в Microsoft Edge. | Добавлено |
-| 19.01.2021 г. | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Примечания к контенту, опубликованному на предыдущей неделе. | Изменено |
-| 22.01.2021 г. | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Обновление поддержки функций и дорожной карты | Изменено |
-| 22.01.2021 г. | [Настройка и устранение неполадок синхронизации Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync)<br>Обновление статьи для уточнения сведений об устранении неполадок. | Изменено |
+| 22.01.2021 г. | [Средство чтения PDF в Microsoft Edge](/DeployEdge/microsoft-edge-pdf) | Изменено |
+| 22.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
+| 21.01.2021 г. | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
+| 21.01.2021 г. | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
+| 21.01.2021 г. | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | Изменено |
+| 21.01.2021 г. | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies) | изменено |
+| 21.01.2021 г. | [Документация по политикам Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies) | Изменено |
+| 22.01.2021 г. | [Автоматическое включение мониторинга паролей для пользователей](/DeployEdge/microsoft-edge-security-password-monitor) | Добавлено |
+| 21.01.2021 г. | [Enterprise Site List Manager в Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager) | Добавлено |
+| 19.01.2021 г. | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates) | Изменено |
+| 22.01.2021 г. | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode) | Изменено |
+| 22.01.2021 г. | [Настройка и устранение неполадок синхронизации Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync) | Изменено |
 
 
 ## Неделя с 21 декабря 2020 г.
@@ -32,7 +47,7 @@ ms.locfileid: "11297860"
 
 | Дата публикации |Название раздела | Изменение |
 |------|------------|--------|
-| 21.12.2020 | [Отправка файлов cookie из Microsoft Edge в Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare) | изменено |
+| 21.12.2020 | [Отправка файлов cookie из Microsoft Edge в Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-cookieshare) | Изменено |
 | 21.12.2020 | [Сопоставление расширений файлов с режимом Internet Explorer](/DeployEdge/edge-ie-mode-add-guidance-filetype-associations) | Изменено |
 | 21.12.2020 | [Вопросы и ответы о режиме IE](/DeployEdge/edge-ie-mode-faq) | Изменено |
 | 21.12.2020 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
