@@ -3,19 +3,19 @@ title: Расписание выпусков Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297704"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311526"
 ---
 # Расписание выпусков Microsoft Edge
 
@@ -33,6 +33,8 @@ ms.locfileid: "11297704"
 > Даты выпуска приблизительные и могут меняться в зависимости от состояния сборки.
 
 ### Выпуски Microsoft Edge
+
+В следующей таблице отслеживается и предоставляется информация только для основных выпусков в обоих каналах.
 
 | Версия | Состояние выпуска | Канал Beta<br>Неделя выпуска | Канал Stable<br>Неделя выпуска |
 |---------|-----|------|--------|
