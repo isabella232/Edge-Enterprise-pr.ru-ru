@@ -3,23 +3,23 @@ title: Вопросы и ответы о режиме IE
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Вопросы и ответы и устранение неполадок с Microsoft Edge в режиме IE
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238176"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312595"
 ---
 # Вопросы и ответы о режиме IE
 
-В этой статье приведены советы по устранению неполадок и вопросы и ответы по Microsoft Edge (версии 77 и более поздней).
+Данная статья содержит советы по устранению неполадок и ответы на часто задаваемые вопросы для Microsoft Edge версии 77 или более поздней.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней; каналы **Stable**, **Beta** и **Dev**.
@@ -63,7 +63,11 @@ ms.locfileid: "11238176"
 
 Эта ошибка может возникнуть, если вы используете удаленную отладку и переходите на веб-страницу, настроенную для работы в режиме IE. Вы можете продолжить работу, но страница будет отображаться с использованием Microsoft Edge.
 
-## Вопросы и ответы
+### Сообщение об ошибке: "Ошибка: не удалось получить список сайтов EMIE".
+
+Эта ошибка может появиться на странице *edge://compat/enterprise*, указывая на то, что загрузка списка сайтов не удалась. Начиная с Microsoft Edge версии 87, когда файлы cookie блокированы для сторонних запросов с помощью политики [BlockThirdPartyCookies,](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) HTTP-проверка подлинности также невозможна. Вы можете разрешить файлы cookie для определенного домена, где размещен список сайтов в режиме предприятия, с помощью политики [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls), с целью обеспечить успешную загрузку списка сайтов.
+
+## Часто задаваемые вопросы
 
 ### Заменит ли режим IE браузер Internet Explorer 11?
 
