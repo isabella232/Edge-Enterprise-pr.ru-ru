@@ -3,26 +3,26 @@ title: 'Enterprise Site List Manager в Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Включение и использование Enterprise Site List Manager в Microsoft Edge '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281056"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312585"
 ---
 # Enterprise Site List Manager в Microsoft Edge
 
 В этой статье объясняется, как включить доступ к Enterprise Site List Manager в Microsoft Edge и использовать его для создания, редактирования и экспорта списка сайтов в режиме предприятия для режима Internet Explorer.
 
 > [!NOTE]
-> Эта статья относится к Microsoft Edge версии 89 или более поздней.
+> Эта статья относится к Microsoft Edge версии 89 или более поздней. 
 
 ## Обзор
 
@@ -38,9 +38,9 @@ Enterprise Site List Manager — это браузерная версия [ав�
 
 ## Использование Enterprise Site List Manager
 
-Средство Enterprise Site List Manager использует схему версии 2. При импорте схемы версии 1 в Enterprise Site List Manager (схема версии 2) XML-файл сохраняется в схеме версии 2.
+Средство Enterprise Site List Manager использует схему версии 2. При импорте схемы версии 1 в Enterprise Site List Manager (схема версии 2) XML-файл сохраняется в схеме версии 2. См. [Руководство по схеме режима предприятия версии 2](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
-### Добавление одного сайта в список сайтов  
+### Добавление сайтов в список сайтов  
 
 Отдельные сайты можно добавить в список сайтов с помощью следующих действий.
 
@@ -127,5 +127,5 @@ Enterprise Site List Manager — это браузерная версия [ав�
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [Руководство по схеме режима предприятия версии 2](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Дополнительные сведения об Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
