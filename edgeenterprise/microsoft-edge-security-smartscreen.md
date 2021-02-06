@@ -3,19 +3,19 @@ title: Поддержка фильтра SmartScreen в Microsoft Defender в б
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/23/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge
-ms.openlocfilehash: d27366409d7792784c360cfee10f96ab174aa375
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2de93b4ebe26b4a90592f7ee9143f6f775b682ce
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10981004"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314692"
 ---
 # Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge
 
@@ -24,7 +24,7 @@ ms.locfileid: "10981004"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-Фильтр SmartScreen в Microsoft Defender — эта служба, которую использует браузер Microsoft Edge, чтобы защитить вас в Интернете. Фильтр SmartScreen в Microsoft Defender предоставляет систему раннего предупреждения о веб-сайтах, которые могут участвовать в фишинге или попытках распространения вредоносных программ с помощью целенаправленных атак.
+Фильтр SmartScreen в Microsoft Defender — эта служба, которую использует браузер Microsoft Edge, чтобы защитить вас в Интернете. Фильтр SmartScreen в Microsoft Defender предоставляет систему раннего предупреждения о веб-сайтах, которые могут участвовать в фишинге или попытках распространения вредоносных программ с помощью целенаправленных атак. Для дополнительных сведений см. [видео: безопасный просмотр в Microsoft Edge.](microsoft-edge-video-security-smartscreen.md)
 
 > [!NOTE]
 > До Windows 10 версии 1703 эта функция называлась "фильтр SmartScreen" при использовании в браузере и "Microsoft SmartScreen" при использовании вне браузера.
@@ -64,11 +64,11 @@ ms.locfileid: "10981004"
 - Файлы с заведомо безопасной репутацией загружаются без каких бы то ни было уведомлений.  
 - При попытке загрузить вредоносный файл отображается предупреждение о том, что файл небезопасен и считается вредоносным. На следующем снимке экрана показан пример предупреждения о вредоносном файле.
 
-  ![Страница фильтра SmartScreen в Microsoft Defender при блокировке вредоносного файла ](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![Уведомление о блокировке SmartScreen в Microsoft Defender для вредоносного файла](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - Для неизвестных файлов отображается предупреждение о том, что файл не соответствует известным шаблонам, и рекомендуется осторожность. На следующем снимке экрана показан пример предупреждения о неизвестном файле.
 
-  ![Страница фильтра SmartScreen в Microsoft Defender при блокировке вредоносного файла ](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![Уведомление о блокировке SmartScreen в Microsoft Defender для неизвестного файла](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 Не все неизвестные программы являются вредоносными. Цель предупреждения о неизвестных файлах — предоставить пользователям контекст и рекомендации, особенно если это непредвиденное предупреждение.
 
@@ -120,6 +120,7 @@ ms.locfileid: "10981004"
 ## См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Видео: безопасный просмотр в Microsoft Edge](microsoft-edge-video-security-smartscreen.md)
 - [Обзор фильтра SmartScreen в Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
 - [Защита от угроз](https://docs.microsoft.com/windows/security/threat-protection/index)
 - [Защита от потенциально нежелательных приложений](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)
