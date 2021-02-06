@@ -3,26 +3,26 @@ title: Откат Microsoft Edge для предприятий
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 02/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Как откатить Microsoft Edge к предыдущей версии
-ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
-ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
+ms.openlocfilehash: 2059ea04bf8ec3a03266fe95599ea3b515b78c12
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "11192429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314572"
 ---
 # Как откатить Microsoft Edge к предыдущей версии
 
-В этой статье описано, как вернуться к предыдущей версии Microsoft Edge с помощью функции отката.
+В этой статье описано, как вернуться к предыдущей версии Microsoft Edge с помощью функции отката. Чтобы узнать больше об этой функции, посмотрите видео [Откат версии Microsoft Edge](microsoft-edge-video-version-rollback.md).
 
 >[!NOTE]
->Эта статья относится к Microsoft Edge версии 86 или более поздней.
+>Эта статья относится к Microsoft Edge версии 86 или более поздней версии.
 
 ## Знакомство с откатом
 
@@ -163,3 +163,4 @@ ms.locfileid: "11192429"
 ## См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Видео: откат версии Microsoft Edge](microsoft-edge-video-version-rollback.md)

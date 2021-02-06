@@ -3,23 +3,23 @@ title: Доступ к старой версии Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как получить доступ к устаревшей версии Microsoft Edge.
-ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
-ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
+ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125521"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313899"
 ---
 # Получение доступа к устаревшей версии Microsoft Edge после установки новой версии Microsoft Edge
 
-Узнайте, как получить доступ к устаревшей версии Microsoft Edge после установки новой версии Microsoft Edge.
+Устаревшая версия Microsoft Edge перестанет получать обновления для системы безопасности 9 марта 2021 г. Вы сможете получать доступ к устаревшей версии Microsoft Edge до 13 апреля. Дополнительные сведения см. в [записи блога](https://aka.ms/EdgeLegacyEOS) команды разработчиков продукта Microsoft Edge.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge из [стабильного канала](microsoft-edge-channels.md).
@@ -45,10 +45,6 @@ ms.locfileid: "11125521"
 Прежде чем следовать подробным инструкциям в этой статье, выполните следующие два действия, чтобы позволить вашим пользователям параллельно запускать устаревшую версию Microsoft Edge и версию Microsoft Edge [канала Beta](microsoft-edge-channels.md).
 
 1. Запретите автоматическую установку версии Microsoft Edge из стабильного канала через [Центр обновления Windows](https://support.microsoft.com/help/12373/windows-update-faq).
-
-   > [!TIP]
-   > Отключите автоматическую доставку Microsoft Edge с помощью [набора средств блокировки](microsoft-edge-blocker-toolkit.md).
-
 2. Установите новую версию Microsoft Edge из [канала Beta](https://www.microsoft.com/edge/business/download).
 
    > [!NOTE]

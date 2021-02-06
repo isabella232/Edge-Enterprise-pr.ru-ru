@@ -3,30 +3,33 @@ title: Обновления Windows для Microsoft Edge
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Обновления Windows для Microsoft Edge.
-ms.openlocfilehash: ab5832dc878495a0f0a0880676fb7c3e34b69d4d
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980940"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313909"
 ---
 # Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge
 
 В этой статье описывается, как будет выполняться обновление Windows для обеспечения поддержки следующей версии Microsoft Edge.
 
+> [!IMPORTANT]
+> Обратитесь к [записи блога](https://aka.ms/EdgeLegacyEOS) команды разработки продукта Microsoft Edge по поводу завершения обслуживания устаревшей версии Microsoft Edge.
+
 > [!NOTE]
-> Эта статья относится к Microsoft Edge из канала Stable.
+> Эта статья относится к Microsoft Edge из стабильного канала.
 
 ## Цикл выпуска Microsoft Edge и Windows
 
-Новая версия Microsoft Edge будет поддерживать более гибкие возможности обновления, которые будут предоставляться для нее чаще. Так как выпуски браузера не привязаны к основным выпускам Windows, изменения будут вноситься в операционную систему, чтобы гарантировать оптимальную совместимость следующей версии Microsoft Edge с Windows. В результате обновления компонентов будут выпускаться каждые 6 недель (приблизительно). Обновления для системы безопасности и обновления совместимости будут предоставляться по мере необходимости.
+Новая версия Microsoft Edge будет поддерживать более гибкие возможности обновления, которые будут предоставляться для нее чаще. Так как выпуски браузера не привязаны к основным выпускам Windows, изменения будут вноситься в операционную систему, чтобы гарантировать оптимальную совместимость следующей версии Microsoft Edge с Windows. Результатом будет выпуск обновления компонентов в 6-недельном цикле (приблизительно). Обновления для системы безопасности и совместимости будут предоставляться по мере необходимости.
 
 ## Обновления и интерфейс
 

@@ -3,23 +3,23 @@ title: Поддержка удостоверений и настройка Micro
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Поддержка удостоверений и настройка Microsoft Edge
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201296"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314612"
 ---
 # Поддержка удостоверений и настройка Microsoft Edge
 
-В этой статье описывается, как Microsoft Edge использует удостоверения для поддержки таких функций, как синхронизация и единый вход (SSO). Microsoft Edge поддерживает вход в систему с помощью доменных служб Active Directory (AD DS), Azure Active Directory (Azure AD) и учетных записей Майкрософт (MSA). В настоящее время Microsoft Edge поддерживает только учетные записи Azure Active Directory (Azure AD), которые относятся к глобальному облаку или национальному облаку GCC. Мы работаем над добавлением поддержки для других национальных облаков. 
+В этой статье описывается, как Microsoft Edge использует удостоверения для поддержки таких функций, как синхронизация и единый вход (SSO). Microsoft Edge поддерживает вход в систему с помощью доменных служб Active Directory (AD DS), Azure Active Directory (Azure AD) и учетных записей Майкрософт (MSA). В настоящее время Microsoft Edge поддерживает только учетные записи Azure Active Directory (Azure AD), которые относятся к глобальному облаку или национальному облаку GCC. Мы работаем над добавлением поддержки для других национальных облаков.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
@@ -28,7 +28,7 @@ ms.locfileid: "11201296"
 
 Microsoft Edge поддерживает вход в профиль браузера с помощью учетной записи Azure AD, MSA или домена. Тип учетной записи, используемой для входа, определяет, какие аутентифицированные функции доступны для пользователя в Microsoft Edge. В следующей таблице представлены общие сведения о поддержке функций для всех типов учетных записей.
 
-|    | Azure AD Premium | Azure AD Free | Локальные службы AD DS | Учетная запись Майкрософт     |
+| Функция   | Azure AD Premium | Azure AD Free | Локальные службы AD DS | Учетная запись Майкрософт     |
 |----|------------------|---------------|----------------|---------|
 | Синхронизация | Да | Нет | Нет | Да |
 | Единый вход с основным маркером обновления | Да | Да | Нет | Да |
@@ -51,7 +51,7 @@ Microsoft Edge использует учетную запись ОС по умо
 
 ### Ручной вход
 
-Если пользователь не вошел в Microsoft Edge автоматически, он может вручную войти в Microsoft Edge при первом запуске, настройках браузера или открыв всплывающую личность. 
+Если пользователь не вошел в Microsoft Edge автоматически, он может вручную войти в Microsoft Edge при первом запуске, настройках браузера или открыв всплывающую личность.
 
 ### Управление входом в браузер
 
@@ -104,7 +104,7 @@ Microsoft Edge также поддерживает встроенную пров
 ## См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Целевая страница с документацией по Microsoft Edge Enterprise](https://docs.microsoft.com/DeployEdge/)
+- [Видео: Microsoft Edge и удостоверение](microsoft-edge-video-identity.md)
 - [Управление удостоверениями и доступом](https://www.microsoft.com/security/technology/identity-access-management)
 - [Платформа удостоверений](https://developer.microsoft.com/identity)
 - [Четыре шага по созданию надежной платформы идентификации с помощью Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)

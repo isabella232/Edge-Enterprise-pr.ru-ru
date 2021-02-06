@@ -1,21 +1,21 @@
 ---
 title: Планирование развертывания Microsoft Edge
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Планирование развертывания Microsoft Edge
-ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155256"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313879"
 ---
 # Планирование развертывания Microsoft Edge
 
@@ -55,7 +55,6 @@ ms.locfileid: "11155256"
 После изучения текущего состояния вы можете определить цели развертывания браузера, принимая во внимание следующие факторы.
 
 - Хотите ли вы [установить Microsoft Edge в качестве браузера по умолчанию](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Хотите ли вы скрыть устаревшую версию Microsoft Edge или [оставить ее доступной для пользователей](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)?
 - Как вы будете [настраивать Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
 - Какие компоненты критически важны для настройки в рамках начального развертывания?
 - В чем заключается процедура устранения выявленных проблем совместимости или конфигурации?
@@ -211,4 +210,3 @@ Microsoft Edge выпускается в [нескольких каналах](h
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Видео — развертывание Microsoft Edge](microsoft-edge-video-deploy.md)
-

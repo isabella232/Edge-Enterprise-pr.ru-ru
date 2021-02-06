@@ -3,19 +3,19 @@ title: Средство чтения PDF-файлов корпоративног
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 01/13/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Средство чтения PDF-файлов корпоративного уровня Microsoft Edge
-ms.openlocfilehash: e1a7ea885df8ba93a5fdc8180c3150fe1df279e6
-ms.sourcegitcommit: 21ce27d03862263c9c69f602e1e5017d2e172b9f
+ms.openlocfilehash: fcbe33a87f5557e3d1fd917401b34bb6a6aaa90c
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "11270573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314742"
 ---
 # Видео: средство чтения PDF-файлов корпоративного уровня Microsoft Edge
 
@@ -30,4 +30,5 @@ ms.locfileid: "11270573"
 ## Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Средство чтения PDF в Microsoft Edge](microsoft-edge-pdf.md)
 - [Список воспроизведения YouTube для Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)
