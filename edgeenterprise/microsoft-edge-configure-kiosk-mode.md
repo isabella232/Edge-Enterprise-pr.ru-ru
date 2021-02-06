@@ -3,19 +3,19 @@ title: Настройка режима терминала в Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 01/21/2021
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка режима терминала в Microsoft Edge
-ms.openlocfilehash: be353a0e13e9234de40296a2e8dcc31b1b800f52
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 3f6e75b73d8c541bae4442263a5b415aeeb15eb1
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314622"
 ---
 # Настройка режима терминала в Microsoft Edge
 
@@ -39,44 +39,85 @@ ms.locfileid: "11297475"
 
 ### Поддерживаемые функции режима терминала
 
-В следующей таблице перечислены функции, поддерживаемые режимом терминала.
+В следующей таблице перечислены функции, поддерживаемые режимом терминала в Microsoft Edge и Microsoft Edge Legacy. Используйте эту таблицу в качестве руководства по переходу на Microsoft Edge путем сравнения поддержки этих функций в обеих версиях Microsoft Edge.
 
-|Функция|Цифровая/интерактивная вывеска|Общедоступный просмотр|Доступно в Microsoft Edge версии (и выше)|
-|-|-|-|-|
-|Навигация в InPrivate|Y|Y|87|
-|Сброс при неактивности|Y|Y|87|
-|[Адресная строка только для чтения](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (политика) |N|Y |87|
-|[Удаление загружаемых данных при выходе](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (политика)  | Y|Y |87|
-|Блокировка F11 (вход и выход из полноэкранного режима) | Y | Y | 87 |
-|Блокировка F12 (запуск средств разработчика) | Y | Y | 87 |
-| Поддержка нескольких вкладок | N| Y| 87|
-|Кнопка завершения сеанса | N| Y| 88|
-|Все внутренние URL-адреса Microsoft Edge блокируются, кроме *edge://downloads* и *edge://print* |N|Y|88|
-| Блокировка CTRL+N (открытие нового окна) | Y | Y | 89 |
-| Блокировка CTRL+T (открытие новой вкладки) | N | Y | 89 |
-|Параметры и другое (...)— отображение только обязательных параметров  |N |Y |89 |
+|Функция|Цифровая/интерактивная вывеска|Общедоступный просмотр|Доступно в Microsoft Edge версии (и выше)|Доступно в Microsoft Edge Legacy|
+|-|-|-|-|-|
+|Навигация в InPrivate|Y|Y|89|Y|
+|Сброс при неактивности|Y|Y|89|Y|
+|[Адресная строка только для чтения](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (политика) |N|Y |89|N|
+|[Удаление загружаемых данных при выходе](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (политика)  | Y|Y |89|N|
+|Блокировка F11 (вход и выход из полноэкранного режима) | Y | Y | 89 |Y|
+|Блокировка F12 (запуск средств разработчика) | Y | Y | 89 |Y|
+| Поддержка нескольких вкладок | N| Y| 89|Y|
+|[Разрешить поддержку URL-адресов](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (политика)|Y|Y|89|N|
+|[Поддержка блокировки URL-адресов](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (политика)|Y|Y|89|N|
+|[Показывать кнопку "Домой"](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (политика)|N|Y|89|Y|
+|[Управление избранным](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (политика)|N|Y|89|Y|
+|[Включить принтер](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (политику)|Y|Y|89|Y|
+|[Настройка нового URL-адреса страницы вкладок](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (политики)|N|Y||Y|
+|Кнопка завершения сеанса | N| Y| 89|Y|
+|Все внутренние URL-адреса Microsoft Edge блокируются, кроме *edge://downloads* и *edge://print* |N|Y|89|Y|
+| Блокировка CTRL+N (открытие нового окна) | Y | Y | 89 |Y|
+| Блокировка CTRL+T (открытие новой вкладки) |Y | Y | 89 |Y|
+|Параметры и другое (...)будет выводить на экран только обязательные параметры  |Y |Y |89 |Y|
+|Ограничение запуска других приложений из браузера|Y|Y|90/91|Y|
+|Блокировка параметров печати пользовательского интерфейса|Y|Y|90/91|Y|
+|[Настройка новой вкладки в качестве домашней страницы](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (политики)|-|-|ПОДЛЕЖИТ УТОЧНЕНИЮ|Y|
 
 > [!NOTE]
 > По мере развития режима терминала будет появляться все больше функций.
 
 ## Использование возможностей режима терминала
 
-Функции режима терминала Microsoft Edge можно вызывать с помощью следующих параметров командной строки Windows 10:
+Функции режима терминала Microsoft Edge можно вызывать с помощью следующих параметров командной строки Windows 10 для цифровых и интерактивных вывесок и просмотра общедоступных страниц.
 
-- Цифровая или интерактивная вывеска режима терминала: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
-- Общедоступный просмотр режима терминала: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
+### Цифровая/интерактивная вывеска в режиме терминала
+ 
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
+```
+
+### Режим терминала : общедоступный просмотр
+
+```
+msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
+```
 
 ### Дополнительные параметры командной строки
 
-- `--no-first-run` : Отключение первого запуска Microsoft Edge.
-- `--kiosk-idle-timeout-minutes` : Изменение времени в минутах от последнего действия пользователя до того, как режим терминала Microsoft Edge сбросит сеанс пользователя. Поддерживаются следующие значения:
+- **--no-first-run**: Отключить функцию первого запуска Microsoft Edge.
 
-  - Значения по умолчанию
-    - Полный экран — отключен
-    - Общедоступный просмотр — 5 минут
-  - Допустимые значения
-    - 0 — отключение таймера
-    - 1-1440 минут для сброса таймера простоя
+   ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --no-first-run
+  ```
+
+  ```
+  msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
+  ```
+
+- **--kiosk-idle-timeout-minutes=**: изменить время в минутах от последнего действия пользователя до того, как режим терминала Microsoft Edge сбросит сеанс пользователя.. Замените слово "значение" в следующем примере на количество минут.
+
+   ```
+   --kiosk-idle-timeout-minutes=value
+   ``` 
+   Поддерживаются следующие "значения":
+
+     - Значения по умолчанию (в минутах)
+       - Полноэкранный режим — 0 (отключен)
+       - Общедоступный просмотр — 5 минут
+    - Допустимые значения
+      - 0 — отключение таймера
+      - 1-1440 минут для сброса таймера простоя
+
+
+    ```
+    msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen --kiosk-idle-timeout-minutes=1
+   ```
+
+   ```
+   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --kiosk-idle-timeout-minutes=1
+   ```
 
 ## Поддерживаемые политики режима терминала
 
@@ -98,6 +139,7 @@ ms.locfileid: "11297475"
 |[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
 |[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
 |[Параметры SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
+|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
 
 ## Microsoft Edge с ограниченным доступом
 
@@ -105,7 +147,7 @@ ms.locfileid: "11297475"
 
 В настоящее время Microsoft Edge поддерживает набор таких же типов режимов терминала с ограниченным доступом для одного приложения, как и устаревшая версия Microsoft Edge, со следующими вариантами блокировки: цифровая или интерактивная вывеска и общедоступный просмотр.  
 
-Режим терминала с ограниченным доступом в настоящее время доступен для тестирования в последней  [сборке Windows 10 Insider Preview](https://insider.windows.com/) версии 20215 или выше, а также в  [канале Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download) версии 87.0.644.4 или выше.
+Режим терминала Microsoft Edge с одним приложением назначенного доступа в настоящее время доступен для тестирования в составе последней сборки [Windows 10 Insider Preview](https://insider.windows.com/)версии 20215 или более поздней версии, а также в [Microsoft Edge Beta Channel](https://www.microsoftedgeinsider.com/download)версии 89 или более поздней версии.
 
 **Откуда загрузить Windows Insider Preview?**
 
@@ -121,12 +163,8 @@ Microsoft Edge можно запустить с [ограниченным дос
 
 Параметры Windows — это самый простой способ настроить одно или два устройства с одним приложением в режиме терминала. Для настройки компьютера с одним приложением в режиме терминала выполните указанные ниже действия.
 
-1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям, указанным в разделе [Начало работы со сборками Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
-2. Установите последнюю версию [стабильного канала Microsoft Edge](https://www.microsoft.com/edge) версии 87 или более поздней.  Чтобы протестировать новейшие функции, можно скачать последний канал [Microsoft Edge Dev](https://www.microsoftedgeinsider.com/download)версии 89 или более поздней версии.
-
-   > [!IMPORTANT]
-   > Поскольку требуется установка на уровне устройства, поддерживается только канал, не связанный с Canary.
-
+1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям в разделе [Начало работы со сборками Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+2. Чтобы протестировать новейшие функции, можно скачать последний канал [Microsoft Edge beta](https://www.microsoftedgeinsider.com/download)версии 89 или более поздней версии.
 3. На компьютере терминала откройте параметры Windows и в поле поиска введите слово «терминал». Чтобы открыть диалоговое окно для создания терминала, выберите  **Настройка терминала (ограниченный доступ)**, как показано на следующем снимке экрана.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Настройка терминала с ограниченным доступом":::
@@ -175,6 +213,13 @@ Microsoft Edge можно запустить с [ограниченным дос
 
 Мы рекомендуем отключить:
 
+- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
+- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
+- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
 - [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Расширения](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
@@ -189,12 +234,12 @@ Microsoft Edge можно запустить с [ограниченным дос
 - Общая доступность режима киоска Microsoft Edge с одним приложением с единым доступом в Windows 10 1909 и более поздних версиях.
 - Дополнительные возможности для обеспечения равных условий с устаревшей версией Microsoft Edge.
 - Интеграция с Intune для настройки устройств с использованием пользовательского интерфейса профиля режима терминала.
-- Дополнительные сочетания клавиш будут заблокированы.
 - Ограничение запуска других приложений из браузера.
+- Блокировка параметров печати пользовательского интерфейса.
 
 ## См. также
 
-- [Настройка терминалов и цифровых вывесок в выпусках Windows для настольных компьютеров](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [Развертывание режима терминала в Microsoft Edge Legacy](https://aka.ms/edgekioskmode)
+- [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Планирование развертывания Microsoft Edge](deploy-edge-plan-deployment.md)
-- [Использование целевой страницы Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Настройка терминалов и цифровых вывесок в выпусках Windows для настольных компьютеров](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Планирование перехода в режим терминала](microsoft-edge-kiosk-mode-transition-plan.md)
