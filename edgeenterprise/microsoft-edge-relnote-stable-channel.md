@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: df5298934496db5f5899bebad3ecf44bbda91913
-ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
+ms.openlocfilehash: eaf7c7718a5ed56644c67769bf71847fb14e8728
+ms.sourcegitcommit: f141a3b315244e93291ca30ed23741a1d84f0a73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/09/2021
-ms.locfileid: "11319263"
+ms.locfileid: "11324861"
 ---
 # Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -83,7 +83,7 @@ ms.locfileid: "11319263"
   - Мониторинг паролей. Если любой из ваших паролей, сохраненных в браузере, совпадает со списком утечек учетных данных, Microsoft Edge уведомит вас и запросит обновление пароля. Мониторинг паролей проверяет совпадения от вашего имени и включен по умолчанию.
   - Изменение пароля. Теперь сохраненные пароли можно изменять непосредственно в параметрах Microsoft Edge. Каждый раз, когда пароль обновляется за пределами Microsoft Edge, можно легко заменить старый сохраненный пароль новым, изменив сохраненную запись в параметрах. 
 
-- Увеличение скорости запуска Microsoft Edge с помощью ускорения запуска. Чтобы повысить скорость запуска Microsoft Edge, мы разработали возможность ускорения запуска. Запуск Microsoft Edge ускоряется за счет работы браузера в фоновом режиме. Примечание. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
+- **Улучшите скорость запуска Microsoft Edge с помощью повышения при запуске.** Чтобы повысить скорость запуска Microsoft Edge, мы разработали возможность ускорения запуска. Запуск Microsoft Edge ускоряется за счет работы браузера в фоновом режиме. Примечание. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
 
 - **Эффективная работа:**
 
@@ -286,7 +286,7 @@ ms.locfileid: "11319263"
 
 * **Конфиденциальность и безопасность.**
 
-  * **Замена политик [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) и [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) для более ранних версий Windows и macOS.** Эти политики не рекомендуются в Microsoft Edge версии 86 и станут устаревшими в Microsoft Edge версии 89.<br>
+  * Замена политик [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) и [SendSiteInformationToImproveServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) для более ранних версий Windows и macOS. Эти политики не рекомендуются в Microsoft Edge версии 86 и станут устаревшими в Microsoft Edge версии 89.<br>
 Эти политики заменяются политикой [Разрешить телеметрию](https://go.microsoft.com/fwlink/?linkid=2099569) в Windows 10 и новой политикой [DiagnosticData](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) для всех остальных платформ. Это позволит пользователям управлять диагностическими данными, отправляемыми в корпорацию Майкрософт, для Windows 7, 8, 8.1 и macOS.
   * Поддержка безопасной службы DNS (DNS поверх HTTPS).  С Microsoft Edge версии 86 доступны параметры для управления безопасной службой DNS на неуправляемых устройствах. Эти параметры недоступны пользователям управляемых устройств, но ИТ-администраторы могут включать и отключать безопасную службу DNS с помощью групповой политики [dnsoverhttpsmode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode).
 
