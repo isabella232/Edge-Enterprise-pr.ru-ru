@@ -3,19 +3,19 @@ title: Безопасность Microsoft Edge для вашего бизнес�
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 02/05/2021
+ms.date: 02/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Безопасность Microsoft Edge для вашего бизнеса
-ms.openlocfilehash: eb981f3ed47b40219e50818531132ed5d385b642
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 497ca83c64bdc3d1f1b1be8989cf798d65a7eda3
+ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314682"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "11327022"
 ---
 # Безопасность Microsoft Edge для вашего бизнеса
 
@@ -29,7 +29,7 @@ Microsoft Edge построен на основе проекта с открыт
 
 По данным независимого исследования NSS Labs встроенный в Microsoft Edge SmartScreen блокирует больше попыток [фишинга](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) и [вредоносных программ](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf), чем безопасный просмотр Google Chrome. SmartScreen обеспечивает проверку репутации сайтов и загружаемых файлов в режиме реального времени, когда пользователи работают в сети, и является частью [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), который собирает сигналы и аналитические данные, полученные из обширной сети глобальных активов, исследователей и партнеров Microsoft. Выполняя проверки динамических облачных списков опасных сайтов и загрузок, Microsoft Edge помогает обнаруживать и блокировать даже эфемерные угрозы, которые быстро исчезают.  
 
-[Microsoft Edge с фильтром SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) заблокировал 95,5% попыток фишинга и 98,5% попыток вредоносных программ [в ходе тестирования NSS Labs](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) по сравнению с показателями безопасного просмотра в Chrome 86,9% и 86,0% соответственно.
+[Microsoft Edge с фильтром SmartScreen](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) заблокировал 95,5% попыток фишинга в ходе тестирования [Защиты от фишинга NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) и 98,5% попыток вредоносных программ в ходе тестирования [Защиты от вредоносных программ NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) по сравнению с показателями безопасного просмотра в Chrome 86,9% и 86,0% соответственно.
 
 ### Единственный браузер в Windows 10 с поддержкой аппаратной изоляции
 
