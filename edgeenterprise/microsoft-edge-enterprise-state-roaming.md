@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge и службы переноса параметров в рамках предприятия Enterprise State Roaming
-ms.openlocfilehash: a759b1d9d4be8dced7bfcc2ef8d0f23b514f4be0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 6090ecfda2f792d49e452771943bc6348066a3d8
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980978"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328061"
 ---
 # Microsoft Edge и службы переноса параметров в рамках предприятия Enterprise State Roaming
 
@@ -63,7 +63,7 @@ ms.locfileid: "10980978"
 
 ### Управление
 
-Администраторы смогут управлять тем, у каких участников вашей организации будет возможность включить синхронизацию. См. разделы [Параметры конфигурации для функции синхронизации Microsoft Edge](microsoft-edge-enterprise-sync.md#configuration-options-for-microsoft-edge-sync) и [Синхронизация групповых политик](microsoft-edge-enterprise-sync.md#sync-group-policies). Кроме того, пользователи могут включать и отключать синхронизацию для всех своих устройств, а также переключать каждый атрибут данных по отдельности для выполнения его синхронизации.
+Администраторы смогут управлять тем, какие участники организации могут включать синхронизацию. См. разделы [Настройка синхронизации Microsoft Edge](microsoft-edge-enterprise-sync.md#configure-microsoft-edge-sync) и [Групповые политики синхронизации](microsoft-edge-enterprise-sync.md#sync-group-policies). Кроме того, пользователи могут включать и отключать синхронизацию для всех своих устройств, а также переключать каждый атрибут данных по отдельности для выполнения его синхронизации.
 
 ### Управление ключами
 
