@@ -3,23 +3,27 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/09/2021
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 822c6cf40cc046d1fe38301fb89cf2a8fe67c04e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325869"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328071"
 ---
 # Заметки о выпуске для Microsoft Edge из канала Beta
 
 Эти заметки о выпуске содержат сведения о новых возможностях и обновлениях, не связанных с безопасностью, которые включены Microsoft Edge канала Beta Архивные версии этих заметок о выпуске доступны [здесь](microsoft-edge-relnote-archive-beta-channel.md).
+
+## Версия 89.0.774.27: 12 февраля
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## Версия 89.0.774.23: 8 февраля
 
