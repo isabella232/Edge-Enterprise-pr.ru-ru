@@ -1,54 +1,74 @@
 ---
-ms.openlocfilehash: b3c0ccfd523859f880c47b17014599c6dd7a7f5d
-ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
+ms.openlocfilehash: 9e1442968848c6213ad629be126b8e3fc8c805d2
+ms.sourcegitcommit: a5432605280b1a634fdaf31b21b55ba1e2818763
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "11319252"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "11328337"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
 
-## Неделя с 1 февраля 2021 г.
+## Неделя с 8 февраля 2021г.
+
+| Дата публикации |Название раздела | Изменение |
+|------|------------|--------|
+| 8.2.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Примечание об обновлении 89.0.774.18, добавление спящего режима вкладок.  | Изменено |
+| 8.2.2021 | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Примечания к содержимому, опубликованному в течение недели после 1 февраля. | Изменено |
+| 8.2.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Исправления во вспомогательной версии 88.0.705.63. | Изменено |
+| 9.2.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Исправления во вспомогательной версии 89.0.774.23. | Изменено |
+| 9.2.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Исправлена неправильная ссылка на заметку о выпуске. | Изменено |
+| 9.2.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление вспомогательной версии 88.0.705.63 для осуществления эксплойта безопасности в естественных условиях. | Изменено |
+| 9.2.2021 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление и объявление 2 новых политик. | Изменено |
+| 9.2.2021 | [Документация по политикам Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies)<br>Обновление без изменений. | Изменено |
+| 10.2.2021 | [Безопасность Microsoft Edge для вашего бизнеса](/DeployEdge/ms-edge-security-for-business)<br>Добавлены ссылки на отчеты NSS Labs о тестах на фишинг и вредоносные программы.| Изменено |
+| 10.2.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Обрезана таблица, удалены 3 самые старые строки и добавлены 2 новые для будущих выпусков. | Изменено |
+| 11.2.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Исправления во вспомогательной версии 88.0.705.68. | Изменено |
+| 12.2.2021 | [Локальная синхронизация для пользователей Active Directory (AD)](/DeployEdge/microsoft-edge-on-premises-sync)<br>Уточнение: как работает синхронизация, профиль, связанный с AD, и политика SyncDisabled. | Изменено |
+| 12.2.2021 | [Microsoft Edge и Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming)<br>Обновление с незначительными изменениями в формулировках — исправлением опечаток. | Изменено |
+| 12.2.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Исправления во вспомогательной версии 89.0.774.27. | Изменено |
+
+
+## Неделя с 1 февраля 2021г.
 
 
 | Дата публикации |Название раздела | Изменение |
 |------|------------|--------|
-| 01.02.2021 | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates)<br>Примечания к содержимому, опубликованному в течение недели после 25 января. | Изменено |
-| 02.02.2021 | [Операционные системы, поддерживаемые Microsoft Edge](/DeployEdge/microsoft-edge-supported-operating-systems)<br>Добавлено примечание о поддержке компьютеров Apple Silicon Mac.| Изменено |
-| 02.02.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Обновление для основной бета-версии 89.0.774.18. | Изменено |
-| 02.02.2021 | [Вопросы и ответы о режиме IE](/DeployEdge/edge-ie-mode-faq)<br>Добавление элемента о сохранении ссылок в виде веб-страниц. | Изменено |
-| 02.02.2021 | [Enterprise Site List Manager в Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager)<br>Добавление подробных сведений для ясности. | Изменено |
-| 03.02.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>Обновление для вспомогательной версии 88.0.705.56 | Изменено |
-| 03.02.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule)<br>Обновление для основной бета-версии 89.0.774.18. | Изменено |
-| 03.02.2021 | [Документация по Microsoft Edge Enterprise](/DeployEdge/index)<br>Изменена карточка сообщества и добавлена ссылка на блог группы "Исследования безопасности". | Изменено |
-| 03.02.2021 | [Архивные заметки о выпуске для канала Microsoft Edge Beta](/DeployEdge/microsoft-edge-relnote-archive-beta-channel)<br>Добавление версии канала Beta 86.0.622.11 и более ранних версий в архив.| Изменено |
-| 03.02.2021 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies)<br>Обновление и объявление 2 новых политик. | Изменено |
-| 03.02.2021 | [Документация по политикам Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies)<br>Обновление без изменений. | Изменено |
-| 04.02.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление, отражающее обновление для системы безопасности от 4 февраля для вспомогательной версии 88.0.705.62. | Изменено |
-| 05.02.2021 | [Планирование развертывания Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment)<br>Удаление ссылки на Blocker Toolkit. | Изменено |
-| 05.02.2021 | [Доступ к старой версии Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-access-old-edge)<br>Обновление, отражающее окончание поддержки устаревшей версии Microsoft Edge. | Изменено |
-| 05.02.2021 | [Обновления Windows для Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-windows-updates)<br>Обновление, отражающее окончание поддержки устаревшей версии Microsoft Edge. | Изменено |
-| 05.02.2021 | [Microsoft Edge в вашей среде](/DeployEdge/deploy-edge-prepare-to-deploy)<br>Обновление, отражающее окончание поддержки устаревшей версии Microsoft Edge и установку Microsoft Edge. | Добавлено |
-| 05.02.2021 | [Развертывание Microsoft Edge с обновлениями Windows 10](/DeployEdge/deploy-edge-with-windows-10-updates)<br>Новая статья об установке Microsoft Edge с помощью обновлений Windows 10. | Добавлено |
-| 05.02.2021 | [Планирование перехода в режим терминала](/DeployEdge/microsoft-edge-kiosk-mode-transition-plan)<br>Новая документация по планированию перехода в режим терминала для окончания поддержки устаревшей версии Microsoft Edge. | Добавлено |
+| 01.02.2021 | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates) | Изменено |
+| 02.02.2021 | [Операционные системы, поддерживаемые Microsoft Edge](/DeployEdge/microsoft-edge-supported-operating-systems) | Изменено |
+| 02.02.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | Изменено |
+| 02.02.2021 | [Вопросы и ответы о режиме IE](/DeployEdge/edge-ie-mode-faq) | Изменено |
+| 02.02.2021 | [Enterprise Site List Manager в Microsoft Edge ](/DeployEdge/edge-ie-mode-site-list-manager) | Изменено |
+| 03.02.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
+| 03.02.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | Изменено |
+| 03.02.2021 | [Документация по Microsoft Edge Enterprise](/DeployEdge/index) | Изменено |
+| 03.02.2021 | [Архивные заметки о выпуске для канала Microsoft Edge Beta](/DeployEdge/microsoft-edge-relnote-archive-beta-channel) | Изменено |
+| 03.02.2021 | [Документация по политикам браузера Microsoft Edge](/DeployEdge/microsoft-edge-policies) | Изменено |
+| 03.02.2021 | [Документация по политикам Microsoft Edge WebView2](/DeployEdge/microsoft-edge-webview-policies) | Изменено |
+| 04.02.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
+| 05.02.2021 | [Планирование развертывания Microsoft Edge](/DeployEdge/deploy-edge-plan-deployment) | Изменено |
+| 05.02.2021 | [Доступ к старой версии Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-access-old-edge) | Изменено |
+| 05.02.2021 | [Обновления Windows для Microsoft Edge](/DeployEdge/microsoft-edge-sysupdate-windows-updates) | Изменено |
+| 05.02.2021 | [Microsoft Edge в вашей среде](/DeployEdge/deploy-edge-prepare-to-deploy) | Добавлено |
+| 05.02.2021 | [Развертывание Microsoft Edge с обновлениями Windows 10](/DeployEdge/deploy-edge-with-windows-10-updates) | Добавлено |
+| 05.02.2021 | [Планирование перехода в режим терминала](/DeployEdge/microsoft-edge-kiosk-mode-transition-plan) | Добавлено |
 | 05.02.2021 | Набор инструментов Blocker Toolkit для отключения автоматической доставки Microsoft Edge | Удалено |
-| 05.02.2021 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security)<br>Обновление для системы безопасности вспомогательной версии 88.0.705.63 стабильного канала. Объявление о применении CVE на практике. | Изменено |
-| 05.02.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>Обновление для примечания о безопасности за 5 февраля 2021 г. | Изменено |
-| 05.02.2021 | [Планирование перехода в режим терминала](/DeployEdge/microsoft-edge-kiosk-mode-transition-plan)<br>Обновление для ясности. | Изменено |
-| 05.02.2021 | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode)<br>Обновление с добавлением новых сведений о функциях и таблицах, сравнивающих Microsoft Edge с устаревшей версией Microsoft Edge. | Изменено |
-| 05.02.2021 | [Откат Microsoft Edge для предприятий](/DeployEdge/edge-learnmore-rollback)<br>Добавление ссылки на страницу видео. | Изменено |
-| 05.02.2021 | [Защита от потери данных в Microsoft Edge](/DeployEdge/microsoft-edge-security-dlp)<br>Добавление ссылки на страницу видео. | Изменено |
-| 05.02.2021 | [Поддержка удостоверений и настройка Microsoft Edge](/DeployEdge/microsoft-edge-security-identity)<br>Добавление ссылки на страницу видео. | Изменено |
-| 05.02.2021 | [Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge](/DeployEdge/microsoft-edge-security-smartscreen)<br>Добавление ссылки на страницу видео. | Изменено |
-| 05.02.2021 | [Microsoft Edge и Application Guard в Microsoft Defender](/DeployEdge/microsoft-edge-security-windows-defender-application-guard)<br>Добавление ссылки на страницу видео. | Изменено |
-| 05.02.2021 | [Microsoft Edge и удостоверение](/DeployEdge/microsoft-edge-video-identity)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Средство чтения PDF-файлов корпоративного уровня в Microsoft Edge](/DeployEdge/microsoft-edge-video-pdf-reader)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Изоляция браузера Microsoft Edge с использованием Application Guard](/DeployEdge/microsoft-edge-video-security-application-guard)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Безопасность, совместимость и управляемость Microsoft Edge](/DeployEdge/microsoft-edge-video-security-compatibility-manageability)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Microsoft Edge и защита от потери данных](/DeployEdge/microsoft-edge-video-security-dlp)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Безопасный просмотр в Microsoft Edge](/DeployEdge/microsoft-edge-video-security-smartscreen)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Откат версии Microsoft Edge](/DeployEdge/microsoft-edge-video-version-rollback)<br>Добавление ссылки на статью. | Изменено |
-| 05.02.2021 | [Безопасность Microsoft Edge для вашего бизнеса](/DeployEdge/ms-edge-security-for-business)<br>Добавление ссылки на страницу видео. | Изменено |
+| 05.02.2021 | [Заметки о выпуске обновлений для системы безопасности Microsoft Edge](/DeployEdge/microsoft-edge-relnotes-security) | Изменено |
+| 05.02.2021 | [Заметки о выпуске Microsoft Edge для стабильного канала](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
+| 05.02.2021 | [Планирование перехода в режим терминала](/DeployEdge/microsoft-edge-kiosk-mode-transition-plan) | Изменено |
+| 05.02.2021 | [Настройка режима терминала в Microsoft Edge](/DeployEdge/microsoft-edge-configure-kiosk-mode) | Изменено |
+| 05.02.2021 | [Откат Microsoft Edge для предприятий](/DeployEdge/edge-learnmore-rollback) | Изменено |
+| 05.02.2021 | [Защита от потери данных в Microsoft Edge](/DeployEdge/microsoft-edge-security-dlp) | Изменено |
+| 05.02.2021 | [Поддержка удостоверений и настройка Microsoft Edge](/DeployEdge/microsoft-edge-security-identity) | Изменено |
+| 05.02.2021 | [Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge](/DeployEdge/microsoft-edge-security-smartscreen) | Изменено |
+| 05.02.2021 | [Microsoft Edge и Application Guard в Microsoft Defender](/DeployEdge/microsoft-edge-security-windows-defender-application-guard) | Изменено |
+| 05.02.2021 | [Microsoft Edge и удостоверение](/DeployEdge/microsoft-edge-video-identity) | Изменено |
+| 05.02.2021 | [Средство чтения PDF-файлов корпоративного уровня в Microsoft Edge](/DeployEdge/microsoft-edge-video-pdf-reader) | Изменено |
+| 05.02.2021 | [Изоляция браузера Microsoft Edge с использованием Application Guard](/DeployEdge/microsoft-edge-video-security-application-guard) | Изменено |
+| 05.02.2021 | [Безопасность, совместимость и управляемость Microsoft Edge](/DeployEdge/microsoft-edge-video-security-compatibility-manageability) | Изменено |
+| 05.02.2021 | [Microsoft Edge и защита от потери данных](/DeployEdge/microsoft-edge-video-security-dlp) | Изменено |
+| 05.02.2021 | [Безопасный просмотр в Microsoft Edge](/DeployEdge/microsoft-edge-video-security-smartscreen) | Изменено |
+| 05.02.2021 | [Откат версии Microsoft Edge](/DeployEdge/microsoft-edge-video-version-rollback) | Изменено |
+| 05.02.2021 | [Безопасность Microsoft Edge для вашего бизнеса](/DeployEdge/ms-edge-security-for-business) | Изменено |
 
 
 ## Неделя с 25 января 2021 г.
@@ -114,7 +134,7 @@ ms.locfileid: "11319252"
 |------|------------|--------|
 | 11.01.2021 | [Обновление содержимого по Microsoft Edge](/DeployEdge/microsoft-edge-content-updates) | Изменено |
 | 11.01.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
-| 13.01.2021 г. | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | Изменено |
+| 13.01.2021 | [Расписание выпусков Microsoft Edge](/DeployEdge/microsoft-edge-release-schedule) | Изменено |
 | 13.01.2021 | [Заметки о выпуске Microsoft Edge для канала Beta](/DeployEdge/microsoft-edge-relnote-beta-channel) | Изменено |
 | 13.01.2021 | [Заметки о выпуске Microsoft Edge для канала Stable](/DeployEdge/microsoft-edge-relnote-stable-channel) | Изменено |
 | 13.01.2021 | [Документация по Microsoft Edge Enterprise](/DeployEdge/index) | Изменено |
