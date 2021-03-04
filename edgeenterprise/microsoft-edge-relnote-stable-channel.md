@@ -3,21 +3,21 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/17/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: ff4364d48518b73c04d010a8a2c7e18abd10ba2e
-ms.sourcegitcommit: 8589a07ebd936070edb2eafa43b83cc6ef283a6e
+ms.openlocfilehash: 3eab05fcb88bcde38de8eb02b50796fcdda12866
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "11343842"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385007"
 ---
-# Заметки о выпуске для стабильного канала Microsoft Edge
+# <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
 Эти заметки о выпуске содержат сведения о новых компонентах и обновлениях, не связанных с безопасностью, которые включены в стабильный канал Microsoft Edge.
 
@@ -29,38 +29,43 @@ ms.locfileid: "11343842"
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 
-## Версия 88.0.705.74: 17 февраля
 
-Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021).
-
-## Версия 88.0.705.68: 11 февраля
+## <a name="version-88070581-february-25"></a>Версия 88.0.705.81: 25 февраля
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.63: 5 февраля
+## <a name="version-88070574-february-17"></a>Версия 88.0.705.74: 17 февраля
+
+Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021).
+
+## <a name="version-88070568-february-11"></a>Версия 88.0.705.68: 11 февраля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-88070563-february-5"></a>Версия 88.0.705.63: 5 февраля
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021). Это обновление содержит [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), указанное командой Chromium как имеющее эксплойты на практике.
 
-## Версия 88.0.705.62: 4 февраля
+## <a name="version-88070562-february-4"></a>Версия 88.0.705.62: 4 февраля
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021).
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.56: 28 января
+## <a name="version-88070556-january-28"></a>Версия 88.0.705.56: 28 января
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.53: 26 января
+## <a name="version-88070553-january-26"></a>Версия 88.0.705.53: 26 января
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.50: 21 января
+## <a name="version-88070550-january-21"></a>Версия 88.0.705.50: 21 января
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021).
 
 <!--- begin major 88  --->
-### Обновления компонентов
+### <a name="feature-updates"></a>Обновления компонентов
 
 - **Нерекомендуемые компоненты:**
 
@@ -112,9 +117,9 @@ ms.locfileid: "11343842"
   - Значки браузера обновляются в соответствии со системой проектирования Fluent Design. В рамках продолжающейся работы над Fluent Design в браузере мы внесли изменения, позволяющие точнее согласовать значки с новой системой значков Майкрософт. Эти изменения затронут многие из пользовательских интерфейсов с действиями, выполняемыми вручную, в том числе вкладки, адресную строку, а также значки навигации и поиска, которые можно найти в различных меню.
   - Улучшенное отображение шрифтов. Отрисовка текста улучшена для достижения большей четкости и уменьшения размытости.
 
-### Обновления политик
+### <a name="policy-updates"></a>Обновления политик
 
-#### Новые политики
+#### <a name="new-policies"></a>Новые политики
 
 Добавлено 18 новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики.
 
@@ -137,7 +142,7 @@ ms.locfileid: "11343842"
 - [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed)— включает мини веб-приложение.
 - [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup) — разрешает запускать мини веб-приложение при начальной загрузке Windows.
 
-#### Нерекомендуемые политики
+#### <a name="deprecated-policies"></a>Нерекомендуемые политики
 
 - [ProactiveAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proactiveauthenabled) — включает упреждающую проверку подлинности.
 - [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist) — настраивает правила обхода прокси-сервера.
@@ -146,7 +151,7 @@ ms.locfileid: "11343842"
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) — настраивает адрес или URL-адрес прокси-сервера.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) — разрешает WebDriver переопределять несовместимые политики.
 
-### Устаревшие политики
+### <a name="obsoleted-policies"></a>Устаревшие политики
 
 - [AllowPopupsDuringPageUnload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowpopupsduringpageunload) — позволяет странице показывать всплывающие окне во время ее выгрузки.
 - [DefaultPluginsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultpluginssetting)— настраивает Adobe Flash по умолчанию.
@@ -154,42 +159,42 @@ ms.locfileid: "11343842"
 - [PluginsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsblockedforurls)— блокирует подключаемый модуль Adobe Flash на определенных сайтах.
 - [RunAllFlashInAllowMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#runallflashinallowmode) — расширяет настройку содержимого Adobe Flash на все содержимое.
 <!--- end major 88  --->
-## Версия 87.0.664.75: 7 января
+## <a name="version-87066475-january-7"></a>Версия 87.0.664.75: 7 января
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021).
 
-## Версия 87.0.664.66: 17 декабря
+## <a name="version-87066466-december-17"></a>Версия 87.0.664.66: 17 декабря
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.60: 10 декабря
+## <a name="version-87066460-december-10"></a>Версия 87.0.664.60: 10 декабря
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.57: 7 декабря
+## <a name="version-87066457-december-7"></a>Версия 87.0.664.57: 7 декабря
 
 Исправлены ошибки и проблемы с производительностью. Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020).
 
-## Версия 87.0.664.55: 3 декабря
+## <a name="version-87066455-december-3"></a>Версия 87.0.664.55: 3 декабря
 
 Исправлены ошибки и проблемы с производительностью. Для этого выпуска был обновлен следующий компонент.
 
 - **Компонент "Покупки" включен по умолчанию**. Начиная с Microsoft Edge версии 87, корпоративные пользователи могут пользоваться функциями для покупок в Microsoft Edge. Функции для покупок позволяют пользователям Microsoft Edge при совершении покупок в сети находить купоны и выгодные цены. (Использование купонов появилось в версии 87.0.664.41 канала Stable). В этом обновлении доступна функция сравнения цен. Эту функцию можно настроить с помощью политики [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled). Ознакомьтесь с нашим [блогом](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) и [узнайте больше](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping) о компоненте "Покупки" (Майкрософт).
 
-## Версия 87.0.664.52: 30 ноября
+## <a name="version-87066452-november-30"></a>Версия 87.0.664.52: 30 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.47: 23 ноября
+## <a name="version-87066447-november-23"></a>Версия 87.0.664.47: 23 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
 <!-- begin major 87 --->
-## Версия 87.0.664.41: 19 ноября
+## <a name="version-87066441-november-19"></a>Версия 87.0.664.41: 19 ноября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020).
 
-### Обновления компонентов
+### <a name="feature-updates"></a>Обновления компонентов
 
 - **Автоматическое перенаправление несовместимых сайтов из Internet Explorer в Microsoft Edge**. С обновления Microsoft Edge 87 стабильного канала общедоступные веб-сайты, на которых отображается сообщение о несовместимости с Internet Explorer, будут автоматически перенаправляться в Microsoft Edge. Дополнительные сведения и инструкции по настройке этой возможности см. в статье [Перенаправление несовместимых сайтов](https://docs.microsoft.com/deployedge/edge-learnmore-neededge).
 
@@ -212,9 +217,9 @@ ms.locfileid: "11343842"
   - При печати на обеих сторонах выберите сторону, на которую вам необходимо перевернуть. При печати на обеих сторонах пользователь может перевернуть лист длинной стороной или короткой стороной.
   - Выбор режима растеризации печати для предприятия. Управление печатью Microsoft Edge на принтере без поддержки PostScript в Windows. Иногда для правильной печати на принтерах без поддержки PostScript необходимо правильно растеризовать задания для печати. Параметры печати — "Полная" и "Быстрая".
 
-### Обновления политик
+### <a name="policy-updates"></a>Обновления политик
 
-#### Новые политики
+#### <a name="new-policies"></a>Новые политики
 
 Добавлено десять новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики.
 
@@ -229,58 +234,58 @@ ms.locfileid: "11343842"
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) — настройка распознавания речи.
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) — включение функции захвата веб-страниц в Microsoft Edge.
 
-#### Политика устарела
+#### <a name="deprecated-policy"></a>Политика устарела
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) — Настройка взаимодействия с новой вкладкой Microsoft Edge.
 
-#### Устаревшая политика
+#### <a name="obsoleted-policy"></a>Устаревшая политика
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) — повторное включение устаревших функций веб-платформы на ограниченное время.
 
 <!-- end major 87 -->
 
-## Версия 86.0.622.69: 13 ноября
+## <a name="version-86062269-november-13"></a>Версия 86.0.622.69: 13 ноября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020). Это обновление содержит [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) и [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), указанные командой Chromium как имеющие эксплойты на практике.
 
-## Версия 86.0.622.68: 11 ноября
+## <a name="version-86062268-november-11"></a>Версия 86.0.622.68: 11 ноября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)
 
-## Версия 86.0.622.63: 4 ноября
+## <a name="version-86062263-november-4"></a>Версия 86.0.622.63: 4 ноября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020). Это обновление содержит [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), указанное командой Chromium как имеющее эксплойт на практике.
 
-## Версия 86.0.622.61: 2 ноября
+## <a name="version-86062261-november-2"></a>Версия 86.0.622.61: 2 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.58: 29 октября
+## <a name="version-86062258-october-29"></a>Версия 86.0.622.58: 29 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.56: 27 октября
+## <a name="version-86062256-october-27"></a>Версия 86.0.622.56: 27 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.51: 22 октября
+## <a name="version-86062251-october-22"></a>Версия 86.0.622.51: 22 октября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)
 
-## Версия 86.0.622.48: 20 октября
+## <a name="version-86062248-october-20"></a>Версия 86.0.622.48: 20 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.43: 15 октября
+## <a name="version-86062243-october-15"></a>Версия 86.0.622.43: 15 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
 <!-- begin major 86 -->
-## Версия 86.0.622.38: 9 октября
+## <a name="version-86062238-october-9"></a>Версия 86.0.622.38: 9 октября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)
 
-### Обновления компонентов
+### <a name="feature-updates"></a>Обновления компонентов
 
 * **Откат к предыдущей версии Microsoft Edge.** Функция отката позволяет администраторам вернуть известную хорошую версию Microsoft Edge, если у вас возникла проблема с последней версией Microsoft Edge. **Примечание.** Стабильная версия 86.0.622.38 — это первая версия, к которой можно выполнить откат. Это означает, что стабильная версия 87 — это первая версия, с которой можно выполнить откат. [Подробнее](edge-learnmore-rollback.md).
 
@@ -315,9 +320,9 @@ ms.locfileid: "11343842"
 
 * **Удаление загрузки с диска с помощью диспетчера загрузок.** Пользователи теперь могут удалять загруженные файлы с диска, не выходя из браузера. Новая функция удаления загрузок находится в контекстном меню панели загрузок или на странице загрузок.
 
-### Обновления политик
+### <a name="policy-updates"></a>Обновления политик
 
-#### Новые политики
+#### <a name="new-policies"></a>Новые политики
 
 Добавлены двадцать три новые политики. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise). Добавлены следующие новые политики.
 
@@ -345,38 +350,38 @@ ms.locfileid: "11343842"
 - [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) — включение функции клиентских подсказок User-Agent.
 - [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit) — ограничение количества снимков пользовательских данных, сохраняемых для применения в случае аварийного отката.
 
-#### Устаревшие политики
+#### <a name="deprecated-policies"></a>Устаревшие политики
 
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) — включить отчеты с данными об использовании и сбоях.
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) — отправка сведений о сайтах для улучшения служб Майкрософт.
 
-#### Устаревшая политика
+#### <a name="obsoleted-policy"></a>Устаревшая политика
 
 [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) — включение функции безопасности TLS 1.3 для местных якорей доверия.
 
-## Версия 85.0.564.70: 6 октября
+## <a name="version-85056470-october-6"></a>Версия 85.0.564.70: 6 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 85.0.564.68: 1 октября
+## <a name="version-85056468-october-1"></a>Версия 85.0.564.68: 1 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 85.0.564.63: 23 сентября
+## <a name="version-85056463-september-23"></a>Версия 85.0.564.63: 23 сентября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)
 
-## Версия 85.0.564.51: 9 сентября
+## <a name="version-85056451-september-9"></a>Версия 85.0.564.51: 9 сентября
 
 Список обновлений системы безопасности находится [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)
 
-## Версия 85.0.564.44: 31 августа
+## <a name="version-85056444-august-31"></a>Версия 85.0.564.44: 31 августа
 
 Исправлены ошибки и проблемы с производительностью.
 
 <!-- 85.0.564.41: August 27 -->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

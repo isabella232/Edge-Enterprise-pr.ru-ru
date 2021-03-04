@@ -3,35 +3,47 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/12/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
-ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
+ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
+ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "11328071"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385623"
 ---
-# Заметки о выпуске для Microsoft Edge из канала Beta
+# <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
 Эти заметки о выпуске содержат сведения о новых возможностях и обновлениях, не связанных с безопасностью, которые включены Microsoft Edge канала Beta Архивные версии этих заметок о выпуске доступны [здесь](microsoft-edge-relnote-archive-beta-channel.md).
 
-## Версия 89.0.774.27: 12 февраля
+## <a name="version-89077445-march-3"></a>Версия 89.0.774.45: 3 марта
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 89.0.774.23: 8 февраля
+## <a name="version-89077439-february-26"></a>Версия 89.0.774.39: 26 февраля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-89077434-february-22"></a>Версия 89.0.774.34: 22 февраля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-89077427-february-12"></a>Версия 89.0.774.27: 12 февраля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-89077423-february-8"></a>Версия 89.0.774.23: 8 февраля
 
 Исправлены ошибки и проблемы с производительностью.
 <!-- begin major 89 -->
-## Версия 89.0.774.18: 3 февраля
+## <a name="version-89077418-february-3"></a>Версия 89.0.774.18: 3 февраля
 
-### Обновления компонентов
+### <a name="feature-updates"></a>Обновления компонентов
 
 - **Режим терминала включает дополнительные возможности блокировки.** Начиная с Microsoft Edge версии 89, мы добавили дополнительные возможности блокировки в режиме терминала, чтобы пользователи могли работать эффективно и безопасно. [Подробнее](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
@@ -59,9 +71,9 @@ ms.locfileid: "11328071"
 
 - **Поддержка блокировки автоматического воспроизведения видео**. Начиная с Microsoft Edge версии 89, пользователи смогут блокировать автоматическое воспроизведение мультимедиа.
 
-### Обновления политик
+### <a name="policy-updates"></a>Обновления политик
 
-#### Новые политики
+#### <a name="new-policies"></a>Новые политики
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime) — параметры времени существования данных браузера
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) — управление мобильными приложениями включено
@@ -71,37 +83,37 @@ ms.locfileid: "11328071"
 - [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault)— режим печати фона по умолчанию
 - [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist) — блокировка интеллектуальных действий для списка служб
 
-#### Устаревшие политики
+#### <a name="obsoleted-policies"></a>Устаревшие политики
 
 - [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy) — использование политики ссылок по умолчанию для no-referrer-when-downgrade
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) — включение отчетов с данными об использовании и сбоях
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices)| — отправка сведений о сайтах для улучшения служб Майкрософт
 <!-- end major 89 -->
 
-## Версия 88.0.705.56: 29 января
+## <a name="version-88070556-january-29"></a>Версия 88.0.705.56: 29 января
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.49: 20 января
+## <a name="version-88070549-january-20"></a>Версия 88.0.705.49: 20 января
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.45: 15 января
+## <a name="version-88070545-january-15"></a>Версия 88.0.705.45: 15 января
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.41: 11 января
+## <a name="version-88070541-january-11"></a>Версия 88.0.705.41: 11 января
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 88.0.705.29: 21 декабря
+## <a name="version-88070529-december-21"></a>Версия 88.0.705.29: 21 декабря
 
 Исправлены ошибки и проблемы с производительностью.
 
 <!-- begin major 88 -->
-## Версия 88.0.705.18: 9 декабря
+## <a name="version-88070518-december-9"></a>Версия 88.0.705.18: 9 декабря
 
-### Обновления компонентов
+### <a name="feature-updates"></a>Обновления компонентов
 
 - **Нерекомендуемые компоненты:**
 
@@ -146,9 +158,9 @@ ms.locfileid: "11328071"
   - Значки браузера обновляются в соответствии со системой проектирования Fluent Design. В рамках продолжающейся работы над Fluent Design в браузере мы внесли изменения, позволяющие точнее согласовать значки с новой системой значков Майкрософт. Эти изменения затронут многие из пользовательских интерфейсов с действиями, выполняемыми вручную, в том числе вкладки, адресную строку, а также значки навигации и поиска, которые можно найти в различных меню.
   - Улучшенное отображение шрифтов. Отрисовка текста улучшена для достижения большей четкости и уменьшения размытости.
 
-### Обновления политик
+### <a name="policy-updates"></a>Обновления политик
 
-#### Новые политики
+#### <a name="new-policies"></a>Новые политики
 
 Добавлено шестнадцать новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики.
 
@@ -167,7 +179,7 @@ ms.locfileid: "11328071"
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) — настраивает доступность вертикального макета для вкладок в боковой части окна браузера.
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) — разрешает переход на устаревшую версию TLS/DTLS в WebRTC.
 
-#### Нерекомендуемые политики
+#### <a name="deprecated-policies"></a>Нерекомендуемые политики
 
 Ниже приводятся нерекомендуемые политики.
 
@@ -178,7 +190,7 @@ ms.locfileid: "11328071"
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) — настраивает адрес или URL-адрес прокси-сервера.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) — разрешает WebDriver переопределять несовместимые политики.
 
-#### Устаревшие политики
+#### <a name="obsoleted-policies"></a>Устаревшие политики
 
 Ниже приводятся устаревшие политики.
 
@@ -189,40 +201,40 @@ ms.locfileid: "11328071"
 
 <!-- end major 88 -->
 
-## Версия 87.0.664.55: 3 декабря
+## <a name="version-87066455-december-3"></a>Версия 87.0.664.55: 3 декабря
 
 Исправлены ошибки и проблемы с производительностью. В этом выпуске поддерживается следующая новая функция.
 
 - **Оповещения создаются в том случае, если пароль пользователя обнаружен среди украденных данных в Интернете**. Пароли пользователей сверяются с репозиторием известных украденных учетных данных, а пользователю отправляется оповещение при обнаружении совпадения. Для обеспечения безопасности и конфиденциальности пароли пользователей хэшируются и шифруются, когда они сверяются с базой данных украденных учетных данных.
 
-## Версия 87.0.664.52: 30 ноября
+## <a name="version-87066452-november-30"></a>Версия 87.0.664.52: 30 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.40: 18 ноября
+## <a name="version-87066440-november-18"></a>Версия 87.0.664.40: 18 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.36: 16 ноября
+## <a name="version-87066436-november-16"></a>Версия 87.0.664.36: 16 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.30: 9 ноября
+## <a name="version-87066430-november-9"></a>Версия 87.0.664.30: 9 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.24: 2 ноября
+## <a name="version-87066424-november-2"></a>Версия 87.0.664.24: 2 ноября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 87.0.664.18: 26 октября
+## <a name="version-87066418-october-26"></a>Версия 87.0.664.18: 26 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
 <!-- begin major 87 -->
-## Версия 87.0.664.12: 20 октября
+## <a name="version-87066412-october-20"></a>Версия 87.0.664.12: 20 октября
 
-### Обновления компонентов
+### <a name="feature-updates"></a>Обновления компонентов
 
 - **Включение средств конфиденциальности режима терминала**. В версии 87 и в дальнейших версиях Microsoft Edge в режиме терминала появляются средства, которые помогут компаниям обеспечивать конфиденциальность пользовательских данных. Благодаря этим функциям включаются такие возможности, как удаление пользовательских данных при выходе, удаление загруженных файлов и сброс настроенной начальной даты возможности после указанного периода бездействия. Подробнее о [Настройке режима терминала Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode).
 - **Включение развертывания ClickOnce по умолчанию**. ClickOnce в Microsoft Edge 87 включен по умолчанию, что позволяет снизить количество барьеров для развертывания организациями программного обеспечения и более эффективного согласования поведения устаревшей версии браузера Microsoft Edge. Начиная с Microsoft Edge 87 состояние "Не настроено" политики ClickOnceEnabled отражает новое состояние ClickOnce по умолчанию "Включено" (по сравнению с предыдущим состоянием по умолчанию "Отключено").
@@ -239,9 +251,9 @@ ms.locfileid: "11328071"
   - При печати на обеих сторонах выберите сторону, на которую вам необходимо перевернуть. При печати на обеих сторонах пользователь может перевернуть лист длинной стороной или короткой стороной.
   - Выбор режима растеризации печати для предприятия. Управление печатью Microsoft Edge на принтере без поддержки PostScript в Windows. Иногда для правильной печати на принтерах без поддержки PostScript необходимо правильно растеризовать задания для печати. Параметры печати — "Полная" и "Быстрая".
 
-### Обновления политик
+### <a name="policy-updates"></a>Обновления политик
 
-#### Новые политики
+#### <a name="new-policies"></a>Новые политики
 
 Добавлено десять новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики.
 
@@ -256,39 +268,39 @@ ms.locfileid: "11328071"
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) — Настройка распознавания речи.
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Включение функции захвата веб-страниц в Microsoft Edge.
 
-#### Политика устарела
+#### <a name="deprecated-policy"></a>Политика устарела
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) — Настройка взаимодействия с новой вкладкой Microsoft Edge.
 
-#### Устаревшая политика
+#### <a name="obsoleted-policy"></a>Устаревшая политика
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) — Повторное включение устаревших функций веб-платформы на ограниченное время (устарело).
 
 <!-- end major 87 -->
 
-## Версия 86.0.622.43: 16 октября
+## <a name="version-86062243-october-16"></a>Версия 86.0.622.43: 16 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.36: 7 октября
+## <a name="version-86062236-october-7"></a>Версия 86.0.622.36: 7 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.31: 1 октября
+## <a name="version-86062231-october-1"></a>Версия 86.0.622.31: 1 октября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.28: 28 сентября
+## <a name="version-86062228-september-28"></a>Версия 86.0.622.28: 28 сентября
 
 Исправлены ошибки и проблемы с производительностью.
 
-## Версия 86.0.622.15: 14 сентября
+## <a name="version-86062215-september-14"></a>Версия 86.0.622.15: 14 сентября
 
 Исправлены ошибки и проблемы с производительностью.
 
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
