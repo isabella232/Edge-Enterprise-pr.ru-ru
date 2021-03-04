@@ -1,4 +1,4 @@
-# last revised 02/05/2021
+# last revised 03/02/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -31,11 +31,11 @@
       href: deploy-edge-ready-for-edge.md
     - name: Заметки о выпуске стабильного канала
       href: microsoft-edge-relnote-stable-channel.md
-    - name: Заметки о выпуске из архива канала Stable
+    - name: Заметки об архивном выпуске stable Channel
       href: microsoft-edge-relnote-archive-stable-channel.md
     - name: Заметки о выпуске канала Beta
       href: microsoft-edge-relnote-beta-channel.md
-    - name: Заметки о выпуске с архиваной версией канала Beta
+    - name: Примечания к выпуску архивного выпуска бета-канала
       href: microsoft-edge-relnote-archive-beta-channel.md
     - name: Расписание выпусков
       href: microsoft-edge-release-schedule.md
@@ -113,6 +113,8 @@
           href: edge-ie-mode-sitelist.md
         - name: Настройка политик для режима IE
           href: edge-ie-mode-policies.md
+        - name: Отключение Internet Explorer 11
+          href: edge-ie-disable-ie11.md
         - name: Пошаговое руководство по Enterprise Site Discovery
           href: edge-ie-mode-site-discovery.md
         - name: Вопросы и ответы о режиме IE
@@ -157,11 +159,11 @@
       href: microsoft-edge-policies.md
     - name: Справочник по политикам обновления
       href: microsoft-edge-update-policies.md
-    - name: Справочник по политике WebView2
+    - name: Ссылка на политику WebView2
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
-        - name: Обратная совместимость для новой корпоративной вкладки
+        - name: Обратная совместимость для страницы вкладок Enterprise New
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
@@ -187,27 +189,27 @@
           href: edge-learnmore-reset-data-in-cloud.md
         - name: Переменные каталога данных пользователя
           href: edge-learnmore-create-user-directory-vars.md
-        - name: Откат Microsoft Edge для предприятий
+        - name: Использование отката Microsoft Edge для предприятий
           href: edge-learnmore-rollback.md
-- name: Видео о Microsoft Edge
+- name: Microsoft Edge Videos
   items:
     - name: Коллекция видео Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: Видео - Microsoft Edge — состояние браузера 2020
+    - name: Видео — Microsoft Edge — состояние браузера 2020
       href: microsoft-edge-video-state-of-browser.md
-    - name: Видео - изоляция браузера с помощью Application Guard
+    - name: Видео - изоляция браузера с помощью application Guard
       href: microsoft-edge-video-security-application-guard.md
     - name: Видео — развертывание Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: 'Видео : предотвращение потери данных (DLP)'
+    - name: Видео - предотвращение потери данных (DLP)
       href: microsoft-edge-video-security-dlp.md
     - name: Видео — удостоверение в Microsoft Edge
       href: microsoft-edge-video-identity.md
-    - name: Видео откат версии Microsoft Edge
+    - name: Видео - откат версии Microsoft Edge
       href: microsoft-edge-video-version-rollback.md
-    - name: Видео — pdf-читатель в Microsoft Edge
+    - name: Видео — считыватель PDF в Microsoft Edge
       href: microsoft-edge-video-pdf-reader.md
-    - name: 'Видео : безопасный просмотр в Microsoft Edge'
+    - name: Видео — безопасный просмотр в Microsoft Edge
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Видео: безопасность, совместимость и управляемость'
       href: microsoft-edge-video-security-compatibility-manageability.md
