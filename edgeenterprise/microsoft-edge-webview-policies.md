@@ -3,7 +3,7 @@ title: Документация по политикам Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,24 +11,23 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 2e3258a0427a7fb280023ddc1518f12869f9c791
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340589"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388736"
 ---
-# Политики Microsoft Edge WebView2
+# <a name="microsoft-edge-webview2---policies"></a>Политики Microsoft Edge WebView2
 
 Последняя версия Microsoft Edge WebView2 включает в себя следующие политики. Эти политики можно использовать для настройки работы Microsoft Edge WebView2 в вашей организации.
 
 Информацию о дополнительном наборе политик, используемых для управления тем, как и когда обновляется Microsoft Edge WebView2, можно найти в [справочнике по политике обновления Microsoft Edge](microsoft-edge-update-policies.md).
 
-
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 87 или более поздней.
 
-## Доступные политики
+## <a name="available-policies"></a>Доступные политики
 
 В этих таблицах перечислены все групповые политики, доступные в этом выпуске Microsoft Edge WebView2. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
 
@@ -36,7 +35,7 @@ ms.locfileid: "11340589"
 |-|-|
 |[Параметры переопределения загрузчика](#loader-override-settings)|
 
-### [*Параметры переопределения загрузчика*](#loader-override-settings-policies)
+### [*<a name="loader-override-settings"></a>Параметры переопределения загрузчика*](#loader-override-settings-policies)
 
 |Имя политики|Заголовок|
 |-|-|
@@ -46,39 +45,39 @@ ms.locfileid: "11340589"
 
 
 
-  ## Политики "Параметры переопределения загрузчика"
+  ## <a name="loader-override-settings-policies"></a>Политики "Параметры переопределения загрузчика"
 
   [В начало](#microsoft-edge-webview2---policies)
 
-  ### BrowserExecutableFolder
+  ### <a name="browserexecutablefolder"></a>BrowserExecutableFolder
 
-  #### Настройка расположения папки исполняемого файла браузера
+  #### <a name="configure-the-location-of-the-browser-executable-folder"></a>Настройка расположения папки исполняемого файла браузера
 
   
   
-  #### Поддерживаемые версии:
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
 
   - В Windows 87 и более поздних версий
 
-  #### Описание
+  #### <a name="description"></a>Описание
 
   Эта политика настраивает приложения WebView2, чтобы использовать среду выполнения WebView2 по указанному пути. Папка должна содержать следующие файлы: msedgewebview2.exe, msedge.dll и т. д.
 
 Чтобы задать значение для пути к папке, предоставьте имя и пару значения. Задайте имя значения для идентификатора пользовательской модели приложения или имя исполняемого файла. Вы можете использовать подстановочный знак "*" в качестве имени значения для применения ко всем приложениям.
 
-  #### Поддерживаемые функции:
+  #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
   - Может быть рекомендовано: Нет
   - Обновление динамической политики: Да
 
-  #### Тип данных:
+  #### <a name="data-type"></a>Тип данных:
 
   - Список строк
 
-  #### Сведения и параметры Windows
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
 
-  ##### Сведения о групповой политике (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: BrowserExecutableFolder
   - Имя групповой политики: Настройка расположения папки исполняемого файла браузера
@@ -86,14 +85,14 @@ ms.locfileid: "11340589"
   - Путь GP (рекомендуется): N/A
   - Имя ADMX-файла групповой политики: MSEdgeWebView2.admx
 
-  ##### Параметры реестра Windows
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - Путь (рекомендуется): N/A
   - Имя значения: список REG_SZ
   - Тип значения: список REG_SZ
 
-  ##### Пример значения:
+  ##### <a name="example-value"></a>Пример значения:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
@@ -104,17 +103,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   [В начало](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+  ### <a name="releasechannelpreference"></a>ReleaseChannelPreference
 
-  #### Настройка предпочитаемого порядка поиска каналов выпуска
+  #### <a name="set-the-release-channel-search-order-preference"></a>Настройка предпочитаемого порядка поиска каналов выпуска
 
   
   
-  #### Поддерживаемые версии:
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
 
   - В Windows 87 и более поздних версий
 
-  #### Описание
+  #### <a name="description"></a>Описание
 
   Порядок поиска каналов по умолчанию — среда выполнения WebView2, Beta, Dev и Canary.
 
@@ -122,19 +121,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
 Чтобы задать значение для предпочитаемого канала выпуска, предоставьте имя и пару значения. Задайте имя значения для идентификатора пользовательской модели приложения или имя исполняемого файла. Вы можете использовать подстановочный знак "*" в качестве имени значения для применения ко всем приложениям.
 
-  #### Поддерживаемые функции:
+  #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
   - Может быть рекомендовано: Нет
   - Обновление динамической политики: Да
 
-  #### Тип данных:
+  #### <a name="data-type"></a>Тип данных:
 
   - Список строк
 
-  #### Сведения и параметры Windows
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
 
-  ##### Сведения о групповой политике (ADMX)
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: ReleaseChannelPreference
   - Имя групповой политики: Настройка предпочитаемого порядка поиска каналов выпуска
@@ -142,14 +141,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
   - Путь GP (рекомендуется): N/A
   - Имя ADMX-файла групповой политики: MSEdgeWebView2.admx
 
-  ##### Параметры реестра Windows
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - Путь (рекомендуется): N/A
   - Имя значения: список REG_SZ
   - Тип значения: список REG_SZ
 
-  ##### Пример значения:
+  ##### <a name="example-value"></a>Пример значения:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
@@ -161,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [В начало](#microsoft-edge-webview2---policies)
 
 
-## Статьи по теме
+## <a name="see-also"></a>См. также
 
 - [Настройка Microsoft Edge](configure-microsoft-edge.md)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

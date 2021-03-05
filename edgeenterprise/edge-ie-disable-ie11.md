@@ -3,19 +3,19 @@ title: Отключение Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как отключить Internet Explorer 11 и использовать режим Internet Explorer в Microsoft Edge.
-ms.openlocfilehash: 08d1fe48bfc4614710f4a341a285048194a64794
-ms.sourcegitcommit: 928714329d0b11575494f557498f69a8417a3289
+ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385345"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393613"
 ---
 # <a name="disable-internet-explorer-11"></a>Отключение Internet Explorer 11
 
@@ -67,7 +67,7 @@ ms.locfileid: "11385345"
 
 Чтобы отключить Internet Explorer 11 с помощью групповой политики, выполните следующие действия.
 
-1. Скачайте и установите последний  [шаблон политики Microsoft Edge](https://www.microsoft.com/en-us/business/download).
+1. Скачайте и установите последний  [шаблон политики Microsoft Edge](https://www.microsoft.com/edge/business/download).
 2. Откройте редактор групповых политик.
 3. Выберите ***Конфигурация компьютера/Административные шаблоны/Компоненты Windows/Internet Explorer***. 
 4. Дважды щелкните  **Отключить Internet Explorer 11 в качестве автономного браузера**.
