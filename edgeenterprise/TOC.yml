@@ -1,10 +1,8 @@
-# last revised 03/02/2021
+# last revised 03/08/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
   href: 'https://docs.microsoft.com/microsoft-edge/'
-- name: Обновление содержимого Microsoft Edge
-  href: microsoft-edge-content-updates.md
 - name: Начало работы с Microsoft Edge
   items:
     - name: Сведения о каналах Microsoft Edge
@@ -97,8 +95,14 @@
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Настройка режима терминала в Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Функция синхронизации Microsoft Edge
-      href: microsoft-edge-enterprise-sync.md
+    - name: Синхронизация предприятий Microsoft Edge
+      items:
+        - name: Настройка синхронизации Microsoft Edge
+          href: microsoft-edge-enterprise-sync.md
+        - name: Диагностика и устранение проблем синхронизации Microsoft Edge
+          href: microsoft-edge-troubleshoot-enterprise-sync.md
+        - name: Синхронизация faQ
+          href: microsoft-edge-enterprise-sync-faq.md
     - name: Локальная синхронизация для пользователей Active Directory
       href: microsoft-edge-on-premises-sync.md
     - name: Средство чтения PDF в Microsoft Edge
