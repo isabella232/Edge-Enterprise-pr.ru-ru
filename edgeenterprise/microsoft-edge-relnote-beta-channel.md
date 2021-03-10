@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: e5096d437f8b70ed94add8341db1cdb1d4b69b84
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 53e9963881d59cacb49e772ccec7a29adf69365a
+ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393628"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400172"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,10 @@ ms.locfileid: "11393628"
 
 > [!NOTE]
 > Мы обновили заметку о выпуске [версии 89.0.774.18 от 3 февраля](#version-89077418-february-3) канала Microsoft Edge Beta, чтобы указать выпущенные функции.
+
+## <a name="version-89077448-march-8"></a>Версия 89.0.774.48: 8 марта
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-89077445-march-3"></a>Версия 89.0.774.45: 3 марта
 
