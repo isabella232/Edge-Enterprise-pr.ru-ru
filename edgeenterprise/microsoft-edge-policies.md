@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388725"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406380"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Политики
 
@@ -29,29 +29,36 @@ ms.locfileid: "11388725"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-## <a name="new-policies"></a>Новые политики
+## <a name="new-and-deprecated-policies"></a>Новые и устаревшие политики
 
-В следующей таблице перечислены новые политики для этого обновления.
+В таблице ниже перечислены новые и устаревшие политики для этого обновления.
 
-| Имя | Заголовок |
+|Имя|Заголовок|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|Режим растеризации печати|
+|[SSLVersionMin](#sslversionmin)|Включена минимальная версия TLS (не рекомендуется)|
 
 ## <a name="available-policies"></a>Доступные политики
 
 В этих таблицах перечислены все связанные с браузером групповые политики, доступные в этом выпуске Microsoft Edge. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
 
-|||
-|-|-|
-|[Параметры Application Guard](#application-guard-settings)|[Передавать](#cast)|
-|[Настройки контента](#content-settings)|[Поставщик поиска по умолчанию](#default-search-provider)|
-|[Расширения](#extensions)|[Проверка подлинности HTTP](#http-authentication)|
-|[Параметры режима полного экрана](#kiosk-mode-settings)|[Управляемость](#manageability)|
-|[Встроенные сообщения](#native-messaging)|[Менеджер паролей и защита](#password-manager-and-protection)|
-|[Производительность](#performance)|[Вывод на печать](#printing)|
-|[Прокси-сервер](#proxy-server)|[Параметры вкладки для сна](#sleeping-tabs-settings)|
-|[Параметры SmartScreen](#smartscreen-settings)|[Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)|
-|[Дополнительно](#additional)|
+- [Параметры Application Guard](#application-guard-settings)
+- [Передавать](#cast)
+- [Настройки контента](#content-settings)
+- [Поставщик поиска по умолчанию](#default-search-provider)
+- [Расширения](#extensions)
+- [Проверка подлинности HTTP](#http-authentication)
+- [Параметры режима полного экрана](#kiosk-mode-settings)
+- [Управляемость](#manageability)
+- [Встроенные сообщения](#native-messaging)
+- [Менеджер паролей и защита](#password-manager-and-protection)
+- [Производительность](#performance)
+- [Вывод на печать](#printing)
+- [Прокси-сервер](#proxy-server)
+- [Параметры вкладки для сна](#sleeping-tabs-settings)
+- [Параметры SmartScreen](#smartscreen-settings)
+- [Автозагрузка, домашняя страница и новая вкладка](#startup-home-page-and-new-tab-page)
+- [Дополнительно](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Параметры Application Guard*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ ms.locfileid: "11388725"
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Применить параметр содержимого Adobe Flash ко всему содержимому (устарело)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|Разрешить пользователям продолжать работу со страницы предупреждения HTTPS|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|Разрешить пользователям продолжать работу со страницы предупреждения HTTPS для определенных источников|
-|[SSLVersionMin](#sslversionmin)|Минимальная версия TLS включена|
+|[SSLVersionMin](#sslversionmin)|Включена минимальная версия TLS (не рекомендуется)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Сохранять файлы cookie при закрытии Microsoft Edge|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|Отключить сохранение истории браузера|
 |[ScreenCaptureAllowed](#screencaptureallowed)|Разрешить или запретить захват экрана|
@@ -1893,9 +1900,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 В случае отсутствия настройки этой политики ко всем сайтам применяется политика [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting), если она задана. В противном случае применяются личные параметры пользователей.
 
-Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -1962,9 +1969,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 Если не настроить эту политику, ко всем сайтам применяется политика [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting) (если она задана). В противном случае применяются личные параметры пользователей.
 
-Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadAskForUrls](#filesystemreadaskforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadAskForUrls](#filesystemreadaskforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2031,9 +2038,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 Если не настроить эту политику, ко всем сайтам применяется политика [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) (если она задана). В противном случае применяются личные параметры пользователей.
 
-Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2100,9 +2107,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 Если не настроить эту политику, ко всем сайтам применяется политика [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting) (если она задана). В противном случае применяются личные параметры пользователей.
 
-Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Никакая политика не получает приоритет, если URL-адрес соответствует обеим политикам.
+Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2169,6 +2176,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Если вы не настроите эту политику, глобальное значение по умолчанию будет использоваться для всех сайтов либо из политики [DefaultImagesSetting](#defaultimagessetting) (если установлена), либо из личной конфигурации пользователя.
 
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
@@ -2234,6 +2243,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultImagesSetting](#defaultimagessetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
@@ -2297,7 +2308,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   Создайте список шаблонов URL-адресов, чтобы указать сайты, которые могут отображать небезопасное смешанное содержимое (то есть содержимое HTTP на сайтах HTTPS).
 
-Если вы не настроите эту политику, блокируемый смешанный контент будет заблокирован, а необязательно блокируемый смешанный контент будет обновлен. Однако пользователям будет разрешено устанавливать исключения, чтобы разрешить небезопасный смешанный контент для определенных сайтов.
+Если вы не настроите эту политику, блокируемый смешанный контент будет заблокирован, а необязательно блокируемый смешанный контент будет обновлен. Однако пользователям будет разрешено задать исключения, чтобы разрешить небезопасный смешанный контент для определенных сайтов.
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2362,7 +2375,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
   Создайте список шаблонов URL-адресов, чтобы указать сайты, которым не разрешено отображать блокируемое (то есть активное) смешанное содержимое (то есть содержимое HTTP на сайтах HTTPS) и для которых необязательно блокируемые обновления смешанного содержимого будут отключены.
 
-Если вы не настроите эту политику, блокируемый смешанный контент будет заблокирован, а необязательно блокируемый смешанный контент будет обновлен. Однако пользователям будет разрешено устанавливать исключения, чтобы разрешить небезопасный смешанный контент для определенных сайтов.
+Если вы не настроите эту политику, блокируемый смешанный контент будет заблокирован, а необязательно блокируемый смешанный контент будет обновлен. Однако пользователям будет разрешено задать исключения, чтобы разрешить небезопасный смешанный контент для определенных сайтов.
+
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -9129,7 +9144,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   #### <a name="description"></a>Описание
 
-  Эта политика не рекомендуется, так как она предусмотрена только в качестве краткосрочного механизма, предоставляющего организациям больше времени на обновление веб-содержимого, если и при условии, что оно не совместимо с изменением, чтобы предотвратить отправку синхронных запросов XHR при удалении страницы. Она не будет работать в Microsoft Edge версии 88.
+  Эта политика не рекомендуется, так как она предусмотрена только в качестве краткосрочного механизма, предоставляющего организациям больше времени на обновление веб-содержимого, если и при условии, что оно не совместимо с изменением, чтобы предотвратить отправку синхронных запросов XHR при удалении страницы. Она не работает в Microsoft Edge версии 93.
 
 Эта политика позволяет указать, что страница может отправлять синхронные XHR-запросы во время удаления страницы.
 
@@ -11052,7 +11067,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
 Если отключить эту политику, встроенный DNS-клиент будет использоваться только при применении DNS поверх HTTPS.
 
-Если вы не настроили эту политику, встроенный DNS-клиент включен по умолчанию.
+Если эта политика не настроена, встроенный клиент DNS включается по умолчанию в macOS и Android (если не включена частная зона DNS или сеть VPN).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -11112,7 +11127,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   Эта политика устарела, так как она предназначена для использования только в качестве краткосрочного механизма, чтобы предоставить предприятиям больше времени для обновления своих сред и сообщения о проблемах, если они окажутся несовместимы со встроенным средством проверки сертификатов.
 
-Она не будет работать в Microsoft Edge версии 87 при планируемом удалении устаревшего средства проверки сертификатов в Mac OS X.
+Она не будет работать в Microsoft Edge версии 92, когда по плану будет удалена поддержка устаревшего средства проверки сертификатов в Mac OS X.
 
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
@@ -19284,9 +19299,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>Минимальная версия TLS включена
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>Включена минимальная версия TLS (не рекомендуется)
 
-  
+  >НЕ РЕКОМЕНДУЕТСЯ: Эта политика не рекомендуется. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
@@ -19294,7 +19309,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>Описание
 
-  Устанавливает минимальную поддерживаемую версию TLS. Если не настроить эту политику, в Microsoft Edge будет отображаться сообщение об ошибке TLS 1.0 и TLS 1.1, но пользователь сможет пропустить его.
+  Поддержка подавления предупреждения TLS 1.0/1.1 будет удалена из Microsoft Edge, начиная с версии 91 (примерно в мае 2021 г.). Тогда эта политика перестанет работать.
+
+Устанавливает минимальную поддерживаемую версию TLS. Если не настроить эту политику, в Microsoft Edge будет отображаться сообщение об ошибке TLS 1.0 и TLS 1.1, но пользователь сможет пропустить его.
 
 Если установлено, Microsoft Edge не будет использовать любую версию SSL/TLS ниже указанной версии. Любое нераспознанное значение игнорируется.
 
@@ -19323,8 +19340,8 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: SSLVersionMin
-  - Имя GP: Включена минимальная версия TLS
-  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
+  - Имя GP. Включена минимальная версия TLS (не рекомендуется)
+  - Путь к GP (обязательный): Administrative Templates/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 

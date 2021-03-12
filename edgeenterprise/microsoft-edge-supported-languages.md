@@ -1,25 +1,25 @@
 ---
-title: Поддерживаемые языки в Microsoft Edge
+title: Поддержка языков в Microsoft Edge
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Поддерживаемые языки в Microsoft Edge
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Поддержка языков интерфейса Microsoft Edge для Windows и macOS.
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384997"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406164"
 ---
-# <a name="microsoft-edge-language-support"></a>Поддерживаемые языки в Microsoft Edge
+# <a name="microsoft-edge-language-support"></a>Поддержка языков в Microsoft Edge
 
-В этой статье приведены инструкции по использованию параметров Microsoft Edge для добавления в браузер поддерживаемого языка. Microsoft Edge поддерживает 96 языков в Windows и 91 в macOS.
+В этой статье приведены инструкции по использованию параметров Microsoft Edge для добавления в браузер поддерживаемого языка. Microsoft Edge поддерживает 84 языка интерфейса в Windows и 81 язык интерфейса в macOS.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 78 или более поздней.
@@ -58,12 +58,12 @@ ms.locfileid: "11384997"
 > [!NOTE]
 > Если расширение для перевода не работает после установки, перезапустите Microsoft Edge. Если это не сработает, отправьте отзыв через Центр отзывов.
 
-## <a name="supported-languages"></a>Поддерживаемые языки
+## <a name="supported-display-languages"></a>Поддерживаемые языки интерфейса
 
-В следующей таблице перечислены языки, поддерживаемые Microsoft Edge.
+В следующей таблице перечислены языки интерфейса, поддерживаемые Microsoft Edge.
 
 > [!NOTE]
-> Языки, не поддерживаемые Microsoft Edge в macOS, обозначены звездочкой (*) в конце названия страны/региона.  
+> Языки, не поддерживаемые Microsoft Edge в macOS, обозначены звездочкой (*) после названия страны или региона.  
 
 |                      Язык                      |             Страна или регион              |      Код      |
 |----------------------------------------------------|-----------------------------------------|----------------|
