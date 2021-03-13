@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406380"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408651"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Политики
 
@@ -26,16 +26,9 @@ ms.locfileid: "11406380"
 
 Вы можете скачать [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) для рекомендуемых базовых параметров конфигурации безопасности для Microsoft Edge. Дополнительные сведения см. в [блоге Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
 
+
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
-
-## <a name="new-and-deprecated-policies"></a>Новые и устаревшие политики
-
-В таблице ниже перечислены новые и устаревшие политики для этого обновления.
-
-|Имя|Заголовок|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|Включена минимальная версия TLS (не рекомендуется)|
 
 ## <a name="available-policies"></a>Доступные политики
 
