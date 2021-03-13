@@ -1,4 +1,4 @@
-# last revised 03/08/2021
+# last revised 03/11/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -191,8 +191,6 @@
           href: edge-learnmore-regex.md
         - name: Сброс данных Microsoft Edge
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: Переменные каталога данных пользователя
-          href: edge-learnmore-create-user-directory-vars.md
         - name: Использование отката Microsoft Edge для предприятий
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge Videos
