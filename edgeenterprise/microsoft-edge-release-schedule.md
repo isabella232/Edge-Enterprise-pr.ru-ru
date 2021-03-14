@@ -3,19 +3,19 @@ title: Расписание выпусков Microsoft Edge
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: f6567683b78d097547ebdef9320addc05863404e
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 31e8c3e884abdb12ffbd5fae940e466a2ab188d0
+ms.sourcegitcommit: e05e55b5f7808335c68dcee3acc488c53eede435
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393694"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "11407531"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Расписание выпусков Microsoft Edge
 
@@ -24,6 +24,9 @@ ms.locfileid: "11393694"
 ## <a name="release-cadence"></a>Частота выпусков
 
 Корпорация Майкрософт предлагает четыре варианта, или "канала", для управления частотой добавления новых функций в Microsoft Edge. Команда Microsoft Edge планирует переносить общедоступные обновления в каналы Beta и Stable каждые шесть недель. Дополнительные сведения о наших каналах, их цикле выпуска и уровне поддержки см. в статье [Обзор каналов](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview).
+
+> [!NOTE]
+> Начиная со стабильной версии канала 94, Microsoft Edge переходит к 4-недельной основной цикл выпуска. Однако мы понимаем, что корпоративным клиентам при управлении сложными средами требуется больше времени для планирования и тестирования обновлений Microsoft Edge. Чтобы помочь корпоративным клиентам, которым необходимо более продолжительное время для управления обновлениями, Microsoft Edge предложит **расширенный параметр Stable, предназначенный для более длительного 8-недельного основного цикла выпуска**. Этот параметр будет доступен только для клиентов с управляемыми средами.
 
 ## <a name="release-schedule"></a>Расписание выпусков
 
@@ -38,14 +41,16 @@ ms.locfileid: "11393694"
 
 | Версия | Состояние выпуска | Канал Beta<br>Неделя выпуска | Канал Stable<br>Неделя выпуска |
 |---------|-----|------|--------|
-| 86 | Выпущена<br>Версия | 09 сентября 2020 г.<br>[86.0.622.11](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-archive-beta-channel#version-86062211-september-9) | 09 октября 2020 г.<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
-| 87 | Выпущена<br>Версия | 20 октября 2020 г.<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412-october-20) | 19 ноября 2020 г.<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
-| **88** | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
+| 88 | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
 | **89** | Выпущена<br>Версия | **3 февраля 2021 г.**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | **4 марта 2021 г.**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
 | 90 | Целевой выпуск | Неделя с 16 марта 2021 г. | Неделя с 15 апреля 2021 г. |
 | 91 | Целевой выпуск | Неделя с 27 апреля 2021 г. | Неделя с 27 мая 2021 г. |
 | 92 | Целевой выпуск | Неделя с 8 июня 2021 г. | Неделя с 22 июля 2021 г. |
-| 93 | Целевой выпуск | Неделя с 3 августа 2021 г. | Неделя с 2 сентября 2021 г. |
+| 93 | Целевой выпуск | Неделя с 3 августа 2021 г. | Неделя со 2 сентября 2021 г. |
+| 94 | Целевой выпуск | Неделя с 1 сентября 2021 г. | Неделя с 23 сентября 2021 г. |
+| 95 | Целевой выпуск | Неделя с 28 сентября 2021 г. | Неделя с 21 октября 2021 г. |
+| 96 | Целевой выпуск | Неделя с 26 октября 2021 г. | Неделя с 18 ноября 2021 г. |
+| 97 | Целевой выпуск | Неделя с 30 ноября 2021 г. | Неделя с 06 января 2022 г. |
 
 ## <a name="release-process"></a>Процесс выпуска
 
