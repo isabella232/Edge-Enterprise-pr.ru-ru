@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/08/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: bdb38513f15e0ed5d11be4e221ea9d2403d1a956
-ms.sourcegitcommit: 6d37cd6dc8618742f4729fc901fc66829dab462e
+ms.openlocfilehash: 7d08aa1d9cf1f3e04861561169d2f6a01772e5f2
+ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406240"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "11409254"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -28,6 +28,13 @@ ms.locfileid: "11406240"
 
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077454-march-13"></a>Версия 89.0.774.54: 13 марта
+
+> [!IMPORTANT]
+> В этом обновлении [содержится CVE-2021-21193,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) который, по сообщениям группы Chromium, имеет действующий эксплойт. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Стабильные обновления безопасности канала перечислены [здесь](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-13-2021).
 
 ## <a name="version-89077450-march-10"></a>Версия 89.0.774.50: 10 марта
 

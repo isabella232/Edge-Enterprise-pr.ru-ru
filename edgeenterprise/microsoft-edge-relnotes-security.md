@@ -3,23 +3,28 @@ title: Заметки о выпуске обновлений для систем
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: c3d53950cd0b1dbc325d8c4798f9e0c40e4bf564
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: cca93aa987f627aba8ad9e4cc94f5805c95778c9
+ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393697"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "11409264"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+
+## <a name="march-13-2021"></a>13 марта 2021 г.
+
+Корпорация Майкрософт выпустила новейший стабильный канал **Microsoft Edge (Версия 89.0.774.54)**, включающий в себя последние обновления безопасности проекта Chromium. В этом обновлении [содержится CVE-2021-21193,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193) который, по сообщениям группы Chromium, имеет действующий эксплойт. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
 
 ## <a name="march-4-2021"></a>4 марта 2021 г.
 
@@ -31,7 +36,7 @@ ms.locfileid: "11393697"
 
 ## <a name="february-5-2021"></a>5февраля2021г.
 
-Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 88.0.705.63)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит уязвимость [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), которая согласно отчету команды Chromium имеет эксплойты на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 88.0.705.63)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), указанное командой Chromium как имеющее эксплойты на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
 
 ## <a name="february-4-2021"></a>4февраля2021г.
 
@@ -55,7 +60,7 @@ ms.locfileid: "11393697"
 
 ## <a name="november-13-2020"></a>13 ноября 2020 г.
 
-Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 86.0.622.69)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит уязвимости [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) и [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), которые согласно отчету команды Chromium имеют эксплойты на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 86.0.622.69)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) и [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017), указанные командой Chromium как имеющие эксплойты на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## <a name="november-11-2020"></a>11 ноября 2020 г.
 
@@ -63,7 +68,7 @@ ms.locfileid: "11393697"
 
 ## <a name="november-4-2020"></a>4 ноября 2020г.
 
-Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 86.0.622.63)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит уязвимость [CVE-2021-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), которая согласно отчету команды Chromium имеет эксплойты на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 86.0.622.63)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009), указанное командой Chromium как имеющее эксплойт на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002).
 
 ## <a name="october-22-2020"></a>22 октября 2020 г.
 
