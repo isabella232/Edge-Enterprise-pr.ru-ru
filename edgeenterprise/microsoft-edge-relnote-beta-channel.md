@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 6682bbc1ea92a8b78a82507424814e2f3db4fcfd
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: 3c1b87b2ecaf68acf0bca447553b25d0b202e7ea
+ms.sourcegitcommit: ceecf4d9baf9dc677652ca07a6d2f2e17ef5b3b7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409244"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "11440310"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,50 @@ ms.locfileid: "11409244"
 
 > [!NOTE]
 > Мы обновили заметку о выпуске [версии 89.0.774.18 от 3 февраля](#version-89077418-february-3) канала Microsoft Edge Beta, добавив выпущенные функции.
+
+<!-- begin major 90 -->
+## <a name="version-90081808-march-16"></a>Версия 90.0.818.08: 16 марта
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- Единый вход (SSO) теперь доступен для учетных записей **Azure Active Directory (Azure AD) и Microsoft Account (MSA) на macOS.** Войдя в Microsoft Edge на macOS, пользователь автоматически получает вход на веб-сайты, разрешающие единый вход в учетные записи Work и Microsoft (например, bing.com, office.com, msn.com и outlook.com).
+
+- **Вывод на печать:**
+
+  - **Новый режим растеризации печати**для принтеров без PostScript. Начиная с Microsoft Edge версии 90, администраторы могут использовать новую политику для определения режима растеризации печати для своих пользователей. Эта политика управляет печатью из Microsoft Edge на принтерах в Windows без PostScript.  Иногда для правильной печати на принтерах без поддержки PostScript необходимо правильно растеризовать задания для печати. Возможные настройки - Полная и Быстрая.
+
+  - **Дополнительные параметры масштабирования страниц для печати.** Теперь пользователи могут настраивать масштабирование при печати веб-страниц и документов PDF с помощью дополнительных параметров. Значение параметра "Вписать в страницу" гарантирует, что веб-страница или документ будут вписаны в размер, доступный в выбранном для печати "Размере бумаги". Значение "Фактический размер" гарантирует, что размер печатаемого контента не изменится независимо от выбранного "Размера бумаги".
+
+- **Эффективная работа:**
+
+  - **Предложения по автозаполнению стали более разнообразными**- теперь они включают в себя содержимое адресных полей из буфера обмена. При нажатии на поле профиля или адреса (такое как телефон, электронная почта, почтовый индекс, город, область и т.д.) происходит разбор содержимого буфера обмена и результаты выводятся в качестве предложений автозаполнения.
+
+  - **Пользователи могут искать предложения автозаполнения, даже если форма или поле не обнаружены**. Теперь, если у вас есть сведения, сохраненные в Microsoft Edge, предложения по автозаполнению всплывают автоматически, помогая сэкономить время при заполнении форм. Если автозаполнение не работает для формы или если вы хотите получить данные в формах, обычно не имеющих автозаполнения (например, временные формы), вы можете искать информацию с помощью автозаполнения.
+
+- **Доступ к загрузкам из раскрывающегося меню в панели меню**. Загрузки будут показаны в правом верхнем углу, причем все загрузки, активные в данный момент, будут располагаться рядом. Это меню легко закрыть, чтобы продолжать просматривать веб-страницу и при этом отслеживать общий ход скачивания прямо на панели инструментов. [Подробнее](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+
+- **Улучшения визуализации шрифтов.** Начиная с Microsoft Edge версии 90, мы улучшили визуализацию текста для повышения четкости и уменьшения размытости. Часть улучшений отрисовки шрифтов появится уже в бета-версии 90, но будет отключена по умолчанию.
+
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+Добавлено семь новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики:
+
+- [ApplicationGuardFavoritesSyncEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) — включена синхронизация избранного Application Guard
+- [ManagedConfigurationPerOrigin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) — задает управляемые значения конфигурации для веб-сайтов в определенных источниках
+- [PrintRasterizationMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode) — режим растеризации печати
+- [QuickViewOfficeFilesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) — управление возможностями быстрого просмотра файлов Office в Microsoft Edge
+- [SSLErrorOverrideAllowedForOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) — разрешить пользователям переходить дальше со страницы предупреждения HTTPS для определенных источников
+- [WindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowocclusionenabled) — включить загораживание окна
+- [WindowsHelloForHTTPAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) — включена Windows Hello для HTTP Auth
+
+#### <a name="deprecated-policies"></a>Устаревшие политики
+
+- [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) — включить встроенное загораживание окна
+- [SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin)— включена минимальная версия TLS
+<!-- end major 90 -->
 
 ## <a name="version-89077454-march-13"></a>Версия 89.0.774.54: 13 марта
 
