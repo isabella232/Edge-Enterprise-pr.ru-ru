@@ -3,31 +3,35 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 7d08aa1d9cf1f3e04861561169d2f6a01772e5f2
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: a0f33300d39f5ecaf48de114697c593a391dc052
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409254"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442389"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
 Эти заметки о выпуске содержат сведения о новых компонентах и обновлениях, не связанных с безопасностью, которые включены в стабильный канал Microsoft Edge.
 
-- Список обновлений системы безопасности находится [здесь](microsoft-edge-relnotes-security.md).
+- Список всех обновлений системы безопасности находится [здесь](microsoft-edge-relnotes-security.md).
 - Архивные заметки о выпуске для канала Microsoft Edge Stable находятся [здесь](microsoft-edge-relnote-archive-stable-channel.md).
 
  Чтобы ознакомиться с каналами Microsoft Edge, см. статью [Обзор каналов Microsoft Edge](microsoft-edge-channels.md).
 
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077457-march-18"></a>Версия 89.0.774.57: 18 марта
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-89077454-march-13"></a>Версия 89.0.774.54: 13 марта
 

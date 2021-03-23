@@ -3,19 +3,19 @@ title: Настройка режима терминала в Microsoft Edge
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сведения о возможностях режима терминала и настройке параметров режима терминала Microsoft Edge.
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388546"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442489"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Настройка режима терминала в Microsoft Edge
 
@@ -23,6 +23,9 @@ ms.locfileid: "11388546"
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 87 или более поздней.
+
+> [!IMPORTANT]
+> Вызов функций режима терминала Microsoft Edge в Windows 10 с помощью аргументов командной строки, указанных в статье [Использование возможностей режима терминала](#use-kiosk-mode-features).
 
 ## <a name="overview"></a>Обзор
 
@@ -211,7 +214,7 @@ Microsoft Edge можно запустить с [ограниченным дос
 
 С выпуском этой предварительной версии режима терминала мы продолжаем работать над улучшением продукта и добавлением новых функций.
 
-Мы рекомендуем отключить:
+В настоящее время не поддерживаются следующие функции и рекомендуется их отключить:
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -224,6 +227,7 @@ Microsoft Edge можно запустить с [ограниченным дос
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Расширения](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Стратегия
 
