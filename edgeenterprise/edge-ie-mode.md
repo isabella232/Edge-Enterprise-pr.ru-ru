@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как использовать Microsoft Edge в режиме IE.
-ms.openlocfilehash: bcb25e0f104d4a9b64ee8fd7bf29b12bb24b4724
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980924"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447343"
 ---
-# Сведения о режиме IE
+# <a name="about-ie-mode"></a>Сведения о режиме IE
 
 В этой статье приводятся общие сведения и предварительные требования к использованию Microsoft Edge в режиме IE.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней; каналы **Stable**, **Beta** и **Dev**.
 
-## Что такое режим IE?
+## <a name="what-is-ie-mode"></a>Что такое режим IE?
 
 Режим IE в Microsoft Edge упрощает использование всех нужных организации сайтов в одном браузере. В нем используется интегрированный модуль Chromium для современных сайтов и модуль Trident MSHTML из Internet Explorer 11 (IE11) для устаревших сайтов.
 
@@ -41,22 +41,22 @@ ms.locfileid: "10980924"
   > Мы обрабатываем только один список сайтов в режиме предприятия. Политика списка сайтов Microsoft Edge имеет приоритет над политикой списка сайтов Internet Explorer.
 - Все сайты интрасети при включенной групповой политике **Отправлять все сайты интрасети в Internet Explorer** (Microsoft Edge 77 или более поздней версии.)
 
-### Режим IE поддерживает следующие функциональные возможности Internet Explorer
+### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Режим IE поддерживает следующие функциональные возможности Internet Explorer
 
 - Все режимы работы с документами и режимы предприятия
 - Элементы ActiveX (например, Java или Silverlight)
 - Вспомогательные объекты браузера 
 - Параметры и групповые политики Internet Explorer, влияющие на параметры зон безопасности и защищенный режим
-- Средства разработчика F12 для IE при запуске с [IEChooser](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- Средства разработчика F12 для IE при запуске с [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
 - Расширения Microsoft Edge (расширения, взаимодействующие непосредственно с содержимым страницы IE, не поддерживаются).
 
-### Режим IE не поддерживает следующие функциональные возможности Internet Explorer
+### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Режим IE не поддерживает следующие функциональные возможности Internet Explorer
 
 - Панели инструментов Internet Explorer
 - Параметры и групповые политики Internet Explorer, которые влияют на меню навигации (например, поисковые системы и домашние страницы.)
 - Средства разработчика F12 для IE11 или Microsoft Edge
 
-## Предварительные условия
+## <a name="prerequisites"></a>Предварительные условия
 
 Для использования Microsoft Edge в режиме IE должны быть соблюдены следующие условия.
 
@@ -87,10 +87,10 @@ ms.locfileid: "10980924"
   > [!IMPORTANT]
   > ** Microsoft Edge будет поддерживать Windows 7 и Windows Server 2008 R2 даже после прекращения поддержки этих операционных систем. Для поддержки режима IE в указанных операционных системах на устройствах должны быть установлены [расширенные обновления системы безопасности для Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7). Рекомендуется как можно скорее перейти на поддерживаемую операционную систему, чтобы обеспечить безопасность. Поддержку Microsoft Edge с расширенными обновлениями системы безопасности следует считать временным явлением при переходе на поддерживаемую ОС.
 
-2. Административный шаблон Microsoft Edge. Дополнительные сведения см. в разделе [Настройка Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge).
+2. Административный шаблон Microsoft Edge. Дополнительные сведения см. в разделе [Настройка Microsoft Edge](./configure-microsoft-edge.md).
 3. Internet Explorer 11 включен в компонентах Windows.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Дополнительные сведения о режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
