@@ -10,19 +10,19 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
-ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175202"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447593"
 ---
-# Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
+# <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge из стабильного канала версии 87 или более поздней.
 
-## Обзор
+## <a name="overview"></a>Обзор
 
 Дизайн многих современных веб-сайтов несовместим с Internet Explorer. Когда пользователь Internet Explorer посещает несовместимый общедоступный сайт, для него отображается сообщение о том, что сайт несовместим с браузером и требуется вручную переключиться на другой браузер.
 
@@ -31,9 +31,9 @@ ms.locfileid: "11175202"
 Когда пользователь переходит на сайт, несовместимый с Internet Explorer, он автоматически перенаправляется в Microsoft Edge. В этой статье описан пользовательский интерфейс перенаправления и групповые политики, которые используются для настройки или отключения автоматического перенаправления.
 
 > [!NOTE]
-> Корпорация Майкрософт поддерживает список всех сайтов, о которых известно, что они несовместимы с Internet Explorer. Дополнительные сведения см. в статье [Запрос на обновление списка несовместимых сайтов](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+> Корпорация Майкрософт поддерживает список всех сайтов, о которых известно, что они несовместимы с Internet Explorer. Дополнительные сведения см. в статье [Запрос на обновление списка несовместимых сайтов](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 
-## Интерфейс перенаправления
+## <a name="redirection-experience"></a>Интерфейс перенаправления
 
 При перенаправлении в Microsoft Edge пользователям однократно демонстрируется диалоговое окно, как на следующем снимке экрана. В этом диалоговом окне объясняется, почему выполняется перенаправление, и запрашивается согласие на копирование данных браузера и параметров из Internet Explorer в Microsoft Edge. Будут импортированы следующие данные браузера: избранное, пароли, поисковые системы, открытые вкладки, журнал, параметры, файлы cookie и домашняя страница.
 
@@ -56,7 +56,7 @@ ms.locfileid: "11175202"
 > [!NOTE]
 > После перенаправления пользователи могут вернуться к использованию Internet Explorer для сайтов, которых нет в списке несовместимых с Internet Explorer.  
 
-## Политики для настройки перенаправления в Microsoft Edge
+## <a name="policies-to-configure-redirection-to-microsoft-edge"></a>Политики для настройки перенаправления в Microsoft Edge
 
 > [!NOTE]
 > Эти политики будут доступны в виде обновлений ADMX-файла к 26 октября 2020 г. и будут доступны в Intune к 9 ноября 2020 г.
@@ -67,7 +67,7 @@ ms.locfileid: "11175202"
 - RedirectSitesFromInternetExplorerRedirectMode
 - HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-### Политика: RedirectSitesFromInternetExplorerPreventBHOInstall
+### <a name="policy-redirectsitesfrominternetexplorerpreventbhoinstall"></a>Политика: RedirectSitesFromInternetExplorerPreventBHOInstall
 
 Для перенаправления из Internet Explorer в Microsoft Edge требуется вспомогательный объект браузера (BHO) Internet Explorer с именем "IEtoEdge BHO". Политика **RedirectSitesFromInternetExplorerPreventBHOInstall** определяет, устанавливается ли этот вспомогательный объект браузера.  
 
@@ -76,7 +76,7 @@ ms.locfileid: "11175202"
 
 Помимо необходимости во вспомогательном объекте браузера существует зависимость от параметра **RedirectSitesFromInternetExplorerRedirectMode**, которому требуется присвоить значение "Перенаправлять сайты на основе списка несовместимых сайтов" или "Не настроено".
 
-### Политика: RedirectSitesFromInternetExplorerRedirectMode
+### <a name="policy-redirectsitesfrominternetexplorerredirectmode"></a>Политика: RedirectSitesFromInternetExplorerRedirectMode
 
  Эта политика соответствует параметру раздела **Браузер по умолчанию** в Microsoft Edge "Разрешить Internet Explorer открывать сайты в Microsoft Edge". Чтобы получить доступ к этому параметру, перейдите по URL-адресу *edge://settings/defaultbrowser*.  
 
@@ -88,9 +88,9 @@ ms.locfileid: "11175202"
 >
 >Если вы используете устройство, присоединенное к домену или зарегистрированное в службе управления мобильными устройствами (MDM), этот параметр не отображается.
 >
-> Если вместо этого вы хотите разрешить своим пользователям загружать сайты в режиме Internet Explorer, вы можете это сделать, настроив политику [Разрешить тестирование режима Internet Explorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing).
+> Если вместо этого вы хотите разрешить своим пользователям загружать сайты в режиме Internet Explorer, вы можете это сделать, настроив политику [Разрешить тестирование режима Internet Explorer](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
 
-### Политика: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>Политика: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
 Эта политика настраивает пользовательский интерфейс для перенаправления несовместимых сайтов в Microsoft Edge.  
 
@@ -100,7 +100,7 @@ ms.locfileid: "11175202"
   > [!NOTE]
   > Данные браузера пользователя будут импортироваться при каждом выполнении перенаправления для пользователя. Однако это происходит только в том случае, если пользователь согласился на импорт в диалоговом окне однократного перенаправления.
 
-## Отключение перенаправления в Microsoft Edge
+## <a name="disable-redirection-to-microsoft-edge"></a>Отключение перенаправления в Microsoft Edge
 
 Если вы хотите отключить перенаправление ДО обновления до Microsoft Edge версии 87 из стабильного канала, выполните следующее действие.
 
@@ -111,8 +111,8 @@ ms.locfileid: "11175202"
 1. Установите для политики **RedirectSitesFromInternetExplorerRedirectMode** значение **Включено**, затем в раскрывающемся меню "Настройки: Перенаправление несовместимых сайтов из Internet Explorer в Microsoft Edge" выберите **Отключить**. Этот параметр прекратит перенаправление, как только политика вступит в силу.
 2. Присвойте политике **RedirectSitesFromInternetExplorerPreventBHOInstall** значение **Включено**. Это приведет к удалению вспомогательного объекта браузера после следующего обновления Microsoft Edge.
 
-## См. также
+## <a name="see-also"></a>См. также
 
-- [Запрос на обновление списка несовместимых сайтов](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [Запрос на обновление списка несовместимых сайтов](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Политики Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+- [Политики Microsoft Edge](./microsoft-edge-policies.md)

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Вопросы и ответы о синхронизации Microsoft Edge для предприятий.
-ms.openlocfilehash: 51f6dfc4cd8f308815ee111c30d5501ec0e44f59
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400208"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447873"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Вопросы и ответы о синхронизации Microsoft Edge для предприятий
 
@@ -25,11 +25,11 @@ ms.locfileid: "11400208"
 
 ### <a name="is-the-synced-data-encrypted"></a>Шифруются ли синхронизированные данные?
 
-Данные шифруются в процессе транспортировки с использованием протокола TLS 1.2 или более поздней версии. Все типы данных дополнительно шифруются в службе Майкрософт с помощью AES128. Все типы данных, кроме используемых для синхронизации открытой вкладки и журнала, дополнительно шифруются перед покиданием устройства пользователя с использованием ключей, управляемых с помощью политики [Azure Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Данные шифруются в процессе транспортировки с использованием протокола TLS 1.2 или более поздней версии. Все типы данных дополнительно шифруются в службе Майкрософт с помощью AES128. Все типы данных, кроме используемых для синхронизации открытой вкладки и журнала, дополнительно шифруются перед покиданием устройства пользователя с использованием ключей, управляемых с помощью политики [Azure Information Protection](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ### <a name="why-dont-open-tab-and-history-data-have-more-client-side-encryption"></a>Почему данные открытой вкладки и журнала не используют дополнительное шифрование на стороне клиента?
 
-Чтобы сократить использование ресурсов на устройствах конечных пользователей, данные журнала создаются на стороне сервера на основе перемещаемых данных открытой вкладки. Этот процесс невозможен при шифровании этих данных на стороне клиента. Чтобы отключить синхронизацию открытой вкладки и журнала, примените политику [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled) или [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled).
+Чтобы сократить использование ресурсов на устройствах конечных пользователей, данные журнала создаются на стороне сервера на основе перемещаемых данных открытой вкладки. Этот процесс невозможен при шифровании этих данных на стороне клиента. Чтобы отключить синхронизацию открытой вкладки и журнала, примените политику [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled) или [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled).
 
 ### <a name="can-tenant-admins-bring-their-own-key"></a>Могут ли администраторы клиента использовать свой ключ?
 
@@ -63,7 +63,7 @@ ms.locfileid: "11400208"
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Будет ли Microsoft Edge поддерживать синхронизацию между Microsoft Edge и IE?
 
-Поддержка такой синхронизации не планируется. Если для поддержки устаревших приложений вам нужен IE, подумайте об использовании [нового режима IE](https://docs.microsoft.com/deployedge/edge-ie-mode).
+Поддержка такой синхронизации не планируется. Если для поддержки устаревших приложений вам нужен IE, подумайте об использовании [нового режима IE](./edge-ie-mode.md).
 
 ### <a name="will-microsoft-edge-sync-with-microsoft-edge-legacy"></a>Будет ли Microsoft Edge синхронизироваться с устаревшей версией Microsoft Edge?
 
@@ -73,7 +73,7 @@ ms.locfileid: "11400208"
 
 ### <a name="is-it-possible-to-stop-my-users-from-syncing-with-a-personal-tenant"></a>Можно ли запретить пользователям синхронизацию с личным клиентом?
 
-Прямо нет, но вы можете определить, с каким профилем можно входить в Microsoft Edge, с помощью политики [RestrictSigninToPattern](https://docs.microsoft.com/deployedge/microsoft-edge-policies#restrictsignintopattern).
+Прямо нет, но вы можете определить, с каким профилем можно входить в Microsoft Edge, с помощью политики [RestrictSigninToPattern](./microsoft-edge-policies.md#restrictsignintopattern).
 
 ## <a name="see-also"></a>См. также
 

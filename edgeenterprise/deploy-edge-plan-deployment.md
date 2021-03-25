@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Планирование развертывания Microsoft Edge
-ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: aae219bf44e78edabc02974a434d7d7efc1665eb
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313879"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447823"
 ---
-# Планирование развертывания Microsoft Edge
+# <a name="plan-your-deployment-of-microsoft-edge"></a>Планирование развертывания Microsoft Edge
 
 В этой статье описываются рекомендуемые методы развертывания Microsoft Edge в корпоративной среде.
 
@@ -37,7 +37,7 @@ ms.locfileid: "11313879"
 - [Оценка пилотного проекта](#validate-your-deployment)
 - [Развертывание Microsoft Edge на предприятии](#broad-deployment-of-microsoft-edge)
 
-## Оценка существующей среды браузера и потребностей браузера
+## <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Оценка существующей среды браузера и потребностей браузера
 
 Изучите текущее состояние браузера и концепцию проекта, чтобы все заинтересованные лица работали для достижения одинаковых результатов.
 
@@ -54,41 +54,41 @@ ms.locfileid: "11313879"
 
 После изучения текущего состояния вы можете определить цели развертывания браузера, принимая во внимание следующие факторы.
 
-- Хотите ли вы [установить Microsoft Edge в качестве браузера по умолчанию](https://docs.microsoft.com/DeployEdge/edge-default-browser)?
-- Как вы будете [настраивать Microsoft Edge](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)?
+- Хотите ли вы [установить Microsoft Edge в качестве браузера по умолчанию](./edge-default-browser.md)?
+- Как вы будете [настраивать Microsoft Edge](./configure-microsoft-edge.md)?
 - Какие компоненты критически важны для настройки в рамках начального развертывания?
 - В чем заключается процедура устранения выявленных проблем совместимости или конфигурации?
 
 Кроме того, необходимо понять, какие **компоненты вам требуются**, например:
 
-- [Application Guard в Защитнике Windows;](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
-- [режим Internet Explorer;](https://docs.microsoft.com/DeployEdge/edge-ie-mode)
-- [проверка подлинности и синхронизация.](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-identity)
+- [Application Guard в Защитнике Windows;](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
+- [режим Internet Explorer;](./edge-ie-mode.md)
+- [проверка подлинности и синхронизация.](./microsoft-edge-security-identity.md)
 
 С учетом этих ответов вы можете приступать к планированию развертывания Microsoft Edge.
 <!--bookmark -->
 
-## Проверка готовности устройств с Windows 10
+## <a name="make-sure-your-windows-10-devices-are-ready"></a>Проверка готовности устройств с Windows 10
 
-Для стабильного канала Microsoft Edge требуется последний накопительный пакет обновления (LCU) за октябрь 2019 г. (или более поздняя версия). При попытке выполнить развертывание на устройстве с Windows 10, содержащем более раннюю версию LCU, установка завершится сбоем. Дополнительные сведения о минимальной версии LCU, которую требуется применить перед развертыванием Microsoft Edge, см. в статье [Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-windows-updates).
+Для стабильного канала Microsoft Edge требуется последний накопительный пакет обновления (LCU) за октябрь 2019 г. (или более поздняя версия). При попытке выполнить развертывание на устройстве с Windows 10, содержащем более раннюю версию LCU, установка завершится сбоем. Дополнительные сведения о минимальной версии LCU, которую требуется применить перед развертыванием Microsoft Edge, см. в статье [Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge](./microsoft-edge-sysupdate-windows-updates.md).
 
-## Определение топологии развертывания
+## <a name="determine-your-deployment-methodology"></a>Определение топологии развертывания
 
 Когда вы узнаете желаемое конечное состояние, вы можете приступить к планированию его достижения. Два основных способа развертывания Microsoft Edge — это по ролям и по сайтам.
 
-### Развертывание на конечных пользователей по ролям
+### <a name="deploy-to-end-users-by-role"></a>Развертывание на конечных пользователей по ролям
 
 Если ваш главный приоритет— совместимость приложений, и вы не знаете, какие приложения следует протестировать, вы можете выполнить развертывание браузера конечным пользователям по ролям. Это позволяет использовать каждую стадию поэтапного развертывания для предоставления отзывов и аналитических сведений о приложениях, для которых может потребоваться изменить конфигурацию для устранения проблем с совместимостью.
 
-### Развертывание на конечных пользователей по сайтам
+### <a name="deploy-to-end-users-by-site"></a>Развертывание на конечных пользователей по сайтам
 
 Если ваш главный приоритет— пропускная способность, может быть полезно заранее протестировать совместимость приложений. После тестирования разверните браузер для конечных пользователей по сайтам, чтобы можно было использовать кэширование других методов оптимизации доставки программного обеспечения.
 
-## Обнаружение сайтов
+## <a name="do-site-discovery"></a>Обнаружение сайтов
 
 Если существует зависимость от устаревших веб-приложений и вы планируете использовать режим Internet Explorer (как и большинство пользователей), вам, возможно, потребуется выполнить некоторые дополнительные операции обнаружения сайтов.
 
-### Если вы уже развернули и настроили предыдущую версию Microsoft Edge
+### <a name="if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge"></a>Если вы уже развернули и настроили предыдущую версию Microsoft Edge
 
 Если вы уже настроили список сайтов в режиме предприятия для работы в устаревшей версии Microsoft Edge, работа почти завершена. Возможно, вам может потребоваться добавить нейтральные сайты.
 
@@ -96,14 +96,14 @@ ms.locfileid: "11313879"
 
 Определите все используемые сайты с единым входом (или другие нейтральные сайты) и добавьте их в список сайтов в режиме предприятия.
 
-### Если вы настроили Internet Explorer как браузер по умолчанию
+### <a name="if-youve-configured-internet-explorer-as-your-default-browser"></a>Если вы настроили Internet Explorer как браузер по умолчанию
 
 Если сейчас вы используете только Internet Explorer, вы можете не знать, какие сайты обновлены до современных веб-стандартов, а для каких сайтов все еще требуется Internet Explorer. Вам необходимо найти эти сайты и добавить их в список сайтов в режиме предприятия. Это позволяет использовать режим Internet Explorer только на тех сайтах, которым он необходим.
 
 > [!TIP]
-> Используйте средства [Enterprise Site Discovery](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery?redirectedfrom=MSDN) для обнаружения сайтов, которым может потребоваться режим Internet Explorer. Вы можете собирать данные на компьютерах с браузерами Windows Internet Explorer 8–Internet Explorer11 в Windows 10, Windows 8.1 или Windows 7.
+> Используйте средства [Enterprise Site Discovery](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery) для обнаружения сайтов, которым может потребоваться режим Internet Explorer. Вы можете собирать данные на компьютерах с браузерами Windows Internet Explorer 8–Internet Explorer11 в Windows 10, Windows 8.1 или Windows 7.
 
-### Анализ данных обнаружения сайтов
+### <a name="analyze-site-discovery-data"></a>Анализ данных обнаружения сайтов
 
 После сбора данных о сайтах мы рекомендуем выполнить следующий четырехэтапный процесс анализа данных.
 
@@ -115,16 +115,16 @@ ms.locfileid: "11313879"
    > [!NOTE]
    > Рекомендуется сгруппировать все сайты, составляющие приложение. Если все сайты должны использоваться для выполнения одной задачи и они обычно обновляются вместе, это верный признак для их группировки. Таким образом, при обновлении приложения будет проще удалить весь сайт из режима Internet Explorer и начать использовать современный браузер для этого приложения.
 
-## Определение стратегии канала
+## <a name="determine-your-channel-strategy"></a>Определение стратегии канала
 
-Microsoft Edge выпускается в [нескольких каналах](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels).
+Microsoft Edge выпускается в [нескольких каналах](./microsoft-edge-channels.md).
 
 > [!NOTE]
 > На одном устройстве можно установить несколько каналов.
 
 Стабильный канал используется для развертывания на большинстве устройств. Однако следует рассмотреть стратегию развертывания, включающую в себя несколько устройств и каналов.
 
-### Несколько устройств и каналов
+### <a name="multiple-devices-and-channels"></a>Несколько устройств и каналов
 
 Рекомендуется использовать репрезентативный набор устройств, настроенных для использования канала Beta. Это позволяет просматривать предстоящие изменения в браузере. Вы можете узнать, повлияют ли эти изменения на конечных пользователей или приложения.
 
@@ -135,25 +135,25 @@ Microsoft Edge выпускается в [нескольких каналах](h
 > [!NOTE]
 > Если пользователь включил синхронизацию, то конфигурация будет синхронизироваться по всем каналам, что упрощает переход между ними.
 
-## Определение и настройка политик
+## <a name="define-and-configure-policies"></a>Определение и настройка политик
 
 После создания списка сайтов в режиме предприятия мы рекомендуем выявить и настроить политики, которые вы планируете развертывать с Microsoft Edge. Это обеспечит применение этих политик при тестировании.
 
-Во-первых, проанализируйте процесс первого запуска, который будет доступен пользователям. Если необходимо автоматически импортировать параметры из текущего браузера, настройте политику для [AutoImportAtFirstRun](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#autoimportatfirstrun).
+Во-первых, проанализируйте процесс первого запуска, который будет доступен пользователям. Если необходимо автоматически импортировать параметры из текущего браузера, настройте политику для [AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun).
 
-Для политик безопасности рекомендуется использовать базовую конфигурацию безопасности Microsoft Edge. Базовую конфигурацию безопасности можно применять с помощью [рекомендуемых базовых параметров конфигурации безопасности](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) или с помощью [Microsoft Intune](https://docs.microsoft.com/intune/protect/security-baseline-settings-edge).
+Для политик безопасности рекомендуется использовать базовую конфигурацию безопасности Microsoft Edge. Базовую конфигурацию безопасности можно применять с помощью [рекомендуемых базовых параметров конфигурации безопасности](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) или с помощью [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
 
-Для других политик рекомендуется просмотреть конфигурации политик для [Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies) и [обновлений Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies).
+Для других политик рекомендуется просмотреть конфигурации политик для [Microsoft Edge](./microsoft-edge-policies.md) и [обновлений Microsoft Edge](./microsoft-edge-update-policies.md).
 
-### Определение стратегии и политик обновления
+### <a name="define-your-update-strategy-and-policies"></a>Определение стратегии и политик обновления
 
 Кроме того, необходимо определить, как следует устанавливать обновления после развертывания Microsoft Edge.
 
 - **Разрешить Microsoft Edge обновляться автоматически** (по умолчанию). Если вы разрешите автоматическое обновление Microsoft Edge, браузер будет автоматически обновляться в темпе развернутых каналов.
-- **Обновление Microsoft Edge в удобное для вас время**. Если вы предпочитаете явно контролировать время развертывания обновлений, вы можете отключить автоматическое обновление и развертывать их самостоятельно (см. [Справочник по политикам обновления](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies)). После отключения автоматических обновлений можно развернуть обновления для каждого канала с помощью одного из следующих средств:
+- **Обновление Microsoft Edge в удобное для вас время**. Если вы предпочитаете явно контролировать время развертывания обновлений, вы можете отключить автоматическое обновление и развертывать их самостоятельно (см. [Справочник по политикам обновления](./microsoft-edge-update-policies.md)). После отключения автоматических обновлений можно развернуть обновления для каждого канала с помощью одного из следующих средств:
 
-- [Intune;](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)
-- [Configuration Manager;](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager)
+- [Intune;](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json)
+- [Configuration Manager;](./deploy-edge-with-configuration-manager.md)
 - средство развертывания по вашему выбору.
 
 Независимо от стратегии обновления, мы рекомендуем использовать стратегию развертывания на основе кругов. При использовании автоматического обновления это означает наличие репрезентативного набора пользователей, применяющих канал Beta, для выявления проблем, связанных с тем, что впоследствии станет стабильным каналом. При использовании ручных обновлений это также может привести к дополнительной проверке пилотной группы после выпуска новой сборки стабильного канала. За этим следует широкое развертывание.
@@ -161,7 +161,7 @@ Microsoft Edge выпускается в [нескольких каналах](h
 >[!NOTE]
 >Поддержка Microsoft Edge будет применяться только к последней версии Microsoft Edge в каждом канале.
 
-## Проверка совместимости приложений
+## <a name="do-app-compatibility-testing"></a>Проверка совместимости приложений
 
 Совместимость приложений с Microsoft Edge очень высокая, так что корпорация Майкрософт предоставляет следующие обещания:
 
@@ -171,7 +171,7 @@ Microsoft Edge выпускается в [нескольких каналах](h
 
 Если у вас есть приложение, в отношении которого нарушается наше обещание о совместимости, мы исправим его с помощью [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure).
 
-### Внутреннее тестирование бизнес-приложений
+### <a name="internal-line-of-business-app-testing"></a>Внутреннее тестирование бизнес-приложений
 
 Несмотря на наше обещание о совместимости, мы знаем, что многие организации обязаны проверять определенные приложения на предмет их соответствия требованиям или для управления рисками. Хотя мы ожидаем, что это будет очень просто, крайне важно тщательно организовать и протестировать приложения.
 
@@ -182,19 +182,19 @@ Microsoft Edge выпускается в [нескольких каналах](h
 
 Выберите наиболее подходящий для каждого приложения метод, чтобы управлять рисками без лишних затрат на тестирование совместимости.
 
-### Поддержка сторонних приложений
+### <a name="third-party-app-support"></a>Поддержка сторонних приложений
 
 Кроме собственных бизнес-приложений многие организации используют приложения, предоставляемые внешними источниками. В статье [Готовность к Microsoft Edge](deploy-edge-ready-for-edge.md) содержится список веб-приложений, которые могут использоваться в вашей организации. Этот список включает ссылки на сведения о поддержке, предоставляемые поставщиками для своих продуктов при их использовании в Microsoft Edge.
 
-## Развертывание Microsoft Edge в пилотной группе
+## <a name="deploy-microsoft-edge-to-a-pilot-group"></a>Развертывание Microsoft Edge в пилотной группе
 
 После определения политик и завершения первоначального тестирования совместимости приложений вы можете развернуть их в пилотной группе. Разверните приложения в пилотной группе с помощью одного из следующих средств:
 
-- [Microsoft Intune для Windows](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) или [Microsoft Intune for macOS](https://docs.microsoft.com/intune/apps/apps-edge-macos?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json);
-- [Configuration Manager](https://docs.microsoft.com/DeployEdge/deploy-edge-with-configuration-manager);
+- [Microsoft Intune для Windows](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) или [Microsoft Intune for macOS](/intune/apps/apps-edge-macos?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json);
+- [Configuration Manager](./deploy-edge-with-configuration-manager.md);
 - другое средство управления— скачайте и разверните [MSI-файл для Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise).
 
-## Проверка развертывания
+## <a name="validate-your-deployment"></a>Проверка развертывания
 
 После развертывания пилотной группы необходимо зафиксировать все отзывы, полученные от пользователей.
 
@@ -202,11 +202,11 @@ Microsoft Edge выпускается в [нескольких каналах](h
 - Зафиксируйте отзывы о конфигурации политики. Убедитесь, что пользователи могут применять основные функции и выполнять свою работу, соблюдая следующие рекомендации по безопасности.
 - Зафиксируйте отзывы о простоте использования и новых возможностях. Определите области, для которых следует разработать и предоставить обучающие материалы на основе вопросов пользователей.
 
-## Широкое развертывание Microsoft Edge
+## <a name="broad-deployment-of-microsoft-edge"></a>Широкое развертывание Microsoft Edge
 
 После завершения пилотного развертывания и обновления плана развертывания с использованием результатов, полученных в ходе пилотного проекта, вы можете полностью развернуть Microsoft Edge для всех пользователей.  Поздравляем!
 
-## Статьи по теме
+## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Видео — развертывание Microsoft Edge](microsoft-edge-video-deploy.md)

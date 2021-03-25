@@ -10,18 +10,18 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge и настраиваемые сайты в режиме IE
-ms.openlocfilehash: a846d71d63a4f837041acc9b601f704999bb826a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1bffdef8c88b7a83d999b29763fcca258102ed51
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980958"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447333"
 ---
-# Сведения о настраиваемых сайтах в режиме IE
+# <a name="learn-about-configurable-sites-in-ie-mode"></a>Сведения о настраиваемых сайтах в режиме IE
 
 В этой статье рассматривается функция настраиваемых сайтов для списка сайтов режима предприятия в Microsoft Edge.
 
-## Предварительные условия
+## <a name="prerequisites"></a>Предварительные условия
 
 - Обновления Windows
 
@@ -34,17 +34,17 @@ ms.locfileid: "10980958"
   - Windows 8.1 — KB4556798 и выше
 
 - Microsoft Edge версии 83 или более ранней
-- [Режим IE](https://aka.ms/iemodeonedge) настроенный с помощью списка сайтов в режиме предприятия
+- [Режим IE](./edge-ie-mode.md) настроенный с помощью списка сайтов в режиме предприятия
 
-## Обзор
+## <a name="overview"></a>Обзор
 
 Настройка сайтов, которым требуется режим IE, в списке сайтов режима предприятия будет хорошо работать для большинства сред с устаревшими приложениями. В некоторых случаях это не самый лучший подход для настройки подмножества сайтов на открытие в режиме IE без обработки всего домена в этом режиме. Например, если в вашей среде есть современные и устаревшие приложения, запущенные на одном сервере, и вы хотите обрабатывать устаревшие приложения в режиме IE, а остальные — в режиме Microsoft Edge.
 
 Решением является использование функции настраиваемых сайтов списка сайтов в режиме предприятия. Если эта функция включена, Microsoft Edge позволяет сайтам с тегом "конфигурируемый" участвовать в определении подсистемы режима IE.
 
-## Принципы работы настраиваемых сайтов в режиме IE
+## <a name="how-configurable-sites-works"></a>Принципы работы настраиваемых сайтов в режиме IE
 
-### Автоматическое переключение с подсистемы Microsoft Edge на подсистему режима IE
+### <a name="automatic-switching-from-the-microsoft-edge-engine-to-the-ie-mode-engine"></a>Автоматическое переключение с подсистемы Microsoft Edge на подсистему режима IE
 
 Для использования функции настраиваемых сайтов потребуется один или несколько сайтов в списке сайтов режима предприятия, чтобы использовать `<open-in>Configurable</open-in>`.
 
@@ -67,7 +67,7 @@ ms.locfileid: "10980958"
    > [!NOTE]
    > Ответ перенаправления подлежит кэшированию в соответствии с обычным режимом кэширования HTTP в Microsoft Edge для перенаправлений.
 
-### Переключение с ядра подсистемы режима IE на подсистему Microsoft Edge
+### <a name="switching-back-from-ie-mode-engine-to-microsoft-edge-engine"></a>Переключение с ядра подсистемы режима IE на подсистему Microsoft Edge
 
 Включение настраиваемых сайтов в Microsoft Edge автоматически включает следующие варианты поведения во вкладках режима IE:
 
@@ -81,8 +81,8 @@ ms.locfileid: "10980958"
 > [!TIP]
 > Обе подсистемы браузеров отправляют одинаковый заголовок запроса "`X-InternetExplorerModeConfigurable: 1`" на настраиваемые сайты. Необходимо использовать заголовок запроса User-Agent для различия запросов в режиме Microsoft Edge и в режиме IE, чтобы избежать перенаправления, если сайт уже загружен в нужной системе.
 
-## См. также
+## <a name="see-also"></a>См. также
 
-- [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Сведения о режиме IE](./edge-ie-mode.md)
+- [Дополнительные сведения о режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как получить доступ к устаревшей версии Microsoft Edge.
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313899"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447093"
 ---
-# Получение доступа к устаревшей версии Microsoft Edge после установки новой версии Microsoft Edge
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a>Получение доступа к устаревшей версии Microsoft Edge после установки новой версии Microsoft Edge
 
 Устаревшая версия Microsoft Edge перестанет получать обновления для системы безопасности 9 марта 2021 г. Вы сможете получать доступ к устаревшей версии Microsoft Edge до 13 апреля. Дополнительные сведения см. в [записи блога](https://aka.ms/EdgeLegacyEOS) команды разработчиков продукта Microsoft Edge.
 
@@ -34,13 +34,13 @@ ms.locfileid: "11313899"
 >
 > Поддержка классического приложения устаревшей версии Microsoft Edge будет прекращена 9 марта 2021 г. Вместо него будет использоваться новая версия Microsoft Edge. Это означает, что устаревшая версия Microsoft Edge не будет получать обновления для системы безопасности после этой даты. Это изменение применяется ко всем интерфейсам, работающим в классическом приложении устаревшей версии Microsoft Edge. [Подробнее](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
-## Перед началом работы
+## <a name="before-you-begin"></a>Перед началом работы
 > [!NOTE]
 > С Windows 10 версии 20H2 устаревшая версия Microsoft Edge отсутствует. Начиная с этой версии Windows 10 параллельная работа не поддерживаются.
 
 Процедуры, приведенные в этой статье, относятся к системам, на которых установлены последние обновления системы безопасности. После установки новой версии Microsoft Edge старая версия (устаревшая версия Microsoft Edge) будет скрыта. По умолчанию при попытке запуска старой версии Microsoft Edge будет открываться новая версия Microsoft Edge. В этой статье описано, как продолжить использование устаревшей версии Microsoft Edge после установки Microsoft Edge.
 
-## Краткое руководство: параллельное использование канала Microsoft Edge Beta и устаревшей версии Microsoft Edge
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a>Краткое руководство: параллельное использование канала Microsoft Edge Beta и устаревшей версии Microsoft Edge
 
 Прежде чем следовать подробным инструкциям в этой статье, выполните следующие два действия, чтобы позволить вашим пользователям параллельно запускать устаревшую версию Microsoft Edge и версию Microsoft Edge [канала Beta](microsoft-edge-channels.md).
 
@@ -52,13 +52,13 @@ ms.locfileid: "11313899"
 
 Это решение для параллельного запуска проще и требует меньше действий по администрированию, чем подробное решение, описанное в этой статье. Тем не менее, это решение означает, что будет использоваться версия из канала Beta, а не из стабильного канала.
 
-## Параллельное взаимодействие версии Microsoft Edge стабильного канала и устаревшей версии Microsoft Edge
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a>Параллельное взаимодействие версии Microsoft Edge стабильного канала и устаревшей версии Microsoft Edge
 
 После установки следующей версии Microsoft Edge из стабильного канала на уровне системы текущая версия (устаревшая версия Microsoft Edge) будет скрыта. Если вы хотите, чтобы пользователи параллельно видели обе версии Microsoft Edge в Windows, этого можно достичь, присвоив групповой политике **Разрешить параллельный запуск разных типов браузеров Microsoft Edge** значение **Включено**.
 
-Информация по этой групповой политике приведена [здесь](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)
+Информация по этой групповой политике приведена [здесь](./microsoft-edge-update-policies.md#allowsxs)
 
-### Чтобы настроить политику параллельной работы в браузере, выполните указанные ниже действия.
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a>Чтобы настроить политику параллельной работы в браузере, выполните указанные ниже действия.
 
 1. Установите определения политики от [Microsoft Edge для бизнеса](https://www.microsoft.com/edge/business/download).
 
@@ -86,7 +86,7 @@ ms.locfileid: "11313899"
 - Имя значения: `Allowsxs`
 - Тип значения: `'REG_DWORD'`
 
-#### Рекомендации
+#### <a name="best-practice-guidance"></a>Рекомендации
 
 Для наилучших результатов политику **Разрешить параллельный запуск разных типов браузеров Microsoft Edge** следует включить до развертывания новой версии Microsoft Edge на устройствах пользователей.
 
@@ -100,7 +100,7 @@ ms.locfileid: "11313899"
 2. Устаревшую версию Microsoft Edge потребуется повторно закрепить в меню "Пуск" или на панели задач, так как при развертывании новой версии Microsoft Edge закрепление переносится.
 3. Сайты, закрепленные в меню "Пуск" или на панели задач для устаревшей версии Microsoft Edge, перенесутся в новую версию Microsoft Edge.
 
-## Дополнительные сведения
+## <a name="additional-information"></a>Дополнительные сведения
 
 После обновления систем и установки следующей версии Microsoft Edgeиз стабильного канала устанавливаются следующий раздел реестра и значения:
 
@@ -110,7 +110,7 @@ ms.locfileid: "11313899"
   > [!IMPORTANT]
   > Этот раздел перезаписывается при каждом обновлении стабильного канала для Microsoft Edge. Рекомендуется НЕ удалять этот раздел, чтобы сохранить пользователям доступ к обеим версиям Microsoft Edge.
 
-## Статьи по теме
+## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Обновления Windows для поддержки Microsoft Edge](microsoft-edge-sysupdate-windows-updates.md)

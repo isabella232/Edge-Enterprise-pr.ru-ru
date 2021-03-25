@@ -10,26 +10,26 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сопоставление расширений файлов с режимом Internet Explorer
-ms.openlocfilehash: 9f39a3319c3e45001090dd9f0cffb3e7ce2648fb
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: 6c651499401757d9a58e697d1d019a7294bb5fa7
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238196"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447373"
 ---
-# Сопоставление расширений файлов с режимом Internet Explorer
+# <a name="associate-file-extensions-with-internet-explorer-mode"></a>Сопоставление расширений файлов с режимом Internet Explorer
 
 В этой статье объясняется, как сопоставить Microsoft Edge в режиме Internet Explorer с расширениями файлов для классических приложений.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 86 или более поздней версии.
 
-## Руководство по сопоставлению расширений файлов с режимом Internet Explorer
+## <a name="guidance-for-file-extension-association-with-internet-explorer-mode"></a>Руководство по сопоставлению расширений файлов с режимом Internet Explorer
 
 В приведенных ниже инструкциях показано, как сопоставить Microsoft Edge в режиме IE с типом файла MHT. Используйте приведенные ниже инструкции, чтобы настроить сопоставление файлов.
 
 > [!NOTE]
-> Вы можете задать конкретные расширения файлов, которые будут открываться в режиме Internet Explorer по умолчанию, с помощью политики **Задать файл конфигурации сопоставлений по умолчанию**. Дополнительные сведения см. в разделе [Политика CSP — ApplicationDefaults](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+> Вы можете задать конкретные расширения файлов, которые будут открываться в режиме Internet Explorer по умолчанию, с помощью политики **Задать файл конфигурации сопоставлений по умолчанию**. Дополнительные сведения см. в разделе [Политика CSP — ApplicationDefaults](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 1. Определите новый идентификатор ProgID в канале Microsoft Edge, который будет открываться в режиме Internet Explorer. Идентификатор ProgID содержит имя и значок приложения, а также полный путь к msedge.exe.
 
@@ -62,7 +62,7 @@ ms.locfileid: "11238196"
 
 После назначения ключей, описанных в предыдущем примере, в меню **Открыть с помощью** отобразится дополнительный параметр, позволяющий открывать файлы MHT с помощью Microsoft Edge \<channel\> в режиме IE.
 
-## Пример реестра
+## <a name="registry-example"></a>Пример реестра
 
 Следующий фрагмент кода можно сохранить в формате REG и импортировать в реестр.
 
@@ -91,16 +91,16 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
-## Настройка типов файлов для открытия в режиме Internet Explorer
+## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>Настройка типов файлов для открытия в режиме Internet Explorer
 
-С Microsoft Edge 88 вы можете настроить для ссылок на определенные типы файлов открытие в режиме Internet Explorer с помощью политики [Показывать контекстное меню для открытия ссылок в режиме Internet Explorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode). 
+С Microsoft Edge 88 вы можете настроить для ссылок на определенные типы файлов открытие в режиме Internet Explorer с помощью политики [Показывать контекстное меню для открытия ссылок в режиме Internet Explorer](./microsoft-edge-policies.md#show-context-menu-to-open-a-link-in-internet-explorer-mode). 
 
-Вы можете определить типы файлов, к которым должен применяться этот параметр, указав расширения файлов в политике [Открывать локальные файлы из списка разрешенных расширений файлов в режиме Internet Explorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist). 
+Вы можете определить типы файлов, к которым должен применяться этот параметр, указав расширения файлов в политике [Открывать локальные файлы из списка разрешенных расширений файлов в режиме Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 
-## См. также
+## <a name="see-also"></a>См. также
 
-- [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Сведения о настраиваемых сайтах](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
-- [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [Настройка сопоставлений типов файлов](https://docs.microsoft.com/windows/win32/shell/fa-file-types)
+- [Сведения о режиме IE](./edge-ie-mode.md)
+- [Сведения о настраиваемых сайтах](./edge-learnmore-configurable-sites-ie-mode.md)
+- [Дополнительные сведения о режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Настройка сопоставлений типов файлов](/windows/win32/shell/fa-file-types)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

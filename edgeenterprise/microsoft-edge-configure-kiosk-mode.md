@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сведения о возможностях режима терминала и настройке параметров режима терминала Microsoft Edge.
-ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442489"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448133"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Настройка режима терминала в Microsoft Edge
 
@@ -48,17 +48,17 @@ ms.locfileid: "11442489"
 |-|-|-|-|-|
 |Навигация в InPrivate|Y|Y|89|Y|
 |Сброс при неактивности|Y|Y|89|Y|
-|[Адресная строка только для чтения](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (политика) |N|Y |89|N|
-|[Удаление загружаемых данных при выходе](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (политика)  | Y|Y |89|N|
+|[Адресная строка только для чтения](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (политика) |N|Y |89|N|
+|[Удаление загружаемых данных при выходе](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (политика)  | Y|Y |89|N|
 |Блокировка F11 (вход и выход из полноэкранного режима) | Y | Y | 89 |Y|
 |Блокировка F12 (запуск средств разработчика) | Y | Y | 89 |Y|
 | Поддержка нескольких вкладок | N| Y| 89|Y|
-|[Разрешить поддержку URL-адресов](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (политика)|Y|Y|89|N|
-|[Блокировать поддержку URL-адресов](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (политика)|Y|Y|89|N|
-|[Показывать кнопку "Домой"](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (политика)|N|Y|89|Y|
-|[Управление избранным](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (политика)|N|Y|89|Y|
-|[Включить принтер](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (политика)|Y|Y|89|Y|
-|[Настройка URL-адреса страницы "Новая вкладка"](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (политика)|N|Y||Y|
+|[Разрешить поддержку URL-адресов](./microsoft-edge-policies.md#urlallowlist) (политика)|Y|Y|89|N|
+|[Блокировать поддержку URL-адресов](./microsoft-edge-policies.md#urlblocklist) (политика)|Y|Y|89|N|
+|[Показывать кнопку "Домой"](./microsoft-edge-policies.md#showhomebutton) (политика)|N|Y|89|Y|
+|[Управление избранным](./microsoft-edge-policies.md#managedfavorites) (политика)|N|Y|89|Y|
+|[Включить принтер](./microsoft-edge-policies.md#printingenabled) (политика)|Y|Y|89|Y|
+|[Настройка URL-адреса страницы "Новая вкладка"](./microsoft-edge-policies.md#newtabpagelocation) (политика)|N|Y||Y|
 |Кнопка завершения сеанса * | N| Y| 89|Y|
 |Все внутренние URL-адреса Microsoft Edge блокируются, кроме *edge://downloads* и *edge://print* |N|Y|89|Y|
 | Блокировка CTRL+N (открытие нового окна) * | Y | Y | 89 |Y|
@@ -66,7 +66,7 @@ ms.locfileid: "11442489"
 |Параметры и другое (...)будут отображать только обязательные параметры  |Y |Y |89 |Y|
 |Ограничение запуска других приложений из браузера|Y|Y|90/91|Y|
 |Блокировка параметров печати пользовательского интерфейса|Y|Y|90/91|Y|
-|[Настройка новой вкладки в качестве домашней страницы](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (политика)|-|-|ПОДЛЕЖИТ УТОЧНЕНИЮ|Y|
+|[Настройка новой вкладки в качестве домашней страницы](./microsoft-edge-policies.md#homepageisnewtabpage) (политика)|-|-|ПОДЛЕЖИТ УТОЧНЕНИЮ|Y|
 
 > [!NOTE]
 > Функции с символом "*" в конце включены только в сценарии одного приложения с ограниченным доступом.
@@ -124,25 +124,25 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ## <a name="support-policies-for-kiosk-mode"></a>Поддерживаемые политики режима терминала
 
-Используйте любую из политик Microsoft Edge, перечисленных в следующей таблице, чтобы улучшить работу терминала для настроенного вами типа режима терминала Microsoft Edge. Дополнительные информацию об этих политиках см. в [справочнике по политикам браузера Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-policies).
+Используйте любую из политик Microsoft Edge, перечисленных в следующей таблице, чтобы улучшить работу терминала для настроенного вами типа режима терминала Microsoft Edge. Дополнительные информацию об этих политиках см. в [справочнике по политикам браузера Microsoft Edge](./microsoft-edge-policies.md).
 
 > [!NOTE]
 > Конфигурация политик не ограничивается политиками, перечисленными в следующей таблице, однако другие политики следует проверить и убедиться, что они не оказывают негативного влияния на функциональность режима терминала.
 
 |Групповая политика|Цифровая/интерактивная вывеска|Одно приложение для общего просмотра|
 |--|--|--|
-|[Вывод на печать](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
-|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | Y|
-|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
-|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
-|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
-|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
-|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
-|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
-|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
-|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
-|[Параметры SmartScreen](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
-|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
+|[Вывод на печать](./microsoft-edge-policies.md#printing-policies) | Y|Y |
+|[HomePageLocation](./microsoft-edge-policies.md#homepagelocation) |N | Y|
+|[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton) |N | Y|
+|[NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) |N |Y |
+|[FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled) |N |Y |
+|[URLAllowlist](./microsoft-edge-policies.md#urlallowlist) |Y |Y |
+|[URLBlocklist](./microsoft-edge-policies.md#urlblocklist) |Y | Y|
+|[ManagedSearchEngines](./microsoft-edge-policies.md#managedsearchengines) |N | Y|
+|[UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed) |N | Y|
+|[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|Y |
+|[Параметры SmartScreen](./microsoft-edge-policies.md#smartscreen-settings-policies) |Y |Y |
+|[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|Y|
 
 ## <a name="microsoft-edge-with-assigned-access"></a>Microsoft Edge с ограниченным доступом
 
@@ -154,11 +154,11 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 **Откуда загрузить Windows Insider Preview?**
 
-Чтобы установить сборку Windows 10 Insider Preview на компьютер с Windows, следуйте инструкциям, указанным в разделе  [Начало работы со сборками Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+Чтобы установить сборку Windows 10 Insider Preview на компьютер с Windows, следуйте инструкциям, указанным в разделе  [Начало работы со сборками Windows 10 Insider Preview](/windows-insider/get-started).
 
 ### <a name="multi-app-kiosk"></a>Режим терминала с несколькими приложениями
 
-Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge из стабильного канала— **MSEdge**).
+Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge из стабильного канала— **MSEdge**).
 
 При использовании Microsoft Edge с назначенным доступом для нескольких приложений можно настроить терминал Microsoft Edge для использования [политик браузера Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies), чтобы задать условия просмотра в зависимости от ваших уникальных требований.
 
@@ -166,7 +166,7 @@ Microsoft Edge можно запустить с [ограниченным дос
 
 Параметры Windows — это самый простой способ настроить одно или два устройства с одним приложением в режиме терминала. Для настройки компьютера с одним приложением в режиме терминала выполните указанные ниже действия.
 
-1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям в разделе [Начало работы со сборками Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям в разделе [Начало работы со сборками Windows 10 Insider Preview](/windows-insider/get-started).
 2. Чтобы протестировать новейшие функции, можно скачать последний канал [Microsoft Edge beta](https://www.microsoftedgeinsider.com/download)версии 89 или более поздней версии.
 3. На компьютере терминала откройте параметры Windows и в поле поиска введите слово «терминал». Чтобы открыть диалоговое окно для создания терминала, выберите  **Настройка терминала (ограниченный доступ)**, как показано на следующем снимке экрана.
 
@@ -216,18 +216,18 @@ Microsoft Edge можно запустить с [ограниченным дос
 
 В настоящее время не поддерживаются следующие функции и рекомендуется их отключить:
 
-- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
-- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
-- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
-- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
-- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
-- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
-- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
-- [Расширения](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
-- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
+- [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
+- [ManagedFavorites](./microsoft-edge-policies.md#managedfavorites)
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
+- [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
+- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
+- [Расширения](./microsoft-edge-policies.md#extensions-policies)
+- [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## <a name="roadmap"></a>Стратегия
 
@@ -245,5 +245,5 @@ Microsoft Edge можно запустить с [ограниченным дос
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Планирование развертывания Microsoft Edge](deploy-edge-plan-deployment.md)
-- [Настройка терминалов и цифровых вывесок в выпусках Windows для настольных компьютеров](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Настройка терминалов и цифровых вывесок в выпусках Windows для настольных компьютеров](/windows/configuration/kiosk-methods)
 - [Планирование перехода в режим терминала](microsoft-edge-kiosk-mode-transition-plan.md)

@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Планирование перехода в режим терминала
-ms.openlocfilehash: 3a438c6dd71d9e1f0e644d24e3b1d1d60b099e8e
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314239"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447853"
 ---
-# Планирование перехода в режим терминала
+# <a name="plan-your-kiosk-mode-transition"></a>Планирование перехода в режим терминала
 
 В этой статье содержится руководство по переходу терминала с устаревшей версии Microsoft Edge на Microsoft Edge.  
 
@@ -27,7 +27,7 @@ ms.locfileid: "11314239"
 > [!IMPORTANT]
 > Когда 9 марта 2021 г. завершится поддержка устаревшей версии Microsoft Edge, она будет удалена и заменена Microsoft Edge на Chromium в рамках обновления Windows в апреле. Подробные сведения можно найти [в этой записи блога.](https://aka.ms/EdgeLegacyEOS) Чтобы продолжить использовать сценарии терминала на основе браузера, необходимо установить Microsoft Edge на Chromium и настроить режим терминала до выпуска Обновлений Windows за апрель на вашем устройстве.
 
-## Действия по настройке терминала
+## <a name="kiosk-setup-steps"></a>Действия по настройке терминала
 
 Чтобы настроить терминал в Microsoft Edge, воспользуйтесь следующими действиями.
 
@@ -37,17 +37,17 @@ ms.locfileid: "11314239"
 |-|-|-|-|-|
 |Навигация в InPrivate|Y|Y|89|Y|
 |Сброс при неактивности|Y|Y|89|Y|
-|[Адресная строка только для чтения](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) (политика) |N|Y |89|N|
-|[Удаление загружаемых данных при выходе](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) (политика)  | Y|Y |89|N|
+|[Адресная строка только для чтения](./microsoft-edge-policies.md#kioskaddressbareditingenabled) (политика) |N|Y |89|N|
+|[Удаление загружаемых данных при выходе](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) (политика)  | Y|Y |89|N|
 |Блокировка F11 (вход и выход из полноэкранного режима) | Y | Y | 89 |Y|
 |Блокировка F12 (запуск средств разработчика) | Y | Y | 89 |Y|
 | Поддержка нескольких вкладок | N| Y| 89|Y|
-|[Разрешить поддержку URL-адресов](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (политика)|Y|Y|89|N|
-|[Блокировать поддержку URL-адресов](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (политика)|Y|Y|89|N|
-|[Показывать кнопку "Домой"](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (политика)|N|Y|89|Y|
-|[Управление избранным](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (политика)|N|Y|89|Y|
-|[Включить принтер](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) (политика)|Y|Y|89|Y|
-|[Настройка URL-адреса страницы "Новая вкладка"](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (политика)|N|Y||Y|
+|[Разрешить поддержку URL-адресов](./microsoft-edge-policies.md#urlallowlist) (политика)|Y|Y|89|N|
+|[Блокировать поддержку URL-адресов](./microsoft-edge-policies.md#urlblocklist) (политика)|Y|Y|89|N|
+|[Показывать кнопку "Домой"](./microsoft-edge-policies.md#showhomebutton) (политика)|N|Y|89|Y|
+|[Управление избранным](./microsoft-edge-policies.md#managedfavorites) (политика)|N|Y|89|Y|
+|[Включить принтер](./microsoft-edge-policies.md#printingenabled) (политика)|Y|Y|89|Y|
+|[Настройка URL-адреса страницы "Новая вкладка"](./microsoft-edge-policies.md#newtabpagelocation) (политика)|N|Y||Y|
 |Кнопка завершения сеанса | N| Y| 89|Y|
 |Все внутренние URL-адреса Microsoft Edge блокируются, кроме *edge://downloads* и *edge://print* |N|Y|89|Y|
 | Блокировка CTRL+N (открытие нового окна) | Y | Y | 89 |Y|
@@ -55,14 +55,14 @@ ms.locfileid: "11314239"
 |Параметры и другое (...)будут отображать только обязательные параметры  |Y |Y |89 |Y|
 |Ограничение запуска других приложений из браузера|Y|Y|90/91|Y|
 |Блокировка параметров печати пользовательского интерфейса|Y|Y|90/91|Y|
-|[Настройка новой вкладки в качестве домашней страницы](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage) (политика)|-|-|ПОДЛЕЖИТ УТОЧНЕНИЮ|Y|
+|[Настройка новой вкладки в качестве домашней страницы](./microsoft-edge-policies.md#homepageisnewtabpage) (политика)|-|-|ПОДЛЕЖИТ УТОЧНЕНИЮ|Y|
 
 > [!NOTE]
 > Сведения о расписании выпусков Microsoft Edge см. в [расписании выпусков Microsoft Edge.](microsoft-edge-release-schedule.md)
 
 **Шаг 2. Тестирование нового терминала в Microsoft Edge.** Рекомендуется протестировать настройку режима терминала в Microsoft Edge. Быстрый и простой способ протестировать режим терминала — настроить отдельное приложение с ограниченным доступом с помощью параметров Windows, как описано далее.
 
-1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям, указанным в разделе [Начало работы со сборками Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/get-started).
+1. Установите последний выпуск Windows 10 Insider Preview версии 20215 или выше. Следуйте инструкциям, указанным в разделе [Начало работы со сборками Windows 10 Insider Preview](/windows-insider/get-started).
 2. Установите последнюю версию [канала Microsoft Edge Stable](https://www.microsoft.com/edge) версии 87 или более поздней.  Чтобы протестировать новейшие функции, можно скачать последний [канал Microsoft Edge Beta](https://www.microsoftedgeinsider.com/download) версии 89 или более поздней.
 
    > [!IMPORTANT]
@@ -109,11 +109,11 @@ ms.locfileid: "11314239"
 
 **Шаг 3. Разработка плана перехода.** На основе ваших потребностей в тестировании и организационных потребностей рекомендуется разработать план перехода и перейти на Microsoft Edge на Chromium до завершения поддержки устаревшей версии Microsoft Edge 9 марта 2021 г.
 
-## Дополнительные сценарии, которые требуют воссоздания существующего режима терминала
+## <a name="additional-scenarios-that-require-you-to-recreate-an-existing-kiosk-mode"></a>Дополнительные сценарии, которые требуют воссоздания существующего режима терминала
 
 При обновлении до Windows 10 версии 20H2 будет установлен Microsoft Edge на Chromium, а устаревшая версия Microsoft Edge будет скрыта. В этом случае вам потребуется снова настроить режим терминала в Microsoft Edge на Chromium.
 
-## Как получить справку
+## <a name="how-to-get-help"></a>Как получить справку
 
 Режим терминала может быть важной частью вашей повседневной деятельности, поэтому мы хотим сделать этот переход как можно более плавным и помочь вам избежать сбоев. Если вашей компании требуется помощь при переходе на Microsoft Edge на Chromium:
 
@@ -121,7 +121,7 @@ ms.locfileid: "11314239"
 - [Поддержка FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1) также доступна без дополнительной оплаты клиентам, имеющим 150 или более платных рабочих мест Windows 10 Корпоративная.
 - [Служба Assure для приложений](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure) доступна при возникновении проблем с совместимостью сайта или приложения.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Новый Microsoft Edge заменит устаревшую версию Microsoft Edge в апрельском выпуске обновления Windows 10 во вторник](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)

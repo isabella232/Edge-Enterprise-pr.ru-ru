@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка параметров политики Microsoft Edge в macOS с помощью файла PLIST
-ms.openlocfilehash: abe110ab3589cc9276f28590273ece2d372be3b8
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: 3f297c11d8009c85a1bc5e17447681ee2b9ef1e2
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194694"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447453"
 ---
-# Настройка параметров политики Microsoft Edge для macOS с помощью файла PLIST
+# <a name="configure-microsoft-edge-policy-settings-for-macos-using-a-plist"></a>Настройка параметров политики Microsoft Edge для macOS с помощью файла PLIST
 
 В этой статье описано, как настроить Microsoft Edge в macOS с помощью файла со списком свойств (.plist). Вы узнаете, как создать этот файл и развернуть его в Microsoft Intune.
 
@@ -26,7 +26,7 @@ ms.locfileid: "11194694"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-## Настройка политик Microsoft Edge в macOS
+## <a name="configure-microsoft-edge-policies-on-macos"></a>Настройка политик Microsoft Edge в macOS
 
 Первый этап — это создание файла со списком свойств. Вы можете создать файл PLIST в любом текстовом редакторе или использовать [Терминал для создания профиля конфигурации](#create-a-configuration-profile-using-terminal). Однако проще создавать и редактировать файл PLIST с помощью средства форматирования XML-кода. *Xcode* — это бесплатная интегрированная среда разработки, которую можно получить в одном из следующих мест.
 
@@ -42,7 +42,7 @@ ms.locfileid: "11194694"
 
 Последним шагом является развертывание файла PLIST на устройствах Mac ваших пользователей с помощью предпочитаемого поставщика MDM, например Microsoft Intune. Инструкции см. в разделе [Развертывание файла PLIST](#deploy-your-plist).
 
-### Создание профиля конфигурации с помощью терминала
+### <a name="create-a-configuration-profile-using-terminal"></a>Создание профиля конфигурации с помощью терминала
 
 1. В терминале используйте следующую команду, чтобы создать файл PLIST для Microsoft Edge на компьютере с использованием предпочтительных параметров.
 
@@ -61,13 +61,13 @@ ms.locfileid: "11194694"
 > [!NOTE]
 > Файл plist или xml должен содержать только пары "ключ-значение". Перед отправкой файла в Intune удалите из него все значения \<plist> и \<dict>, а также заголовки xml. Файл должен содержать только пары "ключ-значение".
 
-## Развертывание файла PLIST
+## <a name="deploy-your-plist"></a>Развертывание файла PLIST
 
-Для Microsoft Intune создайте новый профиль конфигурации устройства, предназначенный для платформы macOS, и выберите тип профиля *Файл основных параметров*. Выберите **com.microsoft.Edge** в качестве предпочтительного доменного имени и добавьте файл PLIST. Дополнительные сведения см. в разделе [Добавление файла со списком свойств на устройства macOS с помощью Microsoft Intune](https://docs.microsoft.com/intune/configuration/preference-file-settings-macos).
+Для Microsoft Intune создайте новый профиль конфигурации устройства, предназначенный для платформы macOS, и выберите тип профиля *Файл основных параметров*. Выберите **com.microsoft.Edge** в качестве предпочтительного доменного имени и добавьте файл PLIST. Дополнительные сведения см. в разделе [Добавление файла со списком свойств на устройства macOS с помощью Microsoft Intune](/intune/configuration/preference-file-settings-macos).
 
 Для Jamf добавьте файл PLIST как полезные данные *Настраиваемые параметры*.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Настройка для macOS с помощью Jamf](configure-microsoft-edge-on-mac-jamf.md)

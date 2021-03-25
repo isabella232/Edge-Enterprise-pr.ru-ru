@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
   description: Часто задаваемые вопросы (часто задаваемые вопросы) о развертывании Microsoft Edge на предприятии
-  ms.openlocfilehash: d7098666c67d1b88fc6f7e0910c8793315e750cc
-  ms.sourcegitcommit: 0bd67aa982613f663e6840929a769fc88d5a6b4d
+  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
+  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/05/2021
-  ms.locfileid: "11393782"
+  ms.lasthandoff: 03/24/2021
+  ms.locfileid: "11448153"
 title: Часто задаваемые вопросы (часто задаваемые вопросы) о Microsoft Edge в предприятии
 summary: >
   > [!NOTE]
@@ -33,15 +33,15 @@ sections:
       Мы стремимся поддерживать Internet Explorer, чтобы он оставался надежным и безопасным браузером. Internet Explorer по-прежнему является компонентом Windows и следует жизненному циклу поддержки операционной системы, на которую она установлена. Дополнительные сведения см. в разделе [Вопросы и ответы по жизненному циклу— Internet Explorer](https://support.microsoft.com/help/17454/). Несмотря на то что корпорация Майкрософт продолжает поддерживать и обновлять Internet Explorer, новейшие функции и обновления платформы будут доступны только в Microsoft Edge.
   - question: Можно ли запускать текущую версию Microsoft Edge (Microsoft Edge Legacy) вместе с новой версией?
     answer: >
-      Да. После 15 января 2020г. новая версия Microsoft Edge (на основе Chromium) будет распространятся для устройств с Windows 10 версии 1803 Домашняя и Pro. Присоединенные к домену устройства исключены из этого обновления. Дополнительные сведения см. в разделе [Обзор обновлений Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). При оценке следующей версии Microsoft Edge можно использовать боковую установку Microsoft Edge Legacy. Дополнительные сведения см. в разделе [Доступ к старой версии версии Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-sysupdate-access-old-edge). Кроме того, каждый из новых каналов Microsoft Edge также поддерживает установку бок о бок. Дополнительные сведения см. в разделе [Обзор каналов Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      Да. После 15 января 2020г. новая версия Microsoft Edge (на основе Chromium) будет распространятся для устройств с Windows 10 версии 1803 Домашняя и Pro. Присоединенные к домену устройства исключены из этого обновления. Дополнительные сведения см. в разделе [Обзор обновлений Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview). При оценке следующей версии Microsoft Edge можно использовать боковую установку Microsoft Edge Legacy. Дополнительные сведения см. в разделе [Доступ к старой версии версии Microsoft Edge](./microsoft-edge-sysupdate-access-old-edge.md). Кроме того, каждый из новых каналов Microsoft Edge также поддерживает установку бок о бок. Дополнительные сведения см. в разделе [Обзор каналов Microsoft Edge](./microsoft-edge-channels.md).
   - question: Поддерживает ли Microsoft Edge (на основе Chromium) элементы ActiveX или вспомогательные объекты браузера, такие как Silverlight или Java?
     answer: >
-      Нет. Microsoft Edge не поддерживает элементы управления ActiveX или объекты поддержки браузера (BHOs), такие как Silverlight или Java. Но если вы применяете веб-приложения, использующие элементы ActiveX, вспомогательные объекты браузера или устаревшие режимы работы с документами в Internet Explorer 11, то можно настроить их запуск в режиме IE в новом Microsoft Edge. Дополнительные сведения см. в статье [Настройка режима IE в Microsoft Edge](https://docs.microsoft.com/DeployEdge/edge-ie-mode).
+      Нет. Microsoft Edge не поддерживает элементы управления ActiveX или объекты поддержки браузера (BHOs), такие как Silverlight или Java. Но если вы применяете веб-приложения, использующие элементы ActiveX, вспомогательные объекты браузера или устаревшие режимы работы с документами в Internet Explorer 11, то можно настроить их запуск в режиме IE в новом Microsoft Edge. Дополнительные сведения см. в статье [Настройка режима IE в Microsoft Edge](./edge-ie-mode.md).
   - question: Будут ли перенастрояться избранное из текущей версии Microsoft Edge или мне придется их повторно добавлять?
     answer: "В данный Microsoft Edge поддерживает импорт из существующих установок Microsoft Edge, Chrome, Internet Explorer и Firefox (на Win10). Для импорта поддерживаются следующие параметры: Bookmarks, History, Passwords и Autofill (Платежи, адреса и общие формы). Вы можете импортировать данные во время первого запуска или из параметров браузера.  \n"
   - question: В чем разница между каналами и сборками Stable, Beta, Dev и Canary?
     answer: >
-      Канал Stable следующей версии Microsoft Edge — это наиболее стабильный канал с корпоративными возможностями, готовыми для [пилотного развертывания и оценки](https://aka.ms/EdgeEnterprise) в масштабах всей организации. Канал Beta позволяет проверить следующий выпуск Stable с участием показательной выборки пользователей. Стабильные и бета-каналы обновляются примерно каждые шесть недель. Каналы Dev и Canary продолжают обновляться еженедельно и ежедневно соответственно. Автономные установщики (MSIs и PKG-файлы) доступны только для каналов Stable, Beta и Dev. Дополнительные сведения см. в разделе [Обзор каналов Microsoft Edge](https://docs.microsoft.com/deployedge/microsoft-edge-channels).
+      Канал Stable следующей версии Microsoft Edge — это наиболее стабильный канал с корпоративными возможностями, готовыми для [пилотного развертывания и оценки](https://aka.ms/EdgeEnterprise) в масштабах всей организации. Канал Beta позволяет проверить следующий выпуск Stable с участием показательной выборки пользователей. Стабильные и бета-каналы обновляются примерно каждые шесть недель. Каналы Dev и Canary продолжают обновляться еженедельно и ежедневно соответственно. Автономные установщики (MSIs и PKG-файлы) доступны только для каналов Stable, Beta и Dev. Дополнительные сведения см. в разделе [Обзор каналов Microsoft Edge](./microsoft-edge-channels.md).
   - question: Какие расширения поддерживает новая версия Microsoft Edge?
     answer: >
       Microsoft Edge поддерживает расширения с [ портала Microsoft Edge Insider Addons](https://go.microsoft.com/fwlink/?linkid=2081222) и из [интернет-магазина Chrome](https://go.microsoft.com/fwlink/?linkid=2072338).
@@ -53,12 +53,12 @@ sections:
       Да. В [каталоге Центра обновления Майкрософт](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows) есть пакеты, которые можно использовать для первоначального развертывания нового браузера Microsoft Edge через WSUS. После первоначального развертывания по умолчанию настраиваются автоматические обновления. Подробнее см. [Обновление в WSUS для нового браузера Microsoft Edge для Windows 10 версий 1809, 1903, 1909 и 2004: 29октября 2020г](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge).
 
 
-      Обновления можно устанавливать вручную с помощью диспетчера конфигурации, например [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json).
+      Обновления можно устанавливать вручную с помощью диспетчера конфигурации, например [ConfigMgr](/configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json).
   - question: Поддерживаются ли мастер-предпочтения?
     answer: "Нет, мастер-предпочтения не поддерживаются. \n"
 additionalContent: >-
   ## <a name="see-also"></a>См. также
 
-  - [Целевая страница с документацией по Microsoft Edge Enterprise](https://docs.microsoft.com/DeployEdge/)
+  - [Целевая страница с документацией по Microsoft Edge Enterprise](./index.yml)
 
   - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: 7c679918a52a251a53ed5aa5d36df587ba1c46ab
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: a78c56d4c20da711eb73679dbe1c974bfac3c869
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442418"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448183"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Расписание выпусков Microsoft Edge
 
@@ -23,7 +23,7 @@ ms.locfileid: "11442418"
 
 ## <a name="release-cadence"></a>Частота выпусков
 
-Корпорация Майкрософт предлагает четыре варианта, или "канала", для управления частотой добавления новых функций в Microsoft Edge. Команда Microsoft Edge планирует переносить общедоступные обновления в каналы Beta и Stable каждые шесть недель. Дополнительные сведения о наших каналах, их цикле выпуска и уровне поддержки см. в статье [Обзор каналов](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview).
+Корпорация Майкрософт предлагает четыре варианта, или "канала", для управления частотой добавления новых функций в Microsoft Edge. Команда Microsoft Edge планирует переносить общедоступные обновления в каналы Beta и Stable каждые шесть недель. Дополнительные сведения о наших каналах, их цикле выпуска и уровне поддержки см. в статье [Обзор каналов](./microsoft-edge-channels.md#channel-overview).
 
 > [!NOTE]
 > Начиная со стабильной версии канала 94, Microsoft Edge переходит к 4-недельной основной цикл выпуска. Однако мы понимаем, что корпоративным клиентам при управлении сложными средами требуется больше времени для планирования и тестирования обновлений Microsoft Edge. Чтобы помочь корпоративным клиентам, которым необходимо более продолжительное время для управления обновлениями, Microsoft Edge предложит **расширенный параметр Stable, предназначенный для более длительного 8-недельного основного цикла выпуска**. Этот параметр будет доступен только для клиентов с управляемыми средами.
@@ -41,9 +41,9 @@ ms.locfileid: "11442418"
 
 | Версия | Состояние выпуска | Канал Beta<br>Неделя выпуска | Канал Stable<br>Неделя выпуска |
 |---------|-----|------|--------|
-| 88 | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
-| **89** | Выпущена<br>Версия | 3 февраля 2021 г.<br>[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3) | **4 марта 2021 г.**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
-| **90** | Выпущена<br>Версия | **16марта 2021г.**<br>**[90.0.818.8](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16)** | Неделя с 15 апреля 2021 г. |
+| 88 | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](./microsoft-edge-relnote-beta-channel.md#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](./microsoft-edge-relnote-stable-channel.md#version-88070550-january-21)|
+| **89** | Выпущена<br>Версия | 3 февраля 2021 г.<br>[89.0.774.18](./microsoft-edge-relnote-beta-channel.md#version-89077418-february-3) | **4 марта 2021 г.**<br>**[89.0.774.45](./microsoft-edge-relnote-stable-channel.md#version-89077445-march-21)** |
+| **90** | Выпущена<br>Версия | **16марта 2021г.**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | Неделя с 15 апреля 2021 г. |
 | 91 | Целевой выпуск | Неделя с 27 апреля 2021 г. | Неделя с 27 мая 2021 г. |
 | 92 | Целевой выпуск | Неделя с 8 июня 2021 г. | Неделя с 22 июля 2021 г. |
 | 93 | Целевой выпуск | Неделя с 3 августа 2021 г. | Неделя со 2 сентября 2021 г. |

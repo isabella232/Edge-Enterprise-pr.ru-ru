@@ -10,66 +10,66 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Локальная синхронизация для пользователей Active Directory (AD)
-ms.openlocfilehash: adf0adc8370aa1e18d07d0d2e91727d1ac607bf1
-ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
+ms.openlocfilehash: 820188db94f4ab2bc9b1ad659c22c324bcea145b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "11328051"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448053"
 ---
-# Локальная синхронизация для пользователей Active Directory (AD)
+# <a name="on-premises-sync-for-active-directory-ad-users"></a>Локальная синхронизация для пользователей Active Directory (AD)
 
 В этой статье объясняется, как пользователи Active Directory (AD) могут перемещать избранное и параметры Microsoft Edge между компьютерами, не подключаясь к облачным службам (Майкрософт).
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 85 или более поздней.
 
-## Введение
+## <a name="introduction"></a>Введение
 
 Для синхронизации данных пользователя в Microsoft Edge обычно требуется учетная запись Майкрософт или учетная запись Azure Active Directory (Azure AD), а также подключение к облачным службам (Майкрософт). При использовании локальной синхронизации Microsoft Edge сохраняет избранное и параметры пользователя Active Directory в файле, который можно перемещать между различными компьютерами. Локальная синхронизация не влияет на облачную синхронизацию профилей, для которых она разрешена.
 
-## Принцип работы
+## <a name="how-it-works"></a>Принцип работы
 
 Microsoft Edge позволяет связать профили с учетными записями Active Directory (AD), которые невозможно использовать с облачной синхронизацией. При включении локальной синхронизации данные из профиля AD сохраняются в файле profile.pb. По умолчанию этот файл хранится в *%APPDATA%/Microsoft/Edge*. Записанный файл можно перемещать между несколькими компьютерами, и на каждом из них будет выполняться чтение и запись данных пользователя. Microsoft Edge только считывает и записывает из этого файла; ответственность за перемещение файла по мере необходимости лежит на администраторе.
 
-## Использование локальной синхронизации
+## <a name="use-on-premises-sync"></a>Использование локальной синхронизации
 
 Чтобы использовать локальную синхронизацию, необходимо включить ее, связать профиль с учетной записью AD и при необходимости изменить расположение данных пользователя.
 
-### Включение локальной синхронизации
+### <a name="enable-on-premises-sync"></a>Включение локальной синхронизации
 
-Чтобы включить локальную синхронизацию в Microsoft Edge, настройте политику [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled).
+Чтобы включить локальную синхронизацию в Microsoft Edge, настройте политику [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled).
 
-### Убедитесь, что профиль связан с учетной записью Active Directory
+### <a name="ensure-that-a-profile-is-associated-with-an-active-directory-account"></a>Убедитесь, что профиль связан с учетной записью Active Directory
 
-Для выполнения локальной синхронизации необходим профиль, связанный с учетной записью Active Directory (AD). При отсутствии такого профиля локальная синхронизация не выполняется. Чтобы убедиться, что пользователи входят в систему с помощью учетной записи AD, настройте политику [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin). При локальной синхронизации Microsoft Edge использует только AD для установления удостоверения для данных пользователя, и нет прямой связи между тем, как Microsoft Edge считывает и записывает локальные данные, и тем, как администратор настроил роуминг для пользователя AD.
+Для выполнения локальной синхронизации необходим профиль, связанный с учетной записью Active Directory (AD). При отсутствии такого профиля локальная синхронизация не выполняется. Чтобы убедиться, что пользователи входят в систему с помощью учетной записи AD, настройте политику [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin). При локальной синхронизации Microsoft Edge использует только AD для установления удостоверения для данных пользователя, и нет прямой связи между тем, как Microsoft Edge считывает и записывает локальные данные, и тем, как администратор настроил роуминг для пользователя AD.
 
-### Изменение расположения данных пользователя (необязательно)
+### <a name="change-the-location-of-the-user-data-optional"></a>Изменение расположения данных пользователя (необязательно)
 
-По умолчанию данные пользователя хранятся в файле **profile.pb** в *%APPDATA%/Microsoft/Edge*. Чтобы изменить расположение этого файла, настройте политику [RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation).
+По умолчанию данные пользователя хранятся в файле **profile.pb** в *%APPDATA%/Microsoft/Edge*. Чтобы изменить расположение этого файла, настройте политику [RoamingProfileLocation](./microsoft-edge-policies.md#roamingprofilelocation).
 
-## Изменения во взаимодействии с пользователем при включении локальной синхронизации
+## <a name="changes-in-the-user-experience-when-on-premises-sync-is-enabled"></a>Изменения во взаимодействии с пользователем при включении локальной синхронизации
 
 Если включена локальная синхронизация, пользователям не будет предложено включить синхронизацию. Кроме того, пользователи не могут отключить синхронизацию в параметрах синхронизации или включить типы синхронизации, которые не поддерживаются локальной синхронизацией.
 
-## Заметки об использовании локальной синхронизации
+## <a name="on-premises-sync-usage-notes"></a>Заметки об использовании локальной синхронизации
 
-### Выполнение облачной синхронизации и локальной синхронизации на одном компьютере
+### <a name="running-cloud-sync-and-on-premises-sync-on-the-same-computer"></a>Выполнение облачной синхронизации и локальной синхронизации на одном компьютере
 
 Локальная синхронизация не влияет на облачную синхронизацию. Если в Microsoft Edge есть несколько учетных записей Майкрософт или профилей Azure Active Directory, которые синхронизируются с облаком, эти профили продолжат синхронизироваться при включении локальной синхронизации.
 
-### Не рекомендуется запуск Microsoft Edge на нескольких компьютерах одновременно
+### <a name="running-microsoft-edge-on-more-than-one-computer-at-a-time-isnt-recommended"></a>Не рекомендуется запуск Microsoft Edge на нескольких компьютерах одновременно
 
 Так как при локальной синхронизации выполняется перемещение файла данных пользователя между компьютерами, изменения между одновременными сеансами не синхронизируются. Поэтому локальную синхронизацию лучше всего использовать на одном компьютере. Если выполняются одновременные локальные сеансы, данные на любом из компьютеров могут неожиданно переопределяться данными с другого компьютера при следующем запуске сеанса браузера.
 
 > [!NOTE]
 > Microsoft Edge блокирует файл **profile.pb** при включении локальной синхронизации. Если один файл **profile.pb** совместно используется на нескольких компьютерах с помощью перенаправления папок, тогда можно запускать только один экземпляр Microsoft Edge, использующий этот файл.
 
-### Использование других политик синхронизации при локальной синхронизации
+### <a name="using-other-sync-policies-with-on-premises-sync"></a>Использование других политик синхронизации при локальной синхронизации
 
-Политику [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) можно использовать для выборочного отключения избранного или параметров синхронизации при необходимости. Политика [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) не влияет на локальную синхронизацию.
+Политику [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled) можно использовать для выборочного отключения избранного или параметров синхронизации при необходимости. Политика [SyncDisabled](./microsoft-edge-policies.md#syncdisabled) не влияет на локальную синхронизацию.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge и службы переноса параметров в рамках предприятия Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)

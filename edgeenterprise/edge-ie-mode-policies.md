@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка политик для режима IE
-ms.openlocfilehash: 2d2ded3a3fb338bdf2d815d681b52249007945ac
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980860"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447363"
 ---
-# Настройка политик для режима IE
+# <a name="configure-ie-mode-policies"></a>Настройка политик для режима IE
 
 В этой статье объясняется, как настроить политики для режима IE.
 
@@ -31,13 +31,13 @@ ms.locfileid: "10980860"
 3. (Необязательно) [Перенаправление сайтов с IE в Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
-> Политики для включения режима IE можно настроить с помощью Intune. Дополнительные сведения см. в статьях [Добавление Microsoft Edge в Microsoft Intune](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) и [Настройка политик Microsoft Edge с помощью Microsoft Intune](https://docs.microsoft.com/DeployEdge/configure-edge-with-intune).
+> Политики для включения режима IE можно настроить с помощью Intune. Дополнительные сведения см. в статьях [Добавление Microsoft Edge в Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) и [Настройка политик Microsoft Edge с помощью Microsoft Intune](./configure-edge-with-intune.md).
 
-## Настройка интеграции с Internet Explorer
+## <a name="configure-internet-explorer-integration"></a>Настройка интеграции с Internet Explorer
 
 Вы можете настроить Internet Explorer для открытия сайтов непосредственно в Microsoft Edge (режим IE). Кроме того, можно настроить Internet Explorer для открытия сайтов в отдельном окне Internet Explorer 11. Большинство пользователей предпочитает, чтобы сайты открывались непосредственно в Microsoft Edge в режиме IE.
 
-### Включение интеграции с Internet Explorer с помощью групповой политики
+### <a name="enable-internet-explorer-integration-using-group-policy"></a>Включение интеграции с Internet Explorer с помощью групповой политики
 
 1. Скачайте и используйте последний [шаблон политик Microsoft Edge](https://www.microsoft.com/en-us/edge/business/download).
 2. Откройте редактор групповых политик.
@@ -53,14 +53,14 @@ ms.locfileid: "10980860"
    > Установка для политики значения **Отключено** предполагает, что режим IE отключен политикой, но его можно настроить с помощью edge://flags или параметров командной строки.
 7. Нажмите **ОК** или **Применить**, чтобы сохранить этот параметр политики.
 
-## Перенаправление сайтов с Microsoft Edge в режим IE
+## <a name="redirect-sites-from-microsoft-edge-to-ie-mode"></a>Перенаправление сайтов с Microsoft Edge в режим IE
 
 Существует два варианта определения сайтов, которые должны открываться в режиме IE:
 
 - (Рекомендуется) [Настройка сайтов в списке сайтов предприятия](#configure-sites-on-the-enterprise-site-list)
 - [Настройка всех сайтов интрасети](#configure-all-intranet-sites)
 
-### Настройка сайтов в списке сайтов предприятия
+### <a name="configure-sites-on-the-enterprise-site-list"></a>Настройка сайтов в списке сайтов предприятия
 
 Вы можете использовать следующие групповые политики для настройки отдельных сайтов, которые нужно открыть в режиме IE:
 
@@ -71,10 +71,10 @@ ms.locfileid: "10980860"
 
 Дополнительные сведения о списках сайтов в режиме предприятия можно найти в следующих статьях:
 
-- [Использование средства Enterprise Mode Site List Manager](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Добавление нескольких сайтов в список сайтов в режиме предприятия в средстве Enterprise Mode Site List Manager с помощью файла (схема версии2)](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
+- [Использование средства Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
+- [Добавление нескольких сайтов в список сайтов в режиме предприятия в средстве Enterprise Mode Site List Manager с помощью файла (схема версии2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
-### Настройка с помощью политики "Использовать список веб-сайтов IE в режиме предприятия"
+### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Настройка с помощью политики "Использовать список веб-сайтов IE в режиме предприятия"
 
 В режиме Internet Explorer можно использовать существующую политику для настройки списка сайтов предприятия для Internet Explorer, что позволяет создавать и вести один список.
 
@@ -90,7 +90,7 @@ ms.locfileid: "10980860"
     - Локальный файл: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Нажмите **ОК** или **Применить**, чтобы сохранить эти параметры.
 
-### Настройка с помощью политики "Настроить список сайтов для режима предприятия"
+### <a name="configure-using-the-configure-the-enterprise-mode-site-list-policy"></a>Настройка с помощью политики "Настроить список сайтов для режима предприятия"
 
 Кроме того, в режиме IE можно задать отдельную политику для Microsoft Edge. Эта дополнительная политика позволяет переопределять список сайтов IE. Например, в некоторых организациях список рабочих сайтов будет доступен для всех пользователей. Тогда вы сможете развернуть пилотный список сайтов для небольшой группы пользователей, используя эту политику.
 
@@ -106,7 +106,7 @@ ms.locfileid: "10980860"
     - Локальный файл: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. Нажмите **ОК** или **Применить**, чтобы сохранить эти параметры.
 
-### Настройка всех сайтов интрасети
+### <a name="configure-all-intranet-sites"></a>Настройка всех сайтов интрасети
 
 Режим IE можно настроить для всех сайтов в зоне местной интрасети. Вы можете исключить отдельные сайты из режима IE с помощью списка сайтов в режиме предприятия.
 
@@ -119,7 +119,7 @@ ms.locfileid: "10980860"
 3. Дважды щелкните **Отправлять все сайты интрасети в Internet Explorer**.
 4. Выберите **Включено**, а затем нажмите кнопку **ОК** или **Применить**, чтобы сохранить параметры политики.
 
-## Перенаправление сайтов с IE в Microsoft Edge
+## <a name="redirect-sites-from-ie-to-microsoft-edge"></a>Перенаправление сайтов с IE в Microsoft Edge
 
 Вы можете запретить пользователям использовать Internet Explorer для сайтов, для которых он не нужен. Internet Explorer может автоматически перенаправлять сайты в Microsoft Edge, если они не находятся в вашем списке сайтов.
 
@@ -138,8 +138,8 @@ ms.locfileid: "10980860"
    - Microsoft Edge версии 45 или более ранней
 9. Нажмите **ОК** или **Применить**, чтобы сохранить эти параметры.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Сведения о режиме IE](./edge-ie-mode.md)
+- [Дополнительные сведения о режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

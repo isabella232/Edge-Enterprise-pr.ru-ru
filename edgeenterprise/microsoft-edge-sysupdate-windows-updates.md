@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Обновления Windows для Microsoft Edge.
-ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: 880e5a591ee23ff852981e73fe4fc4cd815be9ad
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313909"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447153"
 ---
-# Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge
+# <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge
 
 В этой статье описывается, как будет выполняться обновление Windows для обеспечения поддержки следующей версии Microsoft Edge.
 
@@ -27,11 +27,11 @@ ms.locfileid: "11313909"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge из стабильного канала.
 
-## Цикл выпуска Microsoft Edge и Windows
+## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Цикл выпуска Microsoft Edge и Windows
 
 Новая версия Microsoft Edge будет поддерживать более гибкие возможности обновления, которые будут предоставляться для нее чаще. Так как выпуски браузера не привязаны к основным выпускам Windows, изменения будут вноситься в операционную систему, чтобы гарантировать оптимальную совместимость следующей версии Microsoft Edge с Windows. Результатом будет выпуск обновления компонентов в 6-недельном цикле (приблизительно). Обновления для системы безопасности и совместимости будут предоставляться по мере необходимости.
 
-## Обновления и интерфейс
+## <a name="updates-and-the-user-experience"></a>Обновления и интерфейс
 
 Обновления не будут затрагивать интерфейс до тех пор, пока следующая версия Microsoft Edge не будет установлена в рамках канала Stable. Установка Microsoft Edge в рамках каналов Beta, Dev или Canary не приведет к внесению каких-либо изменений в Windows. Эти выпуски браузера будут установлены вместе с имеющимися версиями браузера.
 
@@ -52,11 +52,11 @@ ms.locfileid: "11313909"
 
 - Microsoft Edge отменит регистрацию электронных книг и протоколов XML, которые не поддерживаются в новой версии Microsoft Edge. Для пользователей, которые попытаются открыть эти протоколы, будет отображаться диалоговое окно с запросом на выбор приложения по умолчанию. Дополнительные сведения об изменениях в поддержке электронных книг см. в разделе [Скачайте приложение для работы с файлами в формате ePub, чтобы продолжить чтение](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).
 
-## Информация о сроках
+## <a name="timeline"></a>Информация о сроках
 
 Изменения, необходимые для реализации поддержки описанного интерфейса, будут внесены в составе трех обновлений для разных версий Windows.
 
-### Windows версий 1903 и 1909
+### <a name="windows-versions-1903-and-1909"></a>Windows версий 1903 и 1909
 
 - Первый набор изменений в необязательном обновлении за июль 2019 года, предоставленном вместе с обновлением для системы безопасности за август 2019 года.
 - Второй набор изменений в необязательном обновлении за август 2019 года, предоставленном вместе с обновлением для системы безопасности за сентябрь 2019 года.
@@ -69,7 +69,7 @@ ms.locfileid: "11313909"
   > [!NOTE]
   > Вместе с этим обновлением Microsoft Edge перестанет поддерживать электронные книги.
 
-### Windows версий 1709, 1803 и 1809
+### <a name="windows-versions-1709-1803-and-1809"></a>Windows версий 1709, 1803 и 1809
 
 - Первый набор изменений в необязательном обновлении за август 2019 года, предоставленном вместе с обновлением для системы безопасности за сентябрь 2019 года.
 - Второй набор изменений в необязательном обновлении за сентябрь 2019 года, предоставленном вместе с обновлением для системы безопасности за октябрь 2019 года.
@@ -91,7 +91,7 @@ ms.locfileid: "11313909"
 | Версия 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Накопительный пакет обновления для Windows 10 версии 1809](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | Версии 1903 и 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Накопительный пакет обновления для Windows 10 версий 1903 и 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
 
-## Статьи по теме
+## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Документация по Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Документация по Microsoft Edge](./index.yml)

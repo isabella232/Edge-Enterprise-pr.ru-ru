@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как отключить Internet Explorer 11 и использовать режим Internet Explorer в Microsoft Edge.
-ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
-ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
+ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400609"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447393"
 ---
 # <a name="disable-internet-explorer-11"></a>Отключение Internet Explorer 11
 
@@ -45,7 +45,7 @@ ms.locfileid: "11400609"
 После настройки режима IE вы можете отключить IE11 в качестве автономного браузера, **не затрагивая функции режима IE** в организации, с помощью групповой политики.
 
 > [!NOTE]
-> Если вам нужно отдельное приложение IE11 для определенных сайтов и вы хотите перенаправлять весь трафик браузера в Microsoft Edge, вы можете настроить политику [Отправлять все сайты, которые не включены в список сайтов, в Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge), чтобы перенаправлять сайты из IE в Microsoft Edge.
+> Если вам нужно отдельное приложение IE11 для определенных сайтов и вы хотите перенаправлять весь трафик браузера в Microsoft Edge, вы можете настроить политику [Отправлять все сайты, которые не включены в список сайтов, в Microsoft Edge](./edge-ie-mode-policies.md#redirect-sites-from-ie-to-microsoft-edge), чтобы перенаправлять сайты из IE в Microsoft Edge.
 
 ## <a name="user-experience-after-redirecting-traffic-to-microsoft-edge"></a>Взаимодействие с пользователем после перенаправления трафика в Microsoft Edge
 
@@ -67,7 +67,7 @@ ms.locfileid: "11400609"
 
 Чтобы отключить Internet Explorer 11 с помощью групповой политики, выполните следующие действия.
 
-1. Убедитесь, что у вас есть необходимые обновления операционной системы. На этом шаге будут обновляться файлы ADMX непосредственно на компьютере (в частности inetres.adml и inetres.admx). Обратите внимание, что для обновления центрального хранилища нужно скопировать файлы ADML и ADMX на компьютере с необходимыми обновлениями. Дополнительные сведения см. в статье [Создание центрального хранилища и управление им](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
+1. Убедитесь, что у вас есть необходимые обновления операционной системы. На этом шаге будут обновляться файлы ADMX непосредственно на компьютере (в частности inetres.adml и inetres.admx). Обратите внимание, что для обновления центрального хранилища нужно скопировать файлы ADML и ADMX на компьютере с необходимыми обновлениями. Дополнительные сведения см. в статье [Создание центрального хранилища и управление им](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Откройте редактор групповых политик.
 3. Выберите ***Конфигурация компьютера/Административные шаблоны/Компоненты Windows/Internet Explorer***. 
 4. Дважды щелкните  **Отключить Internet Explorer 11 в качестве автономного браузера**.
@@ -83,5 +83,5 @@ ms.locfileid: "11400609"
 ## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Сведения о режиме IE](./edge-ie-mode.md)
+- [Дополнительные сведения о режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

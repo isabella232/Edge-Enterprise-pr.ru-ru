@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Подготовка избранного для Microsoft Edge
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088719"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447603"
 ---
-# Подготовка избранного для Microsoft Edge
+# <a name="provision-favorites-for-microsoft-edge"></a>Подготовка избранного для Microsoft Edge
 
 С учетом отзывов пользователей были внесены улучшения в подготовку избранного. Начиная с Microsoft Edge версии 85 администраторам больше не нужно вручную создавать файл для подготовки избранного. Администраторы могут добавлять избранное и папки с помощью пользовательского интерфейса Microsoft Edge для создания файла, который можно экспортировать в групповую политику.
 
-В этой статье описано, как подготовить набор избранного и папок для вашей организации. Можно использовать политику [Настроить избранное](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) для подготовки избранного и папок.
+В этой статье описано, как подготовить набор избранного и папок для вашей организации. Можно использовать политику [Настроить избранное](//DeployEdge/microsoft-edge-policies#configure-favorites) для подготовки избранного и папок.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 85 или более поздней.
 
-## Предварительные требования и рекомендации
+## <a name="prerequisites-and-recommendations"></a>Предварительные требования и рекомендации
 
 - Microsoft Edge версии 85 с соответствующим административным шаблоном, установленным для групповых политик.
 - Рекомендуется использовать новый профиль в Microsoft Edge для подготовки избранного. Все избранное, сохраненное вместе с профилем, будет включено в экспорт.  
 
-## Подготовка избранного и папок
+## <a name="provision-favorites-and-folders"></a>Подготовка избранного и папок
 
 Выполните следующие действия для подготовки избранного и папок для ваших пользователей.
 
@@ -66,6 +66,6 @@ ms.locfileid: "11088719"
 
 7. Нажмите кнопку **OK** или **Применить** для сохранения настроек политики.
 
-## См. также
+## <a name="see-also"></a>См. также
 
-- [Использование целевой страницы Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
+- [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

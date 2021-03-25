@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Поддержка языков интерфейса Microsoft Edge для Windows и macOS.
-ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
-ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
+ms.openlocfilehash: 37073213fcdacac6b8182dcbef93901c82110756
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "11406164"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447103"
 ---
 # <a name="microsoft-edge-language-support"></a>Поддержка языков в Microsoft Edge
 
@@ -156,5 +156,5 @@ ms.locfileid: "11406164"
 
 ## <a name="see-also"></a>Статьи по теме
 
-- [Документация по Microsoft Edge](https://docs.microsoft.com/DeployEdge/)
+- [Документация по Microsoft Edge](./index.yml)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

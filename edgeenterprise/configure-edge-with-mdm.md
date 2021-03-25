@@ -10,16 +10,16 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка Microsoft Edge с помощью средств управления мобильными устройствами.
-ms.openlocfilehash: dda35199f653b3dfb8f20b33b068c59621222b36
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980837"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447553"
 ---
-# Настройка Microsoft Edge с помощью средств управления мобильными устройствами
+# <a name="configure-microsoft-edge-using-mobile-device-management"></a>Настройка Microsoft Edge с помощью средств управления мобильными устройствами
 
-В этой статье приводятся инструкции по настройке Microsoft Edge в Windows 10 с помощью [Средств управления мобильными устройствами (MDM)](https://docs.microsoft.com/windows/client-management/mdm/) посредством [приема ADMX-файла](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Также в этой статье:
+В этой статье приводятся инструкции по настройке Microsoft Edge в Windows 10 с помощью [Средств управления мобильными устройствами (MDM)](/windows/client-management/mdm/) посредством [приема ADMX-файла](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Также в этой статье:
 
 - Создание [универсального кода ресурса открытого сообщества производителей мобильной связи (OMA-URI) для политик Microsoft Edge](#create-an-oma-uri-for-microsoft-edge-policies).
 - Настройка [Microsoft Edge в Intune с помощью приема ADMX-файла и настраиваемого кода OMA-URI](#configure-microsoft-edge-in-intune-using-admx-ingestion).
@@ -27,7 +27,7 @@ ms.locfileid: "10980837"
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-## Что вам понадобится
+## <a name="prerequisites"></a>Что вам понадобится
 
 Windows 10 со следующими минимальными системными требованиями:
 
@@ -36,9 +36,9 @@ Windows 10 со следующими минимальными системным
 - Windows 10, версия 1803 с установленными обновлениями [KB4512509](https://support.microsoft.com/help/4512509/) и [KB4519978](https://support.microsoft.com/help/4519978)
 - Windows 10, версия 1709 с установленными обновлениями [KB4516071](https://support.microsoft.com/help/4516071/) и [KB4520006](https://support.microsoft.com/help/4520006)
 
-## Обзор
+## <a name="overview"></a>Обзор
 
-Вы можете настроить Microsoft Edge в Windows 10 с помощью MDM с предпочтительным поставщиком средств управления корпоративной мобильной средой (EMM) или MDM, поддерживающим [примем ADMX-файлов](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
+Вы можете настроить Microsoft Edge в Windows 10 с помощью MDM с предпочтительным поставщиком средств управления корпоративной мобильной средой (EMM) или MDM, поддерживающим [примем ADMX-файлов](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration).
 
 Настройка Microsoft Edge с помощью MDM выполняется в два этапа.
 
@@ -49,7 +49,7 @@ Windows 10 со следующими минимальными системным
 
 2. [Создание кода OMA-URI для политики Microsoft Edge](#create-an-oma-uri-for-microsoft-edge-policies).
 
-## Создание кода OMA-URI для политик Microsoft Edge
+## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Создание кода OMA-URI для политик Microsoft Edge
 
 В следующих разделах приведены инструкции по созданию пути OMA-URI, а также поиску и определению значения в формате XML для обязательных и рекомендуемых политик браузера.
 
@@ -61,7 +61,7 @@ Windows 10 со следующими минимальными системным
 2. [Указание базы данных OMA-URI](#specify-the-data-type)
 3. [Установка значения OMA-URI](#set-the-value-for-a-browser-policy)
 
-### Создание пути OMA-URI
+### <a name="create-the-oma-uri-path"></a>Создание пути OMA-URI
 
 Используйте следующую формулу в качестве руководства по созданию путей OMA-URI. <br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`* <br/><br/>
@@ -71,9 +71,9 @@ Windows 10 со следующими минимальными системным
 | \<ADMXIngestName> | Используйте имя "Edge" или имя, выбранное вами во время приема административного шаблона. Например, если вы использовали "./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/MicrosoftEdge/Policy/EdgeAdmx", то используйте "MicrosoftEdge".<br/><br/> Имя `<ADMXIngestionName>` должно совпадать с именем, использованным при приеме ADMX-файла. |
 | \<ADMXNamespace>  | "microsoft_edge" или "microsoft_edge_recommended" в зависимости от того, какая политика задается — обязательная или рекомендуемая. |
 | \<ADMXCategory>   | Параметр "parentCategory" политики определяется в ADMX-файле. Пропустите `<ADMXCategory>`, если политика не сгруппирована (не определена категория "parentCategory"). |
-| \<PolicyName>     | Имя политики можно найти в статье [Справочник по политикам браузера](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies). |
+| \<PolicyName>     | Имя политики можно найти в статье [Справочник по политикам браузера](./microsoft-edge-policies.md). |
 
-#### Пример пути URI:
+#### <a name="uri-path-example"></a>Пример пути URI:
 
 В этом примере предположим, что узел `<ADMXIngestName>` называется "Edge" и вы настраиваете обязательную политику. Путь URI будет выглядеть следующим образом:<br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~<ADMXCategory>/<PolicyName>`*
@@ -89,22 +89,22 @@ Windows 10 со следующими минимальными системным
 4. Замените `<ADMXCategory>` на значение атрибута *ref* для формирования пути URI. Путь URI будет выглядеть следующим образом:<br/><br/>
 *`/Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Extensions/ExtensionInstallForcelist`*
 
-### Указание базы данных
+### <a name="specify-the-data-type"></a>Указание базы данных
 
 Типом данных OMA-URI всегда является "String" (строка).
 
-### Установка значения для политики браузера
+### <a name="set-the-value-for-a-browser-policy"></a>Установка значения для политики браузера
 
-В этом разделе описывается, как задать значение в формате XML для каждого типа данных. Перейдите в [Справочник по политикам браузера](https://docs.microsoft.com/deployedge/microsoft-edge-policies), чтобы найти тип данных политики.
+В этом разделе описывается, как задать значение в формате XML для каждого типа данных. Перейдите в [Справочник по политикам браузера](./microsoft-edge-policies.md), чтобы найти тип данных политики.
 
 > [!NOTE]
 > Для нелогических типов данных значение всегда начинается с `<enabled/>`.
 
-#### Логический тип данных
+#### <a name="boolean-data-type"></a>Логический тип данных
 
 Для политик с логическим типом данных используйте `<enabled/>` или `<disabled/>`.
 
-#### Целочисленные типы данных
+#### <a name="integer-data-type"></a>Целочисленные типы данных
 
 Значение всегда должно начинаться с элемента `<enabled/>`, за которым следует `<data id="[valueName]" value="[decimal value]"/>`.
 
@@ -119,7 +119,7 @@ Windows 10 со следующими минимальными системным
 Чтобы при запуске открывалась страница с новой вкладкой, используйте следующее:<br>
 `<enabled/> <data id="RestoreOnStartup" value="5"/>`
 
-#### Список строковых типов данных
+#### <a name="list-of-strings-data-type"></a>Список строковых типов данных
 
 Значение всегда должно начинаться с элемента `<enabled/>`, за которым следует `<data id="[listID]" value="[string 1];[string 2];[string 3]"/>`.
 
@@ -136,7 +136,7 @@ Windows 10 со следующими минимальными системным
 Например, чтобы заблокировать доступ к `contoso.com` и `https://ssl.server.com`, выполните следующие действия.<br>
 `<enabled/> <data id=" URLBlocklistDesc" value="contoso.com;https://ssl.server.com"/>`
 
-#### Словарный или строчный тип данных
+#### <a name="dictionary-or-string-data-type"></a>Словарный или строчный тип данных
 
 Значение всегда должно начинаться с элемента `<enabled/>`, за которым следует `<data id="[textID]" value="[string]"/>`.
 
@@ -150,11 +150,11 @@ Windows 10 со следующими минимальными системным
 Чтобы задать языковой стандарт "es-US" с помощью политики "ApplicationLocaleValue", выполните следующие действия.<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### Создайте OMA-URI для рекомендуемых политик
+### <a name="create-the-oma-uri-for-a-recommended-policies"></a>Создайте OMA-URI для рекомендуемых политик
 
 Определение пути URI для рекомендуемых политик зависит от политики, которую вы хотите настроить.
 
-#### Определение пути URI для рекомендуемой политики
+#### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>Определение пути URI для рекомендуемой политики
 
 Используйте формулу пути URI (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*) и выполните следующие действия, чтобы определить путь URI:
 
@@ -179,27 +179,27 @@ Windows 10 со следующими минимальными системным
 
 4. `<PolicyName>` — имя политики с добавленным элементом "_recommended".
 
-#### Примеры путей OMA-URI для рекомендуемых политик
+#### <a name="oma-uri-path-examples-for-recommended-policies"></a>Примеры путей OMA-URI для рекомендуемых политик
 
 В следующей таблице приведены примеры путей OMA-URI для рекомендуемых политик.
 
 |              Политика               |             OMA-URI                      |
 |-----------------------------------|------------------------------------------|
-| [RegisteredProtocolHandlers](https://docs.microsoft.com/deployedge/microsoft-edge-policies#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
-| [PasswordManagerEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
-| [PrintHeaderFooter](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
-| [SmartScreenEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
-| [HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
-| [ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
-| [FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
+| [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
+| [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
+| [PrintHeaderFooter](./microsoft-edge-policies.md#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
+| [SmartScreenEnabled](./microsoft-edge-policies.md#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
+| [HomePageLocation](./microsoft-edge-policies.md#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
+| [ShowHomeButton](./microsoft-edge-policies.md#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
+| [FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
 
-### Примеры OMA-URI
+### <a name="oma-uri-examples"></a>Примеры OMA-URI
 
 Примеры OMA-URI с путем URI, типом и возможным значением.
 
-#### Примеры логических типов данных
+#### <a name="boolean-data-type-examples"></a>Примеры логических типов данных
 
-*[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -217,9 +217,9 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<disable/>`                                                                          |
 
-### Примеры целочисленных типов данных
+### <a name="integer-data-type-examples"></a>Примеры целочисленных типов данных
 
-*[AutoImportAtFirstRun](https://docs.microsoft.com/deployedge/microsoft-edge-policies#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -246,9 +246,9 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
-#### Список примеров строковых типов данных
+#### <a name="list-of-strings-data-type-examples"></a>Список примеров строковых типов данных
 <!--
-*[NotificationsAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#NotificationsAllowedForUrls):*
+*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -257,7 +257,7 @@ Windows 10 со следующими минимальными системным
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
 -->
-*[RestoreOnStartupURLS](https://docs.microsoft.com/deployedge/microsoft-edge-policies#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>Для нескольких элементов списка: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -275,9 +275,9 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### Пример словарных или строчных типов данных
+#### <a name="dictionary-and-string-data-type-example"></a>Пример словарных или строчных типов данных
 
-*[ProxyMode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
 
 | Поле   | Значение                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -286,9 +286,9 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-## Настройка Microsoft Edge в Intune с помощью приема ADMX-файла
+## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>Настройка Microsoft Edge в Intune с помощью приема ADMX-файла
 
-Для настройки Microsoft Edge с помощью Microsoft Intune рекомендуется использовать профиль "Административные шаблоны", как описано в разделе [Настройка параметров политики Microsoft Edge с помощью Microsoft Intune](https://docs.microsoft.com/deployedge/configure-edge-with-intune). Если вы хотите оценить политику, которая в данный момент недоступна в административных шаблонах Microsoft Edge, вы можете настроить Microsoft Edge в Intune, используя [пользовательские параметры для устройств с Windows 10 в Intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10).
+Для настройки Microsoft Edge с помощью Microsoft Intune рекомендуется использовать профиль "Административные шаблоны", как описано в разделе [Настройка параметров политики Microsoft Edge с помощью Microsoft Intune](./configure-edge-with-intune.md). Если вы хотите оценить политику, которая в данный момент недоступна в административных шаблонах Microsoft Edge, вы можете настроить Microsoft Edge в Intune, используя [пользовательские параметры для устройств с Windows 10 в Intune](/intune/configuration/custom-settings-windows-10).
 
 В этом разделе приведены следующие инструкции:
 
@@ -298,7 +298,7 @@ Windows 10 со следующими минимальными системным
 > [!IMPORTANT]
 > Для настройки одного и того же параметра Microsoft Edge в Intune не рекомендуется использовать пользовательский профиль OMA-URI и профиль административных шаблонов. Если вы развертываете одну и ту же политику, используя пользовательский OMA-URI и профиль административного шаблона, но с разными значениями, пользователи получат непредсказуемые результаты. Мы настоятельно рекомендуем удалить профиль OMA-URI перед использованием профиля административных шаблонов.
 
-### Прием ADMX-файла Microsoft Edge в Intune
+### <a name="ingest-the-microsoft-edge-admx-file-into-intune"></a>Прием ADMX-файла Microsoft Edge в Intune
 
 В этом разделе приведены инструкции по приему административного шаблона Microsoft Edge (файла **msedge.admx**) в Intune.
 
@@ -347,7 +347,7 @@ Windows 10 со следующими минимальными системным
 > [!NOTE]
 > You can use the preceding steps to ingest the msedgeupate.admx policy template file.
 -->
-### Установка политики с помощью настраиваемого кода OMA-URI в Intune
+### <a name="set-a-policy-using-custom-oma-uri-in-intune"></a>Установка политики с помощью настраиваемого кода OMA-URI в Intune
 
 > [!NOTE]
 > Перед выполнением шагов, описанных в этом разделе, необходимо выполнить действия из раздела [Прием ADMX-файла Microsoft Edge в Intune](#ingest-the-microsoft-edge-admx-file-into-intune).
@@ -379,17 +379,17 @@ Windows 10 со следующими минимальными системным
 8. В колонке **Пользовательские параметры OMA-URI** нажмите **ОК**.
 9. В профиле **Microsoft Edge ADMX ingested configuration (Конфигурация ADMX, принимаемая Microsoft Edge) — Свойства**" (или на имени, которое вы использовали) нажмите **Сохранить**.
 
-После создания профиля и установки свойств необходимо [назначить профиль в Microsoft Intune](https://docs.microsoft.com/intune/configuration/device-profile-assign).
+После создания профиля и установки свойств необходимо [назначить профиль в Microsoft Intune](/intune/configuration/device-profile-assign).
 
-#### Убедитесь, что политика настроена
+#### <a name="confirm-that-the-policy-was-set"></a>Убедитесь, что политика настроена
 
 Выполните следующие действия, чтобы убедиться в том, что политика Microsoft Edge использует созданный вами профиль. (Подождите, пока Microsoft Intune распространит политику на устройство, назначенное в примере профиля "Microsoft Edge ADMX ingested configuration".)
 
 1. Откройте Microsoft Edge и перейдите по адресу *edge://policy*.
 2. На странице **Политики** проверьте, указана ли политика, заданная в профиле.
-3. Если политика не отображается, см. раздел [Диагностика ошибок MDM в Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) или [Устранение неполадок с параметром политики](#troubleshoot-a-policy-setting).
+3. Если политика не отображается, см. раздел [Диагностика ошибок MDM в Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) или [Устранение неполадок с параметром политики](#troubleshoot-a-policy-setting).
 
-#### Устранение неполадок с параметром политики
+#### <a name="troubleshoot-a-policy-setting"></a>Устранение неполадок с параметром политики
 
 Если политика Microsoft Edge не вступает в силу, попробуйте выполнить следующие действия.
 
@@ -398,13 +398,13 @@ Windows 10 со следующими минимальными системным
 - Убедитесь, что политика находится в реестре и является правильной. На целевом устройстве откройте редактор реестра Windows 10 (клавиша **Windows + R**, введите "*regedit*" и нажмите клавишу **Ввод**). Проверьте, правильно ли задана политика в разделе *\Software\Policies\ Microsoft\Edge*. Если вы не нашли политику в ожидаемом разделе, это значит, что политика была неправильно отправлена на устройство.
 - Убедитесь, что путь OMA-URI правильный, а значение является допустимой строкой XML. Если одно из этих условий не выполнено, политика не будет отправлена на целевое устройство.
 
-Дополнительные советы по устранению неполадок см. в разделе [Настройка Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/setup-steps) и [Синхронизация устройств](https://docs.microsoft.com/intune/remote-actions/device-sync).
+Дополнительные советы по устранению неполадок см. в разделе [Настройка Microsoft Intune](/intune/fundamentals/setup-steps) и [Синхронизация устройств](/intune/remote-actions/device-sync).
 
-## Статьи по теме
+## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Настройка параметров политики Microsoft Edge с помощью Microsoft Intune](configure-edge-with-intune.md)
-- [Управление мобильными устройствами](https://docs.microsoft.com/windows/client-management/mdm/)
-- [Использование настраиваемых параметров для устройств с Windows 10 в Intune](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)
-- [Настройка политики Win32 и приложения "Мост для классических приложений"](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
-- [Общие сведения о политиках с поддержкой ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)
+- [Управление мобильными устройствами](/windows/client-management/mdm/)
+- [Использование настраиваемых параметров для устройств с Windows 10 в Intune](/intune/configuration/custom-settings-windows-10)
+- [Настройка политики Win32 и приложения "Мост для классических приложений"](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
+- [Общие сведения о политиках с поддержкой ADMX](/windows/client-management/mdm/understanding-admx-backed-policies)

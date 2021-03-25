@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Инструкции и средства, доступные администратору Microsoft Edge для устранения неполадок и решения распространенных проблем синхронизации для предприятий
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400207"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447163"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Диагностика и устранение проблем синхронизации Microsoft Edge
 
@@ -49,10 +49,10 @@ ms.locfileid: "11400207"
 > [!NOTE]
 > Поскольку источник этой ошибки обычно требует изменения конфигурации в клиенте Azure Active Directory, эти действия по устранению неполадок может выполнить только администратор клиента, а не пользователь.
 
-1. Убедитесь, что у корпоративного клиента есть поддерживаемая подписка M365. Текущий список доступных типов подписки [представлен здесь](https://docs.microsoft.com/azure/information-protection/activate-office365). Если у клиента нет поддерживаемой подписки, он можно приобрести Azure Information Protection отдельно или обновиться до одной из поддерживаемых подписок.
-2. Если поддерживаемая подписка доступна, убедитесь, что у клиента есть служба Azure Information Protection (AIP). Инструкции по проверке состояния службы AIP и, если требуется, по ее активации см. [здесь](https://docs.microsoft.com/azure/information-protection/activate-office365).
-3. Если на шаге 2 видно, что AIP активен, но синхронизация по-прежнему не работает, включите Enterprise State Roaming (ESR). Инструкции по включению ESR см. [здесь](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable). Обратите внимание, что служба ESR не должна оставаться включенной. Если на этом шаге проблема исправлена, службу ESR можно отключить.
-4. Убедитесь, что служба Azure Information Protection не ограничена с помощью политики регистрации. Вы можете использовать приложение PowerShell [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps), чтобы узнать, включено ли ограничение. В следующих двух примерах показана неограниченная конфигурация и конфигурация, ограниченная определенной группой безопасности.
+1. Убедитесь, что у корпоративного клиента есть поддерживаемая подписка M365. Текущий список доступных типов подписки [представлен здесь](/azure/information-protection/activate-office365). Если у клиента нет поддерживаемой подписки, он можно приобрести Azure Information Protection отдельно или обновиться до одной из поддерживаемых подписок.
+2. Если поддерживаемая подписка доступна, убедитесь, что у клиента есть служба Azure Information Protection (AIP). Инструкции по проверке состояния службы AIP и, если требуется, по ее активации см. [здесь](/azure/information-protection/activate-office365).
+3. Если на шаге 2 видно, что AIP активен, но синхронизация по-прежнему не работает, включите Enterprise State Roaming (ESR). Инструкции по включению ESR см. [здесь](/azure/active-directory/devices/enterprise-state-roaming-enable). Обратите внимание, что служба ESR не должна оставаться включенной. Если на этом шаге проблема исправлена, службу ESR можно отключить.
+4. Убедитесь, что служба Azure Information Protection не ограничена с помощью политики регистрации. Вы можете использовать приложение PowerShell [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps), чтобы узнать, включено ли ограничение. В следующих двух примерах показана неограниченная конфигурация и конфигурация, ограниченная определенной группой безопасности.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ ms.locfileid: "11400207"
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Если ограничение включено, затронутый пользователь должен быть либо добавлен в группу безопасности для ограничения, либо ограничение должно быть удалено. В приведенном ниже примере регистрация ограничила AIP указанной группой безопасности и ограничение должно быть удалено с помощью приложения PowerShell [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps).
+   Если ограничение включено, затронутый пользователь должен быть либо добавлен в группу безопасности для ограничения, либо ограничение должно быть удалено. В приведенном ниже примере регистрация ограничила AIP указанной группой безопасности и ограничение должно быть удалено с помощью приложения PowerShell [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps).
 
-5. Убедитесь, что в клиенте включена служба IPCv3Service. Приложение PowerShell [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) показывает состояние службы.
+5. Убедитесь, что в клиенте включена служба IPCv3Service. Приложение PowerShell [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) показывает состояние службы.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Проверьте, включена ли служба IPCv3Service.":::
 
@@ -99,7 +99,7 @@ ms.locfileid: "11400207"
       - [https://api.aadrm.com](https://api.aadrm.com) (для большинства клиентов)
       - [https://api.aadrm.de](https://api.aadrm.de) (для клиентов в Германии)
       - [https://api.aadrm.cn](https://api.aadrm.cn) (для клиентов в Китае)
-   - [Конечные точки службы уведомлений Windows.](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+   - [Конечные точки службы уведомлений Windows.](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 
 5. Если проблема не устранена, обратитесь в [службу поддержки Microsoft Edge](https://www.microsoftedgeinsider.com/support).
 
@@ -116,7 +116,7 @@ ms.locfileid: "11400207"
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>Проблема: "Синхронизация отключена администратором".
 
-Убедитесь, что [политика SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled) не установлена.
+Убедитесь, что [политика SyncDisabled](./microsoft-edge-policies.md#syncdisabled) не установлена.
 
 ## <a name="see-also"></a>См. также
 

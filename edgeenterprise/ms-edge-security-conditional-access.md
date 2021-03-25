@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge и условный доступ
-ms.openlocfilehash: a81d39c15f418dab6565ee7acc45de17f66e3828
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 898a86c8c268a8c46e80dbd5ef3a435c300fb04e
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094781"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447143"
 ---
-# Microsoft Edge и условный доступ
+# <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge и условный доступ
   
 В этой статье описано, как Microsoft Edge поддерживает условный доступ и как получить доступ к ресурсам, защищенным с помощью условного доступа.
 
@@ -26,7 +26,7 @@ ms.locfileid: "11094781"
 
 Ключевыми аспектами обеспечения безопасности в облаке являются идентификация и предоставление доступа к управлению облачными ресурсами. В мире с преобладанием мобильных и облачных технологий пользователи могут получать доступ к ресурсам организации с помощью различных устройств и приложений из любого места. В результате этого недостаточно уделять внимание только тому, кто может получить доступ к ресурсу. Также необходимо учитывать, каким образом осуществляется обращение к ресурсу. Условный доступ в Azure Active Directory (Azure AD) помогает сохранять баланс между безопасностью и производительностью.
 
-## Доступ к ресурсам, защищенным с помощью функции условного доступа, в Microsoft Edge
+## <a name="accessing-conditional-access-protected-resources-in-microsoft-edge"></a>Доступ к ресурсам, защищенным с помощью функции условного доступа, в Microsoft Edge
 
 В Microsoft Edge реализована встроенная поддержка условного доступа Azure AD. Устанавливать отдельное расширение не требуется. При входе в профиль Microsoft Edge с корпоративными учетными данными Azure AD браузер Microsoft Edge обеспечивает простой доступ к корпоративным облачным ресурсам, защищенным с помощью функции условного доступа.
 
@@ -44,11 +44,11 @@ ms.locfileid: "11094781"
 
 Эта функция доступна на всех платформах, включая все поддерживаемые версии Windows и macOS.
 
-### Развертывание функции условного доступа в Azure Active Directory
+### <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>Развертывание функции условного доступа в Azure Active Directory
 
-В разделе [Развертывание функции условного доступа](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) представлено подробное руководство по развертыванию функции условного доступа в Azure Active Directory.
+В разделе [Развертывание функции условного доступа](/azure/active-directory/conditional-access/plan-conditional-access) представлено подробное руководство по развертыванию функции условного доступа в Azure Active Directory.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Видео: безопасность, совместимость и управляемость](/microsoft-edge-video-security-compatibility-manageability.md)

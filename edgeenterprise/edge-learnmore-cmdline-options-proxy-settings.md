@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Использование параметров командной строки для настройки параметров прокси-сервера '
-ms.openlocfilehash: b5e2326e075ad89481560a6642944a8e88f4daa3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d0924f723aab6832e5b4eb70c60e1d329d3c7a9d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980960"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447643"
 ---
-# Использование параметров командной строки в Microsoft Edge для настройки параметров прокси-сервера
+# <a name="how-to-use-microsoft-edge-command-line-options-to-configure-proxy-settings"></a>Использование параметров командной строки в Microsoft Edge для настройки параметров прокси-сервера
 
 В этой статье описано, как использовать параметры командной строки для переопределения стандартных параметров сети системы.
 
 >[!NOTE]
 >Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-## Параметры сети системы
+## <a name="system-network-settings"></a>Параметры сети системы
 
 По умолчанию в сетевом стеке Microsoft Edge используются параметры сети системы. К этим параметрам относятся *параметры прокси-сервера* и *хранилища сертификатов и закрытых ключей*.
 
@@ -32,13 +32,13 @@ ms.locfileid: "10980960"
 
 Эти параметры командной строки соответствуют следующим политикам в группе **Прокси-сервер**:
 
-- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist)
-- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode)
-- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl)
-- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver)
-- [ProxySettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxysettings)
+- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist)
+- [ProxyMode](./microsoft-edge-policies.md#proxymode)
+- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl)
+- [ProxyServer](./microsoft-edge-policies.md#proxyserver)
+- [ProxySettings](./microsoft-edge-policies.md#proxysettings)
 
-## Параметры командной строки для параметров прокси-сервера
+## <a name="command-line-options-for-proxy-settings"></a>Параметры командной строки для параметров прокси-сервера
 
 Microsoft Edge поддерживает следующие параметры командной строки, связанные с прокси-сервером.
 
@@ -72,14 +72,14 @@ Microsoft Edge поддерживает следующие параметры к
 
 Сообщает Microsoft Edge использовать PAC-файл по указанному URL-адресу. Например, `--proxy-pac-url="https://wpad/proxy.pac"` сообщает Microsoft Edge разрешать данные прокси для URL-запросов, используя файл **proxy.pac**.
 
-## Лицензия на содержимое
+## <a name="content-license"></a>Лицензия на содержимое
 
 > [!NOTE]
 > Некоторые части этой страницы представляют собой измененные материалы, созданные и предоставленные на сайте Chromium.org. Их использование регулируется условиями, описанными в [лицензии Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Исходная страница Chromium находится [здесь](https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Эта работа предоставляется в рамках международной лицензии <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-## См. также
+## <a name="see-also"></a>См. также
 
 - Сведения о расширенных параметрах конфигурации и дополнительных параметрах см. в [документации по прокси-серверу](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md) в проекте с открытым исходным кодом Chromium.
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Инструкции по автоматизации развертывания Microsoft Edge в среде macOS с помощью Jamf.
-ms.openlocfilehash: 8639c0b7bf78bb8e22370dba29b592af73d8cb40
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: f02b9efde872082cf2301a4cf66b0a3f3782e39b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194727"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447493"
 ---
-# Развертывание в macOS с помощью Jamf
+# <a name="deploy-to-macos-with-jamf"></a>Развертывание в macOS с помощью Jamf
 
 В этой статье описано, как выполнить развертывание Microsoft Edge в среде macOS с помощью Jamf.
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-## Что вам понадобится
+## <a name="prerequisites"></a>Что вам понадобится
 
 Перед развертыванием Microsoft Edge убедитесь, что выполнены следующие необходимые условия.
 
 - Файл установки Microsoft Edge — **MicrosoftEdgeDev-\<version\>.pkg** находится в доступном сетевом расположении. Вы можете скачать файлы установки Microsoft Edge Enterprise с [целевой страницы Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
 - У вас есть учетная запись Jamf Cloud с уровнем доступа и правами, необходимыми для создания и развертывания установочных файлов на компьютерах.
 
-## Чтобы развернуть Microsoft Edge с помощью Jamf, выполните следующие действия.
+## <a name="to-deploy-microsoft-edge-using-jamf"></a>Чтобы развернуть Microsoft Edge с помощью Jamf, выполните следующие действия.
 
 1. Войдите в Jamf и перейдите в раздел **Все параметры**.
 
@@ -93,8 +93,8 @@ ms.locfileid: "11194727"
 
 Поздравляем! Вы только что завершили настройку развертывания Microsoft Edge для macOS с помощью Jamf. Когда заданным условием триггера станет значение "true", пакет будет развернут на указанных компьютерах.
 
-## Статьи по теме
+## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Интеграция Jamf с Microsoft Intune](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Интеграция Jamf с Microsoft Intune](/intune/conditional-access-integrate-jamf)

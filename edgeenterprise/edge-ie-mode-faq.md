@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Вопросы и ответы и устранение неполадок с Microsoft Edge в режиме IE
-ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
-ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
+ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11431816"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447733"
 ---
 # <a name="ie-mode-faq"></a>Вопросы и ответы о режиме IE
 
@@ -41,7 +41,7 @@ ms.locfileid: "11431816"
 
 ### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>Сообщение об ошибке: "Чтобы открыть эту страницу в режиме Internet Explorer, переустановите Microsoft Edge с правами администратора".
 
-Эта ошибка может возникнуть, если у вас нет всех необходимых обновлений для Windows. Необходимые версии Windows и Microsoft Edge см. в предварительных условиях, перечисленных в статье [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode).
+Эта ошибка может возникнуть, если у вас нет всех необходимых обновлений для Windows. Необходимые версии Windows и Microsoft Edge см. в предварительных условиях, перечисленных в статье [Сведения о режиме IE](./edge-ie-mode.md).
 
 Если вы уже установили все необходимые обновления для Windows, эта ошибка может появляться в следующих случаях:
 
@@ -66,7 +66,7 @@ ms.locfileid: "11431816"
 
 ### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>Сообщение об ошибке: "Ошибка: не удалось получить список сайтов EMIE".
 
-Эта ошибка может появиться на странице *edge://compat/enterprise*, указывая на то, что загрузка списка сайтов не удалась. Начиная с Microsoft Edge версии 87, когда файлы cookie блокированы для сторонних запросов с помощью политики [BlockThirdPartyCookies,](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) HTTP-проверка подлинности также невозможна. Вы можете разрешить файлы cookie для определенного домена, где размещен список сайтов в режиме предприятия, с помощью политики [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls), с целью обеспечить успешную загрузку списка сайтов.
+Эта ошибка может появиться на странице *edge://compat/enterprise*, указывая на то, что загрузка списка сайтов не удалась. Начиная с Microsoft Edge версии 87, когда файлы cookie блокированы для сторонних запросов с помощью политики [BlockThirdPartyCookies,](./microsoft-edge-policies.md#blockthirdpartycookies) HTTP-проверка подлинности также невозможна. Вы можете разрешить файлы cookie для определенного домена, где размещен список сайтов в режиме предприятия, с помощью политики [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls), с целью обеспечить успешную загрузку списка сайтов.
 
 ## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
@@ -104,5 +104,5 @@ ms.locfileid: "11431816"
 ## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Сведения о режиме IE](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [Дополнительные сведения о режиме предприятия](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [Сведения о режиме IE](./edge-ie-mode.md)
+- [Дополнительные сведения о режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

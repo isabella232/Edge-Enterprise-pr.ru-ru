@@ -10,26 +10,26 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge.
-ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
-ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
+ms.openlocfilehash: 1103c4f5c071b0d04c347a7c7c9fbc5556c4c0fb
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11012799"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447673"
 ---
-# Общие сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge
+# <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Общие сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge
 
 ClickOnce и DirectInvoke — это функции, доступные в IE и Microsoft Edge (версии 45 и более ранних версий), которые поддерживают использование обработчика файлов для скачивания файлов с веб-сайтов. Несмотря на то что у этих функций разное назначение, они позволяют указывать веб-сайтам, что запрошенный для скачивания файл, передается в обработчик файлов на устройстве пользователя. Запросы ClickOnce обрабатываются с помощью собственного обработчика файлов в Windows. Запросы DirectInvoke обрабатываются зарегистрированным обработчиком файлов, заданным веб-сайтом, на котором размещен файл.
 
 Дополнительные сведения об этих функциях см. в следующих статьях.
 
-- [ClickOnce](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
 - [DirectInvoke]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
 > В данный момент в Chromium не реализована встроенная поддержка функций ClickOnce или DirectInvoke.
 
-## Обзор: необходимые условия и процессы
+## <a name="overview-prerequisites-and-process"></a>Обзор: необходимые условия и процессы
 
 Чтобы функции ClickOnce и DirectInvoke работали правильно и обработчик файлов успешно запрашивался, обработчик файлов должен быть зарегистрирован в операционной системе в качестве поддерживающего функции ClickOnce или DirectInvoke. Обычно такая регистрация происходит, когда устанавливается исходная операционная система или когда новая устанавливаемая программа запрашивает возможность использования функции DirectInvoke для обновлений.
 
@@ -43,7 +43,7 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
   > [!NOTE]
   > Этот URL-адрес используется для определения источника файла, а также всех параметров доступа к файлу.  Например: конечные точки, манифест или метаданные.
 
-## Варианты использования
+## <a name="use-cases"></a>Варианты использования
 
 Следующие варианты использования являются примерами.
 
@@ -51,7 +51,7 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
 
 Варианты использования DirectInvoke зависят от того, зачем веб-сайт запрашивает DirectInvoke. Например, для использования функции совместного редактирования файлов Microsoft Word. Вместо перехода по ссылке и скачивания всей копии документа, над которым вы работаете с коллегами, функция DirectInvoke позволяет скачивать части документа, которые были изменены. Эта стратегия уменьшает объем передаваемых данных и помогает сократить время, необходимое для открытия документа.  
 
-## Текущая поддержка функций ClickOnce и DirectInvoke в Microsoft Edge
+## <a name="current-support-for-clickonce-and-directinvoke-in-microsoft-edge"></a>Текущая поддержка функций ClickOnce и DirectInvoke в Microsoft Edge
 
 Поддержка ClickOnce и DirectInvoke:
 
@@ -62,7 +62,7 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
 
 - Функции ClickOnce и DirectInvoke не поддерживаются на платформах, отличных от Windows.
 
-## Безопасность обработки файлов в ClickOnce и DirectInvoke
+## <a name="clickonce-and-directinvoke-file-handling-security"></a>Безопасность обработки файлов в ClickOnce и DirectInvoke
 
 Функции ClickOnce и DirectInvoke защищены службой проверки репутации фильтра SmartScreen в Microsoft Defender.
 
@@ -85,15 +85,15 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
 > [!NOTE]
 > Если функции ClickOnce или DirectInvoke отключены, запрашиваемые файлы обрабатываются как обычные загрузки, и если они будут помечены как небезопасные, то эта отметка останется. Аналогичным образом обрабатываются другие небезопасные загрузки.
 
-## Политики ClickOnce и DirectInvoke
+## <a name="clickonce-and-directinvoke-policies"></a>Политики ClickOnce и DirectInvoke
 
-Существует две групповых политики, которые можно использовать для включения и отключения функций ClickOnce и DirectInvoke для корпоративных пользователей. Этими политиками являются [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) и [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled). Эти две политики в редакторе групповой политики называются "Разрешить пользователям открывать файлы с использованием протокола ClickOnce" и "Разрешить пользователям открывать файлы с использованием протокола DirectInvoke" соответственно.
+Существует две групповых политики, которые можно использовать для включения и отключения функций ClickOnce и DirectInvoke для корпоративных пользователей. Этими политиками являются [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) и [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Эти две политики в редакторе групповой политики называются "Разрешить пользователям открывать файлы с использованием протокола ClickOnce" и "Разрешить пользователям открывать файлы с использованием протокола DirectInvoke" соответственно.
 
-## Поведение ClickOnce и DirectInvoke
+## <a name="clickonce-and-directinvoke-behavior"></a>Поведение ClickOnce и DirectInvoke
 
 В следующих примерах представлен процесс обработки файлов, когда функции ClickOnce и DirectInvoke включены и отключены.
 
-### Функция ClickOnce включена
+### <a name="clickonce-enabled"></a>Функция ClickOnce включена
 
 1. Пользователь открывает ссылку на страницу, которая запрашивает поддержку ClickOnce, и видит запрос, представленный на следующем снимке экрана.
 
@@ -110,13 +110,13 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
    > [!NOTE]
    > Интерфейс, сообщения и параметры, отображаемые обработчиком файлов ClickOnce, зависят от типа и конфигурации файла, к которому осуществляется доступ.
 
-### Функция ClickOnce отключена
+### <a name="clickonce-disabled"></a>Функция ClickOnce отключена
 
 1. Когда пользователь открывает ссылку на страницу, которая запрашивает поддержку ClickOnce, он видит в панели загрузки сообщение, похожее на сообщение, представленное на следующем снимке экрана.
 
    ![Запрос на загрузку файла](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 
-### Функция DirectInvoke включена
+### <a name="directinvoke-enabled"></a>Функция DirectInvoke включена
 
 1. Пользователь открывает ссылку на страницу, которая запрашивает поддержку DirectInvoke, и видит запрос, представленный на следующем снимке экрана.
 
@@ -127,14 +127,14 @@ ClickOnce и DirectInvoke — это функции, доступные в IE и
    > [!NOTE]
    > Интерфейс, сообщения и параметры, отображаемые обработчиком файлов DirectInvoke, зависят от типа и конфигурации файла, к которому осуществляется доступ.
 
-### Функция DirectInvoke отключена
+### <a name="directinvoke-disabled"></a>Функция DirectInvoke отключена
 
 1. Когда пользователь открывает ссылку на страницу, которая запрашивает поддержку DirectInvoke, функция DirectInvoke работает так же, как при отключенной функции ClickOnce. Пользователь видит сообщение в панели загрузки, похожее на сообщение, представленное на следующем снимке экрана.
 
    ![Запрос на открытие файла](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
-## Статьи по теме
+## <a name="see-also"></a>Статьи по теме
 
-- [Безопасность и развертывание ClickOnce](https://go.microsoft.com/fwlink/?linkid=2099880)
-- [Функция DirectInvoke в Internet Explorer](https://go.microsoft.com/fwlink/?linkid=2099871)
+- [Безопасность и развертывание ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Функция DirectInvoke в Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
