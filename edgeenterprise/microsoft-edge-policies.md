@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 03/24/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
+ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442479"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "11448436"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Политики
 
@@ -25,7 +25,6 @@ ms.locfileid: "11442479"
 Информацию о дополнительном наборе политик, используемых для управления тем, как и когда обновляется Microsoft Edge, можно найти в [справочнике по политике обновления Microsoft Edge](microsoft-edge-update-policies.md).
 
 Вы можете скачать [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) для рекомендуемых базовых параметров конфигурации безопасности для Microsoft Edge. Дополнительные сведения см. в [блоге Microsoft Security Baselines](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines).
-
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
@@ -36,9 +35,7 @@ ms.locfileid: "11442479"
 
 |Имя|Заголовок|
 |--|--|
-|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Разрешить быстрые ссылки на странице новой вкладки|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Продолжительность получения сведений проверки активности при завершении работы|
-
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Разрешить контент Microsoft News на новой странице вкладки|
 
 ## <a name="available-policies"></a>Доступные политики
 
@@ -237,6 +234,7 @@ ms.locfileid: "11442479"
 |[HomepageLocation](#homepagelocation)|Настроить URL-адрес домашней страницы|
 |[NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)|Настройка типов фона, разрешенных для макета страницы новой вкладки|
 |[NewTabPageCompanyLogo](#newtabpagecompanylogo)|Установить логотип организации на странице новой вкладки (устарело)|
+|[NewTabPageContentEnabled](#newtabpagecontentenabled)|Разрешить контент Microsoft News на новой странице вкладки|
 |[NewTabPageHideDefaultTopSites](#newtabpagehidedefaulttopsites)|Скрыть стандартные сайты по умолчанию на новой вкладке|
 |[NewTabPageLocation](#newtabpagelocation)|Настроить URL-адрес страницы "Новая вкладка"|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Установить быстрые ссылки на новую вкладку|
@@ -333,7 +331,7 @@ ms.locfileid: "11442479"
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Показать флажок «Всегда открывать» в диалоговом окне внешнего протокола|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Разрешить пользователям настраивать семейную безопасность и детский режим|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Включить панель избранного|
-|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|Продолжительность получения сведений проверки активности при завершении работы|
+|[FetchKeepaliveDurationSecondsOnShutdown](#fetchkeepalivedurationsecondsonshutdown)|Продолжительность получения сведений проверки активности при завершении работы|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Обеспечивать соблюдение Bing SafeSearch|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|Настройте, должен ли Microsoft Edge автоматически выбирать сертификат при наличии нескольких совпадений сертификатов для сайта, настроенного с помощью «AutoSelectCertificateForUrls»|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|Включить использование эфемерных профилей|
@@ -387,7 +385,7 @@ ms.locfileid: "11442479"
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Настройте, всегда ли у пользователя профиль по умолчанию автоматически входит в свою учетную запись на работе или в школе|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Контроль, где применяются ограничения безопасности для небезопасных источников|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Разрешить веб-сайтам запрашивать доступные способы оплаты|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Разрешить персонализацию рекламы, поиска и новостей, отправляя историю просмотров в Microsoft|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Разрешить персонализацию служб Майкрософт посредством отправки данных, связанных с браузером, в корпорацию Майкрософт|
 |[PinningWizardAllowed](#pinningwizardallowed)|Мастер «Разрешить закрепление на панели задач»|
 |[ProactiveAuthEnabled](#proactiveauthenabled)|Включение проактивной проверки подлинности (не рекомендуется)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Включить рекламный контент на всей вкладке|
@@ -436,7 +434,7 @@ ms.locfileid: "11442479"
 |[SyncTypesListDisabled](#synctypeslistdisabled)|Настройте список типов, которые исключены из синхронизации|
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|Включение функции безопасности TLS 1.3 для локальных якорей доверия (устарело)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|Выбор наборов шифров TLS для отключения|
-|[TabFreezingEnabled](#tabfreezingenabled)|Разрешить замораживание фоновых вкладок|
+|[TabFreezingEnabled](#tabfreezingenabled)|Разрешить замораживание фоновых вкладок (устарело)|
 |[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|Не устанавливать window.opener для ссылок, нацеленных на _blank|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|Включить завершающие процессы в диспетчере задач браузера|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Установка ограничения на размер памяти (в мегабайтах), который может использовать один экземпляр Microsoft Edge.|
@@ -506,7 +504,7 @@ ms.locfileid: "11442479"
 
 Если вы выберите значение "pac_script" для "ProxyMode", будет использоваться поле "ProxyPacUrl".
 
-Дополнительные сведения о том, как идентифицировать трафик Application Guard с использованием двойного прокси-сервера, можно найти в статье [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653).
+Дополнительные сведения о том, как идентифицировать трафик Application Guard с использованием двойного прокси-сервера, можно найти в статье [https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -846,7 +844,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
 Чтобы исключить удаление файлов cookie при выходе, настройте политику [SaveCookiesOnExit](#savecookiesonexit).
 
@@ -925,7 +923,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-Подробные сведения о допустимом шаблоне URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
+Подробные сведения о допустимом шаблоне URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является принятым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -1004,7 +1002,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 - CookiesSessionOnlyForUrls
 
-Подробные сведения о допустимом шаблоне URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
+Подробные сведения о допустимом шаблоне URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является принятым значением для этой политики.
 
 Если вы устанавливаете политику [RestoreOnStartup](#restoreonstartup) для восстановления URL-адресов из предыдущих сеансов, эта политика игнорируется, и файлы cookie постоянно сохраняются для этих сайтов.
 
@@ -1907,7 +1905,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -1976,7 +1974,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 Шаблоны URL-адресов не могут конфликтовать с [FileSystemReadAskForUrls](#filesystemreadaskforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2045,7 +2043,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2114,7 +2112,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 Шаблоны URL-адресов не могут конфликтовать с [FileSystemWriteAskForUrls](#filesystemwriteaskforurls). Ни одна из политик не имеет приоритет, если URL-адрес соответствует обеим политикам.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2181,7 +2179,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 Если вы не настроите эту политику, глобальное значение по умолчанию будет использоваться для всех сайтов либо из политики [DefaultImagesSetting](#defaultimagessetting) (если установлена), либо из личной конфигурации пользователя.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2248,7 +2246,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultImagesSetting](#defaultimagessetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2315,7 +2313,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 Если вы не настроите эту политику, блокируемый смешанный контент будет заблокирован, а необязательно блокируемый смешанный контент будет обновлен. Однако пользователям будет разрешено задать исключения, чтобы разрешить небезопасный смешанный контент для определенных сайтов.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2382,7 +2380,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 Если вы не настроите эту политику, блокируемый смешанный контент будет заблокирован, а необязательно блокируемый смешанный контент будет обновлен. Однако пользователям будет разрешено задать исключения, чтобы разрешить небезопасный смешанный контент для определенных сайтов.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики.
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2716,7 +2714,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   Позволяет создать список шаблонов URL-адресов, чтобы указать сайты, которым разрешено отображать уведомления.
 
-Если вы не настроите эту политику, для всех сайтов будет использоваться глобальное значение по умолчанию. Это значение по умолчанию берется из политики [DefaultNotificationsSetting](#defaultnotificationssetting) (если она настроена) или из персональной конфигурации пользователя. Подробные сведения о шаблонах допустимых URL-адресов см. [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Если вы не настроите эту политику, для всех сайтов будет использоваться глобальное значение по умолчанию. Это значение по умолчанию берется из политики [DefaultNotificationsSetting](#defaultnotificationssetting) (если она настроена) или из персональной конфигурации пользователя. Подробные сведения о шаблонах допустимых URL-адресов см. [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2781,7 +2779,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   Позволяет создать список шаблонов URL-адресов, чтобы указать сайты, которым запрещено отображать уведомления.
 
-Если вы не настроите эту политику, для всех сайтов будет использоваться глобальное значение по умолчанию. Это значение по умолчанию берется из политики [DefaultNotificationsSetting](#defaultnotificationssetting) (если она настроена) или из персональной конфигурации пользователя. Подробные сведения о шаблонах допустимых URL-адресов см. [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Если вы не настроите эту политику, для всех сайтов будет использоваться глобальное значение по умолчанию. Это значение по умолчанию берется из политики [DefaultNotificationsSetting](#defaultnotificationssetting) (если она настроена) или из персональной конфигурации пользователя. Подробные сведения о шаблонах допустимых URL-адресов см. [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2850,7 +2848,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultPluginsSetting](#defaultpluginssetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Подробные сведения о допустимых шаблонах URL-адресов см. в статье [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Тем не менее, начиная с M85, шаблоны с подстановочными знаками "\*" и "[\*.]" в узле больше не поддерживаются для этой политики.
+Подробные сведения о допустимых шаблонах URL-адресов см. в статье [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Тем не менее, начиная с M85, шаблоны с подстановочными знаками "\*" и "[\*.]" в узле больше не поддерживаются для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2919,7 +2917,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultPluginsSetting](#defaultpluginssetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Подробные сведения о допустимых шаблонах URL-адресов см. в статье [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Тем не менее, начиная с M85, шаблоны с подстановочными знаками "\*" и "[\*.]" в узле больше не поддерживаются для этой политики.
+Подробные сведения о допустимых шаблонах URL-адресов см. в статье [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Тем не менее, начиная с M85, шаблоны с подстановочными знаками "\*" и "[\*.]" в узле больше не поддерживаются для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -3362,7 +3360,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Шаблоны URL, определенные в этой политике, не могут конфликтовать с шаблонами, настроенными в политике [WebUsbBlockedForUrls](#webusbblockedforurls) - вы не можете разрешить и заблокировать URL. Подробные сведения о шаблонах допустимых URL-адресов см. [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Шаблоны URL, определенные в этой политике, не могут конфликтовать с шаблонами, настроенными в политике [WebUsbBlockedForUrls](#webusbblockedforurls) - вы не можете разрешить и заблокировать URL. Подробные сведения о шаблонах допустимых URL-адресов см. [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -3429,7 +3427,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
 
-Шаблоны URL в этой политике не могут конфликтовать с шаблонами, настроенными в политике [WebUsbAskForUrls](#webusbaskforurls). Вы не можете одновременно разрешить и заблокировать URL.  Подробные сведения о шаблонах допустимых URL-адресов см. в[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Шаблоны URL в этой политике не могут конфликтовать с шаблонами, настроенными в политике [WebUsbAskForUrls](#webusbaskforurls). Вы не можете одновременно разрешить и заблокировать URL.  Подробные сведения о шаблонах допустимых URL-адресов см. в[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -4414,7 +4412,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 Исходный код любого расширения может изменяться пользователями с помощью средств разработчика, что может сделать расширение неработоспособным. Если вы опасаетесь этой проблемы, настройте политику DeveloperToolsDisabled.
 
-Каждый элемент списка политики является строкой, содержащей идентификатор расширения и (необязательно) URL-адрес "обновления", отделенный точкой с запятой (;). Идентификатор расширения — это 32-буквенная строка, доступная, к примеру, на странице edge://extensions в режиме разработчика. URL-адрес "обновления" (если он задан) должен указывать на XML-документ манифеста обновления ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). По умолчанию используется URL-адрес обновления веб-сайта надстроек Microsoft Edge. URL-адрес "обновления", заданный в этой политике, используется только для начальной установки; последующие обновления расширения используют URL-адрес обновления из манифеста расширения.
+Каждый элемент списка политики является строкой, содержащей идентификатор расширения и (необязательно) URL-адрес "обновления", отделенный точкой с запятой (;). Идентификатор расширения — это 32-буквенная строка, доступная, к примеру, на странице edge://extensions в режиме разработчика. URL-адрес "обновления" (если он задан) должен указывать на XML-документ манифеста обновления ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ). По умолчанию используется URL-адрес обновления веб-сайта надстроек Microsoft Edge. URL-адрес "обновления", заданный в этой политике, используется только для начальной установки; последующие обновления расширения используют URL-адрес обновления из манифеста расширения.
 
 Примечание. Эта политика не применяется к режиму InPrivate. Ознакомьтесь с размещением расширений (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
@@ -4483,7 +4481,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 Определите URL-адреса, которые могут устанавливать расширения и темы непосредственно без перетаскивания пакетов на страницу edge://extensions.
 
-Каждый элемент в этом списке является шаблоном соответствия стилю расширения (см. [https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)). Пользователи могут легко устанавливать элементы с любого URL-адреса, соответствующего элементу в этом списке. Этим шаблонам должно быть разрешено как местоположение файла *.crx, так и страница, с которой начинается загрузка (другими словами, реферер). Не размещайте файлы в расположениях, требующих проверки подлинности.
+Каждый элемент в этом списке является шаблоном соответствия стилю расширения (см. [https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)). Пользователи могут легко устанавливать элементы с любого URL-адреса, соответствующего элементу в этом списке. Этим шаблонам должно быть разрешено как местоположение файла *.crx, так и страница, с которой начинается загрузка (другими словами, реферер). Не размещайте файлы в расположениях, требующих проверки подлинности.
 
 Политика [ExtensionInstallBlocklist](#extensioninstallblocklist) имеет приоритет над этой политикой. Любые расширения, которые есть в списке заблокированных, не будут установлены, даже если они получены с сайта в этом списке.
 
@@ -4548,7 +4546,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Путем настройки этой политики контролируются параметры управления расширениями для Microsoft Edge, включая любые расширения, управляемые существующими соответствующими политиками. Эта политика заменяет все устаревшие политики, которые могли быть настроены.
 
-Эта политика сопоставляет идентификатор расширения или URL-адрес обновления только с определенным параметром. Для специального ИД "*" можно настроить конфигурацию по умолчанию, применяемую ко всем расширениям без настраиваемой конфигурации в этой политике. С помощью URL-адреса обновления конфигурация применяется к расширениям с точным URL-адресом обновления, указанным в манифесте расширения ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+Эта политика сопоставляет идентификатор расширения или URL-адрес обновления только с определенным параметром. Для специального ИД "*" можно настроить конфигурацию по умолчанию, применяемую ко всем расширениям без настраиваемой конфигурации в этой политике. С помощью URL-адреса обновления конфигурация применяется к расширениям с точным URL-адресом обновления, указанным в манифесте расширения ( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) ).
 
 Чтобы заблокировать расширения из определенного магазина стороннего производителя, необходимо заблокировать только update_url для этого магазина. Например, если вы хотите заблокировать расширения из веб-магазина Chrome, можно использовать следующий JSON.
 
@@ -5316,7 +5314,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 Если вы отключите эту политику, пользователи не смогут изменить URL-адрес в адресной строке.
 
-Подробнее о настройке режима терминала см. в статье [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Подробнее о настройке режима терминала см. в статье [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -5380,7 +5378,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 Если выключить эту политику или не настроить ее, файлы, загруженные в сеансе полного экрана, не будут удаляться при закрытии Microsoft Edge.
 
-Дополнительно о настройке режима полного экрана см. [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578).
+Дополнительно о настройке режима полного экрана см. [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -6875,7 +6873,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 Если вы не настроите эту политику, не будет создан список хостов, для которых Microsoft Edge обходит прокси. Оставьте эту политику ненастроенной, если вы указали любой другой метод для настройки прокси-политик.
 
-Для более подробных примеров перейдите по ссылке [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Для более подробных примеров перейдите по ссылке [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -6946,7 +6944,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   * fixed_servers = использовать фиксированные прокси-серверы. Дополнительные параметры можно задать с помощью [ProxyServer](#proxyserver) и[ProxyBypassList](#proxybypasslist).
   * pac_script = использовать прокси-скрипт .pac. Чтобы задать URL-адрес для .pac файла прокс-сервера, используйте [ProxyPacUrl](#proxypacurl) .
 
-Для подробных примеров, перейдите к [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Для подробных примеров, перейдите к [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
 Если вы не настроите эту политику, пользователи могут выбрать свои собственные настройки прокси.
 
@@ -7030,7 +7028,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 Если вы отключите или не настроите эту политику, PAC файл не будет указан. Оставьте эту политику ненастроенной, если вы указали любой другой метод для настройки прокси-политик.
 
-Подробные примеры см [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Подробные примеры см [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -7098,7 +7096,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 Если вы отключите или не настроите эту политику, пользователи смогут выбирать свои собственные параметры прокси-сервера в этом режиме. Оставьте эту политику ненастроенной, если вы указали любой другой метод для настройки прокси-политик.
 
-Дополнительные параметры и подробные примеры см [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Дополнительные параметры и подробные примеры см [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -7182,7 +7180,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   * fixed_servers — используются поля ProxyServer и ProxyBypassList.
   * pac_script — используются поля ProxyPacUrl и ProxyBypassList.
 
-Для более подробных примеров перейдите по ссылке [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936).
+Для более подробных примеров перейдите по ссылке [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -8173,6 +8171,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="newtabpagecontentenabled"></a>NewTabPageContentEnabled
+
+  #### <a name="allow-microsoft-news-content-on-the-new-tab-page"></a>Разрешить контент Microsoft News на новой странице вкладки
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 91 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Если включить или не настроить эту политику, Microsoft Edge показывает содержимое Microsoft News на новой странице вкладки. Пользователь может выбирать различные варианты отображения контента, в том числе: отключение контента, видимость контента на прокрутке, только заголовки и видимость контента. Включение этой политики не обязательно означает видимость контента — пользователь может по-прежнему устанавливать свою настройку видимости контента.
+
+Если отключить эту политику, Microsoft Edge не будет показывать содержимое Microsoft News на новой странице вкладки, а элемент управления контентом во всплывающем элементе параметров NTP будет настроен на "Отключение контента" и деактивирован.
+
+Эта политика применяется только к локальным профилям пользователей Microsoft Edge, профилям, вошедшим с помощью учетной записи Майкрософт, и профилям, вошедшим с помощью Active Directory. Чтобы настроить страницу новой вкладки Enterprise для профилей, вошедших с помощью Azure Active Directory, используйте портал администрирования M365.
+
+Родственные политики: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: NewTabPageContentEnabled
+  - Имя GP: Разрешить содержимое Microsoft News на новой странице вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: NewTabPageContentEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация о Mac и настройки
+  
+  - Имя ключа предпочтения: NewTabPageContentEnabled
+  - Пример значения:
+``` xml
+<false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="newtabpagehidedefaulttopsites"></a>NewTabPageHideDefaultTopSites
 
   #### <a name="hide-the-default-top-sites-from-the-new-tab-page"></a>Скрыть стандартные сайты по умолчанию на новой вкладке
@@ -8484,7 +8546,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
 Эта политика применяется только к локальным профилям пользователей Microsoft Edge, профилям, вошедшим с помощью учетной записи Майкрософт, и профилям, вошедшим с помощью Active Directory. Чтобы настроить страницу новой вкладки Enterprise для профилей, вошедших с помощью Azure Active Directory, используйте портал администрирования M365.
 
-Связанная политика: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+Родственные политики: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes), [NewTabPageContentEnabled](#newtabpagecontentenabled)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -10053,7 +10115,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 Если не настроить эту политику, никакие протоколы не смогут запускать приложения без запроса. Пользователи могут отказаться от запросов для каждого протокола или каждого сайта, если политика [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) не отключена. Эта политика не влияет на исключения, установленные пользователями в отношении отдельных протоколов или сайтов.
 
-В шаблонах сопоставления источников используется тот же формат, что и для политики [URLBlocklist](#urlblocklist), задокументированный в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+В шаблонах сопоставления источников используется тот же формат, что и для политики [URLBlocklist](#urlblocklist), задокументированный в [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Однако шаблоны сопоставления источников для этой политики не могут содержать элементы "/path" или "@query". Любой шаблон, содержащий элемент "/path" или "@query", будет проигнорирован.
 
@@ -10175,7 +10237,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
 Если не задать эту политику, все загружаемые файлы, тип которых содержится в [AutoOpenFileTypes](#autoopenfiletypes), будут автоматически открываться.
 
-Шаблон URL-адреса должен быть иметь формат, соответствующий [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Шаблон URL-адреса должен быть иметь формат, соответствующий [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -10637,7 +10699,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 Эта политика доступна только для SKU K-12, которые определены Microsoft как арендаторы EDU.
 
-Пожалуйста, обратитесь к [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711), чтобы узнать больше об этой политике или если к вам применимы следующие сценарии:
+Пожалуйста, обратитесь к [https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge), чтобы узнать больше об этой политике или если к вам применимы следующие сценарии:
 
 * У вас есть клиент EDU, но политика не работает.
 
@@ -11383,7 +11445,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 Эта политика позволяет не раскрывать сертификаты для имен хостов в указанных URL-адресах через прозрачность сертификатов. Это позволяет вам использовать сертификаты, которые в противном случае были бы ненадежными, поскольку они не были должным образом обнародованы, но затрудняло обнаружение неправильно выданных сертификатов для этих хостов.
 
-Сформируйте ваш шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Поскольку сертификаты действительны для данного имени хоста, независимо от схемы, порта или пути, рассматривается только часть имени хоста в URL. Подстановочные хосты не поддерживаются.
+Сформируйте ваш шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). Поскольку сертификаты действительны для данного имени хоста, независимо от схемы, порта или пути, рассматривается только часть имени хоста в URL. Подстановочные хосты не поддерживаются.
 
 Если вы не настроите эту политику, любой сертификат, который должен быть раскрыт через прозрачность сертификата, считается ненадежным, если он не раскрыт.
 
@@ -11590,7 +11652,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 Отключение ClickOnce может помешать правильному запуску приложений ClickOnce (файлов приложений).
 
-Для получения дополнительной информации о ClickOnce, см. [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) и [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880).
+Для получения дополнительной информации о ClickOnce, см. [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) и [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -11989,7 +12051,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### <a name="description"></a>Описание
 
-  Включите использование учетных записей Active Directory для автоматического входа, если компьютеры ваших пользователей подключены к домену, а ваша среда не является гибридной. Если вы хотите, чтобы пользователи автоматически входили в свои учетные записи Azure Active Directory, присоединитесь к Azure AD (Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197)) или гибридному (Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365).) свою среду.
+  Включите использование учетных записей Active Directory для автоматического входа, если компьютеры ваших пользователей подключены к домену, а ваша среда не является гибридной. Если вы хотите, чтобы пользователи автоматически входили в свои учетные записи Azure Active Directory, присоединитесь к Azure AD (Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan)) или гибридному (Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan).) свою среду.
 
 При каждом запуске Microsoft Edge будет пытаться выполнить вход, используя эту политику, если первый профиль не вошел в систему или не вошел в систему автоматически ранее.
 
@@ -12317,7 +12379,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 Если эта политика не задана, пользователи смогут разрешить Microsoft Edge проверять, является ли он браузером по умолчанию, и включить отправку пользователю уведомления при отрицательном результате этой проверки.
 
-Примечание для администраторов Windows: эта политика работает только на ПК под управлением Windows 7. Для более поздних версий Windows необходимо развернуть файл «ассоциации приложений по умолчанию», который делает Microsoft Edge обработчиком протоколов https и http (и, необязательно, протокол ftp и форматы файлов, такие как .html, .htm, .pdf, .svg, .webp). Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932).
+Примечание для администраторов Windows: эта политика работает только на ПК под управлением Windows 7. Для более поздних версий Windows необходимо развернуть файл «ассоциации приложений по умолчанию», который делает Microsoft Edge обработчиком протоколов https и http (и, необязательно, протокол ftp и форматы файлов, такие как .html, .htm, .pdf, .svg, .webp). Дополнительные сведения см. в статье [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -12849,7 +12911,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 Необязательные диагностические данные включают данные об использовании браузера, посещаемых веб-сайтах, а также отчеты о сбоях, чтобы помочь в улучшении продуктов и служб Майкрософт.
 
-Эта политика не поддерживается на устройствах с Windows 10. Чтобы управлять сбором этих данных в Windows 10, ИТ-администраторы должны использовать групповую политику диагностических данных Windows. Эта политика называется "Разрешить телеметрию" или "Разрешить диагностические данные" в зависимости от версии Windows. Подробнее о сборе диагностических данных Windows 10: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+Эта политика не поддерживается на устройствах с Windows 10. Чтобы управлять сбором этих данных в Windows 10, ИТ-администраторы должны использовать групповую политику диагностических данных Windows. Эта политика называется "Разрешить телеметрию" или "Разрешить диагностические данные" в зависимости от версии Windows. Подробнее о сборе диагностических данных Windows 10: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 Используйте один из следующих параметров для настройки этой политики:
 
@@ -12937,7 +12999,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 Примечание. Отключение DirectInvoke может помешать работе некоторых функций Microsoft SharePoint Online должным образом.
 
-Дополнительные сведения о DirectInvoke см. в статьях [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) и [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871).
+Дополнительные сведения о DirectInvoke см. в статьях [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) и [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85)).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -14114,7 +14176,7 @@ Microsoft ведет список действий, предпринимаемы
 
 Если политика включена, то должны выполняться следующие условия:
 
-* шаблон URL-адреса должен быть иметь формат, соответствующий [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322);
+* шаблон URL-адреса должен быть иметь формат, соответствующий [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format);
 * расширение файла должно вводиться в символах ASCII нижнего регистра. Расширения файлов должны указываться без начального разделителя, например "jnlp", а не ".jnlp".
 
 Пример.
@@ -14452,7 +14514,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   [В начало](#microsoft-edge---policies)
 
-  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+  ### <a name="fetchkeepalivedurationsecondsonshutdown"></a>FetchKeepaliveDurationSecondsOnShutdown
 
   #### <a name="fetch-keepalive-duration-on-shutdown"></a>Продолжительность получения сведений проверки активности при завершении работы
 
@@ -14484,7 +14546,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
-  - Уникальное имя групповой политики: FetchKeepaliveDurationOnShutdown
+  - Уникальное имя GP: FetchKeepaliveDurationSecondsOnShutdown
   - Имя групповой политики: продолжительность получения сведений проверки активности при завершении работы
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
@@ -14494,7 +14556,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
   - Путь (рекомендуется): Н/Д
-  - Имя значения: FetchKeepaliveDurationOnShutdown
+  - Имя значения: FetchKeepaliveDurationSecondsOnShutdown
   - Тип значения: REG_DWORD
 
   ##### <a name="example-value"></a>Пример значения:
@@ -14505,7 +14567,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### <a name="mac-information-and-settings"></a>Информация о Mac и настройки
   
-  - Имя ключа предпочтения: FetchKeepaliveDurationOnShutdown
+  - Имя ключа предпочтения: FetchKeepaliveDurationSecondsOnShutdown
   - Пример значения:
 ``` xml
 <integer>1</integer>
@@ -16529,7 +16591,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Если для этой политики задано значение «Disabled», то улучшенная функция обнаружения зависаний будет отключена, и для пользователей будет работать обычная функция обнаружения зависаний Internet Explorer.
 
-Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Сопоставление параметров политики:
 
@@ -16588,7 +16650,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### <a name="description"></a>Описание
 
-  Инструкции по настройке оптимального режима для режима Internet Explorer см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Инструкции по настройке оптимального режима для режима Internet Explorer см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
 Сопоставление параметров политики:
 
@@ -16657,7 +16719,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Если для этой политики задано значение false, пользователю не разрешается использовать аргумент командной строки --ie-mode-file-url для запуска локальных файлов в режиме Internet Explorer.
 
-Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -16716,7 +16778,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Если для этой политики задано специальное значение "*" или она не настроена, все расширения файлов будут разрешены.
 
-Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -16778,7 +16840,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 Если для этой политики задано значение false или она не настроена, данный элемент контекстного меню не будет добавлен.
 
-Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -16829,7 +16891,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   #### <a name="description"></a>Описание
 
-  Инструкции по настройке оптимального режима для режима Internet Explorer см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Инструкции по настройке оптимального режима для режима Internet Explorer см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -16894,7 +16956,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 Если для этой политики задано значение «AllInPageNavigations», все переходы от страниц, загруженных в режиме IE, к ненастроенным сайтам, сохраняются в режиме Internet Explorer (как минимум, рекомендуется).
 
-Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)
 
 Сопоставление параметров политики:
 
@@ -16962,8 +17024,6 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 Кроме того, пользователи могут проверить приложения в современном браузере, не удаляя их из списка сайтов с помощью команды "Открыть сайты в режиме Microsoft Edge".
 
 Этот параметр используется вместе с [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), для которого задано значение "IEMode".
-   
-                                                                                                                         
 
 Если эта политика включена, команда "Открыть сайты в режиме Internet Explorer" будет отображаться в разделе "Другие инструменты". На этой вкладке пользователи могут просматривать свои сайты в режиме Internet Explorer. Другой вариант функции "Открыть сайты в режиме Microsoft Edge" также будет отображаться в разделе "Другие инструменты", чтобы проверить сайты в современном браузере, не удаляя их из списка сайтов.
 
@@ -17748,13 +17808,13 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   #### <a name="description"></a>Описание
 
-  Эта политика больше не поддерживается. Она заменяется на [DiagnosticData](#diagnosticdata) (для Windows 7, Windows 8 и macOS) и Allow Telemetry on Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
+  Эта политика больше не поддерживается. Она заменяется на [DiagnosticData](#diagnosticdata) (для Windows 7, Windows 8 и macOS) и Allow Telemetry on Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) ).
 
 Эта политика позволяет отправлять отчеты с данными об использовании и сбоях Microsoft Edge в корпорацию Майкрософт.
 
 Включите эту политику, чтобы отправлять отчеты с данными об использовании и сбоях в корпорацию Майкрософт. Отключите эту политику, чтобы не отправлять эти данные в корпорацию Майкрософт. В обоих случаях пользователи не смогут изменить или переопределить его.
 
-В Windows 10, если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать параметр диагностических данных Windows. Если вы включите эту политику, Microsoft Edge будет отправлять данные об использовании только в том случае, если для параметра данных диагностики Windows установлено значение «Расширенный» или «Полный». Если вы отключите эту политику, Microsoft Edge не будет отправлять данные об использовании. Данные о сбоях отправляются в зависимости от параметра диагностических данных Windows. Подробнее о настройках данных диагностики Windows можно узнать на [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+В Windows 10, если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать параметр диагностических данных Windows. Если вы включите эту политику, Microsoft Edge будет отправлять данные об использовании только в том случае, если для параметра данных диагностики Windows установлено значение «Расширенный» или «Полный». Если вы отключите эту политику, Microsoft Edge не будет отправлять данные об использовании. Данные о сбоях отправляются в зависимости от параметра диагностических данных Windows. Подробнее о настройках данных диагностики Windows можно узнать на [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 В Windows 7, Windows 8 и macOS эта политика управляет отправкой данных об использовании и сбоях. Если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать настройки пользователя.
 
@@ -18190,7 +18250,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### <a name="allow-personalization-of-ads-search-and-news-by-sending-browsing-history-to-microsoft"></a>Разрешить персонализацию рекламы, поиска и новостей, отправляя историю просмотров в Microsoft
+  #### <a name="allow-personalization-of-microsoft-services-by-sending-browsing-and-browser-related-data-to-microsoft"></a>Разрешить персонализацию служб Майкрософт посредством отправки данных, связанных с браузером, в корпорацию Майкрософт
 
   
   
@@ -18200,9 +18260,9 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   #### <a name="description"></a>Описание
 
-  Эта политика запрещает Microsoft собирать пользовательскую историю посещений Microsoft Edge для персонализации рекламы, поиска, новостей и других служб Microsoft.
+  Эта политика не позволяет корпорации Майкрософт собирать историю просмотра Microsoft Edge пользователя, избранное и коллекции, данные об использовании браузера и вводе, как в адресной панели, чтобы использовать для персонализации рекламы, поиска, новостей, Microsoft Edge и других служб Майкрософт.
 
-Этот параметр доступен только для пользователей с учетной записью Microsoft. Этот параметр недоступен для дочерних или корпоративных учетных записей.
+Этот параметр недоступен для учетных записей, принадлежащих детям, и учетных записей, принадлежащих предприятиям.
 
 Если вы отключите эту политику, пользователи не смогут изменить или переопределить настройку. Если эта политика включена или не настроена, Microsoft Edge будет использоваться по умолчанию 
 
@@ -18221,7 +18281,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: PersonalizationReportingEnabled
-  - Имя GP: Разрешить персонализацию рекламы, поиска и новостей, отправляя историю просмотров в Microsoft
+  - Имя GP: Разрешить персонализацию служб Майкрософт посредством отправки данных, связанных с браузером, в корпорацию Майкрософт
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -18643,7 +18703,7 @@ QUIC - это сетевой протокол транспортного уро�
 
 Вспомогательный объект браузера необходим для перенаправления несовместимого сайта, но даже если перенаправление не выполняется,он управляется [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode).
 
-Дополнительные сведения об этой политике см. в статье [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+Дополнительные сведения об этой политике см. в статье [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -18704,7 +18764,7 @@ QUIC - это сетевой протокол транспортного уро�
 
 Если для этой политики задано значение "Отключить", Internet Explorer не будет перенаправлять трафик в Microsoft Edge.
 
-Дополнительные сведения об этой политике см. в статье  [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)
+Дополнительные сведения об этой политике см. в статье  [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)
 
 Сопоставление параметров политики:
 
@@ -19198,7 +19258,7 @@ QUIC - это сетевой протокол транспортного уро�
 
 [SyncDisabled](#syncdisabled) отключает только облачную синхронизацию и не влияет на эту политику.
 
-Дополнительные сведения об использовании перемещаемых профилей пользователей см. на странице [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058).
+Дополнительные сведения об использовании перемещаемых профилей пользователей см. на странице [https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -19383,7 +19443,7 @@ QUIC - это сетевой протокол транспортного уро�
 
 Если не настроить эту политику, политика [SSLErrorOverrideAllowed](#sslerroroverrideallowed) применяется ко всем сайтам.
 
-Подробные сведения о шаблонах допустимых источников см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является допустимым значением для этой политики. Соответствие этой политики определяется только на основе источника, поэтому любой путь или запрос в шаблоне URL-адреса игнорируется.
+Подробные сведения о шаблонах допустимых источников см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format). * не является допустимым значением для этой политики. Соответствие этой политики определяется только на основе источника, поэтому любой путь или запрос в шаблоне URL-адреса игнорируется.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -19902,7 +19962,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Описание
 
-  Инструкции по настройке оптимального режима для режима Internet Explorer см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+  Инструкции по настройке оптимального режима для режима Internet Explorer см. [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -19953,13 +20013,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>Описание
 
-  Эта политика больше не поддерживается. Она заменяется на [DiagnosticData](#diagnosticdata) (для Windows 7, Windows 8 и macOS) и Allow Telemetry on Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569) ).
+  Эта политика больше не поддерживается. Она заменяется на [DiagnosticData](#diagnosticdata) (для Windows 7, Windows 8 и macOS) и Allow Telemetry on Win 10 ( [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) ).
 
 Эта политика позволяет отправлять информацию о веб-сайтах, посещенных в Microsoft Edge, в Microsoft для улучшения таких услуг, как поиск.
 
 Включите эту политику для отправки информации о веб-сайтах, посещенных в Microsoft Edge, в Microsoft. Отключите эту политику, чтобы не отправлять информацию о веб-сайтах, посещенных в Microsoft Edge, в Microsoft. В обоих случаях пользователи не смогут изменить или переопределить его.
 
-В Windows 10, если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать параметр диагностических данных Windows. Если эта политика включена, Microsoft Edge будет отправлять информацию о веб-сайтах, посещенных в Microsoft Edge, только если для параметра данных диагностики Windows установлено значение «Полный». Если эта политика отключена, Microsoft Edge не будет отправлять данные о посещенных веб-сайтах. Подробнее о настройках данных диагностики Windows: [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
+В Windows 10, если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать параметр диагностических данных Windows. Если эта политика включена, Microsoft Edge будет отправлять информацию о веб-сайтах, посещенных в Microsoft Edge, только если для параметра данных диагностики Windows установлено значение «Полный». Если эта политика отключена, Microsoft Edge не будет отправлять данные о посещенных веб-сайтах. Подробнее о настройках данных диагностики Windows: [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 
 В Windows 7, Windows 8 и Mac эта политика управляет отправкой информации о посещенных веб-сайтах. Если вы не настроите эту политику, Microsoft Edge по умолчанию будет использовать настройки пользователя.
 
@@ -20029,7 +20089,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SensorsBlockedForUrls](#sensorsblockedforurls). Вы не можете разрешить и заблокировать URL-адрес.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -20100,7 +20160,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SensorsAllowedForUrls](#sensorsallowedforurls). Вы не можете разрешить и заблокировать URL-адрес.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -20171,7 +20231,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 Шаблоны URL-адресов, определенные в этой политике, не могут конфликтовать с настроенными в политике [SerialBlockedForUrls](#serialblockedforurls). Вы не можете разрешить и заблокировать URL-адрес.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -20242,7 +20302,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 Шаблоны URL-адресов в этой политике не могут конфликтовать с настроенными в политике [SerialAskForUrls](#serialaskforurls). Вы не можете разрешить и заблокировать URL-адрес.
 
-Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Подробные сведения о шаблонах допустимых URL-адресов см. на странице [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -21333,17 +21393,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   ### <a name="tabfreezingenabled"></a>TabFreezingEnabled
 
-  #### <a name="allow-freezing-of-background-tabs"></a>Разрешить замораживание фоновых вкладок
+  #### <a name="allow-freezing-of-background-tabs-obsolete"></a>Разрешить замораживание фоновых вкладок (устарело)
 
   
-  
+  >УСТАРЕЛО: эта политика устарела и не работает в версиях Microsoft Edge после 86.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - На Windows и macOS с 79 или позже
+  - В Windows и macOS с 79 до 86
 
   #### <a name="description"></a>Описание
 
-  Определяет, может ли Microsoft Edge заморозить вкладки, которые находятся в фоновом режиме, как минимум на 5 минут.
+  Эта политика не работает, вместо этого используйте [SleepingTabsEnabled.](#sleepingtabsenabled)
+
+Определяет, может ли Microsoft Edge заморозить вкладки, которые находятся в фоновом режиме как минимум в продолжение пяти минут.
 
 Замораживание вкладок уменьшает использование процессора, батареи и памяти. Microsoft Edge использует эвристику, чтобы избежать зависания вкладок, которые выполняют полезную работу в фоновом режиме, например, отображают уведомления, воспроизводят звук и транслируют видео.
 
@@ -21366,7 +21428,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: TabFreezingEnabled
-  - Имя GP: Разрешить замораживание вкладок фона
+  - Имя GP: Разрешить замораживание фоновых вкладок (устарело)
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -21727,7 +21789,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   Настройка политики предоставляет доступ к указанным URL-адресам, как исключения к [URLBlocklist](#urlblocklist).
 
-Отформатируйте шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Отформатируйте шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Вы можете использовать эту политику, чтобы открывать исключения в ограничительных списках блокировки. Например, можно включить "\*" в список блокировки, чтобы заблокировать все запросы, а затем использовать эту политику, чтобы разрешить доступ к ограниченному списку URL-адресов. Вы можете использовать эту политику, чтобы открывать исключения для определенных схем, поддоменов других доменов, портов или определенных путей.
 
@@ -21808,7 +21870,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   Определите список сайтов, основанных на шаблонах URL, которые заблокированы (ваши пользователи не могут их загрузить).
 
-Отформатируйте шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+Отформатируйте шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format).
 
 Вы можете определить исключения в политике [URLAllowlist](#urlallowlist). Эти политики ограничены 1000 записей; последующие записи игнорируются.
 
