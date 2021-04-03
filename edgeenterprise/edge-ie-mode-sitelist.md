@@ -1,40 +1,40 @@
 ---
-title: Настройка сайтов в списке сайтов в режиме предприятия
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/28/2020
+title: Стратегия настройки корпоративных сайтов
+ms.author: shisub
+author: shisub
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Настройка списка сайтов предприятия
-ms.openlocfilehash: 9b1943e4d50dcc770b4a634b99ecbd001d1ffbcc
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Пошаговое руководство по настройке списка сайтов в режиме предприятия для режима Internet Explorer.
+ms.openlocfilehash: 1d0b80950439fce77513413c3f5d1143538487d1
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447653"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470157"
 ---
-# <a name="configure-sites-on-the-enterprise-mode-site-list"></a>Настройка сайтов в списке сайтов в режиме предприятия
+# <a name="enterprise-site-configuration-strategy"></a>Стратегия настройки корпоративных сайтов
 
-В этой статье описаны изменения в списке сайтов в режиме предприятия, поддерживающем настройку режима IE в Microsoft Edge версии 77 и более поздних версиях.
+В этой статье описываются изменения, внесенные в список сайтов в режиме предприятия для поддержки режима Internet Explorer в Microsoft Edge версии 77 или более поздней.
 
 Дополнительные сведения о схеме для XML-файла списка сайтов в режиме предприятия см. в статье [Руководство по схеме режима предприятия версии 2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
 
 > [!NOTE]
-> Эта статья относится к Microsoft Edge версии 77 или более поздней; каналы **Stable**, **Beta** и **Dev**.
+> Эта статья относится к Microsoft Edge версии 77 или более поздней.
+<!--
+## Updated schema elements
 
-## <a name="updated-schema-elements"></a>Обновленные элементы схемы
+The following table describes the \<open-in app\> element added to the v.2 of the Enterprise Mode schema:
 
-В следующей таблице приводится описание элемента \<open-in app\>, добавленного в схему версии 2 режима предприятия.
-
-| **Элемент** | **Описание** |
+| **Element** | **Description** |
 | --- | --- |
-| \<open-in app="**true**"\> | Дочерний элемент, который определяет браузер, используемый для сайтов. Этот элемент необходим для сайтов, которые должны **открываться в IE11**.|
+| \<open-in app="**true**"\> | A child element that controls what browser is used for sites. This element is required for sites that need to **open in IE11**.|
 
-**Пример.**
+**Example:**
 
 ``` xml
 <site url="contoso.com">
@@ -44,18 +44,37 @@ ms.locfileid: "11447653"
 </site>
 ```
 
-В следующей таблице приведены возможные значения элемента \<open-in\>.
+The following table shows the possible values of the \<open-in\> element:
 
-| **Значение** | **Описание** |
+| **Value** | **Description** |
 | --- | --- |
-| **\<open-in\>IE11\</open-in\>** | Открывает сайт в режиме IE или режиме полного окна IE11. Сведения о включении режима IE см. в статье [Настройка политик режима IE](./edge-ie-mode-policies.md)|
-| **\<open-in app="**true**"\>IE11\</open-in\>** | Открывает сайт в режиме полного окна IE11 |
-| **\<open-in\>MSEdge\</open-in\>** | Открывает сайт в Microsoft Edge |
-| **\<open-in\>Нет или не указано\</open-in\>** | Открывает сайт в браузере по умолчанию или браузере, в котором пользователь перешел к сайту. |
-|**\<open-in\>Возможность настройки\</open-in\>** | Позволяет сайту участвовать в определении подсистемы режима IE. Дополнительные сведения см. в статье [Настраиваемые сайты в режиме IE](edge-learnmore-configurable-sites-ie-mode.md).  |
+| **\<open-in\>IE11\</open-in\>** | Opens the site in IE mode or a full IE11 window. To enable IE mode, see [Configure IE mode policies](./edge-ie-mode-policies.md)|
+| **\<open-in app="**true**"\>IE11\</open-in\>** | Opens the site in a full IE11 window |
+| **\<open-in\>MSEdge\</open-in\>** | Opens the site in Microsoft Edge |
+| **\<open-in\>None or not specified\</open-in\>** | Opens the site in the default browser or in the browser where the user navigated to the site. |
+|**\<open-in\>Configurable\</open-in\>** | Allows the site to participate in IE mode engine determination. To learn more, see [Learn about Configurable sites in IE mode](edge-learnmore-configurable-sites-ie-mode.md).  |
 
 >[!NOTE]
-> Атрибут app=**"true"** распознается только в том случае, если он связан со значением _'open-in' IE11_. Добавление его в другие элементы 'open-in' не приведет к изменению поведения браузера.   
+> The attribute app=**"true"** is only recognized when associated to _'open-in' IE11_. Adding it to the other 'open-in' elements won't change browser behavior.   -->
+
+## <a name="configuration-strategy"></a>Стратегия настройки
+
+В стратегию настройки сайтов для режима IE входят следующие действия:
+1. Подготовка списка сайтов
+2. Настройка нейтральных сайтов
+3. (Необязательно) Использование общего доступа к файлам cookie при необходимости
+
+<!--
+Step 1.  – if you don’t have one use Site Discovery Step-by-Step
+Step 2 – Neutral sites + sticky mode
+        Use more examples and explain sticky mode better
+Step 3 – If that doesn’t cover your needs, then use Cookie sharing -->
+
+## <a name="prepare-your-site-list"></a>Подготовка списка сайтов
+
+Если у вас уже есть список сайтов в режиме предприятия для IE11 или устаревшей версии Microsoft Edge, его можно использовать повторно для настройки режима IE.
+
+Если у вас нет списка сайтов, для его заполнения можно использовать [средство обнаружения корпоративных сайтов](https://docs.microsoft.com/deployedge/edge-ie-mode-site-discovery).
 
 ## <a name="configure-neutral-sites"></a>Настройка нейтральных сайтов
 
@@ -73,10 +92,14 @@ ms.locfileid: "11447653"
 </site>
 ```
 
-Чтобы определить серверы проверки подлинности, проверьте сетевой трафик из приложении с помощью средств разработчика IE11. Если вам требуется больше времени, чтобы определить серверы проверки подлинности, можно настроить политику, сохраняющую для всех переходов в пределах страницы применение режима IE. Чтобы свести к минимуму использование режима IE, отключите этот параметр после определения и добавления серверов проверки подлинности в список сайтов. Дополнительные сведения см. в разделе [Настройка переходов в пределах страницы для их сохранения в режиме IE](./microsoft-edge-policies.md#internetexplorerintegrationsiteredirect).
+Чтобы определить серверы проверки подлинности, проверьте трафик из приложения с помощью средств разработчика IE11. Если вам требуется больше времени, чтобы определить серверы проверки подлинности, можно настроить политику, сохраняющую все переходы в пределах страницы в режиме IE, чтобы пользователи могли продолжать свои рабочие процессы без перерывов. При необходимости отключите этот параметр после определения и добавления серверов проверки подлинности в список сайтов, чтобы свести к минимуму использование режима IE. Дополнительные сведения см. в разделе [Сохранение переходов в пределах страницы в режиме IE](https://docs.microsoft.com/deployedge/edge-learnmore-inpage-nav).
 
 >[!NOTE]
-   >Схема режима предприятия версии 1 не поддерживается для интеграции с режимом IE. Если вы используете схему версии 1 в Internet Explorer 11, необходимо обновить схему до версии 2. Дополнительные сведения см. в разделе [Руководство схеме версии 2 в режиме предприятия](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+   >Схема режима предприятия версии 1 не поддерживается для интеграции с режимом IE. Если вы используете схему версии 1 в Internet Explorer 11, необходимо обновить схему до версии 2. Дополнительные сведения см. в разделе [Руководство по схеме режима предприятия версии 2](/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance).
+
+## <a name="optional-use-cookie-sharing-if-necessary"></a>(Необязательно) Использование общего доступа к файлам cookie при необходимости
+
+По умолчанию процессы Microsoft Edge и Internet Explorer не делятся файлами cookie сеансов, и в некоторых случаях при использовании режима IE это может быть неудобно. Например, если пользователю необходимо выполнить повторную проверку подлинности в режиме IE и он уже привык это делать или если при выходе из сеанса Microsoft Edge он не выходит из сеанса в режиме Internet Explorer для выполнения критически важных транзакций. В таких сценариях вы можете настроить определенный набор файлов cookie (с помощью единого входа) для отправки из Microsoft Edge в Internet Explorer, чтобы проверка подлинности выполнялась проще благодаря устранению необходимости в повторной проверке. Дополнительные сведения см. в разделе [Отправка файлов cookie из Microsoft Edge в Internet Explorer](https://docs.microsoft.com/deployedge/edge-ie-mode-add-guidance-cookieshare).
 
 ## <a name="see-also"></a>См. также
 

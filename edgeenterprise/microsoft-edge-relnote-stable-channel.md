@@ -3,23 +3,25 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/25/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 31aaad801f4632985d7fc9d043155f2eb82ed046
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470277"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470907"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
 Эти заметки о выпуске содержат сведения о новых компонентах и обновлениях, не связанных с безопасностью, которые включены в стабильный канал Microsoft Edge.
+
+
 
 - Список всех обновлений системы безопасности находится [здесь](microsoft-edge-relnotes-security.md).
 - Архивные заметки о выпуске для канала Microsoft Edge Stable находятся [здесь](microsoft-edge-relnote-archive-stable-channel.md).
@@ -28,6 +30,10 @@ ms.locfileid: "11470277"
 
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077468-april-1"></a>Версия 89.0.774.68: 1 апреля
+
+Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#april-1-2021).
 
 ## <a name="version-89077463-march-25"></a>Версия 89.0.774.63: 25 марта
 
