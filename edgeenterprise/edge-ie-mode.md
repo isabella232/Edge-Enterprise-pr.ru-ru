@@ -1,28 +1,28 @@
 ---
-title: Сведения о режиме IE
+title: Что такое режим Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/25/2020
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Узнайте, как использовать Microsoft Edge в режиме IE.
-ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Узнайте, как режим Internet Explorer в Microsoft Edge предоставляет доступ к сайтам, которым требуется Internet Explorer 11, а также доступ к современным сайтам.
+ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447343"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470227"
 ---
-# <a name="about-ie-mode"></a>Сведения о режиме IE
+# <a name="what-is-internet-explorer-ie-mode"></a>Что такое режим Internet Explorer (IE)?
 
-В этой статье приводятся общие сведения и предварительные требования к использованию Microsoft Edge в режиме IE.
+Мы создали режим Internet Explorer (IE) в Microsoft Edge для организаций, которые по-прежнему нуждаются в Internet Explorer 11 для обеспечения обратной совместимости с существующими веб-сайтами, но также нуждаются в современном браузере. Эта функция упрощает использование в организациях одного браузера: для устаревших веб-страниц и приложений или для современных веб-страниц и приложений. В этой статье представлены начальные сведения по использованию Microsoft Edge в режиме IE.
 
 > [!NOTE]
-> Эта статья относится к Microsoft Edge версии 77 или более поздней; каналы **Stable**, **Beta** и **Dev**.
+> Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
 ## <a name="what-is-ie-mode"></a>Что такое режим IE?
 

@@ -1,21 +1,21 @@
 ---
 title: Настройка политик для режима IE
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 03/25/2020
+ms.author: collw
+author: dan-wesley
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка политик для режима IE
-ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447363"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470167"
 ---
 # <a name="configure-ie-mode-policies"></a>Настройка политик для режима IE
 
@@ -29,6 +29,9 @@ ms.locfileid: "11447363"
 1. [Настройка интеграции с Internet Explorer](#configure-internet-explorer-integration)
 2. [Перенаправление сайтов с Microsoft Edge в режим IE](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (Необязательно) [Перенаправление сайтов с IE в Microsoft Edge](#redirect-sites-from-ie-to-microsoft-edge)
+
+    1. Если вы готовы отключить приложение IE11, выполните действия из раздела [Отключение Internet Explorer 11](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)
+    2. В противном случае выполните остальные действия из раздела [Перенаправление сайтов с IE в Microsoft Edge](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
 > Политики для включения режима IE можно настроить с помощью Intune. Дополнительные сведения см. в статьях [Добавление Microsoft Edge в Microsoft Intune](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) и [Настройка политик Microsoft Edge с помощью Microsoft Intune](./configure-edge-with-intune.md).

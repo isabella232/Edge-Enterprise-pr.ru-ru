@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447993"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470277"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -28,6 +28,10 @@ ms.locfileid: "11447993"
 
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
+
+## <a name="version-89077463-march-25"></a>Версия 89.0.774.63: 25 марта
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-89077457-march-18"></a>Версия 89.0.774.57: 18 марта
 
@@ -107,7 +111,7 @@ ms.locfileid: "11447993"
 
 ## <a name="version-88070574-february-17"></a>Версия 88.0.705.74: 17 февраля
 
-Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#February-17-2021).
+Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#february-17-2021).
 
 ## <a name="version-88070568-february-11"></a>Версия 88.0.705.68: 11 февраля
 
@@ -118,11 +122,11 @@ ms.locfileid: "11447993"
 > [!IMPORTANT]
 > Это обновление содержит [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148), указанное командой Chromium как имеющее эксплойты на практике.
 
-Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#February-5-2021).
+Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#february-5-2021).
 
 ## <a name="version-88070562-february-4"></a>Версия 88.0.705.62: 4 февраля
 
-Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#February-4-2021).
+Стабильные обновления безопасности канала перечислены [здесь](./microsoft-edge-relnotes-security.md#february-4-2021).
 
 Исправлены ошибки и проблемы с производительностью.
 
