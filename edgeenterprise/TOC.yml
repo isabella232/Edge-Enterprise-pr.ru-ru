@@ -1,4 +1,4 @@
-# last revised 03/22/2021
+# last revised 03/31/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -23,6 +23,8 @@
   items:
     - name: Стратегия развития Microsoft Edge Enterprise
       href: microsoft-edge-roadmap.md
+    - name: Поддержка платформы для функций Microsoft Edge
+      href: microsoft-edge-platform-feature-matrix.md
     - name: Планирование развертывания Microsoft Edge
       href: deploy-edge-plan-deployment.md
     - name: Microsoft Edge в вашей среде
@@ -113,28 +115,32 @@
       href: microsoft-edge-pdf.md
     - name: Установка Microsoft Edge в качестве браузера по умолчанию
       href: edge-default-browser.md
-    - name: Использование Microsoft Edge в режиме IE
+    - name: Использование Microsoft Edge в режиме Internet Explorer
       items:
-        - name: Сведения о режиме IE
+        - name: Что такое режим Internet Explorer (IE)?
           href: edge-ie-mode.md
-        - name: Настройка сайтов в списке сайтов в режиме предприятия
+        - name: Стратегия конфигурации корпоративного сайта
           href: edge-ie-mode-sitelist.md
         - name: Настройка политик для режима IE
           href: edge-ie-mode-policies.md
         - name: Отключение Internet Explorer 11
           href: edge-ie-disable-ie11.md
-        - name: Пошаговое руководство по Enterprise Site Discovery
-          href: edge-ie-mode-site-discovery.md
-        - name: Вопросы и ответы о режиме IE
-          href: edge-ie-mode-faq.md
-        - name: Дополнительные рекомендации
+        - name: Обнаружение сайтов и управление списками
           items:
-            - name: Сопоставление расширений файлов с режимом Internet Explorer
-              href: edge-ie-mode-add-guidance-filetype-associations.md
-            - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
-              href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Пошаговое руководство по Enterprise Site Discovery
+              href: edge-ie-mode-site-discovery.md
             - name: Enterprise Site List Manager в Microsoft Edge
               href: edge-ie-mode-site-list-manager.md
+        - name: Сохранение навигации в пределах страницы в режиме IE
+          href: edge-learnmore-inpage-nav.md
+        - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
+          href: edge-ie-mode-add-guidance-cookieshare.md
+        - name: Настраиваемые сайты в режиме IE
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: Сопоставление расширений файлов с режимом Internet Explorer
+          href: edge-ie-mode-add-guidance-filetype-associations.md
+        - name: Устранение неполадок в режиме IE и faQ
+          href: edge-ie-mode-faq.md
 - name: Безопасность Microsoft Edge
   items:
     - name: Безопасность для бизнеса
@@ -177,12 +183,8 @@
           href: edge-learn-more-co-di.md
         - name: Параметры командной строки для настройки параметров прокси-сервера
           href: edge-learnmore-cmdline-options-proxy-settings.md
-        - name: Настраиваемые сайты в режиме IE
-          href: edge-learnmore-configurable-sites-ie-mode.md
         - name: Формат фильтрации для политик на основе списка URL-адресов
           href: edge-learnmmore-url-list-filter format.md
-        - name: Сохранение навигации в пределах страницы в режиме IE
-          href: edge-learnmore-inpage-nav.md
         - name: Скачивание смешанного содержимого
           href: edge-learnmore-mixed-content-downloads.md
         - name: Постепенное развертывание обновлений стабильного канала
