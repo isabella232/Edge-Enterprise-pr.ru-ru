@@ -75,7 +75,7 @@ ms.locfileid: "11470167"
 Дополнительные сведения о списках сайтов в режиме предприятия можно найти в следующих статьях:
 
 - [Использование средства Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Добавление нескольких сайтов в список сайтов в режиме предприятия в средстве Enterprise Mode Site List Manager с помощью файла (схема версии2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
+- [Добавление нескольких сайтов в список сайтов в режиме предприятия в средстве Enterprise Mode Site List Manager с помощью файла (схема версии 2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Настройка с помощью политики "Использовать список веб-сайтов IE в режиме предприятия"
 

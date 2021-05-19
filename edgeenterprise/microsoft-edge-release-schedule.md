@@ -43,7 +43,7 @@ ms.locfileid: "11448183"
 |---------|-----|------|--------|
 | 88 | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](./microsoft-edge-relnote-beta-channel.md#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](./microsoft-edge-relnote-stable-channel.md#version-88070550-january-21)|
 | **89** | Выпущена<br>Версия | 3 февраля 2021 г.<br>[89.0.774.18](./microsoft-edge-relnote-beta-channel.md#version-89077418-february-3) | **4 марта 2021 г.**<br>**[89.0.774.45](./microsoft-edge-relnote-stable-channel.md#version-89077445-march-21)** |
-| **90** | Выпущена<br>Версия | **16марта 2021г.**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | Неделя с 15 апреля 2021 г. |
+| **90** | Выпущена<br>Версия | **16 марта 2021 г.**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | Неделя с 15 апреля 2021 г. |
 | 91 | Целевой выпуск | Неделя с 27 апреля 2021 г. | Неделя с 27 мая 2021 г. |
 | 92 | Целевой выпуск | Неделя с 8 июня 2021 г. | Неделя с 22 июля 2021 г. |
 | 93 | Целевой выпуск | Неделя с 3 августа 2021 г. | Неделя со 2 сентября 2021 г. |

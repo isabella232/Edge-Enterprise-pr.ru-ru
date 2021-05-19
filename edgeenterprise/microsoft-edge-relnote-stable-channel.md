@@ -185,7 +185,7 @@ ms.locfileid: "11470907"
 - **Эффективная работа:**
 
   - Улучшение эффективности работы и многозадачности с помощью вертикальных вкладок. По мере роста числа горизонтальных вкладок названия сайтов обрезаются, а элементы управления вкладками теряются в уменьшенных вкладках. Это прерывает рабочий процесс пользователей, так как они тратят больше времени на поиск, переключение и управление вкладками и меньше времени на текущую задачу. Функция вертикальных вкладок позволяет пользователям перемещать вкладки в сторону, а вертикально выровненные значки и более длинные заголовки сайтов упрощают быстрое сканирование, идентификацию и переключение на нужную вкладку.
-  - Автоматическое заполнение поля даты рождения. Microsoft Edge позволяет экономить время и усилия при заполнении форм и создании учетных записей в Интернете, автоматически заполняя данные пользователя, такие как адрес, имя, номер телефона и т.д. Теперь Microsoft Edge предоставляет поддержку и для поля даты рождения, данные в котором пользователи могут сохранить и автоматически заполнять. Пользователь может просматривать, изменять и удалять эти сведения в любое время в параметрах своего профиля.
+  - Автоматическое заполнение поля даты рождения. Microsoft Edge позволяет экономить время и усилия при заполнении форм и создании учетных записей в Интернете, автоматически заполняя данные пользователя, такие как адрес, имя, номер телефона и т. д. Теперь Microsoft Edge предоставляет поддержку и для поля даты рождения, данные в котором пользователи могут сохранить и автоматически заполнять. Пользователь может просматривать, изменять и удалять эти сведения в любое время в параметрах своего профиля.
   - Улучшения для раздела "Недавно закрытые" в журнале. Теперь раздел "Недавно закрытые" включает последние 25 вкладок и окон из любых сеансов просмотра, а не только из предыдущего сеанса. Пользователи могут выбрать раздел "Недавно закрытые" в новом интерфейсе журнала, чтобы просмотреть все открытые вкладки.
   - Функция "Ваш день в двух словах" включена по умолчанию. С Microsoft Edge версии 88 информационные работники могут воспользоваться интеллектуальными функциями повышения производительности на странице "Новая вкладка" (NTP). Пользователи Microsoft Edge 87 также смогут использовать эти функции в течение 2 недель после выпуска Microsoft Edge 88. Мы предлагаем пользователям, которые вошли в рабочую или учебную учетную запись, персонализированный и актуальный контент на основе Microsoft 365 Graph. Пользователи могут быстро просмотреть модули "Ваш день в двух словах", чтобы легко отслеживать встречи и недавние задачи, а также быстро запускать приложения, которые они хотят использовать.
 
@@ -214,7 +214,7 @@ ms.locfileid: "11470907"
 - [InternetExplorerIntegrationLocalFileShowContextMenu](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileshowcontextmenu) — показывает контекстное меню, чтобы открыть ссылку в режиме Internet Explorer.
 - [IntranetRedirectBehavior](./microsoft-edge-policies.md#intranetredirectbehavior) — поведение при перенаправлении в интрасети.
 - [PrinterTypeDenyList](./microsoft-edge-policies.md#printertypedenylist) — отключает типы принтеров в списке запрещенных.
-- [ShowMicrosoftRewards](./microsoft-edge-policies.md#showmicrosoftrewards)— показывает возможности Microsoft Rewards.
+- [ShowMicrosoftRewards](./microsoft-edge-policies.md#showmicrosoftrewards) — показывает возможности Microsoft Rewards.
 - [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled) — настраивает спящие вкладки.
 - [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout) — устанавливает время ожидания активности фоновой вкладки для функции спящих вкладок.
 - [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls) — блокирует спящие вкладки на определенных сайтах.
@@ -223,7 +223,7 @@ ms.locfileid: "11470907"
 - [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride) — определяет, как Центр обновления Microsoft Edge обрабатывает доступные обновления из Microsoft Edge.
 - [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) — настраивает доступность вертикального макета для вкладок в боковой части окна браузера.
 - [WebRtcAllowLegacyTLSProtocols](./microsoft-edge-policies.md#webrtcallowlegacytlsprotocols) — разрешает переход на устаревшую версию TLS/DTLS в WebRTC.
-- [WebWidgetAllowed](./microsoft-edge-policies.md#webwidgetallowed)— включает мини веб-приложение.
+- [WebWidgetAllowed](./microsoft-edge-policies.md#webwidgetallowed) — включает мини веб-приложение.
 - [WebWidgetIsEnabledOnStartup](./microsoft-edge-policies.md#webwidgetisenabledonstartup) — разрешает запускать мини веб-приложение при начальной загрузке Windows.
 
 #### <a name="deprecated-policies"></a>Нерекомендуемые политики
@@ -238,9 +238,9 @@ ms.locfileid: "11470907"
 ### <a name="obsoleted-policies"></a>Устаревшие политики
 
 - [AllowPopupsDuringPageUnload](./microsoft-edge-policies.md#allowpopupsduringpageunload) — позволяет странице показывать всплывающие окне во время ее выгрузки.
-- [DefaultPluginsSetting](./microsoft-edge-policies.md#defaultpluginssetting)— настраивает Adobe Flash по умолчанию.
+- [DefaultPluginsSetting](./microsoft-edge-policies.md#defaultpluginssetting) — настраивает Adobe Flash по умолчанию.
 - [PluginsAllowedForUrls](./microsoft-edge-policies.md#pluginsallowedforurls) — разрешает подключаемый модуль Adobe Flash на определенных сайтах.
-- [PluginsBlockedForUrls](./microsoft-edge-policies.md#pluginsblockedforurls)— блокирует подключаемый модуль Adobe Flash на определенных сайтах.
+- [PluginsBlockedForUrls](./microsoft-edge-policies.md#pluginsblockedforurls) — блокирует подключаемый модуль Adobe Flash на определенных сайтах.
 - [RunAllFlashInAllowMode](./microsoft-edge-policies.md#runallflashinallowmode) — расширяет настройку содержимого Adobe Flash на все содержимое.
 <!--- end major 88  --->
 ## <a name="version-87066475-january-7"></a>Версия 87.0.664.75: 7 января
