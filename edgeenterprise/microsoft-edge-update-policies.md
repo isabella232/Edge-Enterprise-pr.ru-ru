@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "11105573"
 ---
-# Microsoft Edge — политики обновления
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge — политики обновления
 Последняя версия Microsoft Edge включает в себя следующие политики, которые можно использовать для управления процессом и временем обновления Microsoft Edge.
 
 Сведения о других политиках, доступных в Microsoft Edge, см. в [Справочнике по политикам браузера Microsoft Edge](microsoft-edge-policies.md)
