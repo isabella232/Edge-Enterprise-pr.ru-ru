@@ -32,7 +32,7 @@ ms.locfileid: "11105573"
 |[Приложения](#applications)|[Предпочтения](#preferences)|
 |[Прокси-сервер](#proxy-server)|[Веб-представление Microsoft Edge](#microsoft-edge-webview)|
 
-### [Приложения](#applications-policies)
+### <a name="applications"></a>[Приложения](#applications-policies)
 |Имя политики|Заголовок|
 |-|-|
 |[InstallDefault](#installdefault)|Разрешить установку по умолчанию|
@@ -45,20 +45,20 @@ ms.locfileid: "11105573"
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Откат к целевой версии (для каналов)|
 |[TargetVersionPrefix](#targetversionprefix)|Переопределение целевой версии (для каналов)|
 
-### [Предпочтения](#preferences-policies)
+### <a name="preferences"></a>[Предпочтения](#preferences-policies)
 |Имя политики|Заголовок|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Переопределение периода автоматической проверки обновления|
 |[UpdatesSuppressed](#updatessuppressed)|Период времени в течение дня, когда будет блокироваться автоматическая проверка обновлений|
 
-### [Прокси-сервер](#proxy-server-policies)
+### <a name="proxy-server"></a>[Прокси-сервер](#proxy-server-policies)
 |Имя политики|Действие|
 |-|-|
 |[ProxyMode](#proxymode)|Выбор способа задания параметров прокси-сервера|
 |[ProxyPacUrl](#proxypacurl)|URL-адрес файла PAC прокси-сервера|
 |[ProxyServer](#proxyserver)|Адрес или URL-адрес прокси-сервера|
 
-### [Веб-представление Microsoft Edge](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Веб-представление Microsoft Edge](#microsoft-edge-webview-policies)
 |Имя политики|Заголовок|
 |-|-|
 |[Установка](#install-webview)|Разрешить установку|
