@@ -23,11 +23,11 @@ ms.locfileid: "11314582"
 
 [![Удостоверение в Microsoft Edge](media/microsoft-edge-video-identity/0.png)](http://www.youtube.com/watch?v=8lRUKhR7ipA "Identity in Microsoft Edge")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 В этом видео описывается настройка аутентифицированного и персонализированного опыта для пользователей. Темы включают настройку входа, единый вход и несколько профилей.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Поддержка удостоверений и настройка Microsoft Edge](microsoft-edge-security-identity.md)

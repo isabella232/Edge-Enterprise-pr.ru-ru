@@ -29,7 +29,7 @@ ms.locfileid: "10980948"
 > - [Справочник по политикам браузера](microsoft-edge-policies.md)
 > - [Справочник по политикам обновления](microsoft-edge-update-policies.md)
 
-## См. также
+##  <a name="see-also"></a>См. также
 - [Настройка Microsoft Edge в Windows](configure-microsoft-edge.md)
 - [Настройка Microsoft Edge в macOS](configure-microsoft-edge-on-mac.md)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

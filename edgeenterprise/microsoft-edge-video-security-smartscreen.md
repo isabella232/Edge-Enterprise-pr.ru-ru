@@ -23,14 +23,14 @@ ms.locfileid: "11314702"
 
 [![Безопасный просмотр в Microsoft Edge](media/microsoft-edge-video-security-smartscreen/0.png)](http://www.youtube.com/watch?v=s9kk88SkjLw "Secure browsing on Microsoft Edge")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Microsoft Edge использует фильтр SmartScreen в Microsoft Defender для обеспечения безопасности во время просмотра. Узнайте о последних результатах защиты от фишинга и вредоносных программ, полученных в лабораториях NSS, и о том, как фильтр SmartScreen в Microsoft Defender обеспечивает интеграцию корпоративной безопасности с Microsoft Edge.
 
 > [!TIP]
 > Включите параметр защиты от потенциально нежелательных приложений в *edge://settings.*
 
-## Статьи по теме
+##  <a name="related-topics"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge](microsoft-edge-security-smartscreen.md)

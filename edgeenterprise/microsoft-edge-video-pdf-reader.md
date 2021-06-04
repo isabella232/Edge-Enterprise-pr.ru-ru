@@ -23,11 +23,11 @@ ms.locfileid: "11314742"
 
 [![Средство чтения PDF-файлов корпоративного уровня](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 В этом видео выделены функции встроенного в Microsoft Edge средства чтения PDF-файлов. Узнайте, как пользователи могут вручную вводить и выделять PDF-файлы, открывать защищенные документы, а также просматривать и проверять цифровые подписи на основе сертификатов.
 
-## Статьи по теме
+##  <a name="related-topics"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Средство чтения PDF в Microsoft Edge](microsoft-edge-pdf.md)

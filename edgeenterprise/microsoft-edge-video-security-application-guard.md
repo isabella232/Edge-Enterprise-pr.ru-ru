@@ -23,11 +23,11 @@ ms.locfileid: "11314752"
 
 [![Изоляция браузера с помощью Application Guard]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Защитите свою организацию от атак из Интернета с помощью Microsoft Edge. Узнайте, как Microsoft Edge поддерживает Application Guard в Microsoft Defender, чтобы использовать изоляцию браузера от внешних угроз.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Поддержка Microsoft Edge для Application Guard в Microsoft Defender](microsoft-edge-security-windows-defender-application-guard.md)

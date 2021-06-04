@@ -21,7 +21,7 @@ ms.locfileid: "11030566"
 
 Видеоролики из этой статьи, охватывают множество различных аспектов развертывания, использования и обслуживания Microsoft Edge в корпоративной среде.
 
-## Серия видеороликов о Microsoft Mechanics
+##  <a name="the-microsoft-mechanics-video-series"></a>Серия видеороликов о Microsoft Mechanics
 
 Серия видеороликов о Microsoft Mechanics со следующей страницы "*Руководства по развертыванию MSFT Edge Enterprise 2020*", входит в сборник видеороликов о Microsoft Edge, посвященных связанным событиям и объявлениям, решениям и конференциям.
 
@@ -29,6 +29,6 @@ ms.locfileid: "11030566"
 
 Их можно просмотреть в [списке воспроизведения Microsoft Edge Mechanics](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy) или на [канале YouTube Microsoft Edge](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA) вместе с другими видео.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

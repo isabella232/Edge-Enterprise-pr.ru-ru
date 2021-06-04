@@ -25,11 +25,11 @@ ms.locfileid: "11269446"
 
 [![Microsoft Edge: состояние браузера](media/microsoft-edge-video-state-of-browser/0.png)](http://www.youtube.com/watch?v=ajdoE4wmzV0 "Microsoft Edge - State of the browser 2020")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Это был интересный год для Microsoft Edge! Мы продолжали свою работу, чтобы Microsoft Edge был лучшим браузером для бизнеса. Узнайте о новых функциях обеспечения безопасности и производительности, а также о нашей постоянной интеграции с M365. Мы выслушаем вас и научимся делиться своим мнением о том, как все эти отзывы вписываются в Microsoft Edge.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Список воспроизведения YouTube для Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

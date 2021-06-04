@@ -35,7 +35,7 @@ ms.locfileid: "10980898"
 
 Здесь также перечислены некоторые элементы синтаксиса, принятые в PCRE, PERL и VIM.
 
-## Таблицы синтаксиса
+##  <a name="syntax-tables"></a>Таблицы синтаксиса
 
 | Типы односимвольных выражений | Примеры |
 | --- | --- |
@@ -500,13 +500,13 @@ ms.locfileid: "10980898"
 | (\*BSR\_ANYCRLF) | настройка соглашения \R (НЕ ПОДДЕРЖИВАЕТСЯ) PCRE |
 | (\*BSR\_UNICODE) | (НЕ ПОДДЕРЖИВАЕТСЯ) PCRE |
 
-## Лицензия на содержимое
+##  <a name="content-license"></a>Лицензия на содержимое
 
 > [!NOTE]
 > Некоторые части этой страницы представляют собой измененные материалы, созданные и предоставленные на сайте Chromium.org. Их использование регулируется условиями, описанными в [лицензии Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Исходная страница Chromium находится [здесь](https://github.com/google/re2/wiki/Syntax).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Эта работа предоставляется в рамках международной лицензии <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

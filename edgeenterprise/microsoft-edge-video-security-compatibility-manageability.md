@@ -23,7 +23,7 @@ ms.locfileid: "11314732"
 
 [![Безопасность, совместимость и управляемость Microsoft Edge](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Посмотрите практический обзор, чтобы ознакомиться с безопасностью, совместимостью и управляемостью новой версии Microsoft Edge. Microsoft Edge основан на платформе на Chromium и создан в качестве лучшего браузера для бизнеса. Наш ведущий Джереми Чэпмен покажет вам, что отличает его от других браузеров. В этом подробном обзоре рассматривается следующее:
 
@@ -31,7 +31,7 @@ ms.locfileid: "11314732"
 - Совместимость. Microsoft Edge совместим как с современными, так и устаревшими веб-страницами.
 - Управляемость. Рассмотрите варианты управления обновлениями или обслуживания для Microsoft Edge.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Безопасность Microsoft Edge для вашего бизнеса](ms-edge-security-for-business.md)

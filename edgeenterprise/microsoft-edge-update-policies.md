@@ -24,7 +24,7 @@ ms.locfileid: "11105573"
 Сведения о других политиках, доступных в Microsoft Edge, см. в [Справочнике по политикам браузера Microsoft Edge](microsoft-edge-policies.md)
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
-## Доступные политики
+##  <a name="available-policies"></a>Доступные политики
 В этих таблицах указаны все групповые политики, связанные с обновлением, доступные в данном выпуске Microsoft Edge. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
 
 |||
@@ -64,10 +64,10 @@ ms.locfileid: "11105573"
 |[Установка](#install-webview)|Разрешить установку|
 |[Обновление](#update-webview)|Переопределение политики обновления|
 
-## Политики приложений
+##  <a name="applications-policies"></a>Политики приложений
 
 [В начало](#microsoft-edge---update-policies)
-### InstallDefault
+###  <a name="installdefault"></a>InstallDefault
 #### Разрешить установку по умолчанию
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
@@ -98,7 +98,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### UpdateDefault
+###  <a name="updatedefault"></a>UpdateDefault
 #### Переопределение политики обновления по умолчанию
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
@@ -133,7 +133,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### Install
+###  <a name="install"></a>Install
 #### Разрешить установку
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
@@ -172,7 +172,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### Update
+###  <a name="update"></a>Update
 #### Переопределение политики обновления
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
@@ -217,7 +217,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### Allowsxs
+###  <a name="allowsxs"></a>Allowsxs
 #### Разрешить параллельный запуск разных типов браузеров Microsoft Edge
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
@@ -248,7 +248,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcutDefault
+###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### Запрет создания ярлыка на рабочем столе при установке по умолчанию
 >Центр обновления Microsoft Edge 1.3.128.0 и более поздних версий
 
@@ -276,7 +276,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcut
+###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
 #### Запрет создания ярлыка на рабочем столе при установке
 >Центр обновления Microsoft Edge 1.3.128.0 и более поздних версий
 
@@ -312,7 +312,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### RollbackToTargetVersion
+###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
 #### Откат к целевой версии
 >Центр обновления Microsoft Edge 1.3.133.3 и более поздних версий
 
@@ -361,7 +361,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### TargetVersionPrefix
+###  <a name="targetversionprefix"></a>TargetVersionPrefix
 #### Переопределение целевой версии
 >Центр обновления Microsoft Edge 1.3.119.43 и более поздних версий
 
@@ -402,10 +402,10 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-## Предпочтительные политики
+##  <a name="preferences-policies"></a>Предпочтительные политики
 
 [В начало](#microsoft-edge---update-policies)
-### AutoUpdateCheckPeriodMinutes
+###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
 #### Переопределение периода автоматической проверки обновлений
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
@@ -430,7 +430,7 @@ ms.locfileid: "11105573"
 [В начало](#microsoft-edge---update-policies)
 
 
-### UpdatesSuppressed
+###  <a name="updatessuppressed"></a>UpdatesSuppressed
 #### Период времени в течение дня, когда будет блокироваться автоматическая проверка обновлений
 >Центр обновления Microsoft Edge 1.3.33.5 и более поздних версий
 
@@ -461,10 +461,10 @@ start min  : 0x00000002
 [В начало](#microsoft-edge---update-policies)
 
 
-## Политики прокси-сервера
+##  <a name="proxy-server-policies"></a>Политики прокси-сервера
 
 [В начало](#microsoft-edge---update-policies)
-### ProxyMode
+###  <a name="proxymode"></a>ProxyMode
 #### Выбор способа задания параметров прокси-сервера
 >Центр обновления Microsoft Edge 1.3.21.81 и более поздних версий
 
@@ -497,7 +497,7 @@ fixed_servers
 [В начало](#microsoft-edge---update-policies)
 
 
-### ProxyPacUrl
+###  <a name="proxypacurl"></a>ProxyPacUrl
 #### URL-адрес файла PAC прокси-сервера
 >Центр обновления Microsoft Edge 1.3.21.81 и более поздних версий
 
@@ -526,7 +526,7 @@ https://www.microsoft.com
 [В начало](#microsoft-edge---update-policies)
 
 
-### ProxyServer
+###  <a name="proxyserver"></a>ProxyServer
 #### Адрес или URL-адрес прокси-сервера
 >Центр обновления Microsoft Edge 1.3.21.81 и более поздних версий
 
@@ -555,10 +555,10 @@ https://www.microsoft.com
 [В начало](#microsoft-edge---update-policies)
 
 
-## Политики веб-представления Microsoft Edge
+##  <a name="microsoft-edge-webview-policies"></a>Политики веб-представления Microsoft Edge
 
 [В начало](#microsoft-edge---update-policies)
-### Установка (веб-представление)
+###  <a name="install-(webview)"></a>Установка (веб-представление)
 #### Разрешить установку
 >Центр обновления Microsoft Edge 1.3.127.1 и более поздних версий
 
@@ -586,7 +586,7 @@ https://www.microsoft.com
 [В начало](#microsoft-edge---update-policies)
 
 
-### Обновление (веб-представление)
+###  <a name="update-(webview)"></a>Обновление (веб-представление)
 #### Переопределение политики обновления
 >Центр обновления Microsoft Edge 1.3.127.1 и более поздних версий
 
@@ -617,6 +617,6 @@ https://www.microsoft.com
 [В начало](#microsoft-edge---update-policies)
 
 
-## См. также
+##  <a name="see-also"></a>См. также
   - [Настройка Microsoft Edge](configure-microsoft-edge.md)
   - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

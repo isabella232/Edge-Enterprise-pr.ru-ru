@@ -26,11 +26,11 @@ ms.locfileid: "11269300"
 > [!NOTE]
 > Это видео было снято на конференции Microsoft Ignite 2019, семинар THR2279: Microsoft Edge и Поиск (Майкрософт): полный обзор для ИТ-администраторов и пользователей.
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Поиск (Майкрософт) добавляет настроенные и интегрированные результаты поиска в интрасети сайтов, людей, файлов и т. д. для Microsoft Edge на компьютерах с Windows, Mac и мобильных устройствах. В конце мы покажем, как настроить Поиск (Майкрософт) в рамках Microsoft 365 и как развернуть Microsoft Edge в System Center Configuration Manager и Microsoft Intune на разных платформах.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Список воспроизведения YouTube для Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

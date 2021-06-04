@@ -23,7 +23,7 @@ ms.locfileid: "11313960"
 
 Как было объявлено в [записи блога](https://aka.ms/EdgeLegacyEOS) группы по продуктам Microsoft Edge, поддержка устаревшей версии Microsoft Edge для настольных компьютеров завершится 9 марта 2021 г. Апрельский выпуск вторничного обновления (или "B") удалит устаревшую версию Microsoft Edge с устройств под управлением Windows 10 (версий начиная с RS4 и по 20H1) и заменит ее на Microsoft Edge.
 
-## Подготовка
+##  <a name="how-to-prepare"></a>Подготовка
 
 Чтобы подготовиться к установке Microsoft Edge на устройствах с Windows 10 RS4-20H1 вторничным обновлением в апреле, рекомендуем прочитать статью [Планирование развертывания Microsoft Edge](deploy-edge-plan-deployment.md).
 
@@ -33,7 +33,7 @@ ms.locfileid: "11313960"
 
 - **Удалите настольное приложение устаревшей версии Microsoft Edge до даты окончания ее службы 9 марта 2021г. и разверните Microsoft Edge**. Для Windows 10 RS4-20H1 это можно сделать с помощью Обновлений Windows. Дополнительные сведения см. в статье [Развертывание Microsoft Edge с обновлениями Windows 10](deploy-edge-with-windows-10-updates.md).
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Планирование развертывания Microsoft Edge](deploy-edge-plan-deployment.md)

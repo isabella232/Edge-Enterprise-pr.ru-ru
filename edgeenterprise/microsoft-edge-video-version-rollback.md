@@ -23,11 +23,11 @@ ms.locfileid: "11314712"
 
 [![Откат версии Microsoft Edge](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Откат версии позволяет заменить версию браузера Microsoft Edge более ранней. Узнайте, как откат в Microsoft Edge может предоставить вашей организации сеть безопасности, чтобы снизить потенциальное влияние при устранении любых проблем в Microsoft Edge.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Как откатить Microsoft Edge к предыдущей версии](edge-learnmore-rollback.md)

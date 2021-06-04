@@ -23,11 +23,11 @@ ms.locfileid: "11314722"
 
 [![ Microsoft Edge и предотвращение потери данных](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Защита от потери данных никогда не была так важна, как сейчас в условиях удаленной работы. Узнайте о собственных возможностях защиты от потери данных в Microsoft Edge и о том, как защита от потери данных сохраняет ваши данные под управлением организации и обеспечивает их соответствие требованиям.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Защита от потери данных в Microsoft Edge](microsoft-edge-security-dlp.md)

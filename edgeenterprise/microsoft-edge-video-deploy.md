@@ -23,11 +23,11 @@ ms.locfileid: "11269358"
 
 [![Развертывание Microsoft Edge на сотнях или тысячах устройств](media/microsoft-edge-video-deploy/0.png)](http://www.youtube.com/watch?v=o90UsN6g6NE "Deploy Microsoft Edge to hundreds or thousands of devices")
 
-## О видео
+##  <a name="about-the-video"></a>О видео
 
 Просмотрите практические инструкции по развертыванию Microsoft Edge на своих устройствах Ознакомьтесь с вариантами упаковки Microsoft Edge для автоматической установки, способами развертывания Microsoft Edge на компьютерах с Windows с помощью Microsoft Endpoint Configuration Manager, а также пошаговыми инструкциями по подготовке Microsoft Edge на всех управляемых устройствах, включая телефоны и компьютеры Mac.
 
-## См. также
+##  <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Список воспроизведения YouTube для Microsoft Edge](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)
