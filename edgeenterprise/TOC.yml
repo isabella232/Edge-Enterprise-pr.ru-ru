@@ -23,7 +23,7 @@
   items:
     - name: Стратегия развития Microsoft Edge Enterprise
       href: microsoft-edge-roadmap.md
-    - name: Поддержка платформы для функций Microsoft Edge
+    - name: Поддерживаемые платформы для функций Microsoft Edge
       href: microsoft-edge-platform-feature-matrix.md
     - name: Планирование развертывания Microsoft Edge
       href: deploy-edge-plan-deployment.md
@@ -31,19 +31,19 @@
       href: deploy-edge-prepare-to-deploy.md
     - name: Отчет об использовании браузера Майкрософт
       href: microsoft-edge-browser-usage-report.md
-    - name: Готовность к Microsoft Edge
+    - name: Подготовка к использованию Microsoft Edge
       href: deploy-edge-ready-for-edge.md
     - name: Заметки о выпуске стабильного канала
       href: microsoft-edge-relnote-stable-channel.md
-    - name: Заметки об архивном выпуске stable Channel
+    - name: Архивные заметки о выпуске стабильного канала
       href: microsoft-edge-relnote-archive-stable-channel.md
-    - name: Заметки о выпуске канала Beta
+    - name: Заметки о выпуске бета-канала
       href: microsoft-edge-relnote-beta-channel.md
-    - name: Примечания к выпуску архивного выпуска бета-канала
+    - name: Архивные заметки о выпуске бета-канала
       href: microsoft-edge-relnote-archive-beta-channel.md
     - name: Расписание выпусков
       href: microsoft-edge-release-schedule.md
-    - name: Обновления для системы безопасности
+    - name: Обновления системы безопасности
       href: microsoft-edge-relnotes-security.md
     - name: Сопоставление политик Microsoft Edge
       items:
@@ -89,25 +89,25 @@
       href: configure-microsoft-edge-on-mac.md
     - name: Настройка для macOS с помощью Jamf
       href: configure-microsoft-edge-on-mac-jamf.md
-- name: Использование корпоративных функций Microsoft Edge
+- name: Использование функций Microsoft Edge Enterprise
   items:
     - name: Конфигурации и эксперименты
       href: edge-configuration-and-experiments.md
     - name: Поддержка и настройка удостоверений
       href: microsoft-edge-security-identity.md
-    - name: Microsoft Edge и службы переноса параметров в рамках предприятия Enterprise State Roaming
+    - name: Microsoft Edge и Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Планирование перехода в режим терминала
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Настройка режима терминала в Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Синхронизация предприятий Microsoft Edge
+    - name: Синхронизация Microsoft Edge Enterprise
       items:
         - name: Настройка синхронизации Microsoft Edge
           href: microsoft-edge-enterprise-sync.md
         - name: Диагностика и устранение проблем синхронизации Microsoft Edge
           href: microsoft-edge-troubleshoot-enterprise-sync.md
-        - name: Синхронизация faQ
+        - name: 'Синхронизация: вопросы и ответы'
           href: microsoft-edge-enterprise-sync-faq.md
     - name: Локальная синхронизация для пользователей Active Directory
       href: microsoft-edge-on-premises-sync.md
@@ -119,35 +119,35 @@
       items:
         - name: Что такое режим Internet Explorer (IE)?
           href: edge-ie-mode.md
-        - name: Стратегия конфигурации корпоративного сайта
+        - name: 'Стратегия настройки сайтов, открываемых в режиме предприятия'
           href: edge-ie-mode-sitelist.md
-        - name: Настройка политик для режима IE
+        - name: Настройка политик для режима Internet Explorer
           href: edge-ie-mode-policies.md
-        - name: Отключение Internet Explorer 11
+        - name: Прекращение поддержки Internet Explorer 11
           href: edge-ie-disable-ie11.md
         - name: Обнаружение сайтов и управление списками
           items:
-            - name: Пошаговое руководство по Enterprise Site Discovery
+            - name: 'Пошаговое руководство по обнаружению сайтов, открываемых в режиме предприятия'
               href: edge-ie-mode-site-discovery.md
-            - name: Enterprise Site List Manager в Microsoft Edge
+            - name: 'Диспетчер списка сайтов, открываемых в режиме предприятия, в Microsoft Edge'
               href: edge-ie-mode-site-list-manager.md
-        - name: Сохранение навигации в пределах страницы в режиме IE
+        - name: Сохранение навигации в пределах страницы в режиме Internet Explorer
           href: edge-learnmore-inpage-nav.md
         - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
           href: edge-ie-mode-add-guidance-cookieshare.md
-        - name: Настраиваемые сайты в режиме IE
+        - name: Функция "Настраиваемые сайты" в режиме Internet Explorer
           href: edge-learnmore-configurable-sites-ie-mode.md
         - name: Сопоставление расширений файлов с режимом Internet Explorer
           href: edge-ie-mode-add-guidance-filetype-associations.md
-        - name: Устранение неполадок в режиме IE и faQ
+        - name: 'Устранение неполадок с режимом Internet Explorer: вопросы и ответы'
           href: edge-ie-mode-faq.md
-- name: Безопасность Microsoft Edge
+- name: Система безопасности Microsoft Edge
   items:
-    - name: Безопасность для бизнеса
+    - name: Система безопасности для вашей организации
       href: ms-edge-security-for-business.md
     - name: Список разрешений для конечных точек Microsoft Edge
       href: microsoft-edge-security-endpoints.md
-    - name: Предотвращение потери данных (DLP)
+    - name: Защита от потери данных (DLP)
       href: microsoft-edge-security-dlp.md
     - name: Автоматическое включение мониторинга паролей для пользователей
       href: microsoft-edge-security-password-monitor.md
@@ -177,13 +177,13 @@
       href: microsoft-edge-webview-policies.md
     - name: Справочник по дополнительным сведениям
       items:
-        - name: Обратная совместимость для страницы вкладок Enterprise New
+        - name: Обратная совместимость с новой вкладкой Microsoft Edge Enterprise
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce и DirectInvoke
           href: edge-learn-more-co-di.md
         - name: Параметры командной строки для настройки параметров прокси-сервера
           href: edge-learnmore-cmdline-options-proxy-settings.md
-        - name: Формат фильтрации для политик на основе списка URL-адресов
+        - name: Формат фильтра для политик на основе списка URL-адресов
           href: edge-learnmmore-url-list-filter format.md
         - name: Скачивание смешанного содержимого
           href: edge-learnmore-mixed-content-downloads.md
@@ -199,27 +199,27 @@
           href: edge-learnmore-reset-data-in-cloud.md
         - name: Использование отката Microsoft Edge для предприятий
           href: edge-learnmore-rollback.md
-- name: Microsoft Edge Videos
+- name: Видео о Microsoft Edge
   items:
-    - name: Коллекция видео Microsoft Edge
+    - name: Коллекция видео о Microsoft Edge
       href: microsoft-edge-videos.md
-    - name: Видео — Microsoft Edge — состояние браузера 2020
+    - name: 'Видео "Microsoft Edge: состояние браузера в 2020 г."'
       href: microsoft-edge-video-state-of-browser.md
-    - name: Видео - изоляция браузера с помощью application Guard
+    - name: Видео "Изоляция браузера с помощью Application Guard"
       href: microsoft-edge-video-security-application-guard.md
-    - name: Видео — развертывание Microsoft Edge
+    - name: Видео "Развертывание Microsoft Edge"
       href: microsoft-edge-video-deploy.md
-    - name: Видео - предотвращение потери данных (DLP)
+    - name: Видео "Защита от потери данных (DLP)"
       href: microsoft-edge-video-security-dlp.md
-    - name: Видео — удостоверение в Microsoft Edge
+    - name: Видео "Удостоверение в Microsoft Edge"
       href: microsoft-edge-video-identity.md
-    - name: Видео - откат версии Microsoft Edge
+    - name: Видео "Откат версии Microsoft Edge"
       href: microsoft-edge-video-version-rollback.md
-    - name: Видео — считыватель PDF в Microsoft Edge
+    - name: Видео "Средство чтения PDF в Microsoft Edge"
       href: microsoft-edge-video-pdf-reader.md
-    - name: Видео — безопасный просмотр в Microsoft Edge
+    - name: Видео "Безопасный просмотр веб-страниц в Microsoft Edge"
       href: microsoft-edge-video-security-smartscreen.md
-    - name: 'Видео: безопасность, совместимость и управляемость'
+    - name: 'Видео "Безопасность, совместимость и управляемость"'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: Вопросы и ответы
   href: faqs-edge-in-the-enterprise.yml
