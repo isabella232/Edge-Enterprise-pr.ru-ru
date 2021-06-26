@@ -1,6 +1,6 @@
 ---
 title: Корпоративные параметры конфиденциальности Microsoft Edge
-ms.author: likravit
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 09/09/2020
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Настройка корпоративных параметров конфиденциальности Microsoft Edge
-ms.openlocfilehash: 8ae1737cb066fd473c76f7812c875aceb3cfefb7
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 9af3ce14b9ee717d4c64fa3b920e8c63224613e6
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447943"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617779"
 ---
 # <a name="configure-microsoft-edge-policies-to-support-enterprise-privacy"></a><span data-ttu-id="ce5c9-103">Настройка политик Microsoft Edge для поддержки корпоративной конфиденциальности</span><span class="sxs-lookup"><span data-stu-id="ce5c9-103">Configure Microsoft Edge policies to support enterprise privacy</span></span>
 

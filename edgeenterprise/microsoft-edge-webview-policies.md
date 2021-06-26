@@ -3,7 +3,7 @@ title: Документация по политикам Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 06/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,18 +11,19 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 38aac0e4ffd932583ad48a2dd13cf8e93df79e29
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 78d4a610fd4d5ba5549ea1e2e4833acc9e686016
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442379"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617987"
 ---
 # <a name="microsoft-edge-webview2---policies"></a><span data-ttu-id="31018-103">Политики Microsoft Edge WebView2</span><span class="sxs-lookup"><span data-stu-id="31018-103">Microsoft Edge WebView2 - Policies</span></span>
 
 <span data-ttu-id="31018-104">Последняя версия Microsoft Edge WebView2 включает в себя следующие политики.</span><span class="sxs-lookup"><span data-stu-id="31018-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="31018-105">Эти политики можно использовать для настройки работы Microsoft Edge WebView2 в вашей организации.</span><span class="sxs-lookup"><span data-stu-id="31018-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
 
 <span data-ttu-id="31018-106">Информацию о дополнительном наборе политик, используемых для управления тем, как и когда обновляется Microsoft Edge WebView2, можно найти в [справочнике по политике обновления Microsoft Edge](microsoft-edge-update-policies.md).</span><span class="sxs-lookup"><span data-stu-id="31018-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
+
 
 > [!NOTE]
 > <span data-ttu-id="31018-107">Эта статья относится к Microsoft Edge версии 87 или более поздней.</span><span class="sxs-lookup"><span data-stu-id="31018-107">This article applies to Microsoft Edge version 87 or later.</span></span>
