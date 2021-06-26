@@ -3,7 +3,7 @@ title: Документация по политикам Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/18/2021
+ms.date: 06/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,18 +11,19 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 38aac0e4ffd932583ad48a2dd13cf8e93df79e29
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 78d4a610fd4d5ba5549ea1e2e4833acc9e686016
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442379"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617987"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Политики Microsoft Edge WebView2
 
 Последняя версия Microsoft Edge WebView2 включает в себя следующие политики. Эти политики можно использовать для настройки работы Microsoft Edge WebView2 в вашей организации.
 
 Информацию о дополнительном наборе политик, используемых для управления тем, как и когда обновляется Microsoft Edge WebView2, можно найти в [справочнике по политике обновления Microsoft Edge](microsoft-edge-update-policies.md).
+
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 87 или более поздней.

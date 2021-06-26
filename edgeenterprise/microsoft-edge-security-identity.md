@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Поддержка удостоверений и настройка Microsoft Edge
-ms.openlocfilehash: 8b4fe3c46e0c8dd76d0e22051fb63465e34202f2
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 34a5a4aa958873a012d0a2da4184cb508af27a8a
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447543"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617919"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Поддержка удостоверений и настройка Microsoft Edge
 
@@ -91,7 +91,7 @@ Microsoft Edge также поддерживает встроенную пров
 
 ### <a name="proactive-authentication"></a>Упреждающий способ проверки подлинности
 
-Упреждающий способ проверки подлинности - это оптимизация единого входа через браузер на веб-сайт, которая загружает аутентификацию на некоторые сторонние веб-сайты. Это повышает производительность адресной строки, если пользователь использует Bing в качестве поисковой системы. Это дает пользователям персонализированные и поисковые результаты в Microsoft Search для бизнеса. Кроме того, это позволяет разрешить проверку подлинности в основных службах, таких как страница новой вкладки Office. Управлять им можно с помощью политики [ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled).
+Упреждающий способ проверки подлинности - это оптимизация единого входа через браузер на веб-сайт, которая загружает аутентификацию на некоторые сторонние веб-сайты. Это повышает производительность адресной строки, если пользователь использует Bing в качестве поисковой системы. Это дает пользователям персонализированные и поисковые результаты в Microsoft Search для бизнеса. Кроме того, это позволяет разрешить проверку подлинности в основных службах, таких как страница новой вкладки Office. Управлять им можно с помощью политики [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled).
 
 ### <a name="windows-hello-credui-for-ntlm-authentication"></a>Windows Hello CredUI для аутентификации NTLM
 

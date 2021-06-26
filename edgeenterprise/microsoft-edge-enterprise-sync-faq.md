@@ -1,6 +1,6 @@
 ---
 title: Вопросы и ответы о синхронизации Microsoft Edge для предприятий
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Вопросы и ответы о синхронизации Microsoft Edge для предприятий.
-ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 4bb41c8d7ded64fcc0b4fd4843ef2b7ec0adec23
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447873"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617769"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Вопросы и ответы о синхронизации Microsoft Edge для предприятий
 
@@ -59,7 +59,7 @@ ms.locfileid: "11447873"
 
 ### <a name="is-microsoft-edge-sync-based-on-enterprise-state-roaming"></a>Основана ли функция синхронизации Microsoft Edge на Enterprise State Roaming?
 
-Нет. ESR может использоваться для включения синхронизации, но функция синхронизации Microsoft Edge не входит в состав ESR. Дополнительные сведения см. в разделах [Функция синхронизации Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync) и [Microsoft Edge и Enterprise State Roaming](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-state-roaming).
+Нет. ESR может использоваться для включения синхронизации, но функция синхронизации Microsoft Edge не входит в состав ESR. Дополнительные сведения см. в разделах [Функция синхронизации Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync) и [Microsoft Edge и Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming).
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Будет ли Microsoft Edge поддерживать синхронизацию между Microsoft Edge и IE?
 

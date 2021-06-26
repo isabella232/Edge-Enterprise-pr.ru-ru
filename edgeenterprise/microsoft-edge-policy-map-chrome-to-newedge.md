@@ -3,28 +3,28 @@ title: Сопоставление политик Google Chrome и Microsoft Edge
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сопоставление политик Google Chrome и Microsoft Edge
-ms.openlocfilehash: 10253d8d18864fedf5cfaf7d064766ad641675d4
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448043"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617869"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Сопоставление политик Google Chrome и Microsoft Edge
 
-В этой статье сопоставляются политики Google Chrome с соответствующими политикам Microsoft Edge, поддерживаемыми в версии 80. Сведения о политиках устаревшей версии Microsoft Edge см. в статье [Сопоставление политик устаревшей версии Microsoft Edge и новой](microsoft-edge-policy-map-legacy-to-newedge.md).
+В этой статье сопоставляются политики Google Chrome с соответствующими политикам Microsoft Edge, поддерживаемыми в версии 80. Сведения о политиках устаревшей версии Microsoft Edge см. в статье [Сопоставление политик устаревшей версии Microsoft Edge и новой](/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master).
 
 > [!NOTE]
 > Приведенное ниже сопоставление помогает в начальном развертывании Microsoft Edge версии 80. Точный перечень последних политик см. в указанных ниже источниках.
-> - [Справочник по политикам браузера](microsoft-edge-policies.md)
-> - [Справочник по политикам обновления](microsoft-edge-update-policies.md)
+> - [Справочник по политикам браузера](/deployedge/microsoft-edge-policies)
+> - [Справочник по политикам обновления](/deployedge/microsoft-edge-update-policies)
 
 ## <a name="google-chrome-to-microsoft-edge-policy-map"></a>Сопоставление политик Google Chrome и Microsoft Edge
 
@@ -94,8 +94,8 @@ ms.locfileid: "11448043"
 |[CloudPrintProxyEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintProxyEnabled)|Не применяются|
 |[CloudPrintSubmitEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintSubmitEnabled)|Не применяются|
 |[CloudReportingEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudReportingEnabled)|Не применяются|
-|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)|[CoalesceH2ConnectionsWithClientCertificatesForHosts](./microsoft-edge-policies.md#coalesceh2connectionswithclientcertificatesforhosts)|
-|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)|[CommandLineFlagSecurityWarningsEnabled](./microsoft-edge-policies.md#commandlineflagsecuritywarningsenabled)|
+|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)
+|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)
 |[ComponentUpdatesEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ComponentUpdatesEnabled)|[ComponentUpdatesEnabled](./microsoft-edge-policies.md#componentupdatesenabled)|
 |[CookiesAllowedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesAllowedForUrls)|[CookiesAllowedForUrls](./microsoft-edge-policies.md#cookiesallowedforurls)|
 |[CookiesBlockedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesBlockedForUrls)|[CookiesBlockedForUrls](./microsoft-edge-policies.md#cookiesblockedforurls)|
