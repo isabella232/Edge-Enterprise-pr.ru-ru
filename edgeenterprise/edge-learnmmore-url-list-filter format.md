@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Сведения о формате фильтрации, используемом для политик URLBlocklist и URLAllowlist в Microsoft Edge.
-ms.openlocfilehash: 5a0eff1ca7be17fccd1087716d426b13ea302847
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 94378a9193269c73a7439dd019d6cb2d6ac547df
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980905"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617269"
 ---
-# Формат фильтрации для политик на основе списка URL-адресов
+# <a name="filter-format-for-url-list-based-policies"></a>Формат фильтрации для политик на основе списка URL-адресов
 
 В этой статье описывается формат фильтрации, используемый для политик на основе списка URL-адресов Microsoft Edge (например, [URLBlocklist](microsoft-edge-policies.md#urlblocklist), [URLAllowList](microsoft-edge-policies.md#urlallowlist) и [CertificateTransparencyEnforcementDisabledForUrls](microsoft-edge-policies.md#certificatetransparencyenforcementdisabledforurls).
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-##  <a name="the-filter-format"></a>Формат фильтрации
+## <a name="the-filter-format"></a>Формат фильтрации
 
 Используется следующий формат фильтрации:
 
@@ -37,12 +37,12 @@ ms.locfileid: "10980905"
 | Поле | Описание |
 | --- | --- |
 | **схема** (*необязательно*) | Это может быть http://, https://, ftp://, edge:// и т. д. |
-| **узел** (*обязательно*) | Это должно быть действительное имя узла или IP-адрес. Также можно использовать подстановочный знак ("\*"). Для отключения сопоставления дочерних доменов добавьте необязательную точку (".") перед **узлом**. |
+| **узел** (*обязательно*) | Это должно быть действительное имя узла. Также можно использовать подстановочный знак ("\*"). Для отключения сопоставления дочерних доменов добавьте необязательную точку (".") перед **узлом**. Можно указать имя узла литерала IP-адреса, но подстановочные знаки не поддерживаются для имени узла литерала IP-адреса. |
 | **порт** (*необязательно*) | Допускаются значения в диапазоне от 1 до 65535. |
 | **путь** (*необязательно*) | В пути можно использовать любую строку. |
 | **запрос** (*необязательно*) | **Запрос** — это маркеры типа "ключ-значение" или "ключ", разделенные амперсандом ("&"). Маркеры типа "ключ-значение" следует разделять знаком равенства ("="). Чтобы обозначить сопоставление префиксов, можно использовать звездочку ("\*") в конце **запроса**. |
 
-##  <a name="comparing-the-filter-format-to-the-url-format"></a>Сравнение формата фильтрации с форматом URL-адреса
+## <a name="comparing-the-filter-format-to-the-url-format"></a>Сравнение формата фильтрации с форматом URL-адреса
 
 Формат фильтрации похож на формат URL-адреса, за исключением следующих различий:
 
@@ -51,7 +51,7 @@ ms.locfileid: "10980905"
 - В качестве **узла** можно использовать подстановочный знак ("*"). Перед ним можно поставить точку (".").
 - В качестве суффикса **узла**можно использовать косую черту ("/") или точку ("."). В этом случае суффикс игнорируется.
 
-##  <a name="filter-selection-criteria"></a>Условия выбора фильтра
+## <a name="filter-selection-criteria"></a>Условия выбора фильтра
 
 Выбранный для URL-адреса фильтр — это наиболее точное совпадение, находимое после обработки следующих правил выбора фильтра.
 
@@ -65,7 +65,7 @@ ms.locfileid: "10980905"
    >[!NOTE]
    >Запрос URL-адреса разрешен по умолчанию при отсутствии совпадений при фильтрации.
 
-##  <a name="example-filter-selection-criteria"></a>Пример условий выбора фильтра
+## <a name="example-filter-selection-criteria"></a>Пример условий выбора фильтра
 
 В этом примере при поиске совпадения с "https://sub.contoso.com/docs" средство выбора фильтра будет выполнять следующие действия.
 
@@ -75,7 +75,7 @@ ms.locfileid: "10980905"
 4. Из оставшихся фильтров все фильтры без префикса "/docs" для **пути**, удаляются.
 5. Из оставшихся фильтров выбирается и применяется фильтр с самым длинным префиксом пути. Если фильтр не найден, процесс выбора начинается снова с шага 1. Процесс повторяется со следующим дочерним доменом.
 
-###  <a name="additional-filter-information"></a>Дополнительные сведения фильтрации
+### <a name="additional-filter-information"></a>Дополнительные сведения фильтрации
 
 Если в фильтре перед **узлом** стоит точка ("."), фильтруются только точные совпадения **узла**. Пример
 
@@ -86,9 +86,9 @@ ms.locfileid: "10980905"
 
 - _about_, _blob_, _content_, _edge_, _cid_, _data_, _file_, _filesystem_, _ftp_, _gopher_, _http_, _https_, _javascript_, _mailto_, _ws_ и _wss_.
 
-Любая другая **схема** рассматривается как пользовательская**схема**, однако допускается использование только шаблонов _schema:*_ и _schema://*_. Пример
+Любая другая **схема** рассматривается как пользовательская**схема**, однако допускается использование только шаблонов _schema:*_ и _schema://*_. Например:
 
-- "custom:*" или "custom://*" будет сопоставляться с "custom:app"
+- "custom:\*" или "custom://\*" будет сопоставляться с "custom:app"
 - "custom:app" или "custom://app" являются недопустимыми
 
 **схема** и **узел** не чувствительны к регистру. Пример
@@ -99,13 +99,13 @@ ms.locfileid: "10980905"
 
 - Фильтр "http://contoso.com/path?query=A" не совпадает с "http://contoso.com/Path?query=A" или "http://contoso.com/path?Query=A". Он совпадает с "http://contoso.COM/path?query=A".
 
-##  <a name="content-license"></a>Лицензия на содержимое
+## <a name="content-license"></a>Лицензия на содержимое
 
 > [!NOTE]
 > Некоторые части этой страницы представляют собой измененные материалы, созданные и предоставленные на сайте Chromium.org. Их использование регулируется условиями, описанными в [лицензии Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Исходная [страница Chromium находится здесь](https://www.chromium.org/administrators/url-blacklist-filter-format).
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Эта работа предоставляется в рамках международной лицензии <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)

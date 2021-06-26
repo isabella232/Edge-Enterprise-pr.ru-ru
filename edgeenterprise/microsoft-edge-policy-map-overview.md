@@ -10,18 +10,17 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Обзор сопоставления политик Microsoft Edge
-ms.openlocfilehash: 12967a90ab920bb25473902f2dd2c08fd003f934
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 724dba17d6f129abff4be52eda175c611cc9544f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980948"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617829"
 ---
-# Обзор сопоставления политик Microsoft Edge
+# <a name="microsoft-edge-policy-mapping-overview"></a>Обзор сопоставления политик Microsoft Edge
 
-Чтобы упростить начальное развертывание, используйте следующие сопоставления политик для переноса конфигурации политики устаревшей версии Microsoft Edge (версия 45 или более ранние) или Google Chrome (версии 80) в Microsoft Edge (версии 80).
+Чтобы упростить начальное развертывание, используйте следующие сопоставления политик для переноса конфигурации политики Google Chrome (версия 80) в Microsoft Edge (версия 80).
 
-- [Сопоставление политик Microsoft Edge Legacy и Microsoft Edge](microsoft-edge-policy-map-legacy-to-newedge.md)
 - [Сопоставление политик Google Chrome и Microsoft Edge](microsoft-edge-policy-map-chrome-to-newedge.md)
 
 > [!NOTE]
@@ -29,7 +28,7 @@ ms.locfileid: "10980948"
 > - [Справочник по политикам браузера](microsoft-edge-policies.md)
 > - [Справочник по политикам обновления](microsoft-edge-update-policies.md)
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 - [Настройка Microsoft Edge в Windows](configure-microsoft-edge.md)
 - [Настройка Microsoft Edge в macOS](configure-microsoft-edge-on-mac.md)
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
