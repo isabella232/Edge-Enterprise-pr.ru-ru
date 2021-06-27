@@ -1,21 +1,21 @@
 ---
 title: Расписание выпусков Microsoft Edge
 ms.author: aguta
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 06/18/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: a78c56d4c20da711eb73679dbe1c974bfac3c869
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 578a7a3c1a87aee1acc01715c735d5eea9ab67c0
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448183"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617984"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Расписание выпусков Microsoft Edge
 
@@ -41,10 +41,10 @@ ms.locfileid: "11448183"
 
 | Версия | Состояние выпуска | Канал Beta<br>Неделя выпуска | Канал Stable<br>Неделя выпуска |
 |---------|-----|------|--------|
-| 88 | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](./microsoft-edge-relnote-beta-channel.md#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](./microsoft-edge-relnote-stable-channel.md#version-88070550-january-21)|
-| **89** | Выпущена<br>Версия | 3 февраля 2021 г.<br>[89.0.774.18](./microsoft-edge-relnote-beta-channel.md#version-89077418-february-3) | **4 марта 2021 г.**<br>**[89.0.774.45](./microsoft-edge-relnote-stable-channel.md#version-89077445-march-21)** |
-| **90** | Выпущена<br>Версия | **16 марта 2021 г.**<br>**[90.0.818.8](./microsoft-edge-relnote-beta-channel.md#version-9008188-march-16)** | Неделя с 15 апреля 2021 г. |
-| 91 | Целевой выпуск | Неделя с 27 апреля 2021 г. | Неделя с 27 мая 2021 г. |
+| 88 | Выпущена<br>Версия | 09 декабря 2020 г.<br>[88.0.705.18](/microsoft-edge-relnote-archive-beta-channel.md#version-88070518-december-9) | 21 января 2021 г.<br>[88.0.705.50](/microsoft-edge-relnote-archive-stable-channel.md#version-88070550-january-21)|
+| 89 | Выпущена<br>Версия | 3 февраля 2021 г.<br>[89.0.774.18](/microsoft-edge-relnote-beta-channel.md#version-89077423-february-8) | 4 марта 2021 г.<br>[89.0.774.45](/microsoft-edge-relnote-stable-channel.md#version-89077445-march-4) |
+| **90** | Выпущена<br>Версия | 16 марта 2021 г.<br>[90.0.818.8](/microsoft-edge-relnote-beta-channel.md#version-9008188-march-16) | **15 апреля 2021 г.**<BR>**[90.0.818.39](/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
+| **91** | Выпущена<br>Версия | **30 апреля 2021 г.**<br>[91.0.864.11](/microsoft-edge-relnote-beta-channel.md#version-91086411-april-30) | **27 мая 2021 г.**<BR>**[91.0.864.37](/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
 | 92 | Целевой выпуск | Неделя с 8 июня 2021 г. | Неделя с 22 июля 2021 г. |
 | 93 | Целевой выпуск | Неделя с 3 августа 2021 г. | Неделя со 2 сентября 2021 г. |
 | 94 | Целевой выпуск | Неделя с 1 сентября 2021 г. | Неделя с 23 сентября 2021 г. |
@@ -60,10 +60,10 @@ ms.locfileid: "11448183"
 
 В ссылке на дату (выпуск/неделя выпуска) для канала Stable указано начало поэтапного выпуска.
 
-Используется модель поэтапного выпуска. Это означает, что доступность нового выпуска для любого указанного устройства может быть отрегулирована в течение ближайших дней. Дополнительные сведения см. в статье [Поэтапный выпуск для канала Microsoft Edge Stable](microsoft-edge-update-progressive-rollout.md).
+Используется модель поэтапного выпуска. Это означает, что доступность нового выпуска для любого указанного устройства может быть отрегулирована в течение ближайших дней. Дополнительные сведения см. в статье [Поэтапный выпуск для канала Microsoft Edge Stable](/deployedge/microsoft-edge-update-progressive-rollout).
 
 ## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Каналы Microsoft Edge](microsoft-edge-channels.md)
+- [Каналы Microsoft Edge](/deployedge/microsoft-edge-channels)
 - [Загрузки из канала](https://www.microsoft.com/edge/business/download)

@@ -3,21 +3,24 @@ title: 'Enterprise Site List Manager в Microsoft Edge '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/02/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Включение и использование Enterprise Site List Manager в Microsoft Edge '
-ms.openlocfilehash: 51d431f838bcb385a5cd8f4ef85651e9254aed62
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: aa468888a05753fb5b033a8b99c2f6045f4e1b12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447353"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617409"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Enterprise Site List Manager в Microsoft Edge
+
+>[!Note]
+> Поддержка классических приложений Internet Explorer 11 будет прекращена и больше не будет поддерживаться 15 июня 2022 г. (список области применения см. в [часто задаваемых вопросах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 В этой статье объясняется, как включить доступ к Enterprise Site List Manager в Microsoft Edge и использовать его для создания, редактирования и экспорта списка сайтов в режиме предприятия для режима Internet Explorer.
 

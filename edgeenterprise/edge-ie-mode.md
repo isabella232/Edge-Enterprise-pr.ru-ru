@@ -3,21 +3,24 @@ title: Что такое режим Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 02/26/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как режим Internet Explorer в Microsoft Edge предоставляет доступ к сайтам, которым требуется Internet Explorer 11, а также доступ к современным сайтам.
-ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 39f8797049ac1051d49c63c880b8436dd611d9c2
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470227"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617419"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Что такое режим Internet Explorer (IE)?
+
+>[!Note]
+> Поддержка классических приложений Internet Explorer 11 будет прекращена и больше не будет поддерживаться 15 июня 2022 г. (список области применения см. в [часто задаваемых вопросах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 Мы создали режим Internet Explorer (IE) в Microsoft Edge для организаций, которые по-прежнему нуждаются в Internet Explorer 11 для обеспечения обратной совместимости с существующими веб-сайтами, но также нуждаются в современном браузере. Эта функция упрощает использование в организациях одного браузера: для устаревших веб-страниц и приложений или для современных веб-страниц и приложений. В этой статье представлены начальные сведения по использованию Microsoft Edge в режиме IE.
 
