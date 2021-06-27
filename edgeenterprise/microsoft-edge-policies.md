@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/01/2021
+ms.date: 06/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 79996cdbee3099fbb3a3d17b982b84a05f5a5066
-ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
+ms.openlocfilehash: 21933e81427b84d69f6d3ead4dfc911519e65bb3
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "11470897"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617879"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Политики
 
@@ -35,7 +35,34 @@ ms.locfileid: "11470897"
 
 |Имя|Заголовок|
 |--|--|
-|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Идентификация трафика Application Guard|
+|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Единый вход для рабочих и учебных сайтов с помощью этого профиля включен|
+|[AutomaticHttpsDefault](#automatichttpsdefault)|Настройка автоматического использования HTTPS|
+|[CECPQ2Enabled](#cecpq2enabled)|Согласование постквантовых ключей CeCPQ2 включено для TLS|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Указывает, следует ли разрешить небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Разрешить перечисленным сайтам делать запросы к более закрытым конечным точкам сети из небезопасных контекстов|
+|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Указывает количество дней, в течение которых сайт остается в локальном списке сайтов режима IE.|
+|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Разрешить перезагрузку несконфигурированных сайтов в режиме Internet Explorer|
+|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Включить поиск Windows в локальных данных просмотра веб-страниц Microsoft Edge|
+|[TripleDESEnabled](#tripledesenabled)|Включить комплект шифров 3DES в TLS|
+
+## <a name="deprecated-policies"></a>Политики, не рекомендуемые к использованию
+
+В следующей таблице перечислены политики, не рекомендуемые к использованию начиная с этого обновления.
+
+|Имя|Заголовок|
+|--|--|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer (политика не рекомендуется к использованию)|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Включить устаревшие параметры поведения SameSite относительно файлов cookie по умолчанию (политика не рекомендуется к использованию)|
+
+## <a name="obsolete-policies"></a>Устаревшие политики
+
+В следующей таблице перечислены политики, которые являются устаревшими для этого обновления.
+
+|Имя|Заголовок|
+|--|--|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Разрешить сертификаты, подписанные с помощью SHA-1, если они выданы локальными якорями доверия (устаревшая)|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Настройка интерфейса страницы новой вкладки Microsoft Edge (устаревшая)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Разрешить интерфейсу WebDriver переопределять несовместимые политики (устаревшая)|
 
 ## <a name="available-policies"></a>Доступные политики
 
@@ -53,6 +80,7 @@ ms.locfileid: "11470897"
 - [Менеджер паролей и защита](#password-manager-and-protection)
 - [Производительность](#performance)
 - [Вывод на печать](#printing)
+- [Запросы в частной сети - параметры](#private-network-request-settings)
 - [Прокси-сервер](#proxy-server)
 - [Параметры вкладки для сна](#sleeping-tabs-settings)
 - [Параметры SmartScreen](#smartscreen-settings)
@@ -103,7 +131,7 @@ ms.locfileid: "11470897"
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Блокировать небезопасный контент на указанных сайтах|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Разрешить JavaScript на определенных сайтах|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Блокировать JavaScript на определенных сайтах|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Включить стандартную настройку поведения файлов cookie SameSite по умолчанию|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Включить устаревшие параметры поведения SameSite относительно файлов cookie по умолчанию (политика не рекомендуется к использованию)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Возврат к устаревшему поведению SameSite для файлов cookie на указанных сайтах|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Разрешить уведомления на определенных сайтах|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Блокировать уведомления на определенных сайтах|
@@ -112,8 +140,7 @@ ms.locfileid: "11470897"
 |[PopupsAllowedForUrls](#popupsallowedforurls)|Разрешить всплывающие окна на определенных сайтах|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|Блокировать всплывающие окна на определенных сайтах|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|Регистрация обработчиков протокола|
-|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления
-и советы для служб Майкрософт|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|Выберите, могут ли пользователи получать настраиваемые фоновые изображения и текст, предложения, уведомления и советы для служб Майкрософт|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|Предоставить доступ к определенным сайтам для подключения к определенным USB-устройствам|
 |[WebUsbAskForUrls](#webusbaskforurls)|Разрешить WebUSB на определенных сайтах|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|Блокировка WebUSB на определенных сайтах|
@@ -201,6 +228,12 @@ ms.locfileid: "11470897"
 |[PrintingEnabled](#printingenabled)|Включить печать|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|Размер страницы печати по умолчанию|
 |[UseSystemPrintDialog](#usesystemprintdialog)|Печать с использованием системного диалога печати|
+### [*<a name="private-network-request-settings"></a>Запросы в частной сети - параметры*](#private-network-request-settings-policies)
+
+|Имя политики|Заголовок|
+|-|-|
+|[InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed)|Указывает, следует ли разрешить небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети|
+|[InsecurePrivateNetworkRequestsAllowedForUrls](#insecureprivatenetworkrequestsallowedforurls)|Разрешить перечисленным сайтам делать запросы к более закрытым конечным точкам сети из небезопасных контекстов|
 ### [*<a name="proxy-server"></a>Прокси-сервер*](#proxy-server-policies)
 
 |Имя политики|Заголовок|
@@ -227,7 +260,7 @@ ms.locfileid: "11470897"
 |[SmartScreenEnabled](#smartscreenenabled)|Настроить фильтр SmartScreen в Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Принудительно проверяет фильтр SmartScreen в Microsoft Defender на загрузку из надежных источников|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Настройте фильтр SmartScreen в Microsoft Defender для блокировки потенциально нежелательных приложений|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Автозагрузка&comma;, домашняя страница и новая вкладка*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Автозагрузка&comma;, домашняя страница и новая вкладка*](#startup-home-page-and-new-tab-page-policies)
 
 |Имя политики|Заголовок|
 |-|-|
@@ -241,7 +274,7 @@ ms.locfileid: "11470897"
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|Установить быстрые ссылки на новую вкладку|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|Включение предварительной загрузки новой вкладки для ускорения отрисовки|
 |[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|Разрешить быстрые ссылки на странице новой вкладки|
-|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Настройка Microsoft Edge для новой вкладки (не рекомендуется)|
+|[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Настройка интерфейса страницы новой вкладки Microsoft Edge (устаревшая)|
 |[RestoreOnStartup](#restoreonstartup)|Действие при запуске|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|Сайты открываются при запуске браузера|
 |[ShowHomeButton](#showhomebutton)|Показать кнопку Home на панели инструментов|
@@ -249,6 +282,7 @@ ms.locfileid: "11470897"
 
 |Имя политики|Заголовок|
 |-|-|
+|[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|Единый вход для рабочих и учебных сайтов с помощью этого профиля включен|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|Включить поиск Microsoft в предложениях Bing в адресной строке|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|Настройка рекламы для сайтов с навязчивой рекламой|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|Включить удаление браузера и историю загрузок|
@@ -272,6 +306,7 @@ ms.locfileid: "11470897"
 |[AutoOpenFileTypes](#autoopenfiletypes)|Список типов файлов, которые должны автоматически открываться после скачивания|
 |[AutofillAddressEnabled](#autofilladdressenabled)|Включить автозаполнение для адресов|
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|Включить автозаполнение для кредитных карт|
+|[AutomaticHttpsDefault](#automatichttpsdefault)|Настройка автоматического использования HTTPS|
 |[AutoplayAllowed](#autoplayallowed)|Разрешить автозапуск мультимедиа для веб-сайтов|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Продолжить запуск фоновых приложений после закрытия Microsoft Edge|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|Включает фоновые обновления в списке доступных шаблонов для коллекций и других функций, которые используют шаблоны|
@@ -283,7 +318,8 @@ ms.locfileid: "11470897"
 |[BrowserSignin](#browsersignin)|Настройки входа в браузер|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Параметры времени существования данных браузера|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|Используйте встроенный DNS-клиент|
-|[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Определяет, будет ли встроенный верификатор сертификатов использоваться для проверки сертификатов сервера (не рекомендуется)|
+|[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|Определяет, будет ли встроенное средство проверки сертификатов использоваться для проверки сертификатов сервера (политика не рекомендуется к использованию)|
+|[CECPQ2Enabled](#cecpq2enabled)|Согласование постквантовых ключей CeCPQ2 включено для TLS|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|Отключите принудительное использование прозрачности сертификата для списка хэшей subjectPublicKeyInfo|
 |[CertificateTransparencyEnforcementDisabledForLegacyCas](#certificatetransparencyenforcementdisabledforlegacycas)|Отключите принудительное использование прозрачности сертификатов для списка устаревших центров сертификации|
 |[CertificateTransparencyEnforcementDisabledForUrls](#certificatetransparencyenforcementdisabledforurls)|Отключить принудительное использование прозрачности сертификатов для определенных URL-адресов|
@@ -324,11 +360,12 @@ ms.locfileid: "11470897"
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Повторно включить устаревшие функции веб-платформы на ограниченное время (устарело)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Разрешение загрузки действий, связанных с доменом, из Microsoft (устарело)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Включить онлайн проверки OCSP/CRL|
-|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Разрешение сертификатов, подписанных с помощью SHA-1 при выдаче локальными якорями доверия (не рекомендуется)|
+|[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Разрешить сертификаты, подписанные с помощью SHA-1, если они выданы локальными якорями доверия (устаревшая)|
 |[EnterpriseHardwarePlatformAPIEnabled](#enterprisehardwareplatformapienabled)|Разрешить управляемым расширениям использовать API-интерфейс Enterprise Hardware Platform|
 |[EnterpriseModeSiteListManagerAllowed](#enterprisemodesitelistmanagerallowed)|Разрешение доступа к средству Enterprise Mode Site List Manager|
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах|
-|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Управлять связью со Службой экспериментов и конфигурации|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Контролировать связь со Службой экспериментов и конфигурации|
+|[ExplicitlyAllowedNetworkPorts](#explicitlyallowednetworkports)|Явно разрешенные сетевые порты|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|Показать флажок «Всегда открывать» в диалоговом окне внешнего протокола|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|Разрешить пользователям настраивать семейную безопасность и детский режим|
 |[FavoritesBarEnabled](#favoritesbarenabled)|Включить панель избранного|
@@ -345,7 +382,8 @@ ms.locfileid: "11470897"
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|Включить глобальный кэш проверки подлинности HTTP|
 |[GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar)|Принудительная прямая навигация по сайту в интрасети вместо поиска по отдельным словам в адресной строке|
 |[HSTSPolicyBypassList](#hstspolicybypasslist)|Настройте список имен, которые будут обходить проверку политики HSTS|
-|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Используйте аппаратное ускорение, когда доступно|
+|[HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled)|Использовать аппаратное ускорение, когда оно доступно|
+|[HeadlessModeEnabled](#headlessmodeenabled)|Контролировать использование режима работы без монитора|
 |[HideFirstRunExperience](#hidefirstrunexperience)|Скрыть первый запуск опыта и заставки|
 |[HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](#hideinternetexplorerredirectuxforincompatiblesitesenabled)|Скрытие диалогового окна однократного перенаправления и объявления в Microsoft Edge|
 |[ImportAutofillFormData](#importautofillformdata)|Разрешить импорт данных формы автозаполнения|
@@ -360,6 +398,7 @@ ms.locfileid: "11470897"
 |[ImportSavedPasswords](#importsavedpasswords)|Разрешить импорт сохраненных паролей|
 |[ImportSearchEngine](#importsearchengine)|Разрешить импорт настроек поисковой системы|
 |[ImportShortcuts](#importshortcuts)|Разрешить импорт ярлыков|
+|[ImportStartupPageSettings](#importstartuppagesettings)|Разрешить импорт параметров страницы запуска|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|Настройка доступности режима InPrivate|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|Включить предупреждения для небезопасных форм|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|Управление параметром IntensiveWakeUpThrottling|
@@ -367,16 +406,20 @@ ms.locfileid: "11470897"
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Настройка интеграции с Internet Explorer|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Разрешить запуск локальных файлов в режиме Internet Explorer|
 |[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Открыть локальные файлы из списка разрешенных расширений файлов в режиме  Internet Explorer|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Показать контекстное меню для открытия ссылки в режиме Internet Explorer|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Показать контекстное меню, позволяющее открыть ссылку file:// в режиме Internet Explorer|
+|[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|Указывает количество дней, в течение которых сайт остается в локальном списке сайтов режима IE.|
+|[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|Разрешить перезагрузку несконфигурированных сайтов в режиме Internet Explorer|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Настройка списка сайтов для режима Enterprise|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Укажите, как ведут себя внутренние переходы на ненастроенные сайты при запуске со страниц режима Internet Explorer.|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer (политика не рекомендуется к использованию)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Поведение перенаправления в интрасети|
 |[IsolateOrigins](#isolateorigins)|Включить изоляцию сайта для определенных источников|
+|[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Включить поиск Windows в локальных данных просмотра веб-страниц Microsoft Edge|
 |[LocalProvidersEnabled](#localprovidersenabled)|Разрешить предложения от местных поставщиков|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|Задает определенные значения управляемой конфигурации для веб-сайтов|
 |[ManagedFavorites](#managedfavorites)|Настроить избранное|
 |[ManagedSearchEngines](#managedsearchengines)|Управление поисковыми движками|
+|[MathSolverEnabled](#mathsolverenabled)|Позвольте пользователям вставлять фрагмент математической задачи и получать решение с пошаговым объяснением в Microsoft Edge|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|Максимальное количество одновременных подключений к прокси-серверу|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|Разрешить Google Cast подключаться к устройствам Cast на всех IP-адресах|
 |[MetricsReportingEnabled](#metricsreportingenabled)|Включить отчеты с данными об использовании и сбоях данных (устаревшие)|
@@ -386,9 +429,9 @@ ms.locfileid: "11470897"
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|Настройте, всегда ли у пользователя профиль по умолчанию автоматически входит в свою учетную запись на работе или в школе|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|Контроль, где применяются ограничения безопасности для небезопасных источников|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|Разрешить веб-сайтам запрашивать доступные способы оплаты|
-|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Разрешить персонализацию служб Майкрософт посредством отправки данных, связанных с браузером, в корпорацию Майкрософт|
+|[PersonalizationReportingEnabled](#personalizationreportingenabled)|Разрешить персонализацию рекламы, Microsoft Edge, поиска, новостей и других служб Майкрософт посредством отправки в Майкрософт истории просмотра, избранного и коллекций, использования и других данных просмотра веб-страниц|
 |[PinningWizardAllowed](#pinningwizardallowed)|Мастер «Разрешить закрепление на панели задач»|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|Включение проактивной проверки подлинности (не рекомендуется)|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|Включить активную проверку подлинности (устаревшая)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|Включить рекламный контент на всей вкладке|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|Спросите, где сохранить загруженные файлы|
 |[QuicAllowed](#quicallowed)|Разрешить протокол QUIC|
@@ -419,6 +462,7 @@ ms.locfileid: "11470897"
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчиками на определенных сайтах|
 |[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
 |[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
+|[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Указывает, можно ли использовать SharedArrayBuffers в контексте без изоляции перекрестного происхождения.|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Показать возможности Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели избранного (не рекомендуется)|
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Разрешить рекомендации и рекламные уведомления от Microsoft Edge|
@@ -441,6 +485,7 @@ ms.locfileid: "11470897"
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|Установка ограничения на размер памяти (в мегабайтах), который может использовать один экземпляр Microsoft Edge.|
 |[TrackingPrevention](#trackingprevention)|Блокировка отслеживания активности пользователей в Интернете|
 |[TranslateEnabled](#translateenabled)|Включить перевод|
+|[TripleDESEnabled](#tripledesenabled)|Включить комплект шифров 3DES в TLS|
 |[URLAllowlist](#urlallowlist)|Определите список разрешенных URL|
 |[URLBlocklist](#urlblocklist)|Блокировать доступ к списку URL-адресов|
 |[UpdatePolicyOverride](#updatepolicyoverride)|Указывает, как Центр обновления Microsoft Edge обрабатывает доступные обновления из Microsoft Edge|
@@ -455,7 +500,7 @@ ms.locfileid: "11470897"
 |[WebAppInstallForceList](#webappinstallforcelist)|Настроить список принудительно установленных веб-приложений|
 |[WebCaptureEnabled](#webcaptureenabled)|Включение функции захвата веб-страниц в Microsoft Edge|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|Повторно включить API веб-компонентов v0 до M84 (устарело).|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Разрешить WebDriver переопределять несовместимые политики (устарело)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|Разрешить интерфейсу WebDriver переопределять несовместимые политики (устаревшая)|
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|Разрешить устаревшую версию TLS/DTLS в WebRTC (устарело)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|Управление выставлением локальных IP-адресов с помощью WebRTC|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|Ограничить доступность локального IP-адреса в WebRTC|
@@ -538,8 +583,8 @@ ms.locfileid: "11470897"
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
-  "ProxyMode": "direct", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyMode": "direct",
+  "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
@@ -1042,11 +1087,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
   Файлы cookie, созданные веб-сайтами, которые соответствуют заданному вами шаблону URL, удаляются по окончании сеанса (когда окно закрывается).
 
-Файлы cookie, создаваемые веб-сайтами, которые не соответствуют шаблону, контролируются политикой [DefaultCookiesSetting](#defaultcookiessetting) (если установлена) или личной конфигурацией пользователя. Это также поведение по умолчанию, если вы не настроили эту политику.
+Файлы cookie, создаваемые веб-сайтами, которые не соответствуют шаблону, контролируются политикой [DefaultCookiesSetting](#defaultcookiessetting) (если установлена) или личной конфигурацией пользователя. Это также поведение по умолчанию, если политика не настроена.
 
-Если Microsoft Edge работает в фоновом режиме, сеанс может не закрыться при закрытии последнего окна, что означает, что куки не будут удалены при закрытии окна. См. Политику [BackgroundModeEnabled](#backgroundmodeenabled) для получения информации о настройке того, что происходит, когда Microsoft Edge работает в фоновом режиме.
-
-Вы также можете использовать политики [CookiesAllowedForUrls](#cookiesallowedforurls) и [CookiesBlockedForUrls](#cookiesblockedforurls), чтобы контролировать, какие веб-сайты могут создавать куки.
+Чтобы контролировать, какие веб-сайты могут создавать файлы cookie, можно также использовать политики [CookiesAllowedForUrls](#cookiesallowedforurls) и [CookiesBlockedForUrls](#cookiesblockedforurls).
 
 Обратите внимание, что между этими тремя политиками не может быть конфликтующих шаблонов URL:
 
@@ -1123,9 +1166,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   Проверьте, могут ли веб-сайты создавать файлы cookie на устройстве пользователя. Это правило «все или ничего» - вы можете разрешить всем веб-сайтам создавать файлы cookie, или никакие веб-сайты не создают файлы cookie. Вы не можете использовать эту политику для включения файлов cookie с определенных веб-сайтов.
 
-Установите политику в 'SessionOnly', чтобы очистить куки при закрытии сессии. Если Microsoft Edge работает в фоновом режиме, сеанс может не закрыться при закрытии последнего окна, что означает, что куки не будут удалены при закрытии окна. Посмотрите политику [BackgroundModeEnabled](#backgroundmodeenabled) для получения информации о настройке того, что происходит, когда Microsoft Edge работает в фоновом режиме.
+Установите для политики параметр 'SessionOnly', чтобы стирать файлы cookie при закрытии сеанса.
 
-Если вы не настроите эту политику, будет использоваться значение по умолчанию «AllowCookies», и пользователи могут изменить этот параметр в настройках Microsoft Edge. (Если вы не хотите, чтобы пользователи могли изменять этот параметр, установите политику.)
+Если политика не настроена, используется значение по умолчанию "AllowCookies", и пользователи могут изменить этот параметр в настройках Microsoft Edge. (Если вы не хотите, чтобы пользователи могли изменять этот параметр, установите политику.)
 
 Сопоставление параметров политики:
 
@@ -2497,9 +2540,11 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   #### <a name="description"></a>Описание
 
-  Определите список сайтов на основе шаблонов URL, которым разрешено запускать JavaScript.
+  Определите на основе шаблонов URL список сайтов, которым разрешено запускать JavaScript.
 
-Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultJavaScriptSetting](#defaultjavascriptsetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
+Если эта политика не настроена, параметр [DefaultJavaScriptSetting](#defaultjavascriptsetting) применяется ко всем сайтам, если он установлен. Если нет, применяется личная настройка пользователя.
+
+Подробные сведения о допустимых шаблонах URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2562,9 +2607,11 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Описание
 
-  Определите список сайтов на основе шаблонов URL, для которых не разрешен запуск JavaScript.
+  Определите на основе шаблонов URL список сайтов, которым не разрешен запуск JavaScript.
 
-Если вы не настроите эту политику, глобальное значение по умолчанию из политики [DefaultJavaScriptSetting](#defaultjavascriptsetting) (если установлено) или личная конфигурация пользователя используется для всех сайтов.
+Если эта политика не настроена, параметр [DefaultJavaScriptSetting](#defaultjavascriptsetting) применяется ко всем сайтам, если он установлен. Если нет, применяется личная настройка пользователя.
+
+Подробные сведения о допустимых шаблонах URL-адресов см. в [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). * не является принятым значением для этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -2617,9 +2664,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
-  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting"></a>Включить стандартную настройку поведения файлов cookie SameSite по умолчанию
+  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-deprecated"></a>Включить устаревшие параметры поведения SameSite относительно файлов cookie по умолчанию (политика не рекомендуется к использованию)
 
-  
+  >НЕ РЕКОМЕНДУЕТСЯ К ИСПОЛЬЗОВАНИЮ: эта политика не рекомендуется к использованию. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
@@ -2627,7 +2674,11 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>Описание
 
-  Позволяет вам вернуть все файлы cookie в прежнее поведение SameSite. При восстановлении до устаревшего поведения файлы cookie, не задающие атрибут Самесите, будут рассматриваться так, как если бы они были "Самесите = None", и при этом пропускают сравнение схем при оценке того, что два сайта являются одним и тем же.
+  "Эта политика не рекомендуется к использованию, так как предназначена для использования только в качестве краткосрочного механизма, чтобы дать предприятиям больше времени на обновление инфраструктуры, если та признана несовместимой с изменением поведения SameSite.
+
+Она не будет работать в Microsoft Edge версии 95. Если вам по-прежнему требуется устаревшее поведение cookie, используйте [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) для настройки поведения, специфичного для конкретного домена.
+
+Позволяет вернуть для всех файлов cookie ранее использовавшееся поведение SameSite. При восстановлении до устаревшего поведения файлы cookie, не задающие атрибут Самесите, будут рассматриваться так, как если бы они были "Самесите = None", и при этом пропускают сравнение схем при оценке того, что два сайта являются одним и тем же.
 
 Если не задать эту политику, поведение Самесите, используемое по умолчанию для файлов cookie, будет зависеть от других источников конфигурации по умолчанию для Самесите, а также файлов Сookie, не-Самесите-обязательно-быть по умолчанию и функции схемы на одном сайте. Эти возможности также можно настроить с помощью флажка "пробная версия" или "один и тот же". флаги для одного и того же сайта, а также для файлов cookie без параметров "один-к-одному" или "схема одного сайта" в edge://flags.
 
@@ -2654,7 +2705,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: LegacySameSiteCookieBehaviorEnabled
-  - Имя GP: включить стандартную настройку поведения файлов cookie SameSite по умолчанию
+  - Имя GP. Включить устаревшие параметры поведения cookie SameSite по умолчанию (политика не рекомендуется к использованию)
   - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -2699,9 +2750,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 При восстановлении до устаревшего поведения файлы cookie, не задающие атрибут Самесите, будут рассматриваться так, как если бы они были "Самесите = None", и при этом пропускают сравнение схем при оценке того, что два сайта являются одним и тем же.
 
-Если вы не установите эту политику, будет использоваться глобальное значение по умолчанию. Глобальное значение по умолчанию также будет использоваться для файлов cookie в доменах, на которые не распространяются указанные вами шаблоны.
+Если вы не установите эту политику, будет использоваться глобальное значение по умолчанию. Глобальное значение по умолчанию также будет использоваться для файлов cookie в доменах, не соответствующих заданным вами шаблонам.
 
-Глобальное значение по умолчанию можно настроить с помощью политики [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled). Если [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) не установлено, глобальное значение по умолчанию возвращается к другим источникам конфигурации.
+Глобальное значение по умолчанию можно настроить в Microsoft Edge вплоть до версии 95 с помощью политики, не рекомендуемой к использованию, [LegacySameSiteCookieBehaviorEnabled.](#legacysamesitecookiebehaviorenabled) Если [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) не задана, глобальное значение по умолчанию берется из других источников конфигурации.
 
 Обратите внимание, что шаблоны, перечисленные в этой политике, рассматриваются как домены, а не как URL-адреса, поэтому не следует указывать схему или порт.
 
@@ -3205,8 +3256,8 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   {
-    "default": true, 
-    "protocol": "mailto", 
+    "default": true,
+    "protocol": "mailto",
     "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"
   }
 ]
@@ -3242,8 +3293,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### <a name="spotlightexperiencesandrecommendationsenabled"></a>SpotlightExperiencesAndRecommendationsEnabled
 
-  #### <a name="choose-whether-users-can-receive-customized-background-images-and-text-suggestions-notifications"></a>Выберите, могут ли пользователи получать настроенные фоновые изображения и текст, предложения, уведомления
-и советы для служб Майкрософт
+  #### <a name="choose-whether-users-can-receive-customized-background-images-and-text-suggestions-notifications-and-tips-for-microsoft-services"></a>Выберите, могут ли пользователи получать настраиваемые фоновые изображения и текст, предложения, уведомления и советы для служб Майкрософт
 
   
   
@@ -3350,12 +3400,12 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   {
     "devices": [
       {
-        "product_id": 5678, 
+        "product_id": 5678,
         "vendor_id": 1234
       }
-    ], 
+    ],
     "urls": [
-      "https://contoso.com", 
+      "https://contoso.com",
       "https://fabrikam.com"
     ]
   }
@@ -4184,7 +4234,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 Если этот параметр отключен или не задан, внешние расширения разрешено устанавливать.
 
-Внешние расширения и их установка описаны на странице https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
+Внешние расширения и их установка описаны на сайте ./microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options.
 
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
@@ -4468,7 +4518,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 Каждый элемент списка политики является строкой, содержащей идентификатор расширения и (необязательно) URL-адрес "обновления", отделенный точкой с запятой (;). Идентификатор расширения — это 32-буквенная строка, доступная, к примеру, на странице edge://extensions в режиме разработчика. URL-адрес "обновления" (если он задан) должен указывать на XML-документ манифеста обновления ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). По умолчанию используется URL-адрес обновления веб-сайта надстроек Microsoft Edge. URL-адрес "обновления", заданный в этой политике, используется только для начальной установки; последующие обновления расширения используют URL-адрес обновления из манифеста расширения.
 
-Примечание. Эта политика не применяется к режиму InPrivate. Ознакомьтесь с размещением расширений (https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Примечание. Эта политика не применяется к режиму InPrivate. Прочитайте статью о размещении расширений (./microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -4600,9 +4650,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   Путем настройки этой политики контролируются параметры управления расширениями для Microsoft Edge, включая любые расширения, управляемые существующими соответствующими политиками. Эта политика заменяет все устаревшие политики, которые могли быть настроены.
 
-Эта политика сопоставляет идентификатор расширения или URL-адрес обновления только с определенным параметром. Для специального ИД "*" можно настроить конфигурацию по умолчанию, применяемую ко всем расширениям без настраиваемой конфигурации в этой политике. С помощью URL-адреса обновления конфигурация применяется к расширениям с точным URL-адресом обновления, указанным в манифесте расширения ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ).
+Эта политика сопоставляет идентификатор расширения или URL-адрес обновления только с определенным параметром. Для специального ИД "*" можно настроить конфигурацию по умолчанию, применяемую ко всем расширениям без настраиваемой конфигурации в этой политике. С URL-адресом обновления конфигурация применяется к расширениям с точным URL-адресом обновления, который указан в манифесте расширения. Дополнительные сведения можно найти в подробном руководстве по политике ExtensionSettings, доступном здесь: [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555).
 
-Чтобы заблокировать расширения из определенного магазина стороннего производителя, необходимо заблокировать только update_url для этого магазина. Например, если вы хотите заблокировать расширения из веб-магазина Chrome, можно использовать следующий JSON.
+Чтобы заблокировать расширения из определенного магазина стороннего производителя, достаточно заблокировать update_url для этого магазина. Например, если вы хотите заблокировать расширения из веб-магазина Chrome, можно использовать следующий JSON.
 
 {"update_url: https://clients2.google.com/service/update2/crx ":{"installation_mode":"blocked"}}
 
@@ -4645,62 +4695,62 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   "*": {
     "allowed_types": [
       "hosted_app"
-    ], 
-    "blocked_install_message": "Custom error message.", 
+    ],
+    "blocked_install_message": "Custom error message.",
     "blocked_permissions": [
-      "downloads", 
+      "downloads",
       "bookmarks"
-    ], 
+    ],
     "install_sources": [
       "https://company-intranet/apps"
-    ], 
-    "installation_mode": "blocked", 
+    ],
+    "installation_mode": "blocked",
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ], 
+    ],
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ]
-  }, 
+  },
   "abcdefghijklmnopabcdefghijklmnop": {
     "blocked_permissions": [
       "history"
-    ], 
-    "installation_mode": "allowed", 
+    ],
+    "installation_mode": "allowed",
     "minimum_version_required": "1.0.1"
-  }, 
+  },
   "bcdefghijklmnopabcdefghijklmnopa": {
     "allowed_permissions": [
       "downloads"
-    ], 
-    "installation_mode": "force_installed", 
+    ],
+    "installation_mode": "force_installed",
     "runtime_allowed_hosts": [
       "*://good.contoso.com"
-    ], 
+    ],
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
-    ], 
+    ],
     "update_url": "https://contoso.com/update_url"
-  }, 
+  },
   "cdefghijklmnopabcdefghijklmnopab": {
-    "blocked_install_message": "Custom error message.", 
+    "blocked_install_message": "Custom error message.",
     "installation_mode": "blocked"
-  }, 
+  },
   "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {
-    "blocked_install_message": "Custom error message.", 
+    "blocked_install_message": "Custom error message.",
     "installation_mode": "blocked"
-  }, 
+  },
   "fghijklmnopabcdefghijklmnopabcde": {
-    "blocked_install_message": "Custom removal message.", 
+    "blocked_install_message": "Custom removal message.",
     "installation_mode": "removed"
-  }, 
+  },
   "update_url:https://www.contoso.com/update.xml": {
     "allowed_permissions": [
       "downloads"
-    ], 
+    ],
     "blocked_permissions": [
       "wallpaper"
-    ], 
+    ],
     "installation_mode": "allowed"
   }
 }
@@ -5082,7 +5132,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   Если включить эту политику или оставить ее неустановленной, будут разрешены основные задачи проверки подлинности, полученные посредством небезопасной проверке подлинности HTTP.
 
-Если вы отключили эту политику, небезопасные HTTP-запросы из схемы базовой проверки подлинности будут блокироваться, и будет разрешен только безопасный протокол HTTPS.
+Если эта политика отключена, небезопасные HTTP-запросы из схемы базовой проверки подлинности блокируются и разрешен только безопасный протокол HTTPS.
+
+Этот параметр политики игнорируется (и базовая проверка подлинности всегда запрещена), если политика [AuthSchemes](#authschemes) задана и не включает базовую проверку подлинности.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -5516,7 +5568,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
-  - Путь (рекомендуется): Н/Д
+  - Путь (рекомендуется): N/A
   - Имя значения: MAMEnabled
   - Тип значения: REG_DWORD
 
@@ -6670,7 +6722,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
-  - Путь (рекомендуется): Н/Д
+  - Путь (рекомендуется): N/A
   - Имя значения: PrintingBackgroundGraphicsDefault
   - Тип значения: REG_SZ
 
@@ -6803,9 +6855,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   "custom_size": {
-    "height": 297000, 
+    "height": 297000,
     "width": 210000
-  }, 
+  },
   "name": "custom"
 }
 ```
@@ -6901,6 +6953,152 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   [В начало](#microsoft-edge---policies)
 
+  ## <a name="private-network-request-settings-policies"></a>Политики параметров запросов в частной сети
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="insecureprivatenetworkrequestsallowed"></a>InsecurePrivateNetworkRequestsAllowed
+
+  #### <a name="specifies-whether-to-allow-insecure-websites-to-make-requests-to-more-private-network-endpoints"></a>Указывает, следует ли разрешить небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Указывает, разрешено ли небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сетей.
+
+Эта политика относится к спецификации CORS-RFC1918. Подробнее см. в разделе https://wicg.github.io/cors-rfc1918.
+
+Одна конечная точка сети является более закрытой, чем другая, если:
+1) ее IP-адрес является локальным, а другой — нет.
+2) ее IP-адрес является закрытым, а другой — общедоступным.
+В будущем, в зависимости от эволюции спецификации, эта политика может применяться ко всем запросам, направленным на частные IP-адреса или localhost.
+
+Веб-сайт считается безопасным, если он соответствует определению безопасного контекста в https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts. В противном случае он будет рассматриваться как небезопасный контекст.
+
+Если эта политика не установлена или ей присвоено значение false, поведение по умолчанию для запросов из небезопасных контекстов в более частные конечные точки сети будет зависеть от личной конфигурации пользователя для функции BlockInsecurePrivateNetworkRequests, которая может быть установлена в ходе эксплуатационных испытаний или в командной строке.
+
+Если для этой политики установлено значение true, небезопасным веб-сайтам разрешается делать запросы в любую конечную точку сети при условии, что другие проверки перекрестного происхождения пройдены успешно.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: InsecurePrivateNetworkRequestsAllowed
+  - Имя групповой политики. Указывает, следует ли разрешить небезопасным веб-сайтам делать запросы к более частным конечным точкам сети
+  - Путь к групповой политике (обязательный): Административные шаблоны/Microsoft Edge/Частные сетевые запросы - параметры
+  - Путь к групповой политике (рекомендуемый): Н/Д
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: InsecurePrivateNetworkRequestsAllowed
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: InsecurePrivateNetworkRequestsAllowed
+  - Пример значения:
+``` xml
+<false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="insecureprivatenetworkrequestsallowedforurls"></a>InsecurePrivateNetworkRequestsAllowedForUrls
+
+  #### <a name="allow-the-listed-sites-to-make-requests-to-more-private-network-endpoints-from-insecure-contexts"></a>Разрешить перечисленным сайтам делать запросы к более закрытым конечным точкам сети из небезопасных контекстов
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Список шаблонов URL-адресов. Разрешены частные сетевые запросы, инициированные с небезопасных веб-сайтов, обслуживающихся из соответствующего происхождения.
+
+Если эта политика не установлена, она ведет себя так, как будто в качестве значения задан пустой список.
+
+Для происхождений, не охваченных указанными здесь шаблонами, глобальное значение по умолчанию будет взято либо из политики [InsecurePrivateNetworkRequestsAllowed](#insecureprivatenetworkrequestsallowed), если она задана, либо, в противном случае, из личной конфигурации пользователя.
+
+Обратите внимание, что эта политика влияет только на небезопасные происхождения, поэтому защищенные происхождения (например, включенные в этот список https://example.com)) будут игнорироваться.
+
+Подробные сведения о допустимых шаблонах URL-адресов можно найти [здесь](/DeployEdge/edge-learnmmore-url-list-filter%20format).
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Список строк
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: InsecurePrivateNetworkRequestsAllowedForUrls
+  - Имя групповой политики. Указывает, следует ли разрешить перечисленным веб-сайтам делать запросы к более частным конечным точкам сети из небезопасных контекстов.
+  - Путь к групповой политике (обязательный): Административные шаблоны/Microsoft Edge/Частные сетевые запросы - параметры
+  - Путь к групповой политике (рекомендуемый): Н/Д
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: список REG_SZ
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\1 = "http://www.example.com:8080"
+SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\2 = "[*.]example.edu"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: InsecurePrivateNetworkRequestsAllowedForUrls
+  - Пример значения:
+``` xml
+<array>
+  <string>http://www.example.com:8080</string>
+  <string>[*.]example.edu</string>
+</array>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ## <a name="proxy-server-policies"></a>Политики прокси-сервера
 
   [В начало](#microsoft-edge---policies)
@@ -6919,9 +7117,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   Эта политика устарела, используйте [ProxySettings](#proxysettings). Она не будет работать в Microsoft Edge версии 91.
 
-Определяет список хостов, для которых Microsoft Edge обходит любой прокси.
+Определяет список узлов, для которых Microsoft Edge обходит все прокси.
 
-Эта политика применяется, если политика [ProxySettings](#proxysettings) не указана, и в политике [ProxyMode](#proxymode) выбрано fixed_servers. Если вы выбрали любой другой режим для настройки политик прокси, не включайте и не настраивайте эту политику.
+Эта политика применяется только в том случае, если политика [ProxySettings](#proxysettings) не задана и вы выбрали fixed_servers или pac_script в политике [ProxyMode.](#proxymode) Если вы выбрали для настройки политик прокси любой другой режим, не включайте и не настраивайте эту политику.
 
 Если вы включите эту политику, вы сможете создать список хостов, для которых Microsoft Edge не использует прокси.
 
@@ -7267,9 +7465,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
-  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "pac_script", 
-  "ProxyPacUrl": "https://internal.site/example.pac", 
+  "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/",
+  "ProxyMode": "pac_script",
+  "ProxyPacUrl": "https://internal.site/example.pac",
   "ProxyServer": "123.123.123.123:8080"
 }
 ```
@@ -7913,7 +8111,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [В начало](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Политики автозагрузки&comma;, домашней страницы и новых вкладок
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Политики автозагрузки&comma;, домашней страницы и новых вкладок
 
   [В начало](#microsoft-edge---policies)
 
@@ -7955,7 +8153,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   - Уникальное имя GP: HomepageIsNewTabPage
   - Имя GP: Установка новой вкладки в качестве домашней страницы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8023,7 +8221,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   - Уникальное имя GP: HomepageLocation
   - Имя GP: Настройка URL домашней страницы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8093,7 +8291,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   - Уникальное имя GP: NewTabPageAllowedBackgroundTypes
   - Имя GP: Настройка типов фона, разрешенных для макета страницы новой вкладки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8147,7 +8345,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 Если вы отключите или не настроите эту политику, Microsoft Edge не будет отображать логотип компании или логотип Microsoft на странице новой вкладки.
 
-Для получения справки по определению хэша SHA-256 см. https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash.
+Справку по определению хэша SHA-256 см. в ./powershell/module/microsoft.powershell.utility/get-filehash.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -8165,7 +8363,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   - Уникальное имя GP: NewTabPageCompanyLogo
   - Имя групповой политики: Установить логотип организации на странице новой вкладки (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8181,11 +8379,11 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   "default_logo": {
-    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", 
+    "hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29",
     "url": "https://www.contoso.com/logo.png"
-  }, 
+  },
   "light_logo": {
-    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", 
+    "hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737",
     "url": "https://www.contoso.com/light_logo.png"
   }
 }
@@ -8323,7 +8521,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   - Уникальное имя GP: NewTabPageHideDefaultTopSites
   - Название GP: Скрытие топовых сайтов по умолчанию со страницы новой вкладки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8395,7 +8593,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   - Уникальное имя GP: NewTabPageLocation
   - Имя GP: Настройка URL новой вкладки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8463,7 +8661,7 @@ Microsoft Edge представляет их в указанном порядк�
 
   - Уникальное имя GP: NewTabPageManagedQuickLinks
   - Название GP: Установить быстрые ссылки на новую вкладку
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8479,12 +8677,12 @@ Microsoft Edge представляет их в указанном порядк�
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   {
-    "pinned": true, 
-    "title": "Contoso Portal", 
+    "pinned": true,
+    "title": "Contoso Portal",
     "url": "https://contoso.com"
-  }, 
+  },
   {
-    "title": "Fabrikam", 
+    "title": "Fabrikam",
     "url": "https://fabrikam.com"
   }
 ]
@@ -8554,7 +8752,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   - Уникальное имя GP: NewTabPagePrerenderEnabled
   - Имя GP: Включение предварительной загрузки новой вкладки для ускорения отрисовки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8648,25 +8846,25 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
-  #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Настройка Microsoft Edge для новой вкладки (не рекомендуется)
+  #### <a name="configure-the-microsoft-edge-new-tab-page-experience-obsolete"></a>Настройка интерфейса страницы новой вкладки Microsoft Edge (устаревшая)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО. Эта политика устарела и не работает в версиях Microsoft Edge после 92.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - На Windows и macOS с 79 или позже
+  - На Windows и macOS в версиях с 79 по 92
 
   #### <a name="description"></a>Описание
 
-  Мы не рекомендуем эту политику, так как новая версия корпоративной страницы новой вкладки больше не требует выбора между различными типами контента. Вместо этого контент, предоставляемый пользователю, можно контролировать с помощью Центра администрирования Microsoft 365. Чтобы получить доступ к Центру администрирования Microsoft 365, выполните вход https://admin.microsoft.com с помощью учетной записи администратора. Политика станет устаревшей в Microsoft Edge версии 90.
+  Эта политика устарела, так как новая версия корпоративной страницы новой вкладки больше не требует выбора между различными типами контента. Вместо этого контент, предоставляемый пользователю, можно контролировать через Центр администрирования Microsoft 365. Чтобы получить доступ к Центру администрирования Microsoft 365, выполните вход в https://admin.microsoft.com с помощью учетной записи администратора.
 
-Позволяет выбрать режим новостей Microsoft News или Office 365 для новой вкладки.
+Позволяет выбрать для новой вкладки режим новостей Microsoft News или Office 365.
 
 Если для этой политики задано значение «News», пользователи увидят новостную ленту Microsoft на странице новой вкладки.
 
 Если для этой политики задано значение «Office», после входа в браузер Azure Active Directory пользователи увидят работу ленты Office 365 на новой вкладке.
 
-Если отключить или не настроить эту политику:
+Если вы отключите или не настроите эту политику:
 
 - Пользователям, имеющим вход в браузер Azure Active Directory, предлагается новый веб-канал Office 365 для просмотра вкладок, а также стандартная новая страница-вкладка.
 
@@ -8699,8 +8897,8 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: NewTabPageSetFeedType
-  - Имя GP: Настройка Microsoft Edge для новой вкладки (не рекомендуется)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Имя GP. Настройка страницы вкладки Microsoft Edge (устаревшая)
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8778,7 +8976,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   - Уникальное имя GP: RestoreOnStartup
   - Имя GP: Действие при запуске
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8840,7 +9038,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   - Уникальное имя GP: RestoreOnStartupURLs
   - Имя GP: Сайты, которые открываются при запуске браузера.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8907,7 +9105,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: ShowHomeButton
   - Название GP: Показать кнопку Home на панели инструментов
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Автозагрузка, домашняя страница и страница новой вкладки
+  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/автозагрузка, домашняя страница и страница новой вкладки
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Автозагрузка, домашняя страница и страница новой вкладки
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -8936,6 +9134,68 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   [В начало](#microsoft-edge---policies)
 
   ## <a name="additional-policies"></a>Дополнительные политики
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="aadwebsitessousingthisprofileenabled"></a>AADWebSiteSSOUsingThisProfileEnabled
+
+  #### <a name="single-sign-on-for-work-or-school-sites-using-this-profile-enabled"></a>Единый вход для рабочих и учебных сайтов с помощью этого профиля включен
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Параметр "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля" позволяет профилям, не принадлежащим к AAD, использовать единый вход для рабочих и учебных сайтов с использованием рабочих или учебных учетных данных, присутствующих на компьютере. Этот параметр показывается для конечных пользователей как переключатель в разделе Параметры -> Профили -> Предпочтения только для профилей, не принадлежащих к AAD.
+
+Если отключить эту политику, профили, не принадлежащие к AAD, не смогут использовать SSO с другими учетными данными, присутствующими на компьютере. Это также обеспечит отключение опции "Интеллектуальное включение единого входа (SSO) для всех учетных записей Windows Azure Active Directory (Azure AD) для пользователей с одним профилем, не принадлежащим к Azure AD Microsoft Edge".
+
+Если включить эту политику или не настроить ее, профили, не принадлежащие к AAD, смогут использовать SSO с помощью других учетных данных, присутствующих на компьютере, и "Интеллектуальное включение единого входа (SSO) для всех учетных записей Windows Azure Active Directory (Azure AD) для пользователей с одним профилем, не принадлежащим к Azure AD Microsoft Edge" будет продолжать работать.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: AADWebSiteSSOUsingThisProfileEnabled
+  - Имя GP. Единый вход для рабочих и учебных сайтов с помощью этого профиля включен
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Имя значения: AADWebSiteSSOUsingThisProfileEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: AADWebSiteSSOUsingThisProfileEnabled
+  - Пример значения:
+``` xml
+<false/>
+```
+  
 
   [В начало](#microsoft-edge---policies)
 
@@ -8971,7 +9231,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AddressBarMicrosoftSearchInBingProviderEnabled
   - Имя GP: Включить поиск Microsoft в предложениях Bing в адресной строке
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9037,7 +9297,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AdsSettingForIntrusiveAdsSites
   - Название GP: Настройка рекламы для сайтов с навязчивой рекламой
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9083,9 +9343,9 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 Если вы включите эту политику или не настроите ее, пользователи смогут удалить историю просмотров и загрузок.
 
-Если отключить эту политику, пользователи не смогут удалять журнал просмотра и загрузок, а синхронизация журнала будет отключена.
+Если отключить эту политику, пользователи не смогут удалять историю просмотров и загрузок. Отключение этой политики отключит синхронизацию истории и открытых вкладок.
 
-Если вы включите эту политику, не включайте политику ClearBrowsingDataOnExit, потому что они оба имеют дело с удалением данных[ClearBrowsingDataOnExit](#clearbrowsingdataonexit) Если вы включите оба, политика [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) имеет приоритет и удаляет все данные при закрытии Microsoft Edge независимо от того, как настроена эта политика.
+Если вы включите эту политику, не включайте политику [ClearBrowsingDataOnExit](#clearbrowsingdataonexit), потому что они обе имеют дело с удалением данных. Если вы включите оба, политика [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) имеет приоритет и удаляет все данные при закрытии Microsoft Edge независимо от того, как настроена эта политика.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -9103,7 +9363,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AllowDeletingBrowserHistory
   - Имя GP: включить удаление браузера и историю загрузок
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9165,7 +9425,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AllowFileSelectionDialogs
   - Имя GP: Разрешить диалог выбора файла
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9289,7 +9549,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AllowSurfGame
   - Имя GP: разрешить путешествовать по играм
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9353,7 +9613,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AllowSyncXHRInPageDismissal
   - Имя групповой политики: разрешить страницам отправлять синхронные запросы XHR при удаления страницы (не рекомендуется)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9419,7 +9679,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - Уникальное имя GP: AllowTokenBindingForUrls
   - Имя GP: Настройка списка сайтов, для которых Microsoft Edge попытается установить привязку токена.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9477,7 +9737,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
   - Уникальное имя GP: AllowTrackingForUrls
   - Имя GP: Настройка исключений отслеживания для определенных сайтов
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9547,7 +9807,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: AlternateErrorPagesEnabled
   - Имя GP: Если не удается найти веб-страницу, предлагать похожие страницы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9611,7 +9871,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: AlwaysOpenPdfExternally
   - Имя GP: Всегда открывать PDF-файлы извне
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9695,7 +9955,7 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 
   - Уникальное имя GP: AmbientAuthenticationInPrivateModesEnabled
   - Имя GP: Включить Ambient Authentication для профилей InPrivate и Guest
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9755,7 +10015,7 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 
   - Уникальное имя GP:AppCacheForceEnabled
   - Имя GP: Разрешить повторное включение компонента AppCache, даже если он отключен по умолчанию.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9817,7 +10077,7 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 
   - Уникальное имя GP: ApplicationLocaleValue
   - Имя GP: Настройка языкового стандарта приложения
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9874,7 +10134,7 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 
   - Уникальное имя GP: AudioCaptureAllowed
   - Имя GP: Разрешить или заблокировать захват аудио
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -9932,7 +10192,7 @@ Ambient Authentication - это HTTP-аутентификация с учетн�
 
   - Уникальное имя GP: AudioCaptureAllowedUrls
   - Имя GP: Сайты, которые могут получить доступ к устройствам захвата звука без запроса разрешения
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10004,7 +10264,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   - Уникальное имя GP: AudioSandboxEnabled
   - Имя GP: Разрешить запуск аудио-песочницы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10117,7 +10377,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   - Уникальное имя GP: AutoImportAtFirstRun
   - Имя GP: Автоматически импортировать данные и настройки другого браузера при первом запуске
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10189,7 +10449,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   - Уникальное имя GP: AutoLaunchProtocolsFromOrigins
   - Имя GP: Определять список протоколов, с помощью которых можно запустить внешнее приложение из списка источников без обращения к пользователю
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10206,23 +10466,23 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   {
     "allowed_origins": [
-      "example.com", 
+      "example.com",
       "http://www.example.com:8080"
-    ], 
+    ],
     "protocol": "spotify"
-  }, 
+  },
   {
     "allowed_origins": [
-      "https://example.com", 
+      "https://example.com",
       "https://.mail.example.com"
     ], 
-    "protocol": "teams"
+    "protocol": "msteams"
   }, 
   {
     "allowed_origins": [
       "*"
     ], 
-    "protocol": "outlook"
+    "protocol": "msoutlook"
   }
 ]
 ```
@@ -10230,7 +10490,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   ##### <a name="compact-example-value"></a>Компактный пример значения:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
+  SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "msteams"}, {"allowed_origins": ["*"], "protocol": "msoutlook"}]
   ```
   
 
@@ -10309,7 +10569,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
   - Уникальное имя GP: AutoOpenAllowedForURLs
   - Имя GP: URL-адреса, с которыми можно применять параметр AutoOpenFileTypes
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10388,7 +10648,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
   - Уникальное имя GP: AutoOpenFileTypes
   - Имя GP: Список типов файлов, которые должны автоматически открываться после скачивания
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10457,7 +10717,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: AutofillAddressEnabled
   - Имя GP: Включить автозаполнение для адресов
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10519,7 +10779,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: AutofillCreditCardEnabled
   - Название GP: Включить автозаполнение для кредитных карт
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10542,6 +10802,80 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - Пример значения:
 ``` xml
 <false/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="automatichttpsdefault"></a>AutomaticHttpsDefault
+
+  #### <a name="configure-automatic-https"></a>Настройка автоматического использования HTTPS
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Эта политика позволяет управлять настройками [AutomaticHttpsDefault](#automatichttpsdefault), которая переключает подключения с HTTP на HTTPS.
+
+Эта функция помогает защититься от атак типа "злоумышленник в середине", применяя более безопасные подключения, но количество ошибок подключения у пользователей может вырасти.
+
+Примечание. Конфигурация "UpgradeCapableDomains" требует списка компонентов и не будет переводить эти подключения на более безопасные, если для параметра [ComponentUpdatesEnabled](#componentupdatesenabled) задано значение "Отключено".
+
+Если эта политика не настроена, [AutomaticHttpsDefault](#automatichttpsdefault) будет включена и будет переводить подключения на более безопасные только на доменах, вероятно поддерживающих HTTPS.
+
+Сопоставление параметров политики:
+
+* DisableAutomaticHttps (0) = Автоматическое применение HTTPS отключено.
+
+* UpgradeCapableDomains (1) = Навигации, доставленные через HTTP, переключаются на HTTPS только на доменах, вероятно поддерживающих HTTPS.
+
+* AlwaysUpgrade (2) = Все навигации, доставленные через HTTP, переключаются на HTTPS. Ошибки подключения могут возникать чаще.
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: AutomaticHttpsDefault
+  - Имя GP: Настройка автоматического HTTPS
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Имя значения: AutomaticHttpsDefault
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000002
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: AutomaticHttpsDefault
+  - Пример значения:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -10586,7 +10920,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - GP уникальное имя: AutoplayAllowed
   - Название GP: Разрешить автозапуск мультимедиа для сайтов
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10650,7 +10984,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BackgroundModeEnabled
   - Имя GP: Продолжить запуск фоновых приложений после закрытия Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10705,7 +11039,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BackgroundTemplateListUpdatesEnabled
   - Имя GP: Включение фоновых обновлений в списке доступных шаблонов для коллекций и других функций, которые используют шаблоны
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10777,7 +11111,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BingAdsSuppression
   - Название GP: Заблокировать все объявления в результатах поиска Bing
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10841,7 +11175,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BlockThirdPartyCookies
   - Название GP: Блокировать сторонние куки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10902,7 +11236,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BrowserAddProfileEnabled
   - Имя GP: Включить создание профиля из всплывающего меню Удостоверение или страницы настроек.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -10964,7 +11298,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BrowserGuestModeEnabled
   - Имя GP: Включить гостевой режим
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11026,7 +11360,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - Уникальное имя GP: BrowserNetworkTimeQueriesEnabled
   - Имя GP: Разрешить запросы к службе сетевого времени браузера.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11102,14 +11436,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - GP уникальное имя: BrowserSignin
   - Имя GP: Настройки входа в браузер
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
-  - Путь (рекомендуется): Н/Д
+  - Путь (рекомендуется): N/A
   - Имя значения: BrowserSignin
   - Тип значения: REG_DWORD
 
@@ -11145,7 +11479,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   Настраивает параметры времени существования данных браузера для Microsoft Edge.
 Эта политика управляет временем существования выбранных данных браузера. Эта политика не действует, если включена синхронизация.
 Доступные типы данных: browsing_history, download_history, cookies_and_other_site_data, cached_images_and_files, password_signin, autofill, site_settings и hosted_app_data.
-Microsoft Edge регулярно удаляет данные выбранных типов, которые старше time_to_live_in_hours. Так как удаление данных происходит только через определенные интервалы, некоторые данные могут храниться немного дольше, при этом никогда не превышая time_to_live_in_hours более чем в два раза.
+Microsoft Edge регулярно удаляет данные определенных типов, которые старше time_to_live_in_hours. Удаление просроченных данных происходит через 15 секунд после запуска браузера, а затем каждый час во время работы браузера.
 
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
@@ -11182,14 +11516,14 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
   {
     "data_types": [
       "browsing_history"
-    ], 
+    ],
     "time_to_live_in_hours": 24
-  }, 
+  },
   {
     "data_types": [
-      "password_signin", 
+      "password_signin",
       "autofill"
-    ], 
+    ],
     "time_to_live_in_hours": 12
   }
 ]
@@ -11270,7 +11604,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   - Уникальное имя GP: BuiltInDnsClientEnabled
   - Имя GP: Использовать встроенный DNS-клиент
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11338,6 +11672,68 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="cecpq2enabled"></a>CECPQ2Enabled
+
+  #### <a name="cecpq2-post-quantum-key-agreement-enabled-for-tls"></a>Согласование постквантовых ключей CeCPQ2 включено для TLS
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 93
+
+  #### <a name="description"></a>Описание
+
+  Если эта политика не настроена или для нее задано значение "Включено", Microsoft Edge будет следовать процессу развертывания по умолчанию для CECPQ2, алгоритма согласования постквантовых ключей в TLS.
+
+Использование CECPQ2 приводит к большим TLS-сообщениям, которые в очень редких случаях могут вызывать ошибки в некоторых сетевых аппаратных средствах. Этой политике можно задать значение false, чтобы отключить CECPQ2, пока не решатся проблемы с сетью.
+
+Эта политика является временной мерой и будет удалена в будущих версиях Microsoft Edge.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: CECPQ2Enabled
+  - Имя GP: согласование постквантовых ключей CeCPQ2 включено для TLS
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: CECPQ2Enabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: CECPQ2Enabled
+  - Пример значения:
+``` xml
+<true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="certificatetransparencyenforcementdisabledforcas"></a>CertificateTransparencyEnforcementDisabledForCas
 
   #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-subjectpublickeyinfo-hashes"></a>Отключите принудительное использование прозрачности сертификата для списка хэшей subjectPublicKeyInfo
@@ -11379,7 +11775,7 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   - Уникальное имя GP: CertificateTransparencyEnforcementDisabledForCas
   - Имя GP: Отключить применение прозрачности сертификата для списка хэшей subjectPublicKeyInfo
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11450,7 +11846,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
   - Уникальное имя GP: CertificateTransparencyEnforcementDisabledForLegacyCas
   - Имя GP: Отключите принудительное использование прозрачности сертификата для списка устаревших центров сертификации.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11519,7 +11915,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
   - Уникальное имя GP: CertificateTransparencyEnforcementDisabledForUrls
   - Имя GP: Отключить принудительное использование прозрачности сертификата для определенных URL
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11590,7 +11986,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   - Уникальное имя GP: ClearBrowsingDataOnExit
   - Имя GP: Очистить данные просмотра при закрытии Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11656,7 +12052,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   - Уникальное имя GP: ClearCachedImagesAndFilesOnExit
   - Имя GP: Очистить кэшированные изображения и файлы при закрытии Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11724,7 +12120,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   - Уникальное имя GP: ClickOnceEnabled
   - Имя GP: Разрешить пользователям открывать файлы по протоколу ClickOnce.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11769,6 +12165,16 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 * collections_share (collections_share) = предоставление общего доступа к коллекциям
 
+* local_pdf (local_pdf) = Сохранять локальные PDF в коллекциях на OneDrive
+
+* send_word (send_word) = Отправить коллекцию в Microsoft Word
+
+* send_excel (send_excel) = Отправить коллекцию в Microsoft Excel
+
+* send_onenote (send_onenote) = Отправить коллекцию в Microsoft OneNote
+
+* send_pinterest (send_pinterest) = Отправить коллекцию в Pinterest
+
 Используйте изложенные выше сведения при настройке этой политики.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
@@ -11787,7 +12193,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   - Уникальное имя GP: CollectionsServicesAndExportsBlockList
   - Имя GP: Блокировка доступа к указанному списку служб и целевым объектам экспорта в Коллекциях
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11803,6 +12209,11 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\3 = "local_pdf"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\4 = "send_word"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\5 = "send_excel"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\6 = "send_onenote"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "send_pinterest"
 
 ```
 
@@ -11814,6 +12225,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 <array>
   <string>pinterest_suggestions</string>
   <string>collections_share</string>
+  <string>local_pdf</string>
+  <string>send_word</string>
+  <string>send_excel</string>
+  <string>send_onenote</string>
+  <string>send_pinterest</string>
 </array>
 ```
   
@@ -11856,7 +12272,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: CommandLineFlagSecurityWarningsEnabled
   - Имя GP: Включить предупреждения безопасности для флагов командной строки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11918,7 +12334,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: ComponentUpdatesEnabled
   - Имя GP: Включить обновления компонентов в Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -11982,7 +12398,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: ConfigureDoNotTrack
   - Имя GP: Настройка "не отслеживать"
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12065,7 +12481,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: ConfigureFriendlyURLFormat
   - Имя GP: Настройка формата по умолчанию для URL-адресов, скопированных из Microsoft Edge, и определение доступности пользователям дополнительных форматов
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12115,7 +12531,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 Если для этой политики установлено значение «Disabled» или она не настроена, Microsoft Edge не будет автоматически входить в систему пользователей, которые находятся на компьютерах, подключенных к домену с помощью учетных записей Active Directory.
 
-Начиная с Microsoft Edge 89 и далее, если существует  локальный профиль пользователя с отключенной синхронизацией, а компьютер гибриден, то у него есть учетная запись Azure AD; она автоматически обновит локальный профиль до профиля Azure AD, чтобы получить полный набор функций синхронизации Azure AD.
+В  Microsoft Edge начиная с версии 89, если существует локальный профиль с отключенной политикой [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) и компьютер подключен гибридным образом, то есть у него есть учетная запись Azure AD; локальный профиль автоматически обновится до профиля Azure AD, чтобы получить полный набор функций синхронизации Azure AD.
 
 Сопоставление параметров политики:
 
@@ -12141,7 +12557,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: ConfigureOnPremisesAccountAutoSignIn
   - Имя GP: Настроить автоматический вход с учетной записью домена Active Directory, если учетная запись домена Azure AD отсутствует
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12198,7 +12614,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: ConfigureOnlineTextToSpeech
   - Название GP: Настройка онлайн-текста в речь
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12266,7 +12682,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: ConfigureShare
   - Имя участника: Настройте обмен опытом
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12323,7 +12739,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: CustomHelpLink
   - Имя GP: Укажите пользовательскую ссылку справки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12387,7 +12803,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DNSInterceptionChecksEnabled
   - Имя GP: Включена проверка перехвата DNS
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12451,7 +12867,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DefaultBrowserSettingEnabled
   - Имя GP: Установить Microsoft Edge в качестве браузера по умолчанию
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12515,7 +12931,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DefaultSearchProviderContextMenuAccessAllowed
   - Имя GP: Разрешить доступ к службе поиска по умолчанию в контекстном меню
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12587,7 +13003,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя групповой политики: DefaultSensorsSetting
   - Имя групповой политики: Параметр датчиков по умолчанию
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12659,7 +13075,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя групповой политики: DefaultSerialGuardSetting
   - Имя групповой политики: Управлять использованием API Serial
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12723,7 +13139,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя групповой политики: DefinePreferredLanguages
   - Имя групповой политики: определение упорядоченного списка предпочитаемых языков, на которых должны отображаться веб-сайты, если сайт поддерживает этот язык
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12797,7 +13213,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DelayNavigationsForInitialSiteListDownload
   - Имя GP: Требование наличия списка сайтов для режима предприятия перед переходом между вкладками
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12852,7 +13268,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DeleteDataOnMigration
   - Имя GP: Удалить старые данные браузера при миграции
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -12919,7 +13335,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DeveloperToolsAvailability
   - Имя GP: Контроль, где могут использоваться инструменты разработчика
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13005,7 +13421,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя групповой политики: DiagnosticData
   - Имя групповой политики: Отправлять обязательные и необязательные диагностические данных об использовании браузера
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13071,7 +13487,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DirectInvokeEnabled
   - Имя GP: Разрешить пользователям открывать файлы, используя протокол DirectInvoke.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13126,7 +13542,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: Disable3DAPIs
   - Имя GP: Отключить поддержку API для трехмерной графики
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13190,7 +13606,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DisableScreenshots
   - Название GP: Отключить создание скриншотов
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13254,7 +13670,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DiskCacheDir
   - Имя GP: Установить каталог дискового кэша
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13318,7 +13734,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DiskCacheSize
   - Имя GP: Установить размер дискового кэша в байтах.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13394,7 +13810,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DnsOverHttpsMode
   - Имя GP: Управление режимом DNS-over-HTTPS
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13460,7 +13876,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DnsOverHttpsTemplates
   - Имя GP: Укажите шаблон URI нужного преобразователя DNS-over-HTTPS.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13526,7 +13942,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DownloadDirectory
   - Имя GP: Установить каталог загрузки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13610,7 +14026,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: DownloadRestrictions
   - Имя GP: Разрешить ограничения загрузки
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13672,7 +14088,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: EdgeCollectionsEnabled
   - Имя GP: Включить функцию коллекций
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13712,11 +14128,13 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### <a name="description"></a>Описание
 
-  Эта политика позволяет пользователям сравнивать цены на продукт, который они просматривают, получать купоны или скидки с веб-сайтов, а также автоматически применять купоны во время оформления заказа.
+  Эта политика позволяет пользователям сравнивать цены на интересующий их продукт, получать купоны и скидки с веб-сайта, автоматически применять купоны и быстрее оформлять заказы благодаря автозаполнению данных.
 
-Если включить или не настроить эту политику, возможности покупок, такие как сравнение цен, купоны и скидки, будут автоматически применяться для доменов розничной торговли. Купоны текущего продавца и цены других продавцов будут получены с сервера.
+Если политика включена или не настроена, на сайтах интернет-магазинов будут автоматически применяться такие функции покупок в Интернете, как сравнение цен, купоны, скидки и экспресс-оформление заказа. Купоны для данного продавца и цены других продавцов будут запрашиваться с сервера.
 
-Если отключить эту политику, возможности покупок, такие как сравнение цен, купоны и скидки, не будут автоматически обнаруживаться для доменов розничной торговли.
+Если отключить эту политику, функции для покупок в Интернете, такие как сравнение цен, купоны, скидки и экспресс-оформление заказа, не будут найдены автоматически.
+
+Начиная с версии 90.0.818.56, сообщения для пользователей о наличии купона, скидки, сравнения цен или истории цен в интернет-магазинах, также выводятся в горизонтальном баннере под адресной строкой. Ранее эти сообщения выводились на панели адресов.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -13734,7 +14152,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: EdgeShoppingAssistantEnabled
   - Имя GP: Покупки в Microsoft Edge включены
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13794,7 +14212,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: EditFavoritesEnabled
   - Имя GP: Позволять пользователям редактировать избранное
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13868,7 +14286,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   - Уникальное имя GP: EnableDeprecatedWebPlatformFeatures
   - Имя GP: Повторно включить устаревшие функции веб-платформы на ограниченное время (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -13941,7 +14359,7 @@ Microsoft ведет список действий, предпринимаемы
 
   - Уникальное имя GP: EnableDomainActionsDownload
   - Имя GP: Разрешение загрузки действий, связанных с доменом, из Microsoft (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14003,7 +14421,7 @@ Microsoft ведет список действий, предпринимаемы
 
   - Уникальное имя GP: EnableOnlineRevocationChecks
   - Имя GP: включить онлайн проверки OCSP / CRL
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14033,13 +14451,13 @@ Microsoft ведет список действий, предпринимаемы
 
   ### <a name="enablesha1forlocalanchors"></a>EnableSha1ForLocalAnchors
 
-  #### <a name="allow-certificates-signed-using-sha-1-when-issued-by-local-trust-anchors-deprecated"></a>Разрешение сертификатов, подписанных с помощью SHA-1 при выдаче локальными якорями доверия (не рекомендуется)
+  #### <a name="allow-certificates-signed-using-sha-1-when-issued-by-local-trust-anchors-obsolete"></a>Разрешить сертификаты, подписанные с помощью SHA-1, если они выданы локальными якорями доверия (устаревшая)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО. Эта политика устарела и не работает в Microsoft Edge после версии 91.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - В Windows и macOS — версия 85 или более поздние
+  - На Windows и macOS в версиях с 85 по 91
 
   #### <a name="description"></a>Описание
 
@@ -14066,7 +14484,7 @@ Microsoft ведет список действий, предпринимаемы
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: EnableSha1ForLocalAnchors
-  - Имя GP: Разрешение сертификатов, подписанных с помощью SHA-1 при выдаче локальными якорями доверия (не рекомендуется)
+  - Имя GP. Разрешить сертификаты, подписанные с помощью SHA-1, если они выданы локальными якорями доверия (устаревшая)
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -14127,7 +14545,7 @@ Microsoft ведет список действий, предпринимаемы
 
   - Уникальное имя GP: EnterpriseHardwarePlatformAPIEnabled
   - Имя GP: Разрешить управляемым расширениям использовать API-интерфейс Enterprise Hardware Platform.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14189,7 +14607,7 @@ Microsoft ведет список действий, предпринимаемы
 
   - Уникальное имя GP: EnterpriseModeSiteListManagerAllowed
   - Имя GP: Разрешение доступа к средству Enterprise Mode Site List Manager
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14257,7 +14675,7 @@ Microsoft ведет список действий, предпринимаемы
 
   - Уникальное имя GP: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - Имя GP: Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14271,8 +14689,8 @@ Microsoft ведет список действий, предпринимаемы
   ##### <a name="example-value"></a>Пример значения:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
 
 ```
 
@@ -14282,8 +14700,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   - Пример значения:
 ``` xml
 <array>
-  <string>{'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}</string>
-  <string>{'domains': ['*'], 'file_extension': 'swf'}</string>
+  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
+  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
 </array>
 ```
   
@@ -14346,7 +14764,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ExperimentationAndConfigurationServiceControl
   - Имя GP: Управление связью со Службой Экспериментов и Конфигурации.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14369,6 +14787,85 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   - Пример значения:
 ``` xml
 <integer>2</integer>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="explicitlyallowednetworkports"></a>ExplicitlyAllowedNetworkPorts
+
+  #### <a name="explicitly-allowed-network-ports"></a>Явно разрешенные сетевые порты
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 91 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Эта политика позволяет обойти ограниченный список портов, встроенный в Microsoft Edge. Набор портов определяется как разделенный запятой список портов, для которых должны быть разрешены исходящие подключения.
+
+Пользование портами ограничено, чтобы Microsoft Edge нельзя было использовать в качестве вектора эксплойта различных сетевых уязвимостей. Настройка этой политики может сделать вашу сеть уязвимой для атак. Эта политика предназначена как временное обходное решение для ошибок с кодом "ERR_UNSAFE_PORT" при переносе службы, работающей на заблокированном порту, на стандартный порт (например, порт 80 или 443).
+
+Вредоносные веб-сайты могут легко обнаружить, установлена ли эта политика и для каких именно портов, а затем использовать эту информацию для направления атак.
+
+Если оставить значение пустым или не установить его, все порты ограниченного использования будут заблокированы. Недействительные значения портов, заданные этой политикой, будут игнорироваться, а допустимые значения будут по-прежнему применяться.
+
+Эта политика переопределяет параметр командной строки "--explicitly-allowed-ports".
+
+Сопоставление параметров политики:
+
+* 554 (554) = порт 554 (истекает 15 октября 2021 г.)
+
+* 10080 (10080) = порт 10080 (истекает 1 апреля 2022 г.)
+
+* 6566 (6566) = порт 6566 (истекает 15 октября 2021 г.)
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Список строк
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: ExplicitlyAllowedNetworkPorts
+  - Имя GP. Явно разрешенные сетевые порты
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge\ExplicitlyAllowedNetworkPorts
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: 1, 2, 3, ...
+  - Тип значения: список REG_SZ
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ExplicitlyAllowedNetworkPorts\1 = "10080"
+
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: ExplicitlyAllowedNetworkPorts
+  - Пример значения:
+``` xml
+<array>
+  <string>10080</string>
+</array>
 ```
   
 
@@ -14414,7 +14911,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - Имя GP: Показать флажок «Всегда открывать» в диалоге внешнего протокола.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14540,7 +15037,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: FavoritesBarEnabled
   - Имя GP: Включить панель избранного
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14678,7 +15175,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceBingSafeSearch
   - Название GP: Enforce Bing SafeSearch
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14740,7 +15237,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceCertificatePromptsOnMultipleMatches
   - Имя GP: Укажите, должен ли Microsoft Edge автоматически выбирать сертификат при наличии нескольких совпадений сертификатов для сайта, настроенного с помощью «AutoSelectCertificateForUrls».
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14804,7 +15301,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceEphemeralProfiles
   - Название GP: Включить использование эфемерных профилей
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14866,7 +15363,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceGoogleSafeSearch
   - Имя GP: Принудительный поиск Google SafeSearch
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14930,7 +15427,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceLegacyDefaultReferrerPolicy
   - Имя GP: Использование политики ссылок по умолчанию no-referrer-when-downgrade (устаревшее)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -14992,7 +15489,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceNetworkInProcess
   - Имя GP: Принудительный запуск сетевого кода в процессе браузера (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15051,7 +15548,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя групповой политики: ForceSync
   - Имя групповой политики: Принудительно синхронизировать данные браузера и не показывать запрос на разрешение синхронизации
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15125,7 +15622,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: ForceYouTubeRestrict
   - Название GP: Принудительное ограничение YouTube в ограниченном режиме.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15189,7 +15686,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: FullscreenAllowed
   - Имя GP: Разрешить полноэкранный режим
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15248,7 +15745,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: GloballyScopeHTTPAuthCacheEnabled
   - Имя GP: Включить глобальный кэш проверки подлинности HTTP
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15316,7 +15813,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: GoToIntranetSiteForSingleWordEntryInAddressBar
   - Имя GP: Принудительная прямая навигация по сайту в интрасети вместо поиска по отдельным словам в адресной строке.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15378,7 +15875,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   - Уникальное имя GP: HSTSPolicyBypassList
   - Имя GP: Настроить список имен, которые будут пропускать проверку политики HSTS
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15441,7 +15938,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: HardwareAccelerationModeEnabled
   - Имя GP: Использование аппаратного ускорения, если доступно
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15461,6 +15958,68 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   #### <a name="mac-information-and-settings"></a>Информация о Mac и настройки
   
   - Имя ключа предпочтения: HardwareAccelerationModeEnabled
+  - Пример значения:
+``` xml
+<true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="headlessmodeenabled"></a>HeadlessModeEnabled
+
+  #### <a name="control-use-of-the-headless-mode"></a>Контролировать использование режима работы без монитора
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Этот параметр политики позволяет определить, могут ли пользователи запускать Microsoft Edge в режиме без монитора.
+
+Если эта политика включена или не настроена, Microsoft Edge позволяет использовать режим без монитора.
+
+Если политика отключена, Microsoft Edge откажет в использовании режима без монитора.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: HeadlessModeEnabled
+  - Имя GP. Управление использованием режима без монитора
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: HeadlessModeEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: HeadlessModeEnabled
   - Пример значения:
 ``` xml
 <true/>
@@ -15525,7 +16084,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: HideFirstRunExperience
   - Название GP: Скрыть первый опыт и заставку
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15589,7 +16148,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
   - Имя GP: Скрытие диалогового окна однократного перенаправления и объявления в Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15650,7 +16209,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportAutofillFormData
   - Имя GP: Разрешить импорт данных формы автозаполнения
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15718,7 +16277,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportBrowserSettings
   - Имя GP: Разрешить импорт настроек браузера
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15784,7 +16343,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportCookies
   - Имя GP: Разрешить импорт файлов cookie
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15852,7 +16411,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportExtensions
   - Имя GP: Разрешить импорт расширений
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15920,7 +16479,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportFavorites
   - Имя GP: Разрешить импорт избранного
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -15988,7 +16547,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportHistory
   - Имя GP: Разрешить импорт истории просмотра
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16056,7 +16615,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportHomepage
   - Имя GP: Разрешить импорт настроек домашней страницы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16124,7 +16683,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportOpenTabs
   - Имя GP: Разрешить импорт открытых вкладок
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16192,7 +16751,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportPaymentInfo
   - Имя GP: Разрешить импорт информации о платеже
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16260,7 +16819,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportSavedPasswords
   - Имя GP: Разрешить импорт сохраненных паролей
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16328,7 +16887,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportSearchEngine
   - Имя GP: Разрешить импорт настроек поисковой системы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16394,7 +16953,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: ImportShortcuts
   - Имя GP: Разрешить импорт ярлыков
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16418,6 +16977,67 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ``` xml
 <true/>
 ```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="importstartuppagesettings"></a>ImportStartupPageSettings
+
+  #### <a name="allow-importing-of-startup-page-settings"></a>Разрешить импорт параметров страницы запуска
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows начиная с 91 и во всех последующих версиях
+
+  #### <a name="description"></a>Описание
+
+  Позволяет пользователям импортировать параметры запуска из другого браузера в Microsoft Edge.
+
+Если включить эту политику, параметры запуска всегда импортируются.
+
+Если отключить эту политику, параметры запуска при первом запуске или при ручном импорте не импортируются.
+
+Если эта политика не настроена, параметры запуска импортируются при первом запуске, и пользователи могут выбрать, следует ли импортировать эти данные вручную, указав соответствующий параметр браузера во время последующих сеансов просмотра.
+
+Вы можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует параметры запуска при первом запуске, но пользователи могут выбрать или очистить **параметры браузера** во время ручного импорта.
+
+**Примечание.** В настоящее время эта политика управляет импортом из устаревших версий Microsoft Edge и из браузера Google Chrome (для Windows 7, 8 и 10).
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: ImportStartupPageSettings
+  - Имя GP. Разрешить импорт параметров страниц при запуске
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Имя значения: ImportStartupPageSettings
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
   
 
   [В начало](#microsoft-edge---policies)
@@ -16468,7 +17088,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: InPrivateModeAvailability
   - Имя GP: Настройка доступности режима InPrivate
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16528,7 +17148,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя групповой политики: InsecureFormsWarningsEnabled
   - Имя групповой политики: Включить предупреждения для небезопасных форм
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16595,7 +17215,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: IntensiveWakeUpThrottlingEnabled
   - Имя GP: Управление параметром IntensiveWakeUpThrottling
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16671,7 +17291,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: InternetExplorerIntegrationEnhancedHangDetection
   - Имя GP: Настройка улучшенной функции обнаружения зависаний в режиме Internet Explorer
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16732,7 +17352,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   - Уникальное имя GP: InternetExplorerIntegrationLevel
   - Имя GP: Настройка интеграции с Internet Explorer
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -16876,7 +17496,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   ### <a name="internetexplorerintegrationlocalfileshowcontextmenu"></a>InternetExplorerIntegrationLocalFileShowContextMenu
 
-  #### <a name="show-context-menu-to-open-a-link-in-internet-explorer-mode"></a>Показать контекстное меню для открытия ссылки в режиме Internet Explorer
+  #### <a name="show-context-menu-to-open-a-file-link-in-internet-explorer-mode"></a>Показать контекстное меню, позволяющее открыть ссылку file:// в режиме Internet Explorer
 
   
   
@@ -16893,6 +17513,8 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 Если для этой политики задано значение true, элемент контекстного меню "Открыть ссылку на новой вкладке в режиме Internet Explorer" будет доступен для ссылок file://.
 
 Если для этой политики задано значение false или она не настроена, данный элемент контекстного меню не будет добавлен.
+
+Если политика [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) позволяет пользователям перезагружать сайты в режиме Internet Explorer, элемент контекстного меню "Открыть ссылку в новой вкладке в режиме Internet Explorer" будет доступен для всех ссылок, за исключением ссылок на сайты, явно настроенные в списке сайтов на использование режима Microsoft Edge. В этом случае, если задать для политики значение true, элемент меню контекста будет доступен для ссылок file:// даже для сайтов, настроенных для использования режима Microsoft Edge. Если для этой политики установлено значение false или она не настроена, она не будет иметь никакого эффекта.
 
 Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
 
@@ -16911,7 +17533,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: InternetExplorerIntegrationLocalFileShowContextMenu
-  - Имя GP: показать контекстное меню для открытия ссылки в режиме Internet Explorer
+  - Имя GP. Показывать контекстное меню, чтобы открывать ссылки file:// в режиме Internet Explorer
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -16921,6 +17543,132 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
   - Путь (рекомендуется): N/A
   - Имя значения: InternetExplorerIntegrationLocalFileShowContextMenu
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationlocalsitelistexpirationdays"></a>InternetExplorerIntegrationLocalSiteListExpirationDays
+
+  #### <a name="specify-the-number-of-days-that-a-site-remains-on-the-local-ie-mode-site-list"></a>Указывает количество дней, в течение которых сайт остается в локальном списке сайтов режима IE.
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Если политика [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)включена или не настроена, пользователи смогут указывать Microsoft Edge в течение ограниченного числа дней, что загружать определенные страницы следует в режиме Internet Explorer.
+
+С помощью этого параметра можно задать, на сколько дней конфигурация запоминается в браузере. После окончания этого периода индивидуальная страница больше не будет автоматически загружаться в режиме IE.
+
+Если отключить политику [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed), она не будет иметь никакого эффекта.
+
+Если политика отключена или не настроена, используется значение по умолчанию в 30 дней.
+
+Если включить эту политику, необходимо ввести количество дней, в течение которых сайты сохраняются в локальном списке веб-сайтов пользователя в Microsoft Edge. Это значение может быть от 0 до 90 дней.
+
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: InternetExplorerIntegrationLocalSiteListExpirationDays
+  - Имя GP. Укажите количество дней, в течение которого сайт остается в локальном списке сайтов режима IE.
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: InternetExplorerIntegrationLocalSiteListExpirationDays
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x0000001e
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationreloadiniemodeallowed"></a>InternetExplorerIntegrationReloadInIEModeAllowed
+
+  #### <a name="allow-unconfigured-sites-to-be-reloaded-in-internet-explorer-mode"></a>Разрешить перезагрузку несконфигурированных сайтов в режиме Internet Explorer
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows начиная с версии 92
+
+  #### <a name="description"></a>Описание
+
+  Эта политика позволяет пользователям перезагрузить несконфигурированные сайты (те, которые не настроены в списке веб-сайтов Enterprise режима) в режиме Internet Explorer при просмотре веб-страниц через Microsoft Edge, если сайту для совместимости требуется Internet Explorer.
+
+После перезагрузки сайта в режиме Internet Explorer навигация "внутри страницы" будет оставаться в режиме Internet Explorer (например, ссылка, скрипт или форма на странице или перенаправление на стороне сервера из другой навигации "внутри страницы"). Пользователи могут выбрать выход из режима Internet Explorer, или же Microsoft Edge автоматически выйдет из режима Internet Explorer, когда происходит навигация с выходом из страницы (например, с помощью адресной строки браузера, кнопки "Назад" или ссылки из избранного).
+
+Пользователи могут по желанию приказать Microsoft Edge использовать режим Internet Explorer для данного сайта в будущем. Этот выбор запомнится на период времени, управляемый политикой [InternetExplorerIntegrationLocalSiteListExpirationDays.](#internetexplorerintegrationlocalsitelistexpirationdays)
+
+Если для политики [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) задано значение "IEMode", сайты, явно настроенные в списке сайтов политики [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) для использования Microsoft Edge не могут быть перезагружены в режиме Internet Explorer, а сайты, настроенные списком сайтов или политикой [SendIntranetToInternetExplorer](#sendintranettointernetexplorer) для использования режима Internet Explorer, не смогут выходить из режима Internet Explorer.
+
+Если эта политика включена, пользователям разрешается перезагружать несконфигурированные сайты в режиме Internet Explorer.
+
+Если политика отключена, пользователям не разрешается перезагружать несконфигурированные сайты в режиме Internet Explorer.
+
+Обратите внимание, что если включить эту политику, она будет иметь приоритет над настройкой политики [InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed) и последняя будет отключена.
+
+Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: InternetExplorerIntegrationReloadInIEModeAllowed
+  - Имя GP. Разрешить перезагрузку несконфигурированных сайтов в режиме Internet Explorer
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Имя значения: InternetExplorerIntegrationReloadInIEModeAllowed
   - Тип значения: REG_DWORD
 
   ##### <a name="example-value"></a>Пример значения:
@@ -16963,7 +17711,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   - Уникальное имя GP: InternetExplorerIntegrationSiteList
   - Имя GP: Настройка списка сайтов в режиме предприятия
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17010,6 +17758,8 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 Если для этой политики задано значение «AllInPageNavigations», все переходы от страниц, загруженных в режиме IE, к ненастроенным сайтам, сохраняются в режиме Internet Explorer (как минимум, рекомендуется).
 
+Если политика [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) позволяет пользователям перезагружать сайты в режиме Internet Explorer, все внутристраничные переходы с неcконфигурированных сайтов, перезагруженных пользователями в режиме Internet Explorer, останутся в режиме Internet Explorer независимо от того, как настроена эта политика.
+
 Чтобы узнать больше о режиме Internet Explorer, см. [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)
 
 Сопоставление параметров политики:
@@ -17038,7 +17788,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   - Уникальное имя GP: InternetExplorerIntegrationSiteRedirect
   - Имя GP: укажите, как ведут себя переходы «внутри страницы» к ненастроенным сайтам при запуске со страниц режима Internet Explorer.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17061,9 +17811,9 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   ### <a name="internetexplorerintegrationtestingallowed"></a>InternetExplorerIntegrationTestingAllowed
 
-  #### <a name="allow-internet-explorer-mode-testing"></a>Разрешить тестирование режима Internet Explorer
+  #### <a name="allow-internet-explorer-mode-testing-deprecated"></a>Разрешить тестирование режима Internet Explorer (политика не рекомендуется к использованию)
 
-  
+  >НЕ РЕКОМЕНДУЕТСЯ К ИСПОЛЬЗОВАНИЮ: эта политика не рекомендуется к использованию. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
@@ -17071,7 +17821,9 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   #### <a name="description"></a>Описание
 
-  Эта политика позволяет пользователям проверять приложения в режиме Internet Explorer, открыв вкладку режима Internet Explorer в Microsoft Edge.
+  Эта политика не рекомендуется к использованию, вместо нее используйте политику [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed). Она не будет работать в Microsoft Edge версии 95.
+
+Эта политика позволяет пользователям тестировать приложения в режиме Internet Explorer, открыв вкладку режима Internet Explorer в Microsoft Edge.
 
 Это можно сделать с помощью меню "Другие инструменты", выбрав пункт "Открыть сайты в режиме Internet Explorer".
 
@@ -17079,7 +17831,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 Этот параметр используется вместе с [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel), для которого задано значение "IEMode".
 
-Если эта политика включена, команда "Открыть сайты в режиме Internet Explorer" будет отображаться в разделе "Другие инструменты". На этой вкладке пользователи могут просматривать свои сайты в режиме Internet Explorer. Другой вариант функции "Открыть сайты в режиме Microsoft Edge" также будет отображаться в разделе "Другие инструменты", чтобы проверить сайты в современном браузере, не удаляя их из списка сайтов.
+Если эта политика включена, команда "Открыть сайты в режиме Internet Explorer" будет отображаться в разделе "Другие инструменты". На этой вкладке пользователи могут просматривать свои сайты в режиме Internet Explorer. Другой вариант функции "Открыть сайты в режиме Microsoft Edge" также будет отображаться в разделе "Другие инструменты", чтобы проверить сайты в современном браузере, не удаляя их из списка сайтов. Обратите внимание, что если включена политика [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed), она имеет приоритет и эти параметры не будут видны в разделе "Дополнительные средства".
 
 Если отключить или не настроить эту политику, пользователи не смогут увидеть параметры "Открыть в режиме Internet Explorer" и "Открыть в режиме Microsoft Edge" в меню "Другие инструменты". Тем не менее, пользователи могут настраивать эти параметры с помощью флага --ie-mode-test.
 
@@ -17098,7 +17850,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: InternetExplorerIntegrationTestingAllowed
-  - Имя групповой политики: Разрешить тестирование режима Internet Explorer
+  - Имя GP. Разрешить тестирование в режиме Internet Explorer (политика не рекомендуется к использованию)
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -17168,7 +17920,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   - Уникальное имя GP: IntranetRedirectBehavior
   - Имя GP: поведение перенаправления в интрасети
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17208,15 +17960,13 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   #### <a name="description"></a>Описание
 
-  Укажите источники для запуска в отдельности, в своем собственном процессе.
+  Укажите происхождения, запуск с которых производится в изолированном процессе.
 
-Эта политика также изолирует источники, названные под-доменами - например, указание https://contoso.com/ приведет к изоляции https://foo.contoso.com/ как части сайта https://contoso.com/.
+По умолчанию Microsoft Edge изолирует страницы с каждого сайта в отдельный процесс. Эта политика обеспечивает более точную изоляцию - на уровне происхождения, а не сайта. Например, указание https://subdomain.contoso.com/ приведет к изолированию страниц из https://subdomain.contoso.com/ в процессе, отдельном от страниц из других происхождений на том же сайте https://contoso.com/.
 
-Если политика включена, каждый из названных источников в списке через запятую будет выполняться в своем собственном процессе.
+Если включить эту политику, каждое из происхождений, перечисленных в отдельном списке, разделенном запятой, будет работать в своем собственном процессе.
 
-Если вы отключите эту политику, то функции IsolateOrigins и SitePerProcess будут отключены. Пользователи по-прежнему могут включить политику IsolateOrigins вручную с помощью флагов командной строки.
-
-Если вы не настроите политику, пользователь может изменить этот параметр.
+Если отключить или не настроить эту политику, страницы будут изолироваться на уровне сайта.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17234,7 +17984,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   - Уникальное имя GP: IsolateOrigins
   - Имя GP: Включить изоляцию сайта для определенных источников
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17258,6 +18008,63 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 ``` xml
 <string>https://contoso.com/,https://fabrikam.com/</string>
 ```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="localbrowserdatashareenabled"></a>LocalBrowserDataShareEnabled
+
+  #### <a name="enable-windows-to-search-local-microsoft-edge-browsing-data"></a>Включить поиск Windows в локальных данных просмотра веб-страниц Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows 93 и более поздних версий
+
+  #### <a name="description"></a>Описание
+
+  Позволяет Windows индексировать данные Microsoft Edge, хранимые локально на устройстве пользователя, а также позволяет пользователям находить и запускать ранее сохраненные данные просмотра непосредственно из элементов Windows, таких как поле поиска на панели задач в Windows.
+
+Если включить или не настроить эту политику, Microsoft Edge будет публиковать локальные данные просмотра в индексаторе Windows.
+
+Если отключить эту политику, Microsoft Edge не будет предоставлять данные индексатору Windows.
+
+Обратите внимание, что если отключить эту политику, Microsoft Edge удалите данные, переданные в Windows, с устройства и прекратит делиться новыми данными просмотра.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: LocalBrowserDataShareEnabled
+  - Имя GP: Включить Windows для поиска в локальных данных просмотра веб-страниц через Microsoft Edge
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Имя значения: LocalBrowserDataShareEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
   
 
   [В начало](#microsoft-edge---policies)
@@ -17302,7 +18109,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   - Уникальное имя GP: LocalProvidersEnabled
   - Имя врача: Разрешить предложения от местных провайдеров
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17379,13 +18186,13 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
   {
-    "managed_configuration_hash": "asd891jedasd12ue9h", 
-    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "managed_configuration_hash": "asd891jedasd12ue9h",
+    "managed_configuration_url": "https://static.contoso.com/configuration.json",
     "origin": "https://www.contoso.com"
-  }, 
+  },
   {
-    "managed_configuration_hash": "djio12easd89u12aws", 
-    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "managed_configuration_hash": "djio12easd89u12aws",
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json",
     "origin": "https://www.example.com"
   }
 ]
@@ -17463,7 +18270,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 
   - Уникальное имя GP: ManagedFavorites
   - Имя GP: Настройка избранного
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17480,26 +18287,26 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
   {
     "toplevel_name": "My managed favorites folder"
-  }, 
+  },
   {
-    "name": "Microsoft", 
+    "name": "Microsoft",
     "url": "microsoft.com"
-  }, 
+  },
   {
-    "name": "Bing", 
+    "name": "Bing",
     "url": "bing.com"
-  }, 
+  },
   {
     "children": [
       {
-        "name": "Microsoft Edge Insiders", 
+        "name": "Microsoft Edge Insiders",
         "url": "www.microsoftedgeinsider.com"
-      }, 
+      },
       {
-        "name": "Microsoft Edge", 
+        "name": "Microsoft Edge",
         "url": "www.microsoft.com/windows/microsoft-edge"
       }
-    ], 
+    ],
     "name": "Microsoft Edge links"
   }
 ]
@@ -17599,7 +18406,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 
   - Уникальное имя GP: ManagedSearchEngines
   - Название GP: Управление поисковыми системами
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17616,33 +18423,33 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   {
     "allow_search_engine_discovery": true
-  }, 
+  },
   {
-    "is_default": true, 
-    "keyword": "example1.com", 
-    "name": "Example1", 
-    "search_url": "https://www.example1.com/search?q={searchTerms}", 
+    "is_default": true,
+    "keyword": "example1.com",
+    "name": "Example1",
+    "search_url": "https://www.example1.com/search?q={searchTerms}",
     "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", 
-    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", 
-    "keyword": "example2.com", 
-    "name": "Example2", 
-    "search_url": "https://www.example2.com/search?q={searchTerms}", 
+    "image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}",
+    "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload",
+    "keyword": "example2.com",
+    "name": "Example2",
+    "search_url": "https://www.example2.com/search?q={searchTerms}",
     "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "encoding": "UTF-8", 
-    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", 
-    "keyword": "example3.com", 
-    "name": "Example3", 
-    "search_url": "https://www.example3.com/search?q={searchTerms}", 
+    "encoding": "UTF-8",
+    "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload",
+    "keyword": "example3.com",
+    "name": "Example3",
+    "search_url": "https://www.example3.com/search?q={searchTerms}",
     "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"
-  }, 
+  },
   {
-    "keyword": "example4.com", 
-    "name": "Example4", 
+    "keyword": "example4.com",
+    "name": "Example4",
     "search_url": "https://www.example4.com/search?q={searchTerms}"
   }
 ]
@@ -17720,6 +18527,70 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="mathsolverenabled"></a>MathSolverEnabled
+
+  #### <a name="let-users-snip-a-math-problem-and-get-the-solution-with-a-step-by-step-explanation-in-microsoft-edge"></a>Позвольте пользователям вставлять фрагмент математической задачи и получать решение с пошаговым объяснением в Microsoft Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 91 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Эта политика позволяет указать, можно ли использовать средство решения математических задач в Microsoft Edge.
+
+Если включить или не настроить эту политику, пользователь сможет ввести в браузер фрагмент математической задачи и получить решение с пошаговым объяснением на боковой панели Microsoft Edge.
+
+Если отключить эту политику, то средство решения математических задач будет деактивировано и недоступно пользователям.
+
+Примечание. Если для политики [ComponentUpdatesEnabled](#componentupdatesenabled) задать значение "Отключено", средство решения математических задач также будет отключено.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: MathSolverEnabled
+  - Имя GP. Позволить пользователям вставлять фрагменты математических задач и получать решение с пошаговым объяснением в Microsoft Edge
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: MathSolverEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: MathSolverEnabled
+  - Пример значения:
+``` xml
+<true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="maxconnectionsperproxy"></a>MaxConnectionsPerProxy
 
   #### <a name="maximum-number-of-concurrent-connections-to-the-proxy-server"></a>Максимальное количество одновременных подключений к прокси-серверу
@@ -17758,7 +18629,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: MaxConnectionsPerProxy
   - Имя GP: Максимальное количество одновременных подключений к прокси-серверу.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17822,7 +18693,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: MediaRouterCastAllowAllIPs
   - Имя GP: Разрешить Google Cast подключаться к устройствам Cast на всех IP-адресах.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -17892,7 +18763,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: MetricsReportingEnabled
   - Имя GP: Включить отчеты с данными об использовании и сбоях данных (устаревший)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18017,7 +18888,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: NavigationDelayForInitialSiteListDownloadTimeout
   - Имя GP: Установка времени ожидания перехода между вкладками списка сайтов для режима предприятия
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18082,7 +18953,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: NetworkPredictionOptions
   - Имя GP: Включить прогнозирование сети
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18150,7 +19021,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: NonRemovableProfileEnabled
   - Имя GP: Укажите, всегда ли у пользователя профиль по умолчанию автоматически входит в свою учетную запись на работе или в школе.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18207,7 +19078,7 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   - Уникальное имя GP: OverrideSecurityRestrictionsOnInsecureOrigin
   - Имя GP: Контроль, где применяются ограничения безопасности для небезопасных источников
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18274,7 +19145,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   - Уникальное имя GP: PaymentMethodQueryEnabled
   - Название GP: Разрешить веб-сайтам запрашивать доступные способы оплаты
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18304,7 +19175,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### <a name="allow-personalization-of-microsoft-services-by-sending-browsing-and-browser-related-data-to-microsoft"></a>Разрешить персонализацию служб Майкрософт посредством отправки данных, связанных с браузером, в корпорацию Майкрософт
+  #### <a name="allow-personalization-of-ads-microsoft-edge-search-news-and-other-microsoft-services-by-sending-browsing-history-favorites-and-collections-usage-and-other-browsing-data-to-microsoft"></a>Разрешить персонализацию рекламы, Microsoft Edge, поиска, новостей и других служб Майкрософт посредством отправки в Майкрософт истории просмотра, избранного и коллекций, использования и других данных просмотра веб-страниц
 
   
   
@@ -18314,9 +19185,9 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   #### <a name="description"></a>Описание
 
-  Эта политика не позволяет корпорации Майкрософт собирать историю просмотра Microsoft Edge пользователя, избранное и коллекции, данные об использовании браузера и вводе, как в адресной панели, чтобы использовать для персонализации рекламы, поиска, новостей, Microsoft Edge и других служб Майкрософт.
+  Эта политика не позволяет корпорации Майкрософт собирать историю действий пользователя в Microsoft Edge, избранное и коллекцию, использование и другие данные о просмотре веб-страниц для целей персонализации рекламы, поиска, новостей, Microsoft Edge и других служб Майкрософт.
 
-Этот параметр недоступен для учетных записей, принадлежащих детям, и учетных записей, принадлежащих предприятиям.
+Этот параметр недоступен для учетных записей, принадлежащих детям, и корпоративных учетных записей.
 
 Если вы отключите эту политику, пользователи не смогут изменить или переопределить настройку. Если эта политика включена или не настроена, Microsoft Edge будет использоваться по умолчанию 
 
@@ -18335,7 +19206,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: PersonalizationReportingEnabled
-  - Имя GP: Разрешить персонализацию служб Майкрософт посредством отправки данных, связанных с браузером, в корпорацию Майкрософт
+  - Имя GP. Разрешить персонализацию рекламы, Microsoft Edge, поиска, новостей и других служб Майкрософт посредством отправки в Майкрософт истории просмотра, избранного и коллекции, использования и других данных о просмотре веб-страниц
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -18400,7 +19271,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   - Уникальное имя GP: PinningWizardAllowed
   - Имя GP: Разрешить привязку к мастеру панели задач
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18423,17 +19294,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   ### <a name="proactiveauthenabled"></a>ProactiveAuthEnabled
 
-  #### <a name="enable-proactive-authentication-deprecated"></a>Включение проактивной проверки подлинности (не рекомендуется)
+  #### <a name="enable-proactive-authentication-obsolete"></a>Включить активную проверку подлинности (устаревшая)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО. Эта политика устарела и не работает в Microsoft Edge начиная с версии 90.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - На Windows и macOS начиная с 77 или позже
+  - В Windows и macOS — версии c 77 по 90
 
   #### <a name="description"></a>Описание
 
-  Эта политика устарела, так как она не работает независимо от входных данных браузера. Она не будет работать в Microsoft Edge версии 91. Если вы хотите настроить вход в браузер, используйте политику [BrowserSignin](#browsersignin).
+  Эта политика устарела, так как не работает независимо от входа пользователя в браузере. Она не работает в Microsoft Edge после версии 90. Если вы хотите настроить вход в браузер, используйте политику [BrowserSignin](#browsersignin).
 
 Позволяет настроить включение упреждающего способа проверки подлинности в Microsoft Edge.
 
@@ -18458,7 +19329,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: ProactiveAuthEnabled
-  - Имя GP: Включение проактивной проверки подлинности (не рекомендуется)
+  - Имя GP: Включить активную проверку подлинности (устаревшая)
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -18521,7 +19392,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   - Уникальное имя GP: PromotionalTabsEnabled
   - Название GP: Включить рекламный контент на полной вкладке
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18583,7 +19454,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   - Уникальное имя GP: PromptForDownloadLocation
   - Имя GP: Спросите, где сохранить загруженные файлы
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18647,7 +19518,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: QuicAllowed
   - Имя GP: Разрешить протокол QUIC
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18775,7 +19646,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RedirectSitesFromInternetExplorerPreventBHOInstall
   - Имя GP: Запрет установки объекта BHO для перенаправления несовместимых сайтов из Internet Explorer в Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18844,7 +19715,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RedirectSitesFromInternetExplorerRedirectMode
   - Имя GP: Перенаправление несовместимых сайтов из Internet Explorer в Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18911,7 +19782,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RelaunchNotification
   - Имя GP: Уведомить пользователя о том, что перезагрузка браузера рекомендуется или требуется для ожидающих обновлений
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -18973,7 +19844,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RelaunchNotificationPeriod
   - Имя GP: Установите период времени для уведомлений об обновлениях.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19032,7 +19903,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RendererCodeIntegrityEnabled
   - Имя GP: Включить целостность кода рендерера
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19087,7 +19958,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RequireOnlineRevocationChecksForLocalAnchors
   - Имя GP: Укажите, требуются ли онлайн-проверки OCSP/CRL для локальных якорей доверия.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19147,7 +20018,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: ResolveNavigationErrorsUseWebService
   - Имя GP: Включить разрешение ошибок навигации с помощью веб-службы.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19209,7 +20080,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RestrictSigninToPattern
   - Имя GP: Ограничение, какие учетные записи могут использоваться в качестве основных учетных записей Microsoft Edge.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19273,7 +20144,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RoamingProfileLocation
   - Имя GP: Настройка каталога перемещаемого профиля
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19330,7 +20201,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   - Уникальное имя GP: RoamingProfileSupportEnabled
   - Имя GP: Разрешение использования перемещаемых копий для данных профиля Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19353,13 +20224,13 @@ QUIC - это сетевой протокол транспортного уро�
 
   ### <a name="runallflashinallowmode"></a>RunAllFlashInAllowMode
 
-  #### <a name="extend-adobe-flash-content-setting-to-all-content-obsolete"></a>Применить параметр содержимого Adobe Flash ко всему содержимому (устарело)
+  #### <a name="extend-adobe-flash-content-setting-to-all-content-obsolete"></a>Применять параметр содержимого Adobe Flash ко всему содержимому (устаревшая)
 
   
-  >УСТАРЕЛО: эта политика устарела и не работает в версиях Microsoft Edge после 87.
+  >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge в версиях после 88.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - В Windows и macOS — версии c 77 по 87
+  - В Windows и macOS — версии c 77 по 88
 
   #### <a name="description"></a>Описание
 
@@ -19417,7 +20288,7 @@ QUIC - это сетевой протокол транспортного уро�
 
   ### <a name="sslerroroverrideallowed"></a>SSLErrorOverrideAllowed
 
-  #### <a name="allow-users-to-proceed-from-the-https-warning-page"></a>Разрешить пользователям продолжать работу со страницы предупреждения HTTPS
+  #### <a name="allow-users-to-proceed-from-the-https-warning-page"></a>Разрешить пользователям переходить со страницы предупреждения HTTPS
 
   
   
@@ -19448,8 +20319,8 @@ QUIC - это сетевой протокол транспортного уро�
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: SSLErrorOverrideAllowed
-  - Имя групповой политики: разрешить пользователям продолжать работу со страницы предупреждения HTTPS
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Имя GP: Разрешить пользователям переходить со страницы предупреждений HTTPS
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19661,7 +20532,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   - Уникальное имя групповой политики: SaveCookiesOnExit
   - Имя групповой политики: Сохранять файлы cookie при закрытии Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19728,7 +20599,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: SavingBrowserHistoryDisabled
   - Имя GP: Отключить сохранение истории браузера
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19849,7 +20720,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: ScrollToTextFragmentEnabled
   - Имя GP: Включить прокрутку к тексту, указанному во фрагментах URL
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19913,7 +20784,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: SearchSuggestEnabled
   - Имя GP: Включение вариантов поиска
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -19973,7 +20844,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: SecurityKeyPermitAttestation
   - Имя GP: Веб-сайты или домены, которым не требуется разрешение на прямую аттестацию ключа безопасности
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20034,7 +20905,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   - Уникальное имя GP: SendIntranetToInternetExplorer
   - Имя GP: Отправить все сайты интрасети в Internet Explorer
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20161,7 +21032,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   - Уникальное имя групповой политики: SensorsAllowedForUrls
   - Имя групповой политики: Разрешить доступ к датчиками на определенных сайтах
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20232,7 +21103,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя групповой политики: SensorsBlockedForUrls
   - Имя групповой политики: Блокировать доступ к датчиками на определенных сайтах
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20303,7 +21174,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя групповой политики: SerialAskForUrls
   - Имя групповой политики: Разрешить API Serial на определенных сайтах
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20374,7 +21245,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя групповой политики: SerialBlockedForUrls
   - Имя групповой политики: Блокировать API Serial на определенных сайтах
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20402,6 +21273,70 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="sharedarraybufferunrestrictedaccessallowed"></a>SharedArrayBufferUnrestrictedAccessAllowed
+
+  #### <a name="specifies-whether-sharedarraybuffers-can-be-used-in-a-non-cross-origin-isolated-context"></a>Указывает, можно ли использовать SharedArrayBuffers в контексте без изоляции перекрестного происхождения.
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 91 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Указывает, можно ли использовать SharedArrayBuffers в контексте, не изолированном от перекрестного происхождения.  SharedArrayBuffer — это двоичный буфер данных, который можно использовать для создания представлений общей памяти.  SharedArrayBuffers имеют уязвимость доступа к памяти в нескольких популярных процессорах.
+
+Если включить эту политику, сайтам разрешено использовать SharedArrayBuffers.
+
+Если отключить или не настроить эту политику, сайты не могут использовать SharedArrayBuffers.
+
+Microsoft Edge начиная с версии 91 требует изоляции ссылок перекрестного происхождения при использовании SharedArrayBuffers из соображений веб-совместимости.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: SharedArrayBufferUnrestrictedAccessAllowed
+  - Имя GP. Использование SharedArrayBuffers в контексте без изоляции ссылок перекрестного происхождения.
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: SharedArrayBufferUnrestrictedAccessAllowed
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: SharedArrayBufferUnrestrictedAccessAllowed
+  - Пример значения:
+``` xml
+<true/>
 ```
   
 
@@ -20509,7 +21444,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: ShowOfficeShortcutInFavoritesBar
   - Имя GP: Показать ярлык Microsoft Office на панели избранного (не рекомендуется)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20633,7 +21568,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: SignedHTTPExchangeEnabled
   - Имя GP: Включить поддержку Signed HTTP Exchange (SXG)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20696,7 +21631,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   - Уникальное имя GP: SitePerProcess
   - Имя GP: Включить изоляцию сайта для каждого сайта
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20837,7 +21772,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
   - GP unique name: SpeechRecognitionEnabled
   - GP name: Configure Speech Recognition
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20897,7 +21832,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
   - Уникальное имя GP: SpellcheckEnabled
   - Название GP: Включить проверку орфографии
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -20945,9 +21880,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
 Если политика [SpellcheckEnabled](#spellcheckenabled) отключена, эта политика не будет действовать.
 
-Если язык включен в политику «SpellcheckLanguage» и [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist), язык проверки орфографии включен.
-
-Поддерживаются следующие языки: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
+Если язык перечислен одновременно в политике "SpellcheckLanguage" и в списке [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist), проверка орфографии для этого языка будет включена.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -20965,7 +21898,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
   - Уникальное имя GP: SpellcheckLanguage
   - Имя GP: Включить определенные языки проверки орфографии
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21008,9 +21941,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 Если политика [SpellcheckEnabled](#spellcheckenabled) отключена, эта политика не будет действовать.
 
-Если язык включен в политику [SpellcheckLanguage](#spellchecklanguage) и SpellcheckLanguageBlocklist, язык проверки орфографии включен.
-
-В настоящее время поддерживаются следующие языки: af, bg, ca, cs, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
+Если язык перечислен одновременно в политике [SpellcheckLanguage](#spellchecklanguage) и в списке SpellcheckLanguageBlocklist, проверка орфографии для этого языка будет включена.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -21028,7 +21959,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
   - Уникальное имя GP: SpellcheckLanguageBlocklist
   - Имя GP: Принудительное отключение языков проверки орфографии
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21149,7 +22080,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   - Уникальное имя GP: SuppressUnsupportedOSWarning
   - Имя GP: Подавить предупреждение о неподдерживаемой ОС
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21211,7 +22142,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   - Уникальное имя GP: SyncDisabled
   - Имя GP: Отключить синхронизацию данных с помощью служб синхронизации Microsoft
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21273,7 +22204,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   - Уникальное имя GP: SyncTypesListDisabled
   - Имя GP: Настроить список типов, которые исключены из синхронизации
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21342,7 +22273,7 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   - Уникальное имя GP: TLS13HardeningForLocalAnchorsEnabled
   - Имя групповой политики: Включение функции безопасности TLS 1.3 для локальных якорей доверия (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21410,14 +22341,14 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   - Уникальное имя GP: TLSCipherSuiteDenyList
   - Имя GP: Выбор наборов шифров TLS для отключения
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - Путь (рекомендуется): Н/Д
+  - Путь (рекомендуется): N/A
   - Имя значения: 1, 2, 3, ...
   - Тип значения: список REG_SZ
 
@@ -21545,14 +22476,14 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - Уникальное имя GP: TargetBlankImpliesNoOpener
   - Имя GP: Не устанавливать window.opener для ссылок, нацеленных на _blank
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 
   - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
-  - Путь (рекомендуется): Н/Д
+  - Путь (рекомендуется): N/A
   - Имя значения: TargetBlankImpliesNoOpener
   - Тип значения: REG_DWORD
 
@@ -21603,7 +22534,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - Уникальное имя GP: TaskManagerEndProcessEnabled
   - Имя GP: Включить конечные процессы в диспетчере задач браузера.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21665,7 +22596,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - Уникальное имя GP: TotalMemoryLimitMb
   - Имя GP: Установка ограничения на размер памяти (в мегабайтах), который может использовать один экземпляр Microsoft Edge.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21737,7 +22668,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - Уникальное имя GP: TrackingPrevention
   - Имя GP: Блокировка отслеживания активности пользователей в Интернете
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21801,7 +22732,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - GP уникальное имя: TranslateEnabled
   - Имя GP: Включение перевода
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21824,6 +22755,66 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - Пример значения:
 ``` xml
 <true/>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="tripledesenabled"></a>TripleDESEnabled
+
+  #### <a name="enable-3des-cipher-suites-in-tls"></a>Включить комплект шифров 3DES в TLS
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows и macOS начиная с версии 93
+
+  #### <a name="description"></a>Описание
+
+  Предупреждение: 3DES будет полностью удалена из Microsoft Edge в версии 95 (примерно в октябре 2021 г.), и эта политика прекратит работать.
+
+Если для этой политики установлено значение true, то комплекты шифров 3DES будут включены в TLS. Если для этой политики установлено значение false, то комплекты шифров будут отключены. Если политика не установлена, наборы шифров 3DES будут отключены по умолчанию. Эта политика может быть использована для временного сохранения совместимости с устаревшим сервером. Это допустимо лишь в качестве временной меры, и настройку сервера следует изменить.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: TripleDESEnabled
+  - Имя GP. Включить комплекты шифров 3DES в TLS
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: TripleDESEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Информация и настройки для Mac
+  
+  - Имя ключа предпочтения: TripleDESEnabled
+  - Пример значения:
+``` xml
+<false/>
 ```
   
 
@@ -21871,7 +22862,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - Уникальное имя GP: URLAllowlist
   - Имя GP: Определение списка разрешенных URL
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -21950,7 +22941,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   - Уникальное имя GP: URLBlocklist
   - Имя GP: Заблокировать доступ к списку URL
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22061,7 +23052,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   #### <a name="description"></a>Описание
 
-  Поддержка этой политики прекращена, так как она предусматривалась только в качестве краткосрочного механизма, чтобы дать предприятиям больше времени для обновления своего веб-содержимого, несовместимого с функцией клиентских подсказок User-Agent. Она не будет работать в Microsoft Edge версии 93.
+  Поддержка этой политики прекращена, так как она предусматривалась только в качестве краткосрочного механизма, чтобы дать предприятиям больше времени для обновления своего веб-содержимого, несовместимого с функцией клиентских подсказок User-Agent. Она не будет работать в Microsoft Edge версии 94.
 
 При включении функции клиентских подсказок User-Agent она отправляет подробные заголовки запросов, которые содержат сведения о пользовательском браузере (например, версия браузера) и среде (например, архитектура системы).
 
@@ -22085,7 +23076,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   - Уникальное имя GP: UserAgentClientHintsEnabled
   - Имя групповой политики: Включение функции клиентских подсказок User-Agent (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22151,7 +23142,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   - Уникальное имя GP: UserDataDir
   - Имя GP: Установить каталог пользовательских данных
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22213,7 +23204,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   - Уникальное имя групповой политики: UserDataSnapshotRetentionLimit
   - Имя групповой политики: Ограничение количества снимков пользовательских данных, сохраняемых для применения в случае аварийного отката
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22268,7 +23259,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   - Уникальное имя GP: UserFeedbackAllowed
   - Имя GP: Разрешить обратную связь с пользователем
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22396,7 +23387,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   - Уникальное имя GP: VideoCaptureAllowed
   - Имя GP: Разрешить или заблокировать захват видео
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22454,7 +23445,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   - Уникальное имя GP: VideoCaptureAllowedUrls
   - Имя GP: Сайты, которые могут получить доступ к устройствам захвата видео без запроса разрешения.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22523,7 +23514,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   - Уникальное имя GP: WPADQuickCheckEnabled
   - Название GP: Установить оптимизацию WPAD
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22590,7 +23581,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   - Уникальное имя GP: WebAppInstallForceList
   - Имя GP: Настройка списка принудительно установленных веб-приложений.
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22606,17 +23597,17 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
-    "create_desktop_shortcut": true, 
-    "default_launch_container": "window", 
+    "create_desktop_shortcut": true,
+    "default_launch_container": "window",
     "url": "https://www.contoso.com/maps"
-  }, 
+  },
   {
-    "default_launch_container": "tab", 
+    "default_launch_container": "tab",
     "url": "https://app.contoso.edu"
-  }, 
+  },
   {
-    "default_launch_container": "window", 
-    "fallback_app_name": "Editor", 
+    "default_launch_container": "window",
+    "fallback_app_name": "Editor",
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22696,7 +23687,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   - Уникальное имя GP: WebCaptureEnabled
   - Имя GP: Включение функции захвата веб-страниц в Microsoft Edge
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22758,7 +23749,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   - Уникальное имя GP: WebComponentsV0Enabled
   - Имя GP: Повторное включение API веб-компонентов v0 до M84 (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22788,10 +23779,10 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### <a name="webdriveroverridesincompatiblepolicies"></a>WebDriverOverridesIncompatiblePolicies
 
-  #### <a name="allow-webdriver-to-override-incompatible-policies-deprecated"></a>Разрешить WebDriver переопределять несовместимые политики (устарело)
+  #### <a name="allow-webdriver-to-override-incompatible-policies-obsolete"></a>Разрешить интерфейсу WebDriver переопределять несовместимые политики (устаревшая)
 
-  >УСТАРЕЛО: Эта политика устарела. В настоящее время он поддерживается, но устареет в следующем выпуске.
-  
+  >НЕ РЕКОМЕНДУЕТСЯ К ИСПОЛЬЗОВАНИЮ: эта политика не рекомендуется к использованию. В настоящее время она поддерживается, но устареет в следующем выпуске.
+  >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge в версиях после 84.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
   - На Windows и macOS с 77, до 84 версии
@@ -22822,8 +23813,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: WebDriverOverridesIncompatiblePolicies
-  - Имя GP: Разрешить WebDriver переопределять несовместимые политики (устарело)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Имя GP: Разрешение интерфейсу WebDriver переопределять несовместимые политики (устарело)
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -22950,7 +23941,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   - Уникальное имя GP: WebRtcLocalIpsAllowedUrls
   - Имя GP: Управление экспозицией локальных IP-адресов с помощью WebRTC
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -23031,7 +24022,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   - Уникальное имя GP: WebRtcLocalhostIpHandling
   - Имя GP: Ограничение доступа локального IP-адреса с помощью WebRTC
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -23093,7 +24084,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   - Уникальное имя GP: WebRtcUdpPortRange
   - Имя GP: Ограничение диапазона локальных портов UDP, используемых WebRTC
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -23224,7 +24215,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   - Уникальное имя GP: WebWidgetIsEnabledOnStartup
   - Имя GP: Разрешение запуска мини веб-приложения при начальной загрузке Windows
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -23283,7 +24274,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   - Уникальное имя GP: WinHttpProxyResolverEnabled
   - Имя GP: Использование сопоставителя прокси-серверов Windows (не рекомендуется)
-  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (Обязательный): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
