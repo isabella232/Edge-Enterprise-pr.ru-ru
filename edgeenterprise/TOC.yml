@@ -1,4 +1,4 @@
-# last revised 03/31/2021
+# last revised 05/03/2021
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -49,8 +49,6 @@
       items:
         - name: Обзор сопоставления политик
           href: microsoft-edge-policy-map-overview.md
-        - name: Сопоставление политик устаревшей версии Microsoft Edge и Microsoft Edge
-          href: microsoft-edge-policy-map-legacy-to-newedge.md
         - name: Сопоставление политик Google Chrome и Microsoft Edge
           href: microsoft-edge-policy-map-chrome-to-newedge.md
     - name: Поддерживаемые операционные системы
@@ -61,8 +59,6 @@
       href: microsoft-edge-supported-languages.md
     - name: Системные обновления для Microsoft Edge
       items:
-        - name: Как получить доступ к старой версии Microsoft Edge
-          href: microsoft-edge-sysupdate-access-old-edge.md
         - name: Обновления Windows для поддержки Microsoft Edge
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Развертывание Microsoft Edge
@@ -83,6 +79,8 @@
       href: configure-microsoft-edge.md
     - name: Настройка для Windows с помощью Intune
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+    - name: Конфигурация каждого сайта с помощью политики
+      href: Per-Site-Configuration-by-Policy.md
     - name: Настройка для Windows с помощью системы управления мобильными устройствами
       href: configure-edge-with-mdm.md
     - name: Настройка для macOS с помощью файла PLIST
@@ -91,6 +89,8 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Использование функций Microsoft Edge Enterprise
   items:
+    - name: Microsoft Edge для инфраструктуры виртуальных рабочих столов
+      href: edge-for-virtualized-desktop-infrastructure.md
     - name: Конфигурации и эксперименты
       href: edge-configuration-and-experiments.md
     - name: Поддержка и настройка удостоверений
@@ -101,6 +101,18 @@
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Настройка режима терминала в Microsoft Edge
       href: microsoft-edge-configure-kiosk-mode.md
+    - name: Управление расширениями Microsoft Edge
+      items:
+        - name: Управление расширениями на предприятии
+          href: microsoft-edge-manage-extensions.md
+        - name: Использование групповых политик для управления расширениями
+          href: microsoft-edge-manage-extensions-policies.md
+        - name: Внутреннее тестирование расширений Microsoft Edge
+          href: microsoft-edge-manage-extensions-webstore.md
+        - name: Подробное руководство по политике ExtensionSettings
+          href: microsoft-edge-manage-extensions-ref-guide.md
+        - name: Вопросы и ответы о расширениях
+          href: microsoft-edge-manage-extensions-faq.md
     - name: Синхронизация Microsoft Edge Enterprise
       items:
         - name: Настройка синхронизации Microsoft Edge
@@ -140,17 +152,21 @@
         - name: Сопоставление расширений файлов с режимом Internet Explorer
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: 'Устранение неполадок с режимом Internet Explorer: вопросы и ответы'
-          href: edge-ie-mode-faq.md
+          href: edge-ie-mode-faq.yml
 - name: Система безопасности Microsoft Edge
   items:
     - name: Система безопасности для вашей организации
       href: ms-edge-security-for-business.md
+    - name: Прерывание скачивания потенциально опасных файлов
+      href: microsoft-edge-security-downloads-interruptions.md
     - name: Список разрешений для конечных точек Microsoft Edge
       href: microsoft-edge-security-endpoints.md
     - name: Защита от потери данных (DLP)
       href: microsoft-edge-security-dlp.md
     - name: Автоматическое включение мониторинга паролей для пользователей
       href: microsoft-edge-security-password-monitor.md
+    - name: Безопасность диспетчера паролей Microsoft Edge
+      href: microsoft-edge-security-password-manager-security.md
     - name: Защита от потенциально нежелательных приложений
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Поддержка условного доступа Azure AD
@@ -197,6 +213,8 @@
           href: edge-learnmore-regex.md
         - name: Сброс данных Microsoft Edge
           href: edge-learnmore-reset-data-in-cloud.md
+        - name: Переменные каталога данных пользователя
+          href: edge-learnmore-create-user-directory-vars.md
         - name: Использование отката Microsoft Edge для предприятий
           href: edge-learnmore-rollback.md
 - name: Видео о Microsoft Edge
