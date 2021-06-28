@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
-ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447593"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617299"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>Перенаправление из Internet Explorer в Microsoft Edge для обеспечения совместимости с современными веб-сайтами
 
@@ -23,6 +23,9 @@ ms.locfileid: "11447593"
 > Эта статья относится к Microsoft Edge из стабильного канала версии 87 или более поздней.
 
 ## <a name="overview"></a>Обзор
+
+>[!Note]
+> Поддержка классических приложений Internet Explorer 11 будет прекращена и больше не будет поддерживаться 15 июня 2022 г. (список области применения см. в [часто задаваемых вопросах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 Дизайн многих современных веб-сайтов несовместим с Internet Explorer. Когда пользователь Internet Explorer посещает несовместимый общедоступный сайт, для него отображается сообщение о том, что сайт несовместим с браузером и требуется вручную переключиться на другой браузер.
 
@@ -32,6 +35,15 @@ ms.locfileid: "11447593"
 
 > [!NOTE]
 > Корпорация Майкрософт поддерживает список всех сайтов, о которых известно, что они несовместимы с Internet Explorer. Дополнительные сведения см. в статье [Запрос на обновление списка несовместимых сайтов](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+
+## <a name="prerequisites"></a>Предварительные условия
+- Microsoft Edge Stable версии 87 или более поздней
+- Версии Windows
+    - Windows10 версии1709 или более поздней
+    - Windows 8.1
+    - Windows 7
+
+
 
 ## <a name="redirection-experience"></a>Интерфейс перенаправления
 
@@ -88,7 +100,7 @@ ms.locfileid: "11447593"
 >
 >Если вы используете устройство, присоединенное к домену или зарегистрированное в службе управления мобильными устройствами (MDM), этот параметр не отображается.
 >
-> Если вместо этого вы хотите разрешить своим пользователям загружать сайты в режиме Internet Explorer, вы можете это сделать, настроив политику [Разрешить тестирование режима Internet Explorer](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing).
+> Если вместо этого вы хотите разрешить своим пользователям загружать сайты в режиме Internet Explorer, вы можете это сделать, настроив политику [Разрешить тестирование режима Internet Explorer](./microsoft-edge-policies.md#intranetredirectbehavior).
 
 ### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>Политика: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 

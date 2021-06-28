@@ -1,21 +1,21 @@
 ---
 title: Материалы по адаптации пользователей к Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Материалы по адаптации пользователей к Microsoft Edge
-ms.openlocfilehash: 4752b0b5221d0134c68a50153679979449d893ca
-ms.sourcegitcommit: 81383d92dba379d5e6073066c4cdcc2761390f8f
+ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385382"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617847"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Материалы по адаптации пользователей к Microsoft Edge
 
@@ -26,17 +26,28 @@ ms.locfileid: "11385382"
 ## <a name="customer-adoption-kit"></a>Набор адаптации пользователей
 
 Набор адаптации пользователей содержит следующие материалы:
-
-- Руководство по развертыванию для ИТ-отдела
-- Руководство пользователя по началу работы
-- Шаблоны писем для адаптации
-- Баннеры
-- Цифровые вывески
-- Одностраничные документы
-- Демонстрационные видео и GIF
-- Ссылки на веб-ресурсы
+- Комплект для выведения Internet Explorer из эксплуатации **(доступно на английском, немецком, испанском, французском, японском, корейском, китайском, упрощенное письмо)**
+    - Сообщения электронной почты о внедрении
+    - Листовки
+    - Инфографика
+    - Форма коллекции сайтов
+- Общий набор для внедрения
+    - Руководство по развертыванию для ИТ-отдела
+    - Руководство пользователя по началу работы
+    - Шаблоны писем для адаптации
+    - Баннеры
+    - Цифровые вывески
+    - Одностраничные документы
+    - Демонстрационные видео и GIF
+    - Ссылки на веб-ресурсы
 
 Набор адаптации доступен на английском и нескольких других языках, включая французский, немецкий и японский. Выберите нужный язык в [центре загрузки набора адаптации пользователей Microsoft Edge](https://www.microsoft.com/download/details.aspx?id=102119).
+
+### <a name="internet-explorer-ie-retirement-resources"></a>Ресурсы для вывода Internet Explorer (IE) из эксплуатации
+
+Находите ценные ресурсы и рекомендации экспертов, которые помогут вашей организации безопасно и быстро перейти с IE на Microsoft Edge.
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Выведение Internet Explorer из эксплуатации":::
 
 ### <a name="it-deployment-guide"></a>Руководство по развертыванию для ИТ-отдела
 
