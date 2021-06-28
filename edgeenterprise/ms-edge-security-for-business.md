@@ -1,21 +1,21 @@
 ---
 title: Безопасность Microsoft Edge для вашего бизнеса
-ms.author: seanlynd
+ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 02/10/2021
+ms.date: 04/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Безопасность Microsoft Edge для вашего бизнеса
-ms.openlocfilehash: 674fad396bed62058c3187e00f4938d99cc57868
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 59de0c5ddfa6b34b3d091e4832e2a8fe42dffd42
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447073"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617069"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a>Безопасность Microsoft Edge для вашего бизнеса
 
@@ -27,9 +27,9 @@ Microsoft Edge построен на основе проекта с открыт
 
 ### <a name="highest-rated-protection-against-phishing-and-malware"></a>Высочайшая степень защиты от фишинга и вредоносных программ
 
-По данным независимого исследования NSS Labs встроенный в Microsoft Edge SmartScreen блокирует больше попыток [фишинга](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) и [вредоносных программ](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf), чем безопасный просмотр Google Chrome. SmartScreen обеспечивает проверку репутации сайтов и загружаемых файлов в режиме реального времени, когда пользователи работают в сети, и является частью [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), который собирает сигналы и аналитические данные, полученные из обширной сети глобальных активов, исследователей и партнеров Microsoft. Выполняя проверки динамических облачных списков опасных сайтов и загрузок, Microsoft Edge помогает обнаруживать и блокировать даже эфемерные угрозы, которые быстро исчезают.  
+По данным независимого исследования NSS Labs встроенный в Microsoft Edge SmartScreen блокирует больше попыток [фишинга](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) и [вредоносных программ](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW), чем безопасный просмотр Google Chrome. SmartScreen обеспечивает проверку репутации сайтов и загружаемых файлов в режиме реального времени, когда пользователи работают в сети, и является частью [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security), который собирает сигналы и аналитические данные, полученные из обширной сети глобальных активов, исследователей и партнеров Microsoft. Выполняя проверки динамических облачных списков опасных сайтов и загрузок, Microsoft Edge помогает обнаруживать и блокировать даже эфемерные угрозы, которые быстро исчезают.  
 
-[Microsoft Edge с фильтром SmartScreen](//DeployEdge/microsoft-edge-security-smartscreen) заблокировал 95,5% попыток фишинга в ходе тестирования [Защиты от фишинга NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) и 98,5% попыток вредоносных программ в ходе тестирования [Защиты от вредоносных программ NSS Labs](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) по сравнению с показателями безопасного просмотра в Chrome 86,9% и 86,0% соответственно.
+[Фильтр SmartScreen браузера Microsoft Edge](//DeployEdge/microsoft-edge-security-smartscreen) заблокировал 95,5 % попыток фишинга в ходе теста [Защита от фишинга NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) и 98,5 % попыток использования вредоносных программ в ходе теста [Защита от вредоносных программ NSS Labs](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) по сравнению с показателями Безопасного просмотра в Chrome (86,9 % и 86,0 % соответственно).
 
 ### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>Единственный браузер в Windows 10 с поддержкой аппаратной изоляции
 

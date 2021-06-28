@@ -3,21 +3,24 @@ title: Отключение Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/09/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как отключить Internet Explorer 11 и использовать режим Internet Explorer в Microsoft Edge.
-ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447393"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617489"
 ---
 # <a name="disable-internet-explorer-11"></a>Отключение Internet Explorer 11
+
+>[!Note]
+> Поддержка классического приложения Internet Explorer 11 будет прекращена 15 июня 2022 г. (список области применения см. в [вопросах и ответах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же сайты и приложения IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. Дополнительные сведения см. [здесь](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 В этой статье описано, как отключить Internet Explorer 11 в качестве автономного браузера в вашей среде.
 
@@ -61,7 +64,7 @@ ms.locfileid: "11447393"
 
 Если список сайтов в режиме предприятия содержит приложения, настроенные для открытия в приложении IE11, и вы отключили IE11 с помощью этой политики, они будут открываться в режиме IE в браузере Microsoft Edge.
 > [!NOTE]
-> Существует известная проблема с пользовательским потоком, если сайт настроен на открытие в IE11 и задана политика отключения IE11. Эта проблема активно исследуется.
+> Существовала известная проблема с пользовательским потоком, если сайт настроен на открытие в приложении IE11 и задана политика отключения IE11. Проблема устранена в Microsoft Edge версии 91.0.840.0 и более поздних версиях.
 
 ## <a name="disable-internet-explorer-11-as-a-standalone-browser"></a>Отключение Internet Explorer 11 в качестве автономного браузера
 

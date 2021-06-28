@@ -3,21 +3,24 @@ title: Отправка файлов cookie из Microsoft Edge в Internet Expl
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 05/19/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Как отправлять файлы cookie из Microsoft Edge в Internet Explorer '
-ms.openlocfilehash: d94c1337b7a3dbee789efb16e9c8b0a5ebc2c23b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 563179852ff23142b540345222ba7e943547535d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447743"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617469"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Отправка файлов cookie из Microsoft Edge в Internet Explorer
+
+>[!Note]
+> Поддержка классического приложения Internet Explorer 11 будет прекращена 15 июня 2022 г. (список области применения см. в [вопросах и ответах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же сайты и приложения IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. Дополнительные сведения см. [здесь](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 В этой статье объясняется, как настроить отправку файлов cookie сеанса из процесса Microsoft Edge в процесс Internet Explorer, используя режим Internet Explorer.
 

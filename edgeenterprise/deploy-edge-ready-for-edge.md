@@ -10,22 +10,22 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Готовность к Microsoft Edge
-ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
-ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
+ms.openlocfilehash: d41408c443c9976c8cb4b3b0f537143a5f185e3c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "11157692"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617509"
 ---
-# Готовность к Microsoft Edge
+# <a name="ready-for-microsoft-edge"></a>Готовность к Microsoft Edge
 
 Эта статья содержит сведения для ИТ-администратора, который планирует развертывание Microsoft Edge и нуждается в информации о совместимости и поддержке приложений.
 
-##  <a name="web-application-compatibility-and-support"></a>Совместимость и поддержка веб-приложений
+## <a name="web-application-compatibility-and-support"></a>Совместимость и поддержка веб-приложений
 
 Чтобы помочь вам спланировать развертывание Microsoft Edge, мы собрали список веб-приложений, которые можно использовать в организации. Этот список позволит вам определить, готово ли веб-приложение к использованию Microsoft Edge согласно сведениям из общедоступного заявления о поддержке от поставщика веб-приложения.
 
-###  <a name="add-to-the-application-list"></a>Добавление в список приложений
+### <a name="add-to-the-application-list"></a>Добавление в список приложений
 
 Список регулярно обновляется по мере определения заявлений о поддержке на основе отзывов клиентов.
 
@@ -36,7 +36,7 @@ ms.locfileid: "11157692"
 - Имя поставщика
 - Общедоступный URL-адрес заявления о поддержке
 
-###  <a name="application-list"></a>Список приложений
+### <a name="application-list"></a>Список приложений
 
 Корпорация Майкрософт не тестирует и не сертифицирует эти приложения в Microsoft Edge. Список составлен на основе общедоступных ресурсов. Всегда обращайтесь к текущему заявлению о поддержке от поставщика. Некоторым приложениям может требоваться режим IE, как указано в заявлении о поддержке.
 
@@ -44,6 +44,7 @@ ms.locfileid: "11157692"
 
 | Поставщик |  Продукт | Заявление о поддержке |
 |-|-|-|
+| Accurent  | TMS 5.23  | https://www.accruent.com/resources/blog-posts/accruent-enhances-tms-microsoft-edge-compatibility-new-automations?utm_source=linkedin&utm_medium=organic-social&utm_campaign=healthcare-general  |
 | Acumatica  | Acumatica ERP  | https://help-2020r1.acumatica.com/Wiki/(W(1))/ShowWiki.aspx?pageid=a8d5d39d-513a-4f93-b484-a95eb33103a1  |
 | Adaptive (Workday)    | Workday Adaptive Planning   | https://www.adaptiveplanning.com/uk/products/adaptive-technology-foundation  |
 | Adobe  | Creative Cloud Products (Acrobat, Photoshop, Illustrator)  | https://helpx.adobe.com/creative-cloud/system-requirements.html?promoid=P79NQR4R&mv=other  |
@@ -143,7 +144,7 @@ ms.locfileid: "11157692"
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Планирование развертывания Microsoft Edge](deploy-edge-plan-deployment.md)
