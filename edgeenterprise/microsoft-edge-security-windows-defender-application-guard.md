@@ -1,38 +1,38 @@
 ---
 title: Microsoft Edge и Application Guard в Microsoft Defender
 ms.author: srugh
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 02/05/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Поддержка Microsoft Edge для Application Guard в Microsoft Defender
-ms.openlocfilehash: 751201192c3b4e69cc866f35e51a6db23b9972f9
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 7374810eb19ada298963817844e52184c0271a8c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314592"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617999"
 ---
-# Поддержка Microsoft Edge для Application Guard в Microsoft Defender
+# <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Поддержка Microsoft Edge для Application Guard в Microsoft Defender
 
 В этой статье описывается, как Microsoft Edge поддерживает Application Guard в Microsoft Defender (Application Guard).
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
-##  <a name="overview"></a>Обзор
+## <a name="overview"></a>Обзор
 
 Архитекторам систем безопасности на предприятии приходится иметь дело с противоречиями, которые существуют между производительностью и безопасностью. Достаточно просто заблокировать браузер, чтобы можно было загружать информацию лишь с нескольких надежных сайтов. Этот подход повысит общий уровень безопасности, но может оказаться менее продуктивным. Если снять некоторые ограничения, чтобы увеличить производительность, ухудшится профиль риска. Установить баланс совсем не просто!
 
 Еще сложнее поспевать за новыми угрозами на фоне постоянных изменений. Браузеры остаются основной мишенью для атак на клиентских устройствах, поскольку они в основном используются для доступа к ненадежному содержимому из ненадежных источников, его загрузки и открытия. Злоумышленники постоянно разрабатывают новые мошеннические схемы и виды атак, целью которых является браузер. Предотвращение случаев нарушения безопасности или стратегии обнаружения и реагирования не могут гарантировать абсолютную защиту.
 
-Ключевой стратегией безопасности, использование которой следует рассмотреть, является [метод предположения нарушения безопасности (Assume Breach)](https://docs.microsoft.com/office365/Enterprise/office-365-monitoring-and-testing#assume-breach-methodology), в рамках которого предполагается, что атака будет успешной по меньшей мере один раз, несмотря на усилия предотвратить ее. Такой образ мышления побуждает создавать защиту, чтобы предотвратить последствия нарушения, благодаря чему корпоративная сеть и другие ресурсы остаются защищенными.  Эта стратегия поддерживается при развертывании Application Guard для Microsoft Edge.
+Ключевой стратегией безопасности, использование которой следует рассмотреть, является [метод предположения нарушения безопасности (Assume Breach)](/office365/Enterprise/office-365-monitoring-and-testing#assume-breach-methodology), в рамках которого предполагается, что атака будет успешной по меньшей мере один раз, несмотря на усилия предотвратить ее. Такой образ мышления побуждает создавать защиту, чтобы предотвратить последствия нарушения, благодаря чему корпоративная сеть и другие ресурсы остаются защищенными.  Эта стратегия поддерживается при развертывании Application Guard для Microsoft Edge.
 
-##  <a name="about-application-guard"></a>О расширении Application Guard
+## <a name="about-application-guard"></a>О расширении Application Guard
 
 В расширении Application Guard, разработанном для Windows 10 и Microsoft Edge, используется изоляция на аппаратном уровне. Такой подход позволяет запустить навигацию по ненадежному сайту внутри контейнера. Изоляция на аппаратном уровне помогает предприятиям защитить корпоративную сеть и данные в случае, если пользователи посещают скомпрометированные или вредоносные сайты.
 
@@ -41,21 +41,39 @@ ms.locfileid: "11314592"
 Дополнительные сведения:
 
 - посмотрите наше видео об [изоляции браузера Microsoft Edge с использованием Application Guard](microsoft-edge-video-security-application-guard.md)
-- см. раздел [Что представляет собой Application Guard и как он работает?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)
+- см. раздел [Что представляет собой Application Guard и как он работает?](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)
 
 На следующем снимке экрана приводится пример сообщения Application Guard, показывающего, что пользователь просматривает безопасные сайты.
 
 ![Сообщение Application Guard о безопасном просмотре](media/microsoft-edge-security-windows-defender-application-guard/wd-application-guard-1.png)
 
-##  <a name="what's-new"></a>Что нового
+## <a name="whats-new"></a>Что нового
 
 Поддержка Application Guard в новом браузере Microsoft Edge характеризуется равенством функций с устаревшей версией Microsoft Edge и включает ряд улучшений.
 
-###  <a name="extension-support-inside-the-container"></a>Поддержка расширения внутри контейнера
+### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>Синхронизация избранного с узла с контейнером
+
+Некоторые из наших клиентов просили о синхронизации избранного между браузером узла и контейнером в Application Guard. Начиная с Microsoft Edge версии 91, пользователи могут настроить Application Guard для синхронизации избранного с узла с контейнером. Это гарантирует появление нового избранного в контейнере.
+
+Управление поддержкой осуществляется с помощью политики. Чтобы включить или отключить синхронизацию избранного, обновите политику Microsoft Edge [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled).
+
+> [!Note]
+> По соображениям безопасности синхронизация избранного возможна только с узла в контейнер, а не наоборот. Чтобы обеспечить единый список избранного на узле и в контейнере, мы отключили управление избранным внутри контейнера.
+
+### <a name="identify-network-traffic-originating-from-the-container"></a>Определение трафика из контейнера
+
+Несколько клиентов используют WDAG в определенной конфигурации, для которой нужно определить трафик из контейнера. Некоторые из возможных сценариев:
+
+- Ограничение доступа только к нескольким недоверенным сайтам
+- Разрешение доступа к Интернету только из контейнера
+
+Начиная с Microsoft Edge версии 91, для назначения тегов трафику из контейнеров Application Guard существует встроенная поддержка, что позволяет предприятиям использовать прокси-сервер для фильтрации трафика и применять определенные политики. Вы можете использовать заголовок, чтобы определить, какой трафик проходит через контейнер или узел, с помощью [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled).
+
+### <a name="extension-support-inside-the-container"></a>Поддержка расширения внутри контейнера
 
 Поддержка расширения внутри контейнера является одним из самых популярных запросов клиентов. Сценарии включают от запуска функций блокирования рекламы внутри контейнера, чтобы повысить производительность браузера, до возможности запускать настраиваемые расширения собственной разработки внутри контейнера.
 
-Расширение, установленное внутри контейнера, поддерживается, начиная с Microsoft Edge версии 81. Управление этой поддержкой осуществляется с помощью политики. `updateURL`, которые используются в политике [ExtensionInstallForcelist](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#extensioninstallforcelist), следует добавить как нейтральные ресурсы в политики сетевой изоляции, используемые расширением Application Guard.
+Расширение, установленное внутри контейнера, поддерживается, начиная с Microsoft Edge версии 81. Управление этой поддержкой осуществляется с помощью политики. `updateURL`, которые используются в политике [ExtensionInstallForcelist](./microsoft-edge-policies.md#extensioninstallforcelist), следует добавить как нейтральные ресурсы в политики сетевой изоляции, используемые расширением Application Guard.
 
 Ниже перечислены некоторые примеры поддержки контейнеров.
 
@@ -64,17 +82,17 @@ ms.locfileid: "11314592"
 - Блокировка расширений на узле
 
 > [!NOTE]
-> Кроме того, можно вручную установить отдельные расширения внутри контейнера из хранилища расширений. Расширения, установленные вручную, сохраняются в контейнере только в том случае, если включена политика [Разрешить сохраняемость](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#application-specific-settings).
+> Кроме того, можно вручную установить отдельные расширения внутри контейнера из хранилища расширений. Расширения, установленные вручную, сохраняются в контейнере только в том случае, если включена политика [Разрешить сохраняемость](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#application-specific-settings).
 
-###  <a name="identifying-application-guard-traffic-via-dual-proxy"></a>Идентификация трафика Application Guard с использованием двойного прокси-сервера
+### <a name="identifying-application-guard-traffic-via-dual-proxy"></a>Идентификация трафика Application Guard с использованием двойного прокси-сервера
 
-Некоторые корпоративные пользователи разворачивают Application Guard для определенного варианта использования, при котором им необходимо идентифицировать веб-трафик, исходящий из контейнера Application Guard в Microsoft Defender на уровне прокси-сервера. С версии 84 стабильного канала Microsoft Edge поддерживает двойной прокси-сервер для соблюдения этого требования. Вы можете настроить эту функцию с помощью политики [ApplicationGuardContainerProxy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardcontainerproxy).
+Некоторые корпоративные пользователи разворачивают Application Guard для определенного варианта использования, при котором им необходимо идентифицировать веб-трафик, исходящий из контейнера Application Guard в Microsoft Defender на уровне прокси-сервера. С версии 84 стабильного канала Microsoft Edge поддерживает двойной прокси-сервер для соблюдения этого требования. Вы можете настроить эту функцию с помощью политики [ApplicationGuardContainerProxy](./microsoft-edge-policies.md#applicationguardcontainerproxy).
 
 На следующем рисунке показана архитектура двойного прокси-сервера для Microsoft Edge.
 
 ![Архитектура с двойным прокси-сервером для Application Guard](media/microsoft-edge-security-windows-defender-application-guard/wd-application-guard-dual-proxy.png)
 
-###  <a name="diagnostic-page-for-troubleshooting"></a>Страница диагностики для устранения неполадок
+### <a name="diagnostic-page-for-troubleshooting"></a>Страница диагностики для устранения неполадок
 
 Другой проблемный вопрос для пользователей – устранение ошибок конфигурации Application Guard на устройстве, если сообщается о проблеме. В Microsoft Edge есть страница диагностики (`edge://application-guard-internals`), с помощью которой пользователи могут устранять неполадки. В эту диагностику входит проверка достоверности URL-адреса на основе конфигурации, используемой на устройстве пользователя.
 
@@ -82,11 +100,11 @@ ms.locfileid: "11314592"
 
 ![Страница диагностики Application Guard](media/microsoft-edge-security-windows-defender-application-guard/wd-application-guard-2.png)
 
-###  <a name="microsoft-edge-updates-in-the-container"></a>Обновления Microsoft Edge в контейнере
+### <a name="microsoft-edge-updates-in-the-container"></a>Обновления Microsoft Edge в контейнере
 
 Обновления устаревшей версии Microsoft Edge в контейнере входят в цикл обновления ОС Windows. Так как новая версия Microsoft Edge обновляется независимо от ОС Windows, она не зависит от обновлений контейнера. Канал и версия Microsoft Edge реплицируются внутри контейнера.
 
-##  <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные условия
 
 К устройствам, использующим Application Guard в Microsoft Edge, применяются следующие требования:
 
@@ -96,33 +114,33 @@ ms.locfileid: "11314592"
   > [!NOTE]
   > Расширение Application Guard поддерживается только для номеров SKU клиентов Windows 10 Pro и Windows 10 Корпоративная.
 
-- Одно из решений для управления, описанных в статье [Требования к программному обеспечению](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard#software-requirements)
+- Одно из решений для управления, описанных в статье [Требования к программному обеспечению](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard#software-requirements)
 
-##  <a name="how-to-install-application-guard"></a>Установка Application Guard
+## <a name="how-to-install-application-guard"></a>Установка Application Guard
 
 В следующих статьях приведены сведения, необходимые для установки, настройки и тестирования Application Guard в Microsoft Edge.
 
-- [Требования к системе](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
-- [Установка Application Guard в Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
-- [Настройка параметров групповой политики Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
-- [Тестирование Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
+- [Требования к системе](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
+- [Установка Application Guard в Microsoft Defender](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
+- [Настройка параметров групповой политики Microsoft Defender](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
+- [Тестирование Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
-##  <a name="faq"></a>Вопросы и ответы
+## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
-###  <a name="does-application-guard-work-in-ie-mode"></a>Работает ли Application Guard в режиме IE?
+### <a name="does-application-guard-work-in-ie-mode"></a>Работает ли Application Guard в режиме IE?
 
-Функциональность Application Guard поддерживается в режиме IE, но мы не ожидаем особой пользы от данной функции в этом режиме. Режим IE рекомендуется развертывать для списка надежных внутренних сайтов, а Application Guard — только для ненадежных сайтов. Убедитесь в том, что все сайты и IP-адреса в режиме IE также добавлены в политику сетевой изоляции, чтобы они рассматривались как надежные ресурсы в Application Guard.
+Функциональность Application Guard поддерживается в режиме IE, но мы не ожидаем особой пользы от данного компонента в этом режиме. Режим IE рекомендуется развертывать для списка доверенных внутренних сайтов, а Application Guard — только для недоверенных сайтов. Убедитесь в том, что все сайты и IP-адреса в режиме IE также добавлены в политику сетевой изоляции, чтобы они рассматривались как надежные ресурсы в Application Guard.
 
-###  <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Нужно ли мне устанавливать расширение Application Guard для Chrome?
+### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Нужно ли мне устанавливать расширение Application Guard для Chrome?
 
 Нет, для функции Application Guard имеется встроенная поддержка в Microsoft Edge. На самом деле, расширение Application Guard для Chrome не поддерживается в Microsoft Edge.
 
-###  <a name="are-there-any-other-platform-related-faqs"></a>Есть ли другие вопросы и ответы, связанные с платформой?
+### <a name="are-there-any-other-platform-related-faqs"></a>Есть ли другие вопросы и ответы, связанные с платформой?
 
-Да. [Вопросы и ответы об Application Guard в Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) 
+Да. [Вопросы и ответы об Application Guard в Microsoft Defender](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) 
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Advanced Threat Protection в Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Advanced Threat Protection в Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 - [Видео. Изоляция браузера Microsoft Edge с использованием Application Guard](https://www.youtube.com/watch?v=zQjaRqNXMqw&t=3s)
