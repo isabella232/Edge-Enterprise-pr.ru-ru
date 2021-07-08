@@ -160,7 +160,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### <a name="multi-app-kiosk"></a>Киоск с несколькими приложениями
 
-Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge Stable— **MSEdge**).
+Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge Stable — **MSEdge**).
 
 ### <a name="configure-using-windows-settings"></a>Настройка с помощью параметров Windows
 
@@ -199,7 +199,7 @@ Microsoft Edge можно запустить с [ограниченным дос
    - Цифровые или интерактивные вывески — Отображают конкретный сайт в полноэкранном режиме в Microsoft Edge.
    - Общедоступный браузер — запускает ограниченную версию Microsoft Edge с несколькими вкладками.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Способ использования киоска— цифровой указатель полноэкранного режима":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="Способ использования киоска — цифровой указатель полноэкранного режима":::
 
 8. Нажмите  **Далее**.
 9. Введите URL-адрес для загрузки при запуске киоска.

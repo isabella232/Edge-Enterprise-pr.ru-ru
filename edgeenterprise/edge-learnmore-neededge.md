@@ -39,7 +39,7 @@ ms.locfileid: "11617299"
 ## <a name="prerequisites"></a>Предварительные условия
 - Microsoft Edge Stable версии 87 или более поздней
 - Версии Windows
-    - Windows10 версии1709 или более поздней
+    - Windows 10 версии 1709 или более поздней
     - Windows 8.1
     - Windows 7
 
