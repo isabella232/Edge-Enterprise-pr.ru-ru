@@ -4,24 +4,24 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Устранение неполадок и вопросы с ответами для режима Internet Explorer в Microsoft Edge
-  ms.openlocfilehash: d21fdf47fb1774bc69ae3b2478ff3397c3106f04
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11618235"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641865"
 title: Устранение неполадок режима IE и вопросы с ответами
 summary: >
   >[!Note]
 
-  > Настольное приложение Internet Explorer 11 будет снято с службы поддержки 15 июня 2022 г. (список того, что имеется в области, см. в [faq).](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) Те же приложения и сайты IE11, которые вы используете сегодня, могут открываться в Microsoft Edge режиме Internet Explorer. [Дополнительные ниже.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+  > Поддержка классических приложений Internet Explorer 11 будет прекращена и больше не будет поддерживаться 15 июня 2022 г. (список области применения см. в [часто задаваемых вопросах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 
   Данная статья содержит советы по устранению неполадок и ответы на часто задаваемые вопросы для Microsoft Edge версии 77 или более поздней.
@@ -96,7 +96,7 @@ sections:
   - question: >
       Заменит ли режим IE браузер Internet Explorer 11?
     answer: >
-      Да, настольное приложение Internet Explorer 11 будет отправлено в отставку и не будет поддерживаться 15 июня 2022 г. (список того, что имеется в области, [lifecycle FAQ — Internet Explorer](https://support.microsoft.com/help/17454/). Те же приложения и сайты IE11, которые вы используете сегодня, могут открываться в Microsoft Edge режиме Internet Explorer. [Дополнительные ниже.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+      Да, настольное приложение Internet Explorer 11 будет отправлено в отставку и не будет поддерживаться 15 июня 2022 г. (список того, что имеется в области, [lifecycle FAQ — Internet Explorer](https://support.microsoft.com/help/17454/). Те же приложения и сайты IE11, которые вы используете сегодня, могут открываться в Microsoft Edge режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
   - question: >
       Можно ли использовать параметры "Открыть в проводнике" или "Просмотреть в проводнике" в SharePoint в режиме IE?
     answer: >
