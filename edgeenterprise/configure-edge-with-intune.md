@@ -3,19 +3,19 @@ title: Настройка параметров политики Microsoft Edge �
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/18/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка параметров политики Microsoft Edge для Windows с помощью Microsoft Intune.
-ms.openlocfilehash: 0189a3fc2f9dc115563e7cf6dca1df960680bf22
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: adcd80f68250a9694b9bbaa21fb7941ebcbaf15a
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447563"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641675"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Настройка параметров политики Microsoft Edge с помощью Microsoft Intune
 
@@ -38,7 +38,7 @@ ms.locfileid: "11447563"
 ### <a name="prerequisites"></a>Предварительные требования
 
 - Windows 10 со следующими минимальными системными требованиями:
-  - Windows10 версии 1909
+  - Windows 10 версии 1909
   - Windows 10, версия 1903 с установленным обновлением [KB4512941](https://support.microsoft.com/kb/4512941)
   - Windows 10, версия 1809 с установленным обновлением [KB4512534](https://support.microsoft.com/kb/4512534)
   - Windows 10, версия 1803 с установленным обновлением [KB4512509](https://support.microsoft.com/kb/4512509)

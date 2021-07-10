@@ -3,19 +3,19 @@ title: Автоматизация развертывания Microsoft Edge в �
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2019
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Инструкции по автоматизации развертывания Microsoft Edge в среде macOS с помощью Jamf.
-ms.openlocfilehash: e56ed4c2a9c0ebb4a4341830cd09ca040e80a657
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c8fc0af734d4784ac122602b685bc561aabf340
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617529"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642065"
 ---
 # <a name="deploy-to-macos-with-jamf"></a>Развертывание в macOS с помощью Jamf
 

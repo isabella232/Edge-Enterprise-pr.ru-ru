@@ -3,19 +3,19 @@ title: Планирование перехода в режим терминал�
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/26/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Планирование перехода в режим терминала
-ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 95c50b39eb6e844ae4309b260087931232276d45
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617747"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642915"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>Планирование перехода в режим терминала
 
@@ -66,8 +66,8 @@ ms.locfileid: "11617747"
 
 |Операционная система|Версия|Обновления|
 |--|--|--|
-|Windows 10 | 2004 или более поздней версии|[KB4601382 или более поздняя версия](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
-|Windows 10| 1909| [KB4601380 или более поздняя версия](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+|Windows 10 | 2004 или более поздней версии|[KB4601382 или более поздней версии](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 или более поздней версии](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
 
 2. Чтобы протестировать новейшие функции, можно скачать последний [канал Microsoft Edge Stable](https://www.microsoftedgeinsider.com/download) версии 89 или более поздней.
 

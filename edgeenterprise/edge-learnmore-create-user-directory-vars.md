@@ -3,19 +3,19 @@ title: Создание переменных каталога с данными 
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Инструкции по созданию переменных каталога с данными пользователя в Microsoft Edge
-ms.openlocfilehash: 5ec78f16c7e5cd43f01845f35b8473494cd0c4bf
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618233"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641455"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Создание переменных каталога с данными пользователя в Microsoft Edge
 
@@ -62,7 +62,7 @@ Microsoft Edge поддерживает следующие переменные 
 | **${global_app_data}** | Системная папка "Данные приложения". Пример: *C:\AppData* |
 | **${program_files}** | Папка Program Files для текущего процесса. Эта папка зависит от того, используется 32-битный или 64-битный процесс. Пример разрешения: *C:\Program Files (x86)* |
 | **${windows}** | Папка Windows. Пример: *C:\Windows* |
-| **${client_name)** | Имя клиентского компьютера, подключенного к сеансу удаленного рабочего стола или Citrix. Эта переменная пуста, если она используется из локального сеанса. Если он используется в пути, добавьте к нему префикс, который гарантированно не будет пустым. Пример: *C:\edge_profiles\session_${client_name}* разрешается в *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* и *C:\edge_profiles\session_&lt;SomePCname&gt;* для удаленных сеансов. |
+| **${client_name}** | Имя клиентского компьютера, подключенного к сеансу удаленного рабочего стола или Citrix. Эта переменная пуста, если она используется из локального сеанса. Если он используется в пути, добавьте к нему префикс, который гарантированно не будет пустым. Пример: *C:\edge_profiles\session_${client_name}* разрешается в *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* и *C:\edge_profiles\session_&lt;SomePCname&gt;* для удаленных сеансов. |
 | **${session_name}** | Имя активного сеанса. Используйте это имя для различения между несколькими одновременно подключенными удаленными сеансами, использующими один и тот же профиль пользователя. Пример: *WinSta0 for local desktop sessions* (WinSta0 для сеансов локального компьютера) |
 
 #### <a name="macos-only"></a>Только macOS

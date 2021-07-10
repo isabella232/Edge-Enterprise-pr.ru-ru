@@ -3,31 +3,31 @@ title: Изоляция браузера Microsoft Edge с использова�
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Изоляция браузера Microsoft Edge с использованием Application Guard
-ms.openlocfilehash: e3e4d21669055ddd36a08d307083d43be6f943b4
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: b7056a4d1081bab576094f9bc0b5b86d17395408
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314752"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643005"
 ---
-# Видео. Изоляция браузера Microsoft Edge с использованием Application Guard
+# <a name="video-microsoft-edge-browser-isolation-using-application-guard"></a>Видео. Изоляция браузера Microsoft Edge с использованием Application Guard
 
 В этом видео показано, как с помощью Application Guard поддерживать изоляцию браузера Microsoft Edge. Щелкните следующий снимок экрана, чтобы посмотреть видео от Арунеша Чандры, старшего руководителя программ в команде по безопасности Microsoft Edge.
 
 [![Изоляция браузера с помощью Application Guard]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-##  <a name="about-the-video"></a>О видео
+## <a name="about-the-video"></a>О видео
 
 Защитите свою организацию от атак из Интернета с помощью Microsoft Edge. Узнайте, как Microsoft Edge поддерживает Application Guard в Microsoft Defender, чтобы использовать изоляцию браузера от внешних угроз.
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Поддержка Microsoft Edge для Application Guard в Microsoft Defender](microsoft-edge-security-windows-defender-application-guard.md)

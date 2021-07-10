@@ -3,19 +3,19 @@ title: Обзор каналов Microsoft Edge
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 01/13/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Обзор каналов Microsoft Edge
-ms.openlocfilehash: b9a2190fdff860d9bacf975882469d936891973f
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 7d1fb72b458569cb4e4c6f44a6d89be7f65984df
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617809"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641995"
 ---
 # <a name="overview-of-the-microsoft-edge-channels"></a>Обзор каналов в Microsoft Edge
 
@@ -37,7 +37,7 @@ ms.locfileid: "11617809"
 
 Выбор канала обновлений для развертывания на устройствах пользователей зависит от нескольких факторов, таких как количество бизнес-приложений, которые нужны пользователям и требуют тестирования при каждом выпуске обновленной версии Microsoft Edge. Чтобы вам было проще определиться, ознакомьтесь со следующей информацией о четырех каналах обновлений, доступных для Microsoft Edge.
 
-### <a name="stable-channel"></a>Стабильный канал
+### <a name="stable-channel"></a>Канал Stable
 
 Стабильный канал предназначен для широкого развертывания в организации и подойдет большинству пользователей. Это самый стабильный канал, который является результатом стабилизации набора функций, доступного в предшествующем выпуске в канале Beta. Новые функции выпускаются приблизительно каждые 6 недель. Обновления системы безопасности и исправления выпускаются по мере необходимости. Выпуск стабильного канала обслуживается до появления следующего выпуска в этом канале.
 

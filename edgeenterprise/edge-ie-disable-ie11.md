@@ -3,24 +3,24 @@ title: Отключение Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Узнайте, как отключить Internet Explorer 11 и использовать режим Internet Explorer в Microsoft Edge.
-ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617489"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641515"
 ---
 # <a name="disable-internet-explorer-11"></a>Отключение Internet Explorer 11
 
 >[!Note]
-> Поддержка классического приложения Internet Explorer 11 будет прекращена 15 июня 2022 г. (список области применения см. в [вопросах и ответах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же сайты и приложения IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. Дополнительные сведения см. [здесь](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> Поддержка классического приложения Internet Explorer 11 будет прекращена 15 июня 2022 г. (список области применения см. в [вопросах и ответах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. Дополнительные сведения см. [здесь](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 В этой статье описано, как отключить Internet Explorer 11 в качестве автономного браузера в вашей среде.
 
@@ -72,8 +72,8 @@ ms.locfileid: "11617489"
 
 1. Убедитесь, что у вас есть необходимые обновления операционной системы. На этом шаге будут обновляться файлы ADMX непосредственно на компьютере (в частности inetres.adml и inetres.admx). Обратите внимание, что для обновления центрального хранилища нужно скопировать файлы ADML и ADMX на компьютере с необходимыми обновлениями. Дополнительные сведения см. в статье [Создание центрального хранилища и управление им](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)
 2. Откройте редактор групповых политик.
-3. Выберите ***Конфигурация компьютера/Административные шаблоны/Компоненты Windows/Internet Explorer***. 
-4. Дважды щелкните  **Отключить Internet Explorer 11 в качестве автономного браузера**.
+3. Перейдите к **_Конфигурация компьютера/Административные шаблоны/Windows компоненты/Internet Explorer_*_. 
+4. Дважды щелкните _*Отключить Internet Explorer 11 в качестве автономных браузеров**.
 5. Выберите  **Включено**.
 6. В разделе  **Параметры** выберите одно из следующих значений.
 

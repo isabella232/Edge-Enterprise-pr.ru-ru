@@ -3,28 +3,28 @@ title: Настройте Microsoft Edge на macOS с помощью Jamf
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 6/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройте параметры политики Microsoft Edge на устройствах Mac с помощью Jamf
-ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
-ms.translationtype: HT
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194717"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641635"
 ---
-# Настройте параметры политики Microsoft Edge в macOS с помощью Jamf
+# <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Настройте параметры политики Microsoft Edge в macOS с помощью Jamf
 
 В этой статье описывается, как настроить параметры политики в macOS с помощью файла манифеста политики Microsoft Edge в Jamf Pro 10.19.
 
 Вы также можете настроить параметры политики Microsoft Edge в macOS с помощью файла списка свойств (.plist). Для получения дополнительной информации см. [Настройка для MacOS с использованием .plist](configure-microsoft-edge-on-mac.md)
 
 
-##  <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные условия
 
 Требуется следующее программное обеспечение:
 
@@ -32,7 +32,7 @@ ms.locfileid: "11194717"
 - Файл шаблонов политики, версия 81.0.416.3
 - Jamf Pro, версия 10,19
 
-##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>О меню приложения и пользовательских настроек Jamf Pro
+## <a name="about-the-jamf-pro-application--custom-settings-menu"></a>О меню приложения и пользовательских настроек Jamf Pro
 
 До Jamf Pro 10.18 управление Office 365 включало в себя создание файла .plist вручную. Это был трудоемкий рабочий процесс, который требовал сильной технической подготовки. Jamf Pro 10.18 устранил эти барьеры, оптимизировав процесс настройки. Однако ИТ-администраторы могут использовать этот новый пользовательский интерфейс только для конкретных приложений и доменов предпочтений, указанных в Jamf.
 
@@ -40,7 +40,7 @@ ms.locfileid: "11194717"
 
 Для получения дополнительной информации см. [Профили конфигурации компьютера](https://jamf.it/computer-configuration-profiles) в Руководстве администратора Jamf Pro.
 
-##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Получить манифест политики для конкретной версии Microsoft Edge
+## <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>Получить манифест политики для конкретной версии Microsoft Edge
 
 Чтобы получить манифест политики:
 
@@ -56,7 +56,7 @@ ms.locfileid: "11194717"
 
 Этот манифест будет опубликован в каждом пакете политики, начиная со сборки 81.0.416.3. Если вы хотите протестировать политики в канале Dev, вы можете взять манифест, связанный с каждым выпуском Dev, и протестировать его в Jamf Pro.  
 
-##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Используйте манифест политики в Jamf Pro
+## <a name="use-the-policy-manifest-in-jamf-pro"></a>Используйте манифест политики в Jamf Pro
 
 Используйте следующие шаги, чтобы загрузить манифест политики в Jamf Pro, а затем создать профиль политики для macOS.
 
@@ -105,7 +105,7 @@ ms.locfileid: "11194717"
 
 После создания нового профиля конфигурации вы все равно должны настроить **Область применения** для этого профиля.
 
-###  <a name="to-configure-the-scope"></a>Чтобы настроить Область применения
+### <a name="to-configure-the-scope"></a>Чтобы настроить Область применения
 
 1. Для **Целей** укажите следующие минимальные параметры:
 
@@ -115,7 +115,7 @@ ms.locfileid: "11194717"
 2. Для **Ограничений** оставьте настройку по умолчанию: Нет. Нажмите кнопку **Отмена**.
 3. Для **Исключений** оставьте настройку по умолчанию: Нет. Нажмите кнопку **Отмена**.
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Настройка для macOS с Intune](configure-microsoft-edge-on-mac.md)

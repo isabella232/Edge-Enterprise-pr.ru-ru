@@ -3,31 +3,31 @@ title: Microsoft Edge и защита от потери данных
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge и защита от потери данных
-ms.openlocfilehash: c054c911774acb027b83779588d197766c716a33
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 53804ac83d3ce9d26eb9410fd0ba06f3c620871f
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314722"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642725"
 ---
-# Видео. Microsoft Edge и защита от потери данных
+# <a name="video-microsoft-edge-and-data-loss-prevention-dlp"></a>Видео. Microsoft Edge и защита от потери данных
 
 В этом видео показано, как Microsoft Edge поддерживает защиту от потери данных. Щелкните следующий снимок экрана, чтобы посмотреть видео от Арунеша Чандры, старшего руководителя программ в команде по безопасности Microsoft Edge.
 
 [![ Microsoft Edge и предотвращение потери данных](media/microsoft-edge-security-dlp/0.png)](http://www.youtube.com/watch?v=dLD04U9eTqg " Microsoft Edge and data loss prevention")
 
-##  <a name="about-the-video"></a>О видео
+## <a name="about-the-video"></a>О видео
 
 Защита от потери данных никогда не была так важна, как сейчас в условиях удаленной работы. Узнайте о собственных возможностях защиты от потери данных в Microsoft Edge и о том, как защита от потери данных сохраняет ваши данные под управлением организации и обеспечивает их соответствие требованиям.
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Защита от потери данных в Microsoft Edge](microsoft-edge-security-dlp.md)

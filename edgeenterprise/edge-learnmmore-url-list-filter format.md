@@ -3,19 +3,19 @@ title: Формат фильтрации для политик URL-адресо�
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сведения о формате фильтрации, используемом для политик URLBlocklist и URLAllowlist в Microsoft Edge.
-ms.openlocfilehash: 94378a9193269c73a7439dd019d6cb2d6ac547df
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: e178dad518ff4bee07bf89d9faca3231ee6cf246
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617269"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642025"
 ---
 # <a name="filter-format-for-url-list-based-policies"></a>Формат фильтрации для политик на основе списка URL-адресов
 

@@ -3,31 +3,31 @@ title: Откат версии Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Откат версии Microsoft Edge
-ms.openlocfilehash: 1c12251802b2ca1d5012bd7c445c7a34f7e8539c
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 997bf68795ab7cd30935b36ecdf0a7d1854ad194
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314712"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642965"
 ---
-# Видео: откат версии Microsoft Edge
+# <a name="video-microsoft-edge-version-rollback"></a>Видео: откат версии Microsoft Edge
 
 В этом видео показано, как Microsoft Edge поддерживает откат версий. Щелкните следующий снимок экрана, чтобы просмотреть видео от диспетчера программ, Энди Зейглера (Andy Zeigler).
 
 [![Откат версии Microsoft Edge](media/microsoft-edge-video-version-rollback/0.png)](http://www.youtube.com/watch?v=pXhXHvKUa_c "Microsoft Edge version rollback")
 
-##  <a name="about-the-video"></a>О видео
+## <a name="about-the-video"></a>О видео
 
 Откат версии позволяет заменить версию браузера Microsoft Edge более ранней. Узнайте, как откат в Microsoft Edge может предоставить вашей организации сеть безопасности, чтобы снизить потенциальное влияние при устранении любых проблем в Microsoft Edge.
 
-##  <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Как откатить Microsoft Edge к предыдущей версии](edge-learnmore-rollback.md)
