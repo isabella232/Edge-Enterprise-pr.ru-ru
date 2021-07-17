@@ -13,7 +13,7 @@ ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
 ms.openlocfilehash: eba448024e86cd0c0ceb733b6363317d7c6ca5fb
 ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/09/2021
 ms.locfileid: "11642835"
@@ -260,7 +260,7 @@ ms.locfileid: "11642835"
 |[SmartScreenEnabled](#smartscreenenabled)|Настроить фильтр SmartScreen в Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Принудительно проверяет фильтр SmartScreen в Microsoft Defender на загрузку из надежных источников|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Настройте фильтр SmartScreen в Microsoft Defender для блокировки потенциально нежелательных приложений|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Автозагрузка&comma;, домашняя страница и новая вкладка*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Автозагрузка&comma;, домашняя страница и новая вкладка*](#startup-home-page-and-new-tab-page-policies)
 
 |Имя политики|Заголовок|
 |-|-|
@@ -4234,7 +4234,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 Если этот параметр отключен или не задан, внешние расширения разрешено устанавливать.
 
-Внешние расширения и их установка описаны [здесь.](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)
+Внешние расширения и их установка описаны [здесь](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options).
 
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
@@ -4518,7 +4518,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 Каждый элемент списка политики является строкой, содержащей идентификатор расширения и (необязательно) URL-адрес "обновления", отделенный точкой с запятой (;). Идентификатор расширения — это 32-буквенная строка, доступная, к примеру, на странице edge://extensions в режиме разработчика. URL-адрес "обновления" (если он задан) должен указывать на XML-документ манифеста обновления ( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) ). По умолчанию используется URL-адрес обновления веб-сайта надстроек Microsoft Edge. URL-адрес "обновления", заданный в этой политике, используется только для начальной установки; последующие обновления расширения используют URL-адрес обновления из манифеста расширения.
 
-Примечание. Эта политика не применяется к режиму InPrivate. Прочитайте о расширении хостинга [здесь](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+Примечание. Эта политика не применяется к режиму InPrivate. Сведения о размещении расширений см. [здесь](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -8111,7 +8111,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [В начало](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Политики автозагрузки&comma;, домашней страницы и новых вкладок
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Политики автозагрузки&comma;, домашней страницы и новых вкладок
 
   [В начало](#microsoft-edge---policies)
 
@@ -8345,7 +8345,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 Если вы отключите или не настроите эту политику, Microsoft Edge не будет отображать логотип компании или логотип Microsoft на странице новой вкладки.
 
-Справки по определению хаша SHA-256 можно найти [здесь.](/powershell/module/microsoft.powershell.utility/get-filehash)
+Справку по определению хэша SHA-256 см. [здесь](/powershell/module/microsoft.powershell.utility/get-filehash).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
