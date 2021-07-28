@@ -3,19 +3,19 @@ title: Настройка политик для режима IE
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка политик для режима IE
-ms.openlocfilehash: 57d0db97a96baf361f88ca8ec90812373440c3d8
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 98d05af8769e25cfe2782a1e273f3b487afcead0
+ms.sourcegitcommit: c6452a458f825dab5638db9ff31268c2dc27f8db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641475"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "11677126"
 ---
 # <a name="configure-ie-mode-policies"></a>Настройка политик для режима IE
 
@@ -50,9 +50,9 @@ ms.locfileid: "11641475"
 3. Щелкните **Конфигурация пользователя/конфигурация компьютера** > **Административные шаблоны** > **Microsoft Edge**.
 4. Дважды щелкните пункт **Настройка интеграции с Internet Explorer**.
 5. Выберите **Включено**.
-6. В разделе **Параметры** выберите из раскрывающегося списка значение 
+6. В разделе **Параметры** выберите из раскрывающегося списка значение
    -  **Режим Internet Explorer**, если вы хотите, чтобы сайты открывались в браузере Microsoft Edge в режиме IE
-   -  **Internet Explorer 11**, если вы хотите, чтобы сайты открывались в отдельном окне Internet Explorer 11
+   -  **Internet Explorer 11,** если вы хотите, чтобы сайты открывали в автономных окнах Internet Explorer 11 (этот параметр не будет поддерживаться после 15 июня 2022 г., когда настольное приложение Internet Explorer 11 будет отменено и не будет поддерживаться.  После 15 июня 2022 г., когда IE11 больше не будет доступен, этот параметр будет вести себя так же, как и в режиме **Internet Explorer.)**  
    -  **Нет**, если вы хотите запретить пользователям настройку режима Internet Explorer с помощью edge://flags или параметров командной строки.
 
    > [!NOTE]

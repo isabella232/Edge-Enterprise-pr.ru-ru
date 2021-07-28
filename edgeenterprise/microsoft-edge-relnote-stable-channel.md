@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
-ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
+ms.openlocfilehash: 02d4f2fc96215902000d30f37b589ea126496e47
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643774"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676066"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -29,7 +29,66 @@ ms.locfileid: "11643774"
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения, вносимые в Microsoft Edge, которые влияют на совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+> Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-92090255-july-22"></a>Версия 92.0.902.55: 22 июля
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#july-22-2021).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+**Пользователи могут легко перейти в режим Internet Explorer в Microsoft Edge**. Начиная с Microsoft Edge версии 92, пользователи могут перезагрузить сайт в режиме Internet Explorer в Microsoft Edge, а не в отдельном приложении IE 11 в ожидании настройки сайта в списке сайтов в режиме предприятия. Пользователям будет предложено добавить сайт в список локальных сайтов, чтобы переход на ту же страницу в Microsoft Edge автоматически происходил в режиме IE в течение следующих 30 дней. Вы можете использовать политику [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed), чтобы настроить это взаимодействие и разрешить доступ к точкам входа в режиме IE, а также настроить возможность добавления сайтов в список локальных сайтов. Вы можете использовать политику [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationday) для настройки количества дней, в течение которых сайты остаются в списке локальных сайтов. Обратите внимание, что комплексной работы для Windows 10 версии 1909 требуется KB5003698 или более поздняя версия, для Windows 10 версии 2004, Windows 10 версии 20H2 или Windows 10 версии 21H1 требуется KB5003690 или более поздняя версия.
+
+**MHTML-файлы по умолчанию открываются в режиме Internet Explorer**. Начиная с Microsoft Edge версии 92 Stable, MHTML-файлы автоматически открываются в режиме Internet Explorer в Microsoft Edge, а не в приложении Internet Explorer (IE11). Это чаще всего наблюдается при попытке просмотра электронной почты Outlook в браузере. Это изменение будет происходить только в том случае, если IE11 является обработчиком по умолчанию для этого типа файлов. Вы можете изменить этот параметр перед установкой обновления Stable версии 92 с помощью [этого руководства](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+
+**Предупреждение "Отключить расширения режима разработчика" можно закрыть окончательно**. Начиная с Microsoft Edge версии 92, вы можете отключить предупреждение "Отключить расширения режима разработчика", нажав параметр "Не показывать это снова".
+
+**Управление расширениями непосредственно с панели инструментов**. Совершенно новое меню расширений на панели инструментов позволит легко скрыть расширения или закрепить их. Быстрые ссылки на управление расширениями и поиск новых расширений упростят поиск новых расширений и управление существующими.
+
+**По умолчанию для автоматического воспроизведения будет задано значение "Ограничено"**.  Чтобы помочь вам сосредоточиться на главном в Интернете, мы изменили значение по умолчанию для автоматического воспроизведения мультимедиа с "Разрешить" на "Ограничено", начиная с Microsoft Edge версии 92.
+
+**Платежные средства теперь синхронизируются между устройствами**. Начиная с Microsoft Edge версии 92, вы можете синхронизировать платежную информацию между устройствами, на которых вы выполнили вход. Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
+В настоящее время эта возможность доступна только в США и только для пользователей MSA (не AAD)
+
+**Улучшение передачи шрифтов**. Улучшена четкость и снижена размытость при передаче текста. Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
+
+**Функции кнопки панели инструментов, например "Избранное" и "Коллекции", запомнят выбор пользователя и закрепят соответствующие файлы в боковой части окна**. Теперь эта возможность включается по умолчанию, если пользователь закрепит кнопку панели инструментов. Она всегда будет открываться в состоянии закрепления, пока пользователь не открепит ее.
+
+**Теперь пользователи могут использовать групповую политику для управления параметром "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля"**.  Параметр "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля" позволяет профилям, не принадлежащим к AAD, использовать единый вход для рабочих и учебных сайтов с помощью учетных данных компании или учебного заведения, имеющихся на компьютере. Этот параметр отображается для пользователей как переключатель в разделе "Параметры" -> "Профили" -> "Параметры профиля только для профилей, не принадлежащих к AAD".  Для настройки поведения можно использовать политику [AADWebSiteSOUsingThisProfileEnabled.](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)  
+
+**Работоспособность пароля** Важно использовать надежные и уникальные пароли для различных учетных записей, чтобы защитить себя в Интернете. Однако это проще сказать, чем сделать. У большинства пользователей выработались плохие привычки в отношении паролей, например использовать слабые пароли, которые легко угадать, или повторно использовать один надежный пароль для всех учетных записей.
+
+Эта последняя версия Microsoft Edge позволяет несколько упростить задачу использования надежных и уникальных паролей. Теперь Microsoft Edge будет сообщать вам, достаточно ли надежны сохраненные пароли, а также указывать, использовались ли они на нескольких сайтах, что поможет вам защитить себя в Интернете. Сведения о работоспособности пароля можно найти в списке сохраненных паролей на странице edge://settings/passwords.
+  
+**Дополнительная конфиденциальность сохраненных паролей** Если вы используете устройство вместе с другими пользователями или по какой-либо причине оставили компьютер незаблокированным, вы можете выбрать вторую проверку с использованием пароля устройства, чтобы другие пользователи не получили доступ к вашим паролям веб-сайтов. Просто!
+
+**Расширение Outlook**.  Эффективно управляйте папкой "Входящие", календарем, задачами и т. д. в Microsoft Outlook, не открывая новое окно браузера.  Новое расширение Outlook можно получить здесь: [Microsoft Outlook – Надстройки Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+
+### <a name="new-policies"></a>Новые политики
+
+- [AADWebSiteSSOUsingThisProfileEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) Включение единого входа для рабочих и учебных сайтов с помощью этого профиля
+- [AutomaticHttpsDefault](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Настройка автоматического использования HTTPS
+- [HeadlessModeEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Управление использованием режима без монитора
+- [InsecurePrivateNetworkRequestsAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Указывает, следует ли разрешать небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети.
+- [InsecurePrivateNetworkRequestsAllowedForUrls](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Разрешает перечисленным сайтам делать запросы к более закрытым конечным точкам сети из небезопасных контекстов
+- [InternetExplorerIntegrationLocalSiteListExpirationDays](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Указать количество дней, в течение которых сайт остается в локальном списке сайтов режима IE
+- [InternetExplorerIntegrationReloadInIEModeAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Разрешить перезагрузку ненастроенных сайтов в режиме Internet Explorer
+- [SharedArrayBufferUnrestrictedAccessAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Указывает, разрешено ли использовать SharedArrayBuffers в контексте без изоляции от других источников
+
+### <a name="deprecated-policy"></a>Нерекомендуемая политика
+
+- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Разрешить тестирование режима Internet Explorer
+
+### <a name="obsoleted-policy"></a>Устаревшая политика
+
+- [EnableSha1ForLocalAnchors](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Разрешить сертификаты, подписанные с помощью SHA-1 при выдаче локальными якорями доверия
+
+## <a name="version-91086471-july-19"></a>Версия 91.0.864.71: 19 июля
+
+> [!Important]
+>Это обновление содержит исправление для уязвимости [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563), которая, по сообщениям группы разработчиков Chromium, имеет действующий эксплойт. Дополнительные сведения см. в [руководстве по обновлениям безопасности](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002).
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#july-19-2021).
 
 ## <a name="version-91086467-july-8"></a>Версия 91.0.864.67: 8 июля
 

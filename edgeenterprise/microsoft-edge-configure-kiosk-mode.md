@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сведения о возможностях режима терминала и настройке параметров режима терминала Microsoft Edge.
-ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642195"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676126"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Настройка режима терминала в Microsoft Edge
 
@@ -99,7 +99,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: изменить время в минутах от последнего действия пользователя до того, как режим терминала Microsoft Edge сбросит сеанс пользователя.. Замените слово "значение" в следующем примере на количество минут.
+- **--kiosk-idle-timeout-minutes=**: Изменение времени (в минутах) от последнего действия пользователя перед Microsoft Edge режим киоска сбрасывает сеанс пользователя, закрыв браузер. Примечание. Этот флаг не будет Microsoft Edge после его закрытия. Для автоматического перезапуска Edge после простоя требуется отдельная технология, например назначенная access или Shell Launch. Замените слово "значение" в следующем примере на количество минут.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +160,9 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### <a name="multi-app-kiosk"></a>Киоск с несколькими приложениями
 
-Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge Stable — **MSEdge**).
+Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge стабильного канала **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+
+При использовании Microsoft Edge с назначенным доступом для нескольких приложений можно настроить терминал Microsoft Edge для использования [политик браузера Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies), чтобы задать условия просмотра в зависимости от ваших уникальных требований.
 
 ### <a name="configure-using-windows-settings"></a>Настройка с помощью параметров Windows
 

@@ -3,19 +3,19 @@ title: Внутреннее тестирование расширений Micros
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Узнайте, как упаковать расширения Microsoft Edge и выполнить их внутреннее тестирование на предприятии.
-ms.openlocfilehash: 403b6879b15c146f40fa2564da76eae59b2abe88
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618245"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676116"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>Внутреннее тестирование расширений Microsoft Edge
 
@@ -82,7 +82,7 @@ ms.locfileid: "11618245"
    > [!IMPORTANT]
    > Используйте тот же PEM-файл, который был создан и сохранен при первом создании CRX-файла. Если вы не используете тот же файл PEM, идентификатор приложения для расширения изменится и обновление будет рассматриваться как новое расширение.
 
-5. Перетащите CRX-файл в окно расширений и убедитесь, что он загружается.
+5. Перетащите CRX-файл в окно расширений и убедитесь, что он загружается. После этой операции расширение будет отключено. Чтобы включить его, добавьте CRX-ID расширения в политику ExtensionInstallAllowList. 
 6. Проверьте обновленное расширение.
 7. Замените старый CRX-файл и XML-файл новыми файлами для обновленного расширения.
 
@@ -90,7 +90,7 @@ ms.locfileid: "11618245"
 
 ## <a name="distribute-a-privately-hosted-extension"></a>Распространение частного расширения
 
-Вы можете поделиться ссылкой на расположение, в котором находится CRX-файл, и как только пользователи введут URL-адрес в браузере, расширение будет загружено и установлено. Пользователи могут включить расширение со страницы edge://extensions. Чтобы разрешить пользователям устанавливать собственные расширения, необходимо добавить идентификаторы CRX расширений в политику [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist).
+Вы можете поделиться ссылкой на расположение, в котором находится CRX-файл, и как только пользователи введут URL-адрес в браузере, расширение будет загружено и установлено. Пользователи могут включить расширение со страницы edge://extensions. Чтобы разрешить пользователям устанавливать самообучаемые расширения, необходимо добавить их в политику [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) и добавить URL-адрес расположения, где находится файл CRX, в политику [ExtensionInstallSources.](/deployedge/microsoft-edge-policies#extensioninstallsources)
 
 Кроме того, можно использовать групповую политику [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension) для принудительной установки расширения на устройства пользователей.
 

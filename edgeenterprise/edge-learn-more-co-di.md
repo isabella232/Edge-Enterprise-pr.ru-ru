@@ -1,25 +1,25 @@
 ---
 title: Функции ClickOnce и DirectInvoke в Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge.
-ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642055"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675976"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Общие сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge
 
-ClickOnce и DirectInvoke — это функции, доступные в IE и Microsoft Edge (версии 45 и более ранних версий), которые поддерживают использование обработчика файлов для скачивания файлов с веб-сайтов. Несмотря на то что у этих функций разное назначение, они позволяют указывать веб-сайтам, что запрошенный для скачивания файл, передается в обработчик файлов на устройстве пользователя. Запросы ClickOnce обрабатываются с помощью собственного обработчика файлов в Windows. Запросы DirectInvoke обрабатываются зарегистрированным обработчиком файлов, заданным веб-сайтом, на котором размещен файл.
+ClickOnce DirectInvoke — это функции, доступные в IE и Microsoft Edge, которые поддерживают использование обработера файлов для скачивания файлов с веб-сайта. Несмотря на то что у этих функций разное назначение, они позволяют указывать веб-сайтам, что запрошенный для скачивания файл, передается в обработчик файлов на устройстве пользователя. Запросы ClickOnce обрабатываются с помощью собственного обработчика файлов в Windows. Запросы DirectInvoke обрабатываются зарегистрированным обработчиком файлов, заданным веб-сайтом, на котором размещен файл.
 
 Дополнительные сведения об этих функциях см. в следующих статьях.
 

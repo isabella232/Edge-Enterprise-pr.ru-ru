@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Подробное руководство по настройке расширений Microsoft Edge с помощью политики ExtensionSettings.
-ms.openlocfilehash: 3acd798be6b2b56761991d8adaf014ae614a3fd4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641325"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676106"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Подробное руководство по политике ExtensionSettings
 
@@ -51,6 +51,7 @@ Microsoft Edge предлагает несколько способов упра
 | **update_url** | Применяется только к force_installed и  normal_installed. Указывает, откуда Microsoft Edge следует скачать расширение. Если расширение расположено на веб-сайте надстроек Microsoft Edge, используйте это расположение: `https://edge.microsoft.com/extensionwebstorebase/v1/crx`.<br>Microsoft Edge использует URL-адрес, указанный вами для начальной установки расширения. Для последующих обновлений расширения Microsoft Edge использует URL-адрес в манифесте расширения.   |
 | **runtime_allowed_hosts**| Позволяет расширениям взаимодействовать с указанными веб-сайтами, даже если они также определены в runtime_blocked_hosts. Можно указать до 100 элементов. Элементы сверх этого числа удаляются.<br>Формат шаблона узла аналогичен  [шаблонам соответствия](/microsoft-edge/extensions-chromium/enterprise/match-patterns) , но нельзя задать путь. Например:<br>- *://*.example.com<br>- *://example.* — поддерживаются подстановочные знаки eTLD     |
 | **runtime_blocked_hosts**| Запретить расширениям взаимодействовать с указанными веб-сайтами или изменять их. Изменения включают блокировку внедрения JavaScript, доступ к файлам cookie и изменения по веб-запросу.<br>Можно указать до 100 элементов. Элементы сверх этого числа удаляются.<br>Формат шаблона узла похож на шаблоны соответствия, но нельзя задать путь. Например:<br>- *://*.example.com<br>- *://example.* — поддерживаются подстановочные знаки eTLD   |
+| **override_update_url**| Доступно в edge 93<br>Если это задано, edge использует URL-адрес обновления, указанный в политике ExtensionSettings или в политике `true` ExtensionInstallForcelist, для последующих обновлений расширения.<br>Если это не установлено или установлено, edge использует URL-адрес, указанный в манифесте расширения для `false` обновлений.|
 
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Настройка строки JSON в редакторе групповой политики Windows

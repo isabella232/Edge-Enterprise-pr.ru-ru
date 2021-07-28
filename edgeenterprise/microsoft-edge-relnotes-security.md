@@ -3,23 +3,37 @@ title: Заметки о выпуске обновлений для систем
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: 27ac597b4570fd92b6938691fbf08b0bdd20ca43
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e88d0a3726eca4acca519e51ff2d552240ee7ef8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641345"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676096"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="july-22-2021"></a>22 июля 2021 г.
+
+Корпорация Майкрософт выпустила новый  **Microsoft Edge стабильного канала (версия 92.0.902.55)**, содержащий последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide)
+
+Этот выпуск содержит следующее обновление для Microsoft Edge:
+
+- [CVE-2021-36928](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36928)
+- [CVE-2021-36929](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36929)
+- [CVE-2021-36931](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36931)
+
+## <a name="july-19-2021"></a>19 июля 2021 г.
+
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 91.0.864.71)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит исправление для уязвимости [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563), которая, по сообщениям группы разработчиков Chromium, имеет действующий эксплойт. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
 
 ## <a name="june-24-2021"></a>24 июня 2021 г.
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Поддержка Microsoft Edge для Application Guard в Microsoft Defender
-ms.openlocfilehash: e6498ecdb0f2bf0ecb3ae12a602b73704c6c4599
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 6273204cc66fa90b1840f279106b3a26d895ca96
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642545"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675966"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Поддержка Microsoft Edge для Application Guard в Microsoft Defender
 
@@ -134,6 +134,32 @@ ms.locfileid: "11642545"
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Нужно ли мне устанавливать расширение Application Guard для Chrome?
 
 Нет, для функции Application Guard имеется встроенная поддержка в Microsoft Edge. На самом деле, расширение Application Guard для Chrome не поддерживается в Microsoft Edge.
+
+### <a name="can-employees-download-documents-from-the-application-guard-edge-session-onto-host-devices"></a>Могут ли сотрудники скачивать документы из сеанса Edge Application Guard на устройства узла?
+
+В Windows 10 Корпоративная версии 1803 пользователи могут загружать документы из изолированного контейнера Application Guard на хост-ПК. Эта возможность управляется политикой.
+
+В Windows 10 Корпоративная версии 1709 или Windows 10 Professional версии 1803 невозможно загрузить файлы из изолированного контейнера Application Guard на хост-компьютер. Однако сотрудники могут сохранять эти файлы на устройство узла с помощью команд Сохранить в формате PDF или Печать в XPS.
+
+### <a name="can-employees-copy-and-paste-between-the-host-device-and-the-application-guard-edge-session"></a>Могут ли сотрудники выполнять операции копирования и вставки между устройством узла и сеансом Edge Application Guard?
+
+В зависимости от параметров организации сотрудники могут копировать и вклеить изображения (.bmp) и текст в изолированный контейнер и из него.
+
+### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>Почему сотрудники не видят своих любимых в сеансе Application Guard Edge?
+
+В зависимости от параметров организации может быть отключена синхронизация избранного. Управление политикой см. в Microsoft Edge и Application Guard в Microsoft Defender | Документы Майкрософт.
+
+### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Почему сотрудники не могут видеть расширения в сеансе Application Guard Edge?
+
+Убедитесь, что политика расширений включается в конфигурацию Application Guard.
+
+### <a name="my-extension-doesnt-seem-to-work-in-edge-application-guard"></a>Мое расширение, кажется, не работает в Edge Application Guard?
+
+Если политика расширения включена для MDAG в конфигурации, проверьте, требуется ли для расширения компоненты обработки сообщений, эти расширения не поддерживаются в контейнере Application Guard.
+
+### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>Я пытаюсь просмотреть видео воспроизведения с HDR, почему отсутствует вариант HDR?
+
+Чтобы воспроизведение видео HDR работало в контейнере, необходимо включить ускорение оборудования vGPU в Application Guard.
 
 ### <a name="are-there-any-other-platform-related-faqs"></a>Есть ли другие вопросы и ответы, связанные с платформой?
 
