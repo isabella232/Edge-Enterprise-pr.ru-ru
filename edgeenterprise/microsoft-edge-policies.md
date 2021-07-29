@@ -213,7 +213,7 @@ ms.locfileid: "11642835"
 
 |Имя политики|Заголовок|
 |-|-|
-|[StartupBoostEnabled](#startupboostenabled)|Включить усиление начальной загрузки|
+|[StartupBoostEnabled](#startupboostenabled)|Включить ускорение запуска|
 ### [*<a name="printing"></a>Вывод на печать*](#printing-policies)
 
 |Имя политики|Заголовок|
@@ -260,7 +260,7 @@ ms.locfileid: "11642835"
 |[SmartScreenEnabled](#smartscreenenabled)|Настроить фильтр SmartScreen в Microsoft Defender|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|Принудительно проверяет фильтр SmartScreen в Microsoft Defender на загрузку из надежных источников|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|Настройте фильтр SmartScreen в Microsoft Defender для блокировки потенциально нежелательных приложений|
-### [*<a name="startup-home-page-and-new-tab-page"></a>Автозагрузка&comma;, домашняя страница и новая вкладка*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>Автозагрузка&comma;, домашняя страница и новая вкладка*](#startup-home-page-and-new-tab-page-policies)
 
 |Имя политики|Заголовок|
 |-|-|
@@ -854,7 +854,7 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   #### <a name="description"></a>Описание
 
-  При настройке политики вы можете создать список шаблонов URL-адресов, которые определяют сайты, для которых Microsoft Edge может автоматически выбрать сертификат клиента. Значение — это массив стрингифиедных словарей JSON, каждый из которых имеет форму {"Pattern": "$URL _PATTERN", "Filter": $FILTER}, где $URL _PATTERN является шаблоном настройки содержимого. $FILTER ограничивает сертификаты клиентов, которые автоматически выбираются в браузере. Независимо от фильтра, выделяются только сертификаты, совпадающие с запросом сертификата сервера.
+  При настройке политики вы можете создать список шаблонов URL-адресов, которые определяют сайты, для которых Microsoft Edge может автоматически выбрать сертификат клиента. Значение — это массив строковых словарей JSON, каждый из которых имеет форму {"Pattern": "$URL _PATTERN", "Filter": $FILTER}, где $URL _PATTERN является шаблоном настройки содержимого. $FILTER ограничивает сертификаты клиентов, которые автоматически выбираются в браузере. Независимо от фильтра, выделяются только сертификаты, совпадающие с запросом сертификата сервера.
 
 Примеры использования раздела $FILTER:
 
@@ -6205,7 +6205,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
-  #### <a name="enable-startup-boost"></a>Включить усиление начальной загрузки
+  #### <a name="enable-startup-boost"></a>Включить ускорение запуска
 
   
   
@@ -6219,13 +6219,13 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 Если Microsoft Edge работает в фоновом режиме, браузер может не закрываться и не выполнять перезапуск в фоновом режиме после закрытия последнего окна. См. политику [BackgroundModeEnabled](#backgroundmodeenabled) для получения информации о том, что произойдет после настройки поведения Microsoft Edge в фоновом режиме.
 
-Если эта политика включена, включается усиление начальной загрузки.
+Если эта политика включена, включается ускорение запуска.
 
-Если эта политика отключена, усиление начальной загрузки выключается.
+Если эта политика отключена, ускорение запуска выключается.
 
-Если не настроить эту политику, усиление начальной загрузки может быть изначально выключено или включено.. Пользователь может настроить ее поведение на странице edge://settings/system.
+Если не настроить эту политику, ускорение запуска может быть изначально выключено или включено. Пользователь может настроить ее поведение на странице edge://settings/system.
 
-Дополнительные сведения об усилении начальной загрузки: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+Дополнительные сведения об ускорении запуска: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -6242,7 +6242,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя GP: StartupBoostEnabled
-  - Имя GP: Включение усиления начальной загрузки
+  - Имя GP: включение ускорения запуска
   - Путь GP (обязательно): Административные шаблоны/Microsoft Edge/Производительность
   - Путь GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/Производительность
   - Имя файла GP ADMX: MSEdge.admx
@@ -8111,7 +8111,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [В начало](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>Политики автозагрузки&comma;, домашней страницы и новых вкладок
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>Политики автозагрузки&comma;, домашней страницы и новых вкладок
 
   [В начало](#microsoft-edge---policies)
 
