@@ -400,7 +400,7 @@ updates disabled 0x00000000
 ```
 [В начало](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Извлечение конфигураций и экспериментов
 >Центр обновления Microsoft Edge 1.3.145.1 и более поздней
 
