@@ -1,21 +1,21 @@
 ---
 title: Диагностика и устранение проблем синхронизации Microsoft Edge
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 07/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Инструкции и средства, доступные администратору Microsoft Edge для устранения неполадок и решения распространенных проблем синхронизации для предприятий
-ms.openlocfilehash: 0aca8c98492aead0673b5738aa5dba85c3a34314
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
+ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642235"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "11708658"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Диагностика и устранение проблем синхронизации Microsoft Edge
 
@@ -52,10 +52,10 @@ ms.locfileid: "11642235"
 1. Убедитесь, что у корпоративного клиента есть поддерживаемая подписка M365. Текущий список доступных типов подписки [представлен здесь](/azure/information-protection/activate-office365). Если у клиента нет поддерживаемой подписки, он можно приобрести Azure Information Protection отдельно или обновиться до одной из поддерживаемых подписок.
 2. Если поддерживаемая подписка доступна, убедитесь, что у клиента есть служба Azure Information Protection (AIP). Инструкции по проверке состояния службы AIP и, если требуется, по ее активации см. [здесь](/azure/information-protection/activate-office365).
 3. Если на шаге 2 видно, что AIP активен, но синхронизация по-прежнему не работает, включите Enterprise State Roaming (ESR). Инструкции по включению ESR см. [здесь](/azure/active-directory/devices/enterprise-state-roaming-enable). Обратите внимание, что служба ESR не должна оставаться включенной. Если на этом шаге проблема исправлена, службу ESR можно отключить.
-4. Убедитесь, что служба Azure Information Protection не ограничена с помощью политики регистрации. Вы можете использовать приложение PowerShell [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps), чтобы узнать, включено ли ограничение. В следующих двух примерах показана неограниченная конфигурация и конфигурация, ограниченная определенной группой безопасности.
+4. Убедитесь, что служба Azure Information Protection не ограничена с помощью политики регистрации. Вы можете использовать [комлет Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell, чтобы узнать, включен ли обзор. Убедитесь, что монитор aIPService PowerShell установлен. Вы можете получить его здесь: [Установите модуль AIPService PowerShell для Azure Information Protection.](/azure/information-protection/install-powershell) В следующих двух примерах показана неограниченная конфигурация и конфигурация, ограниченная определенной группой безопасности.
 
    ```powershell
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
@@ -64,16 +64,16 @@ ms.locfileid: "11642235"
 
    ```powershell
 
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   Если ограничение включено, затронутый пользователь должен быть либо добавлен в группу безопасности для ограничения, либо ограничение должно быть удалено. В приведенном ниже примере регистрация ограничила AIP указанной группой безопасности и ограничение должно быть удалено с помощью приложения PowerShell [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps).
+   Если ограничение включено, затронутый пользователь должен быть либо добавлен в группу безопасности для ограничения, либо ограничение должно быть удалено. В приведенной ниже примере онбординг имеет область AIP для указанных групп безопасности, и скопить следует с помощью applet [PowerShell Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell.
 
-5. Убедитесь, что в клиенте включена служба IPCv3Service. Приложение PowerShell [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) показывает состояние службы.
+5. Убедитесь, что в клиенте включена служба IPCv3Service. В [комлете Get-AIPServiceConfiguration ](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps)  PowerShell показан статус службы.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="Проверьте, включена ли служба IPCv3Service.":::
 
