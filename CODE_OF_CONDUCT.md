@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 71d25157130742dc22171ceb7bbcda563b3f93ae
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 539b1bfc810aa62738af95866bfe584d568b0dca71aebed0bd81db0bdaebade3
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980798"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724822"
 ---
-# Microsoft Open исходный код поведения
+# <a name="microsoft-open-source-code-of-conduct"></a>Кодекс поведения с открытым исходным кодом Майкрософт
 
-Этот проект принял [Исходный код поведения Microsoft Open](https://opensource.microsoft.com/codeofconduct/).
+Этот проект принял Кодекс поведения [с открытым исходным кодом Майкрософт.](https://opensource.microsoft.com/codeofconduct/)
 
 Ресурсы
 
-- [Microsoft Open исходный код поведения](https://opensource.microsoft.com/codeofconduct/)
-- [Вопросы и ответы о соотношении поведения Майкрософт](https://opensource.microsoft.com/codeofconduct/faq/)
-- Обращение в [opencode@microsoft.com](mailto:opencode@microsoft.com) с вопросами или вопросами
+- [Кодекс поведения с открытым исходным кодом Майкрософт](https://opensource.microsoft.com/codeofconduct/)
+- [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
+- Свяжитесь [opencode@microsoft.com](mailto:opencode@microsoft.com) с вопросами или вопросами

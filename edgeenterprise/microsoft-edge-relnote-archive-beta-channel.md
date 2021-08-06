@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Архивные заметки о выпуске для канала Microsoft Edge Beta
-ms.openlocfilehash: 065c665892edc264e2ab94375bedf3af9dbc936c
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: HT
+ms.openlocfilehash: 60ef45f2b0db38233e06faa6aa3104ac1f9930c66b342cf9eb8d53f936c52256
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642425"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727622"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Архивные заметки о выпуске для канала Microsoft Edge Beta
 
@@ -107,7 +107,7 @@ ms.locfileid: "11642425"
 - **Производительность:**
 
   - Повышение производительности браузера с помощью спящих вкладок. Функция спящих вкладок повышает производительность браузера, переводя неактивные вкладки в спящий режим, чтобы освободить системные ресурсы, такие как память и процессор, и использовать их для активных вкладок или других приложений. Пользователи могут предотвратить переход сайтов в спящий режим и настроить время, по истечении которого неактивная вкладка перейдет в спящий режим. Чтобы пользователи могли оставаться в потоке, существуют также эвристические методы, которые предотвращают переход определенных сайтов, например сайтов интрасети, в спящий режим. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Мы планируем активировать функцию спящих вкладок в Microsoft Edge версии 89 по умолчанию. Управлять этой возможностью можно с помощью групповых политик.
-  - Увеличение скорости запуска Microsoft Edge с помощью ускорения запуска. Чтобы повысить скорость запуска Microsoft Edge, мы разработали возможность ускорения запуска. Запуск Microsoft Edge ускоряется за счет работы браузера в фоновом режиме. Примечание. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
+  - Увеличение скорости запуска Microsoft Edge с помощью функции ускорения запуска. Чтобы повысить скорость запуска Microsoft Edge, мы разработали функцию ускорения запуска. Ускорение запуска Microsoft Edge возможно благодаря работе браузера в фоновом режиме. Примечание. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
 
 - **Эффективная работа:**
 
@@ -144,7 +144,7 @@ ms.locfileid: "11642425"
 - [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled) — настраивает спящие вкладки.
 - [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout) — устанавливает время ожидания активности фоновой вкладки для функции спящих вкладок.
 - [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls) — блокирует спящие вкладки на определенных сайтах.
-- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) — включает ускорение запуска.
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) включает ускорение запуска.
 - [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride) — определяет, как Центр обновления Microsoft Edge обрабатывает доступные обновления из Microsoft Edge.
 - [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) — настраивает доступность вертикального макета для вкладок в боковой части окна браузера.
 - [WebRtcAllowLegacyTLSProtocols](./microsoft-edge-policies.md#webrtcallowlegacytlsprotocols) — разрешает переход на устаревшую версию TLS/DTLS в WebRTC.

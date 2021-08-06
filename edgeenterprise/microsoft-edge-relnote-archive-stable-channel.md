@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Архивные заметки о выпуске для канала Microsoft Edge Stable
-ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: HT
+ms.openlocfilehash: 662ebb40ce14714365b257a1a6127960df6baf90ecc8106cec5e49f35b9c51ea
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642395"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727442"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Архивные заметки о выпуске для канала Microsoft Edge Stable
 
@@ -90,7 +90,7 @@ ms.locfileid: "11642395"
   - Мониторинг паролей. Если любой из ваших паролей, сохраненных в браузере, совпадает со списком утечек учетных данных, Microsoft Edge уведомит вас и запросит обновление пароля. Мониторинг паролей проверяет совпадения от вашего имени и включен по умолчанию.
   - Изменение пароля. Теперь сохраненные пароли можно изменять непосредственно в параметрах Microsoft Edge. Каждый раз, когда пароль обновляется за пределами Microsoft Edge, можно легко заменить старый сохраненный пароль новым, изменив сохраненную запись в параметрах. 
 
-- **Улучшите скорость запуска Microsoft Edge с помощью повышения при запуске.** Чтобы повысить скорость запуска Microsoft Edge, мы разработали возможность ускорения запуска. Запуск Microsoft Edge ускоряется за счет работы браузера в фоновом режиме. Примечание. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
+- **Повысьте скорость запуска Microsoft Edge с помощью функции ускорения запуска.** Чтобы повысить скорость запуска Microsoft Edge, мы разработали функцию ускорения запуска. Ускорение запуска Microsoft Edge возможно благодаря работе браузера в фоновом режиме. Примечание. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
 
 - **Эффективная работа:**
 
@@ -128,7 +128,7 @@ ms.locfileid: "11642395"
 - [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled) — настраивает спящие вкладки.
 - [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout) — устанавливает время ожидания активности фоновой вкладки для функции спящих вкладок.
 - [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls) — блокирует спящие вкладки на определенных сайтах.
-- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) — включает ускорение запуска.
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) включает ускорение запуска.
 - [TargetBlankImpliesNoOpener](./microsoft-edge-policies.md#targetblankimpliesnoopener) — не устанавливать window.opener для ссылок, нацеленных на _blank.
 - [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride) — определяет, как Центр обновления Microsoft Edge обрабатывает доступные обновления из Microsoft Edge.
 - [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) — настраивает доступность вертикального макета для вкладок в боковой части окна браузера.

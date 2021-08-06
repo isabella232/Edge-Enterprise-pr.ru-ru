@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Жизненный цикл Microsoft Edge
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676091"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726962"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Политика жизненного цикла Microsoft Edge
 
@@ -25,7 +25,7 @@ ms.locfileid: "11676091"
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
 > [!NOTE]
-> Начиная со стабильной версии канала 94, Microsoft Edge переходит к 4-недельной основной цикл выпуска. Однако мы понимаем, что корпоративным клиентам при управлении сложными средами требуется больше времени для планирования и тестирования обновлений Microsoft Edge. Чтобы помочь корпоративным клиентам, которым требуется расширенная временная шкала для управления обновлениями, Microsoft Edge предложит расширенный параметр Stable, выровненный к более **длительному, 8-недельным** основным циклам выпуска; этот параметр будет доступен только для клиентов с управляемыми средами. [Обратитесь к нашему сообщению в блоге объявления](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+> Начиная со стабильной версии канала 94, Microsoft Edge переходит к 4-недельной основной цикл выпуска. Однако мы понимаем, что корпоративным клиентам при управлении сложными средами требуется больше времени для планирования и тестирования обновлений Microsoft Edge. Чтобы помочь корпоративным клиентам, которым требуется расширенная временная шкала для управления обновлениями, Microsoft Edge предложит расширенный параметр Stable, выровненный к более **длительному, 8-недельным** основным циклам выпуска; этот параметр будет доступен только для клиентов с управляемыми средами. [Обратитесь к записи блога с объявлением](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Общие сведения о политике жизненного цикла Microsoft Edge
 

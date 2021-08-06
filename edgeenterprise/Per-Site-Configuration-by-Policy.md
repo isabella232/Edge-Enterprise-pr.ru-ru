@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Конфигурация каждого сайта с помощью политики '
-ms.openlocfilehash: 4f1bf9a421f0098ba8105e78f77ac4af62530239
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d7cc68264c9fca9e667908ff4988f512c152bfc4857fd14166519fb3eb337a5a
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641695"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725592"
 ---
 # <a name="persite-configuration-by-policy"></a>Конфигурация каждого сайта с помощью политики
 
@@ -73,7 +73,7 @@ ms.locfileid: "11641695"
 
 - <div style="display: inline">`https://sharepoint.contoso-intranet.com`</div>
 
-Поздравляем! Вы реализовали лучшие рекомендации. Вы можете настроить каждую нужную политику с помощью записи **_.contoso-intranet.com,_* и вся ваша интрасеть будет   настроена.
+Поздравляем! Вы реализовали лучшие рекомендации. Вы можете настроить каждую нужную политику с помощью записи ***.contoso-intranet.com** , и вся интрасеть будет настроена.
 
 ## <a name="use-of-security-zones-inthe-microsoft-edge"></a>Использование зон Безопасности в Microsoft Edge
 

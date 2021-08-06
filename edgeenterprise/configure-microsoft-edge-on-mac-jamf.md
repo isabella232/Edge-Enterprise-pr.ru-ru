@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройте параметры политики Microsoft Edge на устройствах Mac с помощью Jamf
-ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: be706795d093b9dcecf33ee1bf7071286082fad1fea98a98b34145e87a9b7393
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641635"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725340"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>Настройте параметры политики Microsoft Edge в macOS с помощью Jamf
 
@@ -45,8 +45,8 @@ ms.locfileid: "11641635"
 Чтобы получить манифест политики:
 
 - Перейдите на [целевую страницу Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise).
-- В раскрывающемся списке "Канал/Версия" выберите **любой канал версии 81 или более поздней.**_
-- В раскрывающемся списке "Сборка" выберите любой вариант _*сборки 81 или более поздней.**_
+- В раскрывающемся списке "Канал/Версия" выберите **любой канал версии 81 или более поздней.***.
+- В раскрывающемся списке "Сборка" выберите любой элемент **сборка 81 или более поздняя.***.
 - Нажмите ПОЛУЧИТЬ ФАЙЛЫ ПОЛИТИКИ, чтобы загрузить наш пакет шаблонов политики.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ ms.locfileid: "11641635"
 Используйте следующие шаги, чтобы загрузить манифест политики в Jamf Pro, а затем создать профиль политики для macOS.
 
 1. Войдите в Jamf.
-2. Откройте вкладку _*Компьютер**.
+2. Выберите вкладку **Компьютер**.
 3. В разделе **Управление контентом** выберите **Профили конфигурации**.
 4. На странице **Профили конфигурации** выберите **+ Новый**.
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сохранение навигации в пределах страницы в режиме Internet Explorer
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f1c40977ba07f0a85bc64aab8e609163f9a68dd2eb7487adff6b6a1fcbd110f2
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641365"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724298"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Сохранение навигации в пределах страницы в режиме Internet Explorer
 
@@ -60,9 +60,9 @@ ms.locfileid: "11641365"
 
    - **По умолчанию**— в этом режиме будут открываться только сайты, настроенные на открытие в режиме Internet Explorer. Все сайты, не настроенные для открытия в режиме Internet Explorer, будут перенаправляться обратно в Microsoft Edge.
    - **Сохранять только автоматические переходы в режиме Internet Explorer**— используйте этот параметр, если режим Internet Explorer должен использоваться по умолчанию для всех автоматических переходов (таких как перенаправление 302) на ненастроенные сайты.
-   - **Сохранение всей навигации на странице в режиме Internet Explorer**  * *_(Наименее рекомендуемый)_*_ — Все навигации со страниц, загруженных в режиме IE, до неконфигуративных сайтов, хранятся в режиме Internet Explorer.
+   - **Держите всю** навигацию на странице в режиме Internet Explorer (наименее **_рекомендуемой)_** - Все навигации со страниц, загруженных в режиме IE, до неконфигуративных сайтов, хранятся в режиме Internet Explorer.
 
-6. Нажмите*кнопку _OK** или **применить** для сохранения параметров политики.
+6. Нажмите кнопку **OK** или **Применить** для сохранения настроек политики.
 
 ## <a name="see-also"></a>См. также
 

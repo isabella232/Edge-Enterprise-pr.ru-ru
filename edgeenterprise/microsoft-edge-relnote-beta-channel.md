@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/29/2021
+ms.date: 08/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 6816d420668673cdfefb303cc6765f9a22afce0f
-ms.sourcegitcommit: c74caed21e18d5d211a7fa6cb4f0cb3a14446f42
+ms.openlocfilehash: 8b76fc92fc5db3433990435e78ee14dcbe306b4096a6c1a6ba919faebc074768
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "11710367"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725762"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,59 @@ ms.locfileid: "11710367"
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096111-august-3"></a>Версия 93.0.961.11: 3 августа
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Начальные предпочтения в Microsoft Edge.**  Развертывание Microsoft Edge на предприятии станет проще, начиная с версии 93 с добавлением начальных предпочтений.
+
+- **Режим IE на Microsoft Edge поддерживает поведение "nomerge".**  Начиная с edge 93, режим IE на Microsoft Edge поддерживает nomerge. Для конечных пользователей при запуске нового окна браузера из приложения режима IE оно будет в отдельном сеансе, аналогичном поведению nomerge в IE11. Вам потребуется настроить список сайтов, чтобы настроить сайты, необходимые для предотвращения обмена сеансами как "nomerge". За кулисами для каждого окна Microsoft Edge впервые в этом окне посещается вкладка режима IE, если она является одним из назначенных сайтов "nomerge", это окно блокируется в другой сеанс IE "nomerge" от всех остальных Microsoft Edge windows, по крайней мере до закрытия последней вкладки режима IE в этом окне. Это следует за предыдущим поведением, когда пользователи могли запускать IE с помощью nomerge, а также запускать Microsoft Edge без nomerge с помощью других механизмов.
+
+- **Группы вкладок.**  Возможность классификации вкладок в группы, определенные пользователем, позволяет эффективнее находить, переключать и управлять вкладками в нескольких workstreams. Для этого мы включаем группировку вкладок, начиная с Microsoft Edge версии 93.
+
+- **Скрыть заголовок при использовании вертикальных вкладок.**  Получите дополнительные несколько пикселей обратно, спрятав заголовок панели браузера, в то время как в вертикальных вкладок. Начиная с Microsoft Edge версии 93, вы можете перейти к edge://settings/appearance и в разделе Настройка панели инструментов выберите параметр, чтобы скрыть панель заголовка в режиме Вертикальная вкладка.
+
+- **Video Picture in Picture (PiP) from hover toolbar.**  Начиная с версии Edge 93, будет еще проще вводить изображение в режиме Picture (PiP). При наведении на поддерживаемое видео появится панель инструментов, которая позволяет просматривать это видео в окне PiP.  Обратите внимание: в настоящее время это доступно для Microsoft Edge пользователей на macOS.  Пожалуйста, проверьте в ближайшее время, как мы продолжаем нашу выкатку для Windows пользователей.
+
+- **Удаление 3DES в TLS.**  Начиная с edge v93, поддержка TLS_RSA_WITH_3DES_EDE_CBC_SHA шифра будет удалена. Это изменение происходит в проекте Chromium, на котором Microsoft Edge основана. Дополнительные сведения перейдите к записи [состояние Chrome Platform Status.](https://chromestatus.com/feature/6678134168485888) Кроме того, в edge v93 политика [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) будет доступна для поддержки сценариев, необходимых для сохранения совместимости с устаревшими серверами. Эта политика совместимости устареет и перестанет работать в Edge v95. Убедитесь, что вы обновляете затронутые серверы до этого.
+
+### <a name="new-policies"></a>Новые политики
+
+- [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Разрешить автозапев мультимедиа на определенных сайтах
+- [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) CeCPQ2 после квантовых ключей включено для TLS
+- [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Настройка функции View in File Explorer для SharePoint страниц в Microsoft Edge
+- [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Управление использованием JIT JavaScript
+- [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Разрешить уведомлениям устанавливать Microsoft Edge как считыватель PDF по умолчанию
+- [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Настройка возможности переопределения флагов функций пользователями
+- [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Включить неявный вход
+- [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Настройка списка облачных Enterprise режима
+- [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Настройка частоты обновления списка Enterprise режима
+- [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) Разрешить JavaScript использовать JIT на этих сайтах
+- [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Блокировка JavaScript от использования JIT на этих сайтах
+- [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Включить Windows для поиска данных локального Microsoft Edge просмотра
+- [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Всегда используйте Microsoft AutoUpdate в качестве обновления для Microsoft Edge
+- [MSAWebSiteSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) Разрешить единую входную запись для сайтов Майкрософт с помощью этого профиля
+- [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) Проверка подлинности OneAuth Flow для signin
+- [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) Разрешить пользователям получать сильное предложение пароля при создании учетной записи в Интернете
+- [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) Настраивает параметр, который просит пользователей ввести пароль устройства при использовании автозаполненки пароля
+- [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) Задает макет для печати
+- [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) Разрешить удаленную отладку
+- [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) Заданные интервалы времени для повторного запусков
+- [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) Включить помощь в поездках
+- [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) Включить шифры 3DES в TLS
+
+#### <a name="deprecated-policy"></a>Нерекомендуемая политика
+
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Включить устаревшие параметры поведения cookie SameSite по умолчанию
+
+#### <a name="obsoleted-policy"></a>Устаревшая политика
+
+- [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Настройка новой Microsoft Edge страницы вкладки
+
+#### <a name="additional-change"></a>Дополнительные изменения
+
+- [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Добавление поддержки платформы Mac
 
 ## <a name="version-92090262-july-29"></a>Версия 92.0.902.62: 29 июля
 

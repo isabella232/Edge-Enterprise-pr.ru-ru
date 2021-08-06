@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 02/02/2021
-  ms.openlocfilehash: 807aaa38da97222da8d52e36ad55995ef1c44e80
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  ms.openlocfilehash: 2aeb0e2452ce009c5c798bdee3c07ed324c6efbe2d96fa12e5fe92d6dd020e54
+  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448143"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "11725952"
 landingContent:
 - title: Дополнительные сведения о Microsoft Edge на предприятии
   linkLists:
@@ -31,9 +31,9 @@ landingContent:
       url: edge-ie-mode.md
   - linkListType: video
     links:
-    - text: Microsoft Edge Videos
+    - text: Видео о Microsoft Edge
       url: microsoft-edge-videos.md
-    - text: Канал Microsoft Edge YouTube
+    - text: Microsoft Edge Канал YouTube
       url: https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA
 - title: Развертывание и обновление Microsoft Edge
   linkLists:
@@ -41,7 +41,7 @@ landingContent:
     links:
     - text: Планирование развертывания Microsoft Edge
       url: deploy-edge-plan-deployment.md
-    - text: Видео — развертывание Microsoft Edge
+    - text: Видео "Развертывание Microsoft Edge"
       url: microsoft-edge-video-deploy.md
     - text: Развертывание в Windows
       url: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
@@ -51,9 +51,9 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Настройка Microsoft Edge в Windows
+    - text: Настройка Microsoft Edge на Windows
       url: configure-microsoft-edge.md
-    - text: Настройка Microsoft Edge на macOS
+    - text: Настройка Microsoft Edge macOS
       url: configure-microsoft-edge-on-mac.md
     - text: Установка Microsoft Edge в качестве браузера по умолчанию
       url: edge-default-browser.md
@@ -61,7 +61,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 'Видео: безопасность, совместимость и управляемость'
+    - text: Видео "Безопасность, совместимость и управляемость"
       url: microsoft-edge-video-security-compatibility-manageability.md
     - text: Безопасность
       url: ms-edge-security-for-business.md
