@@ -3,19 +3,19 @@ title: Что такое режим Internet Explorer?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как режим Internet Explorer в Microsoft Edge предоставляет доступ к сайтам, которым требуется Internet Explorer 11, а также доступ к современным сайтам.
-ms.openlocfilehash: 7d1d9d201abee9cd9f0d648f2757e3276945d2f4dcf635ea0cd17a64e684aec4
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: cc88c6745d40bfd33a345d76e2b2090f0f33243271350e4449d698d4a0fab71e
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726070"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810199"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Что такое режим Internet Explorer (IE)?
 
@@ -47,16 +47,16 @@ ms.locfileid: "11726070"
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Режим IE поддерживает следующие функциональные возможности Internet Explorer
 
 - Все режимы работы с документами и режимы предприятия
-- Элементы ActiveX (например, Java или Silverlight)
+- Элементы ActiveX (например, Java или Silverlight) **Примечание**: Silverlight [прекратит получать поддержку](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788) 12 октября 2021 г. 
 - Вспомогательные объекты браузера 
 - Параметры и групповые политики Internet Explorer, влияющие на параметры зон безопасности и защищенный режим
-- Средства разработчика F12 для IE при запуске с [IEChooser](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- Средства разработчика F12 для IE при запуске с [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-)
 - Расширения Microsoft Edge (расширения, взаимодействующие непосредственно с содержимым страницы IE, не поддерживаются).
 
 ### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>Режим IE не поддерживает следующие функциональные возможности Internet Explorer
 
 - Панели инструментов Internet Explorer
-- Параметры и групповые политики Internet Explorer, которые влияют на меню навигации (например, поисковые системы и домашние страницы.)
+- Параметры Internet Explorer и групповые политики, которые контролируют меню навигации.
 - Средства разработчика F12 для IE11 или Microsoft Edge
 
 ## <a name="prerequisites"></a>Предварительные условия
