@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Поддержка начальных предпочтений в Microsoft Edge браузере.
-ms.openlocfilehash: 4ac5e69ad1efa61752097348324f917d9155d4f823d520895296c8ab01d7065c
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810237"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882265"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>Настройка Microsoft Edge с помощью параметров начальных предпочтений для первого запуска
 
@@ -42,7 +42,7 @@ ms.locfileid: "11810237"
 | Bookmarks | editing_enabled |
 | Браузер / clear_data | browsing_history<br>browsing_history_basic"<br>кэш<br>cache_basic<br>cookies<br>download_history<br>form_data<br>пароли |
 | Журнал | browsing_history<br>кэш<br>cookies<br>download_history<br>form_data<br>hosted_apps_data<br>пароли<br>site_settings |
-| Browser | first_run_tabs<br>dark_theme<br>show_toolbar_bookmarks_button<br>show_toolbar_collections_butto<br>show_toolbar_downloads_button<br>show_home_button<br>show_prompt_before_closing_tabs<br>show_toolbar_history_button |
+| Браузер | first_run_tabs<br>dark_theme<br>show_toolbar_bookmarks_button<br>show_toolbar_collections_butto<br>show_toolbar_downloads_button<br>show_home_button<br>show_prompt_before_closing_tabs<br>show_toolbar_history_button |
 | default_search_provider | Включено [default_search_provider] |
 | Полноэкранный режим | Разрешено |
 | домашнюю страницу | Homepage_url |
@@ -64,7 +64,7 @@ ms.locfileid: "11810237"
 
 ### <a name="windows-amd64-and-arm64"></a>Windows (AMD64 и ARM64)
 
-| Канал | Местоположение |
+| Канал | Местонахождение |
 | - | - |
 | Stable | `"C:\Program Files (x86)\Microsoft\Edge\Application"` |
 | Beta | `"C:\Program Files (x86)\Microsoft\Edge Beta\Application"` |
@@ -75,7 +75,7 @@ ms.locfileid: "11810237"
 
 ### <a name="macos"></a>macOS
 
-| Канал | Местоположение |
+| Канал | Местонахождение |
 | - | - |
 | Stable | `"~/Library/Application Support/Microsoft Edge/Microsoft Edge Initial Preferences"` |
 | Beta | `“~/Library/Application Support/Microsoft Edge Beta/Microsoft Edge Initial Preferences"` |

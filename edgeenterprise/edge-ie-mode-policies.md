@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка политик для режима IE
-ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726112"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882135"
 ---
 # <a name="configure-ie-mode-policies"></a>Настройка политик для режима IE
 
@@ -75,10 +75,8 @@ ms.locfileid: "11726112"
     > [!NOTE]
     > Настраивать политику Microsoft Edge не обязательно. Во многих организациях используется переопределение. Это позволяет сделать текущий список сайтов доступным для всех пользователей с помощью политики IE, а также упрощает пилотное использование обновленной версии с помощью политики Microsoft Edge.
 
-Дополнительные сведения о списках сайтов в режиме предприятия можно найти в следующих статьях:
+Дополнительные сведения о списках Enterprise режиме см. в Enterprise [диспетчере списков сайтов.](/deployedge/edge-ie-mode-site-list-manager)
 
-- [Использование средства Enterprise Mode Site List Manager](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [Добавление нескольких сайтов в список сайтов в режиме предприятия в средстве Enterprise Mode Site List Manager с помощью файла (схема версии 2)](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool).
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Настройка с помощью политики "Использовать список веб-сайтов IE в режиме предприятия"
 
