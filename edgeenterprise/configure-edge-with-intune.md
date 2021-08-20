@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка параметров политики Microsoft Edge для Windows с помощью Microsoft Intune.
-ms.openlocfilehash: cd11c8c92d67197d9cf1a24691615b0a56dd727626b9741b5664a5d1080ba950
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
+ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725516"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "11907263"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Настройка параметров политики Microsoft Edge с помощью Microsoft Intune
 
@@ -53,7 +53,8 @@ ms.locfileid: "11725516"
 3. Из пункта **Устройства** | **Обзор** выберите **Профили конфигурации** (под заголовком политики).
 4. На верхней панели команд выберите **Создать профиль**.
 5. В раскрывающемся списке под пунктом **Платформы**выберите **Windows 10 и более поздние версии**.
-6. В раскрывающемся списке под пунктом **Профиль** выберите **Административные шаблоны** а затем нажмите кнопку **Создать**. На следующем снимке экрана показаны раскрывающиеся списки, в которых можно выбрать платформу и тип профиля.
+6. В выпадаемом списке ниже **Тип профиля**выберите **Шаблоны**.
+7. В under **Template name**выберите **административные шаблоны** и нажмите кнопку **Создать.** На следующем снимке экрана показаны раскрывающиеся списки, в которых можно выбрать платформу и тип профиля.
 
     ![Выбор платформы и типа профиля](./media/configure-edge-with-intune/create-profile-platform.png)
 
