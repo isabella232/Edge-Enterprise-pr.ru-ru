@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/05/2021
+ms.date: 08/20/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: a03e6c8d88d8e5959b267492bceaceba4b766c37
-ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
+ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
+ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "11907273"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "11909914"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,10 @@ ms.locfileid: "11907273"
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096127-august-20"></a>Версия 93.0.961.27: 20 августа
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-93096124-august-18"></a>Версия 93.0.961.24: 18 августа
 

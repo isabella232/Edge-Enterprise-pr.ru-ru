@@ -3,23 +3,27 @@ title: Заметки о выпуске обновлений для систем
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/05/2021
+ms.date: 08/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: efe0bbb1b8b771e92e439f9452696f6d424e4465
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
+ms.openlocfilehash: b4f4a217a56bfb37a7f623e5040876ac268ff561
+ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882165"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "11909924"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="august-19-2021"></a>19 августа 2021 г.
+
+Корпорация Майкрософт выпустила новый **Microsoft Edge стабильного канала (версия 92.0.902.78)**, содержащий последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide)
 
 ## <a name="august-5-2021"></a>5 августа 2021 г.
 
