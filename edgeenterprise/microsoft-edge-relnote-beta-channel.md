@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/20/2021
+ms.date: 08/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
+ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909914"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925326"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -47,6 +47,14 @@ ms.locfileid: "11909914"
 - **Video Picture in Picture (PiP) from hover toolbar.**  Начиная с Microsoft Edge версии 93, будет еще проще вводить изображение в режиме Picture (PiP). При наведении на поддерживаемое видео появится панель инструментов, которая позволяет просматривать это видео в окне PiP.  Примечание. В настоящее время это доступно для Microsoft Edge на macOS.  Проверьте в ближайшее время, как мы продолжаем нашу выкатку для Windows пользователей.
 
 - **Удаление 3DES в TLS.**  Начиная с Microsoft Edge версии 93 поддержка TLS_RSA_WITH_3DES_EDE_CBC_SHA шифра будет удалена. Это изменение происходит в проекте Chromium, на котором Microsoft Edge основана. Дополнительные сведения перейдите к записи [состояние Chrome Platform Status.](https://chromestatus.com/feature/6678134168485888) Кроме того, Microsoft Edge версии 93 политика [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) будет доступна для поддержки сценариев, необходимых для сохранения совместимости с устаревшими серверами. Эта политика совместимости устареет и перестанет работать в Microsoft Edge версии 95. Убедитесь, что вы обновляете затронутые серверы до этого.
+
+- **Политики обхода ClickOnce и directInvoke.**  Мы обновили наши политики, чтобы включить обход ClickOnce и приложения DirectInvoke для указанных типов файлов из указанных доменов. Для этого необходимо:
+
+  - Включить [ClickOnceEnabled или](/deployedge/microsoft-edge-policies#clickonceenabled) [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Включить [политику AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) и установить список определенных типов файлов, которые ClickOnce и DirectInvoke должны быть отключены для
+  - Включим политику [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) и установите список определенных доменов, которые ClickOnce и DirectInvoke будут отключены для
+
+  Примечание. AutoOpenAllowedForURLs — это политика поддержки autoOpenFileTypes. Если autoOpenAllowedForURLs не установлено, а AutoOpenFileTypes установлено, указанные типы файлов будут автоматически открываться из всех URL-адресов.
 
 ### <a name="new-policies"></a>Новые политики
 
