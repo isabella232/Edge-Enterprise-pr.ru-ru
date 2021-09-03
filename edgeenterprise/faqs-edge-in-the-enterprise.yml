@@ -11,12 +11,12 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Часто задаваемые вопросы (часто задаваемые вопросы) о развертывании Microsoft Edge на предприятии
-  ms.openlocfilehash: edf0ec730ece83126619519cdd45d20f3271dd99845f4786f29dde32befec2b6
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
+  ms.sourcegitcommit: 0b23434b719dbeb302edf200a47550ee7b62a86a
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11725962"
+  ms.lasthandoff: 09/03/2021
+  ms.locfileid: "11938836"
 title: Часто задаваемые вопросы (часто задаваемые вопросы) о Microsoft Edge на предприятии
 summary: >
   > [!NOTE]
@@ -28,7 +28,7 @@ sections:
   - question: Как узнать используемую версию Microsoft Edge?
     answer: >
       В правом верхнем углу Microsoft Edge щелкните значок многоточия (**…**), а затем нажмите **Параметры**. Выберите **Сведения о Microsoft Edge**, чтобы просмотреть свою версию Microsoft Edge.
-  - question: Как насчет Internet Explore 11?
+  - question: Как насчет Internet Explorer 11?
     answer: >
       Настольное приложение Internet Explorer 11 будет снято с службы поддержки 15 июня 2022 г. (список того, что имеется в области, см. в [faq).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Здесь](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) вы найдете дополнительные сведения.
   - question: Поддерживает ли Microsoft Edge (на основе Chromium) элементы ActiveX или вспомогательные объекты браузера, такие как Silverlight или Java?
