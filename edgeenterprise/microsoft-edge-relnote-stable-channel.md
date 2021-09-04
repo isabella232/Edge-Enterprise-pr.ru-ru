@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/19/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
+ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926015"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938211"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -30,6 +30,34 @@ ms.locfileid: "11926015"
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096138-september-02"></a>Версия 93.0.961.38: 2 сентября
+
+Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-02-2021).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Начальные предпочтения в Microsoft Edge.**  Microsoft Edge теперь поддерживает ограниченное количество начальных предпочтений (прежнее название — главные предпочтения). ИТ-администраторы могут развернуть эти параметры по умолчанию до первого запуска браузера пользователями. Дополнительные сведения: [Настройка Microsoft Edge с помощью параметров начальных предпочтений для первого запуска](/deployedge/initial-preferences-support-on-microsoft-edge-browser).
+
+- **Режим IE в Microsoft Edge поддерживает поведение "без слияния".**  Для конечных пользователей при запуске нового окна браузера из приложения в режиме IE будет запускаться отдельный сеанс аналогично поведению "без слияния" в IE11. Вам потребуется изменить список сайтов, чтобы настроить сайты, которые должны запрещать общий доступ к сеансу в режиме "без слияния". Для каждого окна Microsoft Edge при первом посещении вкладки режима IE в этом окне, если это один из назначенных сайтов "без слияния", это окно блокируется в другом сеансе IE "без слияния" от всех остальных окон Microsoft Edge по крайней мере до закрытия последней вкладки режима IE в этом окне. Это соответствует предыдущему поведению, когда пользователи могли запускать IE с использованием режима "без слияния", а также запускать Microsoft Edge без режима "без слияния" с помощью других механизмов.  Дополнительные сведения: [Устранение неполадок режима IE и вопросы с ответами | Документация Майкрософт](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)
+
+- **Новая политика для остановки неявного входа.**  Политика [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled) позволяет системным администраторам отключить неявный вход в браузерах Microsoft Edge.
+
+- **Политики для обхода запросов ClickOnce и DirectInvoke.** Мы обновили наши политики, чтобы включить обход запросов ClickOnce и приложения DirectInvoke для указанных типов файлов из указанных доменов. Для этого необходимо:
+
+  - Включить [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) или [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Включить политику [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) и настроить список определенных типов файлов, для которых следует отключить ClickOnce и DirectInvoke.
+  - Включить политику [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) и настроить список определенных доменов, для которых будут отключены ClickOnce и DirectInvoke.
+
+  Примечание. AutoOpenAllowedForURLs — это вспомогательная политика для AutoOpenFileTypes. Если политика AutoOpenAllowedForURLs не настроена, но настроена политика AutoOpenFileTypes, указанные типы файлов будут автоматически открываться из всех URL-адресов.
+
+- **Группы вкладок.**  Мы включаем группирование вкладок, что позволяет классифицировать вкладки по группам, определяемым пользователями, и помогает эффективнее находить и переключать вкладки, а также управлять ими в нескольких рабочих потоках.  
+
+- **Скрытие заголовка окна при использовании вертикальных вкладок.**  Получите дополнительные несколько пикселей обратно, скрыв заголовок окна браузера при использовании вертикальных вкладок. Теперь вы можете перейти на страницу edge://settings/appearance и в разделе "Настройка панели инструментов" выбрать параметр, чтобы скрыть заголовок окна в режиме вертикальных вкладок.
+
+- **Видео "картинка в картинке" (PiP) в панели инструментов, вызываемой при наведении курсора.**  При наведении курсора на поддерживаемое видео появляется панель инструментов, которая позволяет просматривать это видео в окне PiP.  Примечание. В настоящее время эта функция доступна для пользователей Microsoft Edge на macOS.  
+
+- **Удаление 3DES в TLS. Поддержка комплекта шифров TLS_RSA_WITH_3DES_EDE_CBC_SHA будет удалена.** Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в записи о [состоянии платформы Chrome](https://chromestatus.com/feature/6678134168485888). Кроме того, в Microsoft Edge версии 93 будет доступна политика [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) для поддержки сценариев, которым необходимо сохранение совместимости с устаревшими серверами. Эта политика совместимости устареет и перестанет работать в Microsoft Edge версии 95. Обновите затронутые серверы заранее.
 
 ## <a name="version-92090284-august-26"></a>Версия 92.0.902.84: 26 августа
 
