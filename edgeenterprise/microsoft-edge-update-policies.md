@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация по всем политикам, поддерживаемым средством обновления Microsoft Edge
-ms.openlocfilehash: 7b6043ecb96cb30ee9b51fc9966f925b223e72f29ac325ad06208d743f60e18f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724872"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980080"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge — политики обновления
 
@@ -35,7 +35,7 @@ ms.locfileid: "11724872"
 |[InstallDefault](#installdefault)|Разрешить установку по умолчанию|
 |[UpdateDefault](#updatedefault)|Переопределение политики обновления по умолчанию|
 |[Install](#install)|Разрешить установку (для канала)|
-|[Update](#update)|Переопределение политики обновления (для канала)|
+|[Обновление](#update)|Переопределение политики обновления (для канала)|
 |[Allowsxs](#allowsxs)|Разрешить параллельный запуск разных типов браузеров Microsoft Edge|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Запрет создания ярлыка на рабочем столе при установке по умолчанию|
 |[CreateDesktopShortcut](#createdesktopshortcut)|Запрет создания ярлыка на рабочем столе при установке (для каналов)|
@@ -400,7 +400,7 @@ updates disabled 0x00000000
 ```
 [В начало](#microsoft-edge---update-policies)
 
-### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>Извлечение конфигураций и экспериментов
 >Центр обновления Microsoft Edge 1.3.145.1 и более поздней
 

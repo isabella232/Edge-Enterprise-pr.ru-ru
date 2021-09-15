@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
-ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
+ms.openlocfilehash: d455b2ccab734ba8792754b81994ac381b974f73
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938312"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980230"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,10 @@ ms.locfileid: "11938312"
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099214-september-7"></a>Версия 94.0.992.14: 7 сентября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-9409929-september-2"></a>Версия 94.0.992.9: 2 сентября
 
@@ -34,9 +38,9 @@ ms.locfileid: "11938312"
 
 - **Улучшения поведения по умолчанию при открытии MHTML-файлов.**  Файлы MHTML будут продолжать открываться в режиме IE, если режим IE включен, если файл MHTML не был сохранен из Microsoft Edge (с помощью параметров Сохранить как или сохранить страницу Как в Microsoft Edge). Если файл был сохранен из Microsoft Edge, он будет открыт в Microsoft Edge.  Это изменение устраняет проблему отрисовки, которая наблюдалась при открытии MHTML-файла в режиме IE при Microsoft Edge.
 
-- **Ограничить частные сетевые запросы безопасными контекстами.** Доступ к ресурсам локальных (интрасетей) сетей со страниц в Интернете требует, чтобы эти страницы доставлялись через HTTPS. Это изменение происходит в проекте Chromium, на котором Microsoft Edge основана. Дополнительные сведения перейдите к записи [состояние Chrome Platform Status.](https://chromestatus.com/feature/5436853517811712) Для поддержки сценариев, необходимых для сохранения совместимости с незащищенными страницами, доступны две политики совместимости: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) и [InsecurePrivateNetworkRequestAllowedForUrls.](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)
+- **Ограничить частные сетевые запросы безопасными контекстами.** Доступ к ресурсам локальных (интрасетей) сетей со страниц в Интернете требует, чтобы эти страницы доставлялись через HTTPS. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в записи о [состоянии платформы Chrome](https://chromestatus.com/feature/5436853517811712). Для поддержки сценариев, необходимых для сохранения совместимости с незащищенными страницами, доступны две политики совместимости: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) и [InsecurePrivateNetworkRequestAllowedForUrls.](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)
 
-- **Блокируют смешанные загрузки контента.** Безопасные страницы будут загружать файлы, которые будут скачать только на других защищенных страницах, а загрузки, которые будут загружаться на небезопасных (не-HTTPS) страницах, будут заблокированы, если они инициируют с безопасной страницы. Это изменение происходит в проекте Chromium, на котором Microsoft Edge основана. Дополнительные сведения можно найти в записи [блога безопасности Google.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+- **Блокируют смешанные загрузки контента.** Безопасные страницы будут загружать файлы, которые будут скачать только на других защищенных страницах, а загрузки, которые будут загружаться на небезопасных (не-HTTPS) страницах, будут заблокированы, если они инициируют с безопасной страницы. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения можно найти в записи [блога безопасности Google.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
 
 - **Включить неявный вход для учетных записей на локальной основе.**   Включив политику OnlyOnPremisesImplicitSigninEnabled, для неявного входа будут включены только учетные записи на месте.  Браузер Microsoft Edge не будет пытаться выполнять неявный вход в учетные записи MSA и AAD. Переход с локальных учетных записей на учетные записи AAD также будет остановлен.
 
@@ -45,6 +49,16 @@ ms.locfileid: "11938312"
 - **Обновление паролей с легкостью.**  Браузер теперь будет принимать вас непосредственно на страницу Изменить пароль для данного веб-сайта, экономя время и клики, избегая необходимости переходить на страницу вручную. После того, как вы на этой странице браузер также автозаполнеет существующий пароль и предложит надежный, уникальный новый пароль.  Обратите внимание: в настоящее время эта функция доступна на ограниченном количестве сайтов.  
 
 - **Страница Новые параметры доступности.** Мы собрали параметры, связанные с доступностью, на одной странице. Вы можете найти новую страницу edge://settings/accessibility в списке основных параметров. Здесь вы можете найти параметры, чтобы сделать веб-страницу больше, показать контур высокой видимости вокруг области фокуса и другие параметры, которые могут помочь улучшить ваш опыт просмотра веб-страниц. Мы продолжим добавлять новые параметры здесь в будущих версиях Microsoft Edge.
+
+***Новые политики***
+
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Игнорировать конфигурацию списка сайтов Application Guard и просматривать edge обычно
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Только учетная запись локальной учетной записи включена для неявного входа
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Включить поддержку Windows правил маршрутивки ОС при создании одноранговых подключений через WebRTC
+
+***Устаревшая политика***
+
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Включить функцию User-Agent клиентские подсказки
 
 ## <a name="version-93096133-august-27"></a>Версия 93.0.961.33: 27 августа
 
@@ -64,23 +78,23 @@ ms.locfileid: "11938312"
 
 - **Начальные предпочтения в Microsoft Edge.**  Начиная с Microsoft Edge версии 93, развертывание Microsoft Edge на предприятии станет проще с добавлением [начальных предпочтений.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
-- **Режим IE на Microsoft Edge поддерживает поведение "без слияния".**  Начиная с Microsoft Edge версии 93, режим IE на Microsoft Edge будет поддерживать "без слияния". Для конечных пользователей при запуске нового окна браузера из приложения режима IE оно будет в отдельном сеансе, аналогичном поведению в IE11. Вам потребуется настроить список сайтов, чтобы настроить сайты, необходимые для предотвращения совместного доступа к сеансам. За кулисами для каждого окна Microsoft Edge при первом посещении вкладки режима IE в этом окне, если это один из назначенных сайтов без слияния, это окно блокируется в другой сеанс IE без слияния со всеми другими окнами Microsoft Edge по крайней мере до закрытия последней вкладки режима IE в этом окне. [Здесь](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-) вы найдете дополнительные сведения.
+- **Режим IE в Microsoft Edge поддерживает поведение "без слияния".**  Начиная с Microsoft Edge версии 93, режим IE на Microsoft Edge будет поддерживать "без слияния". Для конечных пользователей при запуске нового окна браузера из приложения режима IE оно будет в отдельном сеансе, аналогичном поведению в IE11. Вам потребуется настроить список сайтов, чтобы настроить сайты, необходимые для предотвращения совместного доступа к сеансам. Для каждого окна Microsoft Edge при первом посещении вкладки режима IE в этом окне, если это один из назначенных сайтов "без слияния", это окно блокируется в другом сеансе IE "без слияния" от всех остальных окон Microsoft Edge по крайней мере до закрытия последней вкладки режима IE в этом окне. [Здесь](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-) вы найдете дополнительные сведения.
 
 - **Группы вкладок.**  Возможность классификации вкладок в группы, определяемую пользователем, позволяет эффективнее находить, переключать и управлять вкладками в нескольких workstreams. Для этого мы включаем группировку вкладок, начиная с Microsoft Edge версии 93.
 
-- **Скрыть заголовок при использовании вертикальных вкладок.**  Получите дополнительные несколько пикселей обратно, спрятав заголовок панели браузера, в то время как в вертикальных вкладок. Начиная с Microsoft Edge версии 93, вы можете перейти к edge://settings/appearance и в разделе Настройка панели инструментов выберите параметр, чтобы скрыть панель заголовка в режиме Вертикальная вкладка.
+- **Скрытие заголовка окна при использовании вертикальных вкладок.**  Получите дополнительные несколько пикселей обратно, скрыв заголовок окна браузера при использовании вертикальных вкладок. Начиная с Microsoft Edge версии 93, вы можете перейти к edge://settings/appearance и в разделе Настройка панели инструментов выберите параметр, чтобы скрыть панель заголовка в режиме Вертикальная вкладка.
 
-- **Video Picture in Picture (PiP) from hover toolbar.**  Начиная с Microsoft Edge версии 93, будет еще проще вводить изображение в режиме Picture (PiP). При наведении на поддерживаемое видео появится панель инструментов, которая позволяет просматривать это видео в окне PiP.  Примечание. В настоящее время это доступно для Microsoft Edge на macOS.  Проверьте в ближайшее время, как мы продолжаем нашу выкатку для Windows пользователей.
+- **Видео "картинка в картинке" (PiP) в панели инструментов, вызываемой при наведении курсора.**  Начиная с Microsoft Edge версии 93, будет еще проще вводить изображение в режиме Picture (PiP). При наведении курсора на поддерживаемое видео появляется панель инструментов, которая позволяет просматривать это видео в окне PiP.  Примечание. В настоящее время это доступно для Microsoft Edge на macOS.  Проверьте в ближайшее время, как мы продолжаем нашу выкатку для Windows пользователей.
 
-- **Удаление 3DES в TLS.**  Начиная с Microsoft Edge версии 93 поддержка TLS_RSA_WITH_3DES_EDE_CBC_SHA шифра будет удалена. Это изменение происходит в проекте Chromium, на котором Microsoft Edge основана. Дополнительные сведения перейдите к записи [состояние Chrome Platform Status.](https://chromestatus.com/feature/6678134168485888) Кроме того, Microsoft Edge версии 93 политика [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) будет доступна для поддержки сценариев, необходимых для сохранения совместимости с устаревшими серверами. Эта политика совместимости устареет и перестанет работать в Microsoft Edge версии 95. Убедитесь, что вы обновляете затронутые серверы до этого.
+- **Удаление 3DES в TLS.**  Начиная с Microsoft Edge версии 93 поддержка TLS_RSA_WITH_3DES_EDE_CBC_SHA шифра будет удалена. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в записи о [состоянии платформы Chrome](https://chromestatus.com/feature/6678134168485888). Кроме того, в Microsoft Edge версии 93 будет доступна политика [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) для поддержки сценариев, которым необходимо сохранение совместимости с устаревшими серверами. Эта политика совместимости устареет и перестанет работать в Microsoft Edge версии 95. Обновите затронутые серверы заранее.
 
-- **Политики обхода ClickOnce и directInvoke.**  Мы обновили наши политики, чтобы включить обход ClickOnce и приложения DirectInvoke для указанных типов файлов из указанных доменов. Для этого необходимо:
+- **Политики для обхода запросов ClickOnce и DirectInvoke.**  Мы обновили наши политики, чтобы включить обход запросов ClickOnce и приложения DirectInvoke для указанных типов файлов из указанных доменов. Для этого необходимо:
 
-  - Включить [ClickOnceEnabled или](/deployedge/microsoft-edge-policies#clickonceenabled) [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
-  - Включить [политику AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) и установить список определенных типов файлов, которые ClickOnce и DirectInvoke должны быть отключены для
+  - Включить [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) или [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - Включить политику [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) и настроить список определенных типов файлов, для которых следует отключить ClickOnce и DirectInvoke.
   - Включим политику [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) и установите список определенных доменов, которые ClickOnce и DirectInvoke будут отключены для
 
-  Примечание. AutoOpenAllowedForURLs — это политика поддержки autoOpenFileTypes. Если autoOpenAllowedForURLs не установлено, а AutoOpenFileTypes установлено, указанные типы файлов будут автоматически открываться из всех URL-адресов.
+  Примечание. AutoOpenAllowedForURLs — это вспомогательная политика для AutoOpenFileTypes. Если политика AutoOpenAllowedForURLs не настроена, но настроена политика AutoOpenFileTypes, указанные типы файлов будут автоматически открываться из всех URL-адресов.
 
 ### <a name="new-policies"></a>Новые политики
 

@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка параметров политики Microsoft Edge для Windows с помощью Microsoft Intune.
 ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
-ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "11907263"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979833"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Настройка параметров политики Microsoft Edge с помощью Microsoft Intune
 

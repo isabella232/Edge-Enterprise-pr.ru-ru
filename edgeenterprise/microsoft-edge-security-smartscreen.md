@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge
-ms.openlocfilehash: c09664e6c7785607e40ac53e26c2f377a66f6cef7a6da2b1d53cf15baad29616
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 363605200c61807ca526818ab417301273d64f91
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727165"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979569"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-smartscreen"></a>Поддержка фильтра SmartScreen в Microsoft Defender в браузере Microsoft Edge
 
