@@ -3,19 +3,19 @@ title: Edge для инфраструктуры виртуальных рабо�
 ms.author: anlake
 author: AndreaLBarr
 manager: collw
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge для инфраструктуры виртуальных рабочих столов.
-ms.openlocfilehash: eaad1b72934b336ce86d14dd8da92a6984d21914
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 5dc234b0e6fbba4778f8236399a0ff438f704578
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618237"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980043"
 ---
 # <a name="microsoft-edge-for-virtualized-desktop-infrastructure"></a>Microsoft Edge для инфраструктуры виртуальных рабочих столов
 
