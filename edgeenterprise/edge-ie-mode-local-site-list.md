@@ -3,19 +3,19 @@ title: Локальный список сайтов для режима IE
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/20/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Узнайте, как включить локальные списки сайтов и легкий доступ к режиму IE
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979760"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016568"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>Локальный список сайтов для режима IE
 
@@ -53,9 +53,10 @@ ms.locfileid: "11979760"
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Совместимость Internet Explorer":::
 
->[! Примечание:]  
-
->1. Если вы включили тестирование режима IE через политику *InternetExplorerIntegrationTestingAllowed,* вы увидите этот параметр, но он будет серым, если не включить политику *InternetExplorerIntegrationReloadInIEModeAllowed.*  
+>[!Note]  
+>
+>1. Если вы включили тестирование режима IE через политику *InternetExplorerIntegrationTestingAllowed,* вы увидите этот параметр, но он будет серым, если не включить политику *InternetExplorerIntegrationReloadInIEModeAllowed.*
+>
 >2. Если разрешить перезагрузку сайтов в режиме Internet Explorer по **умолчанию,** пользователи могут перезагрузить сайты в режиме IE, если у них есть существующее использование Internet **Explorer** 11.  
 
 Когда этот параметр включен, пользователи могут перезагрузить сайт в режиме IE, выбрав Параметры и больше (значок эллипсов ...) > перезагрузки в режиме **Internet Explorer**. Пользователи также могут выбрать вкладку Перезагрузка в режиме **Internet Explorer,** когда они правой кнопкой мыши на вкладке или выбрать открытую ссылку в новой вкладке режим **Internet Explorer,** когда они правой кнопкой мыши на ссылку.

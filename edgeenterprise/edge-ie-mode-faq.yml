@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: AndreaLBarr
   manager: srugh
-  ms.date: 08/31/2021
+  ms.date: 09/31/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Устранение неполадок и вопросы с ответами для режима Internet Explorer в Microsoft Edge
-  ms.openlocfilehash: 591d963ed807c65b580e74fe10ad989bdceb852e
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: b332f6b7399627e91d7dd51c624c3d56f9317ee5
+  ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11980023"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "12016538"
 title: Устранение неполадок режима IE и вопросы с ответами
 summary: >
   >[!Note]
@@ -79,8 +79,7 @@ sections:
 
 
       Чтобы убедиться, что Microsoft Edge установлен на уровне системы, введите "edge://version" в адресной строке Microsoft Edge. Путь к исполняемому файлу будет начинаться с *C:\Program Files*, что указывает на установку на уровне системы. Если путь к исполняемому файлу начинается с *C:\Users\*, удалите, а затем переустановите Microsoft Edge с правами администратора.
-  - question: >
-      Сообщение об ошибке: "Чтобы открыть эту страницу в режиме IE, попробуйте перезапустить Microsoft Edge".
+  - question: Получение сообщения об ошибке "Чтобы открыть эту страницу в режиме IE, попробуйте перезапустить Microsoft Edge".
     answer: >
       Эта ошибка может отображаться, если в Internet Explorer произошла непредвиденная ошибка. Перезапуск Microsoft Edge обычно исправляет эту ошибку.
   - question: >
@@ -99,7 +98,18 @@ sections:
       Да, настольное приложение Internet Explorer 11 будет отправлено в отставку и не будет поддерживаться 15 июня 2022 г. (список того, что имеется в области, [lifecycle FAQ — Internet Explorer](https://support.microsoft.com/help/17454/). Те же приложения и сайты IE11, которые вы используете сегодня, могут открываться в Microsoft Edge режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
   - question: >
       Как отлаживания моего устаревшего приложения при использовании режима IE на Microsoft Edge?
-    answer: "Вы можете использовать IEChooser для запуска devTools Internet Explorer для отладки содержимого вкладок режима IE. Чтобы использовать IEChooser, выполните следующие действия.\n1. Откройте IEChooser.\n    - Открывает диалоговое окно Выполнить Например, нажмите `Windows logo key`  +  `R` кнопку .\n    - Введите `%systemroot%\\system32\\f12\\IEChooser.exe` , а затем выберите **Ок**.\n2. В IEChooser выберите запись для вкладки режима IE.\n  \n"
+    answer: >
+      Вы можете использовать IEChooser для запуска devTools Internet Explorer для отладки содержимого вкладок режима IE. Чтобы использовать IEChooser, выполните следующие действия.
+
+      1. Откройте IEChooser.
+          - Открывает диалоговое окно Выполнить Например, нажмите `Windows logo key`  +  `R` кнопку .
+          - Введите `%systemroot%\system32\f12\IEChooser.exe` , а затем выберите **Ок**.
+      2. В IEChooser выберите запись для вкладки режима IE.
+  - question: Могу ли я протестировать сайт в Microsoft Edge, пока он настроен для открытия режима IE в списке Enterprise mode site list?
+    answer: >-
+      Да, в то время как вы модернизируете устаревшие сайты, вы можете протестировать приложения, настроенные в режиме IE, на Microsoft Edge. Для этого можно выполнить Microsoft Edge с `--ie-mode-test` флагом командной строки. Убедитесь, что другие экземпляры Microsoft Edge запущены.
+
+      Затем можно выбрать Параметры и больше (значок эллипсов ...) > Дополнительные средства > открыть сайты в режиме Edge.
   - question: >
       Можно ли использовать параметры "Открыть в проводнике" или "Просмотреть в проводнике" в SharePoint в режиме IE?
     answer: >
