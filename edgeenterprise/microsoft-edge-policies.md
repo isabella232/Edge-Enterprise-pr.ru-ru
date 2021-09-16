@@ -188,7 +188,7 @@ ms.locfileid: "11979943"
 |Имя политики|Заголовок|
 |-|-|
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|Контроль, какие нативные хосты обмена сообщениями могут использовать пользователи|
-|[NativeMessagingBlocklist](#nativemessagingblocklist)|Настроить собственный черный список сообщений|
+|[NativeMessagingBlocklist](#nativemessagingblocklist)|Настроить собственный список заблокированных сообщений|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|Разрешить собственные узлы обмена сообщениями на уровне пользователя (установлены без прав администратора)|
 ### [*<a name="password-manager-and-protection"></a>Менеджер паролей и защита*](#password-manager-and-protection-policies)
 
@@ -6375,7 +6375,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   ### <a name="nativemessagingblocklist"></a>NativeMessagingBlocklist
 
-  #### <a name="configure-native-messaging-block-list"></a>Настроить собственный черный список сообщений
+  #### <a name="configure-native-messaging-block-list"></a>Настроить собственный список заблокированных сообщений
 
   
   
@@ -8343,10 +8343,18 @@ SOFTWARE\Policies\Microsoft\Edge\InsecurePrivateNetworkRequestsAllowedForUrls\2 
 
 Эта политика переопределяет следующие отдельные политики:
 
-[ProxyMode](#proxymode)
-[ProxyPacUrl](#proxypacurl)
-[ProxyServer](#proxyserver)
-[ProxyBypassList](#proxybypasslist)
+
+            [ProxyMode](#proxymode)
+            
+
+            [ProxyPacUrl](#proxypacurl)
+            
+
+            [ProxyServer](#proxyserver)
+            
+
+            [ProxyBypassList](#proxybypasslist)
+          
 
 Настройка политики [ProxySettings](#proxysettings) допускает указанные ниже поля.
   * ProxyMode, который позволяет указать прокси-сервер, используемый Microsoft Edge, и запрещает пользователям менять параметры прокси
@@ -17188,19 +17196,40 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Примечание. Конкретные параметры конфигурации, отображаемые пользователю в режиме первого запуска, также могут управляться с помощью других специальных политик. Вы можете использовать политику HideFirstRunExperience в сочетании с этими политиками, чтобы настроить конкретную работу браузера на управляемых устройствах. Некоторые из этих других политик:
 
--[AutoImportAtFirstRun](#autoimportatfirstrun)
 
--[NewTabPageLocation](#newtabpagelocation)
+            -
+            [AutoImportAtFirstRun](#autoimportatfirstrun)
+          
 
--[NewTabPageSetFeedType](#newtabpagesetfeedtype)
 
--[ForceSync](#forcesync)
+            -
+            [NewTabPageLocation](#newtabpagelocation)
+          
 
--[SyncDisabled](#syncdisabled)
 
--[BrowserSignin](#browsersignin)
+            -
+            [NewTabPageSetFeedType](#newtabpagesetfeedtype)
+          
 
--[NonRemovableProfileEnabled](#nonremovableprofileenabled)
+
+            -
+            [ForceSync](#forcesync)
+          
+
+
+            -
+            [SyncDisabled](#syncdisabled)
+          
+
+
+            -
+            [BrowserSignin](#browsersignin)
+          
+
+
+            -
+            [NonRemovableProfileEnabled](#nonremovableprofileenabled)
+          
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17325,7 +17354,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge будет импортировать данные автозаполнения при первом запуске, но пользователи могут выбрать или очистить параметр **данных автозаполнения** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика управляет импортом из браузеров Google Chrome (в Windows 7, 8 и 10 и в macOS) и Mozilla Firefox (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание**: В настоящее время эта политика управляет импортом из браузеров Google Chrome (в Windows 7, 8 и 10 и в macOS) и Mozilla Firefox (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17393,7 +17423,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует настройки при первом запуске, но пользователи могут выбрать или очистить параметр **настроек браузера** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика управляет импортом Google Chrome (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание**: В настоящее время эта политика управляет импортом Google Chrome (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17459,7 +17490,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует файлы cookie при первом запуске.
 
-**Примечание**: В настоящее время эта политика управляет импортом Google Chrome (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание**: В настоящее время эта политика управляет импортом Google Chrome (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17527,7 +17559,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует расширения при первом запуске, но пользователи могут выбрать или очистить параметр **Избранное** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика поддерживает импорт только из Google Chrome (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание**: В настоящее время эта политика поддерживает импорт только из Google Chrome (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17595,7 +17628,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует избранное при первом запуске, но пользователи могут выбрать или очистить параметр **Избранное** во время импорта вручную.
 
-**Примечание**: Эта политика в настоящее время управляет импортом из Internet Explorer (в Windows 7, 8 и 10), Google Chrome (в Windows 7, 8 и 10 и в macOS), Mozilla Firefox (в Windows 7, 8 и 10 и в macOS) и браузеры Apple Safari (на macOS).
+
+            **Примечание**: Эта политика в настоящее время управляет импортом из Internet Explorer (в Windows 7, 8 и 10), Google Chrome (в Windows 7, 8 и 10 и в macOS), Mozilla Firefox (в Windows 7, 8 и 10 и в macOS) и браузеры Apple Safari (на macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17663,7 +17697,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует историю просмотров при первом запуске, но пользователи могут выбрать или очистить параметр **истории** при импорте вручную.
 
-**Примечание**: Эта политика в настоящее время управляет импортом из Internet Explorer (в Windows 7, 8 и 10), Google Chrome (в Windows 7, 8 и 10 и в macOS), Mozilla Firefox (в Windows 7, 8 и 10 и в macOS) и браузеры Apple Safari (macOS).
+
+            **Примечание**: Эта политика в настоящее время управляет импортом из Internet Explorer (в Windows 7, 8 и 10), Google Chrome (в Windows 7, 8 и 10 и в macOS), Mozilla Firefox (в Windows 7, 8 и 10 и в macOS) и браузеры Apple Safari (macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17731,7 +17766,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует настройки домашней страницы при первом запуске, но пользователи могут выбрать или очистить параметр **домашней страницы** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика управляет импортом из Internet Explorer (в Windows 7, 8 и 10).
+
+            **Примечание**: В настоящее время эта политика управляет импортом из Internet Explorer (в Windows 7, 8 и 10).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17799,7 +17835,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует открытые вкладки при первом запуске, но пользователи могут выбрать или очистить параметр **Открыть вкладки** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика поддерживает импорт только из Google Chrome (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание**: В настоящее время эта политика поддерживает импорт только из Google Chrome (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17867,7 +17904,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует платежную информацию при первом запуске, но пользователи могут выбрать или очистить параметр **платежной информации** при импорте вручную.
 
-**Примечание:** В настоящее время эта политика управляет импортом из Google Chrome (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание:** В настоящее время эта политика управляет импортом из Google Chrome (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -17935,7 +17973,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует пароли при первом запуске, но пользователи могут выбрать или очистить параметр **паролей** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика управляет импортом из Internet Explorer (в Windows 7, 8 и 10), Google Chrome (в Windows 7, 8 и 10 и в macOS) и Mozilla Firefox (в Windows 7, 8 и 10 и на macOS) браузеры.
+
+            **Примечание**: В настоящее время эта политика управляет импортом из Internet Explorer (в Windows 7, 8 и 10), Google Chrome (в Windows 7, 8 и 10 и в macOS) и Mozilla Firefox (в Windows 7, 8 и 10 и на macOS) браузеры.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -18003,7 +18042,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует настройки поисковой системы при первом запуске, но пользователи могут выбрать или очистить параметр **поисковой системы** во время импорта вручную.
 
-**Примечание**: В настоящее время эта политика управляет импортом из Internet Explorer (в Windows 7, 8 и 10).
+
+            **Примечание**: В настоящее время эта политика управляет импортом из Internet Explorer (в Windows 7, 8 и 10).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -18069,7 +18109,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы также можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует ярлыки при первом запуске.
 
-**Примечание**: В настоящее время эта политика управляет импортом из Google Chrome (в Windows 7, 8 и 10 и в macOS).
+
+            **Примечание**: В настоящее время эта политика управляет импортом из Google Chrome (в Windows 7, 8 и 10 и в macOS).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -18137,7 +18178,8 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 Вы можете установить эту политику в качестве рекомендации. Это означает, что Microsoft Edge импортирует параметры запуска при первом запуске, но пользователи могут выбрать или очистить **параметры браузера** во время ручного импорта.
 
-**Примечание.** В настоящее время эта политика управляет импортом из устаревших версий Microsoft Edge и из браузера Google Chrome (для Windows 7, 8 и 10).
+
+            **Примечание.** В настоящее время эта политика управляет импортом из устаревших версий Microsoft Edge и из браузера Google Chrome (для Windows 7, 8 и 10).
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -19138,7 +19180,8 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 Если эта политика не настроена, браузер будет использовать поведение по умолчанию для проверок перехвата DNS и вариантов перенаправления в интрасети. В M88 они включены по умолчанию, но будут отключены по умолчанию в будущем выпуске.
 
-[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) — это связанная политика, которая также может отключить проверки перехвата DNS. Однако эта политика является более гибкой версией, которая может отдельно управлять информационными панелями перенаправления в интрасети. Возможно, она будет развернута в будущем.
+
+            [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) — это связанная политика, которая также может отключить проверки перехвата DNS. Однако эта политика является более гибкой версией, которая может отдельно управлять информационными панелями перенаправления в интрасети. Возможно, она будет развернута в будущем.
 Если [DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) или эта политика запросит отключение проверок перехвата, проверки будут отключены.
 Если проверки перехвата DNS отключены с помощью этой политики, но политика [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar) включена, однословные запросы по-прежнему можно будет использовать для переходов в интрасети.
 
@@ -21513,7 +21556,8 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
 Если вы отключите эту политику, Microsoft Edge будет использовать собственные API-интерфейсы для решения проблем сетевого подключения и навигации.
 
-**Примечание**: За исключением Windows 8 и более поздних версий Windows, Microsoft Edge *всегда* использует собственные API-интерфейсы для решения проблем с подключением.
+
+            **Примечание**: За исключением Windows 8 и более поздних версий Windows, Microsoft Edge *всегда* использует собственные API-интерфейсы для решения проблем с подключением.
 
 Если вы не настроите эту политику, Microsoft Edge учитывает пользовательские настройки, установленные в разделе «Сервисы на edge://settings/privacy.
 В частности, есть переключатель **Использовать веб-сервис для устранения ошибок навигации**, который пользователь может включать или отключать. Помните, что если вы включили эту политику (ResolveNavigationErrorsUseWebService), параметр **Использовать веб-службу для устранения ошибок навигации** включен, но пользователь не может изменить параметр с помощью переключателя. Если вы отключили эту политику, параметр **Использовать веб-службу для устранения ошибок навигации** отключен, и пользователь не может изменить параметр с помощью переключателя.
@@ -21697,7 +21741,8 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
 Если эта политика отключена или не настроена, будут использоваться только обычные локальные профили.
 
-[SyncDisabled](#syncdisabled) отключает только облачную синхронизацию и не влияет на эту политику.
+
+            [SyncDisabled](#syncdisabled) отключает только облачную синхронизацию и не влияет на эту политику.
 
 Дополнительные сведения об использовании перемещаемых профилей пользователей см. на странице [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058).
 
