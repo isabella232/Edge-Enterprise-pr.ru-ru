@@ -10,16 +10,20 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: 04efca8825edd3764954dbf1455321bd1b4475ef
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 16d5bde6800bae3bb48b8698c332fdc4201c223a
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980213"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016548"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="september-11-2021"></a>11 сентября 2021 г.
+
+Корпорация Майкрософт выпустила последнюю версию канала **Microsoft Edge Stable Channel (версия 93.0.961.47)**, который включает последние обновления для системы безопасности проекта Chromium. Это обновление содержит [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632), который, по сообщению команды Chromium, содержал эксплойт.  Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide)
 
 ## <a name="september-9-2021"></a>9 сентября 2021 г.
 

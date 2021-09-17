@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 4feb2ae1b1d819e4c8c52421bee68bec6c5cb97c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 88a3636504f1d28c3a5aaddf5d3ce773b4c2318a
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980223"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016558"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -30,6 +30,13 @@ ms.locfileid: "11980223"
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-93096147-september-11"></a>Версия 93.0.961.47: 11 сентября
+
+> [!Important]
+> В этом обновлении [содержится CVE-2021-30632,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) который, по сообщениям группы Chromium, имеет действующий эксплойт. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-11-2021).
 
 ## <a name="version-93096144-september-9"></a>Версия 93.0.961.44: 9 сентября
 
@@ -112,7 +119,7 @@ ms.locfileid: "11980223"
 - 
             [WAMAuthBelowWin10RS3Enabled](/DeployEdge/microsoft-edge-policies#wamauthbelowwin10rs3enabled) Диспетчер учетных записей Windows включен для проверки подлинности в Windows 10 версий до WAMAuthBelowWin10RS3Enabled
 
-***Нерекомендуемая политика***
+***Устаревшая политика***
 
 - 
             [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
