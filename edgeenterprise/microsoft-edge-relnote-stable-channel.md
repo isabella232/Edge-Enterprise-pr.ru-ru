@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
-ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
+ms.openlocfilehash: 4feb2ae1b1d819e4c8c52421bee68bec6c5cb97c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938211"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980223"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -31,7 +31,11 @@ ms.locfileid: "11938211"
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-93096138-september-02"></a>Версия 93.0.961.38: 2 сентября
+## <a name="version-93096144-september-9"></a>Версия 93.0.961.44: 9 сентября
+
+Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-09-2021).
+
+## <a name="version-93096138-september-2"></a>Версия 93.0.961.38: 2 сентября
 
 Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-02-2021).
 
@@ -58,6 +62,73 @@ ms.locfileid: "11938211"
 - **Видео "картинка в картинке" (PiP) в панели инструментов, вызываемой при наведении курсора.**  При наведении курсора на поддерживаемое видео появляется панель инструментов, которая позволяет просматривать это видео в окне PiP.  Примечание. В настоящее время эта функция доступна для пользователей Microsoft Edge на macOS.  
 
 - **Удаление 3DES в TLS. Поддержка комплекта шифров TLS_RSA_WITH_3DES_EDE_CBC_SHA будет удалена.** Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в записи о [состоянии платформы Chrome](https://chromestatus.com/feature/6678134168485888). Кроме того, в Microsoft Edge версии 93 будет доступна политика [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) для поддержки сценариев, которым необходимо сохранение совместимости с устаревшими серверами. Эта политика совместимости устареет и перестанет работать в Microsoft Edge версии 95. Обновите затронутые серверы заранее.
+
+***Новые политики***
+
+- 
+            [AutoplayAllowlist](/DeployEdge/microsoft-edge-policies#autoplayallowlist) Разрешить автоматическое воспроизведение мультимедиа на определенных сайтах
+- 
+            [CECPQ2Enabled](/DeployEdge/microsoft-edge-policies#cecpq2enabled) Согласование постквантовых ключей CeCPQ2 включено для TLS
+- 
+            [ConfigureViewInFileExplorer](/DeployEdge/microsoft-edge-policies#configureviewinfileexplorer) Настройка функции "Просмотреть в проводнике" для страниц SharePoint в Microsoft Edge
+- 
+            [DefaultJavaScriptJitSetting](/DeployEdge/microsoft-edge-policies#defaultjavascriptjitsetting) Управление использованием JIT JavaScript
+- 
+            [ShowPDFDefaultRecommendationsEnabled](/DeployEdge/microsoft-edge-policies#showpdfdefaultrecommendationsenabled) Разрешить уведомлениям устанавливать Microsoft Edge в качестве программы чтения PDF-файлов по умолчанию
+- 
+            [FeatureFlagOverridesControl](/DeployEdge/microsoft-edge-policies#featureflagoverridescontrol) Настройка возможности пользователей переопределять флаги функций
+- 
+            [ImplicitSignInEnabled](/DeployEdge/microsoft-edge-policies#implicitsigninenabled) Включить неявный вход
+- 
+            [InternetExplorerIntegrationCloudSiteList](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudsitelist) Настройка списка облачных сайтов в режиме предприятия
+- 
+            [InternetExplorerIntegrationSiteListRefreshInterval](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) Настройка частоты обновления списка сайтов в режиме предприятия
+- 
+            [JavaScriptJitAllowedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitallowedforsites) Разрешить JavaScript использовать JIT на этих сайтах
+- 
+            [JavaScriptJitBlockedForSites](/DeployEdge/microsoft-edge-policies#javascriptjitblockedforsites) Запретить JavaScript использовать JIT на этих сайтах
+- 
+            [LocalBrowserDataShareEnabled](/DeployEdge/microsoft-edge-policies#localbrowserdatashareenabled) Включить Windows для поиска в локальных данных просмотра веб-страниц через Microsoft Edge
+- 
+            [MAUEnabled](/DeployEdge/microsoft-edge-policies#mauenabled) Всегда использовать службу автоматического обновления Майкрософт в качестве средства обновления для Microsoft Edge
+- 
+            [MSAWebSiteSSOUsingThisProfileAllowed](/DeployEdge/microsoft-edge-policies#msawebsitessousingthisprofileallowed) Разрешить единый вход для сайтов Майкрософт с использованием этого профиля
+- 
+            [OneAuthAuthenticationEnforced](/DeployEdge/microsoft-edge-policies#oneauthauthenticationenforced) Проверка подлинности OneAuth Flow для signin
+- 
+            [PasswordGeneratorEnabled](/DeployEdge/microsoft-edge-policies#passwordgeneratorenabled) Разрешить пользователям получать подсказку надежного пароля при каждом создании учетной записи в Интернете
+- 
+            [PrimaryPasswordSetting](/DeployEdge/microsoft-edge-policies#primarypasswordsetting) Настраивает параметр, предлагающий пользователям ввести пароль устройства при использовании автозаполнения паролей
+- 
+            [PrintingWebpageLayout](/DeployEdge/microsoft-edge-policies#printingwebpagelayout) Задает макет для печати
+- 
+            [RemoteDebuggingAllowed](/DeployEdge/microsoft-edge-policies#remotedebuggingallowed) Разрешить удаленную отладку
+- 
+            [RelaunchWindow](/DeployEdge/microsoft-edge-policies#relaunchwindow) Установка интервала времени для повторного запуска
+- 
+            [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) Включить помощь в поездках
+- 
+            [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) Включить шифры 3DES в TLS
+- 
+            [WAMAuthBelowWin10RS3Enabled](/DeployEdge/microsoft-edge-policies#wamauthbelowwin10rs3enabled) Диспетчер учетных записей Windows включен для проверки подлинности в Windows 10 версий до WAMAuthBelowWin10RS3Enabled
+
+***Нерекомендуемая политика***
+
+- 
+            [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
+
+***Устаревшая политика***
+
+- 
+            [NewTabPageSetFeedType](/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) Настройка взаимодействия с новой вкладкой Microsoft Edge
+
+***Дополнительные изменения***
+
+- 
+            [ConfigureShare](/DeployEdge/microsoft-edge-policies#configureshare) Добавление поддержки платформы Mac
+- 
+            [PasswordMonitorAllowed](/DeployEdge/microsoft-edge-policies#passwordmonitorallowed) Добавление поддержки платформы Mac
+
 
 ## <a name="version-92090284-august-26"></a>Версия 92.0.902.84: 26 августа
 
@@ -89,53 +160,76 @@ ms.locfileid: "11938211"
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
-**Пользователи могут легко перейти в режим Internet Explorer в Microsoft Edge**. Начиная с Microsoft Edge версии 92, пользователи могут перезагрузить сайт в режиме Internet Explorer в Microsoft Edge, а не в отдельном приложении IE 11 в ожидании настройки сайта в списке сайтов в режиме предприятия. Пользователям будет предложено добавить сайт в список локальных сайтов, чтобы переход на ту же страницу в Microsoft Edge автоматически происходил в режиме IE в течение следующих 30 дней. Вы можете использовать политику [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed), чтобы настроить это взаимодействие и разрешить доступ к точкам входа в режиме IE, а также настроить возможность добавления сайтов в список локальных сайтов. Вы можете использовать политику [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) для настройки количества дней, в течение которых сайты остаются в списке локальных сайтов. Обратите внимание, что комплексной работы для Windows 10 версии 1909 требуется KB5003698 или более поздняя версия, для Windows 10 версии 2004, Windows 10 версии 20H2 или Windows 10 версии 21H1 требуется KB5003690 или более поздняя версия. Дополнительные сведения см. в статье [локальный список сайтов в режиме IE](/deployedge/edge-ie-mode-local-site-list).
 
-**MHTML-файлы по умолчанию открываются в режиме Internet Explorer**. Начиная с Microsoft Edge версии 92 Stable, MHTML-файлы автоматически открываются в режиме Internet Explorer в Microsoft Edge, а не в приложении Internet Explorer (IE11). Это чаще всего наблюдается при попытке просмотра электронной почты Outlook в браузере. Это изменение будет происходить только в том случае, если IE11 является обработчиком по умолчанию для этого типа файлов. Изменить этот параметр при желании можно перед установкой обновления стабильной версии 92 с помощью [этого руководства](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+            **Пользователи могут легко перейти в режим Internet Explorer в Microsoft Edge**. Начиная с Microsoft Edge версии 92, пользователи могут перезагрузить сайт в режиме Internet Explorer в Microsoft Edge, а не в отдельном приложении IE 11 в ожидании настройки сайта в списке сайтов в режиме предприятия. Пользователям будет предложено добавить сайт в список локальных сайтов, чтобы переход на ту же страницу в Microsoft Edge автоматически происходил в режиме IE в течение следующих 30 дней. Вы можете использовать политику [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed), чтобы настроить это взаимодействие и разрешить доступ к точкам входа в режиме IE, а также настроить возможность добавления сайтов в список локальных сайтов. Вы можете использовать политику [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) для настройки количества дней, в течение которых сайты остаются в списке локальных сайтов. Обратите внимание, что комплексной работы для Windows 10 версии 1909 требуется KB5003698 или более поздняя версия, для Windows 10 версии 2004, Windows 10 версии 20H2 или Windows 10 версии 21H1 требуется KB5003690 или более поздняя версия. Дополнительные сведения см. в статье [локальный список сайтов в режиме IE](/deployedge/edge-ie-mode-local-site-list).
 
-**Предупреждение "Отключить расширения режима разработчика" можно отключить на 2 недели**. Начиная с Microsoft Edge версии 92, можно на 2 недели отложить предупреждение "Отключить расширения режима разработчика", выбрав этот вариант в раскрывающемся списке в диалоговом окне предупреждения.
 
-**Управляйте расширениями непосредственно с панели инструментов**. Совершенно новое меню расширений на панели инструментов позволит легко скрыть расширения или закрепить их. Быстрые ссылки на управление расширениями и поиск новых расширений упростят поиск новых расширений и управление существующими.
+            **MHTML-файлы по умолчанию открываются в режиме Internet Explorer**. Начиная с Microsoft Edge версии 92 Stable, MHTML-файлы автоматически открываются в режиме Internet Explorer в Microsoft Edge, а не в приложении Internet Explorer (IE11). Это чаще всего наблюдается при попытке просмотра электронной почты Outlook в браузере. Это изменение будет происходить только в том случае, если IE11 является обработчиком по умолчанию для этого типа файлов. Изменить этот параметр при желании можно перед установкой обновления стабильной версии 92 с помощью [этого руководства](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
-**По умолчанию для автоматического воспроизведения будет установлено ограничение**.  Чтобы помочь вам сосредоточиться на главном в Интернете, мы изменили значение по умолчанию для автоматического воспроизведения мультимедиа с "Разрешить" на "Ограничено", начиная с Microsoft Edge версии 92.
 
-**Платежные средства теперь синхронизируются между устройствами**. Начиная с Microsoft Edge версии 92, вы можете синхронизировать платежную информацию между устройствами, на которых вы выполнили вход. Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
+            **Предупреждение "Отключить расширения режима разработчика" можно отключить на 2 недели**. Начиная с Microsoft Edge версии 92, можно на 2 недели отложить предупреждение "Отключить расширения режима разработчика", выбрав этот вариант в раскрывающемся списке в диалоговом окне предупреждения.
+
+
+            **Управляйте расширениями непосредственно с панели инструментов**. Совершенно новое меню расширений на панели инструментов позволит легко скрыть расширения или закрепить их. Быстрые ссылки на управление расширениями и поиск новых расширений упростят поиск новых расширений и управление существующими.
+
+
+            **По умолчанию для автоматического воспроизведения будет установлено ограничение**.  Чтобы помочь вам сосредоточиться на главном в Интернете, мы изменили значение по умолчанию для автоматического воспроизведения мультимедиа с "Разрешить" на "Ограничено", начиная с Microsoft Edge версии 92.
+
+
+            **Платежные средства теперь синхронизируются между устройствами**. Начиная с Microsoft Edge версии 92, вы можете синхронизировать платежную информацию между устройствами, на которых вы выполнили вход. Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
 В настоящее время эта возможность доступна только в США и только для пользователей MSA (не AAD)
 
-**Улучшение передачи шрифтов**. Улучшена четкость и снижена размытость при передаче текста. Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
 
-**Функции кнопки панели инструментов, например "Избранное" и "Коллекции", запомнят выбор пользователя и закрепят соответствующие файлы в боковой части окна**. Теперь эта возможность включается по умолчанию, если пользователь закрепит кнопку панели инструментов. Она всегда будет открываться в состоянии закрепления, пока пользователь не открепит ее.
+            **Улучшение передачи шрифтов**. Улучшена четкость и снижена размытость при передаче текста. Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
 
-**Теперь пользователи могут использовать групповую политику для управления параметром "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля"**.  Параметр "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля" позволяет профилям, не принадлежащим к AAD, использовать единый вход для рабочих и учебных сайтов с помощью учетных данных компании или учебного заведения, имеющихся на компьютере. Этот параметр отображается для пользователей как переключатель в разделе "Параметры" -> "Профили" -> "Параметры профиля только для профилей, не принадлежащих к AAD".  Для настройки поведения можно использовать политику [AADWebSiteSOUsingThisProfileEnabled.](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)  
 
-**Работоспособность пароля** Важно использовать надежные и уникальные пароли для различных учетных записей, чтобы защитить себя в Интернете. Однако это проще сказать, чем сделать. У большинства пользователей выработались плохие привычки в отношении паролей, например использовать слабые пароли, которые легко угадать, или повторно использовать один надежный пароль для всех учетных записей.
+            **Функции кнопки панели инструментов, например "Избранное" и "Коллекции", запомнят выбор пользователя и закрепят соответствующие файлы в боковой части окна**. Теперь эта возможность включается по умолчанию, если пользователь закрепит кнопку панели инструментов. Она всегда будет открываться в состоянии закрепления, пока пользователь не открепит ее.
+
+
+            **Теперь пользователи могут использовать групповую политику для управления параметром "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля"**.  Параметр "Разрешить единый вход для рабочих и учебных сайтов с помощью этого профиля" позволяет профилям, не принадлежащим к AAD, использовать единый вход для рабочих и учебных сайтов с помощью учетных данных компании или учебного заведения, имеющихся на компьютере. Этот параметр отображается для пользователей как переключатель в разделе "Параметры" -> "Профили" -> "Параметры профиля только для профилей, не принадлежащих к AAD".  Для настройки поведения можно использовать политику [AADWebSiteSOUsingThisProfileEnabled.](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled)  
+
+
+            **Работоспособность пароля** Важно использовать надежные и уникальные пароли для различных учетных записей, чтобы защитить себя в Интернете. Однако это проще сказать, чем сделать. У большинства пользователей выработались плохие привычки в отношении паролей, например использовать слабые пароли, которые легко угадать, или повторно использовать один надежный пароль для всех учетных записей.
 
 Эта последняя версия Microsoft Edge позволяет несколько упростить задачу использования надежных и уникальных паролей. Теперь Microsoft Edge будет сообщать вам, достаточно ли надежны сохраненные пароли, а также указывать, использовались ли они на нескольких сайтах, что поможет вам защитить себя в Интернете. Сведения о работоспособности пароля можно найти в списке сохраненных паролей на странице edge://settings/passwords.
   
-**Дополнительная конфиденциальность сохраненных паролей** Если вы используете устройство вместе с другими пользователями или по какой-либо причине оставили компьютер незаблокированным, вы можете выбрать вторую проверку с использованием пароля устройства, чтобы другие пользователи не получили доступ к вашим паролям веб-сайтов. Просто!
 
-**Расширение Outlook**.  Эффективно управляйте папкой "Входящие", календарем, задачами и т. д. в Microsoft Outlook, не открывая новое окно браузера.  Новое расширение Outlook можно получить здесь: [Microsoft Outlook. Надстройки Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+            **Дополнительная конфиденциальность сохраненных паролей** Если вы используете устройство вместе с другими пользователями или по какой-либо причине оставили компьютер незаблокированным, вы можете выбрать вторую проверку с использованием пароля устройства, чтобы другие пользователи не получили доступ к вашим паролям веб-сайтов. Просто!
 
-**Microsoft Edge, соответствуя проекту с открытым кодом Chromium, обновляет способ отрисовки таблиц на веб-страницах**. С помощью этого изменения устраняются известные проблемы, и Microsoft Edge приближается к тому определенному способу отрисовки таблиц, который предполагается в других веб-браузерах. Рекомендуем протестировать важные рабочие процессы в вашей среде и убедиться в отсутствии непредвиденных проблем. Полное разъяснение см. [здесь](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit).
+
+            **Расширение Outlook**.  Эффективно управляйте папкой "Входящие", календарем, задачами и т. д. в Microsoft Outlook, не открывая новое окно браузера.  Новое расширение Outlook можно получить здесь: [Microsoft Outlook. Надстройки Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)
+
+
+            **Microsoft Edge, соответствуя проекту с открытым кодом Chromium, обновляет способ отрисовки таблиц на веб-страницах**. С помощью этого изменения устраняются известные проблемы, и Microsoft Edge приближается к тому определенному способу отрисовки таблиц, который предполагается в других веб-браузерах. Рекомендуем протестировать важные рабочие процессы в вашей среде и убедиться в отсутствии непредвиденных проблем. Полное разъяснение см. [здесь](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/edit).
 
 ### <a name="new-policies"></a>Новые политики
 
-- [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) Включение единого входа для рабочих и учебных сайтов с помощью этого профиля
-- [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Настройка автоматического использования HTTPS
-- [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Управление использованием режима без монитора
-- [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Указывает, следует ли разрешать небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети.
-- [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Разрешает перечисленным сайтам делать запросы к более закрытым конечным точкам сети из небезопасных контекстов
-- [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Указать количество дней, в течение которых сайт остается в локальном списке сайтов режима IE
-- [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Разрешить перезагрузку ненастроенных сайтов в режиме Internet Explorer
-- [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Указывает, разрешено ли использовать SharedArrayBuffers в контексте без изоляции от других источников
+- 
+            [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) Включение единого входа для рабочих и учебных сайтов с помощью этого профиля
+- 
+            [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Настройка автоматического использования HTTPS
+- 
+            [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Управление использованием режима без монитора
+- 
+            [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) Указывает, следует ли разрешать небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети.
+- 
+            [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Разрешает перечисленным сайтам делать запросы к более закрытым конечным точкам сети из небезопасных контекстов
+- 
+            [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Указать количество дней, в течение которых сайт остается в локальном списке сайтов режима IE
+- 
+            [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Разрешить перезагрузку ненастроенных сайтов в режиме Internet Explorer
+- 
+            [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Указывает, разрешено ли использовать SharedArrayBuffers в контексте без изоляции от других источников
 
 ### <a name="deprecated-policy"></a>Нерекомендуемая политика
 
-- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Разрешить тестирование режима Internet Explorer
+- 
+            [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Разрешить тестирование режима Internet Explorer
 
 ### <a name="obsoleted-policy"></a>Устаревшая политика
 
-- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Разрешить сертификаты, подписанные с помощью SHA-1 при выдаче локальными якорями доверия
+- 
+            [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Разрешить сертификаты, подписанные с помощью SHA-1 при выдаче локальными якорями доверия
 
 ## <a name="version-91086471-july-19"></a>Версия 91.0.864.71: 19 июля
 
@@ -180,18 +274,28 @@ ms.locfileid: "11938211"
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
-- **Определение сетевого трафика, исходя из контейнеров Application Guard в Microsoft Defender на уровне прокси-сервера**. Начиная с Microsoft Edge версии 91, для добавления тегов сетевого трафика, исходящего из контейнеров Application Guard, встраивается поддержка, что позволяет предприятиям идентифицировать их и применять определенные политики.
+- 
+            **Определение сетевого трафика, исходя из контейнеров Application Guard в Microsoft Defender на уровне прокси-сервера**. Начиная с Microsoft Edge версии 91, для добавления тегов сетевого трафика, исходящего из контейнеров Application Guard, встраивается поддержка, что позволяет предприятиям идентифицировать их и применять определенные политики.
 
-- **Параметр поддержки, позволяющий синхронизировать избранное из хоста в контейнер Edge Application Guard.** Начиная с Microsoft Edge версии 91, пользователи могут настроить Application Guard для синхронизации избранного из хоста в контейнер. Это также гарантирует появление нового избранного в контейнере.
+- 
+            **Параметр поддержки, позволяющий синхронизировать избранное из хоста в контейнер Edge Application Guard.** 
+           Начиная с Microsoft Edge версии 91, пользователи могут настроить Application Guard для синхронизации избранного из хоста в контейнер. Это также гарантирует появление нового избранного в контейнере.
 
-- **Начиная с Microsoft Edge версии 91 браузер автоматически прерывает загрузки типов, которые могут нанести вред вашему компьютеру, если они начинаются без взаимодействия с пользователем и не поддерживаются проверкой репутации приложений по данным SmartScreen.** Пользователи могут переопределять и продолжать загрузку, щелкнув правой кнопкой мыши и выбрав параметр "Keep" ("Сохранить") на элементе загрузки. Администраторы предприятия могут отказаться от этого, настроив следующую политику:
-  - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) – Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах
+- 
+            **Начиная с Microsoft Edge версии 91 браузер автоматически прерывает загрузки типов, которые могут нанести вред вашему компьютеру, если они начинаются без взаимодействия с пользователем и не поддерживаются проверкой репутации приложений по данным SmartScreen.** 
+           Пользователи могут переопределять и продолжать загрузку, щелкнув правой кнопкой мыши и выбрав параметр "Keep" ("Сохранить") на элементе загрузки. Администраторы предприятия могут отказаться от этого, настроив следующую политику:
+  - 
+            [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings.md) – Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах
 
     Дополнительные сведения см. в [Перебои загрузок Microsoft Edge Security](microsoft-edge-security-downloads-interruptions.md).
 
-- **Поддержка API распознавания речи.** Начиная с Microsoft Edge версии 91, добавляется поддержка API команд распознавания речи на Google.com и аналогичных сайтах. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
+- 
+            **Поддержка API распознавания речи.** 
+           Начиная с Microsoft Edge версии 91, добавляется поддержка API команд распознавания речи на Google.com и аналогичных сайтах. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
 
-- **Персонализация браузера с помощью новых цветовых тем.** Персонализируйте Microsoft Edge с помощью одной из четырнадцати новых цветовых тем на странице "Параметры - > Внешний вид". Вы также можете установить настраиваемые темы с сайта надстроек Microsoft Edge. [Подробнее](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
+- 
+            **Персонализация браузера с помощью новых цветовых тем.** 
+           Персонализируйте Microsoft Edge с помощью одной из четырнадцати новых цветовых тем на странице "Параметры - > Внешний вид". Вы также можете установить настраиваемые темы с сайта надстроек Microsoft Edge. [Подробнее](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
 
 ### <a name="policy-updates"></a>Обновления политик
 
@@ -199,16 +303,23 @@ ms.locfileid: "11938211"
 
 Добавлено шесть новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики:
 
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) — идентификация трафика Application Guard
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) — явно разрешенные сетевые порты
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) — разрешение импорта параметров страниц запуска
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) — позволяет пользователям вставлять фрагменты математических задач и получать решение с пошаговым объяснением в Microsoft Edge
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) — разрешает содержимое Microsoft News на новой странице вкладки
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) — разрешает быстрые ссылки на новой странице вкладки
+- 
+            [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) — идентификация трафика Application Guard
+- 
+            [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) — явно разрешенные сетевые порты
+- 
+            [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) — разрешение импорта параметров страниц запуска
+- 
+            [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) — позволяет пользователям вставлять фрагменты математических задач и получать решение с пошаговым объяснением в Microsoft Edge
+- 
+            [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) — разрешает содержимое Microsoft News на новой странице вкладки
+- 
+            [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) — разрешает быстрые ссылки на новой странице вкладки
 
 #### <a name="obsoleted-policy"></a>Устаревшая политика
 
-- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) — включает упреждающую проверку подлинности
+- 
+            [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) — включает упреждающую проверку подлинности
 <!-- end major 91 -->
 
 ## <a name="version-90081866-may-20"></a>Версия 90.0.818.66: 20 мая
@@ -256,11 +367,14 @@ ms.locfileid: "11938211"
 
 - **Режим терминала** Начиная с Microsoft Edge версии 90, мы заблокировали параметры печати пользовательского интерфейса, чтобы разрешить только настроенные принтеры и параметры "Печать в PDF". Кроме того, мы усовершенствовали режим терминала с одним приложением, чтобы ограничить запуск других приложений из браузера. Дополнительные сведения о функциях режима терминала см. [здесь.](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features)
 
-- **Прерывание загрузки** Начиная с Microsoft Edge версии 91 браузер автоматически прерывает загрузки типов, которые могут нанести вред вашему компьютеру, если они начинаются без взаимодействия с пользователем и не поддерживаются проверкой репутации приложений SmartScreen. Пользователи могут переопределять и продолжать загрузку, щелкнув правой кнопкой мыши и выбрав параметр "Keep" ("Сохранить") на элементе загрузки.
+- 
+            **Прерывание загрузки** Начиная с Microsoft Edge версии 91 браузер автоматически прерывает загрузки типов, которые могут нанести вред вашему компьютеру, если они начинаются без взаимодействия с пользователем и не поддерживаются проверкой репутации приложений SmartScreen. Пользователи могут переопределять и продолжать загрузку, щелкнув правой кнопкой мыши и выбрав параметр "Keep" ("Сохранить") на элементе загрузки.
 Администраторы предприятия могут отказаться от этого с помощью одной из этих двух политик:
-- [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) – Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах. Дополнительные сведения см. в статье [Перебои загрузок в Microsoft Edge Security](/deployedge/microsoft-edge-security-downloads-interruptions)
+- 
+            [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) – Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах. Дополнительные сведения см. в статье [Перебои загрузок в Microsoft Edge Security](/deployedge/microsoft-edge-security-downloads-interruptions)
 
-- **Печать**:
+- 
+            **Печать**:
 
     - **Новый режим растеризации печати для принтеров без PostScript.** Начиная с Microsoft Edge версии 90, администраторы могут использовать новую политику для определения режима растеризации печати для своих пользователей. Эта политика управляет печатью из Microsoft Edge на принтерах в Windows без PostScript. Иногда для правильной печати на принтерах без поддержки PostScript необходимо правильно растеризовать задания для печати. Возможные настройки - Полная и Быстрая.
     
@@ -272,7 +386,8 @@ ms.locfileid: "11938211"
 
     -   **Пользователи могут искать предложения автозаполнения, даже если форма или поле не обнаружены.** Теперь, если у вас есть сведения, сохраненные в Microsoft Edge, предложения по автозаполнению всплывают автоматически, помогая сэкономить время при заполнении форм. Если автозаполнение не работает для формы или если вы хотите получить данные в формах, обычно не имеющих автозаполнения (например, временные формы), вы можете искать информацию с помощью автозаполнения.
 
--   **Доступ к загрузкам из раскрывающегося меню в панели меню.** Загрузки будут показаны в правом верхнем углу, причем все загрузки, активные в данный момент, будут располагаться рядом. Это меню легко закрыть, чтобы продолжать просматривать веб-страницу и при этом отслеживать общий ход скачивания прямо на панели инструментов. [Подробнее](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+-   **Доступ к загрузкам из раскрывающегося меню в панели меню.** Загрузки будут показаны в правом верхнем углу, причем все загрузки, активные в данный момент, будут располагаться рядом. Это меню легко закрыть, чтобы продолжать просматривать веб-страницу и при этом отслеживать общий ход скачивания прямо на панели инструментов. 
+            [Подробнее](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
 
 -   **Улучшения визуализации шрифтов.** Начиная с Microsoft Edge версии 90, мы улучшили визуализацию текста для повышения четкости и уменьшения размытости. Часть улучшений отрисовки шрифтов появится уже в бета-версии 90, но будет отключена по умолчанию.
 
@@ -283,26 +398,43 @@ ms.locfileid: "11938211"
 ## <a name="new-policies"></a>Новые политики
 
 Добавлено восемь новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики:
--   [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) — включена синхронизация избранного Application Guard
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Идентификация трафика Application Guard
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) Явно разрешенные сетевые порты
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) Разрешение импорта параметров страниц запуска
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) Позволяет пользователям вставлять фрагменты математических задач и получать решение с пошаговым объяснением в Microsoft Edge
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) Разрешает содержимое Microsoft News на новой странице вкладки
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) Разрешает быстрые ссылки на новой странице вкладки
--   [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown) Получение сведений о продолжительности активности при завершении работы
--   [ManagedConfigurationPerOrigin](/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) — задает управляемые значения конфигурации для веб-сайтов в определенных источниках
--   [PrintRasterizationMode](/DeployEdge/microsoft-edge-policies#printrasterizationmode) — режим растеризации печати
--   [QuickViewOfficeFilesEnabled](/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) — управление возможностями быстрого просмотра файлов Office в Microsoft Edge
--   [SSLErrorOverrideAllowedForOrigins](/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) — разрешить пользователям переходить дальше со страницы предупреждения HTTPS для определенных источников
--   [WindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#windowocclusionenabled) — включить загораживание окна
--   [WindowsHelloForHTTPAuthEnabled](/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) — включена Windows Hello для HTTP Auth
+-   
+            [ApplicationGuardFavoritesSyncEnabled](/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled) — включена синхронизация избранного Application Guard
+- 
+            [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) Идентификация трафика Application Guard
+- 
+            [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) Явно разрешенные сетевые порты
+- 
+            [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) Разрешение импорта параметров страниц запуска
+- 
+            [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) Позволяет пользователям вставлять фрагменты математических задач и получать решение с пошаговым объяснением в Microsoft Edge
+- 
+            [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) Разрешает содержимое Microsoft News на новой странице вкладки
+- 
+            [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) Разрешает быстрые ссылки на новой странице вкладки
+-   
+            [FetchKeepaliveDurationSecondsOnShutdown](/DeployEdge/microsoft-edge-policies#fetchkeepalivedurationsecondsonshutdown) Получение сведений о продолжительности активности при завершении работы
+-   
+            [ManagedConfigurationPerOrigin](/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin) — задает управляемые значения конфигурации для веб-сайтов в определенных источниках
+-   
+            [PrintRasterizationMode](/DeployEdge/microsoft-edge-policies#printrasterizationmode) — режим растеризации печати
+-   
+            [QuickViewOfficeFilesEnabled](/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) — управление возможностями быстрого просмотра файлов Office в Microsoft Edge
+-   
+            [SSLErrorOverrideAllowedForOrigins](/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) — разрешить пользователям переходить дальше со страницы предупреждения HTTPS для определенных источников
+-   
+            [WindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#windowocclusionenabled) — включить загораживание окна
+-   
+            [WindowsHelloForHTTPAuthEnabled](/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled) — включена Windows Hello для HTTP Auth
 
 ## <a name="deprecated-policies"></a>Нерекомендуемые политики
 
-- [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled) Включает упреждающую проверку подлинности.
--   [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) — включить встроенное загораживание окна
--   [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin)— включена минимальная версия TLS
+- 
+            [ProactiveAuthEnabled](/DeployEdge/microsoft-edge-policies#proactiveauthenabled) Включает упреждающую проверку подлинности.
+-   
+            [NativeWindowOcclusionEnabled](/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) — включить встроенное загораживание окна
+-   
+            [SSLVersionMin](/DeployEdge/microsoft-edge-policies#sslversionmin)— включена минимальная версия TLS
 
 ## <a name="version-89077477-april-14"></a>Версия 89.0.774.77: 14 апреля
 
@@ -363,19 +495,29 @@ ms.locfileid: "11938211"
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
-- **Режим терминала включает дополнительные возможности блокировки.** Начиная с Microsoft Edge версии 89, мы добавили дополнительные возможности блокировки в режиме терминала, чтобы пользователи могли работать эффективно и безопасно. [Подробнее](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
+- 
+            **Режим терминала включает дополнительные возможности блокировки.** 
+           Начиная с Microsoft Edge версии 89, мы добавили дополнительные возможности блокировки в режиме терминала, чтобы пользователи могли работать эффективно и безопасно. 
+            [Подробнее](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
-- **Средство Enterprise Mode Site List Manager будет доступно в браузере на странице *edge://compat***. Это средство можно использовать для создания, изменения и экспорта XML списка сайтов для режима Internet Explorer в Microsoft Edge. Доступ к этому средству можно получить при необходимости с помощью групповой политики. [Подробнее](./edge-ie-mode-site-list-manager.md).
+- 
+            **Средство Enterprise Mode Site List Manager будет доступно в браузере на странице *edge://compat***. Это средство можно использовать для создания, изменения и экспорта XML списка сайтов для режима Internet Explorer в Microsoft Edge. Доступ к этому средству можно получить при необходимости с помощью групповой политики. 
+            [Подробнее](./edge-ie-mode-site-list-manager.md).
 
-- **Повышение производительности браузера с помощью спящих вкладок**. Функция спящих вкладок повышает производительность браузера, переводя неактивные вкладки в спящий режим, чтобы освободить системные ресурсы, такие как память и процессор, и использовать их для активных вкладок или других приложений. Пользователи могут предотвратить переход сайтов в спящий режим и настроить время, по истечении которого неактивная вкладка перейдет в спящий режим. Чтобы пользователи могли оставаться в потоке, существуют также [эвристические методы](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434), которые предотвращают переход определенных сайтов, например сайтов интрасети, в спящий режим. Управлять этой возможностью можно с помощью групповых политик.
+- 
+            **Повышение производительности браузера с помощью спящих вкладок**. Функция спящих вкладок повышает производительность браузера, переводя неактивные вкладки в спящий режим, чтобы освободить системные ресурсы, такие как память и процессор, и использовать их для активных вкладок или других приложений. Пользователи могут предотвратить переход сайтов в спящий режим и настроить время, по истечении которого неактивная вкладка перейдет в спящий режим. Чтобы пользователи могли оставаться в потоке, существуют также [эвристические методы](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434), которые предотвращают переход определенных сайтов, например сайтов интрасети, в спящий режим. Управлять этой возможностью можно с помощью групповых политик.
 
-- **Сброс данных синхронизации Microsoft Edge в облаке вручную**. Мы представляем способ сброса данных синхронизации Microsoft Edge из продукта. Это гарантирует очистку данных из служб Майкрософт, а также устранение определенных проблем с продуктом, которые ранее требовали передачи заявки в службу поддержки.
+- 
+            **Сброс данных синхронизации Microsoft Edge в облаке вручную**. Мы представляем способ сброса данных синхронизации Microsoft Edge из продукта. Это гарантирует очистку данных из служб Майкрософт, а также устранение определенных проблем с продуктом, которые ранее требовали передачи заявки в службу поддержки.
 
-- **Интеллектуальный единый вход (SSO Windows Azure) для всех учетных записей Active Directory (Azure AD) Windows Azure для пользователей с одним профилем Microsoft Edge, не входящим в Azure AD**.  Автоматически включите этот параметр для пользователей, которые могут извлечь больше всего пользы из этой функции. Если у пользователя есть только один профиль Microsoft Edge (и это не Azure AD и не Kids Mode), параметр будет автоматически включен при запуске Microsoft Edge. Этот автоматический переключатель также автоматически отключится, если пользователь позже решит войти в другой профиль Microsoft Edge с учетной записью Azure AD. Из этого профиля пользователи могут вручную обновлять свои настройки этой функции на странице **Параметры > Профили >Профили > Разрешить один вход** для работы или школьных сайтов.
+- 
+            **Интеллектуальный единый вход (SSO Windows Azure) для всех учетных записей Active Directory (Azure AD) Windows Azure для пользователей с одним профилем Microsoft Edge, не входящим в Azure AD**.  Автоматически включите этот параметр для пользователей, которые могут извлечь больше всего пользы из этой функции. Если у пользователя есть только один профиль Microsoft Edge (и это не Azure AD и не Kids Mode), параметр будет автоматически включен при запуске Microsoft Edge. Этот автоматический переключатель также автоматически отключится, если пользователь позже решит войти в другой профиль Microsoft Edge с учетной записью Azure AD. Из этого профиля пользователи могут вручную обновлять свои настройки этой функции на странице **Параметры > Профили >Профили > Разрешить один вход** для работы или школьных сайтов.
 
-- **Усовершенствования в области выделения текста в документах PDF**. Пользователи начнут более плавный и согласованный выбор текста в документах PDF, открытых в Microsoft Edge, начиная с версии 89.
+- 
+            **Усовершенствования в области выделения текста в документах PDF**. Пользователи начнут более плавный и согласованный выбор текста в документах PDF, открытых в Microsoft Edge, начиная с версии 89.
 
-- **Поле даты рождения теперь поддерживается автозаполнением**. В настоящее время Microsoft Edge позволяет сэкономить время и усилия при заполнении форм и создании учетных записей в Интернете путем автоматического заполнения таких данных, как адреса, имена, номера телефонов и т. д. Начиная с Microsoft Edge версии 89, мы добавляем поддержку для другого поля, которое можно сохранить и заполнить автоматически — дата рождения. Вы можете просматривать, изменять и удалять эти сведения в любое время в параметрах профиля.
+- 
+            **Поле даты рождения теперь поддерживается автозаполнением**. В настоящее время Microsoft Edge позволяет сэкономить время и усилия при заполнении форм и создании учетных записей в Интернете путем автоматического заполнения таких данных, как адреса, имена, номера телефонов и т. д. Начиная с Microsoft Edge версии 89, мы добавляем поддержку для другого поля, которое можно сохранить и заполнить автоматически — дата рождения. Вы можете просматривать, изменять и удалять эти сведения в любое время в параметрах профиля.
 
 ### <a name="policy-updates"></a>Обновления политик
 
@@ -383,21 +525,31 @@ ms.locfileid: "11938211"
 
 Добавлено семь новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики.
 
-- [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) — параметры времени существования данных браузера
-- [MAMEnabled](./microsoft-edge-policies.md#mamenabled) — управление мобильными приложениями включено
-- [DefinePreferredLanguages](./microsoft-edge-policies.md#definepreferredlanguages) — определение упорядоченного списка предпочитаемых языков, на которых должны отображаться веб-сайты, если сайт поддерживает этот язык
-- [ShowRecommendationsEnabled](./microsoft-edge-policies.md#showrecommendationsenabled) — разрешение рекомендаций и рекламных уведомлений от Microsoft Edge
-- [PrintingAllowedBackgroundGraphicsModes](./microsoft-edge-policies.md#printingallowedbackgroundgraphicsmodes) — ограничение режима печати фона
-- [PrintingBackgroundGraphicsDefault](./microsoft-edge-policies.md#printingbackgroundgraphicsdefault) — режим печати фоновой графики по умолчанию
-- [SmartActionsBlockList](./microsoft-edge-policies.md#smartactionsblocklist) — блокировка интеллектуальных действий для списка служб
+- 
+            [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) — параметры времени существования данных браузера
+- 
+            [MAMEnabled](./microsoft-edge-policies.md#mamenabled) — управление мобильными приложениями включено
+- 
+            [DefinePreferredLanguages](./microsoft-edge-policies.md#definepreferredlanguages) — определение упорядоченного списка предпочитаемых языков, на которых должны отображаться веб-сайты, если сайт поддерживает этот язык
+- 
+            [ShowRecommendationsEnabled](./microsoft-edge-policies.md#showrecommendationsenabled) — разрешение рекомендаций и рекламных уведомлений от Microsoft Edge
+- 
+            [PrintingAllowedBackgroundGraphicsModes](./microsoft-edge-policies.md#printingallowedbackgroundgraphicsmodes) — ограничение режима печати фона
+- 
+            [PrintingBackgroundGraphicsDefault](./microsoft-edge-policies.md#printingbackgroundgraphicsdefault) — режим печати фоновой графики по умолчанию
+- 
+            [SmartActionsBlockList](./microsoft-edge-policies.md#smartactionsblocklist) — блокировка интеллектуальных действий для списка служб
 
 #### <a name="obsoleted-policies"></a>Устаревшие политики
 
 Ниже приводятся устаревшие политики.
 
-- [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) — использование политики ссылок по умолчанию для no-referrer-when-downgrade
-- [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) — включение отчетов с данными об использовании и сбоях
-- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) — отправка сведений о сайте для улучшения служб Майкрософт
+- 
+            [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) — использование политики ссылок по умолчанию для no-referrer-when-downgrade
+- 
+            [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) — включение отчетов с данными об использовании и сбоях
+- 
+            [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) — отправка сведений о сайте для улучшения служб Майкрософт
 <!-- end major 89 -->
 
 <!-- Archive from 86.0.622.43: October 15 to beta 88.0.705.81: February 25  ->
