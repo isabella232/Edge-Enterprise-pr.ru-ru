@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/09/2021
+ms.date: 09/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 88a3636504f1d28c3a5aaddf5d3ce773b4c2318a
-ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
+ms.openlocfilehash: cf37c34aa1c0d61e2118acf8a599ff574d6ff156
+ms.sourcegitcommit: dbe3fb9932022554c118ac02d4e9ab5f09c53709
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "12016558"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "12018989"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -31,10 +31,17 @@ ms.locfileid: "12016558"
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
 
-## <a name="version-93096147-september-11"></a>Версия 93.0.961.47: 11 сентября
+## <a name="version-93096152-september-16"></a>Версия 93.0.961.52: 16 сентября
+
+>[!Important]
+>В этом обновлении содержится исправление уязвимости [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Обновления для системы безопасности в стабильном канале перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-16-2021).
+
+## <a name="version-93096147-september-11"></a>Версия93.0.961.47: 11сентября
 
 > [!Important]
-> В этом обновлении [содержится CVE-2021-30632,](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632) который, по сообщениям группы Chromium, имеет действующий эксплойт. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+> В этом обновлении содержится исправление уязвимости [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
 
 Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-11-2021).
 
