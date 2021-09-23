@@ -3,23 +3,25 @@ title: Функции ClickOnce и DirectInvoke в Microsoft Edge
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge.
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979585"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034438"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Общие сведения о функциях ClickOnce и DirectInvoke в Microsoft Edge
 
 ClickOnce DirectInvoke — это функции, доступные в IE и Microsoft Edge, которые поддерживают использование обработера файлов для скачивания файлов с веб-сайта. Несмотря на то что у этих функций разное назначение, они позволяют указывать веб-сайтам, что запрошенный для скачивания файл, передается в обработчик файлов на устройстве пользователя. Запросы ClickOnce обрабатываются с помощью собственного обработчика файлов в Windows. Запросы DirectInvoke обрабатываются зарегистрированным обработчиком файлов, заданным веб-сайтом, на котором размещен файл.
+
+После настройки ClickOnce directInvoke запросы ClickOnce directInvoke можно обойти, направив дополнительные корпоративные политики. Эти политики могут поддерживать обход ClickOnce или directInvoke для указанных типов файлов для всех доменов или для указанных типов файлов из указанных доменов.
 
 Дополнительные сведения об этих функциях см. в следующих статьях.
 
@@ -88,6 +90,10 @@ ClickOnce DirectInvoke — это функции, доступные в IE и Mi
 ## <a name="clickonce-and-directinvoke-policies"></a>Политики ClickOnce и DirectInvoke
 
 Существует две групповых политики, которые можно использовать для включения и отключения функций ClickOnce и DirectInvoke для корпоративных пользователей. Этими политиками являются [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) и [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled). Эти две политики в редакторе групповой политики называются "Разрешить пользователям открывать файлы с использованием протокола ClickOnce" и "Разрешить пользователям открывать файлы с использованием протокола DirectInvoke" соответственно.
+
+Чтобы указать тип файла(ы), для ClickOnce или directInvoke, используйте политику, помеченную в редакторе групповой политики, как "Список типов файлов, которые должны быть автоматически открыты при загрузке". Это позволит автоматически открывать указанные типы файлов после загрузки для всех доменов.  
+
+Чтобы обойти запросы ClickOnce или DirectInvoke для определенных типов файлов для определенных доменов, настройка двух дополнительных политик, помеченных в редакторе групповой политики, как "Список типов файлов, которые должны быть автоматически открыты при загрузке" и "URL-адреса, AutoOpen-FileTypes могут применяться". Обратите внимание, что политика "URL-адреса, на которые могут применяться autoOpen-FileTypes", является политикой поддержки "Список типов файлов, которые должны быть автоматически открыты при загрузке" и не делает ничего самостоятельно.  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>Поведение ClickOnce и DirectInvoke
 
