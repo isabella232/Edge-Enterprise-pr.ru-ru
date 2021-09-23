@@ -1,9 +1,9 @@
 ---
 title: Документация по политикам Центра обновления Microsoft Edge
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация по всем политикам, поддерживаемым средством обновления Microsoft Edge
-ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980080"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037219"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge — политики обновления
 
@@ -35,12 +35,13 @@ ms.locfileid: "11980080"
 |[InstallDefault](#installdefault)|Разрешить установку по умолчанию|
 |[UpdateDefault](#updatedefault)|Переопределение политики обновления по умолчанию|
 |[Install](#install)|Разрешить установку (для канала)|
-|[Обновление](#update)|Переопределение политики обновления (для канала)|
+|[Update](#update)|Переопределение политики обновления (для канала)|
 |[Allowsxs](#allowsxs)|Разрешить параллельный запуск разных типов браузеров Microsoft Edge|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Запрет создания ярлыка на рабочем столе при установке по умолчанию|
 |[CreateDesktopShortcut](#createdesktopshortcut)|Запрет создания ярлыка на рабочем столе при установке (для каналов)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Откат к целевой версии (для каналов)|
 |[TargetVersionPrefix](#targetversionprefix)|Переопределение целевой версии (для каналов)|
+|[TargetChannelOverride](#targetchanneloverride)|Переопределения целевого канала (только стабильный)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Извлечение конфигураций и экспериментов|
 ### [<a name="preferences"></a>Предпочтения](#preferences-policies)
 |Имя политики|Заголовок|
@@ -397,6 +398,42 @@ updates disabled 0x00000000
 ##### <a name="example-value"></a>Пример значения:
 ```
 83.0.499.12
+```
+[В начало](#microsoft-edge---update-policies)
+
+### <a name="targetchanneloverride"></a>TargetChannelOverride
+>Центр обновления Microsoft Edge 1.3.147.1 и более поздней
+
+#### <a name="description"></a>Описание
+Указывает, Microsoft Edge канал должен быть обновлен. 
+
+Если включить этот poicy, Microsoft Edge будет обновлена до канала в соответствии с настройкой следующих параметров:
+
+  - Стабильная: Microsoft Edge будет обновлена до последней стабильной версии.
+  - Бета-версия: Microsoft Edge будет обновлена до последней бета-версии.
+  - Dev: Microsoft Edge будет обновлена до последней версии разработчика.
+  - Расширенная стабильная: Microsoft Edge будет обновлена до последней расширенной стабильной версии, которая следует более длительной каденции выпуска, чем стабильная. Дополнительные сведения можно получить на сайте https://go.microsoft.com/fwlink/?linkid=2163508 .
+
+Если эта политика не настроена, Microsoft Edge будет обновлена до последней версии, доступной для канала Stable.
+
+Эта политика доступна только на Microsoft Edge Stable.
+
+Эта политика доступна только для экземпляров Windows, присоединенных к домену Microsoft® Active Directory®.
+#### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+- Уникальное имя GP: TargetChannelOverride
+- Имя GP: переопределения целевого канала
+- Путь к групповой политике: 
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
+- Имя ADMX-файла групповой политики: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+- Путь: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Имя значения: 
+  - (Стабильный): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- Тип значения: REG_SZ
+##### <a name="example-value"></a>Пример значения:
+```
+extended
 ```
 [В начало](#microsoft-edge---update-policies)
 
