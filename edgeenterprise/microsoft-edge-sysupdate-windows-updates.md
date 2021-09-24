@@ -1,21 +1,21 @@
 ---
 title: Обновления Windows для Microsoft Edge
 ms.author: jtkim
-author: dan-wesley
+author: RyanHechtMSFT
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Обновления Windows для Microsoft Edge.
-ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979641"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037209"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge
 
@@ -29,7 +29,7 @@ ms.locfileid: "11979641"
 
 ## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Цикл выпуска Microsoft Edge и Windows
 
-Новая версия Microsoft Edge будет поддерживать более гибкие возможности обновления, которые будут предоставляться для нее чаще. Так как выпуски браузера не привязаны к основным выпускам Windows, изменения будут вноситься в операционную систему, чтобы гарантировать оптимальную совместимость следующей версии Microsoft Edge с Windows. Результатом будет выпуск обновления компонентов в 6-недельном цикле (приблизительно). Обновления для системы безопасности и совместимости будут предоставляться по мере необходимости.
+Новая версия Microsoft Edge будет поддерживать более гибкие возможности обновления, которые будут предоставляться для нее чаще. Так как выпуски браузера не привязаны к основным выпускам Windows, изменения будут вноситься в операционную систему, чтобы гарантировать оптимальную совместимость следующей версии Microsoft Edge с Windows. Результатом будет выпуск обновления компонентов в 4-недельном цикле (приблизительно). Обновления для системы безопасности и совместимости будут предоставляться по мере необходимости.
 
 ## <a name="updates-and-the-user-experience"></a>Обновления и интерфейс
 
