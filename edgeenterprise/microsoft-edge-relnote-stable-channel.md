@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/22/2021
+ms.date: 09/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: ffd0beb7533edf88fdab9402cb2486e71b1773e6
-ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
+ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
+ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12034448"
+ms.lasthandoff: 09/25/2021
+ms.locfileid: "12044841"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -30,6 +30,43 @@ ms.locfileid: "12034448"
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099231-september-24"></a>Версия 94.0.992.31: 24 сентября
+
+> [!Important]
+> В этом обновлении содержится исправление уязвимости [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [Руководстве по обновлению системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Microsoft Edge завершил переход на 4-недельный цикл обновлений.**  Мы перешли на новый 4-недельный цикл выпуска основных версий. Дополнительные сведения см. здесь: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+
+- **Доступен новый вариант выпуска "Расширенный стабильный".**  Мы предлагаем новый вариант выпуска "Расширенный стабильный" для управляемых корпоративных клиентов. Вариант выпуска "Расширенный стабильный" будет сохраняться в четных версиях и обновляться каждые 8 недель. Система безопасности будет обновляться каждые две недели.  Дополнительные сведения см. здесь: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+
+- **Улучшение поведения по умолчанию при открытии MHTML-файлов.**  MHTML-файлы будут по-прежнему открываться в режиме IE (если он включен), если только они не были сохранены в Microsoft Edge (с помощью параметров "Сохранить как" или "Сохранить страницу как"). Если файл сохранен в Microsoft Edge, он будет открываться только в Microsoft Edge.  Это изменение устраняет проблему отрисовки, которая наблюдалась при открытии MHTML-файлов, сохраненных в Microsoft Edge, в режиме IE.
+
+- **Ограничение запросов частной сети безопасными контекстами.** При доступе к ресурсам в локальных (частных) сетях со страниц в Интернете требуется, чтобы эти страницы доставлялись по протоколу HTTPS. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в [записи о состоянии платформы Chrome](https://chromestatus.com/feature/5436853517811712). Для поддержки сценариев, необходимых для сохранения совместимости с незащищенными страницами, доступны две политики совместимости: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) и [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
+
+- **Блокировка скачивания смешанного контента.** На защищенных страницах разрешено скачивание только файлов, размещенных на других защищенных страницах, а загрузки, размещенные на незащищенных (отличных от HTTPS) страницах, блокируются, если они инициируются с защищенной страницы. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в [записи блога безопасности Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
+
+- **Включение неявного входа для локальных учетных записей.** Если включить политику [OnlyOnPremisesImplicitSigninEnabled](/deployedge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled), неявный вход будет включен только для локальных учетных записей.  Браузер Microsoft Edge не будет пытаться выполнять неявный вход в учетные записи MSA и AAD. Переход с локальных учетных записей на учетные записи AAD также будет остановлен.
+
+- **Новая страница сведений о специальных возможностях.**  Сведения о специальных возможностях теперь доступны на отдельной странице. Новую страницу можно найти в списке основных параметров edge://settings/accessibility. Здесь находятся параметры для увеличения масштаба веб-страницы и отображения хорошо заметного контура вокруг области фокусировки, а также другие параметры, позволяющие улучшить просмотр веб-страниц. Мы продолжим добавлять здесь новые параметры для будущих версий Microsoft Edge.
+
+***Новые политики***
+
+- 
+            [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) — позволяет игнорировать конфигурацию списка сайтов Application Guard и просматривать сайты в Edge обычным образом.
+- 
+            [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) — включает неявный вход только для локальных учетных записей.
+- 
+            [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) — включает поддержку правил таблицы маршрутизации Windows при создании одноранговых подключений через WebRTC.
+
+***Устаревшая политика***
+
+- 
+            [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) — включает функцию клиентских подсказок User-Agent.
 
 ## <a name="version-93096152-september-16"></a>Версия 93.0.961.52: 16 сентября
 
