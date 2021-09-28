@@ -3,19 +3,19 @@ title: Расписание выпусков Microsoft Edge
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/24/2021
+ms.date: 09/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: 8a9438b8031f0f850ca284aeca61f90dfd8fa7a9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3a6a4e825d902b1b5377845d47d546ff2fb6fc24
+ms.sourcegitcommit: 0d5255246b485a8b231cc624e261742a526f6769
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980470"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "12044915"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Расписание выпусков Microsoft Edge
 
@@ -47,7 +47,7 @@ ms.locfileid: "11980470"
 | 91 | Выпущенная<br>Версия | 30 апреля 2021 г.<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | 27 мая 2021 г.<BR>[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27) |
 | 92 | Выпущенная<br>Версия | 08 июня 2021 г.<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 22 июля 2021 г.<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
 | 93 | Выпущенная<br>версия | 3 августа 2021 г.<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | 2 сентября 2021 г.<BR>[93.0.961.38](/deployedge/microsoft-edge-relnote-stable-channel#version-93096138-September-02) |
-| 94 | Выпущено<br>Версия | 2 сентября 2021 г.<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | Неделя с 23 сентября 2021 г. |
+| 94 | Выпущено<br>Версия | 2 сентября 2021 г.<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | 24 сентября 2021 г.<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) |
 | 95 | Целевой выпуск | Неделя с 28 сентября 2021 г. | Неделя с 21 октября 2021 г. |
 | 96 | Целевой выпуск | Неделя с 26 октября 2021 г. | Неделя с 18 ноября 2021 г. |
 | 97 | Целевой выпуск | Неделя с 30 ноября 2021 г. | Неделя с 06 января 2022 г. |
