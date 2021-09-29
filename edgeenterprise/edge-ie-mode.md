@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как режим Internet Explorer в Microsoft Edge предоставляет доступ к сайтам, которым требуется Internet Explorer 11, а также доступ к современным сайтам.
-ms.openlocfilehash: cf2271f8b95c97a63695abf471ae67e693798ff2
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a426d9bd9d2ac3d81682e9fc2304e9e90d3461f8
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979830"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053328"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Что такое режим Internet Explorer (IE)?
 
@@ -37,14 +37,14 @@ ms.locfileid: "11979830"
 
   ![Индикатор логотипа IE](./media/ie-mode/ie-logo-indicator1.png)
 
-Только специально настроенные (с помощью политики) сайты будут использовать режим IE. Все остальные сайты будут отображаться в виде современных веб-сайтов. Чтобы сайт применял режим IE, сделайте следующее:
+Только специально настроенные (с помощью политики) сайты будут использовать режим IE. Все остальные сайты будут отображаться в виде современных веб-сайтов. Чтобы сайт применял режим IE, выполните одно из указанных ниже действий.
 
 - Укажите сайт в XML-файле списка сайтов в режиме предприятия, определенном в одной из следующих политик:
   - Microsoft Edge 78 или более поздней версии, "Настройка списка сайтов в режиме предприятия"
   - Internet Explorer "Использование списка веб-сайтов IE в режиме предприятия"
   > [!NOTE]
   > Мы обрабатываем только один список сайтов в режиме предприятия. Политика списка сайтов Microsoft Edge имеет приоритет над политикой списка сайтов Internet Explorer.
-- Все сайты интрасети при включенной групповой политике **Отправлять все сайты интрасети в Internet Explorer** (Microsoft Edge 77 или более поздней версии.)
+- Настройте групповую политику **Отправить все сайты интрасети в Internet Explorer** и присвойте ей значение **Включено** (Microsoft Edge 77 или более поздней версии).
 
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>Режим IE поддерживает следующие функциональные возможности Internet Explorer
 
