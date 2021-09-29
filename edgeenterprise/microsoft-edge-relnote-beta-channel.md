@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/17/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 95f3f02401d00e59eed1df20688d0069db1e8b06
-ms.sourcegitcommit: 93e141b725a08727b030332ea82f983d35c2a745
+ms.openlocfilehash: c62d540b014a47f1240d542c68ee52822719239f
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "12019178"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053318"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,36 @@ ms.locfileid: "12019178"
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-95010209-september-28"></a>Версия 95.0.1020.9: 28 сентября
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Просмотр в службе поддержки обозревателя файлов для SharePoint онлайн-библиотек в Microsoft Edge.**  Теперь вы можете включить функцию View in File Explorer в SharePoint современных библиотек документов в Интернете. Чтобы этот опыт был виден и работал для пользователей, необходимо включить политику Microsoft Edge "Настройка функции View in File Explorer для SharePoint страниц в [Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) и обновить конфигурацию клиента SharePoint Online. Дополнительные данные. Просмотр SharePoint файлов с [помощью обозревателя файлов в Microsoft Edge - SharePoint в Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+
+- **URL-ссылки url-адресов файлов зоны интрасети откроются в Windows File Explorer.**  Вы можете разрешить ссылки url-адресов файлов на файлы зоны интрасети, происходящие из веб-сайтов https зоны https, Windows файл explorer для этого файла или каталога. Этот опыт можно включить с помощью [политики IntranetFileLinksEnabled.](/deployedge/microsoft-edge-policies#intranetfilelinksenabled)
+
+- **Улучшения в области загрузки.**  Поддержка загрузки пользователей распространяется на прогрессивные веб-приложения PWAs и WebView. Мы также начнем поддерживать перетаскивания и падения в проводник файлов и настольный компьютер.
+
+- **Выберите место, где вы остались в документах PDF.**  Теперь вы сможете возобновить чтение с последнего закрытого документа PDF.
+
+- **Режим эффективности продлевает срок службы батареи, когда ноутбук вступает в режим экономии батареи.**  Режим эффективности будет активен, когда ноутбук вступает в режим экономии батареи, чтобы позволить браузеру управлять использованием ресурсов для продления времени автономной работы компьютера. У вас будет четыре варианта, когда режим эффективности активен, отключен и не работает отключаемой батареи, отключен, всегда и никогда. Обратите внимание: это контролируемый выпуск компонентов. Устройства с аккумулятором должны иметь включенную функцию.
+
+***Новые политики***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Включить блокировку точки расширения устаревших браузеров
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Указывает, можно ли перенаправить модули WebAssembly
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Указывает, проверяется или пропускается ли политика разрешений для захвата отображения
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Настройка регулировки пикселей между высотами window.open, источником для страниц режима IE и страниц режима Edge
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Настройка регулировки пикселей между ширинами window.open, источником для страниц режима IE и страниц режима Edge
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Разрешить открывать URL-адреса url-адресов файлов Microsoft Edge в Windows File Explorer
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Настройка поведения отката аварийного сбоя ShadowStack
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Включен визуальный поиск
+
+***Устаревшие политики***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Разрешить тестирование режима Internet Explorer
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
 
 ## <a name="version-94099223-september-17"></a>Версия 94.0.992.23: 17 сентября
 
@@ -42,31 +72,31 @@ ms.locfileid: "12019178"
 
 - **Microsoft Edge 4-недельную каденцию обновлений в бета-версии и стабильных каналах.**  Для основных версий будет принят новый четырехнедельный цикл выпуска. Подробнее о решении можно узнать здесь: https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
-- **Предлагается новый расширенный стабильный вариант.**  Мы предлагаем новый расширенный стабильный вариант для наших управляемых Enterprise клиентов. Параметр Extended Stable будет обновляться каждые 8 недель. Будет раз в две недели обновляться безопасность.  Дополнительные сведения здесь: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+- **Доступен новый вариант выпуска "Расширенный стабильный".**  Мы предлагаем новый вариант выпуска "Расширенный стабильный" для управляемых корпоративных клиентов. Вариант выпуска "Расширенный стабильный" будет сохраняться в четных версиях и обновляться каждые 8 недель. Система безопасности будет обновляться каждые две недели.  Дополнительные сведения см. здесь: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
 
-- **Улучшения поведения по умолчанию при открытии MHTML-файлов.**  Файлы MHTML будут продолжать открываться в режиме IE, если режим IE включен, если файл MHTML не был сохранен из Microsoft Edge (с помощью параметров Сохранить как или сохранить страницу Как в Microsoft Edge). Если файл был сохранен из Microsoft Edge, он будет открыт в Microsoft Edge.  Это изменение устраняет проблему отрисовки, которая наблюдалась при открытии MHTML-файла в режиме IE при Microsoft Edge.
+- **Улучшение поведения по умолчанию при открытии MHTML-файлов.**  MHTML-файлы будут по-прежнему открываться в режиме IE (если он включен), если только они не были сохранены в Microsoft Edge (с помощью параметров "Сохранить как" или "Сохранить страницу как"). Если файл сохранен в Microsoft Edge, он будет открываться только в Microsoft Edge.  Это изменение устраняет проблему отрисовки, которая наблюдалась при открытии MHTML-файлов, сохраненных в Microsoft Edge, в режиме IE.
 
-- **Ограничить частные сетевые запросы безопасными контекстами.** Доступ к ресурсам локальных (интрасетей) сетей со страниц в Интернете требует, чтобы эти страницы доставлялись через HTTPS. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в записи о [состоянии платформы Chrome](https://chromestatus.com/feature/5436853517811712). Для поддержки сценариев, необходимых для сохранения совместимости с незащищенными страницами, доступны две политики совместимости: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) и [InsecurePrivateNetworkRequestAllowedForUrls.](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)
+- **Ограничение запросов частной сети безопасными контекстами.** При доступе к ресурсам в локальных (частных) сетях со страниц в Интернете требуется, чтобы эти страницы доставлялись по протоколу HTTPS. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в [записи о состоянии платформы Chrome](https://chromestatus.com/feature/5436853517811712). Для поддержки сценариев, необходимых для сохранения совместимости с незащищенными страницами, доступны две политики совместимости: [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) и [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls).
 
-- **Блокируют смешанные загрузки контента.** Безопасные страницы будут загружать файлы, которые будут скачать только на других защищенных страницах, а загрузки, которые будут загружаться на небезопасных (не-HTTPS) страницах, будут заблокированы, если они инициируют с безопасной страницы. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения можно найти в записи [блога безопасности Google.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+- **Блокировка скачивания смешанного контента.** На защищенных страницах разрешено скачивание только файлов, размещенных на других защищенных страницах, а загрузки, размещенные на незащищенных (отличных от HTTPS) страницах, блокируются, если они инициируются с защищенной страницы. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в [записи блога безопасности Google](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html).
 
-- **Включить неявный вход для учетных записей на локальной основе.**   Включив политику OnlyOnPremisesImplicitSigninEnabled, для неявного входа будут включены только учетные записи на месте.  Браузер Microsoft Edge не будет пытаться выполнять неявный вход в учетные записи MSA и AAD. Переход с локальных учетных записей на учетные записи AAD также будет остановлен.
+- **Включение неявного входа для локальных учетных записей.**   Если включить политику OnlyOnPremisesImplicitSigninEnabled, неявный вход будет включен только для локальных учетных записей.  Браузер Microsoft Edge не будет пытаться выполнять неявный вход в учетные записи MSA и AAD. Переход с локальных учетных записей на учетные записи AAD также будет остановлен.
 
 - **Бесплатные текстовые поля формы, добавленные в документы PDF.**  Теперь мы поддерживаем добавление текстовых полей свободной формы в документы PDF, которые можно использовать для заполнения форм и добавления видимых заметок.
 
 - **Обновление паролей с легкостью.**  Браузер теперь будет принимать вас непосредственно на страницу Изменить пароль для данного веб-сайта, экономя время и клики, избегая необходимости переходить на страницу вручную. После того, как вы на этой странице браузер также автозаполнеет существующий пароль и предложит надежный, уникальный новый пароль.  Обратите внимание: в настоящее время эта функция доступна на ограниченном количестве сайтов.  
 
-- **Страница Новые параметры доступности.** Мы собрали параметры, связанные с доступностью, на одной странице. Вы можете найти новую страницу edge://settings/accessibility в списке основных параметров. Здесь вы можете найти параметры, чтобы сделать веб-страницу больше, показать контур высокой видимости вокруг области фокуса и другие параметры, которые могут помочь улучшить ваш опыт просмотра веб-страниц. Мы продолжим добавлять новые параметры здесь в будущих версиях Microsoft Edge.
+- **Новая страница сведений о специальных возможностях.** Сведения о специальных возможностях теперь доступны на отдельной странице. Новую страницу можно найти в списке основных параметров edge://settings/accessibility. Здесь находятся параметры для увеличения масштаба веб-страницы и отображения хорошо заметного контура вокруг области фокусировки, а также другие параметры, позволяющие улучшить просмотр веб-страниц. Мы продолжим добавлять здесь новые параметры для будущих версий Microsoft Edge.
 
 ***Новые политики***
 
-- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Игнорировать конфигурацию списка сайтов Application Guard и просматривать edge обычно
-- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) Только учетная запись локальной учетной записи включена для неявного входа
-- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) Включить поддержку Windows правил маршрутивки ОС при создании одноранговых подключений через WebRTC
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) — позволяет игнорировать конфигурацию списка сайтов Application Guard и просматривать сайты в Edge обычным образом.
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) — включает неявный вход только для локальных учетных записей.
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) — включает поддержку правил таблицы маршрутизации Windows при создании одноранговых подключений через WebRTC.
 
 ***Устаревшая политика***
 
-- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) Включить функцию User-Agent клиентские подсказки
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) — включает функцию клиентских подсказок User-Agent.
 
 ## <a name="version-93096133-august-27"></a>Версия 93.0.961.33: 27 августа
 
@@ -129,7 +159,7 @@ ms.locfileid: "12019178"
 - [TravelAssistanceEnabled](/DeployEdge/microsoft-edge-policies#travelassistanceenabled) Включить помощь в поездках
 - [TripleDESEnabled](/DeployEdge/microsoft-edge-policies#tripledesenabled) Включить шифры 3DES в TLS
 
-#### <a name="deprecated-policy"></a>Устаревшая политика
+#### <a name="deprecated-policy"></a>Нерекомендуемая политика
 
 - [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
 
