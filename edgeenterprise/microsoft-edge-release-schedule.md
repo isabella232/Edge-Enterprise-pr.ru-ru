@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Расписание выпусков Microsoft Edge
-ms.openlocfilehash: 89594a26880354105f2f4605b261e5d3ba0836d7
-ms.sourcegitcommit: efd607fff9c09638a476bb75c7f6835184066e4d
+ms.openlocfilehash: 67baf905f8da680aceaa24e29ffc117e41f5ee9c
+ms.sourcegitcommit: 884bdb6ef9484ed3b080b4c5ab091f5f29ba2928
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/29/2021
-ms.locfileid: "12056030"
+ms.locfileid: "12056705"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Расписание выпусков Microsoft Edge
 
