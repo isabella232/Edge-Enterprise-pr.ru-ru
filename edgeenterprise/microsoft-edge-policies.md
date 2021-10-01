@@ -3,7 +3,7 @@ title: Документация по политикам браузера Microso
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/30/2021
+ms.date: 09/26/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 44dac3dd6bb489ac43e50433319b0a7908495df5
-ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
+ms.openlocfilehash: 5e4deb6e75ab44c1706e17fe57232c703f2374dc
+ms.sourcegitcommit: 884bdb6ef9484ed3b080b4c5ab091f5f29ba2928
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "12017993"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "12056735"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - Политики
 
@@ -104,11 +104,12 @@ ms.locfileid: "12017993"
 |[ImagesBlockedForUrls](#imagesblockedforurls)|Блокировать изображения на определенных сайтах|
 |[InsecureContentAllowedForUrls](#insecurecontentallowedforurls)|Разрешить небезопасный контент на указанных сайтах|
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|Блокировать небезопасный контент на указанных сайтах|
+|[IntranetFileLinksEnabled](#intranetfilelinksenabled)|Разрешить открывать ссылки на URL-адреса файлов зоны интрасети Microsoft Edge в проводнике Windows|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|Разрешить JavaScript на определенных сайтах|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|Блокировать JavaScript на определенных сайтах|
 |[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|Разрешить JavaScript использовать JIT на этих сайтах|
 |[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|Запретить JavaScript использовать JIT на этих сайтах|
-|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Включить устаревшие параметры поведения SameSite относительно файлов cookie по умолчанию (политика не рекомендуется к использованию)|
+|[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|Включить стандартную настройку поведения файлов cookie SameSite по умолчанию (устарело)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|Возврат к устаревшему поведению SameSite для файлов cookie на указанных сайтах|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|Разрешить уведомления на определенных сайтах|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|Блокировать уведомления на определенных сайтах|
@@ -213,8 +214,10 @@ ms.locfileid: "12017993"
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|Правила выбора принтера по умолчанию|
 |[PrintHeaderFooter](#printheaderfooter)|Верхние и нижние колонтитулы печати|
+|[PrintPostScriptMode](#printpostscriptmode)|Режим печати PostScript|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|Установить системный принтер по умолчанию в качестве принтера по умолчанию|
 |[PrintRasterizationMode](#printrasterizationmode)|Режим растеризации печати|
+|[PrintRasterizePdfDpi](#printrasterizepdfdpi)|Печать растеризации PDF DPI|
 |[PrinterTypeDenyList](#printertypedenylist)|Отключить типы принтеров из списка запрещенных|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|Ограничение режима печати фона|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|Режим печати фона по умолчанию|
@@ -293,6 +296,7 @@ ms.locfileid: "12017993"
 |[ApplicationLocaleValue](#applicationlocalevalue)|Настройка языкового стандарта приложения|
 |[AudioCaptureAllowed](#audiocaptureallowed)|Разрешить или заблокировать захват звука|
 |[AudioCaptureAllowedUrls](#audiocaptureallowedurls)|Сайты, которые могут получить доступ к устройствам захвата звука без запроса разрешения|
+|[AudioProcessHighPriorityEnabled](#audioprocesshighpriorityenabled)|Разрешить обработку звука с приоритетом выше обычного в Windows|
 |[AudioSandboxEnabled](#audiosandboxenabled)|Разрешить запуск аудио-песочницы|
 |[AutoImportAtFirstRun](#autoimportatfirstrun)|Автоматический импорт данных и настроек другого браузера при первом запуске|
 |[AutoLaunchProtocolsFromOrigins](#autolaunchprotocolsfromorigins)|Определять список протоколов, с помощью которых можно запустить внешнее приложение из списка источников без обращения к пользователю|
@@ -309,6 +313,7 @@ ms.locfileid: "12017993"
 |[BlockThirdPartyCookies](#blockthirdpartycookies)|Блокировка сторонних cookie-файлов|
 |[BrowserAddProfileEnabled](#browseraddprofileenabled)|Включите создание профиля из всплывающего меню Identity или страницы настроек.|
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|Включить гостевой режим|
+|[BrowserLegacyExtensionPointsBlockingEnabled](#browserlegacyextensionpointsblockingenabled)|Включение блокировки устаревших точек расширения браузера|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|Разрешить запросы к службе сетевого времени браузера|
 |[BrowserSignin](#browsersignin)|Настройки входа в браузер|
 |[BrowsingDataLifetime](#browsingdatalifetime)|Параметры времени существования данных браузера|
@@ -330,6 +335,7 @@ ms.locfileid: "12017993"
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|Настроить онлайн текст в речь|
 |[ConfigureShare](#configureshare)|Настройка интерфейса предоставления общего доступа|
 |[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Настройка функции "Просмотреть в проводнике" для страниц SharePoint в Microsoft Edge|
+|[CrossOriginWebAssemblyModuleSharingEnabled](#crossoriginwebassemblymodulesharingenabled)|Указывает, могут ли модули WebAssembly отправляться независимо от источника|
 |[CustomHelpLink](#customhelplink)|Укажите пользовательскую ссылку справки|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|Проверка перехвата DNS включена|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Установите Microsoft Edge в качестве браузера по умолчанию|
@@ -346,6 +352,7 @@ ms.locfileid: "12017993"
 |[DisableScreenshots](#disablescreenshots)|Отключить создание скриншотов|
 |[DiskCacheDir](#diskcachedir)|Установить каталог дискового кэша|
 |[DiskCacheSize](#diskcachesize)|Установить размер дискового кэша в байтах|
+|[DisplayCapturePermissionsPolicyEnabled](#displaycapturepermissionspolicyenabled)|Указывает, установлена или пропущена политика разрешений захвата экрана|
 |[DnsOverHttpsMode](#dnsoverhttpsmode)|Управление режимом DNS через HTTPS|
 |[DnsOverHttpsTemplates](#dnsoverhttpstemplates)|Укажите шаблон URI нужного преобразователя DNS-over-HTTPS.|
 |[DownloadDirectory](#downloaddirectory)|Установить каталог загрузки|
@@ -409,7 +416,9 @@ ms.locfileid: "12017993"
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|Настройка списка сайтов для режима предприятия|
 |[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|Настройка частоты обновления списка сайтов для режима предприятия|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Укажите, как ведут себя внутренние переходы на ненастроенные сайты при запуске со страниц режима Internet Explorer.|
-|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer (политика не рекомендуется к использованию)|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Разрешить тестирование режима Internet Explorer (устарело)|
+|[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|Настройка корректировки пикселей между значениями высоты window.open, взятыми на страницах режима IE и Edge|
+|[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|Настройка корректировки пикселей между значениями ширины window.open, взятыми на страницах режима IE и Edge|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|Поведение перенаправления в интрасети|
 |[IsolateOrigins](#isolateorigins)|Включить изоляцию сайта для определенных источников|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Включить поиск Windows в локальных данных просмотра веб-страниц Microsoft Edge|
@@ -463,6 +472,7 @@ ms.locfileid: "12017993"
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|Блокировать доступ к датчиками на определенных сайтах|
 |[SerialAskForUrls](#serialaskforurls)|Разрешить API Serial на определенных сайтах|
 |[SerialBlockedForUrls](#serialblockedforurls)|Блокировать API Serial на определенных сайтах|
+|[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|Настроить поведение отката сбоев ShadowStack|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|Указывает, можно ли использовать SharedArrayBuffers в контексте без изоляции перекрестного происхождения.|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Показать возможности Microsoft Rewards|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Показать ярлык Microsoft Office на панели избранного (не рекомендуется)|
@@ -498,6 +508,7 @@ ms.locfileid: "12017993"
 |[VerticalTabsAllowed](#verticaltabsallowed)|Настройка доступности вертикального макета для вкладок на боковой панели браузера|
 |[VideoCaptureAllowed](#videocaptureallowed)|Разрешить или заблокировать захват видео|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|Сайты, которые могут получить доступ к устройствам захвата видео без запроса разрешения|
+|[VisualSearchEnabled](#visualsearchenabled)|Визуальный поиск включен|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|Установить оптимизацию WPAD|
 |[WebAppInstallForceList](#webappinstallforcelist)|Настроить список принудительно установленных веб-приложений|
 |[WebCaptureEnabled](#webcaptureenabled)|Включение функции захвата веб-страниц в Microsoft Edge|
@@ -2722,6 +2733,65 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="intranetfilelinksenabled"></a>IntranetFileLinksEnabled
+
+  #### <a name="allow-intranet-zone-file-url-links-from-microsoft-edge-to-open-in-windows-file-explorer"></a>Разрешить открывать ссылки на URL-адреса файлов зоны интрасети Microsoft Edge в проводнике Windows
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Этот параметр позволяет ссылкам URL-адресов файлов на файлы зоны интрасети с веб-сайтов HTTPS зоны интрасети открывать проводник Windows для этого файла или каталога.
+
+Если включить эту политику, URL-ссылки файла зоны интрасети, исходящие из HTTPS-страниц зоны интрасети, будут открывать проводник Windows для этого файла или каталога.
+
+Если вы отключите или не настроите эту политику, URL-ссылки файлов не будут открываться.
+
+Microsoft Edge использует определение зоны интрасети, настроенное для Internet Explorer. Обратите внимание, что https://localhost/ специально заблокировано как исключение для разрешенного узла зоны интрасети, в то время как петлевые адреса (127.0.0.*, [::1]) считаются интернет-зоной по умолчанию.
+
+Пользователи могут отказаться от запросов для каждого протокола или каждого сайта, если политика [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) не отключена.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: IntranetFileLinksEnabled
+  - Имя групповой политики. Разрешить открывать ссылки на URL-адреса файлов зоны интрасети Microsoft Edge в проводнике Windows
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: IntranetFileLinksEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="javascriptallowedforurls"></a>JavaScriptAllowedForUrls
 
   #### <a name="allow-javascript-on-specific-sites"></a>Разрешить JavaScript на определенных сайтах
@@ -2998,19 +3068,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
-  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-deprecated"></a>Включить устаревшие параметры поведения SameSite относительно файлов cookie по умолчанию (политика не рекомендуется к использованию)
+  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting-obsolete"></a>Включить стандартную настройку поведения файлов cookie SameSite по умолчанию (устарело)
 
-  >НЕ РЕКОМЕНДУЕТСЯ К ИСПОЛЬЗОВАНИЮ: эта политика не рекомендуется к использованию. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge версии 94 и более поздних.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - На Windows и macOS начиная с 80 или позже
+  - В Windows и macOS — версии c 80 по 94
 
   #### <a name="description"></a>Описание
 
-  "Эта политика не рекомендуется к использованию, так как предназначена для использования только в качестве краткосрочного механизма, чтобы дать предприятиям больше времени на обновление инфраструктуры, если та признана несовместимой с изменением поведения SameSite.
+  "Эта политика не работает, так как предназначена только для использования только в качестве краткосрочного механизма, чтобы дать предприятиям больше времени на обновление инфраструктуры, если та была признана несовместимой с изменением поведения SameSite.
 
-Она не будет работать в Microsoft Edge версии 95. Если вам по-прежнему требуется устаревшее поведение cookie, используйте [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) для настройки поведения, специфичного для конкретного домена.
+Если вам по-прежнему требуется устаревшее поведение cookie, используйте [LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist) для настройки поведения, специфичного для конкретного домена.
 
 Позволяет вернуть для всех файлов cookie ранее использовавшееся поведение SameSite. При восстановлении до устаревшего поведения файлы cookie, не задающие атрибут Самесите, будут рассматриваться так, как если бы они были "Самесите = None", и при этом пропускают сравнение схем при оценке того, что два сайта являются одним и тем же.
 
@@ -3038,9 +3108,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
-  - Уникальное имя GP: LegacySameSiteCookieBehaviorEnabled
-  - Имя GP. Включить устаревшие параметры поведения cookie SameSite по умолчанию (политика не рекомендуется к использованию)
-  - Путь к GP (обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
+  - Уникальное имя групповой политики: LegacySameSiteCookieBehaviorEnabled
+  - Имя групповой политики. Включить стандартную настройку поведения файлов cookie SameSite по умолчанию (устарело)
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Настройки содержимого
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
 
@@ -3084,9 +3154,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
 При восстановлении до устаревшего поведения файлы cookie, не задающие атрибут Самесите, будут рассматриваться так, как если бы они были "Самесите = None", и при этом пропускают сравнение схем при оценке того, что два сайта являются одним и тем же.
 
-Если вы не установите эту политику, будет использоваться глобальное значение по умолчанию. Глобальное значение по умолчанию также будет использоваться для файлов cookie в доменах, не соответствующих заданным вами шаблонам.
+Если вы не установите эту политику, будет использоваться глобальное значение по умолчанию. Глобальное значение по умолчанию также будет использоваться для файлов cookie в доменах, на которые не распространяются указанные вами шаблоны.
 
-Глобальное значение по умолчанию можно настроить в Microsoft Edge вплоть до версии 95 с помощью политики, не рекомендуемой к использованию, [LegacySameSiteCookieBehaviorEnabled.](#legacysamesitecookiebehaviorenabled) Если [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) не задана, глобальное значение по умолчанию берется из других источников конфигурации.
+Глобальное значение по умолчанию можно настроить с помощью политики [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled). Если [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) не установлено, глобальное значение по умолчанию возвращается к другим источникам конфигурации.
 
 Обратите внимание, что шаблоны, перечисленные в этой политике, рассматриваются как домены, а не как URL-адреса, поэтому не следует указывать схему или порт.
 
@@ -6125,7 +6195,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - На Windows и macOS начиная с 87 или позже
+  - В Windows 87 и более поздних версий
 
   #### <a name="description"></a>Описание
 
@@ -6170,13 +6240,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000001
 ```
 
-  #### <a name="mac-information-and-settings"></a>Информация о Mac и настройки
-  
-  - Имя ключа настройки: KioskAddressBarEditingEnabled
-  - Пример значения:
-``` xml
-<true/>
-```
   
 
   [В начало](#microsoft-edge---policies)
@@ -7255,6 +7318,73 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="printpostscriptmode"></a>PrintPostScriptMode
+
+  #### <a name="print-postscript-mode"></a>Режим печати PostScript
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Управление способом печати Microsoft Edge в Microsoft Windows.
+
+Печать на принтере PostScript в Microsoft Windows с разными методами создания PostScript может повлиять на производительность печати.
+
+Если вы установите для этой политики значение "По умолчанию", Microsoft Edge будет использовать набор параметров по умолчанию при создании PostScript. В частности, текст всегда будет отображаться с использованием шрифтов Type 3.
+
+Если вы установите для этой политики значение Type42, Microsoft Edge будет отображать текст с использованием шрифтов Type 42, если это возможно. Это должно увеличить скорость печати некоторых принтеров PostScript.
+
+Если эта политика не настроена, Microsoft Edge будет работать в режиме по умолчанию.
+
+Сопоставление параметров политики:
+
+* Default (0) = По умолчанию
+
+* Type42 (1) = Type42
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: PrintPostScriptMode
+  - Имя групповой политики: режим печати PostScript
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Печать
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: PrintPostScriptMode
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="printpreviewusesystemdefaultprinter"></a>PrintPreviewUseSystemDefaultPrinter
 
   #### <a name="set-the-system-default-printer-as-the-default-printer"></a>Установите системный принтер по умолчанию в качестве принтера по умолчанию
@@ -7378,6 +7508,70 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000001
 ```
 
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="printrasterizepdfdpi"></a>PrintRasterizePdfDpi
+
+  #### <a name="print-rasterize-pdf-dpi"></a>Печать растеризации PDF DPI
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 95 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Управляет разрешением изображения при печати, когда Microsoft Edge печатает PDF-файлы с растеризацией.
+
+При печати PDF-файла с использованием параметра "Печать на изображение" может оказаться полезным указать разрешение печати, отличное от параметра принтера устройства или значения PDF по умолчанию.  Высокое разрешение значительно увеличит время обработки и печати, в то время как низкое разрешение может привести к плохому качеству изображения.
+
+Если вы установите эту политику, она позволяет указать конкретное разрешение для использования при растрировании PDF-файлов для печати.
+
+Если вы установите для этой политики нулевое значение или не настроите ее, во время растеризации изображений страниц будет использоваться системное разрешение по умолчанию.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: PrintRasterizePdfDpi
+  - Имя групповой политики: печать растеризации PDF DPI
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/Печать
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: PrintRasterizePdfDpi
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x0000012c
+```
+
+  #### <a name="mac-information-and-settings"></a>Сведения и параметры Mac
+  
+  - Имя ключа настройки: PrintRasterizePdfDpi
+  - Пример значения:
+``` xml
+<integer>300</integer>
+```
   
 
   [В начало](#microsoft-edge---policies)
@@ -11163,6 +11357,62 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="audioprocesshighpriorityenabled"></a>AudioProcessHighPriorityEnabled
+
+  #### <a name="allow-the-audio-process-to-run-with-priority-above-normal-on-windows"></a>Разрешить обработку звука с приоритетом выше обычного в Windows
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 96 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Эта политика управляет приоритетом звукового процесса в Windows.
+Если эта политика включена, звуковой процесс будет выполняться с приоритетом выше обычного.
+Если эта политика отключена, звуковой процесс будет выполняться с обычным приоритетом.
+Если эта политика не настроена, будет использоваться конфигурация звукового процесса по умолчанию.
+Эта политика предназначена в качестве временной меры, чтобы дать предприятиям возможность запускать звук с более высоким приоритетом для решения определенных проблем с производительностью при записи звука.
+Эта политика будет удалена в будущем.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: AudioProcessHighPriorityEnabled
+  - Имя групповой политики: разрешить обработку звука с приоритетом выше обычного в Windows
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: AudioProcessHighPriorityEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="audiosandboxenabled"></a>AudioSandboxEnabled
 
   #### <a name="allow-the-audio-sandbox-to-run"></a>Разрешить запуск аудио-песочницы
@@ -11371,6 +11621,8 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 Однако шаблоны сопоставления источников для этой политики не могут содержать элементы "/path" или "@query". Любой шаблон, содержащий элемент "/path" или "@query", будет проигнорирован.
 
+Эта политика не работает должным образом с подстановочными знакам file://*.
+
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
@@ -11490,6 +11742,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 Если не задать эту политику, все загружаемые файлы, тип которых содержится в [AutoOpenFileTypes](#autoopenfiletypes), будут автоматически открываться.
 
 Шаблон URL-адреса должен быть иметь формат, соответствующий [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322).
+
+Эта политика не работает должным образом с подстановочными знакам file://*.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -12333,6 +12587,61 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="browserlegacyextensionpointsblockingenabled"></a>BrowserLegacyExtensionPointsBlockingEnabled
+
+  #### <a name="enable-browser-legacy-extension-point-blocking"></a>Включение блокировки устаревших точек расширения браузера
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Задает ProcessExtensionPointDisablePolicy для процесса браузера Microsoft Edge для блокировки внедрения кода из устаревших сторонних приложений.
+
+Если вы включаете или не настраиваете эту политику, ProcessExtensionPointDisablePolicy применяется для блокировки устаревших точек расширения в процессе браузера.
+
+Если вы отключите эту политику, ProcessExtensionPointDisablePolicy не будет применяться для блокировки устаревших точек расширения в процессе браузера. Это отрицательно сказывается на безопасности и стабильности Microsoft Edge, так как неизвестный и потенциально опасный код может загружаться в процессе браузера Microsoft Edge. Отключайте эту политику, только если существуют проблемы совместимости со сторонним программным обеспечением, которое должно запускаться в процессе браузера Microsoft Edge.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: BrowserLegacyExtensionPointsBlockingEnabled
+  - Имя групповой политики: включение блокировки устаревших точек расширения браузера
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: BrowserLegacyExtensionPointsBlockingEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="browsernetworktimequeriesenabled"></a>BrowserNetworkTimeQueriesEnabled
 
   #### <a name="allow-queries-to-a-browser-network-time-service"></a>Разрешить запросы к службе сетевого времени браузера
@@ -12905,6 +13214,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 Сформируйте ваш шаблон URL в соответствии с [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322). Поскольку сертификаты действительны для данного имени хоста, независимо от схемы, порта или пути, рассматривается только часть имени хоста в URL. Подстановочные хосты не поддерживаются.
 
 Если вы не настроите эту политику, любой сертификат, который должен быть раскрыт через прозрачность сертификата, считается ненадежным, если он не раскрыт.
+
+Эта политика не работает должным образом с подстановочными знакам file://*.
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -13802,6 +14113,68 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   ```
   
 
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="crossoriginwebassemblymodulesharingenabled"></a>CrossOriginWebAssemblyModuleSharingEnabled
+
+  #### <a name="specifies-whether-webassembly-modules-can-be-sent-cross-origin"></a>Указывает, могут ли модули WebAssembly отправляться независимо от источника
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 95 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Указывает, могут ли модули WebAssembly быть отправлены в другое окно или в другое рабочее место. Совместное использование модулей WebAssembly между разными источниками будет прекращено в рамках усилий по прекращению поддержки document.domain, см. https://github.com/mikewest/deprecating-document-domain. Эта политика позволяет повторно включить совместное использование модуля WebAssembly. Это обеспечивает более длительный переходный период в процессе прекращения поддержки.
+
+Если вы включите эту политику, сайты смогут без ограничений отправлять модули WebAssembly из разных источников.
+
+Если вы отключите или не настроите эту политику, сайты смогут отправлять модули WebAssembly только в окна и рабочие места из одного источника.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: CrossOriginWebAssemblyModuleSharingEnabled
+  - Имя групповой политики: указывает, могут ли модули WebAssembly отправляться независимо от источника
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: CrossOriginWebAssemblyModuleSharingEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Сведения и параметры Mac
+  
+  - Имя ключа настройки: CrossOriginWebAssemblyModuleSharingEnabled
+  - Пример значения:
+``` xml
+<true/>
+```
   
 
   [В начало](#microsoft-edge---policies)
@@ -14860,6 +15233,70 @@ SOFTWARE\Policies\Microsoft\Edge\ConfigureViewInFileExplorer = [
   - Пример значения:
 ``` xml
 <integer>104857600</integer>
+```
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="displaycapturepermissionspolicyenabled"></a>DisplayCapturePermissionsPolicyEnabled
+
+  #### <a name="specifies-whether-the-display-capture-permissions-policy-is-checked-or-skipped"></a>Указывает, установлена или пропущена политика разрешений захвата экрана
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows и macOS с версии 95 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Политика разрешений отображения-записи обеспечивает доступ к getDisplayMedia() в соответствии с этой спецификацией: https://www.w3.org/TR/screen-capture/#feature-policy-integration Однако, если эта политика отключена, это требование не применяется, и getDisplayMedia() разрешается из контекстов, которые в противном случае были бы запрещены. Эта корпоративная политика носит временный характер. Она будет удаления после Microsoft Edge версии 100.
+Она предназначена для разблокировки корпоративных пользователей, чье приложение не соответствует спецификации, но требует времени для исправления.
+
+Если вы включаете или не настраиваете эту политику, сайты могут вызывать getDisplayMedia() только из контекстов, которые разрешены политикой разрешений отображения-записи.
+
+Если вы отключите эту политику, сайты могут вызывать getDisplayMedia() даже из контекстов, которые не разрешены политикой разрешений для отображения-записи.
+Обратите внимание, что могут по-прежнему применяться другие ограничения.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: DisplayCapturePermissionsPolicyEnabled
+  - Имя групповой политики: указывает, установлена или пропущена политика разрешений захвата экрана
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: DisplayCapturePermissionsPolicyEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Сведения и параметры Mac
+  
+  - Имя ключа предпочтения: DisplayCapturePermissionsPolicyEnabled
+  - Пример значения:
+``` xml
+<true/>
 ```
   
 
@@ -19105,17 +19542,17 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   ### <a name="internetexplorerintegrationtestingallowed"></a>InternetExplorerIntegrationTestingAllowed
 
-  #### <a name="allow-internet-explorer-mode-testing-deprecated"></a>Разрешить тестирование режима Internet Explorer (политика не рекомендуется к использованию)
+  #### <a name="allow-internet-explorer-mode-testing-obsolete"></a>Разрешить тестирование режима Internet Explorer (устарело)
 
-  >НЕ РЕКОМЕНДУЕТСЯ К ИСПОЛЬЗОВАНИЮ: эта политика не рекомендуется к использованию. В настоящее время он поддерживается, но устареет в следующем выпуске.
   
+  >УСТАРЕЛО: эта политика устарела и не работает в Microsoft Edge версии 94 и более поздних.
   #### <a name="supported-versions"></a>Поддерживаемые версии:
 
-  - В Windows — версия 86 или более поздние
+  - В Windows — версии с 86 по 94
 
   #### <a name="description"></a>Описание
 
-  Эта политика не рекомендуется к использованию, вместо нее используйте политику [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed). Она не будет работать в Microsoft Edge версии 95.
+  Эта политика устарела, поскольку была заменена улучшенной функцией. Она не работает в Microsoft Edge после версии 94. Чтобы разрешить пользователям открывать приложения в режиме Internet Explorer, используйте вместо этого политику [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed). В качестве альтернативы пользователи по-прежнему могут использовать флаг --ie-mode-test.
 
 Эта политика позволяет пользователям тестировать приложения в режиме Internet Explorer, открыв вкладку режима Internet Explorer в Microsoft Edge.
 
@@ -19144,7 +19581,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
   ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 
   - Уникальное имя групповой политики: InternetExplorerIntegrationTestingAllowed
-  - Имя GP. Разрешить тестирование в режиме Internet Explorer (политика не рекомендуется к использованию)
+  - Имя групповой политики: разрешить тестирование режима Internet Explorer (устарело)
   - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
   - Путь GP (рекомендуется): N/A
   - Имя файла GP ADMX: MSEdge.admx
@@ -19160,6 +19597,116 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 ```
 0x00000000
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationwindowopenheightadjustment"></a>InternetExplorerIntegrationWindowOpenHeightAdjustment
+
+  #### <a name="configure-the-pixel-adjustment-between-windowopen-heights-sourced-from-ie-mode-pages-vs-edge-mode-pages"></a>Настройка корректировки пикселей между значениями высоты window.open, взятыми на страницах режима IE и Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Этот параметр позволяет указать настраиваемую настройку высоты всплывающих окон, создаваемых с помощью window.open на сайте режима Internet Explorer.
+
+Если вы настроите эту политику, Microsoft Edge добавит значение регулировки высоты в пикселях. Точная разница зависит от конфигурации пользовательского интерфейса IE и Edge, но типичная разница составляет 5.
+
+Если вы отключите или не настроите эту политику, Microsoft Edge будет обрабатывать режим IE window.open так же, как window.open режима Edge при расчете высоты окна.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - Имя групповой политики: настройка корректировки пикселей между значениями высоты window.open, взятыми на страницах режима IE и Edge
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: InternetExplorerIntegrationWindowOpenHeightAdjustment
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000005
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
+  ### <a name="internetexplorerintegrationwindowopenwidthadjustment"></a>InternetExplorerIntegrationWindowOpenWidthAdjustment
+
+  #### <a name="configure-the-pixel-adjustment-between-windowopen-widths-sourced-from-ie-mode-pages-vs-edge-mode-pages"></a>Настройка корректировки пикселей между значениями ширины window.open, взятыми на страницах режима IE и Edge
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Этот параметр позволяет указать настраиваемую настройку ширины всплывающих окон, создаваемых с помощью window.open на сайте режима Internet Explorer.
+
+Если вы настроите эту политику, Microsoft Edge добавит значение регулировки ширины в пикселях. Точная разница зависит от конфигурации пользовательского интерфейса IE и Edge, но типичная разница составляет 4.
+
+Если вы отключите или не настроите эту политику, Microsoft Edge будет обрабатывать режим IE window.open так же, как window.open режима Edge при расчете ширины окна.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Нет - требуется перезапуск браузера
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - Имя групповой политики: настройка корректировки пикселей между значениями ширины window.open, взятыми на страницах режима IE и Edge
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: InternetExplorerIntegrationWindowOpenWidthAdjustment
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000004
 ```
 
   
@@ -22782,6 +23329,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="shadowstackcrashrollbackbehavior"></a>ShadowStackCrashRollbackBehavior
+
+  #### <a name="configure-shadowstack-crash-rollback-behavior"></a>Настроить поведение отката сбоев ShadowStack
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Указывает, следует ли Microsoft Edge включить функцию безопасности принудительной аппаратной защиты стека после сбоя, вызванного этой функцией.
+
+Если вы не настроите эту политику, Microsoft Edge будет управлять параметром для безопасного развертывания принудительной аппаратной защиты стека, в конечном итоге принудительно включив эту функцию для всех пользователей.
+
+Установите для этой политики значение "Disable", чтобы всегда отключать принудительную аппаратную защиту стека после сбоя, вызванного этой функцией.
+
+Установите для этой политики значение "DisableUntilUpdate", чтобы отключить принудительную аппаратную защиту стека после сбоя, вызванного этой функцией, но включите ее после того, как Microsoft Edge потенциально решит проблему.
+
+Установите для этой политики значение "Enable", чтобы всегда включать принудительную аппаратную защиту стека после сбоя, вызванного этой функцией.
+
+Сопоставление параметров политики:
+
+* Disable (0) = Отключить принудительную аппаратную защиту стека
+
+* DisableUntilUpdate (1) = Отключить принудительную аппаратную защиту стека до следующего обновления Microsoft Edge
+
+* Enable (2) = Включить принудительную аппаратную защиту стека
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: ShadowStackCrashRollbackBehavior
+  - Имя групповой политики: настроить поведение отката сбоев ShadowStack
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь GP (рекомендуется): N/A
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): Н/Д
+  - Имя значения: ShadowStackCrashRollbackBehavior
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="sharedarraybufferunrestrictedaccessallowed"></a>SharedArrayBufferUnrestrictedAccessAllowed
 
   #### <a name="specifies-whether-sharedarraybuffers-can-be-used-in-a-non-cross-origin-isolated-context"></a>Указывает, можно ли использовать SharedArrayBuffers в контексте без изоляции перекрестного происхождения.
@@ -24414,6 +25030,8 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 Если вы не сконфигурируете эту политику, не будет никаких исключений из списка заблокированных в политике [URLBlocklist](#urlblocklist).
 
+Эта политика не работает должным образом с подстановочными знакам file://*.
+
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
@@ -24493,6 +25111,8 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 Если вы не настроите эту политику, никакие URL не будут заблокированы.
 
+Эта политика не работает должным образом с подстановочными знакам file://*.
+
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
   - Может быть обязательным: Да
@@ -24528,9 +25148,8 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
 
 ```
 
@@ -24545,7 +25164,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   <string>hosting.com/bad_path</string>
   <string>https://server:8080/path</string>
   <string>.exact.hostname.com</string>
-  <string>file://*</string>
   <string>custom_scheme:*</string>
   <string>*</string>
 </array>
@@ -25046,6 +25664,61 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   [В начало](#microsoft-edge---policies)
 
+  ### <a name="visualsearchenabled"></a>VisualSearchEnabled
+
+  #### <a name="visual-search-enabled"></a>Визуальный поиск включен
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - В Windows — версия 95 или более поздние
+
+  #### <a name="description"></a>Описание
+
+  Визуальный поиск позволяет быстро изучить больше связанного контента об объектах на изображении.
+
+Если включить или не настроить эту политику, визуальный поиск будет включен с помощью наведения курсора на изображение, контекстного меню и поиска на боковой панели.
+
+Если отключить эту политику, визуальный поиск будет отключен, и вы не сможете получать дополнительные сведения об изображениях с помощью наведения курсора, контекстного меню и поиска на боковой панели.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Да
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - Boolean (Логическое)
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя групповой политики: VisualSearchEnabled
+  - Имя групповой политики: визуальный поиск включен
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge/
+  - Путь к GP (рекомендуется): Административные шаблоны/Microsoft Edge - Настройки по умолчанию (пользователи могут переопределить)/
+  - Имя файла GP ADMX: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательный): SOFTWARE\Policies\Microsoft\Edge
+  - Путь (рекомендуется): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - Имя значения: VisualSearchEnabled
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000000
+```
+
+  
+
+  [В начало](#microsoft-edge---policies)
+
   ### <a name="wpadquickcheckenabled"></a>WPADQuickCheckEnabled
 
   #### <a name="set-wpad-optimization"></a>Установить оптимизацию WPAD
@@ -25126,12 +25799,16 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 Каждый элемент списка политики является объектом с обязательным элементом: URL-адрес (URL-адрес веб-приложения для установки)
 
-и 3 необязательных элемента:
+и 5 необязательных элементов:
 - default_launch_container (по умолчанию указывается режим окна, в котором открывается веб-приложение. Новая вкладка используется по умолчанию.)
 
-- create_desktop_shortcut (true, если вы хотите создать ярлыки для рабочего стола Linux и Microsoft Windows.)
+- create_desktop_shortcut (True, если вы хотите создать ярлыки для рабочего стола Linux и Microsoft Windows).
 
-- fallback_app_name (начиная с Microsoft Edge 90 вы можете переопределять имя приложения, если оно не является прогрессивным веб-приложением (PWA) или временно устанавливается (если это PWA), но для завершения установки требуется проверка подлинности.)
+- fallback_app_name (начиная с Microsoft Edge версии 90 вы можете переопределять имя приложения, если оно не является прогрессивным веб-приложением (PWA) или временно устанавливается (если это PWA), но для завершения установки требуется проверка подлинности). Если указаны и custom_name, и fallback_app_name, последнее будет проигнорировано.)
+
+- custom_name (начиная с Microsoft Edge версии 96, позволяет навсегда переопределить имя приложения для всех веб-приложений и PWA.)
+
+- custom_icon (начиная с Microsoft Edge версии 96, позволяет переопределить значок приложения установленных приложений. Значки должны быть квадратными, размером не более 1 МБ и иметь один из следующих форматов: jpeg, png, gif, webp, ico. Значение хэша должно быть хешем SHA256 файла значка.)
 
   #### <a name="supported-features"></a>Поддерживаемые функции:
 
@@ -25176,7 +25853,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "window",
     "fallback_app_name": "Editor",
-    "url": "https://app.contoso.com/editor"
+    "url": "https://app.contoso.edu/editor"
+  },
+  {
+    "custom_name": "Spreadsheets",
+    "default_launch_container": "window",
+    "url": "https://app.contoso.edu/sheets"
+  },
+  {
+    "custom_icon": {
+      "hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38",
+      "url": "https://mydomain.example.com/sunny_icon.png"
+    },
+    "url": "https://weather.example.com"
   }
 ]
 ```
@@ -25184,7 +25873,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### <a name="compact-example-value"></a>Компактный пример значения:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.edu/editor"}, {"custom_name": "Spreadsheets", "default_launch_container": "window", "url": "https://app.contoso.edu/sheets"}, {"custom_icon": {"hash": "c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38", "url": "https://mydomain.example.com/sunny_icon.png"}, "url": "https://weather.example.com"}]
   ```
   
 
@@ -25215,7 +25904,26 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
-    <string>https://app.contoso.com/editor</string>
+    <string>https://app.contoso.edu/editor</string>
+  </dict>
+  <dict>
+    <key>custom_name</key>
+    <string>Spreadsheets</string>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>url</key>
+    <string>https://app.contoso.edu/sheets</string>
+  </dict>
+  <dict>
+    <key>custom_icon</key>
+    <dict>
+      <key>hash</key>
+      <string>c28f469c450e9ab2b86ea47038d2b324c6ad3b1e9a4bd8960da13214afd0ca38</string>
+      <key>url</key>
+      <string>https://mydomain.example.com/sunny_icon.png</string>
+    </dict>
+    <key>url</key>
+    <string>https://weather.example.com</string>
   </dict>
 </array>
 ```
