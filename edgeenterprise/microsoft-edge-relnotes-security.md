@@ -3,23 +3,27 @@ title: Заметки о выпуске обновлений для систем
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: 3d90844417994b7941b4e27122ef9564cc40e19f
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: 050f9976390d9b5f279b9f0fa11d1494e9f82391
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044831"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057354"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="october-1-2021"></a>1 октября 2021 г.
+
+Корпорация Майкрософт выпустила новый **стабильный канал Microsoft Edge (версия 94.0.992.38)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит исправление уязвимостей [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) и [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), для которых, как сообщают разработчики Chromium, имеются действующие эксплойты. Дополнительные сведения см. в [Руководстве по обновлению системы безопасности](https://msrc.microsoft.com/update-guide).
 
 ## <a name="september-24-2021"></a>24 сентября 2021 г.
 

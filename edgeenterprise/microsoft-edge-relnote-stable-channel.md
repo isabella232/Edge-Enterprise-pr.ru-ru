@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: f15c8e1d4dcd037b0948e7309387ba3baa5d1ffa
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044841"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057345"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -29,14 +29,25 @@ ms.locfileid: "12044841"
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+> Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/ microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099238-october-1"></a>Версия 94.0.992.38: 1 октября
+
+> [!Important]
+> Это обновление содержит исправление уязвимостей [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975) и [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976), для которых, как сообщают разработчики Chromium, имеются действующие эксплойты. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide)
+
+Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#october-01-2021).
+
+## <a name="version-94099237-september-30"></a>Версия 94.0.992.37: 30 сентября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-94099231-september-24"></a>Версия 94.0.992.31: 24 сентября
 
 > [!Important]
 > В этом обновлении содержится исправление уязвимости [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [Руководстве по обновлению системы безопасности](https://msrc.microsoft.com/update-guide).
 
-Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
@@ -163,7 +174,7 @@ ms.locfileid: "12044841"
 - 
             [WAMAuthBelowWin10RS3Enabled](/DeployEdge/microsoft-edge-policies#wamauthbelowwin10rs3enabled) Диспетчер учетных записей Windows включен для проверки подлинности в Windows 10 версий до WAMAuthBelowWin10RS3Enabled
 
-***Устаревшая политика***
+***Нерекомендуемая политика***
 
 - 
             [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
