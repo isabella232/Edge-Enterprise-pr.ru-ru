@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Подробное руководство по настройке расширений Microsoft Edge с помощью политики ExtensionSettings.
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
+ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979963"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "12061108"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>Подробное руководство по политике ExtensionSettings
 
@@ -52,7 +52,35 @@ Microsoft Edge предлагает несколько способов упра
 | **runtime_allowed_hosts**| Позволяет расширениям взаимодействовать с указанными веб-сайтами, даже если они также определены в runtime_blocked_hosts. Можно указать до 100 элементов. Элементы сверх этого числа удаляются.<br>Формат шаблона узла аналогичен  [шаблонам соответствия](/microsoft-edge/extensions-chromium/enterprise/match-patterns) , но нельзя задать путь. Например:<br>- *://*.example.com<br>- *://example.* — поддерживаются подстановочные знаки eTLD     |
 | **runtime_blocked_hosts**| Запретить расширениям взаимодействовать с указанными веб-сайтами или изменять их. Изменения включают блокировку внедрения JavaScript, доступ к файлам cookie и изменения по веб-запросу.<br>Можно указать до 100 элементов. Элементы сверх этого числа удаляются.<br>Формат шаблона узла похож на шаблоны соответствия, но нельзя задать путь. Например:<br>- *://*.example.com<br>- *://example.* — поддерживаются подстановочные знаки eTLD   |
 | **override_update_url**| Доступно в edge 93<br>Если это задано, edge использует URL-адрес обновления, указанный в политике ExtensionSettings или в политике `true` ExtensionInstallForcelist, для последующих обновлений расширения.<br>Если это не установлено или установлено, edge использует URL-адрес, указанный в манифесте расширения для `false` обновлений.|
+| **toolbar_state**| Доступно в edge 94<br>Этот параметр политики позволяет принудительно показывать установленное расширение на панель инструментов. Состояние по умолчанию для `default_shown` всех расширений. Для этого параметра возможны следующие состояния<br>-`force_shown`: Вы можете принудить показать установленное расширение на панели инструментов. Пользователи не смогут скрыть определенный значок расширения из панели инструментов.<br>-`default_hidden`. В этом состоянии расширения скрыты от панели инструментов при установке. При необходимости пользователи могут показывать их на панели инструментов.<br>-`default_shown`. Это оглушить параметр всех установленных расширений в браузере.
 
+Это ключи, разрешенные в глобальной области (*): 
+
+- blocked_permissions
+- installation_mode , допустимые значения в этой области являются только "заблокированными", "разрешенными" или "удалеными".
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+Это ключи, разрешенные в отдельной области расширения: 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state (доступно с edge 94)
+- installation_mode `"blocked"` , , `"allowed"` , , и `"removed"` `"force_installed"` `"normal_installed"` возможные значения.
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+Это ключи, разрешенные в области URL-адресов обновления: 
+
+- blocked_permissions
+- installation_mode — только допустимые значения в `"blocked"` `"allowed"` этой `"removed"` области.
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Настройка строки JSON в редакторе групповой политики Windows
 
