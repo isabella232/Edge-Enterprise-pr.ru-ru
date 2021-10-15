@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/11/2021
+ms.date: 10/14/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 7e9e48357eed0664b0f305eadf790689aa4ac93e
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
+ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089412"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "12094512"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -30,6 +30,10 @@ ms.locfileid: "12089412"
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-94099250-october-14"></a>Версия 94.0.992.50: 14 октября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-94099247-october-11"></a>Версия 94.0.992.47: 11 октября
 
@@ -51,7 +55,7 @@ ms.locfileid: "12089412"
 > [!Important]
 > В этом обновлении содержится исправление уязвимости [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [Руководстве по обновлению системы безопасности](https://msrc.microsoft.com/update-guide).
 
-Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
