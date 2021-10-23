@@ -3,19 +3,19 @@ title: Настройка Microsoft Edge для Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 10/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Настройка параметров политик Microsoft Edge на устройствах с Windows
-ms.openlocfilehash: a5db4352e723539843a5ad80a7b067e670bced5c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Узнайте, как настроить параметры политик Microsoft Edge на устройствах с Windows
+ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979740"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107464"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Настройка параметров политик Microsoft Edge в Windows
 
@@ -35,10 +35,10 @@ Microsoft Edge поддерживает как _обязательные_, та�
 >[!TIP]
 > Microsoft Intune можно использовать для настройки параметров политики Microsoft Edge. Дополнительные сведения см. в разделе [Настройка Microsoft Edge с помощью Microsoft Intune](configure-edge-with-intune.md).
 
-Для Microsoft Edge существует два административных шаблона, которые можно применять либо на уровне компьютера, либо на уровне домена Active Directory:
+Существует два административных шаблона для Microsoft Edge, которые можно применять с общими средствами управления групповой политикой, такими как редактор локальных групповых политик для приложения на отдельном компьютере или консоль управления групповыми политиками для доменных сетей Microsoft Windows. Эти шаблоны:
 
-- *msedge.admx* для [настройки параметров Microsoft Edge](microsoft-edge-policies.md)
-- *msedgeupdate.admx* для [управления обновлениями Microsoft Edge](microsoft-edge-update-policies.md).
+- *msedge.admx* для [настройки параметров Microsoft Edge](./microsoft-edge-policies.md)
+- *msedgeupdate.admx* для [управления обновлениями Microsoft Edge](./microsoft-edge-update-policies.md)
 
 Чтобы начать работу, скачайте и установите административный шаблон Microsoft Edge.
 
