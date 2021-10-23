@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сведения о возможностях режима терминала и настройке параметров режима терминала Microsoft Edge.
-ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 38d9b143a910c1e475e5fc8413ef657de395a659
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980263"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107564"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Настройка режима терминала в Microsoft Edge
 
@@ -86,6 +86,13 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 ```
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
+
+### <a name="kiosk-mode-download-files-on-exit"></a>Режим киоска Загрузка файлов на выходе
+
+Чтобы настроить Edge, чтобы удалить загруженные файлы при закрытии экземпляра киоска, необходимо настроить ниже 2 групповые политики:
+- [Удаление скачиваемых данных на выходе](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = Включено
+- [Установите каталог загрузки](.//microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+
 
 ### <a name="additional-command-line-options"></a>Дополнительные параметры командной строки
 

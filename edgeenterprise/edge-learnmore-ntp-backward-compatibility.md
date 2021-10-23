@@ -3,19 +3,19 @@ title: Обратная совместимость для корпоративн
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 06/29/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Обратная совместимость для корпоративной страницы новой вкладки
-ms.openlocfilehash: e2534f9df82aa81843d7cd292ada99a4c7574a3c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: eb8e7a69da876e844a576c20f0194d14c92eaeee
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979753"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107524"
 ---
 # <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a>Обратная совместимость для корпоративной страницы новой вкладки
 
@@ -31,7 +31,7 @@ ms.locfileid: "11979753"
 > [!NOTE]
 > Контент Office 365 изначально предоставлялся с помощью домена [Office.com](https://www.office.com).
 
-Если доступ к домену MSN.com ограничен в вашей организации, настоятельно рекомендуется предоставить пользователям доступ к этому [URL-адресу](https://ntp.msn.com).
+Если доступ к домену MSN.com ограничен для вашей организации, мы настоятельно рекомендуем дать пользователям доступ к [https://ntp.msn.com](https://ntp.msn.com) этому.
 
 Если вам нужно больше времени для разрешения доступа к домену MSN, рекомендуется использовать политику [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype), позволяющую выбрать веб-канал Microsoft News или Office 365 на странице новой вкладки.
 

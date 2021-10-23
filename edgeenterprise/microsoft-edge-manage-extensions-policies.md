@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Использование групповых политик для управления расширениями Microsoft Edge на предприятии
-ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a244fd0fc3c8743b9f677d2a6fc1fee835aab822
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980240"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107514"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Использование групповых политик для управления расширениями Microsoft Edge
 
@@ -163,6 +163,7 @@ ms.locfileid: "11980240"
 
 > [!NOTE]
 > Для расширений из интернет-магазина Chrome используйте строку `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`.
+> Для самостоятельного размещения расширений используйте шаблон extension_id;update_url, update_url указывает на расположение XML-файла манифеста обновления. Например, `mfjlfjaknfckffgjgmdfeheeealceoak;https://file_location.azurewebsites.net/picture_of_the_day.xml`.
 
 ## <a name="block-extensions-from-a-specific-store-or-update-url"></a>Блокировка расширений из определенного магазина или URL-адреса обновления
 
