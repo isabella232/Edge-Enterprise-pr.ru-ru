@@ -1,21 +1,21 @@
 ---
 title: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/14/2021
+ms.date: 10/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
-ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
+ms.openlocfilehash: e416f04adfdd96f7d14cb662ce2a1fd052951d26
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "12094512"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107454"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -29,7 +29,51 @@ ms.locfileid: "12094512"
 > [!NOTE]
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](microsoft-edge-update-progressive-rollout.md).
 >
-> Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
+> Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-950102030-october-21"></a>Версия 95.0.1020.30: 21 октября
+
+Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#october-21-2021).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Поддержка функции "Просмотр в проводнике" для библиотек SharePoint Online в Microsoft Edge**  Теперь можно включить функцию "Просмотр в проводнике" для современных библиотек документов в SharePoint Online. Чтобы пользователи могли видеть и использовать эту функцию, необходимо включить политику Microsoft Edge [Настройка функции "Просмотр в проводнике" для страниц SharePoint в Microsoft Edge](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) и обновить конфигурацию клиента SharePoint Online. Подробнее: [просмотр файлов SharePoint в проводнике в Microsoft Edge](/SharePoint/sharepoint-view-in-edge). 
+
+- **URL-адреса файлов зоны интрасети будут открываться в проводнике Windows.**  Можно разрешить URL-адресам файлов с веб-сайтов из зоны интрасети, доступных по протоколу HTTPS, открывать проводник Windows для этих файлов и каталогов. Эту возможность можно включить с помощью политики [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled).
+
+- **Улучшения возможностей скачивания.** Поддержка пользовательского интерфейса скачивания расширена и теперь распространяется на прогрессивные веб-приложения PWA и WebView. Кроме того, мы будет реализована поддержка перетаскивания в проводнике и на рабочем столе.
+
+- **Возобновите работу с PDF-файлами с того места, на котором вы остановились.**  Теперь вы сможете возобновить чтение PDF-документов с того места, на котором вы остановились в прошлый раз.
+
+- **Режим эффективности продлевает время работы батареи, когда ноутбук переключается в режим экономии заряда.**  Когда ноутбук перейдет в режим экономии заряда, включится режим эффективности, чтобы разрешить браузеру управлять ресурсами для увеличения времени работы батареи вашего устройства. При включенном режиме эффективности можно выбрать четыре варианта: "Отключено от электросети и низкий уровень заряда батареи", "Отключено от сети", "Всегда" и "Никогда". Примечание. Эта функция входит в состав контролируемого выпуска функций. Если эта функция отсутствует, вернитесь сюда позже, поскольку выпуск продолжается.
+
+- **К документам PDF добавлены поля для произвольного текста.** Теперь поддерживается добавление полей для произвольного текста в документы в формате PDF. С помощью этих полей можно заполнять формы и добавлять видимые заметки.
+
+- **В Коллекции добавлена поддержка цитирования.**  Улучшены возможности Коллекций, особенно для учащихся и исследователей. Коллекции будут поддерживать цитаты и списки для чтения.
+
+- **Более быстрое и удобное обновление паролей.** Теперь в браузере сразу будет открываться страница изменения пароля для заданного веб-сайта. За счет этого пользователю уже не нужно тратить время и переходить на эту страницу вручную. После открытия этой страницы браузер автоматически заполнит ваш существующий пароль, а также предложит новый уникальный и надежный пароль.  Примечание. В настоящее время эта функция доступна на ограниченном количестве сайтов.
+
+- **Автоматическое создание учетных записей.** Теперь предоставляется дополнительная поддержка страниц регистрации: можно одним щелчком создать ученую запись интернет-служб. Для этого нужно выбрать предложение в раскрывающемся списке при щелчке любого поля в форме регистрации. При том будут показаны сведения, необходимые для формы регистрации, а также будет предложен новый надежный пароль. После выбора все применимые сведения будут введены в соответствующие поля, а предложенный пароль будет автоматически сохранен при отправке на этот веб-сайт. Примечание. В настоящее время эта функция доступна на ограниченном количестве сайтов.
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) — включение блокировки устаревших точек расширения браузера
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) — указывает, могут ли модули WebAssembly отправляться из разных источников
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) — указывает, установлена или пропущена политика разрешений записи экрана
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) — настройка корректировки пикселей между значениями высоты window.open со страниц в режиме IE и со страниц в режиме Edge
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) — настройка корректировки пикселей между значениями ширины window.open со страниц в режиме IE и со страниц в режиме Edge
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) — разрешить открывать URL-адреса файлов зоны интрасети Microsoft Edge в проводнике Windows
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) — включить новую библиотеку SmartScreen
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) — настроить поведение отката ShadowStack в случае сбоев
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) — визуальный поиск включен
+
+#### <a name="obsoleted-policies"></a>Устаревшие политики
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Разрешить тестирование режима Internet Explorer
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
+
 
 ## <a name="version-94099250-october-14"></a>Версия 94.0.992.50: 14 октября
 
@@ -55,7 +99,7 @@ ms.locfileid: "12094512"
 > [!Important]
 > В этом обновлении содержится исправление уязвимости [CVE-2021-37973](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37973), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [Руководстве по обновлению системы безопасности](https://msrc.microsoft.com/update-guide).
 
-Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
+Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#september-24-2021).
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
@@ -200,7 +244,7 @@ ms.locfileid: "12094512"
 
 **Пользователи могут легко перейти в режим Internet Explorer в Microsoft Edge**. Начиная с Microsoft Edge версии 92, пользователи могут перезагрузить сайт в режиме Internet Explorer в Microsoft Edge, а не в отдельном приложении IE 11 в ожидании настройки сайта в списке сайтов в режиме предприятия. Пользователям будет предложено добавить сайт в список локальных сайтов, чтобы переход на ту же страницу в Microsoft Edge автоматически происходил в режиме IE в течение следующих 30 дней. Вы можете использовать политику [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed), чтобы настроить это взаимодействие и разрешить доступ к точкам входа в режиме IE, а также настроить возможность добавления сайтов в список локальных сайтов. Вы можете использовать политику [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) для настройки количества дней, в течение которых сайты остаются в списке локальных сайтов. Обратите внимание, что комплексной работы для Windows 10 версии 1909 требуется KB5003698 или более поздняя версия, для Windows 10 версии 2004, Windows 10 версии 20H2 или Windows 10 версии 21H1 требуется KB5003690 или более поздняя версия. Дополнительные сведения см. в статье [локальный список сайтов в режиме IE](/deployedge/edge-ie-mode-local-site-list).
 
-**MHTML-файлы по умолчанию открываются в режиме Internet Explorer**. Начиная с Microsoft Edge версии 92 Stable, MHTML-файлы автоматически открываются в режиме Internet Explorer в Microsoft Edge, а не в приложении Internet Explorer (IE11). Это чаще всего наблюдается при попытке просмотра электронной почты Outlook в браузере. Это изменение будет происходить только в том случае, если IE11 является обработчиком по умолчанию для этого типа файлов. Изменить этот параметр при желании можно перед установкой обновления стабильной версии 92 с помощью [этого руководства](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
+**MHTML-файлы по умолчанию открываются в режиме Internet Explorer**. Начиная с Microsoft Edge версии 92 Stable, MHTML-файлы автоматически открываются в режиме Internet Explorer в Microsoft Edge, а не в приложении Internet Explorer (IE11). Это чаще всего наблюдается при попытке просмотра электронной почты Outlook в браузере. Это изменение будет происходить только в том случае, если IE11 является обработчиком по умолчанию для этого типа файлов. Изменить этот параметр при желании можно перед установкой обновления стабильной версии 92 с помощью [этого руководства](/docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
 
 **Предупреждение "Отключить расширения режима разработчика" можно отключить на 2 недели**. Начиная с Microsoft Edge версии 92, можно на 2 недели отложить предупреждение "Отключить расширения режима разработчика", выбрав этот вариант в раскрывающемся списке в диалоговом окне предупреждения.
 
