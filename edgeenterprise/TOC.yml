@@ -135,6 +135,8 @@
           href: edge-ie-mode-sitelist.md
         - name: Настройка политик для режима IE
           href: edge-ie-mode-policies.md
+        - name: Управление списками облачных сайтов для режима Internet Explorer (IE)
+          href: edge-ie-mode-cloud-site-list-mgmt.md
         - name: Список локальных сайтов режима IE
           href: edge-ie-mode-local-site-list.md
         - name: Отключение Internet Explorer 11

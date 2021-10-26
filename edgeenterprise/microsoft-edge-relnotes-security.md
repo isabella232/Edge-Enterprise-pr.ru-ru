@@ -1,25 +1,29 @@
 ---
 title: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/08/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: aa43929500041e1b2b7a5b292f8384d372bc429f
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 2e49fcae65239c726b9f6452a0f4dfc227ad9394
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089402"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107475"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="october-21-2021"></a>21 октября 2021 г.
+
+Корпорация Майкрософт выпустила новый  **Microsoft Edge стабильного канала (версия 95.0.1020.30)**, содержащий последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide)
 
 ## <a name="october-11-2021"></a>11 октября 2021 г.
 
