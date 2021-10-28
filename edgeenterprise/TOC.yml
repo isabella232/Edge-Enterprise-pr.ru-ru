@@ -1,4 +1,4 @@
-# last revised 09/09/2021 
+# last revised 10/26/2021 
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -161,6 +161,8 @@
   items:
     - name: Система безопасности для вашей организации
       href: ms-edge-security-for-business.md
+    - name: Современная защита безопасности для уязвимых устаревших приложений
+      href: microsoft-edge-security-iemode-safer-than-ie.md
     - name: Прерывание скачивания потенциально опасных файлов
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Список разрешений для конечных точек Microsoft Edge

@@ -1,26 +1,25 @@
 ---
 title: Настройка синхронизации Microsoft Edge Enterprise
 ms.author: collw
-author: AndreaLBarr
+author: dan-wesley
 manager: silvanam
-ms.date: 09/07/2021
+ms.date: 10/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Параметры пользователя и администратора для настройки синхронизации избранного, паролей и других данных браузера в Microsoft Edge.
-ms.openlocfilehash: 5caec237eebcd18a83b8f32d638ace2fa2914e38
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 2f9ca20bbfeec619f0cc4d2846a527586a49f5ef
+ms.sourcegitcommit: 9c4d3803ee060d83f2081482e7f2cb4ab6b86f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980273"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "12117090"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Настройка синхронизации Microsoft Edge Enterprise
 
-В этой статье рассказывается о том, как администраторы могут настроить для пользователя синхронизацию избранного, паролей и других данных браузера в Microsoft Edge на всех устройствах, на которых выполнен вход. Если вы не являетесь администратором, ознакомьтесь со статьей о том, как выполнять вход и синхронизацию Microsoft Edge на разных устройствах. 
-            [Войдите, чтобы синхронизировать Microsoft Edge на разных устройствах](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+В этой статье рассказывается о том, как администраторы могут настроить для пользователя синхронизацию избранного, паролей и других данных браузера в Microsoft Edge на всех устройствах, на которых выполнен вход. Если вы не являетесь администратором, ознакомьтесь со статьей о том, как выполнять вход и синхронизацию Microsoft Edge на разных устройствах. [Войдите, чтобы синхронизировать Microsoft Edge на разных устройствах](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Применяется к Microsoft Edge версии 77 или более поздней, если не указано иное.
@@ -48,7 +47,11 @@ ms.locfileid: "11980273"
 Функция синхронизации Microsoft Edge для учетных записей Azure Active Directory (Azure AD) доступна в рамках любой из этих подписок:
 
 - Azure AD Premium (P1 или P2)
-- Microsoft 365 бизнес премиум, бизнес стандарт или бизнес базовый
+- Microsoft 365 бизнес премиум, бизнес стандарт или **бизнес базовый \***
+
+   > [!IMPORTANT]
+   > ** \* *_ Мы нашли проблему с _* Business Basic** для синхронизации и работаем над исправлением. Пока что она не работает, как следует.
+
 - Office 365 E1 и более поздние версии
 - Azure Information Protection (AIP) (P1 или P2)
 - Все подписки EDU (приложения Майкрософт для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или выше, M365 A1 или выше, Azure Information Protection P1 или P2 для учащихся или преподавателей)
@@ -57,18 +60,12 @@ ms.locfileid: "11980273"
 
 Администраторы могут использовать следующие групповые политики для настройки и управления синхронизацией Microsoft Edge:
 
-- 
-            [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): полное отключение синхронизации.
-- 
-            [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): отключает сохранение журнала браузера и синхронизацию. Эта политика также отключает синхронизацию открытых вкладок.
-- 
-            [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): если эта политика отключена, синхронизация журнала также будет отключена.
-- 
-            [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): настройка списка типов, исключенных из синхронизации.
-- 
-            [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): разрешает профилям Active Directory (AD) использовать локальное хранилище. Дополнительные сведения см. в статье [Локальная синхронизация для пользователей Active Directory (AD)](./microsoft-edge-on-premises-sync.md).
-- 
-            [ForceSync:](/deployedge/microsoft-edge-policies#forcesync) включает синхронизацию по умолчанию и не требует согласия пользователя.  
+- [SyncDisabled](./microsoft-edge-policies.md#syncdisabled): полное отключение синхронизации.
+- [SavingBrowserHistoryDisabled](./microsoft-edge-policies.md#savingbrowserhistorydisabled): отключает сохранение журнала браузера и синхронизацию. Эта политика также отключает синхронизацию открытых вкладок.
+- [AllowDeletingBrowserHistory](./microsoft-edge-policies.md#allowdeletingbrowserhistory): если эта политика отключена, синхронизация журнала также будет отключена.
+- [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): настройка списка типов, исключенных из синхронизации.
+- [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): разрешает профилям Active Directory (AD) использовать локальное хранилище. Дополнительные сведения см. в статье [Локальная синхронизация для пользователей Active Directory (AD)](./microsoft-edge-on-premises-sync.md).
+- [ForceSync:](/deployedge/microsoft-edge-policies#forcesync) включает синхронизацию по умолчанию и не требует согласия пользователя.  
 
 ## <a name="configure-microsoft-edge-sync"></a>Настройка синхронизации Microsoft Edge
 
