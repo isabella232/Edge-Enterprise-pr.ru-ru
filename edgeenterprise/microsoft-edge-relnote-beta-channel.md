@@ -1,21 +1,21 @@
 ---
 title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: aguta
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 10/11/2021
+ms.date: 11/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 433c042069a25029944b709baf7ac2ae659887be
-ms.sourcegitcommit: 7f17872561952bfd238562ef273e495765d2a6c4
+ms.openlocfilehash: 57ea92fde42d4ad4c63f238c3b30fa218ee5b360
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "12087627"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154521"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,53 @@ ms.locfileid: "12087627"
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-96010548-november-1"></a>Версия 96.0.1054.8: 1 ноября
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Запуск прогрессивного веб-приложения (PWA) непосредственно по протокольным ссылкам.** Позвольте установленным PWAs обрабатывать ссылки, которые используют определенный протокол для более интегрированного использования.
+
+- **Узнайте, как решить математические проблемы с помощью математического решения.** Мы рады сообщить, что вы можете использовать math Solver в Microsoft Edge, чтобы получить помощь с широким спектром математических понятий. Эти понятия варьируются от элементарных арифметических и четырехугольных уравнений до тригонометрии и исчисляемости. Math Solver позволяет сфотографировать рукописную или напечатанную математическую проблему, а затем предоставляет мгновенное решение с пошаговой инструкцией, которая поможет вам узнать, как достичь решения без поручений. Math Solver также поставляется с математической клавиатурой, с помощью которую можно легко ввести математические проблемы. Эта клавиатура устраняет необходимость поиска по традиционной клавиатуре, чтобы найти нужные символы математики. После решения проблемы math Solver предоставляет варианты для продолжения обучения с помощью викторин, таблиц и видеоуроков.
+
+- **Прокрутка улучшений для документов PDF.** Мы улучшаем производительность прокрутки, чтобы обеспечить более плавное выполнение прокрутки в документах PDF. Во время прокрутки не отображаются белые полосы.
+
+- **Freeform highlighting on PDFs.** С добавлением выделенок freeform улучшается режим просмотра PDF и разметки. В PDF можно выделить разделы, к которые не имеется доступа, и отсканировать документы.
+
+- **Технология управления потоком исполнения (CET).**  Microsoft Edge начнет поддерживать еще более безопасный режим просмотра, использующий аппаратный поток управления для процессов браузера. Поток управления обеспечивается на поддерживаемом оборудовании: Intel 11th Gen. или AMD Zen 3. Можно отключить CET, настроив параметры выполнения файлов изображений (IFEO) с помощью групповой политики.
+
+- **Новый диалоговое окно предупреждения для сайтов typosquatting.** Теперь браузер будет показывать предупреждение на некоторых сайтах с URL-адресами, которые очень похожи на другие сайты. Этот пользовательский интерфейс использует клиентскую юристику, чтобы предупредить пользователей о сайтах, которые могут подменять популярные веб-сайты. Дополнительные сведения см. в дополнительных сведениях о том, что такое [typosquatting?.](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0)
+
+- **Улучшенная раздатка между режимом IE и современным браузером.**  Начиная с этой версии Microsoft Edge, навигация между режимом Microsoft Edge и Internet Explorer будет включать данные форм и дополнительные http-заготки. Ссылки, почтовые данные, формы данных и методы запроса будут правильно перенаправляться через два опыта. Можно указать, какие типы данных следует включить с помощью политики [InternetExplorerIntegrationComplexNavDataTypes.](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes)
+
+- **Управление списками облачных сайтов для режима IE в общедоступных предварительных просмотрах.**  Управление списками облачных сайтов позволяет управлять списками сайтов для режима IE в облаке, не нуждаясь в локальной инфраструктуре для хозяйского списка сайтов организации. Вы можете получить доступ к функции управления списками облачных сайтов с помощью Microsoft Edge списков сайтов в центре Microsoft 365 Admin. Дополнительные дополнительные статьи см. в статье Управление списками облачных сайтов [для режима IE (Public Preview).](./edge-ie-mode-cloud-site-list-mgmt.md)
+
+- **Обновление Microsoft Edge WebWiew2 с помощью WSUS.** ИТ-администраторы, использующие WSUS для обновления Microsoft Edge, также смогут обновлять Microsoft Edge WebView2 с помощью WSUS. Эта возможность упрощает администрирование для автономных устройств.
+
+- **Обновления WSUS для Сервера.** Обновления WSUS и Каталога для Microsoft Edge каналов (Stable, Beta, Dev) теперь будут применяться к Windows серверных СКА, которые Microsoft Edge установлены, в том числе Windows Server 2022. Дополнительные сведения о настройке обновлений WSUS для Microsoft Edge см. в [Microsoft Edge.](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json#update-microsoft-edge)
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) — предотвращает отправку файлов во время службы Application Guard.
+- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) — разрешить звуковой процесс работать с приоритетом выше обычного на Windows.
+- [Компонент AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) — включен компонент протоколов autoLaunch.
+- [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) — настройка, когда режим эффективности должен стать активным.
+- [ForceSyncTypes](/DeployEdge/microsoft-edge-policies#forcesynctypes) — настройка списка типов, включенных для синхронизации.
+- [InternetExplorerIntegrationComplexNavDataTypes](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) — настройте, будут ли отправлены данные форм и http-загонщики при вводе или выходе из режима Internet Explorer.
+- [InternetExplorerModeToolbarButtonEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled) — покажите кнопку Перезагрузка в режиме Internet Explorer на панели инструментов.
+- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) — печать в PostScript режиме.
+- [PrintRasterizePdfDpi](/DeployEdge/microsoft-edge-policies#printrasterizepdfdpi) - Печать в Rasterize PDF DPI.
+- [RendererAppContainerEnabled](/DeployEdge/microsoft-edge-policies#rendererappcontainerenabled) — включить рендер в контейнере приложений.
+- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) — показать ссылки, общие для Microsoft 365 приложений в истории.
+- [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) — Настройка edge TyposquattingChecker.
+
+<!-- end major 96 --->
+
+## <a name="version-950102038-october-28"></a>Версия 95.0.1020.38: 28 октября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-950102020-october-11"></a>Версия 95.0.1020.20: 11 октября
 
@@ -36,31 +83,31 @@ ms.locfileid: "12087627"
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
-- **Просмотр в службе поддержки обозревателя файлов для SharePoint онлайн-библиотек в Microsoft Edge.**  Теперь вы можете включить функцию View in File Explorer в SharePoint современных библиотек документов в Интернете. Чтобы этот опыт был виден и работал для пользователей, необходимо включить политику Microsoft Edge "Настройка функции View in File Explorer для SharePoint страниц в [Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) и обновить конфигурацию клиента SharePoint Online. Дополнительные данные. Просмотр SharePoint файлов с [помощью обозревателя файлов в Microsoft Edge - SharePoint в Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+- **Поддержка функции "Просмотр в проводнике" для библиотек SharePoint Online в Microsoft Edge**  Теперь вы можете включить функцию View in File Explorer для SharePoint современных библиотек документов в Интернете. Чтобы этот опыт был виден и работал для пользователей, необходимо включить Microsoft Edge "Настройка функции View in File Explorer для SharePoint страниц в политике [Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) и обновить конфигурацию клиента SharePoint Online. Дополнительные данные. Просмотр SharePoint файлов с [помощью обозревателя файлов в Microsoft Edge - SharePoint в Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
-- **URL-ссылки url-адресов файлов зоны интрасети откроются в Windows File Explorer.**  Вы можете разрешить ссылки url-адресов файлов на файлы зоны интрасети, происходящие из веб-сайтов https зоны https, Windows файл explorer для этого файла или каталога. Этот опыт можно включить с помощью [политики IntranetFileLinksEnabled.](/deployedge/microsoft-edge-policies#intranetfilelinksenabled)
+- **URL-адреса файлов зоны интрасети будут открываться в проводнике Windows.**  Можно разрешить URL-адресам файлов с веб-сайтов из зоны интрасети, доступных по протоколу HTTPS, открывать проводник Windows для этих файлов и каталогов. Эту возможность можно включить с помощью политики [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled).
 
-- **Улучшения в области загрузки.**  Поддержка загрузки пользователей распространяется на прогрессивные веб-приложения PWAs и WebView. Мы также начнем поддерживать перетаскивания и падения в проводник файлов и настольный компьютер.
+- **Улучшения возможностей скачивания.**  Поддержка загрузки пользователей распространяется на прогрессивные веб-приложения PWAs и WebView. Кроме того, мы будет реализована поддержка перетаскивания в проводнике и на рабочем столе.
 
-- **Выберите место, где вы остались в документах PDF.**  Теперь вы сможете возобновить чтение с последнего закрытого документа PDF.
+- **Возобновите работу с PDF-файлами с того места, на котором вы остановились.**  Вы можете возобновить чтение с места, где последний раз закрывали pdf-документ.
 
-- **Режим эффективности продлевает срок службы батареи, когда ноутбук вступает в режим экономии батареи.**  Режим эффективности будет активен, когда ноутбук вступает в режим экономии батареи, чтобы позволить браузеру управлять использованием ресурсов для продления времени автономной работы компьютера. У вас будет четыре варианта, когда режим эффективности активен, отключен и не работает отключаемой батареи, отключен, всегда и никогда. Обратите внимание: это контролируемый выпуск компонентов. Устройства с аккумулятором должны иметь включенную функцию.
+- **Режим эффективности продлевает время работы батареи, когда ноутбук переключается в режим экономии заряда.**  Когда ноутбук перейдет в режим экономии заряда, включится режим эффективности, чтобы разрешить браузеру управлять ресурсами для увеличения времени работы батареи вашего устройства. У вас будет четыре варианта, когда режим эффективности активен, отключен и не работает отключаемой батареи, отключен, всегда и никогда. Примечание. Это управляемый выкат функции. Устройства с аккумулятором должны иметь включенную функцию.
 
 ***Новые политики***
 
-- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) Включить блокировку точки расширения устаревших браузеров
-- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) Указывает, можно ли перенаправить модули WebAssembly
-- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) Указывает, проверяется или пропускается ли политика разрешений для захвата отображения
-- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) Настройка регулировки пикселей между высотами window.open, источником для страниц режима IE и страниц режима Edge
-- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) Настройка регулировки пикселей между ширинами window.open, источником для страниц режима IE и страниц режима Edge
-- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Разрешить открывать URL-адреса url-адресов файлов Microsoft Edge в Windows File Explorer
-- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) Настройка поведения отката аварийного сбоя ShadowStack
-- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) Включен визуальный поиск
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) — включить блокировку устаревших точек расширения браузера.
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) — указывает, можно ли перенаправлять модули WebAssembly.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) — указывает, проверяется или пропускается политика разрешений отображения.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) — настройка настройки пикселей между высотами window.open, источником для страниц режима IE и Microsoft Edge страниц режима.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) — настройка настройки пикселей между ширинами window.open, источником из страниц режима IE и Microsoft Edge страниц режима.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) — разрешить ссылки url-адресов url-адресов файлов Microsoft Edge для Windows File Explorer.
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) — настройка поведения отката аварийного сбоя ShadowStack.
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) — включить визуальный поиск.
 
 ***Устаревшие политики***
 
-- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) Разрешить тестирование режима Internet Explorer
-- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) Поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) — разрешить тестирование режима Internet Explorer.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) — поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
 
 ## <a name="version-94099223-september-17"></a>Версия 94.0.992.23: 17 сентября
 
@@ -90,7 +137,7 @@ ms.locfileid: "12087627"
 
 - **Включение неявного входа для локальных учетных записей.**   Если включить политику OnlyOnPremisesImplicitSigninEnabled, неявный вход будет включен только для локальных учетных записей.  Браузер Microsoft Edge не будет пытаться выполнять неявный вход в учетные записи MSA и AAD. Переход с локальных учетных записей на учетные записи AAD также будет остановлен.
 
-- **Бесплатные текстовые поля формы, добавленные в документы PDF.**  Теперь мы поддерживаем добавление текстовых полей свободной формы в документы PDF, которые можно использовать для заполнения форм и добавления видимых заметок.
+- **К документам PDF добавлены поля для произвольного текста.**  Теперь мы поддерживаем добавление текстовых полей свободной формы в документы PDF, которые можно использовать для заполнения форм и добавления видимых заметок.
 
 - **Обновление паролей с легкостью.**  Браузер теперь будет принимать вас непосредственно на страницу Изменить пароль для данного веб-сайта, экономя время и клики, избегая необходимости переходить на страницу вручную. После того, как вы на этой странице браузер также автозаполнеет существующий пароль и предложит надежный, уникальный новый пароль.  Обратите внимание: в настоящее время эта функция доступна на ограниченном количестве сайтов.  
 
@@ -199,227 +246,7 @@ ms.locfileid: "12087627"
 
 Исправлены ошибки и проблемы с производительностью.
 
-## <a name="version-92090222-june-21"></a>Версия 92.0.902.22: 21 июня
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Поиск естественного языка для истории браузера в панели адресов.** Поиск статьи или веб-сайта, который вы ищете, теперь проще благодаря поиску естественного языка прямо из панели адресов. Результаты поиска можно найти на основе содержимого страницы/описания/времени (например, "рецепт торта с прошлой недели"), а также только для названий и ключевых слов URL-адресов.
-Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту возможность, вернитесь сюда позже, так как выпуск продолжается.
-
-- **Пользователи могут легко перейти в режим Internet Explorer в Microsoft Edge**. Начиная с Microsoft Edge версии 92, пользователи могут перезагрузить сайт в режиме Internet Explorer в Microsoft Edge, а не в отдельном приложении IE 11 в ожидании настройки сайта в списке сайтов в режиме предприятия. Пользователям будет предложено добавить сайт в список локальных сайтов, чтобы переход на ту же страницу в Microsoft Edge автоматически происходил в режиме IE в течение следующих 30 дней. Вы можете использовать политику *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)*, чтобы настроить это взаимодействие и разрешить доступ к точкам входа в режиме IE, а также настроить возможность добавления сайтов в список локальных сайтов. Вы можете использовать политику *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)*, чтобы настроить количество дней хранения сайтов в списке локальных сайтов.
-Обратите внимание, что комплексной работы для Windows 10 версии 1909 требуется KB5003698 или более поздняя версия, для Windows 10 версии 2004, Windows 10 версии 20H2 или Windows 10 версии 21H1 требуется KB5003690 или более поздняя версия.
-
-- **MHTML-файлы по умолчанию открываются в режиме Internet Explorer**. Начиная с Microsoft Edge версии 92 Stable, MHTML-файлы автоматически открываются в режиме Internet Explorer в Microsoft Edge, а не в приложении Internet Explorer (IE11). Это чаще всего наблюдается при попытке просмотра электронной почты Outlook в браузере. Это изменение будет происходить только в том случае, если IE11 является обработчиком по умолчанию для этого типа файлов. Если вы хотите изменить это, это можно сделать перед установкой обновления Stable версии 92 с помощью [этого руководства](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration).
-
-- **Платежные инструменты теперь синхронизируются между устройствами**. Начиная с Microsoft Edge версии 92, вы можете синхронизировать платежную информацию между устройствами, на которых вы выполнили вход.
-Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту функцию, проверьте в ближайшее время, как мы продолжим нашу выкатку.
-
-- **Предупреждение "Отключить расширения режима разработчика" можно закрыть окончательно**. Начиная с Microsoft Edge версии 92, вы можете отключить предупреждение "Отключить расширения режима разработчика", нажав параметр "Не показывать это снова".
-Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту функцию, проверьте в ближайшее время, как мы продолжим нашу выкатку.
-
-- **Управляйте расширениями непосредственно с панели инструментов**. Совершенно новое меню расширений на панели инструментов позволит легко скрыть расширения или закрепить их. Быстрые ссылки на управление расширениями и поиск новых расширений упростят поиск новых расширений и управление существующими.
-Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту функцию, проверьте в ближайшее время, как мы продолжим нашу выкатку.
-
-- **Автоматическое использование HTTPS**. Пользователи смогут обновить навигацию с HTTP до HTTPS для доменов, которые, скорее всего, поддерживают этот более безопасный протокол. Эту поддержку также можно настроить так, чтобы попытка доставки по протоколу HTTPS осуществлялась для всех доменов.
-Обратите внимание: мы экспериментируем с этой функцией, и это поведение не будет проявляться, если вы решили отказаться от экспериментов.
-
-- **Улучшения визуализации шрифтов.** Улучшена четкость и снижена размытость при передаче текста.
-Обратите внимание: это контролируемый выпуск компонентов. Если вы не видите эту функцию, проверьте в ближайшее время, как мы продолжим нашу выкатку.
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-Добавлено восемь новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики:
-
-- [AADWebSiteSSOUsingThisProfileEnabled](/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) Единый вход для рабочих и учебных сайтов с помощью этого профиля включен
-- [AutomaticHttpsDefault](/DeployEdge/microsoft-edge-policies#automatichttpsdefault) Настройка автоматического использования HTTPS
-- [HeadlessModeEnabled](/DeployEdge/microsoft-edge-policies#headlessmodeenabled) Управление использованием режима без монитора
-- [InsecurePrivateNetworkRequestsAllowed](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed)Указывает, следует ли разрешить небезопасным веб-сайтам делать запросы к более закрытым конечным точкам сети
-- [InsecurePrivateNetworkRequestsAllowedForUrls](/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) Разрешает перечисленным веб-сайтам делать запросы к более частным конечным точкам сети из небезопасных контекстов
-- [InternetExplorerIntegrationLocalSiteListExpirationDays](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) Указать количество дней, в течение которых сайт остается в локальном списке сайтов режима IE
-- [InternetExplorerIntegrationReloadInIEModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Разрешить перезагрузку ненастроенных сайтов в режиме Internet Explorer
-- [SharedArrayBufferUnrestrictedAccessAllowed](/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) Указывает, разрешено ли использовать SharedArrayBuffers в контексте без изоляции ссылок перекрестного происхождения
-
-#### <a name="obsoleted-policy"></a>Устаревшая политика
-
-- [EnableSha1ForLocalAnchors](/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) Разрешение сертификатов, подписанных с помощью SHA-1 при выдаче локальными якорями доверия.
-
-## <a name="version-9209029-june-8"></a>Версия 92.0.902.9: 8 июня
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086441-june-3"></a>Версия 91.0.864.41: 3 июня
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086437-may-27"></a>Версия 91.0.864.37: 27 мая
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086436-may-26"></a>Версия 91.0.864.36: 26 мая
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086433-may-21"></a>Версия 91.0.864.33: 21 мая
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086427-may-14"></a>Версия 91.0.864.27: 14 мая
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086419-may-7"></a>Версия 91.0.864.19: 7 мая
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086415-may-3"></a>Версия 91.0.864.15: 3 мая
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-91086411-april-30"></a>Версия 91.0.864.11: 30 апреля
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Определение сетевого трафика, исходя из контейнеров Application Guard в Microsoft Defender на уровне прокси-сервера**. Начиная с Microsoft Edge версии 91, для добавления тегов сетевого трафика, исходящего из контейнеров Application Guard, встраивается поддержка, что позволяет предприятиям идентифицировать их и применять определенные политики.
-
-- **Параметр поддержки, позволяющий синхронизировать избранное из хоста в контейнер Edge Application Guard.** Начиная с Microsoft Edge версии 91, пользователи могут настроить Application Guard для синхронизации избранного из хоста в контейнер. Это гарантирует появление нового избранного в контейнере.
-
-- **Поддержка API распознавания речи.** Начиная с Microsoft Edge версии 91, добавляется поддержка API команд распознавания речи на Google.com и аналогичных сайтах. Эта возможность доступна только случайно выбранной группе пользователей, участвующих в эксперименте. Эти пользователи предоставляют отзывы службе поддержки.
-
-- **Персонализация браузера с помощью новых цветовых тем.** Персонализируйте Microsoft Edge с помощью одной из четырнадцати новых цветовых тем на странице "Параметры - > Внешний вид". Вы также можете установить настраиваемые темы с сайта надстроек Microsoft Edge. [Подробнее](https://techcommunity.microsoft.com/t5/articles/make-microsoft-edge-your-own-with-themes/m-p/2083165)
-
-- **Прерывание загрузки** Начиная с Microsoft Edge версии 91 браузер автоматически прерывает загрузки типов, которые могут нанести вред вашему компьютеру, если они начинаются без взаимодействия с пользователем и не поддерживаются проверкой репутации приложений SmartScreen. Пользователи могут переопределять и продолжать загрузку, щелкнув правой кнопкой мыши и выбрав параметр "Keep" ("Сохранить") на элементе загрузки.
-Администраторы предприятия могут отказаться от этого с помощью одной из этих двух политик:
-    - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](/deployedge/microsoft-edge-policies#exemptdomainfiletypepairsfromfiletypedownloadwarnings) – Отключение предупреждений о расширениях загружаемых файлов для определенных типов файлов в доменах. Дополнительные сведения см. в статье [Перебои загрузок в Microsoft Edge Security](/deployedge/microsoft-edge-security-downloads-interruptions)
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-Добавлено шесть новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики:
-
-- [ApplicationGuardTrafficIdentificationEnabled](/DeployEdge/microsoft-edge-policies#applicationguardtrafficidentificationenabled) — идентификация трафика Application Guard
-- [ExplicitlyAllowedNetworkPorts](/DeployEdge/microsoft-edge-policies#explicitlyallowednetworkports) — явно разрешенные сетевые порты
-- [ImportStartupPageSettings](/DeployEdge/microsoft-edge-policies#importstartuppagesettings) — разрешение импорта параметров страниц запуска
-- [MathSolverEnabled](/DeployEdge/microsoft-edge-policies#mathsolverenabled) — позволяет пользователям вставлять фрагменты математических задач и получать решение с пошаговым объяснением в Microsoft Edge
-- [NewTabPageContentEnabled](/DeployEdge/microsoft-edge-policies#newtabpagecontentenabled) — разрешает содержимое Microsoft News на новой странице вкладки
-- [NewTabPageQuickLinksEnabled](/DeployEdge/microsoft-edge-policies#newtabpagequicklinksenabled) — разрешает быстрые ссылки на новой странице вкладки
-
-#### <a name="obsoleted-policy"></a>Устаревшая политика
-
-- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) — включает упреждающую проверку подлинности
-<!-- end major 91 -->
-
-## <a name="version-90081846-april-22"></a>Версия 90.0.818.46: 22 апреля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081842-april-20"></a>Версия 90.0.818.42: 20 апреля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081841-april-16"></a>Версия 90.0.818.41: 16 апреля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081838-april-14"></a>Версия 90.0.818.38: 14 апреля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081836-april-12"></a>Версия 90.0.818.36: 12 апреля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081827-april-2"></a>Версия 90.0.818.27: 2 апреля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081822-march-29"></a>Версия 90.0.818.22: 29 марта
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-90081814-march-22"></a>Версия 90.0.818.14: 22 марта
-
-Исправлены ошибки и проблемы с производительностью.
-<!-- begin major 90 -->
-## <a name="version-9008188-march-16"></a>Версия 90.0.818.8: 16 марта
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- Единый вход (SSO) теперь доступен для учетных записей **Azure Active Directory (Azure AD) и Microsoft Account (MSA) на macOS.** Пользователь, вошедший в систему в Microsoft Edge на macOS, автоматически получает вход на веб-сайты, настроенные на единый вход с помощью рабочей учетной записи и учетной записи Майкрософт (например, bing.com, office.com, msn.com и outlook.com).
-
-- **Режим терминала** Начиная с Microsoft Edge версии 90, мы заблокировали параметры печати пользовательского интерфейса, чтобы разрешить только настроенные принтеры и параметры "Печать в PDF". Кроме того, мы усовершенствовали режим терминала с одним приложением, чтобы ограничить запуск других приложений из браузера. Дополнительные сведения о функциях режима терминала см. [здесь.](/deployedge/microsoft-edge-configure-kiosk-mode#kiosk-mode-supported-features)
-
-- **Вывод на печать:**
-
-  - **Новый режим растеризации печати**для принтеров без PostScript. Начиная с Microsoft Edge версии 90, администраторы могут использовать новую политику для определения режима растеризации печати для своих пользователей. Эта политика управляет печатью из Microsoft Edge на принтерах в Windows без PostScript.  Иногда для правильной печати на принтерах без поддержки PostScript необходимо правильно растеризовать задания для печати. Возможные настройки - Полная и Быстрая.
-
-  - **Дополнительные параметры масштабирования страниц для печати.** Теперь пользователи могут настраивать масштабирование при печати веб-страниц и документов PDF с помощью дополнительных параметров. Параметр "Вписать на страницу" гарантирует, что веб-страница или документ вписываются в пространство, доступное в выбранном для печати "Размере бумаги". Значение "Фактический размер" гарантирует, что размер печатаемого контента не изменится независимо от выбранного "Размера бумаги".
-
-- **Эффективная работа:**
-
-  - **Предложения по автозаполнению стали более разнообразными**- теперь они включают в себя содержимое адресных полей из буфера обмена. При нажатии на поле профиля или адреса (такое как телефон, электронная почта, почтовый индекс, город, область и т.д.) происходит разбор содержимого буфера обмена и результаты выводятся в качестве предложений автозаполнения.
-
-  - **Пользователи могут искать предложения автозаполнения, даже если форма или поле не обнаружены**. Теперь, если у вас есть сведения, сохраненные в Microsoft Edge, предложения по автозаполнению всплывают автоматически, помогая сэкономить время при заполнении форм. Если автозаполнение не работает для формы или если вы хотите получить данные в формах, обычно не имеющих автозаполнения (например, временные формы), вы можете искать информацию с помощью автозаполнения.
-
-- **Доступ к загрузкам из раскрывающегося меню в панели меню**. Загрузки будут показаны в правом верхнем углу, причем все загрузки, активные в данный момент, будут располагаться рядом. Это меню легко закрыть, чтобы продолжать просматривать веб-страницу и при этом отслеживать общий ход скачивания прямо на панели инструментов. [Подробнее](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
-
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-Добавлено семь новых политик. Скачайте обновленные административные шаблоны на [целевой странице Microsoft Edge Enterprise](https://www.microsoft.com/edge/business/download). Добавлены следующие новые политики:
-
-- [ApplicationGuardFavoritesSyncEnabled](./microsoft-edge-policies.md#applicationguardfavoritessyncenabled) — включена синхронизация избранного Application Guard
-- [ManagedConfigurationPerOrigin](./microsoft-edge-policies.md#managedconfigurationperorigin) — задает управляемые значения конфигурации для веб-сайтов в определенных источниках
-- [PrintRasterizationMode](./microsoft-edge-policies.md#printrasterizationmode) — режим растеризации печати
-- [QuickViewOfficeFilesEnabled](./microsoft-edge-policies.md#quickviewofficefilesenabled) — управление возможностями быстрого просмотра файлов Office в Microsoft Edge
-- [SSLErrorOverrideAllowedForOrigins](./microsoft-edge-policies.md#sslerroroverrideallowedfororigins) — разрешить пользователям переходить дальше со страницы предупреждения HTTPS для определенных источников
-- [WindowOcclusionEnabled](./microsoft-edge-policies.md#windowocclusionenabled) — включить загораживание окна
-- [WindowsHelloForHTTPAuthEnabled](./microsoft-edge-policies.md#windowshelloforhttpauthenabled) — включена Windows Hello для HTTP Auth
-
-#### <a name="deprecated-policies"></a>Устаревшие политики
-
-- [NativeWindowOcclusionEnabled](./microsoft-edge-policies.md#nativewindowocclusionenabled) — включить встроенное загораживание окна
-- [SSLVersionMin](./microsoft-edge-policies.md#sslversionmin)— включена минимальная версия TLS
-<!-- end major 90 -->
-
-## <a name="version-89077454-march-13"></a>Версия 89.0.774.54: 13 марта
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077450-march-10"></a>Версия 89.0.774.50: 10 марта
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077448-march-8"></a>Версия 89.0.774.48: 8 марта
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077445-march-3"></a>Версия 89.0.774.45: 3 марта
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077439-february-26"></a>Версия 89.0.774.39: 26 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077434-february-22"></a>Версия 89.0.774.34: 22 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077427-february-12"></a>Версия 89.0.774.27: 12 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-89077423-february-8"></a>Версия 89.0.774.23: 8 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-<!-- begin major 89 -->
-
+<!--Archive on Oct 27 From Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
 <!--- Archived from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 ---->
 <!--- Archived from Version 87.0.664.12: October 20 to to version 86.0.622.15: September 14 ---->
 <!--- Archived to version 86.0.622.11: September 9 ---->

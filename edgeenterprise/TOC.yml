@@ -1,4 +1,4 @@
-# last revised 10/26/2021 
+# last revised 11/02/2021 
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -43,12 +43,6 @@
       href: microsoft-edge-release-schedule.md
     - name: Обновления системы безопасности
       href: microsoft-edge-relnotes-security.md
-    - name: Сопоставление политик Microsoft Edge
-      items:
-        - name: Обзор сопоставления политик
-          href: microsoft-edge-policy-map-overview.md
-        - name: Сопоставление политик Google Chrome и Microsoft Edge
-          href: microsoft-edge-policy-map-chrome-to-newedge.md
     - name: Поддерживаемые операционные системы
       href: microsoft-edge-supported-operating-systems.md
     - name: Политика жизненного цикла

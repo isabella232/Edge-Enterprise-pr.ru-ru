@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 02/02/2021
-  ms.openlocfilehash: 807aaa38da97222da8d52e36ad55995ef1c44e80
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: 5b4735d08b4af0e65cca1cabee04ed8538926932
+  ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11979750"
+  ms.lasthandoff: 11/03/2021
+  ms.locfileid: "12154531"
 landingContent:
 - title: Дополнительные сведения о Microsoft Edge на предприятии
   linkLists:
@@ -77,8 +77,6 @@ landingContent:
       url: microsoft-edge-update-policies.md
     - text: Ссылка на политику WebView2
       url: microsoft-edge-webview-policies.md
-    - text: Обзор сопоставления политик
-      url: microsoft-edge-policy-map-overview.md
     - text: Блог базовых параметров безопасности Майкрософт
       url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
 - title: Взаимодействовать с сообществом или получать помощь
