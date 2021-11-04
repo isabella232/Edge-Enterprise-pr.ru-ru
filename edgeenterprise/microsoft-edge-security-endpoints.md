@@ -3,19 +3,19 @@ title: Список разрешений для конечных точек Micr
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Список разрешений для конечных точек Microsoft Edge
-ms.openlocfilehash: 735e18e63095405dad4fdd51d51654956b564ca7
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 9e6a87290f2f73ba11bc98eecd3aa693c35b5ace
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980460"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155215"
 ---
 # <a name="allow-list-for-microsoft-edge-endpoints"></a>Список разрешений для конечных точек Microsoft Edge
 
@@ -103,6 +103,12 @@ ms.locfileid: "11980460"
   - `https://api.aadrm.cn` (для клиентов в Китае)
 
 - [Конечные точки службы уведомлений Windows](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+
+### <a name="cloud-site-list-management"></a>Управление списками облачных сайтов
+
+Служба, Microsoft Edge для загрузки списка веб-сайтов с облачным хостингом для режима Internet Explorer (IE). Дополнительные сведения см. в [руководстве списками облачных сайтов](https://aka.ms/CloudSiteList)
+
+- `https://edge.microsoft.com/`
 
 ## <a name="other-browser-support-services"></a>Другие службы для обеспечения поддержи работы браузера
 
