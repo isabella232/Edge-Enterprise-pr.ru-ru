@@ -3,23 +3,27 @@ title: Заметки о выпуске обновлений для систем
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2021
+ms.date: 10/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: 2e49fcae65239c726b9f6452a0f4dfc227ad9394
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: bfdc084cdd944cb43cfa6089deb0a77b9c9ebe01
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107475"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154492"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="october-29-2021"></a>29 октября 2021 г.
+
+Корпорация Майкрософт выпустила новый  **Microsoft Edge стабильного канала (версия 95.0.1020.40)**, содержащий последние обновления для системы безопасности проекта Chromium. Это обновление содержит исправление уязвимостей [CVE-2021-38000](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38000) и [CVE-2021-38003](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38003), которые, как сообщают разработчики Chromium, используются на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
 
 ## <a name="october-21-2021"></a>21 октября 2021 г.
 
