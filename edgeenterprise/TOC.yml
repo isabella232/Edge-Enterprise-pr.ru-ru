@@ -150,7 +150,7 @@
         - name: Сопоставление расширений файлов с режимом Internet Explorer
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: 'Устранение неполадок с режимом Internet Explorer: вопросы и ответы'
-          href: edge-ie-mode-faq.yml
+          href: edge-ie-mode-faq.md
 - name: Система безопасности Microsoft Edge
   items:
     - name: Система безопасности для вашей организации
