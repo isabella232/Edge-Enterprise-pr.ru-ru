@@ -1,4 +1,4 @@
-# last revised 11/02/2021 
+# last revised 01/11/2022
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -73,7 +73,7 @@
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Настройка Microsoft Edge с помощью параметров начальных предпочтений для первого запуска
       href: Initial-preferences-support-on-Microsoft-Edge-browser.md
-    - name: Конфигурация каждого сайта с помощью политики
+    - name: Конфигурация каждого сайт в соответствии с политикой
       href: Per-Site-Configuration-by-Policy.md
     - name: Настройка для Windows с помощью системы управления мобильными устройствами
       href: configure-edge-with-mdm.md
@@ -157,7 +157,7 @@
       href: ms-edge-security-for-business.md
     - name: Современная защита безопасности для уязвимых устаревших приложений
       href: microsoft-edge-security-iemode-safer-than-ie.md
-    - name: Прерывание скачивания потенциально опасных файлов
+    - name: Определение и прерывание загрузок потенциально опасных файлов
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Список разрешений для конечных точек Microsoft Edge
       href: microsoft-edge-security-endpoints.md
@@ -239,5 +239,5 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: 'Видео "Безопасность, совместимость и управляемость"'
       href: microsoft-edge-video-security-compatibility-manageability.md
-    - name: Вопросы и ответы
-      href: faqs-edge-in-the-enterprise.yml
+    - name: Часто задаваемые вопросы о Microsoft Edge
+      href: microsoft-edge-frequently-asked-questions.md

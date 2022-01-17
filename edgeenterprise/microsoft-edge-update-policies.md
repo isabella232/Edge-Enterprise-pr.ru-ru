@@ -1,34 +1,41 @@
 ---
 title: Документация по политикам Центра обновления Microsoft Edge
 ms.author: stmoody
-author: RyanHechtMSFT
+author: dan-wesley
 manager: tahills
-ms.date: 09/23/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация по всем политикам, поддерживаемым средством обновления Microsoft Edge
-ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
-ms.translationtype: MT
+ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037219"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297617"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge — политики обновления
 
 Последняя версия Microsoft Edge включает в себя следующие политики, которые можно использовать для управления процессом и временем обновления Microsoft Edge.
 
-Сведения о других политиках, доступных в Microsoft Edge, см. в [Справочнике по политикам браузера Microsoft Edge](microsoft-edge-policies.md)
+Сведения о других политиках, доступных в Microsoft Edge, см. в [Справочнике по политикам браузера Microsoft Edge](./microsoft-edge-policies.md)
+
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
+
 ## <a name="available-policies"></a>Доступные политики
 В этих таблицах указаны все групповые политики, связанные с обновлением, доступные в данном выпуске Microsoft Edge. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
 
-|&nbsp;|&nbsp;| |**-**|-| |**[Приложения](#applications)**|[Параметры](#preferences)| |**[Прокси-сервер](#proxy-server)**|[Microsoft Edge WebView](#microsoft-edge-webview)|
+|||
+|-|-|
+|[Приложения](#applications)|[Предпочтения](#preferences)|
+|[Прокси-сервер](#proxy-server)|[Обновление Microsoft Edge](#microsoft-edge-update)|
+|[Веб-представление Microsoft Edge](#microsoft-edge-webview)||
+
 ### [<a name="applications"></a>Приложения](#applications-policies)
 |Имя политики|Заголовок|
 |-|-|
@@ -41,20 +48,25 @@ ms.locfileid: "12037219"
 |[CreateDesktopShortcut](#createdesktopshortcut)|Запрет создания ярлыка на рабочем столе при установке (для каналов)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|Откат к целевой версии (для каналов)|
 |[TargetVersionPrefix](#targetversionprefix)|Переопределение целевой версии (для каналов)|
-|[TargetChannelOverride](#targetchanneloverride)|Переопределения целевого канала (только стабильный)|
-|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| Извлечение конфигураций и экспериментов|
+|[TargetChannel](#targetchannel)|Переопределение Target Channel (по каналам)|
+
 ### [<a name="preferences"></a>Предпочтения](#preferences-policies)
 |Имя политики|Заголовок|
 |-|-|
-|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Переопределение периода автоматической проверки обновления|
-|[UpdatesSuppressed](#updatessuppressed)|Период времени в течение дня, когда будет блокироваться автоматическая проверка обновлений|
+|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Переопределение периода проверки средства автоматического обновления Майкрософт|
+|[UpdatesSuppressed](#updatessuppressed)|Период времени в течение дня, когда будет блокироваться проверка средства автоматического обновления Майкрософт|
 
 ### [<a name="proxy-server"></a>Прокси-сервер](#proxy-server-policies)
 |Имя политики|Действие|
 |-|-|
-|[ProxyMode](#proxymode)|Выбор способа задания параметров прокси-сервера|
-|[ProxyPacUrl](#proxypacurl)|URL-адрес файла PAC прокси-сервера|
+|[ProxyMode](#proxymode)|Укажите, как определять настройки прокси-сервера|
+|[ProxyPacUrl](#proxypacurl)|URL-адрес PAC-файла прокси-сервера|
 |[ProxyServer](#proxyserver)|Адрес или URL-адрес прокси-сервера|
+
+### [<a name="microsoft-edge-update"></a>Обновление Microsoft Edge](#microsoft-edge-update-policies)
+|Имя политики|Заголовок|
+|-|-|
+|[UpdaterExperimentationAndConfigurationServiceControl](#updaterexperimentationandconfigurationservicecontrol)|Управление связью средства обновления со Службой расширенной конфигурации|
 
 ### [<a name="microsoft-edge-webview"></a>Веб-представление Microsoft Edge](#microsoft-edge-webview-policies)
 |Имя политики|Заголовок|
@@ -72,9 +84,9 @@ ms.locfileid: "12037219"
 #### <a name="description"></a>Описание
 Вы можете указать поведение по умолчанию для всех каналов: разрешить или заблокировать Microsoft Edge на присоединенных к домену устройствах.
 
-Вы можете переопределить эту политику для отдельных каналов, включив политику "[Разрешить установку](#install)" для конкретных каналов.
+Вы можете переопределить эту политику для отдельных каналов, включив политику "[Разрешить установку](#install-webview)" для конкретных каналов.
 
-Если эта политика отключена, установка Microsoft Edge будет заблокирована. Эта политика влияет на установку программного обеспечения Microsoft Edge, только если для политики "[Разрешить установку](#install)" задано значение "Не настроено".
+Если эта политика отключена, установка Microsoft Edge будет заблокирована. Эта политика влияет на установку программного обеспечения Microsoft Edge, только если для политики "[Разрешить установку](#install-webview)" задано значение "Не настроено".
 
 Эта политика не запрещает запуск Центра обновления Microsoft Edge и не запрещает пользователям устанавливать программное обеспечение Microsoft Edge другим способом.
 
@@ -202,7 +214,7 @@ ms.locfileid: "12037219"
 - Имя ADMX-файла групповой политики: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 - Путь: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Имя значения:
+- Имя значения: 
   - (Канал Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Канал Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Канал Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -210,10 +222,7 @@ ms.locfileid: "12037219"
 - Тип значения: REG_DWORD
 ##### <a name="example-value"></a>Пример значения:
 ```
-always allow updates 0x00000001
-Automatic silent updates only 0x00000003
-manual updates only 0x00000002
-updates disabled 0x00000000
+0x00000001
 ```
 [В начало](#microsoft-edge---update-policies)
 
@@ -232,6 +241,8 @@ updates disabled 0x00000000
 Если эта политика "Включена", браузер Microsoft Edge (на основе Chromium) и браузер Microsoft Edge (HTML Edge) смогут выполняться параллельно после установки Microsoft Edge (на основе Chromium).
 
 Чтобы эта групповая политика вступила в силу, ее необходимо настроить до выполнения автоматической установки Microsoft Edge (на основе Chromium) с помощью Центра обновления Windows. Примечание. Пользователь может заблокировать автоматическое обновление Microsoft Edge (на основе Chromium) с помощью набора средств блокировки Microsoft Edge (на основе Chromium).
+
+Начиная с Windows 10 версии 20H2, устаревшая версия Microsoft Edge и параллельное выполнение браузеров не поддерживаются.
 #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
 ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 - Уникальное имя групповой политики: Allowsxs
@@ -247,6 +258,7 @@ updates disabled 0x00000000
 0x00000001
 ```
 [В начало](#microsoft-edge---update-policies)
+
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>Запрет создания ярлыка на рабочем столе при установке по умолчанию
@@ -401,74 +413,48 @@ updates disabled 0x00000000
 ```
 [В начало](#microsoft-edge---update-policies)
 
-### <a name="targetchanneloverride"></a>TargetChannelOverride
->Центр обновления Microsoft Edge 1.3.147.1 и более поздней
+
+### <a name="targetchannel"></a>TargetChannel
+#### <a name="target-channel-override"></a>Переопределение целевого канала
+>Центр обновления Microsoft Edge 1.3.147.1 или более поздней версии
 
 #### <a name="description"></a>Описание
-Указывает, Microsoft Edge канал должен быть обновлен. 
+Указывает, какой канал Microsoft Edge должен использовать после обновления.
 
-Если включить этот poicy, Microsoft Edge будет обновлена до канала в соответствии с настройкой следующих параметров:
+Если вы в включить эту политику, Microsoft Edge будет обновлен и будет использовать канал в соответствии с настройкой следующих параметров:
 
-  - Стабильная: Microsoft Edge будет обновлена до последней стабильной версии.
-  - Бета-версия: Microsoft Edge будет обновлена до последней бета-версии.
-  - Dev: Microsoft Edge будет обновлена до последней версии разработчика.
-  - Расширенная стабильная: Microsoft Edge будет обновлена до последней расширенной стабильной версии, которая следует более длительной каденции выпуска, чем стабильная. Дополнительные сведения можно получить на сайте https://go.microsoft.com/fwlink/?linkid=2163508 .
+  - Stable: Microsoft Edge будет обновлен до последней стабильной версии.
+  - Beta: Microsoft Edge будет обновлен до последней бета-версии.
+  - Dev: Microsoft Edge будет обновлен до последней версии для разработчиков.
+  - Extended Stable: Microsoft Edge будет обновлен до последней расширенной стабильной версии, которая имеет меньшую частоту выпуска, чем стабильная версия. Дополнительную информацию см. на следующей странице: [https://go.microsoft.com/fwlink/?linkid=2163508](https://go.microsoft.com/fwlink/?linkid=2163508).
 
-Если эта политика не настроена, Microsoft Edge будет обновлена до последней версии, доступной для канала Stable.
-
-Эта политика доступна только на Microsoft Edge Stable.
+Если вы не настроили эту политику, Microsoft Edge будет обновлен до последней версии, доступной для канала по умолчанию.
 
 Эта политика доступна только для экземпляров Windows, присоединенных к домену Microsoft® Active Directory®.
 #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
 ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
-- Уникальное имя GP: TargetChannelOverride
-- Имя GP: переопределения целевого канала
+- Уникальное имя групповой политики: TargetChannel
+- Имя групповой политики: Переопределение целевого канала
 - Путь к групповой политике: 
   - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Beta
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Canary
+  - Administrative Templates/Microsoft Edge Update/Applications/Microsoft Edge Dev
 - Имя ADMX-файла групповой политики: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
 - Путь: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - Имя значения: 
-  - (Стабильный): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Канал Stable): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (Канал Beta): TargetChannel{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (Канал Canary): TargetChannel{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (Канал Dev): TargetChannel{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - Тип значения: REG_SZ
 ##### <a name="example-value"></a>Пример значения:
 ```
-extended
+dev
 ```
 [В начало](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
-#### <a name="retrieve-configurations-and-experiments"></a>Извлечение конфигураций и экспериментов
->Центр обновления Microsoft Edge 1.3.145.1 и более поздней
-
-#### <a name="description"></a>Описание
-В Центр обновления Microsoft Edge для развертывания полезной нагрузки используется служба экспериментов и конфигурации.
-
-Полезной нагрузки экспериментов состоит из списка ранних компонентов разработки, которые Корпорация Майкрософт позволяет для тестирования отзывов.
-
-Если вы включаете эту политику, полезное приложение для экспериментов загружается из службы экспериментов и конфигурации.
-
-Если отключить эту политику, связь со службой экспериментов и конфигурации полностью прекращена.
-
-Если эта политика не настроена, на управляемом устройстве поведение будет таким же, как и политика "отключена".
-
-Если эта политика не настроена, на неугомяемом устройстве поведение будет таким же, как и "включенная политика".
-
-#### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
-##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
-- Уникальное имя GP: UpdateExperimentationAndConfigureationServiceControl
-- Имя GP: связь updater Controle со службой экспериментов и конфигурации
-- Путь GP: Административные шаблоны/Microsoftt Edge Update/Центр обновления Microsoft Edge
-- Имя ADMX-файла групповой политики: msedgeupdate.admx
-##### <a name="windows-registry-settings"></a>Параметры реестра Windows
-- Путь: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- Имя значения: UpdaterExperimentationAndConfigurationServiceControl
-- Тип значения: REG_DWORD
-##### <a name="example-value"></a>Пример значения:
-```
-0x00000001
-```
-[В начало](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>Предпочтительные политики
 
@@ -478,9 +464,11 @@ extended
 >Центр обновления Microsoft Edge 1.2.145.5 и более поздних версий
 
 #### <a name="description"></a>Описание
-Если политика включена, вы можете задать минимальное количество минут между автоматическими проверками обновлений. В противном случае по умолчанию автоматическая проверка наличия обновлений будет выполняться каждые 10 часов.
+Минимальное количество минут между автоматическими проверками обновлений.
 
-  Если необходимо отключить все автоматические проверки обновлений, задайте значение равным 0 (не рекомендуется).
+Установите для этой политики значение 0, чтобы отключить весь периодический сетевой трафик Центра обновления Microsoft Edge. Не рекомендуется этого делать, так как Центр обновлений Microsoft Edge не сможет самостоятельно получать обновления для стабильности и безопасности.
+
+Для управления обновлениями приложений следует использовать параметр "Переопределение политики обновления по умолчанию" и параметр "Переопределения политики обновления" для каждого приложения, а не этот параметр.
 #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
 ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
 - Уникальное имя групповой политики: AutoUpdateCheckPeriodMinutes
@@ -503,7 +491,7 @@ extended
 >Центр обновления Microsoft Edge 1.3.33.5 и более поздних версий
 
 #### <a name="description"></a>Описание
-Если эта политика включена, проверки обновлений блокируются каждый день, начиная с Hour:Minute в течение заданного периода времени (в минутах). На этот период не влияет переход на летнее время. Например, если время начала равно 22:00, а длительность составляет 480 минут, обновления будут блокироваться в течение 8 часов, независимо от этапа перехода на летнее время, то есть его начала или завершения.
+Если эта политика включена, проверки обновлений блокируются каждый день, начиная с Hour:Minute в течение заданного времени (в минутах). На этот период не влияет переход на летнее время. Например, если время начала равно 22:00, а длительность составляет 480 минут, обновления будут блокироваться в течение 8 часов, независимо от этапа перехода на летнее время, то есть его начала или завершения.
 
   Если эта политика отключена или не настроена, проверки обновлений не блокируются в течение заданного периода.
 #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
@@ -528,11 +516,12 @@ start min  : 0x00000002
 ```
 [В начало](#microsoft-edge---update-policies)
 
+
 ## <a name="proxy-server-policies"></a>Политики прокси-сервера
 
 [В начало](#microsoft-edge---update-policies)
 ### <a name="proxymode"></a>ProxyMode
-#### <a name="choose-how-to-specify-proxy-server-settings"></a>Выбор способа задания параметров прокси-сервера
+#### <a name="choose-how-to-specify-a-proxy-server-setting"></a>Укажите, как определять параметр прокси-сервера
 >Центр обновления Microsoft Edge 1.3.21.81 и более поздних версий
 
 #### <a name="description"></a>Описание
@@ -565,7 +554,7 @@ fixed_servers
 
 
 ### <a name="proxypacurl"></a>ProxyPacUrl
-#### <a name="url-to-a-proxy-pac-file"></a>URL-адрес файла PAC прокси-сервера
+#### <a name="url-to-proxy-pac-file"></a>URL-адрес PAC-файла прокси-сервера
 >Центр обновления Microsoft Edge 1.3.21.81 и более поздних версий
 
 #### <a name="description"></a>Описание
@@ -573,7 +562,7 @@ fixed_servers
 
   Если эта политика включена, вы можете указать URL-адрес для файла PAC, чтобы автоматизировать процесс выбора подходящего прокси-сервера Центром обновления Microsoft Edge для загрузки конкретного веб-сайта.
 
-  Эта политика применяется только в том случае, если параметры прокси-сервера были заданы вручную в политике "[Выбор способа задания параметров прокси-сервера](#proxymode)".
+  Эта политика применяется только в том случае, если в политике "[Выбор способа задания параметров прокси-сервера](#proxymode)" указана ручная установка параметров прокси-сервера.
 
   Не настраивайте эту политику, если параметры прокси-сервера не были заданы вручную в политике "[Выбор способа задания параметров прокси-сервера](#proxymode)".
 #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
@@ -594,7 +583,7 @@ https://www.microsoft.com
 
 
 ### <a name="proxyserver"></a>ProxyServer
-#### <a name="address-or-url-of-proxy-server"></a>Адрес или URL-адрес прокси-сервера
+#### <a name="address-or-url-of-a-proxy-server"></a>Адрес или URL-адрес прокси-сервера
 >Центр обновления Microsoft Edge 1.3.21.81 и более поздних версий
 
 #### <a name="description"></a>Описание
@@ -602,7 +591,7 @@ https://www.microsoft.com
 
   Если эта политика включена, вы можете задать URL-адрес прокси сервера, который будет использовать Центр обновления Microsoft Edge в вашей организации.
 
-  Эта политика применяется только в том случае, если параметры прокси-сервера были заданы вручную в политике "[Выбор способа задания параметров прокси-сервера](#proxymode)".
+  Эта политика применяется только в том случае, если в политике "[Выбор способа задания параметров прокси-сервера](#proxymode)" выбрана установка параметров прокси-сервера вручную.
 
   Не настраивайте эту политику, если параметры прокси-сервера не были заданы вручную в политике "[Выбор способа задания параметров прокси-сервера](#proxymode)".
 #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
@@ -618,6 +607,42 @@ https://www.microsoft.com
 ##### <a name="example-value"></a>Пример значения:
 ```
 https://www.microsoft.com
+```
+[В начало](#microsoft-edge---update-policies)
+
+
+## <a name="microsoft-edge-update-policies"></a>Политики обновления Microsoft Edge
+
+[В начало](#microsoft-edge---update-policies)
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="control-updaters-communication-with-the-experimentation-and-configuration-service"></a>Управление связью средства обновления со Службой расширенной конфигурации
+>Центр обновления Microsoft Edge 1.3.145.1 или более поздней версии
+
+#### <a name="description"></a>Описание
+В Центре обновления Microsoft Edge для развертывания полезной нагрузки для экспериментов используется Служба расширенной конфигурации.
+
+Полезная нагрузка для экспериментов состоит из списка ранних функций разработки, которые Microsoft предоставляет для тестирования и обратной связи.
+
+При включении этой политики из Службы расширенной конфигурации будет загружена полная полезная нагрузка для экспериментов.
+
+Если политика отключена, связь со Службой расширенной конфигурации полностью останавливается.
+
+Если вы не настроите эту политику, на неуправляемом устройстве поведение будет таким же, как при отключенной политике.
+
+Если вы не настроите эту политику, на неуправляемом устройстве поведение будет таким же, как при включенной политике.
+#### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+- Уникальное имя групповой политики: UpdaterExperimentationAndConfigurationServiceControl
+- Имя групповой политики: Управление связью средства обновления со Службой расширенной конфигурации
+- Путь к групповой политике: Administrative Templates/Microsoft Edge Update/Microsoft Edge Update
+- Имя ADMX-файла групповой политики: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+- Путь: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- Имя значения: UpdaterExperimentationAndConfigurationServiceControl
+- Тип значения: REG_DWORD
+##### <a name="example-value"></a>Пример значения:
+```
+0x00000001
 ```
 [В начало](#microsoft-edge---update-policies)
 
@@ -683,7 +708,6 @@ https://www.microsoft.com
 ```
 [В начало](#microsoft-edge---update-policies)
 
-
 ## <a name="see-also"></a>См. также
-  - [Настройка Microsoft Edge](configure-microsoft-edge.md)
+  - [Настройка Microsoft Edge](./configure-microsoft-edge.md)
   - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
