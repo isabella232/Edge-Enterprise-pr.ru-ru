@@ -3,7 +3,7 @@ title: Документация по политикам Microsoft Edge WebView2
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2021
+ms.date: 01/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация Windows и Mac для всех политик, поддерживаемых браузером Microsoft Edge
-ms.openlocfilehash: 7337b0111e6c445854f9a14effcbcbd5a635f623
-ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
+ms.openlocfilehash: b7810b746abc82bd5c50adb39cc582b71336db63
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155222"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297855"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Политики Microsoft Edge WebView2
 
@@ -33,6 +33,7 @@ ms.locfileid: "12155222"
 В этих таблицах перечислены все групповые политики, доступные в этом выпуске Microsoft Edge WebView2. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
 
 - [Параметры переопределения загрузчика](#loader-override-settings)
+- [Дополнительно](#additional)
 
 
 ### [*<a name="loader-override-settings"></a>Параметры переопределения загрузчика*](#loader-override-settings-policies)
@@ -41,6 +42,11 @@ ms.locfileid: "12155222"
 |-|-|
 |[BrowserExecutableFolder](#browserexecutablefolder)|Настройка расположения папки исполняемого файла браузера|
 |[ReleaseChannelPreference](#releasechannelpreference)|Настройка предпочитаемого порядка поиска каналов выпуска|
+### [*<a name="additional"></a>Дополнительно*](#additional-policies)
+
+|Имя политики|Заголовок|
+|-|-|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|Управлять связью со Службой экспериментов и конфигурации|
 
 
 
@@ -153,6 +159,87 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
+```
+
+  
+
+  [В начало](#microsoft-edge-webview2---policies)
+
+  ## <a name="additional-policies"></a>Дополнительные политики
+
+  [В начало](#microsoft-edge-webview2---policies)
+
+  ### <a name="experimentationandconfigurationservicecontrol"></a>ExperimentationAndConfigurationServiceControl
+
+  #### <a name="control-communication-with-the-experimentation-and-configuration-service"></a>Управлять связью со Службой экспериментов и конфигурации
+
+  
+  
+  #### <a name="supported-versions"></a>Поддерживаемые версии:
+
+  - На Windows 97 или более поздней
+
+  #### <a name="description"></a>Описание
+
+  Служба эксперимента и конфигурации используется для развертывания полезной нагрузки эксперимента и конфигурации в клиенте.
+
+Полезная нагрузка для экспериментов состоит из списка ранних функций разработки, которые Microsoft предоставляет для тестирования и обратной связи.
+
+Полезная нагрузка конфигурации состоит из списка рекомендуемых параметров, которые Microsoft хочет развернуть для оптимизации взаимодействия с пользователем.
+
+Полезная нагрузка конфигурации может также содержать список действий, которые необходимо выполнить для определенных доменов по причинам совместимости. Например, браузер может переопределить строку пользовательского агента на веб-сайте, если этот веб-сайт поврежден. Каждое из этих действий должно быть временным, пока Microsoft пытается решить проблему с владельцем сайта.
+
+Если вы зададите для этой политики режим «FullMode», полная полезная нагрузка будет загружена из Службы экспериментов и конфигурации. Это включает в себя как экспериментальные, так и конфигурационные данные.
+
+Если вы установите эту политику в режим "ConfigurationsOnlyMode", будет скачана только полезная нагрузка конфигурации.
+
+Если для этой политики задано значение "RestrictedMode", взаимодействие со Службой экспериментов и конфигурации останавливается. Корпорация Майкрософт не рекомендует этот параметр.
+
+Если вы не настроите эту политику, на управляемом устройстве в стабильных и бета-каналах поведение будет таким же, как в режиме "ConfigurationsOnlyMode". В каналах Canary и Dev поведение такое же, как и в "FullMode".
+
+Если вы не настроите эту политику, на неуправляемом устройстве поведение будет таким же, как в режиме "FullMode".
+
+Сопоставление параметров политики:
+
+* FullMode (2) = Получить конфигурации и эксперименты
+
+* ConfigurationsOnlyMode (1) = Получить только конфигурации
+
+* RestrictedMode (0) = Отключить связь со Службой экспериментов и конфигурации
+
+Используйте изложенные выше сведения при настройке этой политики.
+
+  #### <a name="supported-features"></a>Поддерживаемые функции:
+
+  - Может быть обязательным: Да
+  - Может быть рекомендовано: Нет
+  - Обновление динамической политики: Да
+
+  #### <a name="data-type"></a>Тип данных:
+
+  - целое число
+
+  #### <a name="windows-information-and-settings"></a>Сведения и параметры Windows
+
+  ##### <a name="group-policy-admx-info"></a>Сведения о групповой политике (ADMX)
+
+  - Уникальное имя GP: ExperimentationAndConfigurationServiceControl
+  - Имя GP: Управление связью со Службой Экспериментов и Конфигурации.
+  - Путь к групповой политике (обязательно): Административные шаблоны/Microsoft Edge WebView2/
+  - Путь GP (рекомендуется): N/A
+  - Имя ADMX-файла групповой политики: MSEdgeWebView2.admx
+
+  ##### <a name="windows-registry-settings"></a>Параметры реестра Windows
+
+  - Путь (обязательно): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - Путь (рекомендуется): N/A
+  - Имя значения: ExperimentationAndConfigurationServiceControl
+  - Тип значения: REG_DWORD
+
+  ##### <a name="example-value"></a>Пример значения:
+
+```
+0x00000002
 ```
 
   
