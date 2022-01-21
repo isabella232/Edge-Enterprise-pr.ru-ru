@@ -1,25 +1,25 @@
 ---
-title: Обновления Windows для Microsoft Edge
+title: Обновления Windows для поддержки Microsoft Edge
 ms.author: jtkim
-author: RyanHechtMSFT
+author: dan-wesley
 manager: srugh
-ms.date: 09/23/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Обновления Windows для Microsoft Edge.
-ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
+description: Обновления Windows для поддержки Microsoft Edge.
+ms.openlocfilehash: 85f60b3ee09154c702debcfb222567996be9462f
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037209"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298167"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>Обновления Windows для обеспечения поддержки следующей версии Microsoft Edge
 
-В этой статье описывается, как будет выполняться обновление Windows для обеспечения поддержки следующей версии Microsoft Edge.
+В этой статье описывается, как будет выполняться обновление Windows для обеспечения поддержки следующей версии Microsoft Edge
 
 > [!IMPORTANT]
 > Обратитесь к [записи блога](https://aka.ms/EdgeLegacyEOS) команды разработки продукта Microsoft Edge по поводу завершения обслуживания устаревшей версии Microsoft Edge.
@@ -50,48 +50,21 @@ ms.locfileid: "12037209"
 
 Наряду с предыдущими изменениями будут происходить другие изменения независимо от того, установлен ли браузер Microsoft Edge в рамках канала Stable.
 
-- Microsoft Edge отменит регистрацию электронных книг и протоколов XML, которые не поддерживаются в новой версии Microsoft Edge. Для пользователей, которые попытаются открыть эти протоколы, будет отображаться диалоговое окно с запросом на выбор приложения по умолчанию. Дополнительные сведения об изменениях в поддержке электронных книг см. в разделе [Скачайте приложение для работы с файлами в формате ePub, чтобы продолжить чтение](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).
+- Microsoft Edge отменит регистрацию электронных книг и протоколов XML, которые не поддерживаются в новой версии Microsoft Edge. Для пользователей, которые попытаются открыть эти протоколы, будет отображаться диалоговое окно с запросом на выбор приложения по умолчанию. Посетите Microsoft Store, чтобы просмотреть наши рекомендации для читателей электронных книг.
+  
+## <a name="older-versions-of-windows"></a>Более старые версии Windows
 
-## <a name="timeline"></a>Информация о сроках
+Чтобы развернуть Microsoft Edge на устройстве с более ранней версией Windows, чем Windows 10 RS4, используйте [диспетчер конфигураций](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json), [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-windows-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json) или выполните обновление до поддерживаемой версии Windows 10. В следующей статье перечислены поддерживаемые в настоящее время версии Windows 10 и Windows 11.
 
-Изменения, необходимые для реализации поддержки описанного интерфейса, будут внесены в составе трех обновлений для разных версий Windows.
+- [Поддерживаемые версии клиента Windows](/windows/release-health/supported-versions-windows-client)
 
-### <a name="windows-versions-1903-and-1909"></a>Windows версий 1903 и 1909
+> [!NOTE]
+> Для Windows 10 RS4-20H1 разверните Windows LCU с мая 2021 года или новее, чтобы получить Microsoft Edge. Дополнительные сведения см. в статье [Журнал обновлений Windows 10](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
 
-- Первый набор изменений в необязательном обновлении за июль 2019 года, предоставленном вместе с обновлением для системы безопасности за август 2019 года.
-- Второй набор изменений в необязательном обновлении за август 2019 года, предоставленном вместе с обновлением для системы безопасности за сентябрь 2019 года.
+> [!IMPORTANT]
+> Если вам нужны обновления, не перечисленные здесь, запустите Центр обновления Windows или обратитесь к администратору.
 
-  > [!NOTE]
-  > Вместе с этим обновлением Microsoft Edge отменит регистрацию протокола XML.
-
-- Третий набор изменений в необязательном обновлении за сентябрь 2019 года, предоставленном вместе с обновлением для системы безопасности за октябрь 2019 года.
-
-  > [!NOTE]
-  > Вместе с этим обновлением Microsoft Edge перестанет поддерживать электронные книги.
-
-### <a name="windows-versions-1709-1803-and-1809"></a>Windows версий 1709, 1803 и 1809
-
-- Первый набор изменений в необязательном обновлении за август 2019 года, предоставленном вместе с обновлением для системы безопасности за сентябрь 2019 года.
-- Второй набор изменений в необязательном обновлении за сентябрь 2019 года, предоставленном вместе с обновлением для системы безопасности за октябрь 2019 года.
-
-  > [!NOTE]
-  > Вместе с этим обновлением Microsoft Edge отменит регистрацию протокола XML.
-
-- Третий набор изменений в необязательном обновлении за октябрь 2019 года, предоставленном вместе с обновлением для системы безопасности за ноябрь 2019 года.
-
-  > [!NOTE]
-  > Вместе с этим обновлением Microsoft Edge перестанет поддерживать электронные книги.
-
-В следующей таблице приведены подробные сведения о соответствующих обновлениях в каждом наборе изменений.
-
-| Windows 10 | Дополнительные сведения | Требуется скачивание |
-|--|--|--|
-| Версия 1709 | [KB4525241](https://support.microsoft.com/help/4525241/windows-10-update-kb4525241) | [Накопительный пакет обновления для Windows 10 версии 1709](https://www.catalog.update.microsoft.com/Search.aspx?q=4525241) |
-| Версия 1803  | [KB4525237](https://support.microsoft.com/help/4525237/windows-10-update-kb4525237) | [Накопительный пакет обновления для Windows 10 версии 1803](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4525237) |
-| Версия 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Накопительный пакет обновления для Windows 10 версии 1809](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
-| Версии 1903 и 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Накопительный пакет обновления для Windows 10 версий 1903 и 1909](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
-
-## <a name="see-also"></a>Статьи по теме
+## <a name="see-also"></a>См. также
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
 - [Документация по Microsoft Edge](./index.yml)
