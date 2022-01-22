@@ -3,23 +3,25 @@ title: Настройка синхронизации Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 10/26/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Параметры пользователя и администратора для настройки синхронизации избранного, паролей и других данных браузера в Microsoft Edge.
-ms.openlocfilehash: 2f9ca20bbfeec619f0cc4d2846a527586a49f5ef
-ms.sourcegitcommit: 9c4d3803ee060d83f2081482e7f2cb4ab6b86f7c
+ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "12117090"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298187"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Настройка синхронизации Microsoft Edge Enterprise
 
-В этой статье рассказывается о том, как администраторы могут настроить для пользователя синхронизацию избранного, паролей и других данных браузера в Microsoft Edge на всех устройствах, на которых выполнен вход. Если вы не являетесь администратором, ознакомьтесь со статьей о том, как выполнять вход и синхронизацию Microsoft Edge на разных устройствах. [Войдите, чтобы синхронизировать Microsoft Edge на разных устройствах](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
+В этой статье рассказывается о том, как администраторы могут настроить синхронизацию избранного пользователя, паролей и других данных браузера в Microsoft Edge на всех устройствах, на которых выполнен вход.
+
+Если вы не являетесь администратором, воспользуйтесь следующей статьей, чтобы узнать, как войти и синхронизировать Microsoft Edge на разных устройствах:[Вход для синхронизации Microsoft Edge на разных устройствах](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674).
 
 > [!NOTE]
 > Применяется к Microsoft Edge версии 77 или более поздней, если не указано иное.
@@ -40,13 +42,16 @@ ms.locfileid: "12117090"
 Функциональность синхронизации включается путем предоставления согласия пользователя. Пользователи могут включать или отключать синхронизацию для каждого из перечисленных выше типов данных. Если у пользователя возникли проблемы с синхронизацией, может потребоваться сброс синхронизации в разделе **Параметры** > **Профили** > **Сбросить синхронизацию**.
 
 > [!NOTE]
-> Для поддержки функциональности синхронизации передаются дополнительные данные о подключении устройства и конфигурации (например, имя устройства, изготовитель и модель).
+> Для поддержки функциональности синхронизации передаются дополнительные данные о подключении и конфигурации устройства (например, имя, изготовитель и модель устройства).
 
 ## <a name="prerequisites"></a>Предварительные условия
 
 Функция синхронизации Microsoft Edge для учетных записей Azure Active Directory (Azure AD) доступна в рамках любой из этих подписок:
 
 - Azure AD Premium (P1 или P2)
+  
+  - Для клиентов, у которых есть только Azure AD P1 или P2, необходимо включить функцию Azure AD Enterprise State Roaming, чтобы они могли использовать синхронизацию Microsoft Edge Enterprise. Дополнительные сведения см. в статье [Включение Enterprise State Roaming в Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
+
 - Microsoft 365 бизнес премиум, бизнес стандарт или **бизнес базовый \***
 
    > [!IMPORTANT]
@@ -54,7 +59,7 @@ ms.locfileid: "12117090"
 
 - Office 365 E1 и более поздние версии
 - Azure Information Protection (AIP) (P1 или P2)
-- Все подписки EDU (приложения Майкрософт для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или выше, M365 A1 или выше, Azure Information Protection P1 или P2 для учащихся или преподавателей)
+- Все подписки EDU (Microsoft Apps для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или более поздней версии, Microsoft 365 A1 или более поздней версии, Azure Information Protection P1 или P2 для учащихся или преподавателей)
 
 ## <a name="sync-group-policies"></a>Синхронизация групповых политик
 
