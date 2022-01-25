@@ -3,23 +3,23 @@ title: Настройка Microsoft Edge с помощью средств упр
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка Microsoft Edge с помощью средств управления мобильными устройствами.
-ms.openlocfilehash: 0927d64366652986b87c2f517ca8ebafd4c9ac55
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 96fa6f4d096d8acd5369b92de7e1d979191e13ec
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979780"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297737"
 ---
 # <a name="configure-microsoft-edge-using-mobile-device-management"></a>Настройка Microsoft Edge с помощью средств управления мобильными устройствами
 
-В этой статье приводятся инструкции по настройке Microsoft Edge в Windows 10 с помощью [Средств управления мобильными устройствами (MDM)](/windows/client-management/mdm/) посредством [приема ADMX-файла](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Также в этой статье:
+В этой статье рассказывается, как настроить Microsoft Edge на Windows 10 с помощью управления мобильными устройствами [(MDM)](/windows/client-management/mdm/) с [помощью ADMX Ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration). Также в этой статье:
 
 - Создание [универсального кода ресурса открытого сообщества производителей мобильной связи (OMA-URI) для политик Microsoft Edge](#create-an-oma-uri-for-microsoft-edge-policies).
 - Настройка [Microsoft Edge в Intune с помощью приема ADMX-файла и настраиваемого кода OMA-URI](#configure-microsoft-edge-in-intune-using-admx-ingestion).
@@ -51,9 +51,9 @@ Windows 10 со следующими минимальными системным
 
 ## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Создание кода OMA-URI для политик Microsoft Edge
 
-В следующих разделах приведены инструкции по созданию пути OMA-URI, а также поиску и определению значения в формате XML для обязательных и рекомендуемых политик браузера.
+В следующих разделах описано, как создать путь OMA-URI и найти и определить значение в формате XML для обязательных и рекомендуемых политик браузера.
 
-Прежде чем приступить к работе, скачайте файл шаблонов политики Microsoft Edge (MicrosoftEdgePolicyTemplates.cab) на [целевой странице Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise) и извлеките содержимое.
+Перед началом работы загрузите Microsoft Edge шаблоны политик (MicrosoftEdgePolicyTemplates.cab) с [](https://aka.ms/EdgeEnterprise) Microsoft Edge Enterprise и извлеките содержимое.
 
 Определение кода OMA-URI выполняется в три этапа.
 
@@ -91,7 +91,7 @@ Windows 10 со следующими минимальными системным
 
 ### <a name="specify-the-data-type"></a>Указание базы данных
 
-Типом данных OMA-URI всегда является "String" (строка).
+Тип данных OMA-URI всегда является строкой.
 
 ### <a name="set-the-value-for-a-browser-policy"></a>Установка значения для политики браузера
 
@@ -150,14 +150,21 @@ Windows 10 со следующими минимальными системным
 Чтобы задать языковой стандарт "es-US" с помощью политики "ApplicationLocaleValue", выполните следующие действия.<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### <a name="create-the-oma-uri-for-a-recommended-policies"></a>Создайте OMA-URI для рекомендуемых политик
+Типы данных словаря рассматриваются как большие строки, но обычно для получения значения в правильную форму обычно требуется побег строки.
+
+Например, чтобы задать политику ManagedFavorites, значение будет:
+
+```xml
+<enabled/> <data id="ManagedFavorites" value="[{&quot;toplevel_name&quot;: &quot;My managed favorites folder&quot;}, {&quot;name&quot;: &quot;Microsoft&quot;, &quot;url&quot;: &quot;microsoft.com&quot;}, {&quot;name&quot;: &quot;Bing&quot;, &quot;url&quot;: &quot;bing.com&quot;}, {&quot;children&quot;: [{&quot;name&quot;: &quot;Microsoft Edge Insiders&quot;, &quot;url&quot;: &quot;www.microsoftedgeinsider.com&quot;}, {&quot;name&quot;: &quot;Microsoft Edge&quot;, &quot;url&quot;: &quot;www.microsoft.com/windows/microsoft-edge&quot;}], &quot;name&quot;: &quot;Microsoft Edge links&quot;}]"/>
+```
+
+### <a name="create-the-oma-uri-for-recommended-policies"></a>Создание OMA-URI для рекомендуемых политик
 
 Определение пути URI для рекомендуемых политик зависит от политики, которую вы хотите настроить.
 
 #### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>Определение пути URI для рекомендуемой политики
 
 Используйте формулу пути URI (*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*) и выполните следующие действия, чтобы определить путь URI:
-
 1. Откройте файл **msedge.admx** в любом XML-редакторе.
 2. Если политика, которую вы хотите настроить, не входит в группу, переходите к шагу 4 и удалите `~<ADMXCategory>` из пути.
 3. Если политика, которую вы хотите настроить, входит в группу, выполните следующие действия.
@@ -183,7 +190,7 @@ Windows 10 со следующими минимальными системным
 
 В следующей таблице приведены примеры путей OMA-URI для рекомендуемых политик.
 
-|              Политика               |             OMA-URI                      |
+|      Политика    |   OMA-URI  |
 |-----------------------------------|------------------------------------------|
 | [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
 | [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
@@ -247,16 +254,7 @@ Windows 10 со следующими минимальными системным
 | Значение   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
 #### <a name="list-of-strings-data-type-examples"></a>Список примеров строковых типов данных
-<!--
-*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
-| Field   | Value                                                                                |
-|---------|--------------------------------------------------------------------------------------|
-| Name    | Microsoft Edge: NotificationsAllowedForUrls                                          |
-| OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/NotificationsAllowedForUrls`    |
-| Type    | String                                                                               |
-| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                           |
--->
 *[RestoreOnStartupURLS](./microsoft-edge-policies.md#restoreonstartupurls):*
 
 | Поле   | Значение                                                                                |
@@ -275,20 +273,29 @@ Windows 10 со следующими минимальными системным
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### <a name="dictionary-and-string-data-type-example"></a>Пример словарных или строчных типов данных
+#### <a name="dictionary-and-string-data-type-examples"></a>Примеры типов данных dictionary и String
 
 *[ProxyMode](./microsoft-edge-policies.md#proxymode):*
 
-| Поле   | Значение                                                                                |
-|---------|--------------------------------------------------------------------------------------|
+| Поле   | Значение      |
+|---------|------------|
 | Имя    | Microsoft Edge: ProxyMode                                                            |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ProxyMode/ProxyMode`  |
 | Тип    | String (строка)                                                                               |
 | Значение   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
+*[ManagedFavorites:](./microsoft-edge-policies.md#managedfavorites)*
+
+| Поле   | Значение    |
+|---------|----------|
+| Имя    | Microsoft Edge: ManagedFavorites                                                            |
+| OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge/ManagedFavorites`  |
+| Тип    | String (строка)                                                                               |
+| Значение   | `<enabled/> <data id="ManagedFavorites" value="[{&quot;toplevel_name&quot;: &quot;My managed favorites folder&quot;}, {&quot;name&quot;: &quot;Microsoft&quot;, &quot;url&quot;: &quot;microsoft.com&quot;}, {&quot;name&quot;: &quot;Bing&quot;, &quot;url&quot;: &quot;bing.com&quot;}, {&quot;children&quot;: [{&quot;name&quot;: &quot;Microsoft Edge Insiders&quot;, &quot;url&quot;: &quot;www.microsoftedgeinsider.com&quot;}, {&quot;name&quot;: &quot;Microsoft Edge&quot;, &quot;url&quot;: &quot;www.microsoft.com/windows/microsoft-edge&quot;}], &quot;name&quot;: &quot;Microsoft Edge links&quot;}]"/>`                               |
+
 ## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>Настройка Microsoft Edge в Intune с помощью приема ADMX-файла
 
-Для настройки Microsoft Edge с помощью Microsoft Intune рекомендуется использовать профиль "Административные шаблоны", как описано в разделе [Настройка параметров политики Microsoft Edge с помощью Microsoft Intune](./configure-edge-with-intune.md). Если вы хотите оценить политику, которая в данный момент недоступна в административных шаблонах Microsoft Edge, вы можете настроить Microsoft Edge в Intune, используя [пользовательские параметры для устройств с Windows 10 в Intune](/intune/configuration/custom-settings-windows-10).
+Рекомендуется настроить Microsoft Edge с Microsoft Intune с помощью профиля Административные шаблоны. Этот профиль описан в [параметрах Microsoft Edge с Microsoft Intune](./configure-edge-with-intune.md). Если вы хотите оценить политику, которая в настоящее время недоступна в Microsoft Edge административных шаблонов в Intune, вы можете настроить Microsoft Edge с помощью настраиваемых параметров для Windows 10 устройств [в Intune](/intune/configuration/custom-settings-windows-10).
 
 В этом разделе приведены следующие инструкции:
 
@@ -403,7 +410,7 @@ Windows 10 со следующими минимальными системным
 ## <a name="see-also"></a>Статьи по теме
 
 - [Целевая страница Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise)
-- [Настройка параметров политики Microsoft Edge с помощью Microsoft Intune](configure-edge-with-intune.md)
+- [Настройка параметров политики Microsoft Edge с помощью Microsoft Intune](./configure-edge-with-intune.md)
 - [Управление мобильными устройствами](/windows/client-management/mdm/)
 - [Использование настраиваемых параметров для устройств с Windows 10 в Intune](/intune/configuration/custom-settings-windows-10)
 - [Настройка политики Win32 и приложения "Мост для классических приложений"](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
