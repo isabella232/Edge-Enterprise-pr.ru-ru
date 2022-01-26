@@ -3,19 +3,19 @@ title: Использование групповых политик для уп�
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 06/29/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Использование групповых политик для управления расширениями Microsoft Edge на предприятии
-ms.openlocfilehash: a244fd0fc3c8743b9f677d2a6fc1fee835aab822
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 2b09f057931ca525bf142381aa2777c51a036eba
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107514"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297927"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>Использование групповых политик для управления расширениями Microsoft Edge
 
