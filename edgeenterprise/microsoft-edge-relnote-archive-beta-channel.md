@@ -3,23 +3,65 @@ title: Архивные заметки о выпуске для канала Mic
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 12/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Архивные заметки о выпуске для канала Microsoft Edge Beta
-ms.openlocfilehash: bb45f1dbcb1afecd40c0b163c1ac35d99af6126d
-ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
+ms.openlocfilehash: cc4170aadbdb1220598542cca9ad04886ea86547
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155116"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297917"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Архивные заметки о выпуске для канала Microsoft Edge Beta
 
 Эти заметки о выпуске содержат сведения о новых компонентах и не связанных с безопасностью обновлениях, которые включены в канал Microsoft Edge Beta. Чтобы ознакомиться с каналами Microsoft Edge, см. статью [Обзор каналов Microsoft Edge](microsoft-edge-channels.md). Список всех обновлений системы безопасности находится [здесь](microsoft-edge-relnotes-security.md).
+
+## <a name="version-95010209-september-28"></a>Версия 95.0.1020.9: 28 сентября
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Поддержка функции "Просмотр в проводнике" для библиотек SharePoint Online в Microsoft Edge**  Теперь вы можете включить функцию View in File Explorer для SharePoint современных библиотек документов в Интернете. Чтобы этот опыт был виден и работал для пользователей, необходимо включить Microsoft Edge "Настройка функции View in File Explorer для SharePoint страниц в политике [Microsoft Edge"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) и обновить конфигурацию клиента SharePoint Online. Дополнительные данные. Просмотр SharePoint файлов с [помощью обозревателя файлов в Microsoft Edge - SharePoint в Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+
+- **URL-адреса файлов зоны интрасети будут открываться в проводнике Windows.**  Можно разрешить URL-адресам файлов с веб-сайтов из зоны интрасети, доступных по протоколу HTTPS, открывать проводник Windows для этих файлов и каталогов. Эту возможность можно включить с помощью политики [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled).
+
+- **Улучшения возможностей скачивания.**  Поддержка загрузки пользователей распространяется на прогрессивные веб-приложения PWAs и WebView. Кроме того, мы будет реализована поддержка перетаскивания в проводнике и на рабочем столе.
+
+- **Возобновите работу с PDF-файлами с того места, на котором вы остановились.**  Вы можете возобновить чтение с места, где последний раз закрывали pdf-документ.
+
+- **Режим эффективности продлевает время работы батареи, когда ноутбук переключается в режим экономии заряда.**  Когда ноутбук перейдет в режим экономии заряда, включится режим эффективности, чтобы разрешить браузеру управлять ресурсами для увеличения времени работы батареи вашего устройства. У вас будет четыре варианта, когда режим эффективности активен, отключен и не работает отключаемой батареи, отключен, всегда и никогда. Примечание. Это управляемый выкат функции. Устройства с аккумулятором должны иметь включенную функцию.
+
+***Новые политики***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) — включить блокировку устаревших точек расширения браузера.
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) — указывает, можно ли перенаправлять модули WebAssembly.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) — указывает, проверяется или пропускается политика разрешений отображения.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) — настройка настройки пикселей между высотами window.open, источником для страниц режима IE и Microsoft Edge страниц режима.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) — настройка настройки пикселей между ширинами window.open, источником из страниц режима IE и Microsoft Edge страниц режима.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) — разрешить ссылки url-адресов url-адресов файлов Microsoft Edge для Windows File Explorer.
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) — настройка поведения отката аварийного сбоя ShadowStack.
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) — включить визуальный поиск.
+
+***Устаревшие политики***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) — разрешить тестирование режима Internet Explorer.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) — поддержка стандартного устаревшего параметра поведения SameSite для cookie-файлов.
+
+## <a name="version-94099223-september-17"></a>Версия 94.0.992.23: 17 сентября
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-94099219-september-13"></a>Версия 94.0.992.19: 13 сентября
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-94099214-september-7"></a>Версия 94.0.992.14: 7 сентября
+
+Исправлены ошибки и проблемы с производительностью.
 
 ## <a name="version-9409929-september-2"></a>Версия 94.0.992.9: 2 сентября
 
