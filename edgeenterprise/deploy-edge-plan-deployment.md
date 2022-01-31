@@ -3,19 +3,19 @@ title: Планирование развертывания Microsoft Edge
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Планирование развертывания Microsoft Edge
-ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 66d0999bcf80aa5bdf7232cedff36a8bbb3ef264
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979676"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298147"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Планирование развертывания Microsoft Edge
 
@@ -24,18 +24,30 @@ ms.locfileid: "11979676"
 >[!NOTE]
 >Эта статья относится к Microsoft Edge версии 77 или более поздней.
 
+## <a name="article-content"></a>Содержимое статьи
+
 В следующих разделах приведены конкретные указания по планированию развертывания Microsoft Edge.
 
-- [Оценка среды и требований браузера](#evaluate-your-existing-browser-environment-and-browser-needs)
-- [Проверка готовности устройств с Windows 10](#make-sure-your-windows-10-devices-are-ready)
-- [Выбор методологии развертывания](#determine-your-deployment-methodology)
-- [Обнаружение сайтов](#do-site-discovery)
-- [Выбор стратегии канала](#determine-your-channel-strategy)
-- [Определение и настройка политик](#define-and-configure-policies)
-- [Проверка совместимости приложений](#do-app-compatibility-testing)
-- [Пилотный проект Microsoft Edge](#deploy-microsoft-edge-to-a-pilot-group)
-- [Оценка пилотного проекта](#validate-your-deployment)
-- [Развертывание Microsoft Edge на предприятии](#broad-deployment-of-microsoft-edge)
+   - [Оценка существующей среды браузера и потребностей браузера](#evaluate-your-existing-browser-environment-and-browser-needs)
+  - [Проверка готовности устройств с Windows 10](#make-sure-your-windows-10-devices-are-ready)
+  - [Определение топологии развертывания](#determine-your-deployment-methodology)
+    - [Развертывание на конечных пользователей по ролям](#deploy-to-end-users-by-role)
+    - [Развертывание на конечных пользователей по сайтам](#deploy-to-end-users-by-site)
+  - [Обнаружение сайтов](#do-site-discovery)
+    - [Если вы уже развернули и настроили предыдущую версию Microsoft Edge](#if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge)
+    - [Если вы настроили Internet Explorer как браузер по умолчанию](#if-youve-configured-internet-explorer-as-your-default-browser)
+    - [Анализ данных обнаружения сайтов](#analyze-site-discovery-data)
+  - [Определение стратегии канала](#determine-your-channel-strategy)
+    - [Несколько устройств и каналов](#multiple-devices-and-channels)
+  - [Определение и настройка политик](#define-and-configure-policies)
+    - [Определение стратегии и политик обновления](#define-your-update-strategy-and-policies)
+  - [Проверка совместимости приложений](#do-app-compatibility-testing)
+    - [Внутреннее тестирование бизнес-приложений](#internal-line-of-business-app-testing)
+    - [Поддержка сторонних приложений](#third-party-app-support)
+  - [Развертывание Microsoft Edge в пилотной группе](#deploy-microsoft-edge-to-a-pilot-group)
+  - [Проверка развертывания](#validate-your-deployment)
+  - [Широкое развертывание Microsoft Edge](#broad-deployment-of-microsoft-edge)
+  - [См. также](#see-also)
 
 ## <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>Оценка существующей среды браузера и потребностей браузера
 
@@ -59,7 +71,7 @@ ms.locfileid: "11979676"
 - Какие компоненты критически важны для настройки в рамках начального развертывания?
 - В чем заключается процедура устранения выявленных проблем совместимости или конфигурации?
 
-Кроме того, необходимо понять, какие **компоненты вам требуются**, например:
+Необходимо также понимать **необходимые условия** для интересуемой функции, например:
 
 - [Application Guard в Защитнике Windows;](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [режим Internet Explorer;](./edge-ie-mode.md)
@@ -141,7 +153,7 @@ Microsoft Edge выпускается в [нескольких каналах](.
 
 Во-первых, проанализируйте процесс первого запуска, который будет доступен пользователям. Если необходимо автоматически импортировать параметры из текущего браузера, настройте политику для [AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun).
 
-Для политик безопасности рекомендуется использовать базовую конфигурацию безопасности Microsoft Edge. Базовую конфигурацию безопасности можно применять с помощью [рекомендуемых базовых параметров конфигурации безопасности](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991) или с помощью [Microsoft Intune](/intune/protect/security-baseline-settings-edge).
+Для политик безопасности рекомендуется использовать базовую конфигурацию безопасности Microsoft Edge. Базовый уровень безопасности можно применять с помощью [блога Базовые](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) показатели безопасности Майкрософт или с помощью [Microsoft Intune.](/intune/protect/security-baseline-settings-edge)
 
 Для других политик рекомендуется просмотреть конфигурации политик для [Microsoft Edge](./microsoft-edge-policies.md) и [обновлений Microsoft Edge](./microsoft-edge-update-policies.md).
 
