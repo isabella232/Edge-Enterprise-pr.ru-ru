@@ -3,19 +3,19 @@ title: Отключение Internet Explorer 11
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Узнайте, как отключить Internet Explorer 11 и использовать режим Internet Explorer в Microsoft Edge.
-ms.openlocfilehash: b70da0ff7437d1f5e70cec40e31211046a66205a
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: c5452745e362ffc71842c7b5a25b84cea48816d6
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980040"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445813"
 ---
 # <a name="disable-internet-explorer-11"></a>Отключение Internet Explorer 11
 
@@ -30,13 +30,14 @@ ms.locfileid: "11980040"
 
 - Обновления Windows
 
+  - Windows 11
   - Windows 10 версии 21H1 или более поздней версии
-  - Windows 10 версии 2004; Windows Серверная версия 2004; Windows 10 версии 20H2; Windows Версия сервера 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) или более поздней версии
+  - Windows 10 версии 2004; Windows Server версии 2004; Windows 10 версии 20H2; Windows Версии 20H2: [KB4598291](https://support.microsoft.com/topic/february-2-2021-kb4598291-os-builds-19041-789-and-19042-789-preview-6a766199-a4f1-616e-1f5c-58bdc3ca5e3b) или более поздней версии
   - Windows 10 версии 1909: [KB4598298](https://support.microsoft.com/topic/january-21-2021-kb4598298-os-build-18363-1350-preview-02dfd9ba-91a2-1b82-dede-42f288c02511) или более поздней версии
   - Windows Server 2019; Windows 10 Корпоративная LTSC 2019: [KB4598296](https://support.microsoft.com/topic/january-21-2021-kb4598296-os-build-17763-1728-preview-4c0931ff-45b7-ff59-5e00-c03b5afb363d) или более поздней
   - Windows Server 2016; Windows 10 Корпоративная 2016 с долгосрочным обслуживанием: [KB4601318](https://support.microsoft.com/topic/february-9-2021-kb4601318-os-build-14393-4225-c5e3de6c-e3e6-ffb5-6197-48b9ce16446e) или более поздний
   - Windows 10 Корпоративная 2015 с долгосрочным обслуживанием: [KB4601331](https://support.microsoft.com/office/february-9-2021%e2%80%94kb4601331-os-build-10240-18842-6227d078-fef3-8d67-27e0-1882e6cb79ff?ui=en-US&rs=en-US&ad=US) или более поздний
-  - Windows 8.1; Windows Server 2012 R2: [KB4601384](https://support.microsoft.com/topic/february-9-2021-kb4601384-monthly-rollup-16bdbb75-dd4b-2910-abc5-7891c9756b96) или более поздний
+  - Windows 8.1; Windows Server 2012 R2: [KB4601384](https://support.microsoft.com/topic/february-9-2021-kb4601384-monthly-rollup-16bdbb75-dd4b-2910-abc5-7891c9756b96) или более поздней
   - Windows Server 2012: обновление [KB4601348](https://support.microsoft.com/topic/february-9-2021-kb4601348-monthly-rollup-2c338c0c-73d6-fb80-cc91-f1a86e80db0c) или более позднее
   
 - Стабильный канал Microsoft Edge

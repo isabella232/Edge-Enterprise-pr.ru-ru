@@ -3,24 +3,24 @@ title: Настройка политик для режима IE
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/23/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Настройка политик для режима IE
-ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: de1165da7e2f86a8865db396fab6c640b9c96805
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980123"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445633"
 ---
 # <a name="configure-ie-mode-policies"></a>Настройка политик для режима IE
 
 >[!Note]
-> Поддержка классических приложений Internet Explorer 11 будет прекращена и больше не будет поддерживаться 15 июня 2022 г. (список области применения см. в [часто задаваемых вопросах](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+> 15 июня 2022 г. настольное приложение Internet Explorer 11 будет снято с службы поддержки. Список того, что имеется в области, см. в задаваемом для выхода на пенсию [веб-сайте Internet Explorer 11](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Чтобы настроить Microsoft Edge, см. [Microsoft Edge руководства по настройке](https://go.microsoft.com/fwlink/?linkid=2188234). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Более подробную информацию см. здесь.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 В этой статье объясняется, как настроить политики для режима IE.
 
@@ -52,7 +52,7 @@ ms.locfileid: "11980123"
 5. Выберите **Включено**.
 6. В разделе **Параметры** выберите из раскрывающегося списка значение
    -  **Режим Internet Explorer**, если вы хотите, чтобы сайты открывались в браузере Microsoft Edge в режиме IE
-   -  **Internet Explorer 11,** если вы хотите, чтобы сайты открывали в автономных окнах Internet Explorer 11 (этот параметр не будет поддерживаться после 15 июня 2022 г., когда настольное приложение Internet Explorer 11 будет отменено и не будет поддерживаться.  После 15 июня 2022 г., когда IE11 больше не будет доступен, этот параметр будет вести себя так же, как и в режиме **Internet Explorer.)**  
+   -  **Internet Explorer 11** , если вы хотите, чтобы сайты открывали в автономных окнах Internet Explorer 11 (этот параметр не будет поддерживаться после 15 июня 2022 г., когда настольное приложение Internet Explorer 11 будет отменено и не будет поддерживаться.  После 15 июня 2022 г., когда IE11 больше не будет доступен, этот параметр будет вести себя так же, как и в режиме **Internet Explorer** .)  
    -  **Нет**, если вы хотите запретить пользователям настройку режима Internet Explorer с помощью edge://flags или параметров командной строки.
 
    > [!NOTE]
@@ -75,7 +75,7 @@ ms.locfileid: "11980123"
     > [!NOTE]
     > Настраивать политику Microsoft Edge не обязательно. Во многих организациях используется переопределение. Это позволяет сделать текущий список сайтов доступным для всех пользователей с помощью политики IE, а также упрощает пилотное использование обновленной версии с помощью политики Microsoft Edge.
 
-Дополнительные сведения о списках Enterprise режиме см. в Enterprise [диспетчере списков сайтов.](/deployedge/edge-ie-mode-site-list-manager)
+Дополнительные сведения о списках Enterprise режиме см. в Enterprise [диспетчере списков сайтов](/deployedge/edge-ie-mode-site-list-manager).
 
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>Настройка с помощью политики "Использовать список веб-сайтов IE в режиме предприятия"
@@ -140,7 +140,10 @@ ms.locfileid: "11980123"
    - Канал Microsoft Edge Dev версии 77 или более поздней
    - Канал Microsoft Edge Canary версии 77 или более поздней
    - Microsoft Edge версии 45 или более ранней
-9. Нажмите **ОК** или **Применить**, чтобы сохранить эти параметры.
+9. Нажмите **ОК** или **Применить**, чтобы сохранить эти параметры.  
+
+    > [!TIP]
+    > Чтобы найти сайты, которые необходимо добавить в список сайтов режима IE, см. в руководстве [Configure IE для Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2188235). Если у вас уже есть список сайтов, средства в этом руководстве помогут вам применить его к нужным пользователям.
 
 ## <a name="see-also"></a>См. также
 

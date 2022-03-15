@@ -3,19 +3,19 @@ title: Microsoft Edge и Application Guard в Microsoft Defender
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 03/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Поддержка Microsoft Edge для Application Guard в Microsoft Defender
-ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fd5293dae19be2aa0939e3a14eeb118907ad375a
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980150"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445493"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Поддержка Microsoft Edge для Application Guard в Microsoft Defender
 
@@ -53,7 +53,7 @@ ms.locfileid: "11980150"
 
 ### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>Включить guard приложения в пассивном режиме и просмотреть Edge обычно
 
-Начиная с Microsoft Edge 94, теперь у пользователей есть возможность настроить пассивный режим, что означает, что application Guard игнорирует конфигурацию списка сайтов и пользователи могут просматривать Edge в обычном режиме. Управление этой поддержкой осуществляется с помощью политики. Вы можете обновить политику Edge [ApplicationGuardPassiveModeEnabled,](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) чтобы включить или отключить пассивный режим.
+Начиная с Microsoft Edge 94, теперь у пользователей есть возможность настроить пассивный режим, что означает, что application Guard игнорирует конфигурацию списка сайтов и пользователи могут просматривать Edge в обычном режиме. Управление этой поддержкой осуществляется с помощью политики. Вы можете обновить политику Edge [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) , чтобы включить или отключить пассивный режим.
 
 > [!Note]
 > Эта политика влияет только на Edge, поэтому навигации из других браузеров могут перенаправляться в контейнер application Guard, если у вас есть соответствующие расширения.
@@ -129,7 +129,7 @@ ms.locfileid: "11980150"
 
 - [Требования к системе](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
 - [Установка Application Guard в Microsoft Defender](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
-- [Настройка параметров групповой политики Microsoft Defender](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
+- [Настройка параметров групповой политики Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Тестирование Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
 ## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
@@ -154,7 +154,7 @@ ms.locfileid: "11980150"
 
 ### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>Почему сотрудники не видят своих любимых в сеансе Application Guard Edge?
 
-В зависимости от параметров организации может быть отключена синхронизация избранного. Управление политикой см. в Microsoft Edge и Application Guard в Microsoft Defender | Документы Майкрософт.
+В зависимости от параметров организации может быть отключена синхронизация избранного. Управление политикой см. в Microsoft Edge Application Guard в Microsoft Defender | Документы Майкрософт.
 
 ### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>Почему сотрудники не могут видеть расширения в сеансе Application Guard Edge?
 

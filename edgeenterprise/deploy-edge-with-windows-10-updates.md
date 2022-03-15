@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Развертывание Microsoft Edge с обновлениями Windows 10
-ms.openlocfilehash: 9102ef37c6a5329a5cba79ed976237d7fd7e2063
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 1f3a99259cb28c46e4f6f30de05fade6ac158336
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979673"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445833"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a>Развертывание Microsoft Edge с обновлениями Windows 10
 
@@ -23,7 +23,14 @@ ms.locfileid: "11979673"
 
 ## <a name="for-windows-10-release-20h2"></a>Для выпуска Windows 10 20H2
 
-В Windows 10 версии 20H2 в качестве браузера по умолчанию уже установлен Microsoft Edge.
+Windows 10 20H2 и более поздней Microsoft Edge предварительно установленный в качестве браузера по умолчанию. Однако версия 84 edge, поставляемая с Windows 10 20H2, и версия 92 Edge, поставляемая с Windows 10 21H2, устарела. Хотя Microsoft Edge автоматически обновляется до более новой версии после входа пользователя, так как сроки обновления зависят от различных факторов, это может быть несколько непреложным. Для организаций, которые хотят больше контролировать и хотят, чтобы Edge (стабильный канал) обновлялся до последней версии перед логотипом пользователя, для принудительного обновления Edge во время Windows OOBE можно использовать следующую команду PowerShell.
+
+`Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"`
+
+При использовании Windows автопилота можно обернуть этот скрипт в файл .intunewin с помощью средства подготовки контента [Microsoft Win32](/mem/intune/apps/apps-win32-prepare). Затем его можно задать в качестве необходимого приложения для страницы состояния регистрации (ESP) при желании.
+
+> [!NOTE]
+> Если вы в настоящее время использует такие [](/deployedge/microsoft-edge-update-policies#target-channel-override) политики, как переопределения целевого канала или переопределения целевой версии, чтобы оставаться в старой версии Edge, следует помнить, что в вышеуказанном сценарии не будут учитываться какие-либо политики, а просто обновят последнюю версию.[](/deployedge/microsoft-edge-update-policies#targetversionprefix) По умолчанию Edge не понизирует себя, в том числе после того, как такие политики будут получены позже.
 
 ## <a name="for-windows-10-releases-rs4-through-20h1"></a>Для выпусков Windows 10 RS4-20H1
 

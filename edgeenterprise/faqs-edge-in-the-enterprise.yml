@@ -6,17 +6,17 @@ metadata:
   manager: laurawi
   ms.date: 06/29/2021
   audience: ITPro
-  ms.topic: conceptual
+  ms.topic: faq
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Часто задаваемые вопросы (часто задаваемые вопросы) о развертывании Microsoft Edge на предприятии
-  ms.openlocfilehash: d4d707533c8733059e8fadc8fe8de9a85b8dc64d
-  ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+  ms.openlocfilehash: 5f63f45792824e0cafc8a875aca691979780aae8
+  ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
   ms.translationtype: MT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/12/2021
-  ms.locfileid: "11979649"
+  ms.lasthandoff: 03/15/2022
+  ms.locfileid: "12445414"
 title: Часто задаваемые вопросы (часто задаваемые вопросы) о Microsoft Edge на предприятии
 summary: >
   > [!NOTE]
@@ -30,10 +30,10 @@ sections:
       В правом верхнем углу Microsoft Edge щелкните значок многоточия (**…**), а затем нажмите **Параметры**. Выберите **Сведения о Microsoft Edge**, чтобы просмотреть свою версию Microsoft Edge.
   - question: Как насчет Internet Explorer 11?
     answer: >
-      Настольное приложение Internet Explorer 11 будет снято с службы поддержки 15 июня 2022 г. (список того, что имеется в области, см. в [faq).](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/) Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Здесь](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) вы найдете дополнительные сведения.
+      Настольное приложение Internet Explorer 11 будет снято с службы поддержки 15 июня 2022 г. (список того, что имеется в области, см. в [faq](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. [Здесь](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) вы найдете дополнительные сведения.
   - question: Поддерживает ли Microsoft Edge (на основе Chromium) элементы ActiveX или вспомогательные объекты браузера, такие как Silverlight или Java?
     answer: >
-      Нет. Microsoft Edge не поддерживает элементы управления ActiveX или объекты поддержки браузера (BHOs), такие как Silverlight или Java. Но если вы применяете веб-приложения, использующие элементы ActiveX, вспомогательные объекты браузера или устаревшие режимы работы с документами в Internet Explorer 11, то можно настроить их запуск в режиме IE в новом Microsoft Edge. Дополнительные сведения см. в статье [Настройка режима IE в Microsoft Edge](./edge-ie-mode.md).
+      Нет. Microsoft Edge не поддерживает элементы ActiveX или объекты поддержки браузера (BHOs), такие как Silverlight или Java. Но если вы применяете веб-приложения, использующие элементы ActiveX, вспомогательные объекты браузера или устаревшие режимы работы с документами в Internet Explorer 11, то можно настроить их запуск в режиме IE в новом Microsoft Edge. Дополнительные сведения см. в статье [Настройка режима IE в Microsoft Edge](./edge-ie-mode.md).
   - question: Будут ли перенастрояться избранное из текущей версии Microsoft Edge или мне придется их повторно добавлять?
     answer: "В данный Microsoft Edge поддерживает импорт из существующих установок Microsoft Edge, Chrome, Internet Explorer и Firefox (на Win10). Для импорта поддерживаются следующие параметры: Bookmarks, History, Passwords и Autofill (Платежи, адреса и общие формы). Вы можете импортировать данные во время первого запуска или из параметров браузера.  \n"
   - question: В чем разница между каналами и сборками Stable, Beta, Dev и Canary?

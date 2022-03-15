@@ -3,24 +3,24 @@ title: Сопоставление расширений файлов с режи�
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/24/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сопоставление расширений файлов с режимом Internet Explorer
-ms.openlocfilehash: c7d72e94079ff35d8ffe49c068585b0c97d208cc
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 1d25baa224e4fdcdd76bd599ccedb807c9dd7061
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298257"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445754"
 ---
 # <a name="associate-file-extensions-with-internet-explorer-mode"></a>Сопоставление расширений файлов с режимом Internet Explorer
 
 >[!Note]
-> 15 июня 2022 г. настольное приложение Internet Explorer 11 будет снято с службы поддержки. Чтобы увидеть список того, что имеется в области, [ознакомьтесь с этой задаваемой проблемой).](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549) Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. Дополнительные сведения см. [здесь](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> 15 июня 2022 г. настольное приложение Internet Explorer 11 будет снято с службы поддержки. Чтобы ознакомиться со списком областей, [ознакомьтесь с этим вопросом](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Те же приложения и сайты IE11, которые вы используете сегодня, можно открывать в Microsoft Edge в режиме Internet Explorer. Дополнительные сведения см. [здесь](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 В этой статье объясняется, как сопоставить Microsoft Edge в режиме Internet Explorer с расширениями файлов для классических приложений.
 
@@ -40,7 +40,7 @@ ms.locfileid: "12298257"
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 ```
 
@@ -63,7 +63,7 @@ ms.locfileid: "12298257"
 "MSEdgeIEModeMHT"=hex(0):
 ```
 
-После настройки ключей, описанных в предыдущем примере, пользователи увидят другой вариант в open **с** меню, чтобы открыть файл \.mht с помощью Microsoft Edge с режимом \<channel\> IE.
+После набора ключей, описанных в предыдущем примере, пользователи увидят другой параметр в open **с** меню, чтобы открыть файл \.mht \<channel\> с помощью Microsoft Edge с режимом IE.
 
 ## <a name="registry-example"></a>Пример реестра
 
@@ -80,7 +80,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\Application]
 "ApplicationCompany"="Microsoft Corporation"
 "ApplicationName"="Microsoft Edge with IE Mode"
-"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,4"
+"ApplicationIcon"="C:\\<edge_installation_dir>\\msedge.exe,0"
 "AppUserModelId"=""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\MSEdgeIEModeMHT\DefaultIcon]
@@ -97,7 +97,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>Настройка типов файлов для открытия в режиме Internet Explorer
 
-Начиная с Microsoft Edge 88, вы можете настроить определенные ссылки типа файлов для открытия в режиме Internet Explorer с помощью контекстного меню показать политику, чтобы открыть ссылки в [режиме Internet Explorer.](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed)
+Начиная с Microsoft Edge 88, вы можете настроить определенные ссылки типа файлов для открытия в режиме Internet Explorer с помощью контекстного меню показать политику для открытия ссылок в [режиме Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed).
 
 Вы можете определить типы файлов, к которым должен применяться этот параметр, указав расширения файлов в политике [Открывать локальные файлы из списка разрешенных расширений файлов в режиме Internet Explorer](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist). 
 

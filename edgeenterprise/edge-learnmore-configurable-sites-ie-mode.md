@@ -3,19 +3,19 @@ title: Microsoft Edge и настраиваемые сайты в режиме I
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge и настраиваемые сайты в режиме IE
-ms.openlocfilehash: 0248ecd394acee5773751c0685969e3d40940431
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fac7801d3b1b8dd222cb3cf6f23a11348a19ea55
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979990"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445883"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a>Сведения о настраиваемых сайтах в режиме IE
 
@@ -25,6 +25,7 @@ ms.locfileid: "11979990"
 
 - Обновления Windows
 
+  - Windows 11
   - Windows 10 версии 1909, Windows server версии 1909 — KB4550945 и выше
   - Windows 10 версии 1903, Windows server версии 1903 — KB4550945 и выше
   - Windows 10, версии 1809, Windows Server версии 1809 и Windows Server 2019: обновление — KB4550969 и выше
