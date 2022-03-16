@@ -1,4 +1,4 @@
-# last revised 01/11/2022
+# last revised 03/08/2022
 - name: Документация по Microsoft Edge Enterprise
   href: index.yml
 - name: Документация по Microsoft Edge
@@ -121,6 +121,8 @@
       href: microsoft-edge-pdf.md
     - name: Установка Microsoft Edge в качестве браузера по умолчанию
       href: edge-default-browser.md
+    - name: Поддержка раздельного туннелирования VPN для WebRTC
+      href: microsoft-edge-vpn-split-tunneling.md
     - name: Использование Microsoft Edge в режиме Internet Explorer
       items:
         - name: Что такое режим Internet Explorer (IE)?
@@ -143,7 +145,7 @@
               href: edge-ie-mode-site-list-manager.md
         - name: Сохранение навигации в пределах страницы в режиме Internet Explorer
           href: edge-learnmore-inpage-nav.md
-        - name: Отправка файлов cookie из Microsoft Edge в Internet Explorer
+        - name: Обмен файлами cookie между Microsoft Edge и Internet Explorer
           href: edge-ie-mode-add-guidance-cookieshare.md
         - name: Функция "Настраиваемые сайты" в режиме Internet Explorer
           href: edge-learnmore-configurable-sites-ie-mode.md
@@ -157,6 +159,8 @@
       href: ms-edge-security-for-business.md
     - name: Современная защита безопасности для уязвимых устаревших приложений
       href: microsoft-edge-security-iemode-safer-than-ie.md
+    - name: Более безопасный просмотр веб-страниц в Microsoft Edge
+      href: microsoft-edge-security-browse-safer.md
     - name: Определение и прерывание загрузок потенциально опасных файлов
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Список разрешений для конечных точек Microsoft Edge

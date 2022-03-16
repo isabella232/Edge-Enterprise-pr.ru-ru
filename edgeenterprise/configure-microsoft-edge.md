@@ -3,23 +3,23 @@ title: Настройка Microsoft Edge для Windows
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/19/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как настроить параметры политик Microsoft Edge на устройствах с Windows
-ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: ed89a1d356fcfa7b6bf3681a7d75848ed2c94f31
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107464"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445333"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Настройка параметров политик Microsoft Edge в Windows
 
-Используйте следующие сведения для настройки параметров политики Microsoft Edge на устройствах с Windows.
+Используйте следующие сведения для настройки параметров политики Microsoft Edge на устройствах с Windows. Если вы не настроили Microsoft Edge, см. [руководство по настройке Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2187484).
 
 > [!NOTE]
 > Эта статья относится к Microsoft Edge версии 77 или более поздней.
@@ -48,7 +48,7 @@ Microsoft Edge поддерживает как _обязательные_, та�
 
 При добавлении файлов административного шаблона в соответствующее расположение параметры политики Microsoft Edge сразу же становятся доступны в редакторе групповых политик.
 
-Перейдите на [целевую страницу Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise), чтобы скачать файл шаблонов политики Microsoft Edge (*MicrosoftEdgePolicyTemplates.cab*), и извлеките содержимое.
+Перейдите на [целевую страницу Microsoft Edge Enterprise](https://aka.ms/EdgeEnterprise), чтобы скачать файл шаблонов политики Microsoft Edge, и извлеките содержимое.
 
 #### <a name="add-the-administrative-template-to-active-directory"></a>Добавьте административный шаблон в Active Directory
 
