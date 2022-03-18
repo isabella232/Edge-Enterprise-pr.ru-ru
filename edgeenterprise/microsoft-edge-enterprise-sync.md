@@ -3,19 +3,19 @@ title: Настройка синхронизации Microsoft Edge Enterprise
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 11/10/2021
+ms.date: 02/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Параметры пользователя и администратора для настройки синхронизации избранного, паролей и других данных браузера в Microsoft Edge.
-ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: abb81c28c0e4e45423dd7285e929ac82a9773657
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298187"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445623"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Настройка синхронизации Microsoft Edge Enterprise
 
@@ -52,11 +52,7 @@ ms.locfileid: "12298187"
   
   - Для клиентов, у которых есть только Azure AD P1 или P2, необходимо включить функцию Azure AD Enterprise State Roaming, чтобы они могли использовать синхронизацию Microsoft Edge Enterprise. Дополнительные сведения см. в статье [Включение Enterprise State Roaming в Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
-- Microsoft 365 бизнес премиум, бизнес стандарт или **бизнес базовый \***
-
-   > [!IMPORTANT]
-   > ** \* *_ Мы нашли проблему с _* Business Basic** для синхронизации и работаем над исправлением. Пока что она не работает, как следует.
-
+- Microsoft 365 бизнес премиум, бизнес стандарт или бизнес базовый
 - Office 365 E1 и более поздние версии
 - Azure Information Protection (AIP) (P1 или P2)
 - Все подписки EDU (Microsoft Apps для учащихся или преподавателей, Exchange Online для учащихся или преподавателей, O365 A1 или более поздней версии, Microsoft 365 A1 или более поздней версии, Azure Information Protection P1 или P2 для учащихся или преподавателей)
