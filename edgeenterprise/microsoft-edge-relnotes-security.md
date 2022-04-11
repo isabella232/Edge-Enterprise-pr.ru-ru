@@ -3,23 +3,55 @@ title: Заметки о выпуске обновлений для систем
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2022
+ms.date: 04/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: c62f4891e2986ccd55f1c41b8313c223567d63a1
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 0ab346a202bb8bf42239430000ebc0692d8f7992
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445313"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473588"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="april-7-2022"></a>7 апреля 2022 г.
+
+Корпорация Майкрософт выпустила последнюю версию **Microsoft Edge стабильного канала (версия 100.0.1185.36)**, содержащую последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+## <a name="april-1-2022"></a>1 апреля 2022 г.
+
+Корпорация Майкрософт выпустила новую версию **Microsoft Edge стабильного канала (версия 100.0.1185.29)**, содержащую последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [Руководстве по обновлению системы безопасности](https://msrc.microsoft.com/update-guide).
+
+В этом обновлении содержатся следующие обновления для Microsoft Edge:
+
+- [CVE-2022-24523](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24523)
+- [CVE-2022-24475](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24475)
+- [CVE-2022-26891](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26891)
+- [CVE-2022-26895](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26895)
+- [CVE-2022-26894](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26894)
+- [CVE-2022-26900](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26900)
+- [CVE-2022-26908](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26908)
+- [CVE-2022-26909](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26909)
+- [CVE-2022-26912](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26912)
+
+## <a name="march-26-2022"></a>26 марта 2022 г.
+
+Корпорация Майкрософт выпустила последнюю версию  **Microsoft Edge стабильного канала (версия 99.0.1150.55)**, содержащую последние обновления для системы безопасности проекта Chromium. В этом обновлении содержится исправление уязвимости [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+## <a name="march-17-2022"></a>17 марта 2022 г.
+
+Корпорация Майкрософт выпустила последнюю версию  **Microsoft Edge стабильного канала (версия 99.0.1150.46)**, содержащую последние обновления для системы безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Этот выпуск содержит следующее обновление для Microsoft Edge:
+
+- [CVE-2022-26899](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26899)
 
 ## <a name="march-3-2022"></a>3 марта 2022 г.
 

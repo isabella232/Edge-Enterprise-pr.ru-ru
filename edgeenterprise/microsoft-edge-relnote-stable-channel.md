@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/10/2022
+ms.date: 04/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: a7e11586c77b600253f25c2819a26e72e18f4b28
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 0cf9c2d0ac7a60c03ad6c80d4186629d296a73c6
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445643"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473669"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -30,6 +30,69 @@ ms.locfileid: "12445643"
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1000118536-april-7"></a>Версия 100.0.1185.36: 7 апреля
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#april-7-2022).
+
+## <a name="version-1000118529-april-1"></a>Версия 100.0.1185.29: 1 апреля
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#april-1-2022).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Трехзначный номер версии в строке агента пользователя.** Microsoft Edge теперь будет отправлять трехзначный номер версии, например Edg/100, в заголовке User-Agent. Это может привести к путанице в сценариях или аналитике на стороне сервера, которые используют синтаксический анализатор с ошибками для определения номера версии строки User-Agent. Вы можете использовать политику [ForceMajorVersionToMinorPositionInUserAgent](/deployedge/microsoft-edge-policies#forcemajorversiontominorpositioninuseragent), чтобы определить, должна ли основная версия строки user-Agent быть заморожена на 99. Кроме того, флаг **#force-major-version-to-minor**доступен в *edge://flags*, чтобы заморозить основную версию в строке User-Agent до 99.
+
+- **Оптимизация активаций протокола приложений Microsoft 365.** Активация протокола приложений Microsoft 365 в доверенных службах облачного хранилища Microsoft теперь будет запускать определенные приложения Microsoft 365 напрямую, включая поддомены SharePoint и URL-адреса Microsoft OneDrive. С помощью политик [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) и [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) можно включить запросы активации протокола приложения, а также определить другие приложения и службы, для которых включены или отключены предупреждения.
+
+- **Принудительная аппаратная защита стека.** Microsoft Edge продолжает поддерживать более тонкую защиту, борясь с уязвимостями повреждения памяти и защищая непрямые вызовы. Аппаратная защита стека поддерживается только в Windows 8 и более поздних версиях. Дополнительные сведения см. в разделе [Аппаратная защита стека](https://techcommunity.microsoft.com/t5/windows-kernel-internals-blog/developer-guidance-for-hardware-enforced-stack-protection/ba-p/2163340). Поведением этой функции можно управлять с помощью политики [ShadowStackCrashRollbackBehavior](/deployedge/microsoft-edge-policies#shadowstackcrashrollbackbehavior).
+
+- **Предварительный просмотр PDF-файлов в Microsoft Outlook и проводнике.** Пользователи могут просматривать PDF-файлы в облегченной и полной предварительной версии, доступной только для чтения. Эта функция доступна для вложений PDF-файлов в классической версии Outlook или для локальных файлов PDF с помощью проводника.
+
+- **Открытие PDF-файлов с цифровой подписью.** Цифровые подписи широко используются для проверки подлинности документа и внесенных в него изменений. Вы можете использовать политику [PDFSecureMode](/deployedge/microsoft-edge-policies#pdfsecuremode), чтобы включить проверку цифровой подписи для PDF-файлов непосредственно из браузера без необходимости в надстройках.
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) — указывает, включена ли функция прозрачности рекламы
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) — управляет использованием API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) — скрывает диалоговое окно "Восстановление страниц" после сбоя браузера
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) — безопасный режим и проверка цифровых подписей на основе сертификатов в собственном средстве чтения файлов PDF
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) — предлагает пользователю выбрать сертификат при совпадении нескольких сертификатов
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) — разрешает API WebHID на этих сайтах
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) — блокирует API WebHID на этих сайтах
+
+#### <a name="deprecated-policy"></a>Политика устарела
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) — включение фоновых обновлений в списке доступных шаблонов для коллекций и других функций, которые используют шаблоны
+
+#### <a name="obsoleted-policy"></a>Устаревшая политика
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) — разрешение страницам отправлять синхронные запросы XHR при удалении страницы
+
+## <a name="version-980110892-march-26"></a>Версия 98.0.1108.92: 26 марта
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
+
+## <a name="version-990115055-march-26"></a>Версия 99.0.1150.55: 26 марта
+
+> [!Important]
+> В этом обновлении содержится исправление уязвимости [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#march-26-2022).
+
+## <a name="version-990115052-march-24"></a>Версия 99.0.1150.52: 24 марта
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-980110884-march-17"></a>Версия 98.0.1108.84: 17 марта
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
+
+## <a name="version-990115046-march-17"></a>Версия 99.0.1150.46: 17 марта
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#march-17-2022).
 
 ## <a name="version-990115039-march-10"></a>Версия 99.0.1150.39: 10 марта
 
@@ -72,7 +135,6 @@ ms.locfileid: "12445643"
 - [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) - Настройка связанных соответствий в разделе "Найти на странице"
 - [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - Включить диалоговое окно входа в систему по щелчку для принятия действий
 - [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - Включение или отключение уменьшения числа агентов пользователей
-
 
 ## <a name="version-980110862-february-24"></a>Версия 98.0.1108.62: 24 февраля
 
@@ -151,72 +213,7 @@ ms.locfileid: "12445643"
 
 Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
 
-## <a name="version-970107255-january-6"></a>Версия 97.0.1072.55: 6 января
-
-Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#january-6-2022).
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Используйте текущий профиль для входа на веб-сайты, если на устройстве вошли в систему несколько рабочих и учебных учетных записей.** Если на устройстве осуществлен вход в несколько учетных записей организации или учебного заведения, пользователям будет предложено выбрать учетную запись из средства выбора учетной записи, чтобы продолжить посещения веб-сайтов. В этом выпуске пользователям будет предложено позволить Microsoft Edge автоматически входить на веб-сайты с помощью учетной записи организации или учебного заведения, которая вошла в текущий профиль. Пользователи могут включить и отключить эту функцию в разделе **Параметры** > **Профильные настройки**.
-
-- **Добавьте поддержку защиты от потери данных (DLP) в конечной точке Майкрософт в macOS.** Политика Защиты от потери данных в конечной точке Майкрософт будет доступна непосредственно в macOS.
-
-- **Автоматическое использование HTTPS.** Пользователи могут обновить навигацию с HTTP до HTTPS для доменов, которые, скорее всего, поддерживают этот более безопасный протокол. Эту поддержку также можно настроить так, чтобы попытка доставки по протоколу HTTPS осуществлялась для всех доменов. Примечание. Эта функция входит в состав контролируемого выпуска функций. Если эта функция отсутствует, вернитесь сюда, поскольку выпуск продолжается.
-
-- **Блокировка WebSQL в сторонних контекстах.** Использование устаревшей функции WebSQL будет заблокировано в сторонних фреймах. Политика [WebSQLInThirdPartyContextEnabled](/deployedge/microsoft-edge-policies#websqlinthirdpartycontextenabled) доступна для отказа до Microsoft Edge версии 101. Это изменение осуществляется в проекте Chromium, на котором основан Microsoft Edge. Дополнительные сведения см. в [записи о состоянии платформы Chrome](https://chromestatus.com/feature/5684870116278272).
-
-- **Цитаты в Microsoft Edge.** Учащимся часто необходимо цитировать источники для исследования. Им необходимо управлять множеством справочных материалов и источников, а это непростая задача. Кроме того, им необходимо перевести эти цитаты в соответствующие форматы, такие как APA, MLA и Chicago. Это новая функция "Ссылки", предварительная версия которой доступна в Microsoft Edge, позволяет учащимся лучше управлять цитатами и создавать цитаты по мере исследования в Интернете. Если ссылки включены в коллекциях или из раздела **Параметры и другое (ALT-F)**, Microsoft Edge автоматически создает цитаты, которые учащиеся смогут использовать позже, чтобы они могли сосредоточиться на своих исследованиях. Когда все будет готово, можно будет легко скомпилировать эти цитаты в окончательный результат. Дополнительные сведения см. в статье [Предварительный просмотр цитат в Microsoft Edge](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/).
-
-- **Защита потока управления (CFG).** Microsoft Edge начнет поддерживать более тонкую защиту, борясь с уязвимостями повреждения памяти и защищая непрямые вызовы. CFG поддерживается только в Windows 8 и более поздних версиях. Дополнительные сведения см. в статье [Защита потока управления](/windows/win32/secbp/control-flow-guard).
-  
-  > [!NOTE]
-  > Это развивающаяся технология. Поделитесь своими отзывами, чтобы помочь нам усилить ее поддержку.
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-- [AccessibilityImageLabelsEnabled](/DeployEdge/microsoft-edge-policies#accessibilityimagelabelsenabled) - Получение описаний изображений от Майкрософт включено
-- [CORSNonWildcardRequestHeadersSupport](/DeployEdge/microsoft-edge-policies#corsnonwildcardrequestheaderssupport) - Включена поддержка заголовка запроса CORS без подстановочных знаков
-- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Функция обнаружения в Microsoft Edge
-- [EdgeEnhanceImagesEnabled](/DeployEdge/microsoft-edge-policies#edgeenhanceimagesenabled) - Улучшение изображений включено
-- [InternetExplorerModeTabInEdgeModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) - Разрешить открывать в Microsoft Edge сайты, настроенные для режима Internet Explorer
-- [SameOriginTabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#sameorigintabcaptureallowedbyorigins) - Разрешить этим источникам запись вкладок из этих же источников
-- [ScreenCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#screencaptureallowedbyorigins) - Разрешить этим источникам запись рабочего стола, окон и вкладок
-- [SerialAllowAllPortsForUrls](/DeployEdge/microsoft-edge-policies#serialallowallportsforurls) - Автоматически предоставлять сайтам разрешение на подключение всех последовательных портов
-- [SerialAllowUsbDevicesForUrls](/DeployEdge/microsoft-edge-policies#serialallowusbdevicesforurls) - Автоматическое предоставление сайтам разрешений на подключение к последовательным USB-устройствам
-- [SerialAllowUsbDevicesForUrls](/DeployEdge/microsoft-edge-policies#smartscreendnsrequestsenabled) - Включить DNS-запросы фильтра SmartScreen в Microsoft Defender
-- [TabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#tabcaptureallowedbyorigins) - Разрешить этим источникам запись вкладок
-- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Принудительное повторное включение WebSQL в сторонних контекстах
-- [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - Разрешить этим источникам запись окон и вкладок
-
-## <a name="version-960105462-december-17"></a>Версия 96.0.1054.62: 17 декабря
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-960105457-december-14"></a>Версия 96.0.1054.57: 14 декабря
-
-> [!Important]
-> В этом обновлении содержится исправление уязвимости [CVE-2021-4102](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-4102), которая, как сообщают разработчики Chromium, используется на практике. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
-
-Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#december-14-2021).
-
-## <a name="version-960105453-december-10"></a>Версия 96.0.1054.53: 10 декабря
-
-Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#december-10-2021).
-
-## <a name="version-960105443-december-2"></a>Версия 96.0.1054.43: 2 декабря
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-960105441-november-30"></a>Версия 96.0.1054.41: 30 ноября
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-960105434-november-23"></a>Версия 96.0.1054.34: 23 ноября
-
-Исправлены ошибки и проблемы с производительностью.
-
+<!---- From Version 97.0.1072.55: January 6 to Version 96.0.1054.34: November 23 ---->
 <!---archive from Version 96.0.1054.29: November 19 to Version 94.0.992.57: October 27 --->
 <!-- archive from Version 95.0.1020.30: October 21 to Version 94.0.992.37: September 30 -->
 <!-- archive from Version 94.0.992.31: September 24 to Version 93.0.961.44: September 9  -->

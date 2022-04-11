@@ -3,32 +3,116 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/14/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 8633a5f15fe737a64a0160de714c1c4e53541482
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 8c2fcd1a45d6d6417e10609dec3cf1c669576c92
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445713"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473567"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
-Эти заметки о выпуске содержат сведения о новых возможностях и обновлениях, не связанных с безопасностью, которые включены Microsoft Edge канала Beta Архивные версии этих записей выпуска доступны в архивных заметках для [Microsoft Edge Beta Channel](./microsoft-edge-relnote-archive-beta-channel.md).
+Эти заметки о выпуске содержат сведения о новых возможностях и обновлениях, не связанных с безопасностью, которые включены Microsoft Edge канала Beta Архивные версии этих заметок о выпуске доступны в архивных заметках о выпуске [Microsoft Edge Beta Channel](./microsoft-edge-relnote-archive-beta-channel.md).
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1010121010-april-8"></a>Версия 101.0.1210.10: 8 апреля
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Возможность задать профиль по умолчанию.** Политика [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) позволяет задать профиль по умолчанию, используемый при открытии браузера, а не последний используемый профиль. Эта политика не будет применяться, если `--profile-directory` указан параметр.
+
+- **Коммутатор сертификатов клиента.** Эта функция позволяет пользователям очистить сохраненный сертификат и повторно открыть средство выбора сертификатов при посещении сайта, для которого требуется проверка подлинности http-сертификата. Это можно сделать, не выходя из Microsoft Edge.
+
+- **Запустите прогрессивные веб-приложения (PWA) из панели избранного.** Улучшения в PWA запуска начнут отображаться, начиная со значка "Приложения", который можно добавить на панель инструментов.
+
+- **Управление параметром "Разрешить расширения из других магазинов".** Используйте политику [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) , чтобы управлять состоянием по умолчанию параметра "Разрешить расширения из других хранилищ".
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) — настройка списка команд, для которых нужно отключить сочетания клавиш
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) — настройка состояния по умолчанию для разрешения расширений из других хранилищ
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) — разрешить функциям скачивать ресурсы из службы доставки ресурсов
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) — включен параметр профиля по умолчанию
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) — разрешить сохранение страницы, как в режиме Internet Explorer
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) — жесты прокрутки в Microsoft Edge режиме киоска
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) — разрешить пользователям доступ к Microsoft Office меню
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) — разрешить пользователям настраивать службы безопасности сайта
+
+#### <a name="deprecated-policy"></a>Политика устарела
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) — настройте, следует ли Microsoft Edge автоматически выбирать сертификат при наличии нескольких совпадений сертификатов для сайта, настроенного с помощью AutoSelectCertificateForUrls.
+
+#### <a name="obsoleted-policy"></a>Устаревшая политика
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Принудительное повторное включение WebSQL в сторонних контекстах
+
+
+## <a name="version-1000118527-march-31"></a>Версия 100.0.1185.27: 31 марта
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-1000118523-march-28"></a>Версия 100.0.1185.23: 28 марта
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-1000118517-march-23"></a>Версия 100.0.1185.17: 23 марта
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-1000118512-march-18"></a>Версия 100.0.1185.12: 18 марта
+
+Исправлены ошибки и проблемы с производительностью.
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Упрощение Microsoft 365 протоколов приложений.** Microsoft 365 активации протокола приложения в доверенных облачных службах хранилища Майкрософт теперь будут запускать определенные приложения Microsoft 365 напрямую, включая поддомены SharePoint и URL-адреса Microsoft OneDrive. Вы можете использовать политики [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) и [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) , чтобы при необходимости включить запросы на активацию протокола приложения, а также определить другие приложения и службы, в которых предупреждения включены или отключены.
+
+## <a name="version-1000118510-march-17"></a>Версия 100.0.1185.10: 17 марта
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Усовершенствования в управлении списками облачных сайтов для режима IE.** Вы можете настроить общий доступ к файлам cookie сеансов между Microsoft Edge и Internet Explorer для режима IE в списке сайтов в Microsoft 365 Admin Center. **Примечание:** Это управляемое развертывание компонентов. Если вы не видите эту функцию, вернитесь, пока мы продолжим развертывание.
+
+- **Предварительный просмотр PDF-файлов в Microsoft Outlook и проводник.** Пользователи могут просматривать PDF-файл в упрощенной и расширенной предварительной версии только для чтения.  Доступно для Outlook PDF-файлов рабочего стола или для локальных PDF-файлов с проводник.  
+
+- **Установленная синхронизация веб-приложений на всех настольных устройствах.** Веб-сайты или веб-приложения (PWA), установленные в качестве приложений, будут синхронизироваться на всех настольных устройствах, на которых вы вошли и включили синхронизацию. Они будут отображаться как доступные приложения для установки. Приложение, удаленное с одного устройства, синхронизирует удаление на всех устройствах.
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) — настройка, если включена функция прозрачности рекламы
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) — управление использованием API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) — диалоговое окно "Скрыть страницы восстановления" после сбоя браузера
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) — безопасный режим и проверка цифровой подписи на основе сертификатов в собственном средстве чтения PDF
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) — запрос на выбор сертификата при совпадении нескольких сертификатов
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) — разрешить API WebHID на этих сайтах
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) — блокировка API WebHID на этих сайтах
+
+#### <a name="deprecated-policy"></a>Политика устарела
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) — включает фоновые обновления списка доступных шаблонов для коллекций и других функций, использующих шаблоны
+
+#### <a name="obsoleted-policy"></a>Устаревшая политика
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) — разрешить страницам отправлять синхронные XHR-запросы во время закрытия страницы
 
 ## <a name="version-990115039-march-10"></a>Версия 99.0.1150.39: 10 марта
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
-- **Улучшения в области управления списками облачных сайтов для режима IE.** Определите пробелы в списке корпоративных сайтов, настроив отчеты о отзывах на сайте с помощью политик [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) и [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) . Вы можете просматривать локальные URL-адреса списков сайтов от пользователей и потенциально неправильно сконфигурировали нейтральные URL-адреса сайтов в Microsoft Edge списков сайтов в центре Microsoft 365 Admin. Дополнительные дополнительные комментарии см. в обзоре отзывов на [сайте центра Microsoft 365 Admin.](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1)  **Примечание:** Это управляемый выкат функции. Если вы не видите эту функцию, проверьте, как мы продолжаем нашу выкатку.
+- **Усовершенствования в управлении списками облачных сайтов для режима IE.** Определите пробелы в списке корпоративных сайтов, настроив отчеты о отзывах сайтов с помощью политик [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) и [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) . ВЫ можете просматривать URL-адреса локальных списков сайтов от пользователей и потенциально неправильно настроенные URL-адреса нейтральных сайтов в интерфейсе Microsoft Edge сайта в Microsoft 365 Admin Center. Дополнительные сведения см[. в разделе "Просмотр отзывов о сайте" Microsoft 365 Admin Центре](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **Примечание:** Это управляемое развертывание компонентов. Если вы не видите эту функцию, вернитесь, когда мы продолжим развертывание.
 
 ## <a name="version-990115030-march-2"></a>Версия 99.0.1150.30: 2 марта
 
@@ -46,116 +130,15 @@ ms.locfileid: "12445713"
 
 Исправлены ошибки и проблемы с производительностью.
 
-## <a name="version-990115011-february-9"></a>Версия 99.0.1150.11: 9 февраля
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Предстоящий трехзначный номер версии в строке агента пользователя.** Начиная с версии 100, Microsoft Edge отправит трехзначный номер версии в User-Agent, например "Edg/100". Начиная с Microsoft Edge 97, владельцы сайтов могут протестировать эту строку предстоящих агентов, включив флаг эксперимента **#force-major-version-to-100** в edge://flags, чтобы убедиться, что их логика User-Agent разметки надежна и работает, как и *ожидалось*.
-
-- **Персонализация многопрофиальных опытом с предпочтениями профилей для сайтов.** Пользователи могут настроить свой многопрофиальный опыт с возможностью создания настраиваемого списка сайтов для автоматического переключения профилей в Microsoft Edge.
-
-- **Bidirectional Cookie Sharing for IE mode.** Эта функция расширяет возможности обмена файлами cookie, которые уже доступны, и позволяет пользователям синхронизировать определенные файлы cookie сеанса из режима Internet Explorer/IE в Microsoft Edge. Дополнительные сведения см. в разделе [Cookie sharing between Microsoft Edge и Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
-
-- **Перейдите по pdf-документам с помощью эскизов страниц.** Теперь вы сможете перемещаться по документу PDF с помощью эскизов, которые представляют страницы. Эти эскизы будут отображаться в области слева от читателя PDF.
-
-- **Настройте список доменов, для которых будет отключен пользовательский интерфейс диспетчера паролей для сохранения и заполнения.** Используйте политику [PasswordManagerBlocklist](/deployedge/microsoft-edge-policies#passwordmanagerblocklist) для настройки списка доменов (только схемы HTTP/HTTPS и имена хостов), в которых Microsoft Edge отключить диспетчер паролей. Это означает, что процессы сохранения и заполнения будут отключены, что гарантирует, что пароли для этих веб-сайтов не могут быть сохранены или автоматически заполнены в веб-формы.
-
-- **Обновление расширений для Microsoft Edge магазина надстройок с помощью API (в публичном предварительном просмотре).** Эти API можно интегрировать непосредственно в конвейер сборки и опубликовать обновления пакетов на веб-сайте Microsoft Edge надстройки. Дополнительные новости см. в [Microsoft Edge API надстройки (в закрытом предварительном просмотре)](/microsoft-edge/extensions-chromium/publish/api/using-addons-api)
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) — разрешить пользователям доступ к меню игр
-- [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) — определите список протоколов, которые не могут быть молча заблокированы защитой от наводнения
-- [HubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#hubssidebarenabled) — боковая панель show Hubs
-- [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) — настройка отчетов о потенциально неправильно настроенных URL-адресах нейтрального сайта в приложение Списки сайтов центра администрирования M365
-- [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) — настройка записей списков пользователей IE Mode в приложение Списки сайтов центра администрирования M365
-- [PasswordManagerBlocklist](/DeployEdge/microsoft-edge-policies#passwordmanagerblocklist) — настройка списка доменов, для которых будет отключен пользовательский интерфейс диспетчера паролей (Сохранение и заполнение).
-- [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) — настройка связанных совпадений в поиске на странице
-- [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) . Включить вход в диалоговое окно действия
-- [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) — включить или отключить User-Agent уменьшение
-
-## <a name="version-980110848-february-8"></a>Версия 98.0.1108.48: 8 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-980110843-february-3"></a>Версия 98.0.1108.43: 3 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-980110842-february-2"></a>Версия 98.0.1108.42: 2 февраля
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-980110839-january-31"></a>Версия 98.0.1108.39: 31 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-980110833-january-24"></a>Версия 98.0.1108.33: 24 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-980110827-january-19"></a>Версия 98.0.1108.27: 19 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-980110823-january-14"></a>Версия 98.0.1108.23: 14 января
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Повышение безопасности в Интернете.** Режим просмотра в Microsoft Edge, где безопасность браузера имеет приоритет, что дает дополнительный уровень защиты при просмотре веб-страниц. Администраторы могут применять следующие групповые политики к настольным компьютерам конечных пользователей (Windows, macOS и Linux), чтобы защитить от нулевых дней. Эти политики также делают так, чтобы важные сайты и линейка бизнес-приложений работали как и ожидалось. Эта функция является огромным шагом вперед, так как позволяет нам смягчать непредвиденные активные нулевые дни (на основе исторических тенденций). Flow При включенном включите эту функцию в качестве поддержки мер по смягчению последствий безопасности для повышения безопасности пользователей в Интернете.
-Групповые политики:
-  - [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode)
-  - [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
-  - [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
-
-- **Настраиваемый основной пароль.** Браузер уже имеет возможность добавить шаг проверки подлинности до автоматического заполнения сохраненных паролей в веб-формах. Это добавляет еще один уровень конфиденциальности и помогает предотвратить использование сохраненных паролей для входа на веб-сайты. Настраиваемый основной пароль — это эволюция той же функции, в которой пользователи теперь смогут использовать настраиваемую строку выбора в качестве основного пароля. После его включения пользователи введите этот пароль для проверки подлинности и автоматического заполнения сохраненных паролей в веб-формах.
-
-- **Перекладывка прокрутки, добавленная в Microsoft Edge.** Мы обновили наши прокрутки с помощью дизайна на основе наложения. Пользователи могут включить эту функцию в *edge://flags*.
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) — настройка редактирования панели адресов.
-- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) — включить службу Follow в Microsoft Edge.
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) — повышение состояния безопасности в Microsoft Edge.
-- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) — настройка списка доменов, для которых не будет применяться усиленный режим безопасности.
-- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) — настройте список доменов, для которых всегда будет применяться усиленный режим безопасности.
-- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) — включена поддержка в приложении.
-- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) — Microsoft Edge включено продвижение по инсайдерской службе.
-- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - Печать липких параметров предварительного просмотра.
-- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) — разрешить Microsoft Edge для блокировки навигации по внешним протоколам в песочнице iframe.
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) — разрешить использование API ключа безопасности U2F.
-
-## <a name="version-970107254-january-5"></a>Версия 97.0.1072.54: 5 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-970107252-january-3"></a>Версия 97.0.1072.52: 3 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-970107241-december-20"></a>Версия 97.0.1072.41: 20 декабря
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-970107234-december-13"></a>Версия 97.0.1072.34: 13 декабря
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-970107228-december-8"></a>Версия 97.0.1072.28: 8 декабря
-
-Исправлены ошибки и проблемы с производительностью.
-
+<!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
+<!-- archive from Version 98.0.1108.23: January 14 to Version 97.0.1072.28: December 8 -->
 <!--- Version 97.0.1072.21: December 1 to Version 96.0.1054.13: November 5  --->
 <!--- archive from Version 96.0.1054.8: November 1 to Version 95.0.1020.14: October 5  --->
-<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 ---->
+<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 -->
 <!-- archive from Version 94.0.992.9: September 2 to Version 92.0.902.40: July 6 -->
-<!--Archive on Oct 27 From Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
-<!--- Archived from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 ---->
-<!--- Archived from Version 87.0.664.12: October 20 to to version 86.0.622.15: September 14 ---->
+<!--Archive from Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
+<!-- Archive from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 --->
+<!-- Archive from Version 87.0.664.12: October 20 to version 86.0.622.15: September 14 -->
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
