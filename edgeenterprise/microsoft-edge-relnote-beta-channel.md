@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для канала Beta
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/08/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для канала Beta
-ms.openlocfilehash: 8c2fcd1a45d6d6417e10609dec3cf1c669576c92
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 41f9efd48fa9afef215c2fd8e6499b2840ec256c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473567"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505372"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Заметки о выпуске для Microsoft Edge из канала Beta
 
@@ -23,6 +23,26 @@ ms.locfileid: "12473567"
 
 > [!NOTE]
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1010121031-april-27"></a>Версия 101.0.1210.31: 27 апреля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-1010121026-april-22"></a>Версия 101.0.1210.26: 22 апреля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-1010121019-april-18"></a>Версия 101.0.1210.19: 18 апреля
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-1010121014-april-12"></a>Версия 101.0.1210.14: 12 апреля
+
+Исправлены ошибки и проблемы с производительностью.
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Усовершенствования в Enterprise Site List Manager.** Теперь вы можете настроить общие файлы cookie между Microsoft Edge и Internet Explorer в списке корпоративных сайтов. Вы можете получить доступ [к Enterprise site List Manager](/deployedge/edge-ie-mode-site-list-manager) по *адресу edge://compat/SiteListManager*.
 
 ## <a name="version-1010121010-april-8"></a>Версия 101.0.1210.10: 8 апреля
 
@@ -76,7 +96,7 @@ ms.locfileid: "12473567"
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
-- **Упрощение Microsoft 365 протоколов приложений.** Microsoft 365 активации протокола приложения в доверенных облачных службах хранилища Майкрософт теперь будут запускать определенные приложения Microsoft 365 напрямую, включая поддомены SharePoint и URL-адреса Microsoft OneDrive. Вы можете использовать политики [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) и [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) , чтобы при необходимости включить запросы на активацию протокола приложения, а также определить другие приложения и службы, в которых предупреждения включены или отключены.
+- **Оптимизация активаций протокола приложений Microsoft 365.** Активация протокола приложений Microsoft 365 в доверенных службах облачного хранилища Microsoft теперь будет запускать определенные приложения Microsoft 365 напрямую, включая поддомены SharePoint и URL-адреса Microsoft OneDrive. С помощью политик [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) и [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) можно включить запросы активации протокола приложения, а также определить другие приложения и службы, для которых включены или отключены предупреждения.
 
 ## <a name="version-1000118510-march-17"></a>Версия 100.0.1185.10: 17 марта
 
@@ -84,7 +104,7 @@ ms.locfileid: "12473567"
 
 - **Усовершенствования в управлении списками облачных сайтов для режима IE.** Вы можете настроить общий доступ к файлам cookie сеансов между Microsoft Edge и Internet Explorer для режима IE в списке сайтов в Microsoft 365 Admin Center. **Примечание:** Это управляемое развертывание компонентов. Если вы не видите эту функцию, вернитесь, пока мы продолжим развертывание.
 
-- **Предварительный просмотр PDF-файлов в Microsoft Outlook и проводник.** Пользователи могут просматривать PDF-файл в упрощенной и расширенной предварительной версии только для чтения.  Доступно для Outlook PDF-файлов рабочего стола или для локальных PDF-файлов с проводник.  
+- **Предварительный просмотр PDF-файлов в Microsoft Outlook и проводнике.** Пользователи могут просматривать PDF-файлы в облегченной и полной предварительной версии, доступной только для чтения.  Доступно для Outlook PDF-файлов рабочего стола или для локальных PDF-файлов с проводник.  
 
 - **Установленная синхронизация веб-приложений на всех настольных устройствах.** Веб-сайты или веб-приложения (PWA), установленные в качестве приложений, будут синхронизироваться на всех настольных устройствах, на которых вы вошли и включили синхронизацию. Они будут отображаться как доступные приложения для установки. Приложение, удаленное с одного устройства, синхронизирует удаление на всех устройствах.
 
@@ -92,21 +112,21 @@ ms.locfileid: "12473567"
 
 #### <a name="new-policies"></a>Новые политики
 
-- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) — настройка, если включена функция прозрачности рекламы
-- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) — управление использованием API WebHID
-- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) — диалоговое окно "Скрыть страницы восстановления" после сбоя браузера
-- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) — безопасный режим и проверка цифровой подписи на основе сертификатов в собственном средстве чтения PDF
-- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) — запрос на выбор сертификата при совпадении нескольких сертификатов
-- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) — разрешить API WebHID на этих сайтах
-- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) — блокировка API WebHID на этих сайтах
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) — указывает, включена ли функция прозрачности рекламы
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) — управляет использованием API WebHID
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) — скрывает диалоговое окно "Восстановление страниц" после сбоя браузера
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) — безопасный режим и проверка цифровых подписей на основе сертификатов в собственном средстве чтения файлов PDF
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) — предлагает пользователю выбрать сертификат при совпадении нескольких сертификатов
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) — разрешает API WebHID на этих сайтах
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) — блокирует API WebHID на этих сайтах
 
 #### <a name="deprecated-policy"></a>Политика устарела
 
-- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) — включает фоновые обновления списка доступных шаблонов для коллекций и других функций, использующих шаблоны
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) — включение фоновых обновлений в списке доступных шаблонов для коллекций и других функций, которые используют шаблоны
 
 #### <a name="obsoleted-policy"></a>Устаревшая политика
 
-- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) — разрешить страницам отправлять синхронные XHR-запросы во время закрытия страницы
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) — разрешение страницам отправлять синхронные запросы XHR при удалении страницы
 
 ## <a name="version-990115039-march-10"></a>Версия 99.0.1150.39: 10 марта
 

@@ -3,19 +3,19 @@ title: Заметки о выпуске Microsoft Edge для стабильно
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/07/2022
+ms.date: 05/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске Microsoft Edge для стабильного канала
-ms.openlocfilehash: 0cf9c2d0ac7a60c03ad6c80d4186629d296a73c6
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: bca403e0ae56a5473a2ea4458206fc6262b29640
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473669"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505332"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Заметки о выпуске для стабильного канала Microsoft Edge
 
@@ -30,6 +30,60 @@ ms.locfileid: "12473669"
 > Для канала Stable обновления последовательно разворачиваются в течение одного или нескольких дней. Дополнительные сведения см. в статье [Последовательные развертывания обновлений Microsoft Edge](./microsoft-edge-update-progressive-rollout.md).
 >
 > Веб-платформа Microsoft Edge постоянно развивается для улучшения взаимодействия с пользователями, безопасности и конфиденциальности. Дополнительные сведения см. в статье [Изменения в Microsoft Edge, затрагивающие совместимость сайтов](/microsoft-edge/web-platform/site-impacting-changes).
+
+## <a name="version-1000118557-may-2"></a>Версия 100.0.1185.57: 2 мая
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
+
+## <a name="version-1010121032-april-28"></a>Версия 101.0.1210.32: 28 апреля
+
+Обновления безопасности стабильного канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#april-28-2022).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Возможность установить профиль по умолчанию.** Политика [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) позволяет настроить профиль по умолчанию для использования при открытии браузера вместо последнего использованного профиля. Эта политика не будет применяться, если указан параметр `--profile-directory`.
+
+- **Запустите прогрессивные веб-приложения (PWA) с панели избранного.** Улучшения в процессе запуска PWA начнут отображаться со значком приложений, который можно добавить на панель инструментов.
+
+- **Управление параметром "Разрешить расширения из других магазинов".** Теперь можно использовать политику [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled), чтобы задать состояние по умолчанию для параметра "Разрешить расширения из других магазинов".
+
+- **Улучшения в Диспетчере списка сайтов предприятия (Enterprise Site List Manager).** Теперь вы можете настроить общие файлы cookie Microsoft Edge и Internet Explorer в списке корпоративных сайтов. Доступ к [Диспетчеру списка сайтов предприятия](/deployedge/edge-ie-mode-site-list-manager) можно получить по адресу *edge://compat/SiteListManager.*
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) — настройка списка команд, для которых следует отключить сочетания клавиш
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) — настройка состояния по умолчанию для параметра "Разрешить расширения из других магазинов"
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) — разрешает компонентам скачивать ресурсы из службы доставки ресурсов
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) — параметр профиля по умолчанию включен
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) — разрешает сохранение страницы, как в режиме Internet Explorer
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) — жесты прокрутки в Microsoft Edge в режиме терминала включены
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) — разрешает пользователям доступ к меню Microsoft Office
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) — разрешает пользователям настраивать службы безопасности сайтов
+
+#### <a name="deprecated-policies"></a>Нерекомендуемые политики
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) — настройка возможности браузера Microsoft Edge автоматически выбирать сертификат при наличии нескольких совпадений сертификатов для сайта, настроенного с "AutoSelectCertificateForUrls"
+
+#### <a name="obsoleted-policies"></a>Устаревшие политики
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - Принудительное повторное включение WebSQL в сторонних контекстах
+
+## <a name="version-1000118550-april-21"></a>Версия 100.0.1185.50: 21 апреля
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Стабильный" и "Расширенный стабильный".
+
+## <a name="version-1000118544-april-15"></a>Версия 100.0.1185.44: 15 апреля
+
+> [!Important]
+> Это обновление содержит исправление для [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364), которая, по сообщению команды Chromium, содержала вредоносное ПО. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#april-15-2022).
+
+## <a name="version-1000118539-april-11"></a>Версия 100.0.1185.39: 11 апреля
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Стабильный" и "Расширенный стабильный".
 
 ## <a name="version-1000118536-april-7"></a>Версия 100.0.1185.36: 7 апреля
 
@@ -155,64 +209,8 @@ ms.locfileid: "12473669"
 
 Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#february-10-2022).
 
-## <a name="version-980110843-february-3"></a>Версия 98.0.1108.43: 3 февраля
 
-Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#february-3-2022).
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Усильте безопасность в Интернете.** Это режим просмотра в Microsoft Edge с приоритетной защитой браузера для более безопасного и надежного просмотра веб-страниц. Администраторы могут применять групповые политики к рабочим столам конечных пользователей (Windows, macOS и Linux), чтобы защититься от эксплойтов, которые также называются эксплойтами 0-го дня. Этот режим просмотра поддерживается следующими групповыми политиками:
-
-  - [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode)
-  - [EnhanceSecurityModeBypassListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
-  - [EnhanceSecurityModeEnforceListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
-
-- **Предстоящий трехзначный номер версии в строке агента пользователя.** Начиная с версии 100, Microsoft Edge будет отправлять трехзначный номер версии в заголовке User-Agent, например, "Edg/**100**". Начиная с Microsoft Edge 97, владельцы сайтов могут протестировать эту строку будущего агента пользователя, включив флаг эксперимента **#force-major-version-to-100** в *edge://flags* для обеспечения надежности и работы логики синтаксического анализа User-Agent.
-
-- **Прекратите поддержку семантики SDP плана B WebRTC.** Это изменение делает устаревшим диалект протокола SDP под названием "План B". Этот формат SDP заменяется единым планом, который соответствует спецификациям и совместим с форматом SDP в разных браузерах. Дополнительные сведения см. в записи состояния платформы Chrome [PSA: план B должен запускаться в бета-версии M96 и стабильной версии](https://chromestatus.com/feature/5823036655665152) и [PSA: запуск плана B в конце срока действия пробной версии прекращения поддержки стабильного и расширенного выпуска](https://groups.google.com/g/discuss-webrtc/c/gEHrZyYKsfU). Запрос [Испытания для семантики SDP плана B RTCPeerConnection](https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169) позволяет сайтам продолжать использовать неподдерживаемый API до версии 101.
-
-- **Прокрутки наложения добавлены в Microsoft Edge.** Мы обновили панели прокрутки с помощью дизайна на основе наложения. Пользователи могут включить эту функцию в *edge://flags*.
-
-### <a name="policy-updates"></a>Обновления политик
-
-#### <a name="new-policies"></a>Новые политики
-
-- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - Настройка редактирования адресной строки
-- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - Разрешить пользователям доступ к меню игр
-- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Включить службу "Подписаться" в Microsoft Edge
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Повышение состояния безопасности в Microsoft Edge
-- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - Настройка списка доменов, для которых режим усиленной безопасности не применяется
-- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - Настройка списка доменов, для которых режим усиленной безопасности применяется всегда
-- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - Поддержка в приложении включена
-- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Включено продвижение программы предварительной оценки Microsoft Edge
-- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - Сохраняющиеся параметры предварительного просмотра
-- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Разрешить Microsoft Edge блокировать переходы по внешним протоколам в изолированном iframe
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Разрешить использование нерекомендуемого API ключа безопасности U2fSecurityKeyApiEnabled
-
-## <a name="version-970107276-january-27"></a>Версия 97.0.1072.76: 27 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-### <a name="feature-updates"></a>Обновления компонентов
-
-- **Предстоящий трехзначный номер версии в строке агента пользователя.** Начиная с версии 100, Microsoft Edge будет отправлять трехзначный номер версии в заголовке User-Agent, например, "Edg/**100**". Начиная с Microsoft Edge 97, владельцы сайтов могут протестировать эту строку будущего агента пользователя, включив флаг эксперимента **#force-major-version-to-100** в *edge://flags* для обеспечения надежности и работы логики синтаксического анализа User-Agent.
-
-## <a name="version-960105475-january-21"></a>Версия 96.0.1054.75: 21 января
-
-Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
-
-## <a name="version-970107269-january-20"></a>Версия 97.0.1072.69: 20 января
-
-Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#january-20-2022).
-
-## <a name="version-970107262-january-13"></a>Версия 97.0.1072.62: 13 января
-
-Исправлены ошибки и проблемы с производительностью.
-
-## <a name="version-960105472-january-6"></a>Версия 96.0.1054.72: 6 января
-
-Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
-
+<!--- from Version 98.0.1108.43: February 3 to Version 96.0.1054.72: January 6  -->
 <!---- From Version 97.0.1072.55: January 6 to Version 96.0.1054.34: November 23 ---->
 <!---archive from Version 96.0.1054.29: November 19 to Version 94.0.992.57: October 27 --->
 <!-- archive from Version 95.0.1020.30: October 21 to Version 94.0.992.37: September 30 -->

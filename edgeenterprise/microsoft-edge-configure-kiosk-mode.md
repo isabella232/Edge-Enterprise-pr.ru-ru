@@ -1,21 +1,21 @@
 ---
 title: Настройка режима терминала в Microsoft Edge
-ms.author: aguta
-author: aguta
+ms.author: v-danwesley
+author: dan-wesley
 manager: srugh
-ms.date: 11/30/2021
+ms.date: 05/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Сведения о возможностях режима терминала и настройке параметров режима терминала Microsoft Edge.
-ms.openlocfilehash: fa53f52dd9115d85da6fec6a75aefb972c9f6ece
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 17ec165ce86155a03e5adc757ddafcad3e3c9819
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298307"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505502"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Настройка режима терминала в Microsoft Edge
 
@@ -73,7 +73,7 @@ ms.locfileid: "12298307"
 
 ## <a name="use-kiosk-mode-features"></a>Использование возможностей режима терминала
 
-Microsoft Edge режиме киоска можно вызвать следующие параметры командной строки Windows 10 для цифровых и интерактивных вывесок и общедоступных просмотров.
+Microsoft Edge режима киоска можно вызвать с помощью следующих параметров Windows 10 командной строки для цифровых и интерактивных вывесок и общедоступного просмотра.
 
 ### <a name="kiosk-mode-digitalinteractive-signage"></a>Цифровая/интерактивная вывеска в режиме терминала
  
@@ -87,11 +87,11 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
 
-### <a name="kiosk-mode-download-files-on-exit"></a>Режим киоска Загрузка файлов на выходе
+### <a name="kiosk-mode-download-files-on-exit"></a>Загрузка файлов в режиме киоска при выходе
 
-Чтобы настроить Microsoft Edge для удаления загруженных файлов при закрытии экземпляра киоска, необходимо настроить следующие две групповые политики:
-- [Удаление скачиваемых данных на выходе](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = Включено
-- [Установите каталог загрузки](./microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+Чтобы настроить Microsoft Edge для удаления скачанных файлов при закрытии экземпляра киоска, необходимо настроить следующие две групповые политики:
+- [Удаление скачиваемых файлов при выходе](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = включено
+- [Set download directory](./microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
 
 
 ### <a name="additional-command-line-options"></a>Дополнительные параметры командной строки
@@ -106,7 +106,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Изменение времени (в минутах) от последнего действия пользователя перед Microsoft Edge режим киоска сбрасывает сеанс пользователя, закрыв браузер. Примечание. Этот флаг не будет Microsoft Edge после его закрытия. Для автоматического перезапуска Edge после простоя требуется отдельная технология, например назначенная access или Shell Launch. Замените слово "значение" в следующем примере на количество минут.
+- **--kiosk-idle-timeout-minutes=**: измените время (в минутах) с последнего действия пользователя, прежде чем Microsoft Edge режим киоска сбрасывает сеанс пользователя, закрыв браузер. Примечание. Этот флаг не будет перезапущен Microsoft Edge после закрытия. Для автоматического перезапуска Edge после истечении времени ожидания простоя требуется отдельная технология, например назначенный доступ или запуск оболочки. Замените слово "значение" в следующем примере на количество минут.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -167,9 +167,9 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ### <a name="multi-app-kiosk"></a>Киоск с несколькими приложениями
 
-Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для Microsoft Edge стабильного канала **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
+Microsoft Edge можно запустить с [ограниченным доступом для нескольких приложений](/windows/configuration/lock-down-windows-10-to-specific-apps) в Windows 10, что является эквивалентом типа режима терминала «Обычный просмотр веб-страниц» в устаревшей версии Microsoft Edge. Чтобы настроить ограниченный доступ для нескольких приложений в Microsoft Edge, следуйте инструкциям по [настройке режима терминала с несколькими приложениями](/windows/configuration/lock-down-windows-10-to-specific-apps). (AUMID для канала Microsoft Edge Stable **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
 
-При использовании Microsoft Edge с несколькими приложениями назначен доступ, вы можете настроить Microsoft Edge [](./microsoft-edge-policies.md) киоск, чтобы использовать политики Microsoft Edge браузера для настройки просмотра для удовлетворения ваших уникальных требований.
+При использовании Microsoft Edge с доступом с несколькими приложениями можно настроить киоск Microsoft Edge для использования политик браузера [Microsoft Edge](./microsoft-edge-policies.md) для настройки интерфейса просмотра в соответствии с вашими уникальными требованиями.
 
 ### <a name="configure-using-windows-settings"></a>Настройка с помощью параметров Windows
 
@@ -188,15 +188,15 @@ Microsoft Edge можно запустить с [ограниченным дос
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="Настройка терминала с ограниченным доступом":::
 
-4. На странице **Настройка киоска**   выберите Начало **работы.**
+4. На странице **"Настройка киоска**  **"** выберите начало работы.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="Страница терминала — начать":::
 
-5. Введите имя для создания новой учетной записи киоска или выберите существующую учетную запись из заполненного списка выпаданий, а затем выберите **Далее**.
+5. Введите имя, чтобы создать новую учетную запись киоска, или выберите существующую учетную запись из заполненного раскрывающегося списка, а затем  **selectNext**.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="Режим терминала — создание учетной записи":::
 
-6. На странице **Выберите приложение киоска**выберите Microsoft Edge, а   затем выберите **** **Далее**.
+6. На странице **"Выбор киоска** " выберите Microsoft Edge, **а** затем  **selectNext**.
 
    > [!NOTE]
    > Это относится только к каналам Microsoft Edge Dev, Beta и Stable.
@@ -240,7 +240,6 @@ Microsoft Edge можно запустить с [ограниченным дос
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 - [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
 - [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
-- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
 - [Расширения](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)

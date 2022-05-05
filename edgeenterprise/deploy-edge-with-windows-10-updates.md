@@ -3,19 +3,19 @@ title: Развертывание Microsoft Edge с обновлениями Win
 ms.author: ryhecht
 author: RyanHechtMSFT
 manager: tinad
-ms.date: 06/29/2021
+ms.date: 05/04/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Развертывание Microsoft Edge с обновлениями Windows 10
-ms.openlocfilehash: 1f3a99259cb28c46e4f6f30de05fade6ac158336
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: eec21e3f797166b31b0ac632f94103b866491066
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445833"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505692"
 ---
 # <a name="deploy-microsoft-edge-with-windows-10-updates"></a>Развертывание Microsoft Edge с обновлениями Windows 10
 
@@ -23,14 +23,14 @@ ms.locfileid: "12445833"
 
 ## <a name="for-windows-10-release-20h2"></a>Для выпуска Windows 10 20H2
 
-Windows 10 20H2 и более поздней Microsoft Edge предварительно установленный в качестве браузера по умолчанию. Однако версия 84 edge, поставляемая с Windows 10 20H2, и версия 92 Edge, поставляемая с Windows 10 21H2, устарела. Хотя Microsoft Edge автоматически обновляется до более новой версии после входа пользователя, так как сроки обновления зависят от различных факторов, это может быть несколько непреложным. Для организаций, которые хотят больше контролировать и хотят, чтобы Edge (стабильный канал) обновлялся до последней версии перед логотипом пользователя, для принудительного обновления Edge во время Windows OOBE можно использовать следующую команду PowerShell.
+Windows 10 20H2 и более поздних версий Microsoft Edge предварительно установленные в качестве браузера по умолчанию. Однако версия 84 edge, поставляемая с Windows 10 20H2, и версия 92 Edge, поставляемая с Windows 10 21H2, устарела. Хотя Microsoft Edge автоматически обновится до более новой версии после входа пользователя, так как время обновления зависит от различных факторов, это может быть несколько нерекомендуемым. Для организаций, которым требуется более полный контроль и требуется обновить Edge (стабильный канал) до последней версии перед входом пользователя, можно использовать следующую команду PowerShell для принудительного обновления Edge во время Windows OOBE.
 
 `Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"`
 
-При использовании Windows автопилота можно обернуть этот скрипт в файл .intunewin с помощью средства подготовки контента [Microsoft Win32](/mem/intune/apps/apps-win32-prepare). Затем его можно задать в качестве необходимого приложения для страницы состояния регистрации (ESP) при желании.
+При использовании Windows Autopilot можно заключить этот скрипт в intunewin-файл с помощью средства подготовки содержимого [Microsoft Win32](/mem/intune/apps/apps-win32-prepare). Затем его можно задать в качестве обязательного приложения для страницы состояния регистрации (ESP) при необходимости.
 
 > [!NOTE]
-> Если вы в настоящее время использует такие [](/deployedge/microsoft-edge-update-policies#target-channel-override) политики, как переопределения целевого канала или переопределения целевой версии, чтобы оставаться в старой версии Edge, следует помнить, что в вышеуказанном сценарии не будут учитываться какие-либо политики, а просто обновят последнюю версию.[](/deployedge/microsoft-edge-update-policies#targetversionprefix) По умолчанию Edge не понизирует себя, в том числе после того, как такие политики будут получены позже.
+> Если в настоящее время вы используете такие [](/deployedge/microsoft-edge-update-policies#target-channel-override) политики, как переопределение целевого канала или переопределение целевой версии, чтобы оставаться в более старой версии Microsoft Edge, имейте в виду, что описанный выше сценарий не будет учитывать какие-либо политики и просто обновит его до последней версии.[](/deployedge/microsoft-edge-update-policies#targetversionprefix) По умолчанию Microsoft Edge не переход на более раннюю версию, в том числе после получения таких политик.
 
 ## <a name="for-windows-10-releases-rs4-through-20h1"></a>Для выпусков Windows 10 RS4-20H1
 

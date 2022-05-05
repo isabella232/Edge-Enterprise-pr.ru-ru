@@ -3,19 +3,19 @@ title: Более безопасный просмотр веб-страниц в
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/17/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Узнайте, как повышенная безопасность помогает более безопасно просматривать веб-страницы в Microsoft Edge.
-ms.openlocfilehash: 43c48cb6210ce194a16759c5adb05a6f67b05249
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 48a40a40a1741da1cc89a180535f4bb568060ba8
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445955"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505412"
 ---
 # <a name="browse-more-safely-with-microsoft-edge"></a>Более безопасный просмотр веб-страниц в Microsoft Edge
 
@@ -37,7 +37,7 @@ Microsoft Edge добавляет расширенные средства защ
 Вам также может быть интересно узнать больше о первой линии [мер безопасности в Microsoft Edge](/deployedge/ms-edge-security-for-business). В частности, вы можете узнать больше о том, как [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen) защищает пользователей от фишинга и скачивания вредоносных программ.
 
 > [!NOTE]
-> Сайты, которые используют WebAssembly (WASM), в настоящее время не поддерживаются в этом режиме. Если вам требуется доступ к сайту, который требует WASM, рассмотрите возможность добавления его в список исключений, как описано ниже.
+> Сайты, которые используют WebAssembly (WASM), в настоящее время не поддерживаются в этом режиме. Если вам нужен доступ к сайту, для которого требуется WASM, подумайте о том, чтобы добавить его в список сайтов-исключений, как описано в разделе [Список сайтов-исключений](#exception-site-list).
 
 ## <a name="whats-new-in-microsoft-edge-security-settings"></a>Новое в управлении настройками безопасности Microsoft Edge
 

@@ -1,25 +1,83 @@
 ---
 title: Архивные заметки о выпуске для канала Microsoft Edge Stable
 ms.author: leahtu
-author: dan-wesley
+author: leahmsft
 manager: srugh
-ms.date: 03/31/2022
+ms.date: 04/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Архивные заметки о выпуске для канала Microsoft Edge Stable
-ms.openlocfilehash: d2c1d9de5d68b008190bbdcc24aee83c352978aa
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 9d4efe64eec64e94f5b67c2f4daa317c4752919c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473599"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505442"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Архивные заметки о выпуске для канала Microsoft Edge Stable
 
 Эти заметки о выпуске содержат сведения о новых компонентах и не связанных с безопасностью обновлениях, которые включены в канал Microsoft Edge Stable. Список всех обновлений системы безопасности находится [здесь](microsoft-edge-relnotes-security.md).
+
+## <a name="version-980110843-february-3"></a>Версия 98.0.1108.43: 3 февраля
+
+Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#february-3-2022).
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Усильте безопасность в Интернете.** Это режим просмотра в Microsoft Edge с приоритетной защитой браузера для более безопасного и надежного просмотра веб-страниц. Администраторы могут применять групповые политики к рабочим столам конечных пользователей (Windows, macOS и Linux), чтобы защититься от эксплойтов, которые также называются эксплойтами 0-го дня. Этот режим просмотра поддерживается следующими групповыми политиками:
+
+  - [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode)
+  - [EnhanceSecurityModeBypassListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
+  - [EnhanceSecurityModeEnforceListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
+
+- **Предстоящий трехзначный номер версии в строке агента пользователя.** Начиная с версии 100, Microsoft Edge будет отправлять трехзначный номер версии в заголовке User-Agent, например, "Edg/**100**". Начиная с Microsoft Edge 97, владельцы сайтов могут протестировать эту строку будущего агента пользователя, включив флаг эксперимента **#force-major-version-to-100** в *edge://flags* для обеспечения надежности и работы логики синтаксического анализа User-Agent.
+
+- **Прекратите поддержку семантики SDP плана B WebRTC.** Это изменение делает устаревшим диалект протокола SDP под названием "План B". Этот формат SDP заменяется единым планом, который соответствует спецификациям и совместим с форматом SDP в разных браузерах. Дополнительные сведения см. в записи состояния платформы Chrome [PSA: план B должен запускаться в бета-версии M96 и стабильной версии](https://chromestatus.com/feature/5823036655665152) и [PSA: запуск плана B в конце срока действия пробной версии прекращения поддержки стабильного и расширенного выпуска](https://groups.google.com/g/discuss-webrtc/c/gEHrZyYKsfU). Запрос [Испытания для семантики SDP плана B RTCPeerConnection](https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169) позволяет сайтам продолжать использовать неподдерживаемый API до версии 101.
+
+- **Прокрутки наложения добавлены в Microsoft Edge.** Мы обновили панели прокрутки с помощью дизайна на основе наложения. Пользователи могут включить эту функцию в *edge://flags*.
+
+### <a name="policy-updates"></a>Обновления политик
+
+#### <a name="new-policies"></a>Новые политики
+
+- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - Настройка редактирования адресной строки
+- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - Разрешить пользователям доступ к меню игр
+- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Включить службу "Подписаться" в Microsoft Edge
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Повышение состояния безопасности в Microsoft Edge
+- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - Настройка списка доменов, для которых режим усиленной безопасности не применяется
+- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - Настройка списка доменов, для которых режим усиленной безопасности применяется всегда
+- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - Поддержка в приложении включена
+- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Включено продвижение программы предварительной оценки Microsoft Edge
+- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - Сохраняющиеся параметры предварительного просмотра
+- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Разрешить Microsoft Edge блокировать переходы по внешним протоколам в изолированном iframe
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - Разрешить использование нерекомендуемого API ключа безопасности U2fSecurityKeyApiEnabled
+
+## <a name="version-970107276-january-27"></a>Версия 97.0.1072.76: 27 января
+
+Исправлены ошибки и проблемы с производительностью.
+
+### <a name="feature-updates"></a>Обновления компонентов
+
+- **Предстоящий трехзначный номер версии в строке агента пользователя.** Начиная с версии 100, Microsoft Edge будет отправлять трехзначный номер версии в заголовке User-Agent, например, "Edg/**100**". Начиная с Microsoft Edge 97, владельцы сайтов могут протестировать эту строку будущего агента пользователя, включив флаг эксперимента **#force-major-version-to-100** в *edge://flags* для обеспечения надежности и работы логики синтаксического анализа User-Agent.
+
+## <a name="version-960105475-january-21"></a>Версия 96.0.1054.75: 21 января
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
+
+## <a name="version-970107269-january-20"></a>Версия 97.0.1072.69: 20 января
+
+Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#january-20-2022).
+
+## <a name="version-970107262-january-13"></a>Версия 97.0.1072.62: 13 января
+
+Исправлены ошибки и проблемы с производительностью.
+
+## <a name="version-960105472-january-6"></a>Версия 96.0.1054.72: 6 января
+
+Исправлены различные ошибки и проблемы с производительностью для выпуска "Расширенный стабильный".
 
 ## <a name="version-970107255-january-6"></a>Версия 97.0.1072.55: 6 января
 
@@ -89,7 +147,7 @@ ms.locfileid: "12473599"
 
 ## <a name="version-960105429-november-19"></a>Версия 96.0.1054.29: 19 ноября
 
-Обновления безопасности канала Stable перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
+Стабильные обновления безопасности канала перечислены [здесь](/deployedge/microsoft-edge-relnotes-security#november-19-2021).
 
 ### <a name="feature-updates"></a>Обновления компонентов
 
@@ -99,7 +157,7 @@ ms.locfileid: "12473599"
 
 - **Обновите Microsoft Edge WebWiew2 с помощью WSUS.** ИТ-администраторы, использующие Windows Server Update Services (WSUS) для обновления Microsoft Edge также смогут обновлять Microsoft Edge WebView2 с помощью WSUS. Эта возможность упрощает администрирование автономных устройств.
 
-- **Обновления WSUS для Сервера.** Обновления WSUS и каталога для каналов Microsoft Edge (стабильный, бета-версия и dev) теперь будут применяться к SKU Windows Server, на которых установлены Microsoft Edge, включая Windows Server 2022. Дополнительные сведения о настройке обновлений WSUS для Microsoft Edge см. [в Microsoft Edge.](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json&toc=https://docs.microsoft.com/DeployEdge/toc.json#update-microsoft-edge)
+- **Обновления WSUS для Сервера.** Обновления WSUS и каталога для каналов Microsoft Edge (стабильный, бета-версия и dev) теперь будут применяться к SKU Windows Server, на которых установлены Microsoft Edge, включая Windows Server 2022. Дополнительные сведения о настройке обновлений WSUS для Microsoft Edge см. [в Microsoft Edge.](/mem/configmgr/apps/deploy-use/deploy-edge)
 
 - **Microsoft Edge компонента протоколов автозапуска.** Microsoft Edge 96 представляет компонент протоколов автозапуска, который содержит списки словарей источников схемы для автоматического разрешения или блокировки.[](https://textslashplain.com/2019/07/16/updating-browsers-quickly-flags-respins-and-components/) Это защищает клиентов от опасных схем (например, обработчика протокола с 0-дневным периодом), устраняя запросы из известных безопасных пар (например, веб-сайт Teams может открыть клиентское приложение Teams). Если по какой-либо причине Microsoft Edge не нужно блокировать уязвимые обработчики протоколов и разрешать известные безопасные связывания, используйте переключатель в *edge://settings/content/applicationLinks* или задайте для политики [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) значение False.
 
@@ -109,7 +167,7 @@ ms.locfileid: "12473599"
   
 - **Выделение свободной формы в PDF.** Возможности просмотра PDF-файлов и разметки улучшены благодаря добавлению выделенных элементов свободной формы. Вы можете выделить разделы в файлах PDF, к которым у вас нет доступа, и просмотреть документы.
 
-- **Аппаратная защита стека.** Microsoft Edge начнет поддерживать еще более безопасный режим просмотра, использующий аппаратный поток управления для процессов браузера на поддерживаемом оборудовании (Intel 11-го поколения. или AMD Zen 3). Примечание. Так как это управляемый выпуск компонентов, вы можете не заметить, что эта функция включена на всех устройствах. Вы можете включить или отключить аппаратную защиту стека, используя параметры выполнения файлов изображений (IFEO) с помощью групповой политики.
+- **Принудительная аппаратная защита стека.** Microsoft Edge начнет поддерживать еще более безопасный режим просмотра, использующий аппаратный поток управления для процессов браузера на поддерживаемом оборудовании (Intel 11-го поколения. или AMD Zen 3). Примечание. Так как это управляемый выпуск компонентов, вы можете не заметить, что эта функция включена на всех устройствах. Вы можете включить или отключить аппаратную защиту стека, используя параметры выполнения файлов изображений (IFEO) с помощью групповой политики.
 
 - **Новое диалоговое окно предупреждения для сайтов опечаток.** Браузер отобразит предупреждение на некоторых сайтах с URL-адресами, которые очень похожи на другие сайты. В этом пользовательском интерфейсе используется эвристика на стороне клиента, чтобы предупреждать пользователей о сайтах, которые могут подделывать популярные веб-сайты. Дополнительные сведения см. в разделе "Что такое [опечатка"?](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0)
   

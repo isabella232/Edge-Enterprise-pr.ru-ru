@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Документация по всем политикам, поддерживаемым средством обновления Microsoft Edge
-ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 4698a4eaa0b51a9429f0c1c45da596d625a3791c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297617"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505382"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge — политики обновления
 
@@ -30,18 +30,18 @@ ms.locfileid: "12297617"
 ## <a name="available-policies"></a>Доступные политики
 В этих таблицах указаны все групповые политики, связанные с обновлением, доступные в данном выпуске Microsoft Edge. Для получения дополнительных сведений о конкретных политиках см. ссылки в таблице.
 
-|||
-|-|-|
-|[Приложения](#applications)|[Предпочтения](#preferences)|
-|[Прокси-сервер](#proxy-server)|[Обновление Microsoft Edge](#microsoft-edge-update)|
-|[Веб-представление Microsoft Edge](#microsoft-edge-webview)||
+- [Приложения](#applications)
+- [Предпочтения](#preferences)
+- [Прокси-сервер](#proxy-server)
+- [Обновление Microsoft Edge](#microsoft-edge-update)
+- [Веб-представление Microsoft Edge](#microsoft-edge-webview)
 
 ### [<a name="applications"></a>Приложения](#applications-policies)
 |Имя политики|Заголовок|
 |-|-|
 |[InstallDefault](#installdefault)|Разрешить установку по умолчанию|
 |[UpdateDefault](#updatedefault)|Переопределение политики обновления по умолчанию|
-|[Install](#install)|Разрешить установку (для канала)|
+|[Установка](#install)|Разрешить установку (для канала)|
 |[Update](#update)|Переопределение политики обновления (для канала)|
 |[Allowsxs](#allowsxs)|Разрешить параллельный запуск разных типов браузеров Microsoft Edge|
 |[CreateDesktopShortcutDefault](#createdesktopshortcutdefault)|Запрет создания ярлыка на рабочем столе при установке по умолчанию|

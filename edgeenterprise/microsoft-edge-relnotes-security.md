@@ -3,23 +3,40 @@ title: Заметки о выпуске обновлений для систем
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/07/2022
+ms.date: 05/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Заметки о выпуске обновлений для системы безопасности Microsoft Edge
-ms.openlocfilehash: 0ab346a202bb8bf42239430000ebc0692d8f7992
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: b2da8c92f938da53fb63273e2b43c6b503bd2c19
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473588"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505352"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Заметки о выпуске обновлений для системы безопасности Microsoft Edge
 
 Эти заметки о выпуске содержат сведения об исправлениях для системы безопасности, входящих в состав обновлений для стабильного канала Microsoft Edge.
+
+## <a name="april-28-2022"></a>28 апреля 2022 г.
+
+Microsoft выпустила последнюю версию  **стабильного канала Microsoft Edge (версия 101.0.1210.32)**, которая включает в себя последние обновления безопасности проекта Chromium. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Этот выпуск также содержит следующее обновление для Microsoft Edge:
+
+- [CVE-2022-29146](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29146)
+- [CVE-2022-29147](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29147)
+
+## <a name="april-15-2022"></a>15 апреля 2022 г.
+
+Корпорация Майкрософт выпустила последнюю версию  **стабильного канала Microsoft Edge** (версия 100.0.1185.44), которая включает в себя последние обновления безопасности проекта Chromium. Это обновление содержит исправление для [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364), которая, по сообщению команды Chromium, содержала вредоносное ПО. Дополнительные сведения см. в [руководстве по обновлению для системы безопасности](https://msrc.microsoft.com/update-guide).
+
+Этот выпуск также содержит следующее обновление для Microsoft Edge:
+
+- [CVE-2022-29144](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29144)
 
 ## <a name="april-7-2022"></a>7 апреля 2022 г.
 
